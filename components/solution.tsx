@@ -17,13 +17,13 @@ const steps = [
     icon: Zap,
     title: "Instant Lead Contact",
     description:
-      "We contact every lead immediately\u2014within minutes, not hours\u2014so you never lose a hot prospect to slow response times.",
+      "We contact every lead immediately within minutes, not hours so you never lose a hot prospect to slow response times.",
   },
   {
     icon: ShieldCheck,
     title: "Pre-Qualification",
     description:
-      "We qualify every lead for fit and intent before they ever waste your time. Wrong area, wrong budget, renters\u2014filtered out.",
+      "We qualify every lead for fit and intent before they ever waste your time. Wrong area, wrong budget, renters filtered out.",
   },
   {
     icon: CalendarPlus,
@@ -53,7 +53,7 @@ export function Solution() {
           </h2>
           <p className="mt-4 text-muted-foreground leading-relaxed">
             A done-for-you system that generates, qualifies, and books insulation
-            estimates on your calendar\u2014so you can focus on closing jobs.
+            estimates on your calendar so you can focus on closing jobs.
           </p>
         </div>
 
@@ -88,7 +88,7 @@ export function Solution() {
             </h3>
             <p className="text-sm leading-relaxed text-primary-foreground/90">
               A full calendar of qualified estimates from homeowners who are
-              ready to buy\u2014without you lifting a finger to generate or chase
+              ready to buy without you lifting a finger to generate or chase
               them.
             </p>
             <a
