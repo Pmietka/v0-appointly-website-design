@@ -32,7 +32,7 @@ export function Hero() {
 
           <div className="mt-10 flex flex-col sm:flex-row items-center gap-4">
             <a
-              href="#cta"
+              href="https://client.getappointly.co/strategy-calendar"
               className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-lg shadow-primary/20 hover:opacity-90 transition-opacity"
             >
               Book a Call
