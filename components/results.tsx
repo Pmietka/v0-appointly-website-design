@@ -54,20 +54,19 @@ const results = [
 export function Results() {
   return (
     <section id="results" className="py-24 md:py-32 section-divider relative overflow-hidden">
-      {/* Background accent */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] rounded-full bg-primary/[0.04] blur-[100px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] rounded-full bg-violet-600/[0.04] blur-[120px]" />
       </div>
 
       <div className="mx-auto max-w-6xl px-6">
         {/* Section header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="inline-block text-xs font-bold uppercase tracking-widest text-primary mb-3 px-3 py-1 rounded-full border border-primary/20 bg-primary/[0.06]">
+          <p className="text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-4">
             Proven Results
-          </span>
-          <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-balance leading-tight">
+          </p>
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-balance leading-tight">
             Real Results From{" "}
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
               Real Businesses
             </span>
           </h2>
@@ -82,14 +81,12 @@ export function Results() {
           {testimonials.map((t) => (
             <div
               key={t.name}
-              className="relative flex flex-col rounded-2xl border border-white/[0.07] bg-white/[0.03] p-6 backdrop-blur-sm hover:border-white/[0.12] hover:bg-white/[0.05] transition-all duration-300"
+              className="relative flex flex-col rounded-2xl border border-white/[0.07] bg-white/[0.03] p-6 backdrop-blur-sm hover:border-violet-500/20 hover:bg-violet-500/[0.03] transition-all duration-300"
             >
-              {/* Large quote mark */}
-              <div className="text-5xl font-serif leading-none text-primary/20 mb-4 select-none">
+              <div className="text-5xl font-serif leading-none text-primary/25 mb-4 select-none">
                 &#8220;
               </div>
 
-              {/* Stars */}
               <div className="flex gap-0.5 mb-4">
                 {Array.from({ length: t.rating }).map((_, i) => (
                   <Star
@@ -104,7 +101,7 @@ export function Results() {
               </p>
 
               <div className="mt-6 pt-5 border-t border-white/[0.06] flex items-center gap-3">
-                <div className="flex items-center justify-center h-9 w-9 rounded-full bg-gradient-to-br from-primary to-accent text-xs font-bold text-white flex-shrink-0">
+                <div className="flex items-center justify-center h-9 w-9 rounded-full bg-gradient-to-br from-violet-500 to-fuchsia-500 text-xs font-bold text-white flex-shrink-0">
                   {t.initial}
                 </div>
                 <div>
@@ -121,7 +118,7 @@ export function Results() {
           {results.map((r) => (
             <div
               key={r.caption}
-              className="group rounded-2xl border border-white/[0.07] bg-white/[0.03] overflow-hidden hover:border-primary/20 transition-all duration-300"
+              className="group rounded-2xl border border-white/[0.07] bg-white/[0.03] overflow-hidden hover:border-violet-500/20 transition-all duration-300"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
