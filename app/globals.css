@@ -8,11 +8,11 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-violet-400 via-purple-300 to-fuchsia-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[#a5abff] via-[#7d87f7] to-[#8b78f8] bg-clip-text text-transparent;
   }
 
   .gradient-text-subtle {
-    @apply bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[#7d87f7] to-[#a5abff] bg-clip-text text-transparent;
   }
 
   .glass-card {
@@ -24,15 +24,15 @@
   }
 
   .glow-primary {
-    box-shadow: 0 0 40px hsl(267 72% 55% / 0.3), 0 0 80px hsl(267 72% 55% / 0.12);
+    box-shadow: 0 0 40px rgb(125 135 247 / 0.3), 0 0 80px rgb(125 135 247 / 0.12);
   }
 
   .glow-sm {
-    box-shadow: 0 0 20px hsl(267 72% 55% / 0.25);
+    box-shadow: 0 0 20px rgb(125 135 247 / 0.25);
   }
 
   .dot-grid {
-    background-image: radial-gradient(circle, hsl(267 30% 40% / 0.25) 1px, transparent 1px);
+    background-image: radial-gradient(circle, hsl(235 30% 40% / 0.25) 1px, transparent 1px);
     background-size: 28px 28px;
   }
 
@@ -49,28 +49,28 @@
     --card-foreground: 0 0% 96%;
     --popover: 250 20% 8%;
     --popover-foreground: 0 0% 96%;
-    --primary: 267 72% 55%;
+    --primary: 235 88% 73%;
     --primary-foreground: 0 0% 100%;
     --secondary: 250 18% 12%;
     --secondary-foreground: 0 0% 96%;
     --muted: 250 15% 11%;
     --muted-foreground: 250 8% 52%;
-    --accent: 280 55% 65%;
+    --accent: 235 88% 73%;
     --accent-foreground: 0 0% 100%;
-    --destructive: 0 80% 58%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 235 88% 73%;
+    --destructive-foreground: 0 0% 100%;
     --border: 250 18% 14%;
     --input: 250 18% 14%;
-    --ring: 267 72% 55%;
+    --ring: 235 88% 73%;
     --radius: 0.75rem;
     --sidebar-background: 250 20% 8%;
     --sidebar-foreground: 0 0% 96%;
-    --sidebar-primary: 267 72% 55%;
+    --sidebar-primary: 235 88% 73%;
     --sidebar-primary-foreground: 0 0% 98%;
     --sidebar-accent: 250 18% 12%;
     --sidebar-accent-foreground: 0 0% 96%;
     --sidebar-border: 250 18% 14%;
-    --sidebar-ring: 267 72% 55%;
+    --sidebar-ring: 235 88% 73%;
   }
 }
 
@@ -82,7 +82,7 @@
     @apply bg-background text-foreground;
     background-image: radial-gradient(
       ellipse 80% 60% at -10% 110%,
-      hsl(267 72% 30% / 0.35) 0%,
+      hsl(235 60% 30% / 0.35) 0%,
       transparent 70%
     );
     background-attachment: fixed;

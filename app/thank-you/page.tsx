@@ -34,16 +34,16 @@ const callPrep = [
 export default function ThankYouPage() {
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
-      {/* Background — matches main site purple radial glow */}
+      {/* Background glow */}
       <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
         <div
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "radial-gradient(ellipse 80% 60% at -10% 110%, hsl(267 72% 30% / 0.4) 0%, transparent 70%)",
+              "radial-gradient(ellipse 80% 60% at -10% 110%, hsl(235 60% 30% / 0.4) 0%, transparent 70%)",
           }}
         />
-        <div className="absolute top-0 right-0 w-[700px] h-[700px] rounded-full bg-violet-600/[0.05] blur-[140px]" />
+        <div className="absolute top-0 right-0 w-[700px] h-[700px] rounded-full bg-[#7d87f7]/[0.05] blur-[140px]" />
         <div className="absolute inset-0 dot-grid opacity-30" />
       </div>
 
@@ -80,7 +80,7 @@ export default function ThankYouPage() {
 
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] text-balance">
             Your Call Is Booked. Here&apos;s Why That Was the{" "}
-            <span className="bg-gradient-to-r from-violet-400 via-purple-300 to-fuchsia-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#a5abff] via-[#7d87f7] to-[#8b78f8] bg-clip-text text-transparent">
               Right Move.
             </span>
           </h1>
@@ -102,13 +102,13 @@ export default function ThankYouPage() {
             className="relative rounded-3xl overflow-hidden border border-white/[0.08] bg-white/[0.03] aspect-video flex items-center justify-center backdrop-blur-sm"
             style={{
               boxShadow:
-                "0 0 80px hsl(267 72% 55% / 0.08), inset 0 0 40px hsl(267 72% 55% / 0.03)",
+                "0 0 80px rgb(125 135 247 / 0.08), inset 0 0 40px rgb(125 135 247 / 0.03)",
             }}
           >
             <div className="text-center relative z-10 px-8">
               <div
                 className="mx-auto mb-5 flex items-center justify-center h-16 w-16 rounded-full bg-primary/10 border border-primary/30 cursor-pointer hover:bg-primary/20 hover:scale-105 transition-all duration-200"
-                style={{ boxShadow: "0 0 40px hsl(267 72% 55% / 0.25)" }}
+                style={{ boxShadow: "0 0 40px rgb(125 135 247 / 0.25)" }}
               >
                 <div className="w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[18px] border-l-primary ml-1" />
               </div>
@@ -130,7 +130,7 @@ export default function ThankYouPage() {
             </p>
             <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">
               Show Up Ready to{" "}
-              <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#7d87f7] to-[#a5abff] bg-clip-text text-transparent">
                 Hit the Ground Running
               </span>
             </h2>
@@ -144,7 +144,7 @@ export default function ThankYouPage() {
             {callPrep.map((section) => (
               <div
                 key={section.title}
-                className="rounded-2xl border border-white/[0.07] bg-white/[0.03] p-6 hover:border-violet-500/20 hover:bg-violet-500/[0.03] transition-all duration-300"
+                className="rounded-2xl border border-white/[0.07] bg-white/[0.03] p-6 hover:border-[#7d87f7]/20 hover:bg-[#7d87f7]/[0.03] transition-all duration-300"
               >
                 <div className="flex items-center gap-3 mb-5">
                   <div className="flex items-center justify-center h-10 w-10 rounded-xl bg-primary/10 border border-primary/20">
@@ -177,7 +177,7 @@ export default function ThankYouPage() {
               className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
               style={{
                 boxShadow:
-                  "0 0 40px hsl(267 72% 55% / 0.35), 0 4px 20px hsl(267 72% 55% / 0.15)",
+                  "0 0 40px rgb(125 135 247 / 0.35), 0 4px 20px rgb(125 135 247 / 0.15)",
               }}
             >
               View or Reschedule Your Booking

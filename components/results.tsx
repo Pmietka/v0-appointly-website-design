@@ -55,7 +55,7 @@ export function Results() {
   return (
     <section id="results" className="py-24 md:py-32 section-divider relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] rounded-full bg-violet-600/[0.04] blur-[120px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] rounded-full bg-[#7d87f7]/[0.04] blur-[120px]" />
       </div>
 
       <div className="mx-auto max-w-6xl px-6">
@@ -66,7 +66,7 @@ export function Results() {
           </p>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-balance leading-tight">
             Real Results From{" "}
-            <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#7d87f7] to-[#a5abff] bg-clip-text text-transparent">
               Real Businesses
             </span>
           </h2>
@@ -81,7 +81,7 @@ export function Results() {
           {testimonials.map((t) => (
             <div
               key={t.name}
-              className="relative flex flex-col rounded-2xl border border-white/[0.07] bg-white/[0.03] p-6 backdrop-blur-sm hover:border-violet-500/20 hover:bg-violet-500/[0.03] transition-all duration-300"
+              className="relative flex flex-col rounded-2xl border border-white/[0.07] bg-white/[0.03] p-6 backdrop-blur-sm hover:border-[#7d87f7]/20 hover:bg-[#7d87f7]/[0.03] transition-all duration-300"
             >
               <div className="text-5xl font-serif leading-none text-primary/25 mb-4 select-none">
                 &#8220;
@@ -101,7 +101,7 @@ export function Results() {
               </p>
 
               <div className="mt-6 pt-5 border-t border-white/[0.06] flex items-center gap-3">
-                <div className="flex items-center justify-center h-9 w-9 rounded-full bg-gradient-to-br from-violet-500 to-fuchsia-500 text-xs font-bold text-white flex-shrink-0">
+                <div className="flex items-center justify-center h-9 w-9 rounded-full bg-gradient-to-br from-[#7d87f7] to-[#a5abff] text-xs font-bold text-white flex-shrink-0">
                   {t.initial}
                 </div>
                 <div>
@@ -118,7 +118,7 @@ export function Results() {
           {results.map((r) => (
             <div
               key={r.caption}
-              className="group rounded-2xl border border-white/[0.07] bg-white/[0.03] overflow-hidden hover:border-violet-500/20 transition-all duration-300"
+              className="group rounded-2xl border border-white/[0.07] bg-white/[0.03] overflow-hidden hover:border-[#7d87f7]/20 transition-all duration-300"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image

@@ -10,9 +10,9 @@ export function CTA() {
   return (
     <section id="cta" className="py-24 md:py-32 section-divider relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-violet-950/20 to-background" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[600px] rounded-full bg-violet-600/[0.08] blur-[120px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full bg-fuchsia-600/[0.05] blur-[100px]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-[#7d87f7]/[0.03] to-background" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[600px] rounded-full bg-[#7d87f7]/[0.08] blur-[120px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full bg-[#7d87f7]/[0.05] blur-[100px]" />
       </div>
 
       <div className="mx-auto max-w-6xl px-6">
@@ -21,8 +21,8 @@ export function CTA() {
             className="absolute inset-0 rounded-3xl"
             style={{
               background:
-                "linear-gradient(135deg, hsl(267 72% 55% / 0.12) 0%, transparent 50%, hsl(280 55% 65% / 0.08) 100%)",
-              border: "1px solid hsl(267 72% 55% / 0.2)",
+                "linear-gradient(135deg, rgb(125 135 247 / 0.12) 0%, transparent 50%, rgb(165 171 255 / 0.08) 100%)",
+              border: "1px solid rgb(125 135 247 / 0.2)",
             }}
           />
 
@@ -34,7 +34,7 @@ export function CTA() {
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground text-balance leading-tight">
               Stop Chasing Leads.{" "}
               <br className="hidden md:block" />
-              <span className="bg-gradient-to-r from-violet-400 via-purple-300 to-fuchsia-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#a5abff] via-[#7d87f7] to-[#8b78f8] bg-clip-text text-transparent">
                 Start Booking Estimates.
               </span>
             </h2>
@@ -61,7 +61,7 @@ export function CTA() {
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-10 py-4 text-base font-bold text-primary-foreground hover:opacity-90 transition-opacity"
                 style={{
                   boxShadow:
-                    "0 0 60px hsl(267 72% 55% / 0.4), 0 4px 30px hsl(267 72% 55% / 0.25)",
+                    "0 0 60px rgb(125 135 247 / 0.4), 0 4px 30px rgb(125 135 247 / 0.25)",
                 }}
               >
                 Book a Call Now
