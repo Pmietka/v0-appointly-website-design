@@ -13,7 +13,7 @@ export function Navbar() {
         <a href="#" className="flex items-center gap-3">
           <Image
             src="/images/appointly-logo.png"
-            alt="Appointly logo"
+            alt="Appointly Solutions logo"
             width={38}
             height={38}
             className="rounded-xl"

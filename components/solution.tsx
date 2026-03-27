@@ -44,8 +44,8 @@ export function Solution() {
   return (
     <section id="solution" className="py-24 md:py-32 section-divider relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-0 right-1/4 w-[700px] h-[700px] rounded-full bg-violet-600/[0.05] blur-[120px]" />
-        <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] rounded-full bg-fuchsia-600/[0.04] blur-[100px]" />
+        <div className="absolute top-0 right-1/4 w-[700px] h-[700px] rounded-full bg-[#7d87f7]/[0.05] blur-[120px]" />
+        <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] rounded-full bg-[#7d87f7]/[0.04] blur-[100px]" />
       </div>
 
       <div className="mx-auto max-w-6xl px-6">
@@ -56,7 +56,7 @@ export function Solution() {
           </p>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-balance leading-tight">
             The Homeowner{" "}
-            <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#7d87f7] to-[#a5abff] bg-clip-text text-transparent">
               Capture &amp; Convert
             </span>{" "}
             System
@@ -72,7 +72,7 @@ export function Solution() {
           {steps.map((s, i) => (
             <div
               key={s.title}
-              className="relative flex flex-col rounded-2xl border border-white/[0.07] bg-white/[0.03] p-6 hover:border-violet-500/20 hover:bg-violet-500/[0.03] transition-all duration-300 group"
+              className="relative flex flex-col rounded-2xl border border-white/[0.07] bg-white/[0.03] p-6 hover:border-[#7d87f7]/20 hover:bg-[#7d87f7]/[0.03] transition-all duration-300 group"
             >
               {/* Step number watermark */}
               <span className="absolute top-5 right-5 text-4xl font-black text-white/[0.04] font-display select-none">
@@ -102,8 +102,8 @@ export function Solution() {
             className="relative flex flex-col justify-between rounded-2xl p-6 overflow-hidden"
             style={{
               background:
-                "linear-gradient(135deg, hsl(267 72% 45% / 0.9), hsl(280 55% 55% / 0.85))",
-              boxShadow: "0 0 60px hsl(267 72% 55% / 0.2), 0 0 120px hsl(280 55% 65% / 0.1)",
+                "linear-gradient(135deg, rgb(125 135 247 / 0.9), rgb(165 171 255 / 0.8))",
+              boxShadow: "0 0 60px rgb(125 135 247 / 0.2), 0 0 120px rgb(125 135 247 / 0.1)",
             }}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none" />
@@ -123,7 +123,7 @@ export function Solution() {
 
             <a
               href="https://client.getappointly.co/strategy-calendar"
-              className="relative z-10 mt-6 inline-flex items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-bold text-violet-700 hover:opacity-90 transition-opacity self-start"
+              className="relative z-10 mt-6 inline-flex items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-bold text-[#7d87f7] hover:opacity-90 transition-opacity self-start"
             >
               Get Started
               <ArrowRight className="h-4 w-4" />
