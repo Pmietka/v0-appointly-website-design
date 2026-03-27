@@ -8,7 +8,7 @@ const testimonials = [
     name: "Mike Reynolds",
     role: "Owner, Reynolds Insulation Co.",
     quote:
-      "Before Appointly, I was spending hours chasing down leads that never converted. Now my calendar stays full with homeowners who are actually ready to book. Revenue is up 40% in three months.",
+      "Before Appointly Solutions, I was spending hours chasing down leads that never converted. Now my calendar stays full with homeowners who are actually ready to book. Revenue is up 40% in three months.",
     rating: 5,
     initial: "M",
   },
@@ -33,19 +33,19 @@ const testimonials = [
 const results = [
   {
     src: "/images/result-1.jpg",
-    alt: "Dashboard showing 47 booked estimates in one month",
+    alt: "Appointly Solutions dashboard showing 47 booked insulation estimate appointments in one month",
     caption: "47 Booked Estimates in a Single Month",
     tag: "Pipeline",
   },
   {
     src: "/images/result-2.jpg",
-    alt: "Lead pipeline showing qualified leads progressing to booked estimates",
+    alt: "Qualified insulation contractor lead pipeline managed by Appointly Solutions",
     caption: "Qualified Lead Pipeline",
     tag: "Leads",
   },
   {
     src: "/images/result-3.jpg",
-    alt: "Automated follow-up conversation booking an estimate",
+    alt: "Appointly Solutions automated follow-up conversation booking an insulation estimate",
     caption: "Automated Homeowner Follow-Up",
     tag: "Automation",
   },

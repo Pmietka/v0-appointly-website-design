@@ -86,7 +86,7 @@ export function Problem() {
                     <span className="text-xs font-bold text-[#7d87f7]/40">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <p className="text-sm font-semibold text-foreground">{p.title}</p>
+                    <h3 className="text-sm font-semibold text-foreground">{p.title}</h3>
                   </div>
                   <p className="text-sm leading-relaxed text-muted-foreground">
                     {p.text}

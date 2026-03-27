@@ -7,7 +7,7 @@ export function Footer() {
         <div className="flex items-center gap-3">
           <Image
             src="/images/appointly-logo.png"
-            alt="Appointly logo"
+            alt="Appointly Solutions logo"
             width={28}
             height={28}
             className="rounded-lg"
@@ -17,7 +17,7 @@ export function Footer() {
           </span>
         </div>
         <p className="text-xs text-muted-foreground">
-          &copy; {new Date().getFullYear()} Appointly. All rights reserved.
+          &copy; {new Date().getFullYear()} Appointly Solutions. All rights reserved.
         </p>
         <div className="flex items-center gap-6">
           <a

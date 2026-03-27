@@ -53,7 +53,7 @@ export default function ThankYouPage() {
           <a href="/" className="flex items-center gap-3">
             <Image
               src="/images/appointly-logo.png"
-              alt="Appointly logo"
+              alt="Appointly Solutions logo"
               width={38}
               height={38}
               className="rounded-xl"
@@ -193,7 +193,7 @@ export default function ThankYouPage() {
           <div className="flex items-center gap-3">
             <Image
               src="/images/appointly-logo.png"
-              alt="Appointly logo"
+              alt="Appointly Solutions logo"
               width={24}
               height={24}
               className="rounded-lg"
@@ -203,7 +203,7 @@ export default function ThankYouPage() {
             </span>
           </div>
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} Appointly. All rights reserved.
+            &copy; {new Date().getFullYear()} Appointly Solutions. All rights reserved.
           </p>
           <div className="flex items-center gap-5">
             <a href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">

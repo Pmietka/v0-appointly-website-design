@@ -15,7 +15,7 @@ export function Hero() {
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
           {/* Eyebrow label */}
           <p className="text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-6">
-            Meet Appointly
+            Meet Appointly Solutions
           </p>
 
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05] text-balance text-foreground">
