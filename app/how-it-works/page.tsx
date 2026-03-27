@@ -192,7 +192,15 @@ export default function HowItWorksPage() {
                 <Link href="/about" className="text-primary hover:text-[#a5abff] transition-colors">
                   About page
                 </Link>{" "}
-                shares the operating principles behind the model.
+                shares the operating principles behind the model. For the direct offer,
+                see{" "}
+                <Link
+                  href="/insulation-contractor-leads"
+                  className="text-primary hover:text-[#a5abff] transition-colors"
+                >
+                  Insulation Contractor Leads
+                </Link>
+                .
               </p>
             </article>
 
@@ -252,7 +260,14 @@ export default function HowItWorksPage() {
               <Link href="/faq" className="text-primary hover:text-[#a5abff] transition-colors">
                 FAQ
               </Link>{" "}
-              for more detailed answers.
+              for more detailed answers, or head to{" "}
+              <Link
+                href="/appointment-setting-for-contractors"
+                className="text-primary hover:text-[#a5abff] transition-colors"
+              >
+                Appointment Setting for Contractors
+              </Link>{" "}
+              if booked estimates are your main concern.
             </p>
           </div>
         </section>

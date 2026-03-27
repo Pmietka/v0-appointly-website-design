@@ -42,7 +42,7 @@ const faqItems = [
   {
     question: "What areas do you serve?",
     answer:
-      "We work with United States insulation contractors and build the campaign strategy around each contractor’s service area and target radius.",
+      "We work with United States insulation contractors and build the campaign strategy around each contractor's service area and target radius.",
   },
   {
     question: "Is there a long term contract?",
@@ -163,7 +163,14 @@ export default function FaqPage() {
                     About page
                   </Link>{" "}
                   explains why Appointly Solutions was built around a cost per lead
-                  model in the first place.
+                  model in the first place. For a direct offer page, visit{" "}
+                  <Link
+                    href="/insulation-contractor-leads"
+                    className="text-primary hover:text-[#a5abff] transition-colors"
+                  >
+                    Insulation Contractor Leads
+                  </Link>
+                  .
                 </p>
               </article>
 

@@ -7,6 +7,14 @@ const companyLinks = [
   { href: "/faq", label: "FAQ" },
 ];
 
+const solutionLinks = [
+  { href: "/insulation-contractor-leads", label: "Insulation Leads" },
+  { href: "/exclusive-insulation-leads", label: "Exclusive Leads" },
+  { href: "/pay-per-lead-insulation", label: "Pay Per Lead" },
+  { href: "/insulation-marketing-agency", label: "Agency Alternative" },
+  { href: "/appointment-setting-for-contractors", label: "Appointment Setting" },
+];
+
 const legalLinks = [
   { href: "/privacy", label: "Privacy Policy" },
   { href: "/terms", label: "Terms of Service" },
@@ -30,13 +38,30 @@ export function Footer() {
             </span>
           </div>
 
-          <div className="grid gap-8 sm:grid-cols-2">
+          <div className="grid gap-8 sm:grid-cols-3">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
                 Company
               </p>
               <div className="mt-4 flex flex-col gap-3">
                 {companyLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+                Solutions
+              </p>
+              <div className="mt-4 flex flex-col gap-3">
+                {solutionLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
