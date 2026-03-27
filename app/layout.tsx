@@ -1,6 +1,7 @@
 import React from "react"
 import type { Metadata } from "next";
 import { Inter, DM_Sans } from "next/font/google";
+import Script from "next/script";
 
 import "./globals.css";
 
@@ -81,6 +82,18 @@ export default function RootLayout({
             }),
           }}
         />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-MM0NQN3HP0"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-MM0NQN3HP0');
+          `}
+        </Script>
       </head>
       <body
         className={`${inter.variable} ${dmSans.variable} font-sans antialiased`}

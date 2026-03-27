@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, CheckCircle, Calendar, Clock, Target } from "lucide-react";
 
 const callPrep = [
@@ -206,12 +207,12 @@ export default function ThankYouPage() {
             &copy; {new Date().getFullYear()} Appointly Solutions. All rights reserved.
           </p>
           <div className="flex items-center gap-5">
-            <a href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+            <Link href="/privacy" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
               Privacy Policy
-            </a>
-            <a href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+            </Link>
+            <Link href="/terms" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
               Terms of Service
-            </a>
+            </Link>
           </div>
         </div>
       </footer>

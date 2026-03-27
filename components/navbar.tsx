@@ -2,7 +2,14 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Menu, X } from "lucide-react";
+
+const navLinks = [
+  { href: "/how-it-works", label: "How It Works" },
+  { href: "/about", label: "About" },
+  { href: "/faq", label: "FAQ" },
+];
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -10,7 +17,7 @@ export function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/[0.05] bg-background/60 backdrop-blur-xl">
       <div className="mx-auto max-w-6xl flex items-center justify-between px-6 py-4">
-        <a href="#" className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-3">
           <Image
             src="/images/appointly-logo.png"
             alt="Appointly Solutions logo"
@@ -21,28 +28,18 @@ export function Navbar() {
           <span className="text-sm font-bold font-display tracking-[0.2em] text-foreground uppercase">
             Appointly
           </span>
-        </a>
+        </Link>
 
-        {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-10">
-          <a
-            href="#results"
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Results
-          </a>
-          <a
-            href="#problem"
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-          >
-            The Problem
-          </a>
-          <a
-            href="#solution"
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Our System
-          </a>
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
           <a
             href="https://client.getappointly.co/strategy-calendar"
             className="text-sm font-semibold text-foreground hover:text-primary transition-colors"
@@ -63,31 +60,20 @@ export function Navbar() {
 
       {mobileOpen && (
         <div className="md:hidden border-t border-white/[0.05] bg-background/90 backdrop-blur-xl px-6 py-5 flex flex-col gap-5">
-          <a
-            href="#results"
-            onClick={() => setMobileOpen(false)}
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Results
-          </a>
-          <a
-            href="#problem"
-            onClick={() => setMobileOpen(false)}
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-          >
-            The Problem
-          </a>
-          <a
-            href="#solution"
-            onClick={() => setMobileOpen(false)}
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Our System
-          </a>
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setMobileOpen(false)}
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
           <a
             href="https://client.getappointly.co/strategy-calendar"
             onClick={() => setMobileOpen(false)}
-            className="text-sm font-semibold text-foreground hover:text-primary transition-colors"
+            className="mt-2 inline-flex items-center justify-center rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
           >
             Book A Call
           </a>
