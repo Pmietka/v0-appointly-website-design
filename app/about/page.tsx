@@ -148,7 +148,14 @@ export default function AboutPage() {
                   How It Works
                 </Link>{" "}
                 page walks through each step of the process from campaign launch to
-                booked estimate.
+                booked estimate. You can also explore{" "}
+                <Link
+                  href="/insulation-contractor-leads"
+                  className="text-primary hover:text-[#a5abff] transition-colors"
+                >
+                  Insulation Contractor Leads
+                </Link>{" "}
+                if you want the commercial overview first.
               </p>
             </article>
           </div>
@@ -206,7 +213,15 @@ export default function AboutPage() {
               <p className="mt-4 mx-auto max-w-2xl text-sm leading-7 text-[#d7dbff]/80 md:text-base">
                 Book a strategy call and we will map out where your leads are coming
                 from, what is slipping through the cracks, and how a pay per lead
-                system could support your next stage of growth.
+                system could support your next stage of growth. If you want to compare
+                models first, visit{" "}
+                <Link
+                  href="/pay-per-lead-insulation"
+                  className="text-white underline decoration-white/30 underline-offset-4 transition-colors hover:text-white/85"
+                >
+                  Pay Per Lead Insulation
+                </Link>
+                .
               </p>
               <a
                 href={bookingUrl}
