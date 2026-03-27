@@ -14,8 +14,8 @@ export function Navbar() {
           <Image
             src="/images/appointly-logo.png"
             alt="Appointly Solutions logo"
-            width={38}
-            height={38}
+            width={56}
+            height={56}
             className="rounded-xl"
           />
           <span className="text-sm font-bold font-display tracking-[0.2em] text-foreground uppercase">
