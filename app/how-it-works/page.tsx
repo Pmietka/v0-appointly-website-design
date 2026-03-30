@@ -2,49 +2,49 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ArrowRight,
-  CalendarCheck2,
   CircleDollarSign,
-  MessageSquareReply,
+  MapPin,
+  Megaphone,
   SearchCheck,
-  Send,
-  Target,
+  Smartphone,
+  CreditCard,
 } from "lucide-react";
 
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 
-const bookingUrl = "https://client.getappointly.co/strategy-calendar";
+const bookingUrl = "https://client.getappointly.co";
 
 const steps = [
   {
-    icon: Target,
-    title: "We Run Targeted Campaigns",
+    icon: MapPin,
+    title: "GMB Optimization",
     description:
-      "Appointly Solutions launches localized campaigns aimed at homeowners already searching for insulation help, so the traffic has clear service intent from the start.",
+      "We claim and optimize your Google Business Profile so you rank in the local 3-pack. More visibility means more inbound calls from homeowners already searching for insulation help.",
   },
   {
-    icon: Send,
-    title: "Leads Come In, We Respond Instantly",
+    icon: Megaphone,
+    title: "Facebook Lead Gen Ads",
     description:
-      "As soon as an inquiry arrives, the response process starts quickly. That keeps momentum high while competitors are still waiting to call back.",
+      "We build and run hyper-local Facebook ad campaigns targeting homeowners in your service area. We handle creative, targeting, budget, and optimization — you don't touch it.",
   },
   {
     icon: SearchCheck,
-    title: "We Pre Qualify Every Lead",
+    title: "Lead Qualification",
     description:
-      "We verify the service area, project fit, and readiness so your team is not wasting time on low quality inquiries.",
+      "Every lead is screened before it reaches you. We verify homeowner status, confirm the project is in your service area, scope the job, and check for budget. No tire-kickers.",
   },
   {
-    icon: CalendarCheck2,
-    title: "Qualified Leads Land on Your Calendar",
+    icon: Smartphone,
+    title: "NFC Review Card System",
     description:
-      "When the opportunity fits, the lead is moved toward a booked estimate so your team can focus on selling the job instead of chasing the job.",
+      "We ship you physical NFC cards to hand to satisfied customers. One tap sends a Google review request directly to their phone — continuously building your GMB ranking.",
   },
   {
-    icon: MessageSquareReply,
-    title: "We Follow Up Until They Book or Disqualify",
+    icon: CreditCard,
+    title: "You Pay Only When We Deliver",
     description:
-      "Some homeowners need extra touches before they commit. We keep the follow up running until the lead books, goes cold, or no longer qualifies.",
+      "Once a qualified lead is delivered, you're charged. If we don't deliver a lead that meets every qualification criterion, you don't pay. No monthly retainer. No long-term contract.",
   },
 ];
 
@@ -52,17 +52,17 @@ const processFaq = [
   {
     question: "Do I need to manage campaigns myself?",
     answer:
-      "No. Appointly Solutions handles the campaign setup, follow up sequence, and qualification flow so your team can stay focused on field work and closing estimates.",
+      "No. Appointly Solutions handles everything — GMB optimization, Facebook ad creative and targeting, lead qualification, and the NFC review card system. You receive the leads.",
   },
   {
-    question: "What does a qualified lead usually include?",
+    question: "What does a qualified lead include?",
     answer:
-      "A strong lead typically includes the homeowner name, phone number, location, service need, and enough context to know the job fits your target profile.",
+      "A qualified lead is a verified homeowner in your service area with a real insulation project and an indicated budget. All four criteria must be met before you're charged.",
   },
   {
-    question: "Can I see how the system connects back to the homepage offer?",
+    question: "What if a lead doesn't meet the criteria?",
     answer:
-      "Yes. The homepage explains the promise at a high level, while this page breaks down the operational steps that make the offer work.",
+      "You don't pay for it. Every lead is screened before delivery. If it doesn't qualify, it doesn't count.",
   },
 ];
 
@@ -108,10 +108,9 @@ export default function HowItWorksPage() {
                 How <span className="gradient-text">Appointly Solutions</span> Works
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                Our system is built to turn homeowner interest into qualified,
-                scheduled estimate opportunities. Appointly Solutions manages the
-                moving parts so insulation contractors can spend less time chasing
-                leads and more time closing jobs.
+                Our pay-per-lead system is built on four pillars: GMB visibility, Facebook
+                lead generation, strict qualification, and a review growth engine. You only
+                pay when we deliver a lead that meets every criterion.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
@@ -252,22 +251,15 @@ export default function HowItWorksPage() {
             </div>
 
             <p className="mt-8 text-sm leading-7 text-muted-foreground">
-              You can also return to the{" "}
+              Return to the{" "}
               <Link href="/" className="text-primary hover:text-[#a5abff] transition-colors">
                 homepage
               </Link>{" "}
-              for the big picture overview or visit the{" "}
+              for a full overview, or visit the{" "}
               <Link href="/faq" className="text-primary hover:text-[#a5abff] transition-colors">
                 FAQ
               </Link>{" "}
-              for more detailed answers, or head to{" "}
-              <Link
-                href="/appointment-setting-for-contractors"
-                className="text-primary hover:text-[#a5abff] transition-colors"
-              >
-                Appointment Setting for Contractors
-              </Link>{" "}
-              if booked estimates are your main concern.
+              for detailed answers about lead qualification, exclusivity, and how to get started.
             </p>
           </div>
         </section>

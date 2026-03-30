@@ -11,48 +11,48 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const bookingUrl = "https://client.getappointly.co/strategy-calendar";
+const bookingUrl = "https://client.getappointly.co";
 
 const faqItems = [
   {
-    question: "What makes Appointly Solutions leads exclusive?",
+    question: "What qualifies as a lead I get charged for?",
     answer:
-      "Appointly Solutions is built to deliver opportunities with exclusivity in mind, so your team is not paying to compete against a long list of contractors for the same homeowner conversation.",
+      "A lead must be a verified homeowner, located in your service area, with a real insulation project and an indicated budget. If a lead doesn't meet all criteria, you don't pay for it.",
   },
   {
-    question: "How much do insulation contractor leads cost?",
+    question: "What's the startup fee for?",
     answer:
-      "Pricing depends on market factors and qualification standards, but the model is structured around pay per qualified lead instead of large monthly retainers.",
+      "It covers your full system setup: GMB claim and optimization, Facebook ad account build, creative, and launch, plus your NFC review card kit. After that, you only pay per qualified lead delivered.",
   },
   {
-    question: "How quickly will I start receiving leads?",
+    question: "Are my leads exclusive?",
     answer:
-      "Launch timelines vary by market, but once campaigns are live the goal is to start generating opportunities quickly and keep response speed high from the first inquiry onward.",
+      "Yes. We only work with one insulation contractor per market. Your leads never go to a competitor.",
   },
   {
-    question: "What counts as a qualified lead?",
+    question: "What markets do you work in?",
     answer:
-      "A qualified lead usually means the homeowner is in your target area, has a relevant insulation need, and shows enough intent for a real estimate conversation.",
+      "We focus on small-to-mid-sized markets (50K–300K population) in the US and Canada where insulation contractors have strong service capacity but weak digital presence.",
+  },
+  {
+    question: "How fast do leads come in?",
+    answer:
+      "Most contractors see their first leads within 24–48 hours of campaign launch.",
+  },
+  {
+    question: "What if I want to pause or stop?",
+    answer:
+      "Cancel anytime. No contract. No penalty. We just ask for 7 days notice to wind down campaigns cleanly.",
   },
   {
     question: "Do I need to run my own ads?",
     answer:
-      "No. Appointly Solutions handles the campaign execution, initial response flow, and qualification process so you do not need to manage ads yourself.",
-  },
-  {
-    question: "What areas do you serve?",
-    answer:
-      "We work with United States insulation contractors and build the campaign strategy around each contractor's service area and target radius.",
-  },
-  {
-    question: "Is there a long term contract?",
-    answer:
-      "The offer is designed to reduce risk compared with typical agency arrangements. Specific terms are covered during the strategy call and in the service agreement.",
+      "No. We handle everything — creative, targeting, budget management, and optimization. You just receive the leads.",
   },
   {
     question: "How do I get started?",
     answer:
-      "The simplest next step is to book a strategy call. We review your market, service area, and growth goals, then outline whether Appointly Solutions is the right fit.",
+      "Book a free strategy call. We review your market, service area, and current lead flow, then walk you through whether Appointly Solutions is the right fit for your business.",
   },
 ];
 

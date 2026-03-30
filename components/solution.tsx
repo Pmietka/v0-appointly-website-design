@@ -1,42 +1,42 @@
 import {
-  Target,
-  Zap,
+  MapPin,
+  Megaphone,
   ShieldCheck,
-  CalendarPlus,
-  RefreshCw,
+  CreditCard,
   ArrowRight,
 } from "lucide-react";
+import { Smartphone } from "lucide-react";
 
 const steps = [
   {
-    icon: Target,
-    title: "Targeted Ad Campaigns",
+    icon: MapPin,
+    title: "GMB Optimization",
     description:
-      "We generate insulation leads with targeted ads that reach homeowners actively looking for insulation services in your area.",
+      "We claim and optimize your Google Business Profile so you rank in the local 3-pack. More visibility, more inbound calls from homeowners already searching.",
   },
   {
-    icon: Zap,
-    title: "Instant Lead Contact",
+    icon: Megaphone,
+    title: "Facebook Lead Gen Ads",
     description:
-      "We contact every lead immediately — within minutes, not hours — so you never lose a hot prospect to slow response times.",
+      "We build and run hyper-local Facebook ad campaigns targeting homeowners in your service area who are actively looking for insulation help.",
   },
   {
     icon: ShieldCheck,
-    title: "Pre-Qualification",
+    title: "Lead Qualification",
     description:
-      "We qualify every lead for fit and intent before they ever waste your time. Wrong area, wrong budget, renters — all filtered out.",
+      "Every lead is screened before it reaches you. We verify homeowner status, service area, project scope, and budget. No tire-kickers.",
   },
   {
-    icon: CalendarPlus,
-    title: "Estimates Booked For You",
+    icon: Smartphone,
+    title: "NFC Review Card System",
     description:
-      "We book the estimate directly on your calendar, or hand them off completely ready to book. You just show up.",
+      "We send you physical NFC cards to hand to satisfied customers. One tap sends a Google review request directly to their phone — feeding your GMB ranking over time.",
   },
   {
-    icon: RefreshCw,
-    title: "Relentless Follow-Up",
+    icon: CreditCard,
+    title: "You Pay Only When We Deliver",
     description:
-      "We keep following up until they book or disqualify. No lead left behind, no opportunity wasted.",
+      "Once a qualified lead is delivered to you, you're charged. If we don't deliver, you don't pay. No monthly retainer. No long-term contract. No lead, no charge.",
   },
 ];
 
@@ -55,15 +55,14 @@ export function Solution() {
             Our System
           </p>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-balance leading-tight">
-            The Homeowner{" "}
+            The Pay-Per-Lead{" "}
             <span className="bg-gradient-to-r from-[#7d87f7] to-[#a5abff] bg-clip-text text-transparent">
-              Capture &amp; Convert
-            </span>{" "}
-            System
+              System
+            </span>
           </h2>
           <p className="mt-4 text-muted-foreground leading-relaxed">
-            A done-for-you system that generates, qualifies, and books insulation
-            estimates on your calendar — so you can focus on closing jobs.
+            A done-for-you system that builds your online presence, generates exclusive
+            leads, and only charges you when we deliver — so you can focus on closing jobs.
           </p>
         </div>
 
@@ -113,16 +112,16 @@ export function Solution() {
                 The Result
               </span>
               <h3 className="font-display text-xl font-bold text-white mb-3 leading-tight">
-                A Calendar Full of Ready-to-Buy Homeowners
+                Exclusive Leads. Zero Shared. Zero Retainer.
               </h3>
               <p className="text-sm leading-relaxed text-white/80">
-                Without you lifting a finger to generate or chase them. Just show up
-                and close.
+                One contractor per market. Every lead pre-qualified. You only pay when
+                we deliver. Simple accountability.
               </p>
             </div>
 
             <a
-              href="https://client.getappointly.co/strategy-calendar"
+              href="https://client.getappointly.co"
               className="relative z-10 mt-6 inline-flex items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-bold text-[#7d87f7] hover:opacity-90 transition-opacity self-start"
             >
               Get Started

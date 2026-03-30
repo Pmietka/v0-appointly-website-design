@@ -13,14 +13,14 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Appointly Solutions | Exclusive Leads for Insulation Contractors",
+  title: "Appointly Solutions | Pay-Per-Lead for Insulation Contractors",
   description:
-    "Appointly Solutions delivers exclusive, pre-qualified leads to home insulation contractors on a cost per lead basis. No retainers, no ad spend on your end, no risk. Just booked appointments.",
+    "Get exclusive, qualified insulation leads. Startup fee, then pay only when we deliver. GMB optimization, Facebook ads, and NFC review system included. No monthly retainer.",
   keywords: [
     "insulation contractor leads",
-    "home insulation leads",
+    "pay per lead insulation",
     "insulation lead generation",
-    "cost per lead insulation",
+    "exclusive insulation leads",
     "insulation marketing",
     "Appointly Solutions",
   ],
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
     canonical: "https://getappointly.co",
   },
   openGraph: {
-    title: "Appointly Solutions | Exclusive Leads for Insulation Contractors",
+    title: "Appointly Solutions | Pay-Per-Lead for Insulation Contractors",
     description:
-      "Appointly Solutions delivers exclusive, pre-qualified leads to home insulation contractors on a cost per lead basis. No retainers, no ad spend on your end, no risk. Just booked appointments.",
+      "Get exclusive, qualified insulation leads. Startup fee, then pay only when we deliver. GMB optimization, Facebook ads, and NFC review system included. No monthly retainer.",
     type: "website",
     url: "https://getappointly.co",
     siteName: "Appointly Solutions",
@@ -43,15 +43,15 @@ export const metadata: Metadata = {
         url: "https://getappointly.co/images/appointly-og.png",
         width: 1024,
         height: 350,
-        alt: "Appointly Solutions | Exclusive Leads for Insulation Contractors",
+        alt: "Appointly Solutions | Pay-Per-Lead for Insulation Contractors",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Appointly Solutions | Exclusive Leads for Insulation Contractors",
+    title: "Appointly Solutions | Pay-Per-Lead for Insulation Contractors",
     description:
-      "Appointly Solutions delivers exclusive, pre-qualified leads to home insulation contractors on a cost per lead basis. No retainers, no ad spend on your end, no risk. Just booked appointments.",
+      "Get exclusive, qualified insulation leads. Startup fee, then pay only when we deliver. GMB optimization, Facebook ads, and NFC review system included. No monthly retainer.",
     images: ["https://getappointly.co/images/appointly-og.png"],
   },
 };

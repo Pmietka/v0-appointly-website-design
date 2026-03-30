@@ -7,7 +7,7 @@ import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { href: "/how-it-works", label: "How It Works" },
-  { href: "/about", label: "About" },
+  { href: "/pay-per-lead-insulation", label: "Pricing" },
   { href: "/faq", label: "FAQ" },
 ];
 
@@ -41,7 +41,7 @@ export function Navbar() {
             </Link>
           ))}
           <a
-            href="https://client.getappointly.co/strategy-calendar"
+            href="https://client.getappointly.co"
             className="text-sm font-semibold text-foreground hover:text-primary transition-colors"
           >
             Book A Call
@@ -71,7 +71,7 @@ export function Navbar() {
             </Link>
           ))}
           <a
-            href="https://client.getappointly.co/strategy-calendar"
+            href="https://client.getappointly.co"
             onClick={() => setMobileOpen(false)}
             className="mt-2 inline-flex items-center justify-center rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
           >
