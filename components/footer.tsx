@@ -9,10 +9,8 @@ const companyLinks = [
 
 const solutionLinks = [
   { href: "/insulation-contractor-leads", label: "Insulation Leads" },
-  { href: "/exclusive-insulation-leads", label: "Exclusive Leads" },
   { href: "/pay-per-lead-insulation", label: "Pay Per Lead" },
   { href: "/insulation-marketing-agency", label: "Agency Alternative" },
-  { href: "/appointment-setting-for-contractors", label: "Appointment Setting" },
 ];
 
 const legalLinks = [

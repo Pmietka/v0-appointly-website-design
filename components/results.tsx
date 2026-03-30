@@ -8,7 +8,7 @@ const testimonials = [
     name: "Mike Reynolds",
     role: "Owner, Reynolds Insulation Co.",
     quote:
-      "Before Appointly Solutions, I was spending hours chasing down leads that never converted. Now my calendar stays full with homeowners who are actually ready to book. Revenue is up 40% in three months.",
+      "I was skeptical, but the pay-per-lead model made the decision easy. No retainer, no risk. Closed 6 of the first 10 leads we got. ROI paid back in week one.",
     rating: 5,
     initial: "M",
   },
@@ -16,7 +16,7 @@ const testimonials = [
     name: "Sarah Chen",
     role: "Operations Manager, ThermalPro",
     quote:
-      "The difference is night and day. Every lead that gets put on our calendar is pre-qualified and actually wants an estimate. Our close rate went from 25% to over 60%.",
+      "The difference from Angi leads is massive. These homeowners are actually ready to book. Our close rate went from 25% to over 60% because we're not racing competitors to the phone.",
     rating: 5,
     initial: "S",
   },
@@ -24,7 +24,7 @@ const testimonials = [
     name: "James Hartwell",
     role: "Founder, ComfortFirst Insulation",
     quote:
-      "I was skeptical at first, but the results speak for themselves. We went from 8 estimates a week to 22. The system just works, and I can focus on doing the actual jobs.",
+      "The GMB setup alone was worth it. We started getting inbound calls we never had before. Add the Facebook leads on top and the pipeline filled up fast. The NFC cards keep the reviews coming in too.",
     rating: 5,
     initial: "J",
   },
@@ -34,20 +34,20 @@ const results = [
   {
     src: "/images/result-1.jpg",
     alt: "Appointly Solutions dashboard showing 47 booked insulation estimate appointments in one month",
-    caption: "47 Booked Estimates in a Single Month",
+    caption: "47 Qualified Leads Delivered in a Single Month",
     tag: "Pipeline",
   },
   {
     src: "/images/result-2.jpg",
     alt: "Qualified insulation contractor lead pipeline managed by Appointly Solutions",
-    caption: "Qualified Lead Pipeline",
-    tag: "Leads",
+    caption: "8–12x Average ROI on Lead Cost",
+    tag: "ROI",
   },
   {
     src: "/images/result-3.jpg",
-    alt: "Appointly Solutions automated follow-up conversation booking an insulation estimate",
-    caption: "Automated Homeowner Follow-Up",
-    tag: "Automation",
+    alt: "Appointly Solutions lead delivery within 24 to 48 hours of campaign launch",
+    caption: "First Leads Within 24–48 Hours of Launch",
+    tag: "Speed",
   },
 ];
 

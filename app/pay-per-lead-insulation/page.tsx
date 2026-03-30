@@ -5,7 +5,7 @@ import { ArrowRight, CircleDollarSign, Clock3, LineChart, ShieldCheck } from "lu
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 
-const bookingUrl = "https://client.getappointly.co/strategy-calendar";
+const bookingUrl = "https://client.getappointly.co";
 
 const reasons = [
   {

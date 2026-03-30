@@ -1,36 +1,36 @@
 import {
-  Clock,
-  PhoneOff,
-  UserX,
-  MessageCircleOff,
+  DollarSign,
+  Users,
+  Star,
+  Wrench,
   AlertTriangle,
 } from "lucide-react";
 
 const problems = [
   {
-    icon: Clock,
-    title: "Slow Response Kills Deals",
-    text: "You're paying for leads, but response time kills conversions. Homeowners move on in minutes.",
+    icon: DollarSign,
+    title: "Paying for Nothing",
+    text: "You're writing checks to agencies every month — retainers, management fees, ad spend — with no guaranteed leads and nothing to show for it.",
   },
   {
-    icon: PhoneOff,
-    title: "Missed Calls While on Jobs",
-    text: "New inquiries come in while you're on jobs — they cool off fast and go to your competitor.",
+    icon: Users,
+    title: "Shared Leads Are a Race to the Phone",
+    text: "Buying leads from Angi or HomeAdvisor means you're competing against 4+ other contractors calling the same homeowner at the same time.",
   },
   {
-    icon: UserX,
-    title: "Unqualified Time-Wasters",
-    text: "Too many \"leads\" are unqualified — wrong area, wrong budget, renters, or jobs too small.",
+    icon: Star,
+    title: "Your Google Profile Is Hurting You",
+    text: "Your GMB is unclaimed or sitting at 3 stars because no one ever asked for reviews. That's lost trust and lost inbound calls every single day.",
   },
   {
-    icon: MessageCircleOff,
-    title: "Inconsistent Follow-Up",
-    text: "Follow-up is inconsistent, so good prospects slip away before they ever book an estimate.",
+    icon: Wrench,
+    title: "You're Busy Running Jobs",
+    text: "You're too busy on installs to run ads, follow up with inquiries, or figure out Facebook. Marketing falls through the cracks when you're in the field.",
   },
   {
     icon: AlertTriangle,
-    title: "No System to Convert",
-    text: "You don't have a tight system that turns raw inquiries into booked estimates on autopilot.",
+    title: "Agencies Charge Regardless of Results",
+    text: "Most agencies are on retainer whether they deliver or not. You're the one carrying all the risk while they collect the monthly fee.",
   },
 ];
 
@@ -64,9 +64,9 @@ export function Problem() {
 
             <div className="mt-8 p-5 rounded-2xl border border-[#7d87f7]/15 bg-[#7d87f7]/[0.04]">
               <p className="text-sm text-[#7d87f7]/90 leading-relaxed">
-                The average insulation contractor loses{" "}
-                <span className="font-bold text-[#7d87f7]">3–5 qualified leads per week</span>{" "}
-                simply due to slow response times and no follow-up system.
+                The average insulation contractor wastes{" "}
+                <span className="font-bold text-[#7d87f7]">$2,000–$5,000/month</span>{" "}
+                on agencies or shared leads that never convert. There's a better model.
               </p>
             </div>
           </div>

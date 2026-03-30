@@ -1,9 +1,9 @@
 import { ArrowRight, CheckCircle } from "lucide-react";
 
 const bullets = [
-  "No long-term contracts",
-  "Performance-based model",
-  "White-glove onboarding",
+  "No monthly retainer",
+  "Pay per qualified lead only",
+  "One contractor per market",
 ];
 
 export function CTA() {
@@ -32,17 +32,17 @@ export function CTA() {
             </p>
 
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground text-balance leading-tight">
-              Stop Chasing Leads.{" "}
+              Stop Paying for Retainers.{" "}
               <br className="hidden md:block" />
               <span className="bg-gradient-to-r from-[#a5abff] via-[#7d87f7] to-[#8b78f8] bg-clip-text text-transparent">
-                Start Booking Estimates.
+                Pay Only When We Deliver.
               </span>
             </h2>
 
             <p className="mt-6 text-base text-muted-foreground max-w-xl mx-auto leading-relaxed">
-              Book a free strategy call and we{"'"}ll show you exactly how our
-              system can fill your calendar with qualified homeowners ready for
-              insulation estimates.
+              Book a free strategy call and we{"'"}ll map out your market, walk through
+              how the pay-per-lead system works, and show you what it looks like to
+              get exclusive, qualified leads in your area.
             </p>
 
             {/* Bullets */}
@@ -57,7 +57,7 @@ export function CTA() {
 
             <div className="mt-10">
               <a
-                href="https://client.getappointly.co/strategy-calendar"
+                href="https://client.getappointly.co"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-10 py-4 text-base font-bold text-primary-foreground hover:opacity-90 transition-opacity"
                 style={{
                   boxShadow:

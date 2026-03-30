@@ -5,7 +5,7 @@ import { ArrowRight, CalendarCheck2, MessageSquareReply, PhoneCall, TimerReset }
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 
-const bookingUrl = "https://client.getappointly.co/strategy-calendar";
+const bookingUrl = "https://client.getappointly.co";
 
 const pillars = [
   {
@@ -74,13 +74,15 @@ export default function AppointmentSettingForContractorsPage() {
                 Booked Estimate Page
               </p>
               <h1 className="font-display text-5xl md:text-6xl font-bold tracking-tight leading-[1.05] text-balance">
-                Appointment Setting for Insulation Contractors Who Need More{" "}
-                <span className="gradient-text">Booked Estimates</span>
+                Booked Estimates Are the{" "}
+                <span className="gradient-text">Result</span>{" "}
+                of the PPL System
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                Appointly Solutions helps bridge the gap between lead generation and
-                revenue by turning qualified homeowner interest into booked estimate
-                conversations. For many contractors, that is where real growth starts.
+                When we deliver a qualified insulation lead, you're already halfway to
+                a booked estimate. We screen every homeowner for intent, budget, and
+                service area fit before they ever reach you — so your team walks into
+                real conversations, not cold inquiries.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a

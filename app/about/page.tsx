@@ -5,32 +5,32 @@ import { ArrowRight, BadgeCheck, Clock3, ShieldCheck, Zap } from "lucide-react";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 
-const bookingUrl = "https://client.getappointly.co/strategy-calendar";
+const bookingUrl = "https://client.getappointly.co";
 
 const differentiators = [
   {
     icon: ShieldCheck,
-    title: "Exclusive lead delivery",
+    title: "One contractor per market",
     description:
-      "Every opportunity Appointly Solutions sends is routed with exclusivity in mind, so contractors are not thrown into a race to the bottom.",
+      "We only work with one insulation contractor per service area. Your leads are never shared with a competitor.",
   },
   {
     icon: BadgeCheck,
-    title: "Pre qualified homeowners",
+    title: "Fully qualified before delivery",
     description:
-      "We screen for fit, urgency, location, and project intent before the lead lands on your team.",
+      "Every lead is screened for homeowner status, service area, project scope, and budget before it ever reaches you.",
   },
   {
     icon: Clock3,
-    title: "Fast response systems",
+    title: "Full system included",
     description:
-      "Speed matters in home services, so we respond quickly and keep follow up moving while your crew stays focused on installs.",
+      "GMB optimization, Facebook ads, and an NFC review card system are all part of the setup — not sold as add-ons.",
   },
   {
     icon: Zap,
-    title: "Transparent reporting",
+    title: "No retainer. No contract.",
     description:
-      "You know what came in, what was qualified, and what made it onto the calendar, with no mystery retainers or fuzzy attribution.",
+      "You pay per qualified lead delivered. Cancel anytime with 7 days notice. No lock-in, no guesswork.",
   },
 ];
 
@@ -77,10 +77,11 @@ export default function AboutPage() {
                 About <span className="gradient-text">Appointly Solutions</span>
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                Appointly Solutions helps insulation contractors grow with exclusive,
-                pre qualified leads delivered on a cost per lead model. We built the
-                company to remove the usual agency risk and replace it with a system
-                that is measurable, transparent, and tied to real opportunities.
+                Founded by brothers Patrick and Jacob Mietka in Chicago, IL, Appointly
+                Solutions was built out of frustration with agencies that charge retainers
+                without delivering results. We created the pay-per-lead model because
+                contractors deserve accountability — you should only pay when we actually
+                deliver.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
@@ -115,10 +116,12 @@ export default function AboutPage() {
                 Contractors deserve a model that rewards results.
               </h2>
               <p className="mt-5 text-sm leading-7 text-muted-foreground md:text-base">
-                Traditional agencies often charge large monthly retainers before any
-                booked opportunity shows up. That leaves contractors carrying the
-                risk, while the agency gets paid either way. Appointly Solutions was
-                created for owners who want growth without gambling on vague promises.
+                Traditional agencies charge large monthly retainers before any result
+                shows up. That leaves contractors carrying all the risk while the
+                agency collects regardless. Appointly Solutions was built specifically
+                for owner-operators who are done paying for promises. Our first client,
+                Ewing Insulation in Canada, onboarded in March 2026 — and the PPL model
+                has been the foundation ever since.
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
                 If you want the full breakdown, our{" "}
@@ -137,10 +140,10 @@ export default function AboutPage() {
                 Pay per lead, no retainer, lower risk.
               </h2>
               <p className="mt-5 text-sm leading-7 text-muted-foreground md:text-base">
-                Appointly Solutions runs the campaigns, responds to inbound inquiries,
-                screens homeowners, and pushes qualified opportunities toward your
-                calendar. You are not paying for hours, reports, or guesswork. You are
-                paying for qualified lead flow.
+                Appointly Solutions optimizes your GMB, runs Facebook lead gen ads,
+                qualifies every homeowner before they reach you, and ships you NFC review
+                cards to keep your Google profile growing. You pay per qualified lead
+                delivered — not for hours, reports, or guesswork.
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
                 Our{" "}
