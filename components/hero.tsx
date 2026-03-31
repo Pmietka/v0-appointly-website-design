@@ -25,7 +25,7 @@ export function Hero() {
 
           <div className="mt-10 flex flex-col sm:flex-row items-center gap-4">
             <a
-              href="https://client.getappointly.co"
+              href="https://client.getappointly.co/strategy-calendar"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-[#5f57e8] px-8 py-4 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
             >
               Book a Free Strategy Call

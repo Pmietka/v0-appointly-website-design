@@ -11,7 +11,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const bookingUrl = "https://client.getappointly.co";
+const bookingUrl = "https://client.getappointly.co/strategy-calendar";
 
 const faqItems = [
   {

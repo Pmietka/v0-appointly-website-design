@@ -5,7 +5,7 @@ import { ArrowRight, Crown, ShieldCheck, SplitSquareVertical, Users } from "luci
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 
-const bookingUrl = "https://client.getappointly.co";
+const bookingUrl = "https://client.getappointly.co/strategy-calendar";
 
 const comparisons = [
   {
