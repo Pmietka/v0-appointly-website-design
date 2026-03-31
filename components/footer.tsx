@@ -24,25 +24,38 @@ const legalLinks = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-gray-200 bg-white py-10">
-      <div className="mx-auto max-w-6xl px-6 flex flex-col gap-8">
-        <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
-          <div className="flex items-center gap-3">
-            <Image
-              src="/images/appointly-logo.png"
-              alt="Appointly Solutions logo"
-              width={28}
-              height={28}
-              className="rounded-lg"
-            />
-            <span className="text-sm font-bold font-display tracking-widest text-gray-900 uppercase">
-              Appointly
-            </span>
+    <footer className="border-t border-slate-200 bg-white py-12">
+      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6">
+        <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
+          <div className="max-w-xs">
+            <div className="flex items-center gap-3">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-slate-200 bg-white shadow-sm">
+                <Image
+                  src="/images/appointly-logo.png"
+                  alt="Appointly Solutions logo"
+                  width={38}
+                  height={38}
+                  className="h-auto w-auto"
+                />
+              </div>
+              <div>
+                <span className="font-display text-sm font-bold uppercase tracking-[0.18em] text-slate-950">
+                  Appointly
+                </span>
+                <p className="mt-1 text-[11px] uppercase tracking-[0.22em] text-slate-500">
+                  Solutions
+                </p>
+              </div>
+            </div>
+            <p className="mt-5 text-sm leading-7 text-slate-600">
+              Exclusive, qualified insulation leads built around booked estimates,
+              not vague agency promises.
+            </p>
           </div>
 
           <div className="grid gap-8 sm:grid-cols-3">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
                 Company
               </p>
               <div className="mt-4 flex flex-col gap-3">
@@ -50,7 +63,7 @@ export function Footer() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                    className="text-sm text-slate-600 transition-colors hover:text-slate-950"
                   >
                     {link.label}
                   </Link>
@@ -59,7 +72,7 @@ export function Footer() {
             </div>
 
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
                 Solutions
               </p>
               <div className="mt-4 flex flex-col gap-3">
@@ -67,7 +80,7 @@ export function Footer() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                    className="text-sm text-slate-600 transition-colors hover:text-slate-950"
                   >
                     {link.label}
                   </Link>
@@ -76,7 +89,7 @@ export function Footer() {
             </div>
 
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
                 Legal
               </p>
               <div className="mt-4 flex flex-col gap-3">
@@ -84,7 +97,7 @@ export function Footer() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                    className="text-sm text-slate-600 transition-colors hover:text-slate-950"
                   >
                     {link.label}
                   </Link>
@@ -94,17 +107,20 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 border-t border-gray-100 pt-6 md:flex-row md:items-center md:justify-between">
-          <p className="text-xs text-gray-500">
+        <div className="flex flex-col gap-4 border-t border-slate-100 pt-6 md:flex-row md:items-center md:justify-between">
+          <p className="text-xs text-slate-500">
             &copy; {new Date().getFullYear()} Appointly Solutions. All rights reserved.
           </p>
-          <Image
-            src="/images/appointly-logo.png"
-            alt="Appointly Solutions logo mark"
-            width={22}
-            height={22}
-            className="rounded-md opacity-60"
-          />
+          <div className="flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-slate-400">
+            <Image
+              src="/images/appointly-logo.png"
+              alt="Appointly Solutions logo mark"
+              width={24}
+              height={24}
+              className="rounded-md"
+            />
+            Performance-based lead generation
+          </div>
         </div>
       </div>
     </footer>
