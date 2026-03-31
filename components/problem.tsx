@@ -36,37 +36,32 @@ const problems = [
 
 export function Problem() {
   return (
-    <section id="problem" className="py-24 md:py-32 section-divider relative overflow-hidden">
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/30 to-background" />
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[#7d87f7]/[0.04] blur-[100px]" />
-      </div>
-
+    <section id="problem" className="py-24 md:py-32 bg-[#eef0f8]">
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Left: Empathy text */}
           <div className="lg:sticky lg:top-32">
-            <p className="text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-4">
+            <p className="text-xs font-semibold tracking-[0.25em] uppercase text-gray-500 mb-4">
               Sound Familiar?
             </p>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-balance leading-tight">
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 text-balance leading-tight">
               The Insulation{" "}
-              <span className="bg-gradient-to-r from-[#7d87f7] to-[#a5abff] bg-clip-text text-transparent">
+              <span className="text-[#5f57e8]">
                 Contractor
               </span>{" "}
               Reality
             </h2>
-            <p className="mt-5 text-muted-foreground leading-relaxed max-w-lg text-base">
+            <p className="mt-5 text-gray-600 leading-relaxed max-w-lg text-base">
               You{"'"}re great at what you do. But between running jobs, managing
               crews, and trying to follow up with every inquiry — qualified
               homeowners are slipping through the cracks every single day.
             </p>
 
-            <div className="mt-8 p-5 rounded-2xl border border-[#7d87f7]/15 bg-[#7d87f7]/[0.04]">
-              <p className="text-sm text-[#7d87f7]/90 leading-relaxed">
+            <div className="mt-8 p-5 rounded-2xl border border-[#5f57e8]/20 bg-white shadow-sm">
+              <p className="text-sm text-gray-700 leading-relaxed">
                 The average insulation contractor wastes{" "}
-                <span className="font-bold text-[#7d87f7]">$2,000–$5,000/month</span>{" "}
-                on agencies or shared leads that never convert. There's a better model.
+                <span className="font-bold text-[#5f57e8]">$2,000–$5,000/month</span>{" "}
+                on agencies or shared leads that never convert. There{"'"}s a better model.
               </p>
             </div>
           </div>
@@ -76,19 +71,19 @@ export function Problem() {
             {problems.map((p, i) => (
               <div
                 key={p.title}
-                className="flex items-start gap-4 rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5 hover:border-[#7d87f7]/20 hover:bg-[#7d87f7]/[0.03] transition-all duration-300 group"
+                className="flex items-start gap-4 rounded-2xl border border-gray-200 bg-white p-5 hover:shadow-sm transition-shadow group"
               >
-                <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-xl bg-[#7d87f7]/10 border border-[#7d87f7]/20 group-hover:bg-[#7d87f7]/15 transition-colors">
-                  <p.icon className="h-4 w-4 text-[#7d87f7]" />
+                <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-xl bg-[#5f57e8]/10">
+                  <p.icon className="h-4 w-4 text-[#5f57e8]" />
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-1">
-                    <span className="text-xs font-bold text-[#7d87f7]/40">
+                    <span className="text-xs font-bold text-gray-400">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <h3 className="text-sm font-semibold text-foreground">{p.title}</h3>
+                    <h3 className="text-sm font-semibold text-gray-900">{p.title}</h3>
                   </div>
-                  <p className="text-sm leading-relaxed text-muted-foreground">
+                  <p className="text-sm leading-relaxed text-gray-600">
                     {p.text}
                   </p>
                 </div>

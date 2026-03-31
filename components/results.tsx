@@ -53,24 +53,20 @@ const results = [
 
 export function Results() {
   return (
-    <section id="results" className="py-24 md:py-32 section-divider relative overflow-hidden">
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] rounded-full bg-[#7d87f7]/[0.04] blur-[120px]" />
-      </div>
-
+    <section id="results" className="py-24 md:py-32 bg-white">
       <div className="mx-auto max-w-6xl px-6">
         {/* Section header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-4">
+          <p className="text-xs font-semibold tracking-[0.25em] uppercase text-gray-500 mb-4">
             Proven Results
           </p>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-balance leading-tight">
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 text-balance leading-tight">
             Real Results From{" "}
-            <span className="bg-gradient-to-r from-[#7d87f7] to-[#a5abff] bg-clip-text text-transparent">
+            <span className="text-[#5f57e8]">
               Real Businesses
             </span>
           </h2>
-          <p className="mt-4 text-muted-foreground leading-relaxed">
+          <p className="mt-4 text-gray-600 leading-relaxed">
             Don{"'"}t take our word for it. See what our clients are saying and
             the numbers behind their growth.
           </p>
@@ -81,9 +77,9 @@ export function Results() {
           {testimonials.map((t) => (
             <div
               key={t.name}
-              className="relative flex flex-col rounded-2xl border border-white/[0.07] bg-white/[0.03] p-6 backdrop-blur-sm hover:border-[#7d87f7]/20 hover:bg-[#7d87f7]/[0.03] transition-all duration-300"
+              className="relative flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow"
             >
-              <div className="text-5xl font-serif leading-none text-primary/25 mb-4 select-none">
+              <div className="text-5xl font-serif leading-none text-[#5f57e8]/20 mb-4 select-none">
                 &#8220;
               </div>
 
@@ -96,17 +92,17 @@ export function Results() {
                 ))}
               </div>
 
-              <p className="text-sm leading-relaxed text-muted-foreground flex-1">
+              <p className="text-sm leading-relaxed text-gray-600 flex-1">
                 {t.quote}
               </p>
 
-              <div className="mt-6 pt-5 border-t border-white/[0.06] flex items-center gap-3">
-                <div className="flex items-center justify-center h-9 w-9 rounded-full bg-gradient-to-br from-[#7d87f7] to-[#a5abff] text-xs font-bold text-white flex-shrink-0">
+              <div className="mt-6 pt-5 border-t border-gray-100 flex items-center gap-3">
+                <div className="flex items-center justify-center h-9 w-9 rounded-full bg-[#5f57e8] text-xs font-bold text-white flex-shrink-0">
                   {t.initial}
                 </div>
                 <div>
-                  <p className="font-semibold text-sm text-foreground">{t.name}</p>
-                  <p className="text-xs text-muted-foreground mt-0.5">{t.role}</p>
+                  <p className="font-semibold text-sm text-gray-900">{t.name}</p>
+                  <p className="text-xs text-gray-500 mt-0.5">{t.role}</p>
                 </div>
               </div>
             </div>
@@ -118,7 +114,7 @@ export function Results() {
           {results.map((r) => (
             <div
               key={r.caption}
-              className="group rounded-2xl border border-white/[0.07] bg-white/[0.03] overflow-hidden hover:border-[#7d87f7]/20 transition-all duration-300"
+              className="group rounded-2xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
@@ -127,13 +123,12 @@ export function Results() {
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-                <span className="absolute top-3 right-3 text-xs font-semibold bg-primary/20 border border-primary/30 text-primary px-2.5 py-1 rounded-full backdrop-blur-sm">
+                <span className="absolute top-3 right-3 text-xs font-semibold bg-white/90 border border-gray-200 text-[#5f57e8] px-2.5 py-1 rounded-full">
                   {r.tag}
                 </span>
               </div>
               <div className="p-4">
-                <p className="text-sm font-medium text-foreground">{r.caption}</p>
+                <p className="text-sm font-medium text-gray-900">{r.caption}</p>
               </div>
             </div>
           ))}
