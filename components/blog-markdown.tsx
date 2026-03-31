@@ -41,7 +41,7 @@ function renderInline(raw: string) {
     const safeHref = sanitizeHref(href);
     const isExternal = safeHref.startsWith("http://") || safeHref.startsWith("https://");
     tokens.push(
-      `<a class="font-medium text-[#5f57e8] underline decoration-[#5f57e8]/30 underline-offset-4 hover:decoration-[#5f57e8]" href="${escapeHtml(safeHref)}"${isExternal ? ' target="_blank" rel="noreferrer noopener"' : ""}>${escapeHtml(label)}</a>`,
+      `<a class="font-medium text-[hsl(var(--primary))] underline decoration-[hsl(var(--primary))]/30 underline-offset-4 hover:decoration-[hsl(var(--primary))]" href="${escapeHtml(safeHref)}"${isExternal ? ' target="_blank" rel="noreferrer noopener"' : ""}>${escapeHtml(label)}</a>`,
     );
     return token;
   });
@@ -82,7 +82,7 @@ function renderList(items: string[], ordered = false) {
 }
 
 function renderBlockquote(lines: string[]) {
-  return `<blockquote class="border-l-4 border-[#5f57e8] bg-[#5f57e8]/[0.06] px-6 py-5 text-slate-700">${renderParagraph(lines)}</blockquote>`;
+  return `<blockquote class="border-l-4 border-[hsl(var(--primary))] bg-[hsl(var(--primary))]/[0.08] px-6 py-5 text-slate-700">${renderParagraph(lines)}</blockquote>`;
 }
 
 function renderCodeBlock(lines: string[]) {

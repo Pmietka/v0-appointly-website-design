@@ -41,7 +41,7 @@ export function SeoResourceLinks({
               href={resource.href}
               className="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
             >
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5f57e8]">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
                 Learn more
               </p>
               <h3 className="mt-4 text-xl font-bold tracking-tight text-slate-950">
@@ -50,7 +50,7 @@ export function SeoResourceLinks({
               <p className="mt-3 text-sm leading-7 text-slate-600">
                 {resource.description}
               </p>
-              <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#5f57e8]">
+              <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary">
                 Visit page
               </span>
             </Link>

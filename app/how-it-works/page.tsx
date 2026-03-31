@@ -3,11 +3,11 @@ import Link from "next/link";
 import {
   ArrowRight,
   CircleDollarSign,
+  CreditCard,
   MapPin,
   Megaphone,
   SearchCheck,
   Smartphone,
-  CreditCard,
 } from "lucide-react";
 
 import { Footer } from "@/components/footer";
@@ -21,33 +21,33 @@ const bookingUrl = "https://client.getappointly.co/strategy-calendar";
 const steps = [
   {
     icon: MapPin,
-    title: "GMB Optimization",
+    title: "Google profile and market setup",
     description:
-      "We claim and optimize your Google Business Profile so you rank in the local 3-pack. More visibility means more inbound calls from homeowners already searching for insulation help.",
+      "We tighten up your Google Business Profile and service area positioning so local homeowners can find you with more confidence.",
   },
   {
     icon: Megaphone,
-    title: "Facebook Lead Gen Ads",
+    title: "Local ad campaigns",
     description:
-      "We build and run hyper-local Facebook ad campaigns targeting homeowners in your service area. We handle creative, targeting, budget, and optimization - you don't touch it.",
+      "We run campaigns aimed at homeowners in your target towns who are likely to need attic insulation, removal, or spray foam work.",
   },
   {
     icon: SearchCheck,
-    title: "Lead Qualification",
+    title: "Lead qualification",
     description:
-      "Every lead is screened before it reaches you. We verify homeowner status, confirm the project is in your service area, scope the job, and check for budget. No tire-kickers.",
+      "Every lead is checked for homeowner status, project fit, and service area before it reaches your team.",
   },
   {
     icon: Smartphone,
-    title: "NFC Review Card System",
+    title: "Review follow-up",
     description:
-      "We ship you physical NFC cards to hand to satisfied customers. One tap sends a Google review request directly to their phone, continuously building your GMB ranking.",
+      "We include a review system your crew can use after completed jobs so your Google profile gets stronger over time.",
   },
   {
     icon: CreditCard,
-    title: "You Pay Only When We Deliver",
+    title: "Pay per qualified lead",
     description:
-      "Once a qualified lead is delivered, you're charged. If we don't deliver a lead that meets every qualification criterion, you don't pay. No monthly retainer. No long-term contract.",
+      "The model stays tied to approved lead delivery instead of a fixed monthly retainer that keeps running either way.",
   },
 ];
 
@@ -55,17 +55,17 @@ const processFaq = [
   {
     question: "Do I need to manage campaigns myself?",
     answer:
-      "No. Appointly Solutions handles everything - GMB optimization, Facebook ad creative and targeting, lead qualification, and the NFC review card system. You receive the leads.",
+      "No. We handle the setup, ads, qualification flow, and review process. Your team focuses on answering the phone, running estimates, and closing work.",
   },
   {
     question: "What does a qualified lead include?",
     answer:
-      "A qualified lead is a verified homeowner in your service area with a real insulation project and an indicated budget. All four criteria must be met before you're charged.",
+      "A qualified lead is a verified homeowner in your service area with a real insulation project and an indicated budget.",
   },
   {
-    question: "What if a lead doesn't meet the criteria?",
+    question: "What if a lead does not meet the criteria?",
     answer:
-      "You don't pay for it. Every lead is screened before delivery. If it doesn't qualify, it doesn't count.",
+      "You do not pay for it. If the lead misses the agreed standards, it does not count.",
   },
 ];
 
@@ -96,9 +96,9 @@ export default function HowItWorksPage() {
     <>
       <Navbar />
       <main className="overflow-hidden">
-        <section className="relative pt-32 pb-20 md:pt-44 md:pb-28">
+        <section className="relative pb-20 pt-32 md:pb-28 md:pt-44">
           <div className="absolute inset-0 -z-10">
-            <div className="absolute top-10 right-0 h-[720px] w-[720px] rounded-full bg-[#7d87f7]/[0.06] blur-[150px]" />
+            <div className="absolute right-0 top-10 h-[720px] w-[720px] rounded-full bg-primary/[0.10] blur-[150px]" />
             <div className="absolute inset-0 dot-grid opacity-35" />
           </div>
 
@@ -108,28 +108,23 @@ export default function HowItWorksPage() {
                 Process Overview
               </p>
               <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-balance md:text-6xl">
-                How <span className="gradient-text">Appointly Solutions</span> Works
+                How <span className="gradient-text">Appointly Solutions</span> works
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                Our pay-per-lead system is built on four pillars: GMB visibility, Facebook
-                lead generation, strict qualification, and a review growth engine. You only
-                pay when we deliver a lead that meets every criterion.
+                The process is built to help insulation contractors get more qualified
+                estimate opportunities without spending their day inside ad accounts.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
                   href={bookingUrl}
                   className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-                  style={{
-                    boxShadow:
-                      "0 0 40px rgb(125 135 247 / 0.35), 0 4px 20px rgb(125 135 247 / 0.15)",
-                  }}
                 >
                   Book a Strategy Call
                   <ArrowRight className="h-4 w-4" />
                 </a>
                 <Link
                   href="/faq"
-                  className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] px-8 py-4 text-sm font-semibold text-foreground transition-all hover:border-white/[0.15] hover:bg-white/[0.08]"
+                  className="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-8 py-4 text-sm font-semibold text-foreground transition-all hover:bg-slate-50"
                 >
                   Read the FAQ
                 </Link>
@@ -145,7 +140,7 @@ export default function HowItWorksPage() {
                 Step By Step
               </p>
               <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">
-                The system behind every booked opportunity.
+                The system behind each booked estimate opportunity.
               </h2>
             </div>
 
@@ -159,7 +154,7 @@ export default function HowItWorksPage() {
                     <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-primary/20 bg-primary/10">
                       <step.icon className="h-5 w-5 text-primary" />
                     </div>
-                    <span className="font-display text-3xl font-bold text-white/[0.08]">
+                    <span className="font-display text-3xl font-bold text-slate-200">
                       {String(index + 1).padStart(2, "0")}
                     </span>
                   </div>
@@ -182,23 +177,22 @@ export default function HowItWorksPage() {
                 What You Get
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
-                A qualified lead should feel ready for a real sales conversation.
+                The lead should feel ready for a real estimate conversation.
               </h2>
               <p className="mt-5 text-sm leading-7 text-muted-foreground md:text-base">
-                A typical Appointly Solutions lead includes verified contact details,
-                clear insulation intent, service area alignment, and enough project
-                context for your team to move directly into the estimate conversation.
+                A typical lead includes verified contact details, service area fit, and
+                enough job context for your team to move into the estimate conversation
+                instead of starting from scratch.
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
-                If you want more background on why we built the system this way, the{" "}
-                <Link href="/about" className="text-primary transition-colors hover:text-[#a5abff]">
+                If you want more background on why the system was built this way, the{" "}
+                <Link href="/about" className="text-primary transition-colors hover:opacity-80">
                   About page
                 </Link>{" "}
-                shares the operating principles behind the model. For the direct offer,
-                see{" "}
+                shares the operating principles behind it. For the direct offer, see{" "}
                 <Link
                   href="/insulation-contractor-leads"
-                  className="text-primary transition-colors hover:text-[#a5abff]"
+                  className="text-primary transition-colors hover:opacity-80"
                 >
                   Insulation Contractor Leads
                 </Link>
@@ -206,20 +200,19 @@ export default function HowItWorksPage() {
               </p>
             </article>
 
-            <article className="rounded-3xl border border-[#7d87f7]/20 bg-[#7d87f7]/[0.08] p-8 shadow-[0_0_70px_rgba(125,135,247,0.1)] md:p-10">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/20 bg-white/10">
-                <CircleDollarSign className="h-5 w-5 text-white" />
+            <article className="rounded-3xl border border-primary/20 bg-primary/10 p-8 shadow-[0_0_70px_rgba(125,135,247,0.10)] md:p-10">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-primary/20 bg-white/60">
+                <CircleDollarSign className="h-5 w-5 text-slate-950" />
               </div>
-              <p className="mt-6 text-xs font-semibold uppercase tracking-[0.25em] text-[#d7dbff]">
+              <p className="mt-6 text-xs font-semibold uppercase tracking-[0.25em] text-slate-600">
                 What It Costs
               </p>
-              <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
-                Cost per lead, aligned with performance.
+              <h2 className="mt-4 font-display text-3xl font-bold text-slate-950">
+                Cost per lead, tied to performance.
               </h2>
-              <p className="mt-4 text-sm leading-7 text-[#e6e9ff]/80 md:text-base">
-                Appointly Solutions is structured around pay per qualified lead. That
-                keeps the conversation focused on lead quality, speed, and booked
-                outcomes instead of large retainers detached from production.
+              <p className="mt-4 text-sm leading-7 text-slate-700 md:text-base">
+                The conversation stays focused on lead quality, response speed, and booked
+                estimates instead of a big monthly fee that keeps running either way.
               </p>
             </article>
           </div>
@@ -227,7 +220,7 @@ export default function HowItWorksPage() {
 
         <section className="section-divider relative py-24 md:py-32">
           <div className="absolute inset-0 -z-10">
-            <div className="absolute bottom-0 left-1/4 h-[520px] w-[520px] rounded-full bg-[#7d87f7]/[0.05] blur-[120px]" />
+            <div className="absolute bottom-0 left-1/4 h-[520px] w-[520px] rounded-full bg-primary/[0.08] blur-[120px]" />
           </div>
 
           <div className="mx-auto max-w-6xl px-6">
@@ -255,11 +248,11 @@ export default function HowItWorksPage() {
 
             <p className="mt-8 text-sm leading-7 text-muted-foreground">
               Return to the{" "}
-              <Link href="/" className="text-primary transition-colors hover:text-[#a5abff]">
+              <Link href="/" className="text-primary transition-colors hover:opacity-80">
                 homepage
               </Link>{" "}
               for a full overview, or visit the{" "}
-              <Link href="/faq" className="text-primary transition-colors hover:text-[#a5abff]">
+              <Link href="/faq" className="text-primary transition-colors hover:opacity-80">
                 FAQ
               </Link>{" "}
               for detailed answers about lead qualification, exclusivity, and how to get started.

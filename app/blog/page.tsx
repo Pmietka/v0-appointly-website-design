@@ -98,7 +98,7 @@ export default async function BlogIndexPage() {
                     <p className="text-sm leading-7 text-muted-foreground md:text-base">
                       {post.description}
                     </p>
-                    <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#5f57e8]">
+                    <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary">
                       Read article
                       <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </span>
@@ -134,7 +134,7 @@ export default async function BlogIndexPage() {
                   className="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
                 >
                   <div className="flex items-center justify-between gap-4">
-                    <span className="inline-flex rounded-full bg-[#5f57e8]/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#5f57e8]">
+                    <span className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
                       Blog
                     </span>
                     <span className="flex items-center gap-1 text-xs font-medium text-slate-500">
@@ -148,7 +148,7 @@ export default async function BlogIndexPage() {
                   <p className="mt-3 text-sm leading-7 text-slate-600">
                     {post.description}
                   </p>
-                  <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-[#5f57e8]">
+                  <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-primary">
                     <Clock3 className="h-4 w-4" />
                     {post.readingTime} min read
                   </div>

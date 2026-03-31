@@ -216,21 +216,21 @@ export default function AboutPage() {
 
         <section className="section-divider py-24 md:py-32">
           <div className="mx-auto max-w-5xl px-6">
-            <div className="rounded-[32px] border border-[#7d87f7]/20 bg-[#7d87f7]/[0.08] p-8 text-center shadow-[0_0_80px_rgba(125,135,247,0.12)] md:p-12">
-              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#c8cdff]">
+            <div className="rounded-[32px] border border-primary/20 bg-primary/10 p-8 text-center shadow-[0_0_80px_rgba(125,135,247,0.12)] md:p-12">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-600">
                 Ready To Grow
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground md:text-4xl">
                 See if Appointly Solutions fits your market.
               </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-[#d7dbff]/80 md:text-base">
+              <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-slate-700 md:text-base">
                 Book a strategy call and we will map out where your leads are coming
                 from, what is slipping through the cracks, and how a pay per lead
                 system could support your next stage of growth. If you want to compare
                 models first, visit{" "}
                 <Link
                   href="/pay-per-lead-insulation"
-                  className="text-white underline decoration-white/30 underline-offset-4 transition-colors hover:text-white/85"
+                  className="text-slate-950 underline decoration-slate-400/70 underline-offset-4 transition-colors hover:text-slate-700"
                 >
                   Pay Per Lead Insulation
                 </Link>
@@ -238,7 +238,7 @@ export default function AboutPage() {
               </p>
               <a
                 href={bookingUrl}
-                className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-4 text-sm font-semibold text-[#7d87f7] transition-opacity hover:opacity-90"
+                className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-slate-950 px-8 py-4 text-sm font-semibold text-white transition-opacity hover:opacity-90"
               >
                 Book a Strategy Call
                 <ArrowRight className="h-4 w-4" />

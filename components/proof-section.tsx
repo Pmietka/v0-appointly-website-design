@@ -11,7 +11,7 @@ const quickStats = [
   },
   {
     stat: "24-48 hours",
-    label: "Typical on-site claim for first incoming leads after launch.",
+    label: "Typical window cited on-site for first incoming leads after launch.",
   },
 ];
 
@@ -24,18 +24,18 @@ export function ProofSection() {
             Results
           </p>
           <h2 className="mt-3 font-display text-3xl font-bold text-foreground md:text-4xl">
-            Real proof from booked calls and client feedback.
+            Proof that the leads turn into real estimate conversations.
           </h2>
         </div>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
           <article className="overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-[0_24px_80px_rgba(15,23,42,0.08)]">
             <div className="border-b border-slate-100 px-8 py-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5f57e8]">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
                 Booked Appointments
               </p>
               <h3 className="mt-3 font-display text-2xl font-bold text-slate-950">
-                A live calendar is stronger than a generic marketing promise.
+                A booked calendar says more than a polished claim.
               </h3>
             </div>
             <div className="bg-slate-50 p-4 md:p-6">
@@ -52,11 +52,11 @@ export function ProofSection() {
           <div className="grid gap-6">
             <article className="overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-[0_24px_80px_rgba(15,23,42,0.08)]">
               <div className="px-8 py-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5f57e8]">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
                   Andre
                 </p>
                 <h3 className="mt-3 font-display text-2xl font-bold text-slate-950">
-                  Direct client proof tied to a clear result.
+                  A contractor quote tied to a specific result.
                 </h3>
               </div>
               <div className="border-t border-slate-100 bg-slate-50 p-4 md:p-6">
@@ -72,7 +72,7 @@ export function ProofSection() {
               {quickStats.map((point) => (
                 <article
                   key={point.stat}
-                  className="rounded-3xl border border-[#5f57e8]/16 bg-white p-7 shadow-sm"
+                  className="rounded-3xl border border-primary/20 bg-white p-7 shadow-sm"
                 >
                   <p className="font-display text-3xl font-bold text-slate-950">
                     {point.stat}

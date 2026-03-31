@@ -1,42 +1,42 @@
 import {
+  ArrowRight,
+  CreditCard,
   MapPin,
   Megaphone,
   ShieldCheck,
-  CreditCard,
-  ArrowRight,
   Smartphone,
 } from "lucide-react";
 
 const steps = [
   {
     icon: MapPin,
-    title: "GMB Optimization",
+    title: "Google profile and market setup",
     description:
-      "We claim and optimize your Google Business Profile so you rank in the local 3-pack. More visibility, more inbound calls from homeowners already searching.",
+      "We tighten up your Google Business Profile and service area positioning so homeowners can actually find and trust you when they search locally.",
   },
   {
     icon: Megaphone,
-    title: "Facebook Lead Gen Ads",
+    title: "Ads built around estimate requests",
     description:
-      "We build and run hyper-local Facebook ad campaigns targeting homeowners in your service area who are actively looking for insulation help.",
+      "We run local campaigns aimed at homeowners who need attic insulation, spray foam, or removal work in the areas you actually want to service.",
   },
   {
     icon: ShieldCheck,
-    title: "Lead Qualification",
+    title: "Lead screening before handoff",
     description:
-      "Every lead is screened before it reaches you. We verify homeowner status, service area, project scope, and budget. No tire-kickers.",
+      "We screen for homeowner status, service area, project type, and fit before the lead reaches your team, so you spend less time on bad calls.",
   },
   {
     icon: Smartphone,
-    title: "NFC Review Card System",
+    title: "Review system after completed jobs",
     description:
-      "We send you physical NFC cards to hand to satisfied customers. One tap sends a Google review request directly to their phone, feeding your GMB ranking over time.",
+      "We send review cards your team can hand out after a clean install so your Google profile gets stronger as more jobs are completed.",
   },
   {
     icon: CreditCard,
-    title: "You Pay Only When We Deliver",
+    title: "Pay when approved leads are delivered",
     description:
-      "Once a qualified lead is delivered to you, you're charged. If we don't deliver, you don't pay. No monthly retainer. No long-term contract. No lead, no charge.",
+      "You are paying for qualified leads that match the agreed criteria, not for vague monthly activity reports or a long contract.",
   },
 ];
 
@@ -49,11 +49,11 @@ export function Solution() {
             Our System
           </p>
           <h2 className="font-display text-3xl font-bold leading-tight text-balance text-gray-900 md:text-4xl lg:text-5xl">
-            The Pay-Per-Lead <span className="text-[#5f57e8]">System</span>
+            How the <span className="text-primary">lead system</span> works
           </h2>
           <p className="mt-4 leading-relaxed text-gray-600">
-            A done-for-you system that builds your online presence, generates exclusive
-            leads, and only charges you when we deliver so you can focus on closing jobs.
+            The goal is simple: more qualified estimate opportunities on the calendar
+            without asking your team to become full-time marketers.
           </p>
         </div>
 
@@ -64,8 +64,8 @@ export function Solution() {
               className="group relative flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
             >
               <div className="mb-5 flex items-center gap-3">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#5f57e8]/10">
-                  <step.icon className="h-5 w-5 text-[#5f57e8]" />
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/15">
+                  <step.icon className="h-5 w-5 text-primary" />
                 </div>
                 <span className="text-xs font-bold uppercase tracking-widest text-gray-400">
                   Step {index + 1}
@@ -79,23 +79,23 @@ export function Solution() {
             </div>
           ))}
 
-          <div className="relative flex flex-col justify-between overflow-hidden rounded-2xl bg-[#5f57e8] p-6">
+          <div className="relative flex flex-col justify-between overflow-hidden rounded-2xl bg-primary p-6 text-primary-foreground">
             <div>
-              <span className="mb-3 block text-xs font-bold uppercase tracking-widest text-white/60">
+              <span className="mb-3 block text-xs font-bold uppercase tracking-widest text-primary-foreground/70">
                 The Result
               </span>
-              <h3 className="mb-3 font-display text-xl font-bold leading-tight text-white">
-                Exclusive Leads. Zero Shared. Zero Retainer.
+              <h3 className="mb-3 font-display text-xl font-bold leading-tight text-primary-foreground">
+                More estimate calls on the schedule. No shared lead chaos.
               </h3>
-              <p className="text-sm leading-relaxed text-white/80">
-                One contractor per market. Every lead pre-qualified. You only pay when
-                we deliver. Simple accountability.
+              <p className="text-sm leading-relaxed text-primary-foreground/80">
+                One contractor per market, screened homeowner leads, and a pricing model
+                that stays tied to actual delivery.
               </p>
             </div>
 
             <a
               href="https://client.getappointly.co/strategy-calendar"
-              className="mt-6 inline-flex self-start items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-[#5f57e8] transition-opacity hover:opacity-90"
+              className="mt-6 inline-flex self-start items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-slate-950 transition-opacity hover:opacity-90"
             >
               Get Started
               <ArrowRight className="h-4 w-4" />

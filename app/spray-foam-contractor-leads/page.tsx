@@ -74,7 +74,7 @@ export default function SprayFoamContractorLeadsPage() {
           <div className="mx-auto max-w-6xl px-6">
             <div className="max-w-3xl">
               <p className="mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
-                Niche Intent Page
+                Spray Foam Leads
               </p>
               <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-balance md:text-6xl">
                 Spray Foam Contractor Leads Built for{" "}
@@ -166,21 +166,21 @@ export default function SprayFoamContractorLeadsPage() {
               </p>
             </article>
 
-            <article className="rounded-3xl border border-[#7d87f7]/20 bg-[#7d87f7]/[0.08] p-8 shadow-[0_0_70px_rgba(125,135,247,0.1)] md:p-10">
-              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#d7dbff]">
+            <article className="rounded-3xl border border-primary/20 bg-primary/10 p-8 shadow-[0_0_70px_rgba(125,135,247,0.1)] md:p-10">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-600">
                 Spray Foam Strategy
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
                 Review seasonality, close rate, and market fit before you scale.
               </h2>
-              <p className="mt-4 text-sm leading-7 text-[#e6e9ff]/80 md:text-base">
+              <p className="mt-4 text-sm leading-7 text-slate-700 md:text-base">
                 A strategy call with Appointly Solutions can help you compare your
                 average spray foam job value, service area, and demand timing against a
                 pay-per-lead model that flexes with your market.
               </p>
               <a
                 href={bookingUrl}
-                className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-4 text-sm font-semibold text-[#7d87f7] transition-opacity hover:opacity-90"
+                className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-slate-950 px-8 py-4 text-sm font-semibold text-white transition-opacity hover:opacity-90"
               >
                 Book a Strategy Call
                 <ArrowRight className="h-4 w-4" />

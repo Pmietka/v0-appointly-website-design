@@ -8,11 +8,11 @@
   }
 
   .gradient-text {
-    @apply text-[#5f57e8];
+    @apply text-primary;
   }
 
   .gradient-text-subtle {
-    @apply text-[#5f57e8];
+    @apply text-primary;
   }
 
   .section-divider {
@@ -28,28 +28,28 @@
     --card-foreground: 230 25% 13%;
     --popover: 0 0% 100%;
     --popover-foreground: 230 25% 13%;
-    --primary: 246 72% 62%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 223 72% 72%;
+    --primary-foreground: 230 25% 13%;
     --secondary: 220 14% 96%;
     --secondary-foreground: 230 25% 13%;
     --muted: 220 14% 96%;
     --muted-foreground: 215 14% 45%;
-    --accent: 246 72% 62%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 223 72% 72%;
+    --accent-foreground: 230 25% 13%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 246 72% 62%;
+    --ring: 223 72% 72%;
     --radius: 0.75rem;
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 230 25% 13%;
-    --sidebar-primary: 246 72% 62%;
-    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-primary: 223 72% 72%;
+    --sidebar-primary-foreground: 230 25% 13%;
     --sidebar-accent: 220 14% 96%;
     --sidebar-accent-foreground: 230 25% 13%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 246 72% 62%;
+    --sidebar-ring: 223 72% 72%;
   }
 }
 

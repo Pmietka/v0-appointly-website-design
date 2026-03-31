@@ -5,7 +5,7 @@ import { Star } from "lucide-react";
 const testimonials = [
   {
     name: "Andre",
-    role: "Home Insulation Contractor",
+    role: "Insulation contractor",
     quote:
       "In my second month with Appointly, I was able to get 6 new residential clients.",
     result: "6 new clients in month 2",
@@ -14,20 +14,12 @@ const testimonials = [
   },
   {
     name: "Wojtek",
-    role: "Home Insulation Contractor",
+    role: "Insulation contractor",
     quote:
-      "I was already paying agencies with zero consistency - no way to predict my pipeline month to month. 3 months with Appointly: 6 closed jobs every single month without fail.",
+      "I was already paying for leads with zero consistency. Three months with Appointly gave me 6 closed jobs every single month.",
     result: "6 closed jobs/month for 3 months straight",
     rating: 5,
     initial: "W",
-  },
-  {
-    name: "Adrian",
-    role: "Window Replacement Contractor",
-    quote: "Appointly got me leads that actually convert.",
-    result: "14 paying clients in first 3 months",
-    rating: 5,
-    initial: "A",
   },
 ];
 
@@ -40,20 +32,20 @@ export function Results() {
             Client Results
           </p>
           <h2 className="font-display text-3xl font-bold leading-tight text-balance text-gray-900 md:text-4xl lg:text-5xl">
-            What Our Clients <span className="text-[#5f57e8]">Actually Say</span>
+            What insulation contractors <span className="text-primary">actually say</span>
           </h2>
           <p className="mt-4 leading-relaxed text-gray-600">
-            Real contractors. Real results. No stock photos or made-up numbers.
+            Straight contractor feedback about what happened after the leads started coming in.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.name + testimonial.role}
               className="relative flex flex-col rounded-2xl border border-gray-200 bg-white p-7 shadow-sm transition-shadow hover:shadow-md"
             >
-              <div className="mb-4 select-none text-5xl leading-none font-serif text-[#5f57e8]/15">
+              <div className="mb-4 select-none font-serif text-5xl leading-none text-primary/20">
                 &#8220;
               </div>
 
@@ -70,13 +62,13 @@ export function Results() {
                 &ldquo;{testimonial.quote}&rdquo;
               </p>
 
-              <div className="mt-5 inline-flex self-start items-center gap-1.5 rounded-full border border-[#5f57e8]/20 bg-[#5f57e8]/8 px-3 py-1.5 text-xs font-semibold text-[#5f57e8]">
-                <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#5f57e8]" />
+              <div className="mt-5 inline-flex self-start items-center gap-1.5 rounded-full border border-primary/20 bg-primary/10 px-3 py-1.5 text-xs font-semibold text-primary">
+                <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
                 {testimonial.result}
               </div>
 
               <div className="mt-5 flex items-center gap-3 border-t border-gray-100 pt-5">
-                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#5f57e8] text-sm font-bold text-white">
+                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
                   {testimonial.initial}
                 </div>
                 <div>

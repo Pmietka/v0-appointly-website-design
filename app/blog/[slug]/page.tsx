@@ -120,7 +120,7 @@ export default async function BlogPostPage({
           <div className="mx-auto max-w-4xl px-6">
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-[#5f57e8] transition-colors hover:opacity-80"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:opacity-80"
             >
               <ArrowLeft className="h-4 w-4" />
               Back to blog
@@ -177,7 +177,7 @@ export default async function BlogPostPage({
                 </p>
                 <a
                   href="https://client.getappointly.co/strategy-calendar"
-                  className="mt-6 inline-flex items-center justify-center rounded-full bg-[#5f57e8] px-5 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                  className="mt-6 inline-flex items-center justify-center rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
                 >
                   Book a Call
                 </a>
@@ -205,7 +205,7 @@ export default async function BlogPostPage({
                     href={getBlogPath(related.slug)}
                     className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
                   >
-                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5f57e8]">
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
                       Related
                     </p>
                     <h3 className="mt-4 text-xl font-bold tracking-tight text-slate-950">

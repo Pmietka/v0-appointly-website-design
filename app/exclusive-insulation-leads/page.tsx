@@ -71,7 +71,7 @@ export default function ExclusiveInsulationLeadsPage() {
           <div className="mx-auto max-w-6xl px-6">
             <div className="max-w-3xl">
               <p className="text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-6">
-                High Intent Page
+                Exclusive Leads
               </p>
               <h1 className="font-display text-5xl md:text-6xl font-bold tracking-tight leading-[1.05] text-balance">
                 Exclusive Insulation Leads Without the{" "}
@@ -162,21 +162,21 @@ export default function ExclusiveInsulationLeadsPage() {
               </p>
             </article>
 
-            <article className="rounded-3xl border border-[#7d87f7]/20 bg-[#7d87f7]/[0.08] p-8 shadow-[0_0_70px_rgba(125,135,247,0.1)] md:p-10">
-              <p className="text-xs font-semibold tracking-[0.25em] uppercase text-[#d7dbff]">
+            <article className="rounded-3xl border border-primary/20 bg-primary/10 p-8 shadow-[0_0_70px_rgba(125,135,247,0.1)] md:p-10">
+              <p className="text-xs font-semibold tracking-[0.25em] uppercase text-slate-600">
                 Ready To Talk
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
                 Explore whether exclusive lead delivery fits your market.
               </h2>
-              <p className="mt-4 text-sm leading-7 text-[#e6e9ff]/80 md:text-base">
+              <p className="mt-4 text-sm leading-7 text-slate-700 md:text-base">
                 A strategy call with Appointly Solutions will show you where exclusive
                 insulation leads make sense, how qualification works, and what to expect
                 from the process.
               </p>
               <a
                 href={bookingUrl}
-                className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-4 text-sm font-semibold text-[#7d87f7] hover:opacity-90 transition-opacity"
+                className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-slate-950 px-8 py-4 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
               >
                 Book a Strategy Call
                 <ArrowRight className="h-4 w-4" />

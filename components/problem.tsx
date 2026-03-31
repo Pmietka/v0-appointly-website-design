@@ -1,90 +1,79 @@
-import {
-  DollarSign,
-  Users,
-  Star,
-  Wrench,
-  AlertTriangle,
-} from "lucide-react";
+import { AlertTriangle, DollarSign, Star, Users, Wrench } from "lucide-react";
 
 const problems = [
   {
     icon: DollarSign,
-    title: "Paying for Nothing",
-    text: "You're writing checks to agencies every month — retainers, management fees, ad spend — with no guaranteed leads and nothing to show for it.",
+    title: "Slow weeks still cost money",
+    text: "When the phones are quiet, your crews, trucks, and payroll still need work. A couple empty days on the schedule adds up fast.",
   },
   {
     icon: Users,
-    title: "Shared Leads Are a Race to the Phone",
-    text: "Buying leads from Angi or HomeAdvisor means you're competing against 4+ other contractors calling the same homeowner at the same time.",
+    title: "Shared leads turn into price shopping",
+    text: "If the same homeowner talks to four insulation companies, the job often becomes a race to the bottom instead of a clean estimate conversation.",
   },
   {
     icon: Star,
-    title: "Your Google Profile Is Hurting You",
-    text: "Your GMB is unclaimed or sitting at 3 stars because no one ever asked for reviews. That's lost trust and lost inbound calls every single day.",
+    title: "Weak reviews cost you calls",
+    text: "Homeowners compare ratings before they ever pick up the phone. If your Google profile looks stale, the next contractor gets that call.",
   },
   {
     icon: Wrench,
-    title: "You're Busy Running Jobs",
-    text: "You're too busy on installs to run ads, follow up with inquiries, or figure out Facebook. Marketing falls through the cracks when you're in the field.",
+    title: "You are busy running installs",
+    text: "Attics, crawlspaces, callbacks, and crew scheduling leave little time to chase every web lead while you are still in the field.",
   },
   {
     icon: AlertTriangle,
-    title: "Agencies Charge Regardless of Results",
-    text: "Most agencies are on retainer whether they deliver or not. You're the one carrying all the risk while they collect the monthly fee.",
+    title: "Retainers feel disconnected from jobs booked",
+    text: "Most companies want a monthly fee whether the calendar fills up or not. Contractors usually want the spend tied closer to actual estimate opportunities.",
   },
 ];
 
 export function Problem() {
   return (
-    <section id="problem" className="py-24 md:py-32 bg-[#eef0f8]">
+    <section id="problem" className="bg-[#eef0f8] py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          {/* Left: Empathy text */}
+        <div className="grid grid-cols-1 items-start gap-16 lg:grid-cols-2">
           <div className="lg:sticky lg:top-32">
-            <p className="text-xs font-semibold tracking-[0.25em] uppercase text-gray-500 mb-4">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-gray-500">
               Sound Familiar?
             </p>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 text-balance leading-tight">
-              The Insulation{" "}
-              <span className="text-[#5f57e8]">
-                Contractor
-              </span>{" "}
-              Reality
+            <h2 className="font-display text-3xl font-bold leading-tight text-balance text-gray-900 md:text-4xl lg:text-5xl">
+              What insulation contractors are up against every week
             </h2>
-            <p className="mt-5 text-gray-600 leading-relaxed max-w-lg text-base">
-              You{"'"}re great at what you do. But between running jobs, managing
-              crews, and trying to follow up with every inquiry — qualified
-              homeowners are slipping through the cracks every single day.
+            <p className="mt-5 max-w-lg text-base leading-relaxed text-gray-600">
+              Between estimates, installs, crew management, and follow-up, it is easy
+              for good homeowner leads to cool off before anyone calls them back.
             </p>
 
-            <div className="mt-8 p-5 rounded-2xl border border-[#5f57e8]/20 bg-white shadow-sm">
-              <p className="text-sm text-gray-700 leading-relaxed">
-                The average insulation contractor wastes{" "}
-                <span className="font-bold text-[#5f57e8]">$2,000–$5,000/month</span>{" "}
-                on agencies or shared leads that never convert. There{"'"}s a better model.
+            <div className="mt-8 rounded-2xl border border-primary/20 bg-white p-5 shadow-sm">
+              <p className="text-sm leading-relaxed text-gray-700">
+                The real problem is not just lead volume. It is getting the right
+                homeowner in the right area at the right time, before the job goes to
+                someone else.
               </p>
             </div>
           </div>
 
-          {/* Right: Problem list */}
           <div className="flex flex-col gap-3">
-            {problems.map((p, i) => (
+            {problems.map((problem, index) => (
               <div
-                key={p.title}
-                className="flex items-start gap-4 rounded-2xl border border-gray-200 bg-white p-5 hover:shadow-sm transition-shadow group"
+                key={problem.title}
+                className="group flex items-start gap-4 rounded-2xl border border-gray-200 bg-white p-5 transition-shadow hover:shadow-sm"
               >
-                <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-xl bg-[#5f57e8]/10">
-                  <p.icon className="h-4 w-4 text-[#5f57e8]" />
+                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-primary/15">
+                  <problem.icon className="h-4 w-4 text-primary" />
                 </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 mb-1">
+                <div className="min-w-0 flex-1">
+                  <div className="mb-1 flex items-center gap-2">
                     <span className="text-xs font-bold text-gray-400">
-                      {String(i + 1).padStart(2, "0")}
+                      {String(index + 1).padStart(2, "0")}
                     </span>
-                    <h3 className="text-sm font-semibold text-gray-900">{p.title}</h3>
+                    <h3 className="text-sm font-semibold text-gray-900">
+                      {problem.title}
+                    </h3>
                   </div>
                   <p className="text-sm leading-relaxed text-gray-600">
-                    {p.text}
+                    {problem.text}
                   </p>
                 </div>
               </div>
