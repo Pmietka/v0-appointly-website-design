@@ -67,19 +67,42 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "ProfessionalService",
-              name: "Appointly Solutions",
-              url: "https://getappointly.co",
-              logo: "https://getappointly.co/images/appointly-logo.png",
-              description:
-                "Appointly Solutions generates exclusive, pre-qualified leads for home insulation contractors on a cost per lead basis. We handle targeting, follow-up, and appointment booking so contractors only pay for real results.",
-              areaServed: "US",
-              serviceType: "Lead Generation for Insulation Contractors",
-              priceRange: "Pay Per Lead",
-              sameAs: [],
-            }),
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                name: "Appointly Solutions",
+                url: "https://getappointly.co",
+                logo: {
+                  "@type": "ImageObject",
+                  url: "https://getappointly.co/images/appointly-logo.png",
+                },
+                description:
+                  "Appointly Solutions delivers exclusive, pre-qualified leads to insulation contractors on a pay-per-lead basis. We handle GMB optimization, Facebook ads, and lead qualification — you only pay when we deliver.",
+                sameAs: [
+                  "https://www.facebook.com/appointlysolutions",
+                  "https://www.instagram.com/appointlysolutions",
+                  "https://www.linkedin.com/company/appointly-solutions",
+                ],
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "LocalBusiness",
+                name: "Appointly Solutions",
+                url: "https://getappointly.co",
+                logo: "https://getappointly.co/images/appointly-logo.png",
+                description:
+                  "Pay-per-lead insulation contractor marketing. GMB optimization, Facebook ads, and NFC review cards. You only pay when we deliver a qualified lead.",
+                address: {
+                  "@type": "PostalAddress",
+                  addressLocality: "Chicago",
+                  addressRegion: "IL",
+                  addressCountry: "US",
+                },
+                areaServed: ["US", "CA"],
+                priceRange: "Pay Per Lead",
+              },
+            ]),
           }}
         />
         <Script
