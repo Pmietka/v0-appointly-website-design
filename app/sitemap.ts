@@ -1,11 +1,20 @@
 import { MetadataRoute } from "next";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+import { getBlogPosts } from "@/lib/blog";
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = "https://getappointly.co";
+  const blogPosts = await getBlogPosts();
   const lastModified = new Date();
 
-  return [
+  const sitemapEntries: MetadataRoute.Sitemap = [
     { url: base, lastModified, changeFrequency: "weekly", priority: 1 },
+    {
+      url: `${base}/blog`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
     {
       url: `${base}/about`,
       lastModified,
@@ -67,4 +76,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.3,
     },
   ];
+
+  blogPosts.forEach((post) => {
+    sitemapEntries.push({
+      url: `${base}/blog/${post.slug}`,
+      lastModified: post.updatedAt,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    });
+  });
+
+  return sitemapEntries;
 }
