@@ -15,17 +15,17 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/[0.05] bg-background/60 backdrop-blur-xl">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
       <div className="mx-auto max-w-6xl flex items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/images/appointly-logo.png"
             alt="Appointly Solutions logo"
-            width={80}
-            height={80}
-            className="rounded-xl"
+            width={32}
+            height={32}
+            className="rounded-lg"
           />
-          <span className="text-sm font-bold font-display tracking-[0.2em] text-foreground uppercase">
+          <span className="text-sm font-bold font-display tracking-[0.15em] text-gray-900 uppercase">
             Appointly
           </span>
         </Link>
@@ -35,14 +35,14 @@ export function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
             >
               {link.label}
             </Link>
           ))}
           <a
             href="https://client.getappointly.co"
-            className="text-sm font-semibold text-foreground hover:text-primary transition-colors"
+            className="text-sm font-semibold bg-[#5f57e8] text-white px-5 py-2.5 rounded-full hover:opacity-90 transition-opacity"
           >
             Book A Call
           </a>
@@ -50,7 +50,7 @@ export function Navbar() {
 
         <button
           type="button"
-          className="md:hidden text-foreground"
+          className="md:hidden text-gray-700"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -59,13 +59,13 @@ export function Navbar() {
       </div>
 
       {mobileOpen && (
-        <div className="md:hidden border-t border-white/[0.05] bg-background/90 backdrop-blur-xl px-6 py-5 flex flex-col gap-5">
+        <div className="md:hidden border-t border-gray-100 bg-white px-6 py-5 flex flex-col gap-5">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
             >
               {link.label}
             </Link>
@@ -73,7 +73,7 @@ export function Navbar() {
           <a
             href="https://client.getappointly.co"
             onClick={() => setMobileOpen(false)}
-            className="mt-2 inline-flex items-center justify-center rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
+            className="mt-2 inline-flex items-center justify-center rounded-full bg-[#5f57e8] px-5 py-3 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
           >
             Book A Call
           </a>
