@@ -6,6 +6,7 @@ import { ArrowLeft, CalendarDays, Clock3 } from "lucide-react";
 import { BlogMarkdown } from "@/components/blog-markdown";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
+import { SeoResourceLinks } from "@/components/seo-resource-links";
 import {
   formatBlogDate,
   getBlogPath,
@@ -13,6 +14,7 @@ import {
   getBlogPostSlugs,
   getBlogPosts,
 } from "@/lib/blog";
+import { getBlogCommercialResources } from "@/lib/seo-resources";
 
 const baseUrl = "https://getappointly.co";
 
@@ -74,6 +76,7 @@ export default async function BlogPostPage({
   const relatedPosts = allPosts
     .filter((item) => item.slug !== post.slug)
     .slice(0, 3);
+  const commercialResources = getBlogCommercialResources(post.slug);
 
   const canonical = `${baseUrl}${getBlogPath(post.slug)}`;
 
@@ -217,6 +220,13 @@ export default async function BlogPostPage({
             </div>
           </section>
         )}
+
+        <SeoResourceLinks
+          eyebrow="Next Step"
+          title="Related service pages for contractors ready to act."
+          description="Each article supports a commercial page so readers can move from research into the offer that best matches their situation."
+          resources={commercialResources}
+        />
       </main>
       <Footer />
     </>

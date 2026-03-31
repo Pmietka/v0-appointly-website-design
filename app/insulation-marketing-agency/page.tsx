@@ -4,6 +4,9 @@ import { ArrowRight, BadgeAlert, Briefcase, RefreshCw, ShieldCheck } from "lucid
 
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
+import { ProofSection } from "@/components/proof-section";
+import { SeoResourceLinks } from "@/components/seo-resource-links";
+import { getCommercialResources } from "@/lib/seo-resources";
 
 const bookingUrl = "https://client.getappointly.co/strategy-calendar";
 
@@ -70,10 +73,10 @@ export default function InsulationMarketingAgencyPage() {
 
           <div className="mx-auto max-w-6xl px-6">
             <div className="max-w-3xl">
-              <p className="text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-6">
+              <p className="mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
                 Comparison Page
               </p>
-              <h1 className="font-display text-5xl md:text-6xl font-bold tracking-tight leading-[1.05] text-balance">
+              <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-balance md:text-6xl">
                 An Insulation Marketing Agency Alternative Built Around{" "}
                 <span className="gradient-text">Qualified Lead Flow</span>
               </h1>
@@ -86,7 +89,7 @@ export default function InsulationMarketingAgencyPage() {
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
                   href={bookingUrl}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
                   style={{
                     boxShadow:
                       "0 0 40px rgb(125 135 247 / 0.35), 0 4px 20px rgb(125 135 247 / 0.15)",
@@ -97,7 +100,7 @@ export default function InsulationMarketingAgencyPage() {
                 </a>
                 <Link
                   href="/pay-per-lead-insulation"
-                  className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] px-8 py-4 text-sm font-semibold text-foreground hover:bg-white/[0.08] hover:border-white/[0.15] transition-all"
+                  className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] px-8 py-4 text-sm font-semibold text-foreground transition-all hover:border-white/[0.15] hover:bg-white/[0.08]"
                 >
                   See Pricing Model
                 </Link>
@@ -109,10 +112,10 @@ export default function InsulationMarketingAgencyPage() {
         <section className="section-divider py-24 md:py-32">
           <div className="mx-auto max-w-6xl px-6">
             <div className="mb-12 max-w-2xl">
-              <p className="text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-4">
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
                 Why Contractors Look For Alternatives
               </p>
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
+              <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">
                 The usual agency model can feel misaligned.
               </h2>
             </div>
@@ -138,7 +141,7 @@ export default function InsulationMarketingAgencyPage() {
         <section className="section-divider py-24 md:py-32">
           <div className="mx-auto grid max-w-6xl gap-6 px-6 lg:grid-cols-2">
             <article className="glass-card rounded-3xl p-8 md:p-10">
-              <p className="text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
                 How Appointly Solutions Differs
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
@@ -152,11 +155,11 @@ export default function InsulationMarketingAgencyPage() {
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
                 For a broader commercial overview, see{" "}
-                <Link href="/insulation-contractor-leads" className="text-primary hover:text-[#a5abff] transition-colors">
+                <Link href="/insulation-contractor-leads" className="text-primary transition-colors hover:text-[#a5abff]">
                   Insulation Contractor Leads
                 </Link>
                 . If booked estimates are your main focus, continue to{" "}
-                <Link href="/appointment-setting-for-contractors" className="text-primary hover:text-[#a5abff] transition-colors">
+                <Link href="/appointment-setting-for-contractors" className="text-primary transition-colors hover:text-[#a5abff]">
                   Appointment Setting for Contractors
                 </Link>
                 .
@@ -164,11 +167,11 @@ export default function InsulationMarketingAgencyPage() {
             </article>
 
             <article className="rounded-3xl border border-[#7d87f7]/20 bg-[#7d87f7]/[0.08] p-8 shadow-[0_0_70px_rgba(125,135,247,0.1)] md:p-10">
-              <p className="text-xs font-semibold tracking-[0.25em] uppercase text-[#d7dbff]">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#d7dbff]">
                 Compare It Live
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
-                Let’s look at your current setup and the gaps in it.
+                Let's look at your current setup and the gaps in it.
               </h2>
               <p className="mt-4 text-sm leading-7 text-[#e6e9ff]/80 md:text-base">
                 A strategy call with Appointly Solutions can help you compare your
@@ -177,7 +180,7 @@ export default function InsulationMarketingAgencyPage() {
               </p>
               <a
                 href={bookingUrl}
-                className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-4 text-sm font-semibold text-[#7d87f7] hover:opacity-90 transition-opacity"
+                className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-4 text-sm font-semibold text-[#7d87f7] transition-opacity hover:opacity-90"
               >
                 Book a Strategy Call
                 <ArrowRight className="h-4 w-4" />
@@ -185,6 +188,13 @@ export default function InsulationMarketingAgencyPage() {
             </article>
           </div>
         </section>
+
+        <ProofSection />
+        <SeoResourceLinks
+          title="Resources for contractors comparing agencies and performance models."
+          description="These pages and articles add more depth around retainer fatigue, alternative pricing, and faster lead flow."
+          resources={getCommercialResources("insulation-marketing-agency")}
+        />
       </main>
       <Footer />
     </>

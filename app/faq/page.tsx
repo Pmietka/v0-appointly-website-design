@@ -32,12 +32,12 @@ const faqItems = [
   {
     question: "What markets do you work in?",
     answer:
-      "We focus on small-to-mid-sized markets (50K–300K population) in the US and Canada where insulation contractors have strong service capacity but weak digital presence.",
+      "We focus on small-to-mid-sized markets (50K-300K population) in the US and Canada where insulation contractors have strong service capacity but weak digital presence.",
   },
   {
     question: "How fast do leads come in?",
     answer:
-      "Most contractors see their first leads within 24–48 hours of campaign launch.",
+      "Most contractors see their first leads within 24-48 hours of campaign launch.",
   },
   {
     question: "What if I want to pause or stop?",
@@ -47,7 +47,7 @@ const faqItems = [
   {
     question: "Do I need to run my own ads?",
     answer:
-      "No. We handle everything — creative, targeting, budget management, and optimization. You just receive the leads.",
+      "No. We handle everything - creative, targeting, budget management, and optimization. You just receive the leads.",
   },
   {
     question: "How do I get started?",
@@ -109,10 +109,10 @@ export default function FaqPage() {
 
           <div className="mx-auto max-w-6xl px-6">
             <div className="max-w-3xl">
-              <p className="text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-6">
+              <p className="mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
                 Frequently Asked Questions
               </p>
-              <h1 className="font-display text-5xl md:text-6xl font-bold tracking-tight leading-[1.05] text-balance">
+              <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-balance md:text-6xl">
                 FAQ for <span className="gradient-text">Appointly Solutions</span>
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
@@ -147,7 +147,7 @@ export default function FaqPage() {
 
             <aside className="space-y-6">
               <article className="glass-card rounded-3xl p-8">
-                <p className="text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground">
+                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
                   Keep Reading
                 </p>
                 <h2 className="mt-4 font-display text-2xl font-bold text-foreground">
@@ -155,18 +155,18 @@ export default function FaqPage() {
                 </h2>
                 <p className="mt-4 text-sm leading-7 text-muted-foreground">
                   The{" "}
-                  <Link href="/how-it-works" className="text-primary hover:text-[#a5abff] transition-colors">
+                  <Link href="/how-it-works" className="text-primary transition-colors hover:text-[#a5abff]">
                     How It Works
                   </Link>{" "}
                   page breaks down the full delivery process, and the{" "}
-                  <Link href="/about" className="text-primary hover:text-[#a5abff] transition-colors">
+                  <Link href="/about" className="text-primary transition-colors hover:text-[#a5abff]">
                     About page
                   </Link>{" "}
                   explains why Appointly Solutions was built around a cost per lead
                   model in the first place. For a direct offer page, visit{" "}
                   <Link
                     href="/insulation-contractor-leads"
-                    className="text-primary hover:text-[#a5abff] transition-colors"
+                    className="text-primary transition-colors hover:text-[#a5abff]"
                   >
                     Insulation Contractor Leads
                   </Link>
@@ -175,7 +175,7 @@ export default function FaqPage() {
               </article>
 
               <article className="rounded-3xl border border-[#7d87f7]/20 bg-[#7d87f7]/[0.08] p-8 shadow-[0_0_70px_rgba(125,135,247,0.1)]">
-                <p className="text-xs font-semibold tracking-[0.25em] uppercase text-[#d7dbff]">
+                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#d7dbff]">
                   Next Step
                 </p>
                 <h2 className="mt-4 font-display text-2xl font-bold text-foreground">
@@ -187,7 +187,7 @@ export default function FaqPage() {
                 </p>
                 <a
                   href={bookingUrl}
-                  className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-[#7d87f7] hover:opacity-90 transition-opacity"
+                  className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-[#7d87f7] transition-opacity hover:opacity-90"
                 >
                   Book a Strategy Call
                   <ArrowRight className="h-4 w-4" />

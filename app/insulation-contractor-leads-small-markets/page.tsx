@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CalendarCheck2, MessageSquareReply, PhoneCall, TimerReset } from "lucide-react";
+import { ArrowRight, Building2, Map, MapPinned, ShieldCheck } from "lucide-react";
 
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
@@ -10,81 +10,81 @@ import { getCommercialResources } from "@/lib/seo-resources";
 
 const bookingUrl = "https://client.getappointly.co/strategy-calendar";
 
-const pillars = [
+const marketPoints = [
   {
-    icon: PhoneCall,
-    title: "Fast initial contact",
+    icon: MapPinned,
+    title: "Built for tighter service areas",
     description:
-      "Speed matters because homeowners who request information often move on quickly when no one responds.",
+      "Smaller markets need cleaner targeting, cleaner qualification, and less wasted spend because local search volume is lower.",
   },
   {
-    icon: MessageSquareReply,
-    title: "Persistent follow up",
+    icon: ShieldCheck,
+    title: "Exclusivity matters more",
     description:
-      "Many good opportunities are not ready on the first touch. Consistent follow up increases the odds of booking the estimate.",
+      "In a 50K-300K population market, one shared lead can create more pricing pressure than it would in a major metro.",
   },
   {
-    icon: CalendarCheck2,
-    title: "Booked estimate focus",
+    icon: Building2,
+    title: "Crew planning is more sensitive",
     description:
-      "Appointment setting is about converting raw interest into a real time on the calendar, not just logging a contact form entry.",
+      "Local contractors in smaller metros often feel slower months faster, so flexible lead pacing is more useful than fixed retainers.",
   },
   {
-    icon: TimerReset,
-    title: "Cleaner sales handoff",
+    icon: Map,
+    title: "GBP signals carry more weight",
     description:
-      "When the homeowner is qualified and the estimate is scheduled, your team can move straight into the sales conversation.",
+      "In smaller service areas, Google Business Profile strength, reviews, and local relevance can move visibility quickly.",
   },
 ];
 
 export const metadata: Metadata = {
-  title: "Appointment Setting for Insulation Contractors",
+  title: "Insulation Contractor Leads for Small Markets | Appointly Solutions",
   description:
-    "See how Appointly Solutions helps with appointment setting for insulation contractors through fast follow up, qualification, and booked estimate workflows.",
+    "See how Appointly Solutions helps insulation contractors in smaller markets generate exclusive, qualified leads with flexible pay per lead pricing.",
   keywords: [
-    "appointment setting for contractors",
-    "insulation appointment setting",
-    "booked estimates for insulation contractors",
-    "Appointly Solutions",
+    "insulation contractor leads small markets",
+    "small market insulation leads",
+    "local insulation lead generation",
+    "exclusive contractor leads",
   ],
   alternates: {
-    canonical: "https://getappointly.co/appointment-setting-for-contractors",
+    canonical: "https://getappointly.co/insulation-contractor-leads-small-markets",
   },
   openGraph: {
-    title: "Appointment Setting for Insulation Contractors",
+    title: "Insulation Contractor Leads for Small Markets | Appointly Solutions",
     description:
-      "Learn how Appointly Solutions helps insulation contractors turn leads into booked estimate appointments.",
-    url: "https://getappointly.co/appointment-setting-for-contractors",
+      "Explore how Appointly Solutions fits insulation contractors serving smaller metros and regional service areas.",
+    url: "https://getappointly.co/insulation-contractor-leads-small-markets",
     siteName: "Appointly Solutions",
     type: "website",
   },
 };
 
-export default function AppointmentSettingForContractorsPage() {
+export default function SmallMarketInsulationLeadsPage() {
   return (
     <>
       <Navbar />
       <main className="overflow-hidden">
         <section className="relative pt-32 pb-20 md:pt-44 md:pb-28">
           <div className="absolute inset-0 -z-10">
-            <div className="absolute top-0 right-0 h-[700px] w-[700px] rounded-full bg-[#7d87f7]/[0.06] blur-[145px]" />
+            <div className="absolute top-0 right-0 h-[720px] w-[720px] rounded-full bg-[#7d87f7]/[0.06] blur-[145px]" />
             <div className="absolute inset-0 dot-grid opacity-35" />
           </div>
 
           <div className="mx-auto max-w-6xl px-6">
             <div className="max-w-3xl">
               <p className="mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
-                Booked Estimate Page
+                Service Area Page
               </p>
               <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-balance md:text-6xl">
-                Booked Estimates Are the <span className="gradient-text">Result</span>{" "}
-                of the PPL System
+                Insulation Contractor Leads for{" "}
+                <span className="gradient-text">Small Markets</span>
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                When we deliver a qualified insulation lead, you're already halfway to
-                a booked estimate. We screen every homeowner for intent, budget, and
-                service area fit before they ever reach you - so your team walks into
-                real conversations, not cold inquiries.
+                Appointly Solutions is a strong fit for insulation contractors serving
+                small-to-mid-sized markets where local visibility matters, shared leads
+                create friction fast, and every booked estimate can materially affect the
+                schedule.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
@@ -99,10 +99,10 @@ export default function AppointmentSettingForContractorsPage() {
                   <ArrowRight className="h-4 w-4" />
                 </a>
                 <Link
-                  href="/how-it-works"
+                  href="/exclusive-insulation-leads"
                   className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] px-8 py-4 text-sm font-semibold text-foreground transition-all hover:border-white/[0.15] hover:bg-white/[0.08]"
                 >
-                  See The Process
+                  See Exclusive Leads
                 </Link>
               </div>
             </div>
@@ -113,24 +113,24 @@ export default function AppointmentSettingForContractorsPage() {
           <div className="mx-auto max-w-6xl px-6">
             <div className="mb-12 max-w-2xl">
               <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
-                Why Appointment Setting Matters
+                Why Smaller Markets Need a Different Approach
               </p>
               <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">
-                More leads alone do not guarantee more revenue.
+                The local economics change when your service area is tighter.
               </h2>
             </div>
 
             <div className="grid gap-5 md:grid-cols-2">
-              {pillars.map((pillar) => (
-                <article key={pillar.title} className="glass-card glass-card-hover rounded-3xl p-6">
+              {marketPoints.map((point) => (
+                <article key={point.title} className="glass-card glass-card-hover rounded-3xl p-6">
                   <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-primary/20 bg-primary/10">
-                    <pillar.icon className="h-5 w-5 text-primary" />
+                    <point.icon className="h-5 w-5 text-primary" />
                   </div>
                   <h3 className="mt-5 font-display text-xl font-semibold text-foreground">
-                    {pillar.title}
+                    {point.title}
                   </h3>
                   <p className="mt-3 text-sm leading-7 text-muted-foreground">
-                    {pillar.description}
+                    {point.description}
                   </p>
                 </article>
               ))}
@@ -139,27 +139,28 @@ export default function AppointmentSettingForContractorsPage() {
         </section>
 
         <section className="section-divider py-24 md:py-32">
-          <div className="mx-auto grid max-w-6xl gap-6 px-6 lg:grid-cols-2">
+          <div className="mx-auto grid max-w-6xl gap-6 px-6 lg:grid-cols-[1.1fr_0.9fr]">
             <article className="glass-card rounded-3xl p-8 md:p-10">
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
-                How Appointly Solutions Supports Booking
+                Where Appointly Fits Best
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
-                Built to move prospects from interest to calendar.
+                Better for contractors who need quality over volume.
               </h2>
               <p className="mt-5 text-sm leading-7 text-muted-foreground md:text-base">
-                Appointly Solutions combines quick response, qualification logic, and
-                continued follow up so booked estimate opportunities do not depend on
-                your team catching every inquiry in real time.
+                In smaller metros and regional service areas, Appointly Solutions works
+                best when the contractor wants exclusive lead delivery, quick follow up,
+                and qualification standards that keep crews focused on real revenue
+                opportunities instead of noisy inquiries.
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
-                To understand the upstream lead source, see{" "}
-                <Link href="/insulation-contractor-leads" className="text-primary transition-colors hover:text-[#a5abff]">
-                  Insulation Contractor Leads
+                If your main concern is ownership, visit{" "}
+                <Link href="/exclusive-insulation-leads" className="text-primary transition-colors hover:text-[#a5abff]">
+                  Exclusive Insulation Leads
                 </Link>
-                . To compare the business model behind it, continue to{" "}
-                <Link href="/pay-per-lead-insulation" className="text-primary transition-colors hover:text-[#a5abff]">
-                  Pay Per Lead Insulation
+                . If your team also performs spray foam work, continue to{" "}
+                <Link href="/spray-foam-contractor-leads" className="text-primary transition-colors hover:text-[#a5abff]">
+                  Spray Foam Contractor Leads
                 </Link>
                 .
               </p>
@@ -167,15 +168,15 @@ export default function AppointmentSettingForContractorsPage() {
 
             <article className="rounded-3xl border border-[#7d87f7]/20 bg-[#7d87f7]/[0.08] p-8 shadow-[0_0_70px_rgba(125,135,247,0.1)] md:p-10">
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#d7dbff]">
-                Book More Estimates
+                Market Review
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
-                Talk through where leads are stalling in your current process.
+                Find out if your service area is the right fit for exclusivity.
               </h2>
               <p className="mt-4 text-sm leading-7 text-[#e6e9ff]/80 md:text-base">
-                A strategy call with Appointly Solutions can help identify whether your
-                main bottleneck is lead volume, speed to lead, qualification, or
-                appointment setting itself.
+                A strategy call with Appointly Solutions can help you look at population
+                size, service radius, current competition, and whether a pay-per-lead
+                model makes sense in your market.
               </p>
               <a
                 href={bookingUrl}
@@ -190,9 +191,9 @@ export default function AppointmentSettingForContractorsPage() {
 
         <ProofSection />
         <SeoResourceLinks
-          title="Pages that support the booked-estimate story."
-          description="These related pages connect appointment setting with lead quality, traffic sources, and contractor acquisition strategy."
-          resources={getCommercialResources("appointment-setting-for-contractors")}
+          title="Related pages for contractors serving smaller service areas."
+          description="These resources support local market positioning with more detail on exclusivity, GBP strength, and seasonal planning."
+          resources={getCommercialResources("insulation-contractor-leads-small-markets")}
         />
       </main>
       <Footer />

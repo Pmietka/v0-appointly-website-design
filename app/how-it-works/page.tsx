@@ -12,6 +12,9 @@ import {
 
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
+import { ProofSection } from "@/components/proof-section";
+import { SeoResourceLinks } from "@/components/seo-resource-links";
+import { getCommercialResources } from "@/lib/seo-resources";
 
 const bookingUrl = "https://client.getappointly.co/strategy-calendar";
 
@@ -26,7 +29,7 @@ const steps = [
     icon: Megaphone,
     title: "Facebook Lead Gen Ads",
     description:
-      "We build and run hyper-local Facebook ad campaigns targeting homeowners in your service area. We handle creative, targeting, budget, and optimization — you don't touch it.",
+      "We build and run hyper-local Facebook ad campaigns targeting homeowners in your service area. We handle creative, targeting, budget, and optimization - you don't touch it.",
   },
   {
     icon: SearchCheck,
@@ -38,7 +41,7 @@ const steps = [
     icon: Smartphone,
     title: "NFC Review Card System",
     description:
-      "We ship you physical NFC cards to hand to satisfied customers. One tap sends a Google review request directly to their phone — continuously building your GMB ranking.",
+      "We ship you physical NFC cards to hand to satisfied customers. One tap sends a Google review request directly to their phone, continuously building your GMB ranking.",
   },
   {
     icon: CreditCard,
@@ -52,7 +55,7 @@ const processFaq = [
   {
     question: "Do I need to manage campaigns myself?",
     answer:
-      "No. Appointly Solutions handles everything — GMB optimization, Facebook ad creative and targeting, lead qualification, and the NFC review card system. You receive the leads.",
+      "No. Appointly Solutions handles everything - GMB optimization, Facebook ad creative and targeting, lead qualification, and the NFC review card system. You receive the leads.",
   },
   {
     question: "What does a qualified lead include?",
@@ -101,10 +104,10 @@ export default function HowItWorksPage() {
 
           <div className="mx-auto max-w-6xl px-6">
             <div className="max-w-3xl">
-              <p className="text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-6">
+              <p className="mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
                 Process Overview
               </p>
-              <h1 className="font-display text-5xl md:text-6xl font-bold tracking-tight leading-[1.05] text-balance">
+              <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-balance md:text-6xl">
                 How <span className="gradient-text">Appointly Solutions</span> Works
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
@@ -115,7 +118,7 @@ export default function HowItWorksPage() {
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
                   href={bookingUrl}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
                   style={{
                     boxShadow:
                       "0 0 40px rgb(125 135 247 / 0.35), 0 4px 20px rgb(125 135 247 / 0.15)",
@@ -126,7 +129,7 @@ export default function HowItWorksPage() {
                 </a>
                 <Link
                   href="/faq"
-                  className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] px-8 py-4 text-sm font-semibold text-foreground hover:bg-white/[0.08] hover:border-white/[0.15] transition-all"
+                  className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] px-8 py-4 text-sm font-semibold text-foreground transition-all hover:border-white/[0.15] hover:bg-white/[0.08]"
                 >
                   Read the FAQ
                 </Link>
@@ -138,10 +141,10 @@ export default function HowItWorksPage() {
         <section className="section-divider py-24 md:py-32">
           <div className="mx-auto max-w-6xl px-6">
             <div className="mb-12 max-w-2xl">
-              <p className="text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-4">
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
                 Step By Step
               </p>
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
+              <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">
                 The system behind every booked opportunity.
               </h2>
             </div>
@@ -175,7 +178,7 @@ export default function HowItWorksPage() {
         <section className="section-divider py-24 md:py-32">
           <div className="mx-auto grid max-w-6xl gap-6 px-6 lg:grid-cols-[1.2fr_0.8fr]">
             <article className="glass-card rounded-3xl p-8 md:p-10">
-              <p className="text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
                 What You Get
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
@@ -188,14 +191,14 @@ export default function HowItWorksPage() {
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
                 If you want more background on why we built the system this way, the{" "}
-                <Link href="/about" className="text-primary hover:text-[#a5abff] transition-colors">
+                <Link href="/about" className="text-primary transition-colors hover:text-[#a5abff]">
                   About page
                 </Link>{" "}
                 shares the operating principles behind the model. For the direct offer,
                 see{" "}
                 <Link
                   href="/insulation-contractor-leads"
-                  className="text-primary hover:text-[#a5abff] transition-colors"
+                  className="text-primary transition-colors hover:text-[#a5abff]"
                 >
                   Insulation Contractor Leads
                 </Link>
@@ -207,7 +210,7 @@ export default function HowItWorksPage() {
               <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/20 bg-white/10">
                 <CircleDollarSign className="h-5 w-5 text-white" />
               </div>
-              <p className="mt-6 text-xs font-semibold tracking-[0.25em] uppercase text-[#d7dbff]">
+              <p className="mt-6 text-xs font-semibold uppercase tracking-[0.25em] text-[#d7dbff]">
                 What It Costs
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
@@ -229,10 +232,10 @@ export default function HowItWorksPage() {
 
           <div className="mx-auto max-w-6xl px-6">
             <div className="mb-12 max-w-2xl">
-              <p className="text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-4">
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
                 Common Questions
               </p>
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
+              <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">
                 Quick answers about the process.
               </h2>
             </div>
@@ -252,17 +255,24 @@ export default function HowItWorksPage() {
 
             <p className="mt-8 text-sm leading-7 text-muted-foreground">
               Return to the{" "}
-              <Link href="/" className="text-primary hover:text-[#a5abff] transition-colors">
+              <Link href="/" className="text-primary transition-colors hover:text-[#a5abff]">
                 homepage
               </Link>{" "}
               for a full overview, or visit the{" "}
-              <Link href="/faq" className="text-primary hover:text-[#a5abff] transition-colors">
+              <Link href="/faq" className="text-primary transition-colors hover:text-[#a5abff]">
                 FAQ
               </Link>{" "}
               for detailed answers about lead qualification, exclusivity, and how to get started.
             </p>
           </div>
         </section>
+
+        <ProofSection />
+        <SeoResourceLinks
+          title="Follow the process into the right next page."
+          description="These pages expand the core process into the commercial angles contractors usually compare before booking a call."
+          resources={getCommercialResources("insulation-contractor-leads")}
+        />
       </main>
       <Footer />
     </>

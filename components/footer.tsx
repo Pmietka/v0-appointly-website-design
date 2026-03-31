@@ -10,8 +10,11 @@ const companyLinks = [
 
 const solutionLinks = [
   { href: "/insulation-contractor-leads", label: "Insulation Leads" },
+  { href: "/exclusive-insulation-leads", label: "Exclusive Leads" },
   { href: "/pay-per-lead-insulation", label: "Pay Per Lead" },
   { href: "/insulation-marketing-agency", label: "Agency Alternative" },
+  { href: "/spray-foam-contractor-leads", label: "Spray Foam Leads" },
+  { href: "/insulation-contractor-leads-small-markets", label: "Small Markets" },
 ];
 
 const legalLinks = [

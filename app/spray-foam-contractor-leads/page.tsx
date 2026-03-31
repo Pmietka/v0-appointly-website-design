@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CalendarCheck2, MessageSquareReply, PhoneCall, TimerReset } from "lucide-react";
+import { ArrowRight, Flame, ShieldCheck, TimerReset, Waves } from "lucide-react";
 
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
@@ -10,81 +10,81 @@ import { getCommercialResources } from "@/lib/seo-resources";
 
 const bookingUrl = "https://client.getappointly.co/strategy-calendar";
 
-const pillars = [
+const sprayFoamPoints = [
   {
-    icon: PhoneCall,
-    title: "Fast initial contact",
+    icon: Flame,
+    title: "Built for specialized jobs",
     description:
-      "Speed matters because homeowners who request information often move on quickly when no one responds.",
+      "Spray foam leads need tighter qualification because the homeowner is usually searching for a specific fix, not general insulation education.",
   },
   {
-    icon: MessageSquareReply,
-    title: "Persistent follow up",
+    icon: Waves,
+    title: "Useful in seasonal swings",
     description:
-      "Many good opportunities are not ready on the first touch. Consistent follow up increases the odds of booking the estimate.",
+      "Spray foam demand can spike around weather changes and moisture issues, so flexible lead volume matters more than flat retainers.",
   },
   {
-    icon: CalendarCheck2,
-    title: "Booked estimate focus",
+    icon: ShieldCheck,
+    title: "Exclusive market protection",
     description:
-      "Appointment setting is about converting raw interest into a real time on the calendar, not just logging a contact form entry.",
+      "Smaller pools of qualified contractors make exclusivity more valuable when each local opportunity carries more margin.",
   },
   {
     icon: TimerReset,
-    title: "Cleaner sales handoff",
+    title: "Faster response window",
     description:
-      "When the homeowner is qualified and the estimate is scheduled, your team can move straight into the sales conversation.",
+      "Homeowners looking for crawlspace encapsulation or spray foam repairs often move quickly, so fast follow up supports close rate.",
   },
 ];
 
 export const metadata: Metadata = {
-  title: "Appointment Setting for Insulation Contractors",
+  title: "Spray Foam Contractor Leads | Pay Per Lead Growth",
   description:
-    "See how Appointly Solutions helps with appointment setting for insulation contractors through fast follow up, qualification, and booked estimate workflows.",
+    "Appointly Solutions helps spray foam contractors generate exclusive, qualified homeowner leads with a pay per lead model built for niche insulation demand.",
   keywords: [
-    "appointment setting for contractors",
-    "insulation appointment setting",
-    "booked estimates for insulation contractors",
-    "Appointly Solutions",
+    "spray foam contractor leads",
+    "spray foam lead generation",
+    "pay per lead spray foam",
+    "exclusive spray foam leads",
   ],
   alternates: {
-    canonical: "https://getappointly.co/appointment-setting-for-contractors",
+    canonical: "https://getappointly.co/spray-foam-contractor-leads",
   },
   openGraph: {
-    title: "Appointment Setting for Insulation Contractors",
+    title: "Spray Foam Contractor Leads | Pay Per Lead Growth",
     description:
-      "Learn how Appointly Solutions helps insulation contractors turn leads into booked estimate appointments.",
-    url: "https://getappointly.co/appointment-setting-for-contractors",
+      "See how Appointly Solutions helps spray foam contractors capture qualified demand without relying on retainers.",
+    url: "https://getappointly.co/spray-foam-contractor-leads",
     siteName: "Appointly Solutions",
     type: "website",
   },
 };
 
-export default function AppointmentSettingForContractorsPage() {
+export default function SprayFoamContractorLeadsPage() {
   return (
     <>
       <Navbar />
       <main className="overflow-hidden">
         <section className="relative pt-32 pb-20 md:pt-44 md:pb-28">
           <div className="absolute inset-0 -z-10">
-            <div className="absolute top-0 right-0 h-[700px] w-[700px] rounded-full bg-[#7d87f7]/[0.06] blur-[145px]" />
+            <div className="absolute top-0 right-0 h-[720px] w-[720px] rounded-full bg-[#7d87f7]/[0.06] blur-[145px]" />
             <div className="absolute inset-0 dot-grid opacity-35" />
           </div>
 
           <div className="mx-auto max-w-6xl px-6">
             <div className="max-w-3xl">
               <p className="mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
-                Booked Estimate Page
+                Niche Intent Page
               </p>
               <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-balance md:text-6xl">
-                Booked Estimates Are the <span className="gradient-text">Result</span>{" "}
-                of the PPL System
+                Spray Foam Contractor Leads Built for{" "}
+                <span className="gradient-text">Specialized Demand</span>
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                When we deliver a qualified insulation lead, you're already halfway to
-                a booked estimate. We screen every homeowner for intent, budget, and
-                service area fit before they ever reach you - so your team walks into
-                real conversations, not cold inquiries.
+                Spray foam contractors usually need narrower targeting, better homeowner
+                qualification, and more flexible lead pacing than broad insulation
+                campaigns provide. Appointly Solutions is built to support that kind of
+                specialized market demand.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
@@ -99,10 +99,10 @@ export default function AppointmentSettingForContractorsPage() {
                   <ArrowRight className="h-4 w-4" />
                 </a>
                 <Link
-                  href="/how-it-works"
+                  href="/insulation-contractor-leads"
                   className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] px-8 py-4 text-sm font-semibold text-foreground transition-all hover:border-white/[0.15] hover:bg-white/[0.08]"
                 >
-                  See The Process
+                  See Main Lead Page
                 </Link>
               </div>
             </div>
@@ -113,24 +113,24 @@ export default function AppointmentSettingForContractorsPage() {
           <div className="mx-auto max-w-6xl px-6">
             <div className="mb-12 max-w-2xl">
               <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
-                Why Appointment Setting Matters
+                Why This Market Behaves Differently
               </p>
               <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">
-                More leads alone do not guarantee more revenue.
+                Spray foam lead generation is usually narrower and more seasonal.
               </h2>
             </div>
 
             <div className="grid gap-5 md:grid-cols-2">
-              {pillars.map((pillar) => (
-                <article key={pillar.title} className="glass-card glass-card-hover rounded-3xl p-6">
+              {sprayFoamPoints.map((point) => (
+                <article key={point.title} className="glass-card glass-card-hover rounded-3xl p-6">
                   <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-primary/20 bg-primary/10">
-                    <pillar.icon className="h-5 w-5 text-primary" />
+                    <point.icon className="h-5 w-5 text-primary" />
                   </div>
                   <h3 className="mt-5 font-display text-xl font-semibold text-foreground">
-                    {pillar.title}
+                    {point.title}
                   </h3>
                   <p className="mt-3 text-sm leading-7 text-muted-foreground">
-                    {pillar.description}
+                    {point.description}
                   </p>
                 </article>
               ))}
@@ -139,25 +139,26 @@ export default function AppointmentSettingForContractorsPage() {
         </section>
 
         <section className="section-divider py-24 md:py-32">
-          <div className="mx-auto grid max-w-6xl gap-6 px-6 lg:grid-cols-2">
+          <div className="mx-auto grid max-w-6xl gap-6 px-6 lg:grid-cols-[1.1fr_0.9fr]">
             <article className="glass-card rounded-3xl p-8 md:p-10">
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
-                How Appointly Solutions Supports Booking
+                Where Appointly Fits
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
-                Built to move prospects from interest to calendar.
+                Better for contractors who need qualified jobs, not broad traffic.
               </h2>
               <p className="mt-5 text-sm leading-7 text-muted-foreground md:text-base">
-                Appointly Solutions combines quick response, qualification logic, and
-                continued follow up so booked estimate opportunities do not depend on
-                your team catching every inquiry in real time.
+                Appointly Solutions supports spray foam contractors with pay-per-lead
+                positioning, faster response expectations, and exclusivity that protects
+                a narrower local market. That makes it easier to compare lead cost against
+                real job value instead of against vague traffic metrics.
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
-                To understand the upstream lead source, see{" "}
+                For the broader offer, return to{" "}
                 <Link href="/insulation-contractor-leads" className="text-primary transition-colors hover:text-[#a5abff]">
                   Insulation Contractor Leads
                 </Link>
-                . To compare the business model behind it, continue to{" "}
+                . If pricing is the main question, continue to{" "}
                 <Link href="/pay-per-lead-insulation" className="text-primary transition-colors hover:text-[#a5abff]">
                   Pay Per Lead Insulation
                 </Link>
@@ -167,15 +168,15 @@ export default function AppointmentSettingForContractorsPage() {
 
             <article className="rounded-3xl border border-[#7d87f7]/20 bg-[#7d87f7]/[0.08] p-8 shadow-[0_0_70px_rgba(125,135,247,0.1)] md:p-10">
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#d7dbff]">
-                Book More Estimates
+                Spray Foam Strategy
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
-                Talk through where leads are stalling in your current process.
+                Review seasonality, close rate, and market fit before you scale.
               </h2>
               <p className="mt-4 text-sm leading-7 text-[#e6e9ff]/80 md:text-base">
-                A strategy call with Appointly Solutions can help identify whether your
-                main bottleneck is lead volume, speed to lead, qualification, or
-                appointment setting itself.
+                A strategy call with Appointly Solutions can help you compare your
+                average spray foam job value, service area, and demand timing against a
+                pay-per-lead model that flexes with your market.
               </p>
               <a
                 href={bookingUrl}
@@ -190,9 +191,9 @@ export default function AppointmentSettingForContractorsPage() {
 
         <ProofSection />
         <SeoResourceLinks
-          title="Pages that support the booked-estimate story."
-          description="These related pages connect appointment setting with lead quality, traffic sources, and contractor acquisition strategy."
-          resources={getCommercialResources("appointment-setting-for-contractors")}
+          title="Resources supporting spray foam lead generation."
+          description="These pages and articles strengthen the spray foam topic cluster with more detail on benchmarks, seasonality, and pricing."
+          resources={getCommercialResources("spray-foam-contractor-leads")}
         />
       </main>
       <Footer />

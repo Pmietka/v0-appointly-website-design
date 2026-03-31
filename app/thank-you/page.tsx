@@ -1,6 +1,22 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle, Calendar, Clock, Target } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Thank You | Appointly Solutions",
+  description:
+    "Appointment confirmed with Appointly Solutions. Review your booking details and prepare for your strategy call.",
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: {
+      index: false,
+      follow: false,
+      noimageindex: true,
+    },
+  },
+};
 
 const callPrep = [
   {
@@ -26,7 +42,7 @@ const callPrep = [
     title: "What To Expect",
     items: [
       "30-minute strategy conversation",
-      "No sales pressure — real talk only",
+      "No sales pressure - real talk only",
       "A clear next step either way",
     ],
   },
@@ -34,9 +50,8 @@ const callPrep = [
 
 export default function ThankYouPage() {
   return (
-    <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
-      {/* Background glow */}
-      <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+    <div className="relative min-h-screen overflow-hidden bg-background text-foreground">
+      <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
         <div
           className="absolute inset-0"
           style={{
@@ -44,13 +59,12 @@ export default function ThankYouPage() {
               "radial-gradient(ellipse 80% 60% at -10% 110%, hsl(235 60% 30% / 0.4) 0%, transparent 70%)",
           }}
         />
-        <div className="absolute top-0 right-0 w-[700px] h-[700px] rounded-full bg-[#7d87f7]/[0.05] blur-[140px]" />
+        <div className="absolute top-0 right-0 h-[700px] w-[700px] rounded-full bg-[#7d87f7]/[0.05] blur-[140px]" />
         <div className="absolute inset-0 dot-grid opacity-30" />
       </div>
 
-      {/* Navbar */}
       <nav className="border-b border-white/[0.05] bg-background/60 backdrop-blur-xl">
-        <div className="mx-auto max-w-6xl flex items-center justify-between px-6 py-4">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <a href="/" className="flex items-center gap-3">
             <Image
               src="/images/appointly-logo.png"
@@ -59,34 +73,33 @@ export default function ThankYouPage() {
               height={38}
               className="rounded-xl"
             />
-            <span className="text-sm font-bold font-display tracking-[0.2em] text-foreground uppercase">
+            <span className="font-display text-sm font-bold uppercase tracking-[0.2em] text-foreground">
               Appointly
             </span>
           </a>
           <a
             href="https://client.getappointly.co/strategy-calendar"
-            className="text-sm font-semibold text-foreground hover:text-primary transition-colors"
+            className="text-sm font-semibold text-foreground transition-colors hover:text-primary"
           >
             Book A Call
           </a>
         </div>
       </nav>
 
-      {/* Hero */}
       <section className="pt-20 pb-10 md:pt-28 md:pb-14">
         <div className="mx-auto max-w-4xl px-6 text-center">
-          <p className="text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-6">
+          <p className="mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
             You&apos;re In
           </p>
 
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] text-balance">
+          <h1 className="font-display text-4xl font-bold leading-[1.1] tracking-tight text-balance md:text-5xl lg:text-6xl">
             Your Call Is Booked. Here&apos;s Why That Was the{" "}
             <span className="bg-gradient-to-r from-[#a5abff] via-[#7d87f7] to-[#8b78f8] bg-clip-text text-transparent">
               Right Move.
             </span>
           </h1>
 
-          <p className="mt-6 text-base md:text-lg leading-relaxed text-muted-foreground max-w-2xl mx-auto">
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
             Most contractors are tired of paying agencies thousands a month with
             nothing to show for it. You just took the first step toward a model
             where you only pay when a real lead hits your phone. Watch the short
@@ -96,59 +109,57 @@ export default function ThankYouPage() {
         </div>
       </section>
 
-      {/* Video */}
       <section className="pb-16 md:pb-20">
         <div className="mx-auto max-w-3xl px-6">
           <div
-            className="relative rounded-3xl overflow-hidden border border-white/[0.08] bg-white/[0.03] aspect-video flex items-center justify-center backdrop-blur-sm"
+            className="relative flex aspect-video items-center justify-center overflow-hidden rounded-3xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm"
             style={{
               boxShadow:
                 "0 0 80px rgb(125 135 247 / 0.08), inset 0 0 40px rgb(125 135 247 / 0.03)",
             }}
           >
-            <div className="text-center relative z-10 px-8">
+            <div className="relative z-10 px-8 text-center">
               <div
-                className="mx-auto mb-5 flex items-center justify-center h-16 w-16 rounded-full bg-primary/10 border border-primary/30 cursor-pointer hover:bg-primary/20 hover:scale-105 transition-all duration-200"
+                className="mx-auto mb-5 flex h-16 w-16 cursor-pointer items-center justify-center rounded-full border border-primary/30 bg-primary/10 transition-all duration-200 hover:scale-105 hover:bg-primary/20"
                 style={{ boxShadow: "0 0 40px rgb(125 135 247 / 0.25)" }}
               >
-                <div className="w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[18px] border-l-primary ml-1" />
+                <div className="ml-1 h-0 w-0 border-t-[10px] border-b-[10px] border-l-[18px] border-t-transparent border-b-transparent border-l-primary" />
               </div>
               <p className="text-sm font-medium text-muted-foreground">
-                Strategy overview video — watch before your call
+                Strategy overview video - watch before your call
               </p>
-              <p className="text-xs text-muted-foreground/50 mt-1">~8 minutes</p>
+              <p className="mt-1 text-xs text-muted-foreground/50">~8 minutes</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Prep cards */}
-      <section className="pb-24 md:pb-32 section-divider pt-16">
+      <section className="section-divider pt-16 pb-24 md:pb-32">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="text-center mb-12">
-            <p className="text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-4">
+          <div className="mb-12 text-center">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
               Before Your Call
             </p>
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">
+            <h2 className="font-display text-2xl font-bold text-foreground md:text-3xl">
               Show Up Ready to{" "}
               <span className="bg-gradient-to-r from-[#7d87f7] to-[#a5abff] bg-clip-text text-transparent">
                 Hit the Ground Running
               </span>
             </h2>
-            <p className="mt-3 text-muted-foreground max-w-xl mx-auto text-sm">
+            <p className="mx-auto mt-3 max-w-xl text-sm text-muted-foreground">
               The more prepared you are, the more value you get from our 30
               minutes together.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
             {callPrep.map((section) => (
               <div
                 key={section.title}
-                className="rounded-2xl border border-white/[0.07] bg-white/[0.03] p-6 hover:border-[#7d87f7]/20 hover:bg-[#7d87f7]/[0.03] transition-all duration-300"
+                className="rounded-2xl border border-white/[0.07] bg-white/[0.03] p-6 transition-all duration-300 hover:border-[#7d87f7]/20 hover:bg-[#7d87f7]/[0.03]"
               >
-                <div className="flex items-center gap-3 mb-5">
-                  <div className="flex items-center justify-center h-10 w-10 rounded-xl bg-primary/10 border border-primary/20">
+                <div className="mb-5 flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-primary/20 bg-primary/10">
                     <section.icon className="h-5 w-5 text-primary" />
                   </div>
                   <h3 className="font-display text-base font-semibold text-foreground">
@@ -158,7 +169,7 @@ export default function ThankYouPage() {
                 <ul className="flex flex-col gap-3">
                   {section.items.map((item) => (
                     <li key={item} className="flex items-start gap-2.5">
-                      <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
                       <span className="text-sm leading-relaxed text-muted-foreground">
                         {item}
                       </span>
@@ -170,12 +181,12 @@ export default function ThankYouPage() {
           </div>
 
           <div className="mt-16 text-center">
-            <p className="text-sm text-muted-foreground mb-5">
+            <p className="mb-5 text-sm text-muted-foreground">
               Need to reschedule? No problem.
             </p>
             <a
               href="https://client.getappointly.co/strategy-calendar"
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
               style={{
                 boxShadow:
                   "0 0 40px rgb(125 135 247 / 0.35), 0 4px 20px rgb(125 135 247 / 0.15)",
@@ -188,9 +199,8 @@ export default function ThankYouPage() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="border-t border-white/[0.05] py-8">
-        <div className="mx-auto max-w-6xl px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 md:flex-row">
           <div className="flex items-center gap-3">
             <Image
               src="/images/appointly-logo.png"
@@ -199,7 +209,7 @@ export default function ThankYouPage() {
               height={24}
               className="rounded-lg"
             />
-            <span className="text-xs font-bold font-display tracking-[0.2em] text-foreground uppercase">
+            <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-foreground">
               Appointly
             </span>
           </div>
@@ -207,10 +217,10 @@ export default function ThankYouPage() {
             &copy; {new Date().getFullYear()} Appointly Solutions. All rights reserved.
           </p>
           <div className="flex items-center gap-5">
-            <Link href="/privacy" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+            <Link href="/privacy" className="text-xs text-muted-foreground transition-colors hover:text-foreground">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+            <Link href="/terms" className="text-xs text-muted-foreground transition-colors hover:text-foreground">
               Terms of Service
             </Link>
           </div>

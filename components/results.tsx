@@ -16,7 +16,7 @@ const testimonials = [
     name: "Wojtek",
     role: "Home Insulation Contractor",
     quote:
-      "I was already paying agencies with zero consistency — no way to predict my pipeline month to month. 3 months with Appointly: 6 closed jobs every single month without fail.",
+      "I was already paying agencies with zero consistency - no way to predict my pipeline month to month. 3 months with Appointly: 6 closed jobs every single month without fail.",
     result: "6 closed jobs/month for 3 months straight",
     rating: 5,
     initial: "W",
@@ -24,8 +24,7 @@ const testimonials = [
   {
     name: "Adrian",
     role: "Window Replacement Contractor",
-    quote:
-      "Appointly got me leads that actually convert.",
+    quote: "Appointly got me leads that actually convert.",
     result: "14 paying clients in first 3 months",
     rating: 5,
     initial: "A",
@@ -34,59 +33,55 @@ const testimonials = [
 
 export function Results() {
   return (
-    <section id="results" className="py-24 md:py-32 bg-white">
+    <section id="results" className="bg-white py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6">
-        {/* Section header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-xs font-semibold tracking-[0.25em] uppercase text-gray-500 mb-4">
+        <div className="mx-auto mb-16 max-w-2xl text-center">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-gray-500">
             Client Results
           </p>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 text-balance leading-tight">
-            What Our Clients{" "}
-            <span className="text-[#5f57e8]">Actually Say</span>
+          <h2 className="font-display text-3xl font-bold leading-tight text-balance text-gray-900 md:text-4xl lg:text-5xl">
+            What Our Clients <span className="text-[#5f57e8]">Actually Say</span>
           </h2>
-          <p className="mt-4 text-gray-600 leading-relaxed">
+          <p className="mt-4 leading-relaxed text-gray-600">
             Real contractors. Real results. No stock photos or made-up numbers.
           </p>
         </div>
 
-        {/* Testimonials */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {testimonials.map((t) => (
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          {testimonials.map((testimonial) => (
             <div
-              key={t.name + t.role}
-              className="relative flex flex-col rounded-2xl border border-gray-200 bg-white p-7 shadow-sm hover:shadow-md transition-shadow"
+              key={testimonial.name + testimonial.role}
+              className="relative flex flex-col rounded-2xl border border-gray-200 bg-white p-7 shadow-sm transition-shadow hover:shadow-md"
             >
-              <div className="text-5xl font-serif leading-none text-[#5f57e8]/15 mb-4 select-none">
+              <div className="mb-4 select-none text-5xl leading-none font-serif text-[#5f57e8]/15">
                 &#8220;
               </div>
 
-              <div className="flex gap-0.5 mb-5">
-                {Array.from({ length: t.rating }).map((_, i) => (
+              <div className="mb-5 flex gap-0.5">
+                {Array.from({ length: testimonial.rating }).map((_, index) => (
                   <Star
-                    key={`star-${t.name}-${i}`}
+                    key={`star-${testimonial.name}-${index}`}
                     className="h-4 w-4 fill-amber-400 text-amber-400"
                   />
                 ))}
               </div>
 
-              <p className="text-base leading-relaxed text-gray-700 flex-1 font-medium">
-                &ldquo;{t.quote}&rdquo;
+              <p className="flex-1 text-base font-medium leading-relaxed text-gray-700">
+                &ldquo;{testimonial.quote}&rdquo;
               </p>
 
-              {/* Result badge */}
-              <div className="mt-5 inline-flex self-start items-center gap-1.5 bg-[#5f57e8]/8 border border-[#5f57e8]/20 text-[#5f57e8] text-xs font-semibold px-3 py-1.5 rounded-full">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#5f57e8] flex-shrink-0" />
-                {t.result}
+              <div className="mt-5 inline-flex self-start items-center gap-1.5 rounded-full border border-[#5f57e8]/20 bg-[#5f57e8]/8 px-3 py-1.5 text-xs font-semibold text-[#5f57e8]">
+                <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#5f57e8]" />
+                {testimonial.result}
               </div>
 
-              <div className="mt-5 pt-5 border-t border-gray-100 flex items-center gap-3">
-                <div className="flex items-center justify-center h-10 w-10 rounded-full bg-[#5f57e8] text-sm font-bold text-white flex-shrink-0">
-                  {t.initial}
+              <div className="mt-5 flex items-center gap-3 border-t border-gray-100 pt-5">
+                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#5f57e8] text-sm font-bold text-white">
+                  {testimonial.initial}
                 </div>
                 <div>
-                  <p className="font-semibold text-sm text-gray-900">{t.name}</p>
-                  <p className="text-xs text-gray-500 mt-0.5">{t.role}</p>
+                  <p className="text-sm font-semibold text-gray-900">{testimonial.name}</p>
+                  <p className="mt-0.5 text-xs text-gray-500">{testimonial.role}</p>
                 </div>
               </div>
             </div>

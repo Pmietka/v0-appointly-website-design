@@ -4,6 +4,9 @@ import { ArrowRight, BadgeCheck, Clock3, ShieldCheck, Zap } from "lucide-react";
 
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
+import { ProofSection } from "@/components/proof-section";
+import { SeoResourceLinks } from "@/components/seo-resource-links";
+import { getCommercialResources } from "@/lib/seo-resources";
 
 const bookingUrl = "https://client.getappointly.co/strategy-calendar";
 
@@ -24,7 +27,7 @@ const differentiators = [
     icon: Clock3,
     title: "Full system included",
     description:
-      "GMB optimization, Facebook ads, and an NFC review card system are all part of the setup — not sold as add-ons.",
+      "GMB optimization, Facebook ads, and an NFC review card system are all part of the setup - not sold as add-ons.",
   },
   {
     icon: Zap,
@@ -70,23 +73,23 @@ export default function AboutPage() {
 
           <div className="mx-auto max-w-6xl px-6">
             <div className="max-w-3xl">
-              <p className="text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-6">
+              <p className="mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
                 About Appointly Solutions
               </p>
-              <h1 className="font-display text-5xl md:text-6xl font-bold tracking-tight leading-[1.05] text-balance">
+              <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-balance md:text-6xl">
                 About <span className="gradient-text">Appointly Solutions</span>
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
                 Founded by brothers Patrick and Jacob Mietka in Chicago, IL, Appointly
                 Solutions was built out of frustration with agencies that charge retainers
                 without delivering results. We created the pay-per-lead model because
-                contractors deserve accountability — you should only pay when we actually
+                contractors deserve accountability - you should only pay when we actually
                 deliver.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
                   href={bookingUrl}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
                   style={{
                     boxShadow:
                       "0 0 40px rgb(125 135 247 / 0.35), 0 4px 20px rgb(125 135 247 / 0.15)",
@@ -97,7 +100,7 @@ export default function AboutPage() {
                 </a>
                 <Link
                   href="/how-it-works"
-                  className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] px-8 py-4 text-sm font-semibold text-foreground hover:bg-white/[0.08] hover:border-white/[0.15] transition-all"
+                  className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] px-8 py-4 text-sm font-semibold text-foreground transition-all hover:border-white/[0.15] hover:bg-white/[0.08]"
                 >
                   See How It Works
                 </Link>
@@ -109,7 +112,7 @@ export default function AboutPage() {
         <section className="section-divider py-24 md:py-32">
           <div className="mx-auto grid max-w-6xl gap-6 px-6 lg:grid-cols-2">
             <article className="glass-card rounded-3xl p-8 md:p-10">
-              <p className="text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
                 Why We Exist
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
@@ -120,12 +123,12 @@ export default function AboutPage() {
                 shows up. That leaves contractors carrying all the risk while the
                 agency collects regardless. Appointly Solutions was built specifically
                 for owner-operators who are done paying for promises. Our first client,
-                Ewing Insulation in Canada, onboarded in March 2026 — and the PPL model
+                Ewing Insulation in Canada, onboarded in March 2026 - and the PPL model
                 has been the foundation ever since.
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
                 If you want the full breakdown, our{" "}
-                <Link href="/faq" className="text-primary hover:text-[#a5abff] transition-colors">
+                <Link href="/faq" className="text-primary transition-colors hover:text-[#a5abff]">
                   FAQ page
                 </Link>{" "}
                 covers what qualifies as a lead and how the model works in practice.
@@ -133,7 +136,7 @@ export default function AboutPage() {
             </article>
 
             <article className="glass-card rounded-3xl p-8 md:p-10">
-              <p className="text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
                 Our Approach
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
@@ -143,18 +146,18 @@ export default function AboutPage() {
                 Appointly Solutions optimizes your GMB, runs Facebook lead gen ads,
                 qualifies every homeowner before they reach you, and ships you NFC review
                 cards to keep your Google profile growing. You pay per qualified lead
-                delivered — not for hours, reports, or guesswork.
+                delivered - not for hours, reports, or guesswork.
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
                 Our{" "}
-                <Link href="/how-it-works" className="text-primary hover:text-[#a5abff] transition-colors">
+                <Link href="/how-it-works" className="text-primary transition-colors hover:text-[#a5abff]">
                   How It Works
                 </Link>{" "}
                 page walks through each step of the process from campaign launch to
                 booked estimate. You can also explore{" "}
                 <Link
                   href="/insulation-contractor-leads"
-                  className="text-primary hover:text-[#a5abff] transition-colors"
+                  className="text-primary transition-colors hover:text-[#a5abff]"
                 >
                   Insulation Contractor Leads
                 </Link>{" "}
@@ -171,13 +174,13 @@ export default function AboutPage() {
 
           <div className="mx-auto max-w-6xl px-6">
             <div className="max-w-2xl">
-              <p className="text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-4">
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
                 What We Value
               </p>
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
+              <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">
                 Built around exclusivity, speed, and trust.
               </h2>
-              <p className="mt-4 text-muted-foreground leading-relaxed">
+              <p className="mt-4 leading-relaxed text-muted-foreground">
                 Appointly Solutions is designed to give insulation contractors a
                 reliable growth engine that feels accountable from day one.
               </p>
@@ -204,16 +207,23 @@ export default function AboutPage() {
           </div>
         </section>
 
+        <ProofSection />
+        <SeoResourceLinks
+          title="Supporting pages worth visiting next."
+          description="These pages reinforce the about story with clearer commercial intent, pricing context, and proof-led comparisons."
+          resources={getCommercialResources("insulation-marketing-agency")}
+        />
+
         <section className="section-divider py-24 md:py-32">
           <div className="mx-auto max-w-5xl px-6">
             <div className="rounded-[32px] border border-[#7d87f7]/20 bg-[#7d87f7]/[0.08] p-8 text-center shadow-[0_0_80px_rgba(125,135,247,0.12)] md:p-12">
-              <p className="text-xs font-semibold tracking-[0.25em] uppercase text-[#c8cdff]">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#c8cdff]">
                 Ready To Grow
               </p>
-              <h2 className="mt-4 font-display text-3xl md:text-4xl font-bold text-foreground">
+              <h2 className="mt-4 font-display text-3xl font-bold text-foreground md:text-4xl">
                 See if Appointly Solutions fits your market.
               </h2>
-              <p className="mt-4 mx-auto max-w-2xl text-sm leading-7 text-[#d7dbff]/80 md:text-base">
+              <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-[#d7dbff]/80 md:text-base">
                 Book a strategy call and we will map out where your leads are coming
                 from, what is slipping through the cracks, and how a pay per lead
                 system could support your next stage of growth. If you want to compare
@@ -228,7 +238,7 @@ export default function AboutPage() {
               </p>
               <a
                 href={bookingUrl}
-                className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-4 text-sm font-semibold text-[#7d87f7] hover:opacity-90 transition-opacity"
+                className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-4 text-sm font-semibold text-[#7d87f7] transition-opacity hover:opacity-90"
               >
                 Book a Strategy Call
                 <ArrowRight className="h-4 w-4" />

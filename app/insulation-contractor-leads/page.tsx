@@ -11,6 +11,9 @@ import {
 
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
+import { ProofSection } from "@/components/proof-section";
+import { SeoResourceLinks } from "@/components/seo-resource-links";
+import { getCommercialResources } from "@/lib/seo-resources";
 
 const bookingUrl = "https://client.getappointly.co/strategy-calendar";
 
@@ -25,7 +28,7 @@ const highlights = [
     icon: BadgeCheck,
     title: "Pre qualified homeowners",
     description:
-      "Every lead is screened for service fit, project relevance, and homeowner intent before it becomes your team’s problem to solve.",
+      "Every lead is screened for service fit, project relevance, and homeowner intent before it becomes your team's problem to solve.",
   },
   {
     icon: PhoneCall,
@@ -77,10 +80,10 @@ export default function InsulationContractorLeadsPage() {
 
           <div className="mx-auto max-w-6xl px-6">
             <div className="max-w-3xl">
-              <p className="text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-6">
+              <p className="mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
                 Commercial Intent Page
               </p>
-              <h1 className="font-display text-5xl md:text-6xl font-bold tracking-tight leading-[1.05] text-balance">
+              <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-balance md:text-6xl">
                 Insulation Contractor Leads That Turn Into{" "}
                 <span className="gradient-text">Real Estimate Opportunities</span>
               </h1>
@@ -93,7 +96,7 @@ export default function InsulationContractorLeadsPage() {
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
                   href={bookingUrl}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
                   style={{
                     boxShadow:
                       "0 0 40px rgb(125 135 247 / 0.35), 0 4px 20px rgb(125 135 247 / 0.15)",
@@ -104,7 +107,7 @@ export default function InsulationContractorLeadsPage() {
                 </a>
                 <Link
                   href="/how-it-works"
-                  className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] px-8 py-4 text-sm font-semibold text-foreground hover:bg-white/[0.08] hover:border-white/[0.15] transition-all"
+                  className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] px-8 py-4 text-sm font-semibold text-foreground transition-all hover:border-white/[0.15] hover:bg-white/[0.08]"
                 >
                   See How It Works
                 </Link>
@@ -116,13 +119,13 @@ export default function InsulationContractorLeadsPage() {
         <section className="section-divider py-24 md:py-32">
           <div className="mx-auto max-w-6xl px-6">
             <div className="mb-12 max-w-2xl">
-              <p className="text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-4">
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
                 What You Need
               </p>
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
+              <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">
                 More than traffic. You need qualified homeowner demand.
               </h2>
-              <p className="mt-4 text-muted-foreground leading-relaxed">
+              <p className="mt-4 leading-relaxed text-muted-foreground">
                 Appointly Solutions is built for contractors who need stronger lead
                 quality, quicker follow up, and a system that supports actual revenue
                 conversations instead of just filling a spreadsheet.
@@ -150,7 +153,7 @@ export default function InsulationContractorLeadsPage() {
         <section className="section-divider py-24 md:py-32">
           <div className="mx-auto grid max-w-6xl gap-6 px-6 lg:grid-cols-[1.1fr_0.9fr]">
             <article className="glass-card rounded-3xl p-8 md:p-10">
-              <p className="text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
                 Why This Converts
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
@@ -164,11 +167,11 @@ export default function InsulationContractorLeadsPage() {
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
                 If exclusivity is your top concern, visit{" "}
-                <Link href="/exclusive-insulation-leads" className="text-primary hover:text-[#a5abff] transition-colors">
+                <Link href="/exclusive-insulation-leads" className="text-primary transition-colors hover:text-[#a5abff]">
                   Exclusive Insulation Leads
                 </Link>{" "}
                 for a direct breakdown. If pricing model matters most, continue to{" "}
-                <Link href="/pay-per-lead-insulation" className="text-primary hover:text-[#a5abff] transition-colors">
+                <Link href="/pay-per-lead-insulation" className="text-primary transition-colors hover:text-[#a5abff]">
                   Pay Per Lead Insulation
                 </Link>
                 .
@@ -179,7 +182,7 @@ export default function InsulationContractorLeadsPage() {
               <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/20 bg-white/10">
                 <Target className="h-5 w-5 text-white" />
               </div>
-              <p className="mt-6 text-xs font-semibold tracking-[0.25em] uppercase text-[#d7dbff]">
+              <p className="mt-6 text-xs font-semibold uppercase tracking-[0.25em] text-[#d7dbff]">
                 Next Step
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
@@ -192,7 +195,7 @@ export default function InsulationContractorLeadsPage() {
               </p>
               <a
                 href={bookingUrl}
-                className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-4 text-sm font-semibold text-[#7d87f7] hover:opacity-90 transition-opacity"
+                className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-4 text-sm font-semibold text-[#7d87f7] transition-opacity hover:opacity-90"
               >
                 Book a Strategy Call
                 <ArrowRight className="h-4 w-4" />
@@ -200,6 +203,13 @@ export default function InsulationContractorLeadsPage() {
             </article>
           </div>
         </section>
+
+        <ProofSection />
+        <SeoResourceLinks
+          title="Keep exploring the highest-intent pages."
+          description="These links reinforce the main offer with supporting pages around exclusivity, pricing, and contractor buying behavior."
+          resources={getCommercialResources("insulation-contractor-leads")}
+        />
       </main>
       <Footer />
     </>

@@ -13,6 +13,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://getappointly.co"),
   title: "Appointly Solutions | Pay-Per-Lead for Insulation Contractors",
   description:
     "Get exclusive, qualified insulation leads. Startup fee, then pay only when we deliver. GMB optimization, Facebook ads, and NFC review system included. No monthly retainer.",
@@ -27,6 +28,13 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
   alternates: {
     canonical: "https://getappointly.co",
@@ -71,6 +79,7 @@ export default function RootLayout({
               {
                 "@context": "https://schema.org",
                 "@type": "Organization",
+                "@id": "https://getappointly.co/#organization",
                 name: "Appointly Solutions",
                 url: "https://getappointly.co",
                 logo: {
@@ -88,6 +97,7 @@ export default function RootLayout({
               {
                 "@context": "https://schema.org",
                 "@type": "LocalBusiness",
+                "@id": "https://getappointly.co/#localbusiness",
                 name: "Appointly Solutions",
                 url: "https://getappointly.co",
                 logo: "https://getappointly.co/images/appointly-logo.png",
@@ -101,6 +111,17 @@ export default function RootLayout({
                 },
                 areaServed: ["US", "CA"],
                 priceRange: "Pay Per Lead",
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "@id": "https://getappointly.co/#website",
+                url: "https://getappointly.co",
+                name: "Appointly Solutions",
+                inLanguage: "en-US",
+                publisher: {
+                  "@id": "https://getappointly.co/#organization",
+                },
               },
             ]),
           }}
