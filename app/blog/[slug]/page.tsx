@@ -224,7 +224,7 @@ export default async function BlogPostPage({
         <SeoResourceLinks
           eyebrow="Next Step"
           title="Related service pages for contractors ready to act."
-          description="Each article supports a commercial page so readers can move from research into the offer that best matches their situation."
+          description="Each article supports a commercial page so readers can move from research into the page that best matches their situation."
           resources={commercialResources}
         />
       </main>

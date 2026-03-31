@@ -15,7 +15,7 @@ export const homepageResources: Resource[] = [
     href: "/spray-foam-contractor-leads",
     title: "Spray Foam Contractor Leads",
     description:
-      "See the offer framed for spray foam specialists who need narrower, higher-intent demand.",
+      "See the service framed for spray foam specialists who need narrower, higher-intent demand.",
   },
   {
     href: "/insulation-contractor-leads-small-markets",
@@ -49,7 +49,7 @@ export const commercialResources: Record<string, Resource[]> = {
   "exclusive-insulation-leads": [
     {
       href: "/insulation-contractor-leads",
-      title: "Core Lead Generation Offer",
+      title: "Core Lead Generation Page",
       description:
         "See how exclusivity fits into the broader Appointly lead delivery model.",
     },
@@ -195,9 +195,9 @@ export function getBlogCommercialResources(slug: string): Resource[] {
       },
       {
         href: "/insulation-contractor-leads",
-        title: "Core Lead Generation Offer",
+        title: "Core Lead Generation Page",
         description:
-          "Return to the main commercial page for the overall Appointly offer and qualification standards.",
+          "Return to the main commercial page for the overall Appointly system and qualification standards.",
       },
     ];
   }

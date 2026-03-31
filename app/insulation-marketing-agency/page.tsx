@@ -82,7 +82,7 @@ export default function InsulationMarketingAgencyPage() {
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
                 If you are searching for an insulation marketing agency, you may really
-                be searching for a better business model. Appointly Solutions offers a
+                be searching for a better business model. Appointly Solutions uses a
                 pay per lead approach designed to reduce risk and keep attention on the
                 opportunities that matter.
               </p>

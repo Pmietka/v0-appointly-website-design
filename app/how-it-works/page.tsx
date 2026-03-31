@@ -189,7 +189,7 @@ export default function HowItWorksPage() {
                 <Link href="/about" className="text-primary transition-colors hover:opacity-80">
                   About page
                 </Link>{" "}
-                shares the operating principles behind it. For the direct offer, see{" "}
+                shares the operating principles behind it. For the main service page, see{" "}
                 <Link
                   href="/insulation-contractor-leads"
                   className="text-primary transition-colors hover:opacity-80"

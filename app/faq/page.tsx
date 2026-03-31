@@ -162,7 +162,7 @@ export default function FaqPage() {
                     About page
                   </Link>{" "}
                   explains why Appointly Solutions is built around a cost-per-lead model.
-                  For the direct offer page, visit{" "}
+                  For the main service page, visit{" "}
                   <Link
                     href="/insulation-contractor-leads"
                     className="text-primary transition-colors hover:opacity-80"

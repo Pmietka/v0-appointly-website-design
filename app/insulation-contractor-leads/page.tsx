@@ -200,7 +200,7 @@ export default function InsulationContractorLeadsPage() {
         <ProofSection />
         <SeoResourceLinks
           title="Keep exploring the highest-intent pages."
-          description="These links reinforce the main offer with supporting pages around exclusivity, pricing, and contractor buying behavior."
+          description="These links reinforce the main service page with supporting pages around exclusivity, pricing, and contractor buying behavior."
           resources={getCommercialResources("insulation-contractor-leads")}
         />
       </main>

@@ -150,7 +150,7 @@ export default function SprayFoamContractorLeadsPage() {
                 real job value instead of against vague traffic metrics.
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
-                For the broader offer, return to{" "}
+                For the broader service page, return to{" "}
                 <Link href="/insulation-contractor-leads" className="text-primary transition-opacity hover:opacity-80">
                   Insulation Contractor Leads
                 </Link>
