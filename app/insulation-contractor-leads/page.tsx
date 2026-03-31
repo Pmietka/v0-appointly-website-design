@@ -95,14 +95,14 @@ export default function InsulationContractorLeadsPage() {
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
                   href={bookingUrl}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
                 >
                   Book a Strategy Call
                   <ArrowRight className="h-4 w-4" />
                 </a>
                 <Link
                   href="/how-it-works"
-                  className="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-8 py-4 text-sm font-semibold text-foreground transition-all hover:bg-slate-50"
+                  className="inline-flex items-center justify-center rounded-full border border-gray-300 bg-white px-8 py-4 text-sm font-semibold text-gray-700 transition-all hover:bg-gray-50"
                 >
                   See How It Works
                 </Link>
@@ -188,7 +188,7 @@ export default function InsulationContractorLeadsPage() {
               </p>
               <a
                 href={bookingUrl}
-                className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-slate-950 px-8 py-4 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
               >
                 Book a Strategy Call
                 <ArrowRight className="h-4 w-4" />

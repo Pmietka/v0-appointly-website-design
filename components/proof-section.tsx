@@ -3,15 +3,15 @@ import Image from "next/image";
 const quickStats = [
   {
     stat: "6 new clients",
-    label: "Andre said this happened in month two.",
+    label: "6 new residential clients added in month two.",
   },
   {
     stat: "6 closed jobs / month",
-    label: "Reported by another contractor for three straight months.",
+    label: "Closed jobs per month, held for three straight months.",
   },
   {
     stat: "24-48 hours",
-    label: "Typical window cited on-site for first incoming leads after launch.",
+    label: "Typical time from campaign launch to first lead arriving.",
   },
 ];
 
@@ -35,7 +35,7 @@ export function ProofSection() {
                 Booked Appointments
               </p>
               <h3 className="mt-3 font-display text-2xl font-bold text-slate-950">
-                A booked calendar says more than a polished claim.
+                This is what the estimate calendar looks like after launch.
               </h3>
             </div>
             <div className="bg-slate-50 p-4 md:p-6">
@@ -56,7 +56,7 @@ export function ProofSection() {
                   Andre
                 </p>
                 <h3 className="mt-3 font-display text-2xl font-bold text-slate-950">
-                  A contractor quote tied to a specific result.
+                  In his second month, Andre brought in 6 new residential clients.
                 </h3>
               </div>
               <div className="border-t border-slate-100 bg-slate-50 p-4 md:p-6">

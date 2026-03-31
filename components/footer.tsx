@@ -46,6 +46,12 @@ export function Footer() {
               Exclusive, qualified insulation leads built around booked estimates,
               not vague agency promises.
             </p>
+            <a
+              href="mailto:patrick@getappointly.co"
+              className="mt-3 block text-sm text-slate-500 transition-colors hover:text-slate-700"
+            >
+              patrick@getappointly.co
+            </a>
           </div>
 
           <div className="grid gap-8 sm:grid-cols-3">

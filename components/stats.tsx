@@ -51,7 +51,7 @@ function StatCard({ stat, started }: { stat: StatItem; started: boolean }) {
 
   return (
     <div className="flex flex-col items-center px-8 py-10 text-center md:px-10">
-      <div className="font-display text-7xl font-black leading-none text-[#4669a8] md:text-8xl">
+      <div className="font-display text-7xl font-black leading-none text-primary md:text-8xl">
         {count}
         {stat.suffix}
       </div>
@@ -82,10 +82,10 @@ export function Stats() {
   }, []);
 
   return (
-    <section ref={ref} className="bg-[#e8f0ff] py-20 md:py-28">
+    <section ref={ref} className="bg-[hsl(var(--surface-subtle))] py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-16 text-center">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-[#6b84b8]">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
             By the Numbers
           </p>
           <h2 className="font-display text-3xl font-bold text-slate-950 md:text-4xl">
@@ -93,7 +93,7 @@ export function Stats() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 divide-y divide-[#c8d6f1] rounded-[32px] border border-[#c8d6f1] bg-white/55 md:grid-cols-3 md:divide-y-0 md:divide-x">
+        <div className="grid grid-cols-1 divide-y divide-primary/20 rounded-[32px] border border-primary/20 bg-white/55 md:grid-cols-3 md:divide-y-0 md:divide-x">
           {stats.map((stat) => (
             <StatCard key={stat.label} stat={stat} started={started} />
           ))}

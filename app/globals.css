@@ -7,6 +7,26 @@
     text-wrap: balance;
   }
 
+  .glass-card {
+    background-color: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04), 0 4px 16px rgba(15, 23, 42, 0.04);
+  }
+
+  .glass-card-hover {
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+
+  .glass-card-hover:hover {
+    box-shadow: 0 4px 24px rgba(15, 23, 42, 0.08);
+    transform: translateY(-1px);
+  }
+
+  .dot-grid {
+    background-image: radial-gradient(circle, hsl(220 13% 88%) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
   .gradient-text {
     @apply text-primary;
   }
@@ -34,6 +54,7 @@
     --secondary-foreground: 230 25% 13%;
     --muted: 220 14% 96%;
     --muted-foreground: 215 14% 45%;
+    --surface-subtle: 225 44% 96%;
     --accent: 223 72% 72%;
     --accent-foreground: 230 25% 13%;
     --destructive: 0 84% 60%;

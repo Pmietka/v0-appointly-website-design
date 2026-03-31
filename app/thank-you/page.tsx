@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle, Calendar, Clock, Target } from "lucide-react";
+import { ArrowRight, Calendar, CheckCircle, Clock, Target } from "lucide-react";
+
+import { BrandMark } from "@/components/brand-mark";
 
 export const metadata: Metadata = {
   title: "Thank You | Appointly Solutions",
@@ -52,103 +53,75 @@ export default function ThankYouPage() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-background text-foreground">
       <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              "radial-gradient(ellipse 80% 60% at -10% 110%, hsl(235 60% 30% / 0.4) 0%, transparent 70%)",
-          }}
-        />
-        <div className="absolute top-0 right-0 h-[700px] w-[700px] rounded-full bg-[#7d87f7]/[0.05] blur-[140px]" />
+        <div className="absolute inset-0 bg-[hsl(var(--surface-subtle))]" />
+        <div className="absolute right-0 top-0 h-[700px] w-[700px] rounded-full bg-primary/[0.06] blur-[140px]" />
         <div className="absolute inset-0 dot-grid opacity-30" />
       </div>
 
-      <nav className="border-b border-white/[0.05] bg-background/60 backdrop-blur-xl">
+      <nav className="border-b border-slate-200/80 bg-white/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <a href="/" className="flex items-center gap-3">
-            <Image
-              src="/images/appointly-logo.png"
-              alt="Appointly Solutions logo"
-              width={38}
-              height={38}
-              className="rounded-xl"
-            />
+            <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-950 shadow-sm">
+              <BrandMark className="h-8 w-8" />
+            </div>
             <span className="font-display text-sm font-bold uppercase tracking-[0.2em] text-foreground">
               Appointly
             </span>
           </a>
           <a
             href="https://client.getappointly.co/strategy-calendar"
-            className="text-sm font-semibold text-foreground transition-colors hover:text-primary"
+            className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
           >
             Book A Call
           </a>
         </div>
       </nav>
 
-      <section className="pt-20 pb-10 md:pt-28 md:pb-14">
+      <section className="pb-10 pt-20 md:pb-14 md:pt-28">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <p className="mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
-            You&apos;re In
+            You're In
           </p>
 
           <h1 className="font-display text-4xl font-bold leading-[1.1] tracking-tight text-balance md:text-5xl lg:text-6xl">
-            Your Call Is Booked. Here&apos;s Why That Was the{" "}
-            <span className="bg-gradient-to-r from-[#a5abff] via-[#7d87f7] to-[#8b78f8] bg-clip-text text-transparent">
-              Right Move.
-            </span>
+            Your call is booked. Here is how to get the most out of it.
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-            Most contractors are tired of paying agencies thousands a month with
-            nothing to show for it. You just took the first step toward a model
-            where you only pay when a real lead hits your phone. Watch the short
-            video below so you show up to our call ready to hit the ground
-            running.
+            You just took the next step toward a lead system that is built around
+            real estimate opportunities. Watch the short video below so we can spend
+            the call on your market, your service area, and your actual growth plan.
           </p>
         </div>
       </section>
 
       <section className="pb-16 md:pb-20">
         <div className="mx-auto max-w-3xl px-6">
-          <div
-            className="relative flex aspect-video items-center justify-center overflow-hidden rounded-3xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm"
-            style={{
-              boxShadow:
-                "0 0 80px rgb(125 135 247 / 0.08), inset 0 0 40px rgb(125 135 247 / 0.03)",
-            }}
-          >
+          <div className="relative flex aspect-video items-center justify-center overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
             <div className="relative z-10 px-8 text-center">
-              <div
-                className="mx-auto mb-5 flex h-16 w-16 cursor-pointer items-center justify-center rounded-full border border-primary/30 bg-primary/10 transition-all duration-200 hover:scale-105 hover:bg-primary/20"
-                style={{ boxShadow: "0 0 40px rgb(125 135 247 / 0.25)" }}
-              >
-                <div className="ml-1 h-0 w-0 border-t-[10px] border-b-[10px] border-l-[18px] border-t-transparent border-b-transparent border-l-primary" />
+              <div className="mx-auto mb-5 flex h-16 w-16 cursor-pointer items-center justify-center rounded-full border border-primary/30 bg-primary/10 transition-all duration-200 hover:scale-105 hover:bg-primary/20">
+                <div className="ml-1 h-0 w-0 border-b-[10px] border-l-[18px] border-t-[10px] border-b-transparent border-l-primary border-t-transparent" />
               </div>
               <p className="text-sm font-medium text-muted-foreground">
                 Strategy overview video - watch before your call
               </p>
-              <p className="mt-1 text-xs text-muted-foreground/50">~8 minutes</p>
+              <p className="mt-1 text-xs text-muted-foreground/70">~8 minutes</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="section-divider pt-16 pb-24 md:pb-32">
+      <section className="section-divider pb-24 pt-16 md:pb-32">
         <div className="mx-auto max-w-6xl px-6">
           <div className="mb-12 text-center">
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
               Before Your Call
             </p>
             <h2 className="font-display text-2xl font-bold text-foreground md:text-3xl">
-              Show Up Ready to{" "}
-              <span className="bg-gradient-to-r from-[#7d87f7] to-[#a5abff] bg-clip-text text-transparent">
-                Hit the Ground Running
-              </span>
+              Show up ready to hit the ground running
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-sm text-muted-foreground">
-              The more prepared you are, the more value you get from our 30
-              minutes together.
+              The more prepared you are, the more value you get from our 30 minutes together.
             </p>
           </div>
 
@@ -156,7 +129,7 @@ export default function ThankYouPage() {
             {callPrep.map((section) => (
               <div
                 key={section.title}
-                className="rounded-2xl border border-white/[0.07] bg-white/[0.03] p-6 transition-all duration-300 hover:border-[#7d87f7]/20 hover:bg-[#7d87f7]/[0.03]"
+                className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
               >
                 <div className="mb-5 flex items-center gap-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-primary/20 bg-primary/10">
@@ -186,11 +159,7 @@ export default function ThankYouPage() {
             </p>
             <a
               href="https://client.getappointly.co/strategy-calendar"
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-              style={{
-                boxShadow:
-                  "0 0 40px rgb(125 135 247 / 0.35), 0 4px 20px rgb(125 135 247 / 0.15)",
-              }}
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
             >
               View or Reschedule Your Booking
               <ArrowRight className="h-4 w-4" />
@@ -199,16 +168,10 @@ export default function ThankYouPage() {
         </div>
       </section>
 
-      <footer className="border-t border-white/[0.05] py-8">
+      <footer className="border-t border-slate-200 py-8">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 md:flex-row">
           <div className="flex items-center gap-3">
-            <Image
-              src="/images/appointly-logo.png"
-              alt="Appointly Solutions logo"
-              width={24}
-              height={24}
-              className="rounded-lg"
-            />
+            <BrandMark className="h-6 w-6 text-slate-950" />
             <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-foreground">
               Appointly
             </span>

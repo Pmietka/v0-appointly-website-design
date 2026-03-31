@@ -91,12 +91,12 @@ export default async function Page() {
         <Problem />
         <Solution />
         <SeoResourceLinks
-          eyebrow="Explore By Intent"
-          title="Find the page that matches how contractors search."
-          description="These landing pages support the main offer with more specific search intent around exclusivity, pricing model, spray foam demand, and smaller market coverage."
+          eyebrow="More Detail"
+          title="More specific answers for more specific questions."
+          description="These pages go deeper on exclusivity, how the pay-per-lead model works, spray foam leads, and what working with a smaller market looks like."
           resources={homepageResources}
         />
-        <section className="section-divider bg-[#f8f9ff] py-24 md:py-28">
+        <section className="section-divider bg-[hsl(var(--surface-subtle))] py-24 md:py-28">
           <div className="mx-auto max-w-6xl px-6">
             <div className="mb-10 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
               <div>

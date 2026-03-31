@@ -2,7 +2,7 @@ import { ArrowRight, MapPin, ShieldCheck, TrendingUp } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[#eef0f8] pb-24 pt-32 md:pb-32 md:pt-44">
+    <section className="relative overflow-hidden bg-[hsl(var(--surface-subtle))] pb-24 pt-32 md:pb-32 md:pt-44">
       <div className="mx-auto max-w-5xl px-6">
         <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
           <p className="mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-gray-500">
@@ -52,7 +52,7 @@ export function Hero() {
             <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/15">
               <TrendingUp className="h-5 w-5 text-primary" />
             </div>
-            <span className="font-display text-3xl font-bold text-primary">8-12x</span>
+            <span className="font-display text-3xl font-bold text-primary">8x</span>
             <span className="text-center text-sm text-gray-500">
               Average return on lead spend
             </span>

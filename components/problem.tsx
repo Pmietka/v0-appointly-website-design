@@ -30,7 +30,7 @@ const problems = [
 
 export function Problem() {
   return (
-    <section id="problem" className="bg-[#eef0f8] py-24 md:py-32">
+    <section id="problem" className="bg-[hsl(var(--surface-subtle))] py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid grid-cols-1 items-start gap-16 lg:grid-cols-2">
           <div className="lg:sticky lg:top-32">

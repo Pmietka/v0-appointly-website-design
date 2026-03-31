@@ -8,7 +8,7 @@ const bullets = [
 
 export function CTA() {
   return (
-    <section id="cta" className="bg-[#eef0f8] py-24 md:py-32">
+    <section id="cta" className="bg-[hsl(var(--surface-subtle))] py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <div className="rounded-3xl border border-gray-200 bg-white p-12 text-center shadow-sm md:p-20">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-gray-500">

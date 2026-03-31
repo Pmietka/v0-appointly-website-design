@@ -67,7 +67,7 @@ export default function AppointmentSettingForContractorsPage() {
       <main className="overflow-hidden">
         <section className="relative pt-32 pb-20 md:pt-44 md:pb-28">
           <div className="absolute inset-0 -z-10">
-            <div className="absolute top-0 right-0 h-[700px] w-[700px] rounded-full bg-[#7d87f7]/[0.06] blur-[145px]" />
+            <div className="absolute top-0 right-0 h-[700px] w-[700px] rounded-full bg-primary/[0.06] blur-[145px]" />
             <div className="absolute inset-0 dot-grid opacity-35" />
           </div>
 
@@ -89,18 +89,14 @@ export default function AppointmentSettingForContractorsPage() {
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
                   href={bookingUrl}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-                  style={{
-                    boxShadow:
-                      "0 0 40px rgb(125 135 247 / 0.35), 0 4px 20px rgb(125 135 247 / 0.15)",
-                  }}
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
                 >
                   Book a Strategy Call
                   <ArrowRight className="h-4 w-4" />
                 </a>
                 <Link
                   href="/how-it-works"
-                  className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] px-8 py-4 text-sm font-semibold text-foreground transition-all hover:border-white/[0.15] hover:bg-white/[0.08]"
+                  className="inline-flex items-center justify-center rounded-full border border-gray-300 bg-white px-8 py-4 text-sm font-semibold text-gray-700 transition-all hover:bg-gray-50"
                 >
                   See The Process
                 </Link>
@@ -154,11 +150,11 @@ export default function AppointmentSettingForContractorsPage() {
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
                 To understand the upstream lead source, see{" "}
-                <Link href="/insulation-contractor-leads" className="text-primary transition-colors hover:text-[#a5abff]">
+                <Link href="/insulation-contractor-leads" className="text-primary transition-opacity hover:opacity-80">
                   Insulation Contractor Leads
                 </Link>
                 . To compare the business model behind it, continue to{" "}
-                <Link href="/pay-per-lead-insulation" className="text-primary transition-colors hover:text-[#a5abff]">
+                <Link href="/pay-per-lead-insulation" className="text-primary transition-opacity hover:opacity-80">
                   Pay Per Lead Insulation
                 </Link>
                 .
@@ -179,7 +175,7 @@ export default function AppointmentSettingForContractorsPage() {
               </p>
               <a
                 href={bookingUrl}
-                className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-slate-950 px-8 py-4 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
               >
                 Book a Strategy Call
                 <ArrowRight className="h-4 w-4" />

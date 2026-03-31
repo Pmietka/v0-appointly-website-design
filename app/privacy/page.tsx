@@ -79,7 +79,7 @@ export default function PrivacyPage() {
       <main className="overflow-hidden">
         <section className="relative pt-32 pb-20 md:pt-44 md:pb-28">
           <div className="absolute inset-0 -z-10">
-            <div className="absolute top-0 right-0 h-[660px] w-[660px] rounded-full bg-[#7d87f7]/[0.05] blur-[140px]" />
+            <div className="absolute top-0 right-0 h-[660px] w-[660px] rounded-full bg-primary/[0.06] blur-[140px]" />
           </div>
 
           <div className="mx-auto max-w-4xl px-6">
@@ -124,7 +124,7 @@ export default function PrivacyPage() {
                   Appointly Solutions at{" "}
                   <a
                     href="mailto:privacy@getappointly.co"
-                    className="text-primary hover:text-[#a5abff] transition-colors"
+                    className="text-primary transition-opacity hover:opacity-80"
                   >
                     privacy@getappointly.co
                   </a>
@@ -132,7 +132,7 @@ export default function PrivacyPage() {
                 </p>
                 <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
                   You can also review our{" "}
-                  <Link href="/terms" className="text-primary hover:text-[#a5abff] transition-colors">
+                  <Link href="/terms" className="text-primary transition-opacity hover:opacity-80">
                     Terms of Service
                   </Link>{" "}
                   for additional information about how the service relationship works.

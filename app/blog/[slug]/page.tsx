@@ -113,7 +113,7 @@ export default async function BlogPostPage({
 
         <section className="relative pt-32 pb-20 md:pt-44 md:pb-28">
           <div className="absolute inset-0 -z-10">
-            <div className="absolute top-0 right-0 h-[760px] w-[760px] rounded-full bg-[#7d87f7]/[0.08] blur-[150px]" />
+            <div className="absolute top-0 right-0 h-[760px] w-[760px] rounded-full bg-primary/[0.06] blur-[150px]" />
             <div className="absolute inset-0 dot-grid opacity-35" />
           </div>
 
@@ -164,14 +164,14 @@ export default async function BlogPostPage({
                 </p>
               </div>
 
-              <div className="rounded-3xl bg-[#1a1f3e] p-6 text-white shadow-lg">
-                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/60">
+              <div className="rounded-3xl border border-primary/20 bg-primary/10 p-6 shadow-sm">
+                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-600">
                   Need help?
                 </p>
-                <h2 className="mt-4 text-2xl font-bold leading-tight">
+                <h2 className="mt-4 text-2xl font-bold leading-tight text-slate-950">
                   Want a lead system that matches what you just read?
                 </h2>
-                <p className="mt-4 text-sm leading-7 text-white/70">
+                <p className="mt-4 text-sm leading-7 text-slate-700">
                   Book a strategy call and we'll walk through lead flow, qualification,
                   and the channels that make the most sense for your market.
                 </p>
@@ -187,7 +187,7 @@ export default async function BlogPostPage({
         </section>
 
         {relatedPosts.length > 0 && (
-          <section className="section-divider bg-[#f8f9ff] py-20 md:py-28">
+          <section className="section-divider bg-[hsl(var(--surface-subtle))] py-20 md:py-28">
             <div className="mx-auto max-w-6xl px-6">
               <div className="mb-10">
                 <p className="text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">

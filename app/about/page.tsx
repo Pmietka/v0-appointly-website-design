@@ -67,7 +67,7 @@ export default function AboutPage() {
       <main className="overflow-hidden">
         <section className="relative pt-32 pb-20 md:pt-44 md:pb-28">
           <div className="absolute inset-0 -z-10">
-            <div className="absolute top-0 right-0 h-[720px] w-[720px] rounded-full bg-[#7d87f7]/[0.06] blur-[140px]" />
+            <div className="absolute top-0 right-0 h-[720px] w-[720px] rounded-full bg-primary/[0.06] blur-[140px]" />
             <div className="absolute inset-0 dot-grid opacity-40" />
           </div>
 
@@ -89,18 +89,14 @@ export default function AboutPage() {
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
                   href={bookingUrl}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-                  style={{
-                    boxShadow:
-                      "0 0 40px rgb(125 135 247 / 0.35), 0 4px 20px rgb(125 135 247 / 0.15)",
-                  }}
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
                 >
                   Book a Strategy Call
                   <ArrowRight className="h-4 w-4" />
                 </a>
                 <Link
                   href="/how-it-works"
-                  className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] px-8 py-4 text-sm font-semibold text-foreground transition-all hover:border-white/[0.15] hover:bg-white/[0.08]"
+                  className="inline-flex items-center justify-center rounded-full border border-gray-300 bg-white px-8 py-4 text-sm font-semibold text-gray-700 transition-all hover:bg-gray-50"
                 >
                   See How It Works
                 </Link>
@@ -122,13 +118,13 @@ export default function AboutPage() {
                 Traditional agencies charge large monthly retainers before any result
                 shows up. That leaves contractors carrying all the risk while the
                 agency collects regardless. Appointly Solutions was built specifically
-                for owner-operators who are done paying for promises. Our first client,
-                Ewing Insulation in Canada, onboarded in March 2026 - and the PPL model
-                has been the foundation ever since.
+                for owner-operators who are done paying for promises. The pay-per-lead
+                model exists for one reason: you should only pay when we actually deliver
+                something you can close.
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
                 If you want the full breakdown, our{" "}
-                <Link href="/faq" className="text-primary transition-colors hover:text-[#a5abff]">
+                <Link href="/faq" className="text-primary transition-opacity hover:opacity-80">
                   FAQ page
                 </Link>{" "}
                 covers what qualifies as a lead and how the model works in practice.
@@ -150,14 +146,14 @@ export default function AboutPage() {
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
                 Our{" "}
-                <Link href="/how-it-works" className="text-primary transition-colors hover:text-[#a5abff]">
+                <Link href="/how-it-works" className="text-primary transition-opacity hover:opacity-80">
                   How It Works
                 </Link>{" "}
                 page walks through each step of the process from campaign launch to
                 booked estimate. You can also explore{" "}
                 <Link
                   href="/insulation-contractor-leads"
-                  className="text-primary transition-colors hover:text-[#a5abff]"
+                  className="text-primary transition-opacity hover:opacity-80"
                 >
                   Insulation Contractor Leads
                 </Link>{" "}
@@ -169,7 +165,7 @@ export default function AboutPage() {
 
         <section className="section-divider relative py-24 md:py-32">
           <div className="absolute inset-0 -z-10">
-            <div className="absolute left-1/4 top-0 h-[560px] w-[560px] rounded-full bg-[#7d87f7]/[0.05] blur-[120px]" />
+            <div className="absolute left-1/4 top-0 h-[560px] w-[560px] rounded-full bg-primary/[0.06] blur-[120px]" />
           </div>
 
           <div className="mx-auto max-w-6xl px-6">
@@ -238,7 +234,7 @@ export default function AboutPage() {
               </p>
               <a
                 href={bookingUrl}
-                className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-slate-950 px-8 py-4 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
               >
                 Book a Strategy Call
                 <ArrowRight className="h-4 w-4" />

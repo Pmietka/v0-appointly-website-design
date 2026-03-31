@@ -34,7 +34,7 @@ export default async function BlogIndexPage() {
       <main className="overflow-hidden">
         <section className="relative pt-32 pb-20 md:pt-44 md:pb-28">
           <div className="absolute inset-0 -z-10">
-            <div className="absolute top-0 right-0 h-[760px] w-[760px] rounded-full bg-[#7d87f7]/[0.07] blur-[150px]" />
+            <div className="absolute top-0 right-0 h-[760px] w-[760px] rounded-full bg-primary/[0.06] blur-[150px]" />
             <div className="absolute inset-0 dot-grid opacity-35" />
           </div>
 
@@ -80,7 +80,7 @@ export default async function BlogIndexPage() {
                   href={getBlogPath(post.slug)}
                   className="group overflow-hidden rounded-3xl border border-white/10 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.08)] transition-transform hover:-translate-y-1"
                 >
-                  <div className="aspect-[1.7/1] bg-gradient-to-br from-[#1a1f3e] via-[#2f356b] to-[#5f57e8] p-6 text-white">
+                  <div className="aspect-[1.7/1] bg-gradient-to-br from-slate-900 via-slate-800 to-primary p-6 text-white">
                     <div className="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
                       <span>Blog Post</span>
                       <span>{post.readingTime} min read</span>
@@ -109,7 +109,7 @@ export default async function BlogIndexPage() {
           </div>
         </section>
 
-        <section className="section-divider bg-[#f8f9ff] py-24 md:py-32">
+        <section className="section-divider bg-[hsl(var(--surface-subtle))] py-24 md:py-32">
           <div className="mx-auto max-w-6xl px-6">
             <div className="mb-10 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
               <div>

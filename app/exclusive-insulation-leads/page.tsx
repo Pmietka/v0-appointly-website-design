@@ -64,7 +64,7 @@ export default function ExclusiveInsulationLeadsPage() {
       <main className="overflow-hidden">
         <section className="relative pt-32 pb-20 md:pt-44 md:pb-28">
           <div className="absolute inset-0 -z-10">
-            <div className="absolute top-0 right-0 h-[700px] w-[700px] rounded-full bg-[#7d87f7]/[0.06] blur-[145px]" />
+            <div className="absolute top-0 right-0 h-[700px] w-[700px] rounded-full bg-primary/[0.06] blur-[145px]" />
             <div className="absolute inset-0 dot-grid opacity-35" />
           </div>
 
@@ -86,18 +86,14 @@ export default function ExclusiveInsulationLeadsPage() {
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
                   href={bookingUrl}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
-                  style={{
-                    boxShadow:
-                      "0 0 40px rgb(125 135 247 / 0.35), 0 4px 20px rgb(125 135 247 / 0.15)",
-                  }}
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
                 >
                   Book a Strategy Call
                   <ArrowRight className="h-4 w-4" />
                 </a>
                 <Link
                   href="/insulation-contractor-leads"
-                  className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] px-8 py-4 text-sm font-semibold text-foreground hover:bg-white/[0.08] hover:border-white/[0.15] transition-all"
+                  className="inline-flex items-center justify-center rounded-full border border-gray-300 bg-white px-8 py-4 text-sm font-semibold text-gray-700 hover:bg-gray-50 transition-all"
                 >
                   See Core Lead Page
                 </Link>
@@ -151,11 +147,11 @@ export default function ExclusiveInsulationLeadsPage() {
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
                 To see how exclusive leads fit into the bigger delivery system, visit{" "}
-                <Link href="/how-it-works" className="text-primary hover:text-[#a5abff] transition-colors">
+                <Link href="/how-it-works" className="text-primary transition-opacity hover:opacity-80">
                   How It Works
                 </Link>
                 . If you are comparing pricing models, continue to{" "}
-                <Link href="/pay-per-lead-insulation" className="text-primary hover:text-[#a5abff] transition-colors">
+                <Link href="/pay-per-lead-insulation" className="text-primary transition-opacity hover:opacity-80">
                   Pay Per Lead Insulation
                 </Link>
                 .
@@ -176,7 +172,7 @@ export default function ExclusiveInsulationLeadsPage() {
               </p>
               <a
                 href={bookingUrl}
-                className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-slate-950 px-8 py-4 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
+                className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
               >
                 Book a Strategy Call
                 <ArrowRight className="h-4 w-4" />

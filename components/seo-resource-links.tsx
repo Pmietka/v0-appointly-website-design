@@ -18,7 +18,7 @@ export function SeoResourceLinks({
   resources: Resource[];
 }) {
   return (
-    <section className="section-divider bg-[#f8f9ff] py-24 md:py-28">
+    <section className="section-divider bg-[hsl(var(--surface-subtle))] py-24 md:py-28">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-10 max-w-3xl">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">

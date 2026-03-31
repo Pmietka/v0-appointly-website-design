@@ -89,9 +89,9 @@ export default function RootLayout({
                 description:
                   "Appointly Solutions delivers exclusive, pre-qualified leads to insulation contractors on a pay-per-lead basis. We handle GMB optimization, Facebook ads, and lead qualification — you only pay when we deliver.",
                 sameAs: [
-                  "https://www.facebook.com/appointlysolutions",
-                  "https://www.instagram.com/appointlysolutions",
-                  "https://www.linkedin.com/company/appointly-solutions",
+                  "https://www.instagram.com/appointlychicago",
+                  "https://www.facebook.com/profile.php?id=61587335026673",
+                  "https://www.linkedin.com/company/appointlysolutions",
                 ],
               },
               {
