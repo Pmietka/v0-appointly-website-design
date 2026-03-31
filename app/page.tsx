@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
+import { Stats } from "@/components/stats";
 import { Results } from "@/components/results";
 import { Problem } from "@/components/problem";
 import { Solution } from "@/components/solution";
@@ -12,6 +13,7 @@ export default function Page() {
       <Navbar />
       <main>
         <Hero />
+        <Stats />
         <Results />
         <Problem />
         <Solution />

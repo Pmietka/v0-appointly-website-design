@@ -41,7 +41,7 @@ export function Navbar() {
             </Link>
           ))}
           <a
-            href="https://client.getappointly.co"
+            href="https://client.getappointly.co/strategy-calendar"
             className="text-sm font-semibold bg-[#5f57e8] text-white px-5 py-2.5 rounded-full hover:opacity-90 transition-opacity"
           >
             Book A Call
@@ -71,7 +71,7 @@ export function Navbar() {
             </Link>
           ))}
           <a
-            href="https://client.getappointly.co"
+            href="https://client.getappointly.co/strategy-calendar"
             onClick={() => setMobileOpen(false)}
             className="mt-2 inline-flex items-center justify-center rounded-full bg-[#5f57e8] px-5 py-3 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
           >

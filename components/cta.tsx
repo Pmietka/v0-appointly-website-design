@@ -41,7 +41,7 @@ export function CTA() {
 
           <div className="mt-10">
             <a
-              href="https://client.getappointly.co"
+              href="https://client.getappointly.co/strategy-calendar"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-[#5f57e8] px-10 py-4 text-base font-bold text-white hover:opacity-90 transition-opacity"
             >
               Book a Call Now

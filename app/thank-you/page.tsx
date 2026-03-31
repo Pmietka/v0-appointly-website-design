@@ -64,7 +64,7 @@ export default function ThankYouPage() {
             </span>
           </a>
           <a
-            href="https://client.getappointly.co"
+            href="https://client.getappointly.co/strategy-calendar"
             className="text-sm font-semibold text-foreground hover:text-primary transition-colors"
           >
             Book A Call
@@ -174,7 +174,7 @@ export default function ThankYouPage() {
               Need to reschedule? No problem.
             </p>
             <a
-              href="https://client.getappointly.co"
+              href="https://client.getappointly.co/strategy-calendar"
               className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
               style={{
                 boxShadow:

@@ -102,7 +102,7 @@ export function Solution() {
             </div>
 
             <a
-              href="https://client.getappointly.co"
+              href="https://client.getappointly.co/strategy-calendar"
               className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-[#5f57e8] hover:opacity-90 transition-opacity self-start"
             >
               Get Started
