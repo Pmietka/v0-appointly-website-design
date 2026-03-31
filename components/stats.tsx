@@ -81,7 +81,7 @@ export function Stats() {
   }, []);
 
   return (
-    <section ref={ref} className="py-20 md:py-28" style={{ backgroundColor: "#0a2336" }}>
+    <section ref={ref} className="py-20 md:py-28" style={{ backgroundColor: "#5f57e8" }}>
       <div className="mx-auto max-w-6xl px-6">
         <div className="text-center mb-16">
           <p className="text-xs font-semibold tracking-[0.25em] uppercase text-white/40 mb-3">

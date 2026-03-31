@@ -1,53 +1,34 @@
 "use client";
 
-import Image from "next/image";
 import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Mike Reynolds",
-    role: "Owner, Reynolds Insulation Co.",
+    name: "Andre",
+    role: "Home Insulation Contractor",
     quote:
-      "I was skeptical, but the pay-per-lead model made the decision easy. No retainer, no risk. Closed 6 of the first 10 leads we got. ROI paid back in week one.",
+      "In my second month with Appointly, I was able to get 6 new residential clients.",
+    result: "6 new clients in month 2",
     rating: 5,
-    initial: "M",
+    initial: "A",
   },
   {
-    name: "Sarah Chen",
-    role: "Operations Manager, ThermalPro",
+    name: "Wojtek",
+    role: "Home Insulation Contractor",
     quote:
-      "The difference from Angi leads is massive. These homeowners are actually ready to book. Our close rate went from 25% to over 60% because we're not racing competitors to the phone.",
+      "I was already paying agencies with zero consistency — no way to predict my pipeline month to month. 3 months with Appointly: 6 closed jobs every single month without fail.",
+    result: "6 closed jobs/month for 3 months straight",
     rating: 5,
-    initial: "S",
+    initial: "W",
   },
   {
-    name: "James Hartwell",
-    role: "Founder, ComfortFirst Insulation",
+    name: "Adrian",
+    role: "Window Replacement Contractor",
     quote:
-      "The GMB setup alone was worth it. We started getting inbound calls we never had before. Add the Facebook leads on top and the pipeline filled up fast. The NFC cards keep the reviews coming in too.",
+      "Appointly got me leads that actually convert.",
+    result: "14 paying clients in first 3 months",
     rating: 5,
-    initial: "J",
-  },
-];
-
-const results = [
-  {
-    src: "/images/result-1.jpg",
-    alt: "Appointly Solutions dashboard showing 47 booked insulation estimate appointments in one month",
-    caption: "47 Qualified Leads Delivered in a Single Month",
-    tag: "Pipeline",
-  },
-  {
-    src: "/images/result-2.jpg",
-    alt: "Qualified insulation contractor lead pipeline managed by Appointly Solutions",
-    caption: "8–12x Average ROI on Lead Cost",
-    tag: "ROI",
-  },
-  {
-    src: "/images/result-3.jpg",
-    alt: "Appointly Solutions lead delivery within 24 to 48 hours of campaign launch",
-    caption: "First Leads Within 24–48 Hours of Launch",
-    tag: "Speed",
+    initial: "A",
   },
 ];
 
@@ -58,77 +39,55 @@ export function Results() {
         {/* Section header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <p className="text-xs font-semibold tracking-[0.25em] uppercase text-gray-500 mb-4">
-            Proven Results
+            Client Results
           </p>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 text-balance leading-tight">
-            Real Results From{" "}
-            <span className="text-[#5f57e8]">
-              Real Businesses
-            </span>
+            What Our Clients{" "}
+            <span className="text-[#5f57e8]">Actually Say</span>
           </h2>
           <p className="mt-4 text-gray-600 leading-relaxed">
-            Don{"'"}t take our word for it. See what our clients are saying and
-            the numbers behind their growth.
+            Real contractors. Real results. No stock photos or made-up numbers.
           </p>
         </div>
 
         {/* Testimonials */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((t) => (
             <div
-              key={t.name}
-              className="relative flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow"
+              key={t.name + t.role}
+              className="relative flex flex-col rounded-2xl border border-gray-200 bg-white p-7 shadow-sm hover:shadow-md transition-shadow"
             >
-              <div className="text-5xl font-serif leading-none text-[#5f57e8]/20 mb-4 select-none">
+              <div className="text-5xl font-serif leading-none text-[#5f57e8]/15 mb-4 select-none">
                 &#8220;
               </div>
 
-              <div className="flex gap-0.5 mb-4">
+              <div className="flex gap-0.5 mb-5">
                 {Array.from({ length: t.rating }).map((_, i) => (
                   <Star
                     key={`star-${t.name}-${i}`}
-                    className="h-3.5 w-3.5 fill-amber-400 text-amber-400"
+                    className="h-4 w-4 fill-amber-400 text-amber-400"
                   />
                 ))}
               </div>
 
-              <p className="text-sm leading-relaxed text-gray-600 flex-1">
-                {t.quote}
+              <p className="text-base leading-relaxed text-gray-700 flex-1 font-medium">
+                &ldquo;{t.quote}&rdquo;
               </p>
 
-              <div className="mt-6 pt-5 border-t border-gray-100 flex items-center gap-3">
-                <div className="flex items-center justify-center h-9 w-9 rounded-full bg-[#5f57e8] text-xs font-bold text-white flex-shrink-0">
+              {/* Result badge */}
+              <div className="mt-5 inline-flex self-start items-center gap-1.5 bg-[#5f57e8]/8 border border-[#5f57e8]/20 text-[#5f57e8] text-xs font-semibold px-3 py-1.5 rounded-full">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#5f57e8] flex-shrink-0" />
+                {t.result}
+              </div>
+
+              <div className="mt-5 pt-5 border-t border-gray-100 flex items-center gap-3">
+                <div className="flex items-center justify-center h-10 w-10 rounded-full bg-[#5f57e8] text-sm font-bold text-white flex-shrink-0">
                   {t.initial}
                 </div>
                 <div>
                   <p className="font-semibold text-sm text-gray-900">{t.name}</p>
                   <p className="text-xs text-gray-500 mt-0.5">{t.role}</p>
                 </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Results screenshots */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {results.map((r) => (
-            <div
-              key={r.caption}
-              className="group rounded-2xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div className="relative aspect-[4/3] overflow-hidden">
-                <Image
-                  src={r.src || "/placeholder.svg"}
-                  alt={r.alt}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <span className="absolute top-3 right-3 text-xs font-semibold bg-white/90 border border-gray-200 text-[#5f57e8] px-2.5 py-1 rounded-full">
-                  {r.tag}
-                </span>
-              </div>
-              <div className="p-4">
-                <p className="text-sm font-medium text-gray-900">{r.caption}</p>
               </div>
             </div>
           ))}

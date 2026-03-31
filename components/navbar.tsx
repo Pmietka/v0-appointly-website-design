@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
@@ -11,21 +10,26 @@ const navLinks = [
   { href: "/faq", label: "FAQ" },
 ];
 
+function CalendarCheckIcon() {
+  return (
+    <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="3" y="8" width="28" height="22" rx="3" fill="white" />
+      <rect x="11" y="3" width="4" height="9" rx="2" fill="white" />
+      <rect x="19" y="3" width="4" height="9" rx="2" fill="white" />
+      <path d="M10 20.5L15.5 26L24 14" stroke="#5f57e8" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/10" style={{ backgroundColor: "#1a1f3e" }}>
       <div className="mx-auto max-w-6xl flex items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-3">
-          <Image
-            src="/images/appointly-logo.png"
-            alt="Appointly Solutions logo"
-            width={32}
-            height={32}
-            className="rounded-lg"
-          />
-          <span className="text-sm font-bold font-display tracking-[0.15em] text-gray-900 uppercase">
+          <CalendarCheckIcon />
+          <span className="text-sm font-bold font-display tracking-[0.15em] text-white uppercase">
             Appointly
           </span>
         </Link>
@@ -35,7 +39,7 @@ export function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+              className="text-sm text-white/70 hover:text-white transition-colors"
             >
               {link.label}
             </Link>
@@ -50,7 +54,7 @@ export function Navbar() {
 
         <button
           type="button"
-          className="md:hidden text-gray-700"
+          className="md:hidden text-white"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -59,13 +63,13 @@ export function Navbar() {
       </div>
 
       {mobileOpen && (
-        <div className="md:hidden border-t border-gray-100 bg-white px-6 py-5 flex flex-col gap-5">
+        <div className="md:hidden border-t border-white/10 px-6 py-5 flex flex-col gap-5" style={{ backgroundColor: "#1a1f3e" }}>
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+              className="text-sm text-white/70 hover:text-white transition-colors"
             >
               {link.label}
             </Link>
