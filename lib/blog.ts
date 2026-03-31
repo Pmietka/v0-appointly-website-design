@@ -1,7 +1,23 @@
 import fs from "fs/promises";
 import path from "path";
 
-const blogDirectory = path.join(process.cwd(), "Blogs", "Blog Posts");
+const blogDirectories = [
+  path.join(process.cwd(), "content", "blog"),
+  path.join(process.cwd(), "Blogs", "Blog Posts"),
+];
+
+async function getBlogDirectory() {
+  for (const directory of blogDirectories) {
+    try {
+      await fs.access(directory);
+      return directory;
+    } catch {
+      // Try the next location.
+    }
+  }
+
+  return blogDirectories[0];
+}
 
 export type BlogPost = {
   slug: string;
@@ -148,6 +164,7 @@ function parsePost(fileName: string, raw: string, stats: { birthtime: Date; mtim
 }
 
 export async function getBlogPosts(): Promise<BlogPost[]> {
+  const blogDirectory = await getBlogDirectory();
   const fileNames = (await fs.readdir(blogDirectory)).filter((file) => file.endsWith(".md"));
   const posts = await Promise.all(
     fileNames.map(async (fileName) => {
@@ -194,4 +211,3 @@ export function formatBlogDate(date: Date) {
     year: "numeric",
   }).format(date);
 }
-
