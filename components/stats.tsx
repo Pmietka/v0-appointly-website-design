@@ -50,11 +50,12 @@ function StatCard({ stat, started }: { stat: StatItem; started: boolean }) {
   }, [stat.value, started]);
 
   return (
-    <div className="flex flex-col items-center text-center p-10">
-      <div className="text-7xl md:text-8xl font-black leading-none font-display" style={{ color: "#c8e63c" }}>
-        {count}{stat.suffix}
+    <div className="flex flex-col items-center px-8 py-10 text-center md:px-10">
+      <div className="font-display text-7xl font-black leading-none text-[#4669a8] md:text-8xl">
+        {count}
+        {stat.suffix}
       </div>
-      <p className="mt-5 text-white/80 text-base font-medium max-w-[200px]">
+      <p className="mt-5 max-w-[220px] text-base font-medium text-slate-600">
         {stat.label}
       </p>
     </div>
@@ -73,7 +74,7 @@ export function Stats() {
           observer.disconnect();
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
 
     if (ref.current) observer.observe(ref.current);
@@ -81,18 +82,18 @@ export function Stats() {
   }, []);
 
   return (
-    <section ref={ref} className="py-20 md:py-28" style={{ backgroundColor: "#5f57e8" }}>
+    <section ref={ref} className="bg-[#e8f0ff] py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="text-center mb-16">
-          <p className="text-xs font-semibold tracking-[0.25em] uppercase text-white/40 mb-3">
+        <div className="mb-16 text-center">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-[#6b84b8]">
             By the Numbers
           </p>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-white">
+          <h2 className="font-display text-3xl font-bold text-slate-950 md:text-4xl">
             Results That Speak for Themselves
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10">
+        <div className="grid grid-cols-1 divide-y divide-[#c8d6f1] rounded-[32px] border border-[#c8d6f1] bg-white/55 md:grid-cols-3 md:divide-y-0 md:divide-x">
           {stats.map((stat) => (
             <StatCard key={stat.label} stat={stat} started={started} />
           ))}

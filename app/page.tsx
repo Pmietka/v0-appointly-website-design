@@ -123,7 +123,7 @@ export default async function Page() {
                   className="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
                 >
                   <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5f57e8]">
-                    {formatBlogDate(post.updatedAt)}
+                    {formatBlogDate(post.publishedAt)}
                   </p>
                   <h3 className="mt-4 text-xl font-bold tracking-tight text-slate-950">
                     {post.title}

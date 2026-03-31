@@ -129,7 +129,7 @@ export default async function BlogPostPage({
             <div className="mt-8 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
               <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1.5">
                 <CalendarDays className="h-4 w-4" />
-                {formatBlogDate(post.updatedAt)}
+                {formatBlogDate(post.publishedAt)}
               </span>
               <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1.5">
                 <Clock3 className="h-4 w-4" />

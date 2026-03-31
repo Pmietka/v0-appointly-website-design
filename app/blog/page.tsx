@@ -87,7 +87,7 @@ export default async function BlogIndexPage() {
                     </div>
                     <div className="mt-10 max-w-[85%]">
                       <p className="text-sm font-medium text-white/70">
-                        {formatBlogDate(post.updatedAt)}
+                        {formatBlogDate(post.publishedAt)}
                       </p>
                       <h3 className="mt-3 text-2xl font-bold leading-tight text-white">
                         {post.title}
@@ -139,7 +139,7 @@ export default async function BlogIndexPage() {
                     </span>
                     <span className="flex items-center gap-1 text-xs font-medium text-slate-500">
                       <CalendarDays className="h-3.5 w-3.5" />
-                      {formatBlogDate(post.updatedAt)}
+                      {formatBlogDate(post.publishedAt)}
                     </span>
                   </div>
                   <h3 className="mt-5 text-xl font-bold tracking-tight text-slate-950">

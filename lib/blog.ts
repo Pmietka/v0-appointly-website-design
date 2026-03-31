@@ -6,6 +6,8 @@ const blogDirectories = [
   path.join(process.cwd(), "Blogs", "Blog Posts"),
 ];
 
+const latestPublishDate = new Date("2026-03-31T12:00:00Z");
+
 async function getBlogDirectory() {
   for (const directory of blogDirectories) {
     try {
@@ -133,6 +135,12 @@ function estimateReadingTime(text: string) {
   return Math.max(1, Math.round(words / 220));
 }
 
+function getScheduledPublishDate(order: number, latestOrder: number) {
+  const publishDate = new Date(latestPublishDate);
+  publishDate.setUTCDate(latestPublishDate.getUTCDate() - (latestOrder - order) * 7);
+  return publishDate;
+}
+
 function parsePost(fileName: string, raw: string, stats: { birthtime: Date; mtime: Date }): BlogPost {
   const slug = slugFromFileName(fileName);
   const orderMatch = fileName.match(/^(\d+)-/);
@@ -181,7 +189,13 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
     }),
   );
 
-  return posts.sort((a, b) => {
+  const latestOrder = posts.reduce((max, post) => Math.max(max, post.order), 0);
+  const postsWithScheduledDates = posts.map((post) => ({
+    ...post,
+    publishedAt: getScheduledPublishDate(post.order, latestOrder),
+  }));
+
+  return postsWithScheduledDates.sort((a, b) => {
     if (b.order !== a.order) {
       return b.order - a.order;
     }
