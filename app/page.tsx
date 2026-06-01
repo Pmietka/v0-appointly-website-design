@@ -109,7 +109,7 @@ export default async function Page() {
               </div>
               <Link
                 href="/blog"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition-opacity hover:opacity-80"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-gray-900 transition-colors hover:text-gray-600"
               >
                 View all posts
               </Link>
@@ -122,7 +122,7 @@ export default async function Page() {
                   href={getBlogPath(post.slug)}
                   className="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
                 >
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500">
                     {formatBlogDate(post.publishedAt)}
                   </p>
                   <h3 className="mt-4 text-xl font-bold tracking-tight text-slate-950">
@@ -131,7 +131,7 @@ export default async function Page() {
                   <p className="mt-3 text-sm leading-7 text-slate-600">
                     {post.description}
                   </p>
-                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary">
+                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-gray-900 transition-colors group-hover:text-gray-600">
                     Read more
                   </span>
                 </Link>

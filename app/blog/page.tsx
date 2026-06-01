@@ -80,7 +80,7 @@ export default async function BlogIndexPage() {
                   href={getBlogPath(post.slug)}
                   className="group overflow-hidden rounded-3xl border border-white/10 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.08)] transition-transform hover:-translate-y-1"
                 >
-                  <div className="aspect-[1.7/1] bg-gradient-to-br from-slate-900 via-slate-800 to-primary p-6 text-white">
+                  <div className="aspect-[1.7/1] bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 p-6 text-white">
                     <div className="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
                       <span>Blog Post</span>
                       <span>{post.readingTime} min read</span>

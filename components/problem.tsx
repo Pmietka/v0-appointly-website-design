@@ -45,7 +45,7 @@ export function Problem() {
               for good homeowner leads to cool off before anyone calls them back.
             </p>
 
-            <div className="mt-8 rounded-2xl border border-primary/20 bg-white p-5 shadow-sm">
+            <div className="mt-8 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
               <p className="text-sm leading-relaxed text-gray-700">
                 The real problem is not just lead volume. It is getting the right
                 homeowner in the right area at the right time, before the job goes to
@@ -60,8 +60,8 @@ export function Problem() {
                 key={problem.title}
                 className="group flex items-start gap-4 rounded-2xl border border-gray-200 bg-white p-5 transition-shadow hover:shadow-sm"
               >
-                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-primary/15">
-                  <problem.icon className="h-4 w-4 text-primary" />
+                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl border border-gray-200 bg-gray-100">
+                  <problem.icon className="h-4 w-4 text-gray-900" />
                 </div>
                 <div className="min-w-0 flex-1">
                   <div className="mb-1 flex items-center gap-2">

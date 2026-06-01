@@ -49,7 +49,7 @@ export function Solution() {
             Our System
           </p>
           <h2 className="font-display text-3xl font-bold leading-tight text-balance text-gray-900 md:text-4xl lg:text-5xl">
-            How the <span className="text-primary">lead system</span> works
+            How the <span className="marker-highlight">lead system</span> works
           </h2>
           <p className="mt-4 leading-relaxed text-gray-600">
             The goal is simple: more qualified estimate opportunities on the calendar
@@ -64,8 +64,8 @@ export function Solution() {
               className="group relative flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
             >
               <div className="mb-5 flex items-center gap-3">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/15">
-                  <step.icon className="h-5 w-5 text-primary" />
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-gray-200 bg-gray-100">
+                  <step.icon className="h-5 w-5 text-gray-900" />
                 </div>
                 <span className="text-xs font-bold uppercase tracking-widest text-gray-400">
                   Step {index + 1}
@@ -95,7 +95,7 @@ export function Solution() {
 
             <a
               href="https://client.getappointly.co/strategy-calendar"
-              className="mt-6 inline-flex self-start items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-slate-950 transition-opacity hover:opacity-90"
+              className="mt-6 inline-flex self-start items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-bold text-slate-950 transition-opacity hover:opacity-90"
             >
               Get Started
               <ArrowRight className="h-4 w-4" />

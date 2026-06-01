@@ -177,7 +177,7 @@ export default async function BlogPostPage({
                 </p>
                 <a
                   href="https://client.getappointly.co/strategy-calendar"
-                  className="mt-6 inline-flex items-center justify-center rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+                  className="mt-6 inline-flex items-center justify-center rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
                 >
                   Book a Call
                 </a>

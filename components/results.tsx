@@ -32,7 +32,7 @@ export function Results() {
             Client Results
           </p>
           <h2 className="font-display text-3xl font-bold leading-tight text-balance text-gray-900 md:text-4xl lg:text-5xl">
-            What insulation contractors <span className="text-primary">actually say</span>
+            What insulation contractors <span className="marker-highlight">actually say</span>
           </h2>
           <p className="mt-4 leading-relaxed text-gray-600">
             Straight contractor feedback about what happened after the leads started coming in.
@@ -45,7 +45,7 @@ export function Results() {
               key={testimonial.name + testimonial.role}
               className="relative flex flex-col rounded-2xl border border-gray-200 bg-white p-7 shadow-sm transition-shadow hover:shadow-md"
             >
-              <div className="mb-4 select-none font-serif text-5xl leading-none text-primary/20">
+              <div className="mb-4 select-none font-serif text-5xl leading-none text-gray-200">
                 &#8220;
               </div>
 
@@ -62,8 +62,8 @@ export function Results() {
                 &ldquo;{testimonial.quote}&rdquo;
               </p>
 
-              <div className="mt-5 inline-flex self-start items-center gap-1.5 rounded-full border border-primary/20 bg-primary/10 px-3 py-1.5 text-xs font-semibold text-primary">
-                <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
+              <div className="mt-5 inline-flex self-start items-center gap-1.5 rounded-full border border-gray-200 bg-gray-100 px-3 py-1.5 text-xs font-semibold text-gray-900">
+                <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gray-900" />
                 {testimonial.result}
               </div>
 

@@ -1,15 +1,13 @@
 import React from "react"
 import type { Metadata } from "next";
-import { Inter, DM_Sans } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
 
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const dmSans = DM_Sans({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-dm-sans",
-  weight: ["400", "500", "600", "700"],
+  variable: "--font-jakarta",
 });
 
 export const metadata: Metadata = {
@@ -140,7 +138,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body
-        className={`${inter.variable} ${dmSans.variable} font-sans antialiased`}
+        className={`${jakarta.variable} font-sans antialiased`}
       >
         {children}
       </body>

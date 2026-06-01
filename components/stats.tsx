@@ -51,7 +51,7 @@ function StatCard({ stat, started }: { stat: StatItem; started: boolean }) {
 
   return (
     <div className="flex flex-col items-center px-8 py-10 text-center md:px-10">
-      <div className="font-display text-7xl font-black leading-none text-primary md:text-8xl">
+      <div className="font-display text-7xl font-black leading-none text-gray-900 md:text-8xl">
         {count}
         {stat.suffix}
       </div>
@@ -93,7 +93,7 @@ export function Stats() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 divide-y divide-primary/20 rounded-[32px] border border-primary/20 bg-white/55 md:grid-cols-3 md:divide-y-0 md:divide-x">
+        <div className="grid grid-cols-1 divide-y divide-gray-200 rounded-3xl border border-gray-200 bg-white md:grid-cols-3 md:divide-y-0 md:divide-x">
           {stats.map((stat) => (
             <StatCard key={stat.label} stat={stat} started={started} />
           ))}

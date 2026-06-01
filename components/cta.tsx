@@ -18,7 +18,7 @@ export function CTA() {
           <h2 className="font-display text-4xl font-bold leading-tight text-balance text-gray-900 md:text-5xl lg:text-6xl">
             Put more estimates on the calendar.{" "}
             <br className="hidden md:block" />
-            <span className="text-primary">Pay only for qualified leads.</span>
+            <span className="marker-highlight">Pay only for qualified leads.</span>
           </h2>
 
           <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-gray-600">
@@ -39,7 +39,7 @@ export function CTA() {
           <div className="mt-10">
             <a
               href="https://client.getappointly.co/strategy-calendar"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-10 py-4 text-base font-bold text-primary-foreground transition-opacity hover:opacity-90"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-10 py-4 text-base font-bold text-primary-foreground transition-opacity hover:opacity-90"
             >
               Book a Call Now
               <ArrowRight className="h-4 w-4" />

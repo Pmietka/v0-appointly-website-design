@@ -29,9 +29,9 @@ export function ProofSection() {
         </div>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
-          <article className="overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-[0_24px_80px_rgba(15,23,42,0.08)]">
+          <article className="overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-md">
             <div className="border-b border-slate-100 px-8 py-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500">
                 Booked Appointments
               </p>
               <h3 className="mt-3 font-display text-2xl font-bold text-slate-950">
@@ -50,9 +50,9 @@ export function ProofSection() {
           </article>
 
           <div className="grid gap-6">
-            <article className="overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-[0_24px_80px_rgba(15,23,42,0.08)]">
+            <article className="overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-md">
               <div className="px-8 py-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500">
                   Andre
                 </p>
                 <h3 className="mt-3 font-display text-2xl font-bold text-slate-950">
@@ -72,7 +72,7 @@ export function ProofSection() {
               {quickStats.map((point) => (
                 <article
                   key={point.stat}
-                  className="rounded-3xl border border-primary/20 bg-white p-7 shadow-sm"
+                  className="rounded-3xl border border-gray-200 bg-white p-7 shadow-sm"
                 >
                   <p className="font-display text-3xl font-bold text-slate-950">
                     {point.stat}

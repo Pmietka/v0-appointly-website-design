@@ -10,7 +10,7 @@
   .glass-card {
     background-color: hsl(var(--card));
     border: 1px solid hsl(var(--border));
-    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04), 0 4px 16px rgba(15, 23, 42, 0.04);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.04);
   }
 
   .glass-card-hover {
@@ -18,21 +18,32 @@
   }
 
   .glass-card-hover:hover {
-    box-shadow: 0 4px 24px rgba(15, 23, 42, 0.08);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
     transform: translateY(-1px);
   }
 
   .dot-grid {
-    background-image: radial-gradient(circle, hsl(220 13% 88%) 1px, transparent 1px);
+    background-image: radial-gradient(circle, hsl(0 0% 88%) 1px, transparent 1px);
     background-size: 24px 24px;
   }
 
+  /* mysite.ai-style marker swipe behind keywords. Text color stays inherited. */
+  .marker-highlight,
   .gradient-text {
-    @apply text-primary;
+    background-image: linear-gradient(
+      120deg,
+      hsl(var(--highlight) / 0.6),
+      hsl(var(--highlight) / 0.6)
+    );
+    background-repeat: no-repeat;
+    background-size: 100% 42%;
+    background-position: 0 82%;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
   }
 
   .gradient-text-subtle {
-    @apply text-primary;
+    @apply text-foreground;
   }
 
   .section-divider {
@@ -43,34 +54,35 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 230 25% 13%;
+    --foreground: 0 0% 9%;
     --card: 0 0% 100%;
-    --card-foreground: 230 25% 13%;
+    --card-foreground: 0 0% 9%;
     --popover: 0 0% 100%;
-    --popover-foreground: 230 25% 13%;
-    --primary: 223 72% 72%;
-    --primary-foreground: 230 25% 13%;
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 230 25% 13%;
-    --muted: 220 14% 96%;
-    --muted-foreground: 215 14% 45%;
-    --surface-subtle: 225 44% 96%;
-    --accent: 223 72% 72%;
-    --accent-foreground: 230 25% 13%;
+    --popover-foreground: 0 0% 9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
+    --surface-subtle: 40 30% 98%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 9%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 223 72% 72%;
-    --radius: 0.75rem;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 9%;
+    --radius: 0.625rem;
+    --highlight: 45 100% 72%;
     --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 230 25% 13%;
-    --sidebar-primary: 223 72% 72%;
-    --sidebar-primary-foreground: 230 25% 13%;
-    --sidebar-accent: 220 14% 96%;
-    --sidebar-accent-foreground: 230 25% 13%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 223 72% 72%;
+    --sidebar-foreground: 0 0% 9%;
+    --sidebar-primary: 0 0% 9%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent-foreground: 0 0% 9%;
+    --sidebar-border: 0 0% 90%;
+    --sidebar-ring: 0 0% 9%;
   }
 }
 
@@ -102,7 +114,7 @@
 .animated-border {
   border: 1px solid transparent;
   background: linear-gradient(hsl(var(--card)), hsl(var(--card))) padding-box,
-    conic-gradient(from var(--angle), hsl(var(--primary)), hsl(var(--accent)), hsl(var(--primary)))
+    conic-gradient(from var(--angle), hsl(var(--highlight)), hsl(var(--border)), hsl(var(--highlight)))
       border-box;
   animation: border-spin 4s linear infinite;
 }
