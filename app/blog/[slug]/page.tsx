@@ -159,8 +159,8 @@ export default async function BlogPostPage({
                 </p>
                 <p className="mt-4 text-sm leading-7 text-slate-600">
                   This article is part of the Appointly blog library, which is designed
-                  to help insulation contractors generate more qualified leads without
-                  relying on vague marketing promises.
+                  to help home service contractors fill their calendars with booked
+                  estimates without relying on vague marketing promises.
                 </p>
               </div>
 
@@ -169,11 +169,11 @@ export default async function BlogPostPage({
                   Need help?
                 </p>
                 <h2 className="mt-4 text-2xl font-bold leading-tight text-slate-950">
-                  Want a lead system that matches what you just read?
+                  Want a system that books estimates while you work?
                 </h2>
                 <p className="mt-4 text-sm leading-7 text-slate-700">
-                  Book a strategy call and we'll walk through lead flow, qualification,
-                  and the channels that make the most sense for your market.
+                  Book a strategy call and we'll walk through how we run the ads, hit
+                  speed-to-lead, and book estimates onto your calendar in your market.
                 </p>
                 <a
                   href="https://client.getappointly.co/strategy-calendar"

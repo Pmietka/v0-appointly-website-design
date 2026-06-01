@@ -1,220 +1,173 @@
-# Exclusive Insulation Leads With No Monthly Fee: What to Look For
+# Exclusive Floor Coating Estimates, One Contractor Per Market: What to Look For
 
-**Meta Description:** Exclusive insulation leads with no monthly fee. Learn the difference between shared and exclusive leads, why exclusivity matters, and red flags in lead gen contracts.
+**Meta Description:** Get exclusive, booked epoxy and floor coating estimates with one contractor per market. Learn why exclusivity wins, how speed to lead works, and red flags in lead gen contracts.
 
 ---
 
-## The Difference Between Shared and Exclusive Leads
+## The Difference Between Shared Demand and Exclusive Booked Estimates
 
-You call the homeowner back and they say, "Yeah, I'm getting quotes from a couple other insulation guys too."
+You roll up to the garage, walk the slab, and the homeowner says, "Yeah, I've got two other coating guys coming out this week too."
 
-That's normal in the contracting world. But here's the problem: if that lead was sold to three other insulation contractors in your market, your odds of closing it just got cut by 75%.
+That's normal in the contracting world. But here's the problem: if that homeowner's information got sold to three other epoxy contractors in your market, your odds of closing just got cut by 75% before you even opened your truck.
 
-There are two types of leads in the market. Understanding the difference could save you thousands in wasted lead costs.
+There are two ways demand gets handled in this business, and understanding the difference could save you a fortune in wasted effort and undercut quotes.
 
-**Shared Leads**
+**Shared Demand**
 
-Shared leads are sold to multiple contractors. You get the same lead as everyone else. The person who inquired gets calls from 3, 4, or sometimes 5 different contractors. Whoever shows up fastest with the lowest price wins.
+Shared lead setups blast the same homeowner to multiple contractors. You get the same name as everyone else. The person who inquired gets calls from 3, 4, sometimes 5 different coating companies. Whoever reaches them fastest with the lowest number wins.
 
-This drives prices down. Fast. A lead that could have closed at $5,000 gets bid down to $3,500 because there's a contractor two blocks over who wants the job badly enough to undercut. Shared leads train homeowners to shop you against everyone else.
+This drives your price down. Fast. A floor that could have closed at $4,500 gets bid down to $3,200 because there's a contractor across town who wants the job badly enough to undercut. Shared demand trains homeowners to shop you against everyone else before you've even said hello.
 
-Shared leads cost less upfront ($50 to $75 per lead is common), which looks good on paper. But your close rate tanks because you're competing against everyone else who bought the same lead.
+Shared lead lists look cheap on paper. But your close rate tanks because you're fighting the whole town for a homeowner who's already collecting quotes.
 
-**Exclusive Leads**
+**Exclusive Booked Estimates**
 
-Exclusive leads go to one contractor only. You get the call, you get the appointment, and the homeowner isn't simultaneously getting quotes from your competitors.
+Exclusivity means the demand in your market goes to one contractor only — you. The homeowner gets reached once, by us, on your behalf, and booked onto your calendar. They're not simultaneously fielding calls from your competitors. When you show up, you're not quote number three in a stack.
 
-An exclusive lead costs more ($100 to $150+ per lead). But your close rate on exclusive leads is typically 30 to 40% higher than shared leads. If you close 2 out of 10 shared leads, you might close 3 to 4 out of 10 exclusive leads.
-
-The math is simple: a $100 exclusive lead at a 20% close rate is $500 invested per closed job. A $50 shared lead at an 8% close rate is $625 invested per closed job.
-
-Exclusive leads win on ROI almost every time.
+This is the model that actually wins on ROI. Fewer estimates wasted in bidding wars, more estimates where you set the terms.
 
 ## Why Exclusivity Matters for Close Rates
 
-Let's talk about what actually happens when a homeowner gets a quote for insulation work.
+Let's talk about what actually happens when a homeowner decides they want their garage floor coated.
 
-They've got one big problem: their attic is cold or their walls are drafty or their spray foam is leaking money. They need it fixed. But they don't know insulation contractors. So they search, they find a few options, and they call around.
+They've got one thing on their mind: a clean, durable, good-looking floor that doesn't peel in two years. They don't know floor coating contractors. So they scroll, they see an ad, they raise their hand. Now here's where exclusivity changes everything.
 
-Now here's where exclusivity changes the game.
+**The Shared Demand Scenario:**
 
-**The Shared Lead Scenario:**
+- Homeowner clicks an ad or fills a form
+- Their info gets sold to 3 contractors at once
+- All 3 race to call within the hour
+- Homeowner books estimates with all 3
+- All 3 show up and quote the same garage
+- Homeowner picks the cheapest, or whoever showed up first
+- You're fighting on price before you've even unrolled your samples
 
-- Homeowner fills out a form or calls a number
-- Lead gets sold to 3 contractors simultaneously
-- All 3 contractors call or text the homeowner within 2 hours
-- Homeowner schedules appointments with all 3
-- All 3 show up and give quotes
-- Homeowner picks the cheapest option or the one who showed up first
-- Your close rate is 15% to 20% max
+You're competing the moment that lead drops. The homeowner expects multiple quotes. They're comparing line items. Price becomes the only thing that matters.
 
-You're fighting everyone else the moment the lead drops into your system. The homeowner expects multiple quotes. They're comparing apples to apples. Price is the only differentiator.
+**The Exclusive Booked-Estimate Scenario:**
 
-**The Exclusive Lead Scenario:**
+- Homeowner clicks a Meta ad and raises their hand
+- The lead goes to one contractor — you
+- We reach out immediately (speed to lead) and book the estimate before they shop around
+- You show up, walk the floor, explain your prep and your coating system
+- The homeowner has no other quotes sitting in front of them
+- You set the standard for what a quality job looks like
+- You close on value, not on being the cheapest
 
-- Homeowner fills out a form or calls a number
-- Lead goes to one contractor (you)
-- You call within 2 hours, schedule an appointment
-- You show up, give a quote, explain the work
-- Homeowner has no other quotes to compare against
-- They either buy from you or call someone else (but you got first chance)
-- Your close rate is 25% to 35%
+Exclusive booked estimates give you the first-mover advantage. You set the narrative. You explain why proper prep and a real polyaspartic topcoat outlast the bargain crew. You don't have to race to the bottom on price because the homeowner isn't holding three quotes in their hand.
 
-Exclusive leads give you first-mover advantage. You set the narrative. You explain why your approach is better. You don't have to compete on price immediately because the homeowner isn't holding three quotes in their hand.
-
-The difference in close rate translates directly to profit. If exclusive leads cost 2x as much but close at 3x the rate, you're making 50% more money on the same total lead spend.
+That difference shows up directly in profit. When you're the only contractor in the conversation, more of your estimates turn into signed jobs at the price you actually want.
 
 ## Red Flags in Lead Gen Contracts
 
 Before you sign anything, know what to look for. The fine print is where the bad deals live.
 
-**Red Flag 1: "Minimum Commitment" or "Volume Guarantees"**
+**Red Flag 1: They Sell "Leads," Not Booked Appointments**
 
-Some agencies say things like "We require a $3,000 minimum commitment" or "You must buy at least 30 leads per month."
+Some providers hand you a list of names and call it a day. That's not a calendar full of estimates — that's homework. The whole point is to get confirmed estimates on your calendar, not a spreadsheet of strangers you have to chase yourself.
 
-This is just a retainer dressed up differently. They want guaranteed monthly revenue. If you only use 20 leads, you're still paying for 30. This is not pay-per-lead. This is a retainer with extra steps.
+A real system generates the lead, contacts it immediately, and books the appointment for you. If all you're getting is contact info, you're doing the hardest part of the job for free.
 
-A real pay-per-lead service lets you buy 1 lead if you want. Month-to-month, no minimums.
+**Red Flag 2: "Limited Exclusivity" or "Shared With Just a Couple Others"**
 
-**Red Flag 2: "Lead Sharing" or "Limited Exclusivity"**
+Read carefully. Some companies say "exclusive to your zip code" or "shared with no more than 2 other contractors."
 
-Read carefully. Some companies say things like "exclusive to your service area" or "shared with no more than 2 other contractors."
-
-That's not exclusive. That's shared. If the lead goes to 2 other people, you're one of three. You know what your close rate is going to be.
-
-Exclusive means one contractor. Full stop.
+That's not exclusive. That's shared. If the demand goes to two other people, you're one of three, and you already know how that estimate goes. Exclusive means one floor coating contractor per market. Full stop.
 
 **Red Flag 3: "Early Termination Fee"**
 
-If you sign up and the leads aren't converting, you want out. But some contracts say you'll pay a penalty if you leave early. That's a trap.
-
-A good pay-per-lead service doesn't need an early termination fee because the leads speak for themselves. If you're not happy, you stop buying. They don't hold you hostage with fees.
+If the estimates aren't landing the way you expected, you want the freedom to make a change. Some contracts hit you with a penalty for leaving early. That's a trap. A confident provider doesn't need to hold you hostage — the booked estimates speak for themselves.
 
 **Red Flag 4: "Performance Guarantees" That Sound Too Good**
 
-Someone says "We guarantee 3 booked appointments per month" or "We guarantee a 25% close rate."
+Someone says "We guarantee you'll close 5 jobs a month" or "We guarantee a 30% close rate."
 
-This is a lie wrapped in a promise. Nobody can guarantee how many jobs you'll close. That depends on your prices, your sales skills, your availability, and 100 other factors outside their control. If they're promising results, they're setting you up for a dispute.
+That's a lie wrapped in a promise. Nobody can guarantee how many floors you'll close. That depends on your pricing, your pitch, your prep reputation, and a hundred factors outside anyone's control. What a real provider can stand behind is the part they control: putting exclusive, booked estimates on your calendar fast.
 
-The only guarantee that matters is this: "We deliver qualified leads within 24 hours or you don't pay."
+**Red Flag 5: No Speed to Lead**
 
-**Red Flag 5: "You Need to Buy a Package"**
-
-They say "Get 20 leads upfront for $1,500" or "Buy our silver package for $5,000."
-
-This locks you into spending money before you know if the leads work. A real service lets you buy leads one at a time and see what happens. Once you trust the leads, you can commit to bigger volumes if you want.
+Ask how fast a new lead gets contacted. If the answer is "we deliver it to you within 24 hours and you take it from there," that lead is already cold. The homeowner moved on. The magic is contacting them in minutes, while they're still on the page, before they shop the competition. If speed to lead isn't part of the offer, the calendar won't fill.
 
 **Red Flag 6: Hidden Fees**
 
-The quote says "$100 per lead," but then there's a "platform fee," a "service fee," or a "lead verification fee." Suddenly your $100 leads cost $125.
+Get the structure in writing. A retainer that covers their labor, plus a per-appointment fee for each booked estimate — that should be clear and simple. If "platform fees," "verification fees," and surprise add-ons start creeping in, walk.
 
-Get the total cost in writing. Not per lead, not per month. The exact total you'll pay for X number of leads.
+## How the Pricing Actually Works
 
-## What "No Monthly Fee" Really Means
+This one gets misunderstood, so let's be plain about it.
 
-This one gets misunderstood.
+The Appointly Model has two parts, and both are honest about what you're paying for.
 
-When a company says "No monthly fee, just pay per lead," they mean exactly that: you don't pay a retainer. You don't pay $1,000 a month whether you buy leads or not. You only pay for actual leads delivered.
+**The Retainer Covers the Labor**
 
-But there might be a one-time setup fee to get your account running, claim your Google My Business profile, and get you in the system. That's normal. It's not a monthly fee. It's a one-time cost for setup.
+Running the whole machine is real work — building and managing the Meta (Facebook and Instagram) ad campaigns, writing creative, manning the phones to hit every lead instantly, and handling the back-and-forth to book each estimate into a slot that fits your route. The retainer covers that labor and effort. It's not a seat fee for nothing; it's what keeps the system running so estimates keep landing on your calendar.
 
-Make sure you understand:
+**The Per-Appointment Fee Covers Each Booked Estimate**
 
-- Is there a setup fee? (Usually yes, ranges from $500 to $2,000)
-- Is there a monthly platform fee? (If they say yes, it's not truly pay-per-lead)
-- Are there per-lead costs only? (This is what you want)
-- What happens if you don't buy any leads in a month? (You should pay nothing)
+On top of the retainer, you pay a per-appointment fee for each booked estimate that hits your calendar. A confirmed time, with a homeowner who's expecting you to walk their garage or basement and quote the job. You're paying for the appointment, not a name on a list.
 
-The phrase "no monthly fee" means you're not locked into a monthly payment. You're not paying for seats, strategy calls, or agency overhead. You're only paying for leads. Stop paying leads, stop paying period.
+Make sure any provider you talk to can explain their structure that cleanly. A retainer for the work of running the system, a fee per booked estimate. No mystery, no shell games.
 
-## How to Spot a Real Exclusive Lead Provider
+## How to Spot a Real Exclusive-Appointment Provider
 
-Before you commit money, use this checklist.
+Before you commit, run through this checklist.
 
 **They Can Explain Their Lead Source**
 
-A legitimate provider can tell you exactly how they get leads. "We run Facebook Lead Gen ads to homeowners in insulation need areas," or "We use Google Local Services Ads," or "We have an audience from NFC review cards we distribute."
+A legitimate provider tells you exactly where the demand comes from: "We run Meta ads — Facebook and Instagram — to homeowners in your service area who want their floors coated." If they won't explain the source, they're probably reselling bundled lists and can't stand behind the quality.
 
-If they won't explain the source, they're probably buying bundled lists from someone else and can't guarantee quality.
+**They Hit Speed to Lead**
 
-**They Pre-Screen Leads**
+The best providers don't wait. The second a homeowner raises their hand, someone reaches out — by call, text, whatever it takes — to lock the estimate before the homeowner starts shopping. Ask them point blank: "How fast do you contact a new lead?" The right answer is measured in minutes, not days.
 
-The best providers actually call the lead first. They verify:
-- Are they really interested in insulation work?
-- What's their location?
-- What's the project scope?
-- Are they ready to get quotes soon?
+**They Book the Estimate for You**
 
-If the provider doesn't pre-screen, you're getting raw inquiries and half of them will be tire-kickers.
+You shouldn't be dialing anybody. A real system books the appointment into a time that works for you and confirms it. You open your calendar and the estimate is already there.
 
-**They Deliver Leads Fast**
+**They Guarantee Exclusivity**
 
-Once the homeowner inquires, how long until you get it? Hours or days?
-
-Good providers deliver within 24 hours. Some deliver within 2 hours. If they take 3 to 5 days to get you a lead, the homeowner has already called someone else.
+One floor coating contractor per market. You're not splitting demand with the crew across town. Make them say it plainly and put it in writing.
 
 **They Have Contractor References**
 
-Ask for 3 to 5 references from contractors in your market who've used them. Call those people. Ask:
-- What's your close rate on their leads?
-- How long have you been working with them?
-- What happens if a lead doesn't pan out?
-- Would you use them again?
+Ask for references from contractors doing work like yours. Call them. Ask how many estimates actually show up, how long they've run the system, and whether they'd do it again. Vague answers or no references? Walk away.
 
-If they won't give references or the references are vague, walk away.
+**The Agreement Is Simple**
 
-**The Contract is Simple**
+A real agreement is short and clear. A retainer for the labor, a per-appointment fee for each booked estimate, exclusivity in your market. No fine-print traps, no surprise charges, no early termination penalties. You should understand exactly what you're paying for in ten minutes.
 
-A real pay-per-lead contract should be short. 1 to 2 pages. No fine print tricks, no surprise fees, no early termination penalties. You should be able to read it in 10 minutes and understand exactly what you're paying for.
+## The Calculation That Actually Matters
 
-## The Cost-Per-Lead Calculation That Actually Matters
+Here's how to know whether exclusive booked estimates are worth it.
 
-Here's how to know if exclusive leads are worth the premium price.
+Forget cost-per-name. The number that matters is cost per booked estimate and what each closed job is worth to you.
 
-Let's say you're comparing two providers:
+Say your average epoxy garage floor is $4,000. If you're the only contractor in the conversation, more of your estimates close, and they close closer to your real price instead of a bid-war discount. A handful of booked estimates a week, at a healthy close rate, on $4,000 jobs, is a serious month. The per-appointment fee is a rounding error against a single closed floor.
 
-**Provider A: Shared Leads**
-- $60 per lead
-- 10% close rate (1 out of 10)
-- Your average job: $4,500
-- Profit per job: $4,500
-- Cost per closed job: $600
-- Profit per $1,000 spent: $6,500
+Now compare that to chasing shared leads: more dials, more no-answers, more bidding wars, lower prices, and your own time burned on the phone instead of in front of homeowners. The cheap-looking option costs you the most in the end.
 
-**Provider B: Exclusive Leads**
-- $120 per lead
-- 25% close rate (2.5 out of 10)
-- Your average job: $4,500
-- Profit per job: $4,500
-- Cost per closed job: $480
-- Profit per $1,000 spent: $9,375
-
-Provider B is 44% more profitable even though the leads cost 2x as much.
-
-This is the math that matters. Not the per-lead cost alone, but the cost per closed job and the profit you're actually walking away with.
-
-Do the calculation for your business before you commit.
+Do the math on your own job values before you commit. Exclusive, booked, and fast wins almost every time.
 
 ## FAQ
 
-**Q: Can exclusive leads really get a 25% close rate?**
+**Q: Can exclusive booked estimates really close at a higher rate?**
 
-A: Yes, but it depends on you. Exclusive leads reduce competition, but you still need to follow up, answer questions, and close the deal. If you're slow to respond or your prices are out of line, you won't close them. If you follow up within 2 hours and your pricing is reasonable, 25% is very achievable on exclusive leads.
+A: Yes, but it still depends on you. Exclusivity and speed to lead get you in front of a homeowner who isn't holding three other quotes — that's a huge edge. But you still have to show up on time, walk the floor with confidence, and price it right. Do that, and being the only contractor in the room pays off big.
 
-**Q: What if an "exclusive" lead gets sold to someone else?**
+**Q: What does "one contractor per market" actually mean?**
 
-A: Call the provider immediately. A real company will either refund you or give you a replacement lead. If they say "tough luck," they're not operating with integrity. That shouldn't happen.
+A: It means the demand we generate in your area goes to you and only you. We don't sign your competitor down the road and split the same homeowners between you. You get the booked estimates in your market, exclusively.
 
-**Q: Is it worth paying more for exclusive leads if I'm just starting out?**
+**Q: Do I have to call and chase the leads myself?**
 
-A: Maybe not. If you're brand new and you don't have your close process dialed in yet, buy some shared leads first to practice. Once you know you can close 15% to 20% of leads consistently, switch to exclusive leads and let them multiplier your results.
+A: No. That's the whole point of the model. We generate the lead through Meta ads, contact it immediately with speed to lead, and book the estimate onto your calendar. You just show up and quote the floor.
 
-**Q: Can I get exclusive leads without a contract?**
+**Q: How is this priced?**
 
-A: Yes, if you work with a legitimate pay-per-lead service. There's no reason to sign a 12-month contract if you're just buying leads. Month-to-month with no commitment is the standard for real pay-per-lead providers.
+A: A retainer covers our labor for running the entire system, and you pay a per-appointment fee for each booked estimate that lands on your calendar. You're paying for confirmed estimates, not a list of names.
 
 ---
 
-## Get Exclusive Insulation Leads, No Monthly Fee
+## Get Exclusive, Booked Floor Coating Estimates
 
-Stop splitting leads with your competition. Get exclusive, pre-screened insulation leads with no monthly fee. Only $1,000 startup, then $100 per lead, no contract. Start at [getappointly.co](https://getappointly.co) today.
+Stop splitting demand with the crew across town. Get exclusive, booked epoxy and floor coating estimates on your calendar — one contractor per market. Start at [getappointly.co](https://getappointly.co). With the Appointly Model, a retainer covers our labor — we run the Meta ads, hit every lead with speed to lead, and book the estimate into a time that works for you. You show up, quote the floor, and collect the cash.

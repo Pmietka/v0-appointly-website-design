@@ -11,7 +11,7 @@ const quickStats = [
   },
   {
     stat: "24-48 hours",
-    label: "Typical time from campaign launch to first lead arriving.",
+    label: "Typical time from campaign launch to your first booked estimate.",
   },
 ];
 
@@ -24,7 +24,7 @@ export function ProofSection() {
             Results
           </p>
           <h2 className="mt-3 font-display text-3xl font-bold text-foreground md:text-4xl">
-            Proof that the leads turn into real estimate conversations.
+            Proof that the appointments turn into real jobs.
           </h2>
         </div>
 

@@ -1,138 +1,140 @@
-# Pay Per Lead Insulation Contractor Leads: How to Get Jobs Without a Monthly Retainer
+# Booked Estimate Appointments for Floor Coating Contractors: Fill Your Calendar Without Chasing Leads
 
-**Meta Description:** Pay per lead insulation contractor leads with no monthly retainer. Learn how the model works, what it costs, and why contractors are ditching retainer agencies.
+**Meta Description:** Get booked epoxy and floor coating estimates dropped straight on your calendar. Learn how the retainer-plus-per-appointment model works and why contractors are ditching DIY lead chasing.
 
 ---
 
-## Why the Pay-Per-Lead Model Works for Insulation Contractors
+## Why Booked Appointments Beat Raw Leads for Floor Coating Contractors
 
-You started your insulation business to do quality work, not to be an ad manager. Yet here you are, scrolling through agency proposals with numbers that make your stomach turn. Most lead generation companies want you locked into a 6 or 12 month contract at $2,000 to $5,000 per month, plus they'll charge you another $150 to $300 for each qualified lead on top of that retainer.
+You started your floor coating business to lay down flawless epoxy and polyaspartic finishes, not to babysit ad campaigns and chase form fills at 9pm. Yet here you are, scrolling through agency proposals with numbers that make your stomach turn. Most lead generation companies want you locked into a 6 or 12 month contract, then they hand you a pile of "leads" and wish you luck. A lead is just a name and a number. It isn't money. It isn't even an appointment.
 
-The math doesn't work. If you're paying $5,000 a month plus per-lead fees, you're looking at $10,000 to $20,000 in monthly lead costs before you close a single job. That's brutal if your season is short or if you want to test something without bleeding money.
+The math on raw leads rarely works. You buy a list, you call, half of them don't answer, a third already booked someone else, and the rest were "just looking." You burn hours dialing instead of quoting garage floors. That's brutal when your calendar has gaps and you need estimates on the books, not a spreadsheet of strangers.
 
-The pay-per-lead model solves this. You pay only for actual leads, nothing more. No monthly seat warmers. No "strategy sessions" where they tell you things you already know. No long-term contracts locking you in.
+Booked appointments solve this. Instead of buying the chance to talk to someone, you get a confirmed estimate on your calendar with a homeowner who's expecting you. Someone else generates the demand, hits the phone the second the lead comes in, and books the slot. You just show up, walk the garage or basement, quote the polyaspartic system, and close.
 
-This is how contractors with smart cash flow management actually buy leads.
+This is how floor coating contractors with full calendars actually operate. They don't sell leads to themselves. They buy booked estimates.
 
-## How Pay-Per-Lead Compares to Retainer Agencies
+## How the Booked-Appointment Model Compares to Retainer-Only Agencies
 
-Let's be real about what retainer agencies are selling you.
+Let's be real about what most retainer agencies are selling you.
 
-A traditional marketing agency keeps part of your budget whether they deliver results or not. It's a monthly subscription model wrapped in business language. They'll tell you they need 3 to 6 months to "build momentum," but the retainer checks keep cashing whether you get 2 leads or 10 leads a month.
+A traditional marketing agency keeps part of your budget whether they put a single appointment on your calendar or not. It's a monthly subscription wrapped in business language. They'll tell you they need 3 to 6 months to "build momentum," but the checks keep cashing whether you booked 2 estimates or 10. And even when leads do come in, the agency's job ends the moment a form gets submitted. The chasing, the dialing, the no-shows? That all lands on you.
 
 Here's the honest comparison:
 
-**Retainer Model (Traditional Agency):**
-- $2,000 to $5,000 per month minimum
-- $150 to $250 per lead on top of that
-- 6 to 12 month contract lock-in
-- You pay for months when leads dry up
+**Retainer-Only Agency (Old School):**
+- Flat monthly fee whether the calendar fills or not
+- They generate "leads," then hand them off and walk away
+- You do all the calling, qualifying, and scheduling
+- Long-term contract lock-in
 - Results are "attributed" but never really measured
-- Strategy changes cost extra
+- Slow months still cost you full price
 
-**Pay-Per-Lead Model (No Retainer):**
-- $1,000 one-time startup for setup and GMB optimization
-- $100 per qualified lead
-- No monthly fees, no contract
-- You only pay when someone calls or books
-- Clear ROI on every dollar spent
-- Flexibility to pause anytime
+**The Appointly Model (Retainer + Per-Appointment):**
+- A retainer that covers our labor for running the whole system
+- A per-appointment fee for each booked estimate that lands on your calendar
+- We generate the lead, contact it immediately, and book the slot
+- You only pay the appointment fee when a real estimate hits your calendar
+- Clear ROI on every booked job you quote
+- One contractor per market — you're not splitting demand
 
-For a contractor doing $1M in annual revenue, the difference is real. If you close jobs at a $5,000 average ticket with a 15% close rate, that means you need 7 leads to close one job. At $100 per lead through a pay-per-lead service, you're investing $700 to get one $5,000 job. Through a retainer agency at the traditional pricing, you might be paying $3,000 in retainer plus $1,400 in per-lead fees just to get the same lead.
+For a floor coating contractor doing real volume, the difference is the whole game. If your average epoxy garage floor runs $4,000 and you close roughly 1 in 3 estimates you actually run, then every booked appointment that lands on your calendar is worth chasing. The question stops being "how many leads did I buy" and becomes "how many estimates am I standing in front of this week."
 
-The retainer model assumes you want a "partner" who thinks long-term about your business. Most contractors would rather have a vendor who delivers leads they can close today.
+The retainer-only model assumes you want a "partner" who thinks long-term about your brand. Most floor coating contractors would rather have a system that fills next week's calendar with estimates they can close.
 
-## What to Expect in Terms of Cost and Quality
+## What to Expect: The Retainer Covers the Work, the Fee Covers the Booking
 
-Here's what you need to know about pricing and the leads you'll actually get.
+Here's how the Appointly Model actually splits up, so you know exactly what you're paying for.
 
-**The $100 Per Lead Figure**
+**The Retainer Covers Our Labor**
 
-When someone quotes you $100 per lead for insulation work, that's a screened lead. This means the person who filled out the form or called the number is looking for insulation work right now. They're not a mystery shopper or someone price comparing all day. They're a property owner with a problem who raised their hand.
+Running a real appointment-setting machine is a job. We build and manage the Meta (Facebook and Instagram) ad campaigns, we write the creative, we watch the numbers, we man the phones to hit every new lead fast, and we handle the back-and-forth to lock in a time that fits your schedule. The retainer covers that labor and effort. It's what keeps the system running so estimates keep landing on your calendar without you touching any of it.
 
-At $100 per lead with a 15% close rate, you're looking at $700 invested to land one job. If your average job is $3,000 to $8,000, that math works. If your average is $500, it doesn't.
+**The Per-Appointment Fee Covers Each Booked Estimate**
 
-Be honest about your average job size before you commit. A contractor doing spray foam attic sealing at $1,500 per job will struggle with $100 leads. A contractor doing full-home cavity wall fills at $5,000 will find them cheap.
+On top of the retainer, you pay a per-appointment fee for each booked estimate we put on your calendar. That's it. Not a list of names. Not a "qualified contact." A scheduled estimate with a homeowner who's expecting you to show up and quote their floor. You're paying for the thing that actually makes you money: a real shot to close a job.
 
-**Quality Variance is Real**
+Run the math on your own numbers. If your average polyaspartic garage floor is $4,000 and you close a healthy share of the estimates you run, a booked appointment pays for itself many times over the moment one closes. A contractor doing $2,500 basement floors will price it differently than one doing $9,000 showroom installs, but the structure is the same: a retainer for the labor, a fee per booked estimate.
 
-Not all leads are created equal. Some companies pull leads from multiple sources and screen them lightly. Others run Facebook lead gen ads to their audience directly. Some use NFC cards at trade shows or existing customer referral networks.
+**Why Booked Beats Bought**
 
-The best pay-per-lead sources use:
-- Direct lead generation (Facebook ads, Google Local Services Ads, organic search)
-- Light pre-screening (they call the lead, verify the job type, get the basics)
-- Fast turnaround (you get the lead within 24 hours of inquiry)
-- Exclusivity or limited sharing (you're not getting the same lead as 5 other contractors)
+Anybody can sell you "leads." The hard part — the part that actually fills a calendar — is everything that happens after the lead comes in:
 
-The worst ones scrape questionable sources, don't pre-screen, and you get a lead list where half the people didn't actually request insulation work.
+- Immediate contact (speed to lead) before they call three other coating crews
+- Qualifying the job on the phone (garage, basement, patio, showroom; size; timeline)
+- Booking them into a slot that works for your route, on the spot
+- Confirming so they actually show up when you roll up
 
-Ask directly: "Are these exclusive leads or shared? When do I get them after inquiry? Will you call them first to verify?"
+A raw lead skips all of that and dumps the work on you. A booked appointment hands you the finished result.
 
-## How to Evaluate Pay-Per-Lead Providers
+## How to Evaluate a Booked-Appointment Provider
 
-You wouldn't hire a contractor to insulate your walls without checking references and past work. Don't pick a lead provider on price alone either.
+You wouldn't let a crew pour a coating system without checking their prep work. Don't pick an appointment provider on a vague pitch either.
 
 **Red Flags**
 
-- They won't tell you lead source (Facebook, Google, their own audience, etc.)
-- They guarantee a certain close rate or number of closed jobs per month
-- They charge for "premium leads" at $150+ per lead
-- The contract has an early termination fee or long minimum commitment
-- They can't show you case studies from contractors doing your type of work
-- They push you to buy a large package upfront ($5,000+ in leads)
+- They sell "leads" and go quiet about who actually calls and books them
+- They guarantee a specific number of closed jobs (nobody controls your close rate but you)
+- They won't tell you the lead source (Meta ads, search, their own audience, etc.)
+- The contract has an early termination trap or a long minimum lock-in
+- They can't show case studies from floor coating or similar home service contractors
+- They share the same demand with multiple contractors in your market
 
 **Green Flags**
 
-- Clear explanation of where leads come from
-- Pre-screening is transparent (they call first, verify the job type)
-- You pay only for qualified leads, no hidden fees
-- Flexible month-to-month with no contract
-- References from contractors similar to you
-- GMB optimization included to ensure lead flow
-- They mention specific metrics: lead delivery time, source breakdown
+- They run the full job: generate the lead, contact it fast, and book the estimate
+- Clear explanation of where leads come from (Meta/Facebook/Instagram ads)
+- Speed to lead is part of the pitch — they hit the phone immediately
+- Pricing is structured and transparent: a retainer for labor plus a per-appointment fee
+- Exclusivity — one floor coating contractor per market
+- References from contractors doing your kind of work
+- They put confirmed estimates on your calendar, not raw inquiries on a list
 
 ## What Else Should Come With It
 
-A legitimate pay-per-lead service doesn't just dump leads on you and disappear. The best ones include:
+A legitimate booked-appointment service doesn't just generate demand and disappear. The best setups own the whole pipeline:
 
-**Google My Business Optimization**
-Your GMB profile is the front door to your business. If someone searches "insulation contractor near me," your GMB listing shows up before your website. A good service will claim your profile, add photos of completed work, update your services, and monitor reviews. This generates leads on its own, reducing your per-lead costs over time.
+**Demand Generation Through Meta Ads**
 
-**Lead Management**
-Some services provide a dashboard where you can track which leads called you, which closed, and which went nowhere. This data helps you refine what's working and what isn't.
+Facebook and Instagram are where homeowners scroll when they're dreaming about a clean, glossy garage floor or finally finishing the basement. Well-built Meta ad creative puts your offer in front of the right people in your service area and gets them to raise their hand. This is the top of the funnel, and it runs constantly so the calendar never goes dry.
 
-**Ongoing Communication**
-A real partner checks in monthly, asks how the leads are converting, and adjusts strategy if something isn't working.
+**Speed to Lead**
+
+A lead that sits for an hour is a cold lead. The whole machine lives or dies on how fast someone reaches out the second a homeowner inquires. Contacting them immediately — before they shop three other coating companies — is what turns a click into a booked estimate. That speed is the difference between a full calendar and a graveyard of "left a voicemail."
+
+**Booking and Confirmation**
+
+Reaching the lead isn't the finish line. The job is getting them locked into a real time slot that fits your schedule, then confirming so they show. Done right, you open your calendar and see estimates, not a to-do list of people to chase.
 
 ## The Bottom Line for Your Business
 
-Pay-per-lead works best if:
-- Your average job is $3,000 or higher
-- You can close jobs within 7 to 10 days of first contact
-- You want to scale without long-term contract commitments
-- You're tired of paying for leads you never get
-- You can follow up consistently (most leads don't close on the first call)
+The booked-appointment model works best if:
+- Your average floor coating job is worth real money (most epoxy and polyaspartic jobs are)
+- You can run an estimate and close on-site or shortly after
+- You'd rather quote floors than dial cold leads all night
+- You're tired of paying for "leads" that never turn into appointments
+- You can show up on time and run a solid in-home estimate
 
 ## FAQ
 
-**Q: What if I get a bad lead? Do I pay for it anyway?**
+**Q: What's the difference between a lead and a booked appointment?**
 
-A: Quality providers will give you one guarantee: if the lead doesn't match what was promised (e.g., they say they're not actually interested in insulation or they're not in your service area), you don't pay. But if someone calls you and sounds like a real prospect and you just don't close them, that's on you. The lead was qualified and delivered.
+A: A lead is a name and a number — somebody who clicked an ad or filled a form. A booked appointment is a confirmed estimate on your calendar with a homeowner expecting you to show up and quote their floor. With the Appointly Model, we generate the lead, contact it immediately, and turn it into the booked appointment. You skip the chasing entirely.
 
-**Q: How many leads should I buy per month to start?**
+**Q: How does the pricing actually work?**
 
-A: Start small. Buy 5 to 10 leads your first month and see how many close. You'll figure out your close rate quickly. If you close 2 out of 10, that's a 20% rate and you know you need 35 leads a month to hit 7 closed jobs. If you close 1 out of 10, you need 70 leads.
+A: Two parts. A retainer covers our labor — building and running the Meta ads, manning the phones for speed to lead, and handling the booking. On top of that, you pay a per-appointment fee for each booked estimate that lands on your calendar. You're not buying a list; you're buying scheduled estimates.
 
-**Q: Can I pause my leads if work gets slow?**
+**Q: What if an appointment doesn't close?**
 
-A: Yes. A real pay-per-lead service lets you turn leads on and off whenever you want. No penalties, no minimum commitment. This is the whole advantage of the model.
+A: Closing is on you — your pricing, your pitch, the way you walk the floor. We control the part we can control: getting a real, expecting homeowner onto your calendar fast and exclusively. If your average epoxy job is $4,000 and you run a tight estimate, the appointments more than pay for themselves over the calendar.
 
-**Q: Is $100 per lead expensive?**
+**Q: Can I scale up or slow down?**
 
-A: Not if you close them. A $5,000 job with a 15% close rate means $700 in lead cost and $4,300 in profit. At a 20% close rate, you're spending $500 to make $4,500. The question isn't whether $100 per lead is expensive. It's whether you can close the work that walks in the door.
+A: Yes. The system is built to match the volume of estimates you can actually handle. Want more estimates on the books? We turn up the demand. Calendar's full? We pace it. The point is keeping you quoting, not drowning you in no-shows.
 
 ---
 
-## Ready to Test the Pay-Per-Lead Model?
+## Ready to Fill Your Calendar With Booked Estimates?
 
-Get started with qualified insulation leads with no monthly retainer. Head to [getappointly.co](https://getappointly.co) to see how pay-per-lead works for contractors like you. $1,000 startup, $100 per lead, no contract. Only pay for results.
+Stop chasing leads and start running estimates. Head to [getappointly.co](https://getappointly.co) to see how the Appointly Model works for floor coating and epoxy contractors. A retainer covers our labor — we build and run the Meta ads, hit every lead with speed-to-lead, and book the estimate into a time that works for you. You just show up, quote the floor, and collect the cash. One contractor per market. Show up and close.

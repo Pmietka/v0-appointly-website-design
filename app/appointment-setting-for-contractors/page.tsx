@@ -13,47 +13,48 @@ const bookingUrl = "https://client.getappointly.co/strategy-calendar";
 const pillars = [
   {
     icon: PhoneCall,
-    title: "Fast initial contact",
+    title: "Speed to lead",
     description:
-      "Speed matters because homeowners who request information often move on quickly when no one responds.",
+      "We contact every floor coating lead the moment it comes in, before the homeowner can call three other contractors and start shopping around.",
   },
   {
     icon: MessageSquareReply,
     title: "Persistent follow up",
     description:
-      "Many good opportunities are not ready on the first touch. Consistent follow up increases the odds of booking the estimate.",
+      "Many good opportunities are not ready on the first touch. We keep following up so more of them turn into a booked estimate on your calendar.",
   },
   {
     icon: CalendarCheck2,
     title: "Booked estimate focus",
     description:
-      "Appointment setting is about converting raw interest into a real time on the calendar, not just logging a contact form entry.",
+      "We do not hand you raw leads. We book the homeowner into a real time on your calendar, so the next step is you showing up to quote the floor.",
   },
   {
     icon: TimerReset,
-    title: "Cleaner sales handoff",
+    title: "Clean handoff",
     description:
-      "When the homeowner is qualified and the estimate is scheduled, your team can move straight into the sales conversation.",
+      "Once the estimate is set, you just show up, run the quote, do the coating, and collect the cash. We handle everything up to the appointment.",
   },
 ];
 
 export const metadata: Metadata = {
-  title: "Appointment Setting for Insulation Contractors",
+  title: "Appointment Setting for Floor Coating Contractors",
   description:
-    "See how Appointly Solutions helps with appointment setting for insulation contractors through fast follow up, qualification, and booked estimate workflows.",
+    "Appointly Solutions fills your calendar with booked floor coating estimates using Meta ads, instant speed to lead, and persistent follow up so you just show up and quote.",
   keywords: [
     "appointment setting for contractors",
-    "insulation appointment setting",
-    "booked estimates for insulation contractors",
+    "floor coating appointment setting",
+    "booked estimates for floor coating contractors",
+    "speed to lead",
     "Appointly Solutions",
   ],
   alternates: {
     canonical: "https://getappointly.co/appointment-setting-for-contractors",
   },
   openGraph: {
-    title: "Appointment Setting for Insulation Contractors",
+    title: "Appointment Setting for Floor Coating Contractors",
     description:
-      "Learn how Appointly Solutions helps insulation contractors turn leads into booked estimate appointments.",
+      "Learn how Appointly Solutions contacts every floor coating lead instantly and books the estimate onto your calendar so you just show up and quote.",
     url: "https://getappointly.co/appointment-setting-for-contractors",
     siteName: "Appointly Solutions",
     type: "website",
@@ -78,13 +79,13 @@ export default function AppointmentSettingForContractorsPage() {
               </p>
               <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-balance md:text-6xl">
                 Booked Estimates Are the <span className="gradient-text">Result</span>{" "}
-                of the PPL System
+                of the Appointly Model
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                When we deliver a qualified insulation lead, you're already halfway to
-                a booked estimate. We screen every homeowner for intent, budget, and
-                service area fit before they ever reach you - so your team walks into
-                real conversations, not cold inquiries.
+                We do the complete job of filling your calendar. We run the Meta ads,
+                contact every floor coating lead the moment it lands, and book the
+                homeowner into a time that works for you - so you walk into real
+                estimates, not cold inquiries you have to chase.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
@@ -112,7 +113,7 @@ export default function AppointmentSettingForContractorsPage() {
                 Why Appointment Setting Matters
               </p>
               <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">
-                More leads alone do not guarantee more revenue.
+                More leads alone do not fill your calendar. Booked estimates do.
               </h2>
             </div>
 
@@ -138,24 +139,24 @@ export default function AppointmentSettingForContractorsPage() {
           <div className="mx-auto grid max-w-6xl gap-6 px-6 lg:grid-cols-2">
             <article className="glass-card rounded-3xl p-8 md:p-10">
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
-                How Appointly Solutions Supports Booking
+                How Appointly Solutions Books the Estimate
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
-                Built to move prospects from interest to calendar.
+                Built to move homeowners from ad click to your calendar.
               </h2>
               <p className="mt-5 text-sm leading-7 text-muted-foreground md:text-base">
-                Appointly Solutions combines quick response, qualification logic, and
-                continued follow up so booked estimate opportunities do not depend on
-                your team catching every inquiry in real time.
+                Appointly Solutions combines Meta ads, instant speed to lead, and
+                persistent follow up so booked estimates do not depend on your team
+                catching every inquiry the moment it comes in.
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
-                To understand the upstream lead source, see{" "}
+                To see the floor coating estimates we deliver, visit{" "}
                 <Link href="/insulation-contractor-leads" className="text-primary transition-opacity hover:opacity-80">
-                  Insulation Contractor Leads
+                  Floor Coating Appointments
                 </Link>
-                . To compare the business model behind it, continue to{" "}
+                . To understand the business model behind it, continue to{" "}
                 <Link href="/pay-per-lead-insulation" className="text-primary transition-opacity hover:opacity-80">
-                  Pay Per Lead Insulation
+                  The Appointly Model
                 </Link>
                 .
               </p>
@@ -166,12 +167,12 @@ export default function AppointmentSettingForContractorsPage() {
                 Book More Estimates
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
-                Talk through where leads are stalling in your current process.
+                Talk through what is keeping your calendar from filling up.
               </h2>
               <p className="mt-4 text-sm leading-7 text-slate-700 md:text-base">
                 A strategy call with Appointly Solutions can help identify whether your
-                main bottleneck is lead volume, speed to lead, qualification, or
-                appointment setting itself.
+                main bottleneck is ad volume, speed to lead, follow up, or the booking
+                handoff itself - and how the Appointly Model fixes it.
               </p>
               <a
                 href={bookingUrl}
@@ -187,7 +188,7 @@ export default function AppointmentSettingForContractorsPage() {
         <ProofSection />
         <SeoResourceLinks
           title="Pages that support the booked-estimate story."
-          description="These related pages connect appointment setting with lead quality, traffic sources, and contractor acquisition strategy."
+          description="These related pages connect appointment setting with booked floor coating estimates, Meta ad traffic, and the Appointly Model."
           resources={getCommercialResources("appointment-setting-for-contractors")}
         />
       </main>

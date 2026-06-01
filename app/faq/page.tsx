@@ -15,29 +15,34 @@ const bookingUrl = "https://client.getappointly.co/strategy-calendar";
 
 const faqItems = [
   {
-    question: "What qualifies as a lead I get charged for?",
+    question: "How does the pricing work?",
     answer:
-      "A lead must be a verified homeowner, located in your service area, with a real insulation project and an indicated budget. If a lead does not meet all criteria, you do not pay for it.",
+      "Two parts. A retainer covers our labor and effort running the system. On top of that, you pay a per-appointment fee for each booked estimate that lands on your calendar.",
   },
   {
-    question: "What is the startup fee for?",
+    question: "What counts as a booked appointment?",
     answer:
-      "It covers the initial setup work, including your Google profile setup, ad account build, creative, launch, and review card kit. After that, you only pay per qualified lead delivered.",
+      "A verified homeowner in your service area who wants floor coating work and has agreed to an estimate time that fits your calendar. Not a raw lead or a form fill - an actual booked estimate.",
   },
   {
-    question: "Are my leads exclusive?",
+    question: "What does the retainer cover?",
     answer:
-      "Yes. We only work with one insulation contractor per market. Your leads are not sent to a local competitor.",
+      "Everything we do to fill your calendar: building and running your Meta ads, contacting every lead instantly with speed-to-lead outreach, and booking the estimates onto your calendar.",
+  },
+  {
+    question: "Are my appointments exclusive?",
+    answer:
+      "Yes. We only work with one contractor per market. The estimates we book are never shared with a local competitor.",
   },
   {
     question: "What markets do you work in?",
     answer:
-      "We focus on small-to-mid-sized markets in the US and Canada where insulation contractors have room to grow and want cleaner lead flow.",
+      "We focus on small-to-mid-sized markets in the US and Canada where home service contractors have room to grow. Right now our main focus is floor coating and epoxy contractors.",
   },
   {
-    question: "How fast do leads come in?",
+    question: "How fast do appointments come in?",
     answer:
-      "Most contractors see their first leads within 24 to 48 hours of campaign launch.",
+      "Most contractors see their first booked estimates within 24 to 48 hours of campaign launch.",
   },
   {
     question: "What if I want to pause or stop?",
@@ -45,33 +50,33 @@ const faqItems = [
       "You can cancel anytime. There is no long-term contract. We just ask for a short notice period so campaigns can be wound down cleanly.",
   },
   {
-    question: "Do I need to run my own ads?",
+    question: "Do I need to run my own ads or chase leads?",
     answer:
-      "No. We handle the creative, targeting, budget management, and optimization. Your team just needs to answer the phone and run the estimates.",
+      "No. We run the Meta ads, handle the speed-to-lead outreach, and book the appointments. Your team just shows up, runs the estimate, and closes the work.",
   },
   {
     question: "How do I get started?",
     answer:
-      "Book a strategy call. We review your market, service area, and current lead flow, then tell you whether Appointly is a fit for your business.",
+      "Book a strategy call. We review your market, service area, and goals, then tell you whether Appointly is a fit for your business.",
   },
 ];
 
 export const metadata: Metadata = {
-  title: "FAQ | Appointly Solutions Insulation Lead Generation",
+  title: "FAQ | The Appointly Model for Booked Estimates",
   description:
-    "Read answers to common questions about Appointly Solutions, exclusive insulation leads, qualification standards, pricing, and getting started.",
+    "Answers to common questions about Appointly Solutions: how the retainer plus per-appointment pricing works, exclusivity, speed to lead, and getting started.",
   keywords: [
-    "insulation lead generation FAQ",
-    "cost per lead FAQ",
-    "exclusive leads questions",
+    "appointment generation FAQ",
+    "booked estimates FAQ",
+    "exclusive appointments questions",
   ],
   alternates: {
     canonical: "https://getappointly.co/faq",
   },
   openGraph: {
-    title: "FAQ | Appointly Solutions Insulation Lead Generation",
+    title: "FAQ | The Appointly Model for Booked Estimates",
     description:
-      "Explore common questions about Appointly Solutions and how our insulation lead generation model works.",
+      "Explore common questions about Appointly Solutions and how we fill your calendar with booked estimates.",
     url: "https://getappointly.co/faq",
     siteName: "Appointly Solutions",
     type: "website",
@@ -116,8 +121,9 @@ export default function FaqPage() {
                 FAQ for <span className="gradient-text">Appointly Solutions</span>
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                This page answers the questions insulation contractors usually ask about
-                lead quality, exclusivity, pricing, service areas, and getting started.
+                This page answers the questions contractors usually ask about how the
+                Appointly Model works - pricing, exclusivity, speed to lead, service
+                areas, and getting started.
               </p>
             </div>
           </div>
@@ -161,13 +167,13 @@ export default function FaqPage() {
                   <Link href="/about" className="text-primary transition-colors hover:opacity-80">
                     About page
                   </Link>{" "}
-                  explains why Appointly Solutions is built around a cost-per-lead model.
+                  explains why Appointly Solutions is built around the Appointly Model.
                   For the main service page, visit{" "}
                   <Link
                     href="/insulation-contractor-leads"
                     className="text-primary transition-colors hover:opacity-80"
                   >
-                    Insulation Contractor Leads
+                    Floor Coating Appointments
                   </Link>
                   .
                 </p>

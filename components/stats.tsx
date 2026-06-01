@@ -12,17 +12,17 @@ const stats: StatItem[] = [
   {
     value: 47,
     suffix: "+",
-    label: "qualified leads delivered per month",
+    label: "booked estimates delivered per month",
   },
   {
     value: 8,
     suffix: "x",
-    label: "average contractor ROI on lead cost",
+    label: "average contractor ROI on ad spend",
   },
   {
     value: 60,
     suffix: "%",
-    label: "average close rate on qualified leads",
+    label: "average close rate on booked estimates",
   },
 ];
 

@@ -1,295 +1,240 @@
-# Contractor Lead Generation With No Retainer: Pay for Results Only
+# Floor Coating Lead Generation Done For You: Pay a Retainer Plus Per Booked Estimate
 
-**Meta Description:** Contractor lead generation with no retainer. Compare retainer vs results-based models and learn what questions to ask before signing up.
+**Meta Description:** How floor coating contractors get booked estimates without managing ads. Compare retainer-only agencies to a done-for-you model that fills your calendar.
 
 ---
 
-## The Retainer Model vs Results-Based Model
+## The Old Agency Model vs The Done-For-You Booked Estimate Model
 
-Your business is built on results. You quote a job, you do the work, you get paid. Simple.
+Your business is built on results. You quote a garage floor, you coat it, you get paid. Simple.
 
-Yet when you hire a marketing agency, they flip that model. You pay first, regardless of results.
+Yet when you hire a typical marketing agency, they flip that model on its head. You pay a fat retainer first, and what you get back is a pile of raw "leads" you have to chase yourself.
 
-Most agencies operate on retainer. They charge a flat monthly fee whether they deliver 2 leads or 20 leads. Whether you close one job or zero jobs. The money comes out of your account every month like clockwork, independent of performance.
+Most agencies operate on a retainer alone. They charge a flat monthly fee whether they hand you 2 names or 20 names. Whether those names ever pick up the phone or not. Whether you ever stand in a single garage with a quote in hand. The money leaves your account every month like clockwork, and the work of turning a name into a booked estimate falls entirely on you.
 
-This mismatch is why so many contractors hate working with agencies.
+This mismatch is why so many floor coating contractors hate working with agencies.
 
-**The Retainer Model:**
-- You pay $2,000 to $5,000 per month upfront
-- Agency does "marketing work" (unclear what, often)
-- You may or may not get leads
-- You may or may not close jobs
-- You pay anyway
-- If you want out, there's usually an early termination fee
+**The Retainer-Only Agency Model:**
+- You pay a flat monthly retainer upfront
+- Agency does vague "marketing work" (often unclear what)
+- You get raw leads, not booked appointments
+- You have to call, chase, and qualify them yourself
+- Most never answer because they already called three other coaters
+- You pay the same whether your calendar fills or stays empty
 
-The agency's incentive is to keep you paying, not to deliver results. They make money whether you succeed or fail.
+The agency's incentive is to keep collecting the retainer, not to put an estimate on your calendar. They make money whether you succeed or fail, and they never touch the phone.
 
-**The Results-Based Model (Pay-Per-Lead):**
-- You pay $0 per month
-- You pay $100 per qualified lead when you get it
-- You only pay when something valuable was delivered
-- No lock-in contracts
-- The agency's incentive is to deliver good leads because if they don't, you stop buying
+**The Done-For-You Booked Estimate Model (the Appointly Model):**
+- You pay a retainer that covers our labor running the whole system
+- On top of that, you pay a per-appointment fee for each booked estimate that lands on your calendar
+- We generate the lead through Meta ads, contact it instantly, and book it into a time that works for you
+- You don't buy raw leads. You get booked estimates on your calendar
+- You just show up, quote the epoxy job, and collect the cash
 
-One model aligns incentives with the contractor. One doesn't.
+One model dumps work on you and bills you regardless. One model does the entire job of filling your calendar and ties part of your cost directly to estimates that actually get booked.
 
-## Why Contractors Are Frustrated With Agencies
+## Why Floor Coating Contractors Are Frustrated With Agencies
 
 Every contractor has a story.
 
-"We hired an agency and paid them $4,000 a month for 6 months. In month 7, they said we were 'building momentum' and needed to stay committed. In month 12, we finally got some results, but the leads weren't good quality. We wasted $48,000 learning that this wasn't the right fit."
+"We hired an agency and paid them a hefty monthly retainer for 6 months. In month 7, they said we were 'building momentum' and needed to stay committed. In month 12, we finally got some names, but they were tire-kickers who never showed. We burned a year learning that this wasn't the right fit."
 
 Or this one:
 
-"The agency charged us a retainer for 'strategy and lead generation.' Turns out they were buying cheap Facebook leads and marking them up 200%. They made money off our account just by having us as a client. When we asked why our close rate was so low, they said it was our sales skills, not their leads."
+"The agency charged us for 'strategy and lead generation.' Turns out they were running cheap Facebook ads and emailing us a spreadsheet of names. We had to call every one of them ourselves. By the time we reached anyone, they'd already booked another coater. When we asked why our close rate was so low, they said it was our sales skills, not their setup."
 
 Or:
 
-"We signed a 12-month contract with a $3,500 retainer. After 4 months, we wanted to cancel because we weren't happy. They said we had to pay a $10,000 early termination fee. We were trapped."
+"We got a list of 30 'leads' one month. We called all of them. Half had wrong numbers. The other half barely remembered filling out a form. Not one turned into a booked estimate without us doing all the chasing. We were paying a retainer to do our own follow-up."
 
 The frustration comes from several things.
 
 **Misaligned Incentives**
 
-The agency gets paid the same whether you close 1 job or 10 jobs. They have no reason to obsess over lead quality or your close rate. They just need to keep you signed up.
+The agency gets paid the same whether your calendar has 1 estimate or 10. They have no reason to obsess over whether anyone actually books. They just need to keep you on the retainer.
+
+**Raw Leads Instead of Booked Appointments**
+
+You don't need a spreadsheet of cold names. You need someone sitting in your garage ready to talk about a polyaspartic floor. Agencies sell the spreadsheet. Nobody does the work of turning it into a scheduled estimate.
+
+**No Speed to Lead**
+
+A floor coating lead goes cold in minutes. Homeowners shopping a garage floor fill out three forms and book whoever calls first. If nobody contacts that lead immediately, the job goes to a competitor. Most agencies hand you the name hours or days later, dead on arrival.
 
 **Unclear ROI**
 
-You never know if you're getting your money's worth. The agency will claim "brand building" or "lead pipeline development" when results are thin. Measuring ROI on a retainer is nearly impossible because you're paying for unknown value.
-
-**Long-Term Lock-In**
-
-If you're not happy, you're stuck. Early termination fees and contract minimums protect the agency at your expense.
-
-**Hidden Lead Sourcing**
-
-Many agencies buy leads from third parties and mark them up, or run cheap Facebook ads and resell them as premium leads. You don't know where leads come from or why quality varies.
+You never know if you're getting your money's worth. The agency claims "brand building" or "pipeline development" when your calendar is empty. Measuring ROI on a retainer alone is nearly impossible because you're paying for activity, not booked estimates.
 
 **"Strategy" That Never Materializes**
 
-Agencies sell you a comprehensive strategy involving content marketing, Google Ads, Facebook ads, and organic growth. Then they focus only on whatever is cheapest and easiest for them to execute. Your actual strategy gets ignored.
+Agencies sell you a comprehensive plan involving content, Google Ads, Meta ads, and organic growth. Then they execute whatever is cheapest for them and ignore the rest. Your actual calendar stays empty.
 
 The result: contractors feel like they're being sold, not served.
 
-## What Pay-For-Results Actually Looks Like in Practice
+## What Done-For-You Booking Actually Looks Like in Practice
 
-Here's a real comparison between a retainer setup and a pay-per-lead setup.
+Here's a real comparison between a retainer-only agency setup and the Appointly Model, where we run everything and book the estimate for you.
 
-**Scenario: An Insulation Contractor in a Mid-Market City**
+**Scenario: A Garage Floor Coating Contractor in a Mid-Market City**
 
-They need leads. They're comparing two options.
+They need their calendar full of estimates. They're comparing two options.
 
-**Option A: Retainer Agency**
-- Contract: 12 months
-- Monthly retainer: $4,000
-- Per-lead cost: $150
-- Promised leads per month: 10 to 15
-- Average close rate on their leads: "TBD, depends on your sales skills"
+**Option A: Retainer-Only Agency**
+- Flat monthly retainer, billed no matter what
+- They hand you raw leads, you do all the calling
+- "Booked appointments? That's on you. We just generate the leads."
+- Average no-show and no-answer rate: high, because nobody calls leads fast
+- Your calendar: unpredictable, mostly empty
 
-Month 1: They pay $4,000, get 8 leads, close 1 job. Cost per closed job: $4,000.
-Month 2: They pay $4,000, get 6 leads, close 1 job. Cost per closed job: $4,000.
-Month 3: They pay $4,000, get 12 leads, close 2 jobs. Cost per closed job: $2,000.
-Months 4-12: Similar variance. Some months good, some months bad. But the retainer stays the same.
+Month after month, you pay the retainer, get a list of names, chase them yourself, and stand in maybe a handful of garages. The retainer never changes. Whether you booked 2 estimates or 8, the bill is identical, and you did all the phone work.
 
-Total paid: $48,000 over 12 months.
-Total jobs closed: 12 to 15 jobs.
-Cost per closed job: $3,200 to $4,000.
+**Option B: The Appointly Model (Done-For-You Booked Estimates)**
+- A retainer that covers our labor running the entire system
+- A per-appointment fee for each booked estimate that actually lands on your calendar
+- We run the Meta ads, we hit speed to lead, we book the time slot
+- Exclusive: one floor coating contractor per market, so you're never competing with our other clients
+- Your calendar: filled with scheduled estimates you just show up to
 
-**Option B: Pay-Per-Lead**
-- Contract: Month-to-month, no minimum
-- One-time setup: $1,000
-- Per-lead cost: $100
-- Exclusive, pre-screened leads
-- Average close rate: 20% (verified on other contractor accounts)
+Here you're not paying for activity and hoping. You're paying a retainer for us to run the machine, plus a fee tied to each estimate we actually put on your calendar. You spend your time quoting epoxy and polyaspartic jobs, not dialing dead numbers.
 
-Month 1: They pay $1,000 setup + $1,000 for 10 leads = $2,000 total. Close 2 jobs. Cost per closed job: $1,000.
-Month 2: They buy 10 leads at $100 each = $1,000. Close 2 jobs. Cost per closed job: $500.
-Month 3: They buy 15 leads at $100 each = $1,500. Close 3 jobs. Cost per closed job: $500.
-Months 4-12: They adjust lead volume based on their pipeline. Some months buy more, some less.
+Run the math with example floor coating job values. Say a typical epoxy garage floor is worth $4,000. If we book you a handful of estimates a week and you close even a fraction of them, the per-appointment fee and retainer are a rounding error against the jobs you land. That's the point: your cost is tied to booked estimates and the labor to produce them, not a flat retainer that bills the same whether you work or not.
 
-Total paid: $1,000 setup + approximately $10,000 to $12,000 in leads = $11,000 to $13,000 over 12 months.
-Total jobs closed: 20 to 25 jobs (higher close rate on exclusive leads).
-Cost per closed job: $460 to $650.
+This is why floor coating contractors are switching.
 
-The contractor on the retainer pays $48,000 and closes 12 to 15 jobs.
+## Red Flags That a "Done-For-You" Service Isn't Really Done For You
 
-The contractor on pay-per-lead pays $11,000 to $13,000 and closes 20 to 25 jobs.
+The term "done-for-you" gets misused. Some agencies say they book appointments and then quietly hand you a lead list to chase.
 
-That's a difference of $35,000 in annual spend and 8 to 13 more jobs closed.
+**Red Flag 1: They Hand You Raw Leads, Not Booked Estimates**
 
-This is why contractors are switching.
+"Here are this month's leads, good luck!"
 
-## Red Flags That a "Results-Based" Service Isn't Really Results-Based
+That's not done-for-you. If you're the one calling, qualifying, and scheduling, you're doing the hardest part yourself. The whole value is in booking the estimate onto your calendar.
 
-The term "results-based" gets misused. Some agencies say they're pay-per-lead or pay-per-results and then bury fees in the fine print.
+**Red Flag 2: No Speed to Lead**
 
-**Red Flag 1: Hidden Retainer or Platform Fee**
+"We deliver leads within 24 to 48 hours."
 
-They say "No retainer, just pay per lead!" but then there's a $500 "platform fee" or "account management fee" per month.
+In floor coating, 24 hours is a lifetime. The homeowner has already talked to two other coaters. If nobody contacts the lead within minutes, the booking is lost. Real done-for-you means the lead gets contacted immediately, before they shop around.
 
-That's a retainer. It just has a different name. Legitimate pay-per-lead has zero monthly fees.
+**Red Flag 3: No Exclusivity**
 
-**Red Flag 2: Lead Minimum or Volume Requirement**
+"We work with several coaters in your area."
 
-"You must commit to 20 leads per month minimum."
-
-This is a retainer disguised as pay-per-lead. If you only want 5 leads, you still pay for 20. This is not results-based. This is volume-based.
-
-**Red Flag 3: Long-Term Contract Required**
-
-"We require a 6-month commitment to get the best pricing."
-
-If they require a long-term commitment, they're betting you won't cancel when results disappoint. They're protecting themselves, not serving you.
-
-Real pay-per-lead is month-to-month. Cancel anytime.
+If they're selling the same leads to your competitors, you're in a bidding war on every job. Real done-for-you means one contractor per market. The leads are yours, period.
 
 **Red Flag 4: Vague Close-Rate Guarantees**
 
-"We guarantee a 15% close rate on our leads."
+"We guarantee a 15% close rate."
 
-Nobody can guarantee your close rate. That depends on your skills, your pricing, your follow-up speed, and your product. If they're guaranteeing results, they're either lying or they plan to fight about refunds later.
+Nobody can guarantee your close rate. That depends on your pricing, your samples, your pitch in the garage. If they're guaranteeing your results, they're either lying or setting up a refund fight later. The real promise is simpler: booked estimates on your calendar.
 
-The only guarantee that matters: "We deliver qualified leads or we refund you."
+**Red Flag 5: You Don't Know How They Find People**
 
-**Red Flag 5: You Don't Know the Lead Source**
+"I can't tell you exactly how we generate leads, but they're good."
 
-"I can't tell you exactly where leads come from, but they're good quality."
+A legitimate provider can explain it plainly: targeted Meta ads to homeowners in your market, instant follow-up, booked into your calendar. If they won't tell you, be cautious.
 
-This is a major red flag. A legitimate provider can explain their lead source. Are they Facebook ads? Google Ads? Their own audience? Partner networks?
+**Red Flag 6: They Bill You Even When the Calendar Is Empty**
 
-If they won't tell you, they might be buying cheap shared leads and marking them up as exclusive.
+A flat retainer with nothing tied to actual booked estimates means they get paid whether you ever stand in a garage or not. The Appointly Model is different: the retainer covers our labor running the system, and the per-appointment fee is tied directly to estimates that actually land on your calendar.
 
-**Red Flag 6: Early Termination Fee**
+## What Done-For-You Looks Like When Done Right
 
-"If you cancel before 6 months, there's a $5,000 fee."
+Here are the characteristics of a legitimate done-for-you booked appointment service.
 
-This tells you they're betting you'll pay to get out rather than stay. That's not a partner. That's a captor.
+**Clear, Honest Structure**
 
-## What Pay-For-Results Looks Like When Done Right
+The pricing is explained plainly: a retainer that covers our labor running the whole system, plus a per-appointment fee for each booked estimate. No mystery, no hidden games.
 
-Here are the characteristics of a legitimate pay-per-lead service.
+**Meta Ads Run For You**
 
-**Clear Per-Lead Pricing**
+You don't touch Ads Manager. We build and run the Meta (Facebook and Instagram) campaigns that put your floor coating offer in front of homeowners in your market.
 
-The price is stated clearly: "$100 per lead, all-in. No other fees."
+**Speed to Lead, Every Time**
 
-You know exactly what you're paying for each lead.
+The moment a homeowner raises their hand, the lead gets contacted immediately, before they can shop other coaters. Speed to lead is the entire game, and it's done for you.
 
-**No Monthly Minimums or Lock-In**
+**Booked Estimates, Not Raw Names**
 
-You can buy 1 lead or 100 leads per month. You can pause anytime. Month-to-month basis, no contracts.
+We don't hand you a spreadsheet. We book the homeowner into a time that works for you, on the spot or as soon as we reach them. You get a calendar full of estimates.
 
-**Transparent Lead Source**
+**Exclusivity**
 
-They can explain exactly where leads come from. "We run Facebook Lead Gen ads targeting homeowners in insulation search intent" or "We use Google Local Services Ads."
+One floor coating contractor per market. The leads and bookings are yours alone. You're never competing against another one of our clients.
 
-**Pre-Screening is Standard**
+**You Just Show Up and Close**
 
-Leads aren't raw inquiries. The provider has called the lead, verified they're genuinely interested in your service, and confirmed they're in your service area.
-
-**Fast Delivery**
-
-Leads are delivered within 24 hours of inquiry. Ideally within 2 to 4 hours.
-
-**Verifiable Close Rate**
-
-They can show you anonymized data: "Contractors on our platform close an average of 18% of our leads." They're transparent about what you can realistically expect.
-
-**No Guarantees of Your Success**
-
-They don't promise you'll close X jobs per month. They promise to deliver qualified leads. What you do with them is up to you.
-
-**Easy to Track ROI**
-
-You get a dashboard showing how many leads you've received, what they cost, and your close rate. You can calculate your exact cost per job.
-
-**No Long-Term Contract**
-
-You can leave without penalty. The service works because the leads speak for themselves, not because you're locked in.
+The contractor's job is simple: show up to the estimate, quote the garage or basement floor, do the work, and collect the cash. Everything before that is handled.
 
 ## Questions to Ask Before Signing Up
 
 Before you commit any money, get answers to these questions.
 
-**About Lead Source**
+**About How Leads Are Generated**
 
-- Where do your leads come from? (Facebook, Google, owned audience, etc.)
-- Can you show me examples of the ads or landing pages that generate leads?
-- What percentage of your leads come from each source?
-- How do you screen out people who aren't genuinely interested?
+- How do you generate leads? (Should be a clear answer: Meta ads targeting homeowners in my market.)
+- Can you show me examples of the ads or offers that bring people in?
+- How fast does a new lead get contacted? (Should be: immediately, speed to lead.)
 
-**About Lead Quality**
+**About Booked Appointments**
 
-- How many contractors are you currently working with in my market?
-- How many of those contractors do the same service I do?
-- What's the average close rate on your leads? (Should be 15% to 25% for exclusive leads)
-- Can I speak with a reference in my market or similar market?
+- Do you hand me raw leads or do you book the estimate onto my calendar?
+- Who does the calling and qualifying, you or me? (Should be: them.)
+- How do you fit appointments into my schedule and availability?
 
-**About Pricing**
+**About Exclusivity**
 
-- What's the exact per-lead price?
-- Are there any other fees? Setup, monthly, per-booking, anything else?
-- Do you have volume discounts or do I pay the same rate regardless of volume?
-- What happens if I buy 2 leads one month and 20 the next?
+- How many floor coating contractors do you work with in my market? (Should be: one.)
+- Are these leads exclusive to me, or shared with competitors?
 
-**About Guarantees**
+**About Pricing Structure**
 
-- What happens if I get a lead that doesn't match what was promised?
-- What if someone calls me and says they didn't actually request insulation work?
-- Do I get a refund or a replacement lead?
-- Is this in writing?
+- How does your pricing work? (Should be: a retainer that covers your labor, plus a per-appointment fee for each booked estimate.)
+- What exactly does the retainer cover?
+- Is the per-appointment fee tied to estimates that actually land on my calendar?
 
-**About Flexibility**
+**About Flexibility and Tracking**
 
-- Can I cancel anytime?
-- Is there a contract?
-- Is there an early termination fee?
-- Can I pause my account if I get busy?
-- What's the minimum lead purchase?
-
-**About Performance Tracking**
-
-- Do you provide a dashboard showing my leads, calls, and close rates?
-- Can I track ROI directly?
-- Do you check in monthly to review how leads are converting?
-- What data do you provide?
+- Can I see the booked estimates and where they came from?
+- How do we review what's working month to month?
+- What happens if a booked appointment is clearly not a real prospect?
 
 **Get It All In Writing**
 
 Before you hand over money, get a written agreement that spells out:
-- Per-lead price
-- What constitutes a qualified lead
-- Lead delivery timeline
-- Refund/replacement policy
-- Cancellation terms
-- No early termination fees
+- The retainer and what it covers
+- The per-appointment fee and what counts as a booked estimate
+- Speed-to-lead and booking process
+- Exclusivity terms
+- How appointments get reported to you
 
 If they won't put it in writing, don't work with them.
 
 ## FAQ
 
-**Q: If I switch to pay-per-lead, won't I lose the marketing strategy that an agency provides?**
+**Q: If I go done-for-you, won't I lose the marketing strategy an agency provides?**
 
-A: Probably yes, and it might not matter. Most retainer agencies' "strategy" is generic (better website, more Facebook ads, SEO). If you're getting leads from a good pay-per-lead service, that IS your lead generation strategy. You can handle the other details (website, branding) separately or not at all. Results-based leads beat strategy talks every time.
+A: Probably, and it might not matter. Most retainer agencies' "strategy" is generic. If you're getting booked estimates on your calendar, that IS your lead generation strategy. You can handle branding and website details separately or not at all. Booked appointments beat strategy talks every time.
 
-**Q: Can I do both? Use an agency for some leads and pay-per-lead for others?**
+**Q: Can I do both? Use an agency for some leads and a done-for-you service for booked estimates?**
 
-A: Yes, but why would you? If pay-per-lead is cheaper and more efficient, just use that. If you need traditional marketing too (brand building, content, etc.), hire a freelancer or boutique agency for that separate from lead generation.
+A: You can, but why? If the done-for-you model is filling your calendar, just use that. If you want brand building too, hire a freelancer for that separately from your appointment generation.
 
-**Q: What if pay-per-lead leads are lower quality than what an agency promises?**
+**Q: What if the booked estimates are lower quality than promised?**
 
-A: Test it. Buy 10 leads from a pay-per-lead service, see what your close rate is, then compare. Real data beats promises every time. If the leads don't work, you can stop buying. You're not stuck in a 12-month contract.
+A: Test it. Run the system, see how many homeowners actually show and how many you close, then judge by your own numbers. Real data beats promises every time.
 
-**Q: Is it unprofessional to only do pay-per-lead and skip SEO, brand building, etc.?**
+**Q: Is it unprofessional to skip SEO and brand building and just run on booked estimates?**
 
-A: No. If you're closing jobs and making money, it's not unprofessional. You can add brand building later if you want. Right now, execution beats perfection.
+A: No. If your calendar is full and you're closing epoxy jobs, it's not unprofessional. You can add brand building later. Right now, execution beats perfection.
 
-**Q: How many pay-per-lead services should I be working with?**
+**Q: How many appointment-generation services should I work with?**
 
-A: Start with one. Once you understand the quality and your close rate, add more if you need more volume. But loyalty to a service that delivers is smart. Don't switch providers every month.
+A: Start with one, especially since the best ones are exclusive to your market anyway. Once you see the quality and your close rate, scale up with that one. Don't switch providers every month.
 
 ---
 
-## Start With Results, Not Promises
+## Stop Buying Activity. Start Getting Booked Estimates.
 
-Pay for insulation leads only when you get them. No retainer, no contract, no games. Start at [getappointly.co](https://getappointly.co) and see why contractors are switching from agencies to pay-per-lead. $1,000 startup, $100 per qualified lead.
+With the Appointly Model, you pay a retainer that covers our labor running the whole system, plus a per-appointment fee for each booked estimate that lands on your calendar. We generate the lead through Meta ads, contact it instantly with real speed to lead before they can shop other coaters, and book the estimate into a time that works for you. You just show up, quote the floor, do the job, and collect the cash. One contractor per market, exclusive. Start at [getappointly.co](https://getappointly.co) and see why floor coating contractors are leaving retainer-only agencies behind.

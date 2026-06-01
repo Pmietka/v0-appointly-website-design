@@ -22,45 +22,46 @@ const highlights = [
     icon: ShieldCheck,
     title: "One contractor per market",
     description:
-      "Your leads are not sold to another insulation company in the same market, which gives your team a cleaner shot at booking the estimate.",
-  },
-  {
-    icon: BadgeCheck,
-    title: "Homeowner and job fit checked",
-    description:
-      "We screen for homeowner status, service area, and project fit before the lead reaches your team so you are not wasting time on junk calls.",
+      "We work with a single floor coating contractor per market, so the appointments we book are yours alone and never shared with a competitor down the road.",
   },
   {
     icon: PhoneCall,
-    title: "Fast handoff while you stay on the job",
+    title: "We hit every lead instantly",
     description:
-      "The system is built so you can respond quickly without spending your day buried in ad accounts or chasing every inquiry by hand.",
+      "Our Meta ads generate the lead, then we contact that homeowner immediately with true speed to lead, before they ever start shopping other coating contractors.",
   },
   {
     icon: CalendarCheck2,
-    title: "Built around estimate appointments",
+    title: "We book the appointment for you",
     description:
-      "The target is not random web form volume. It is real homeowner conversations that can turn into insulation estimates and booked jobs.",
+      "We do not hand you a raw lead to chase. We lock in a floor coating estimate at a time that works for your crew and drop it straight onto your calendar.",
+  },
+  {
+    icon: BadgeCheck,
+    title: "You just show up and quote",
+    description:
+      "No buried ad accounts, no inbox chasing. You run the estimate, do the job, and collect the cash while we keep the calendar full of booked estimates.",
   },
 ];
 
 export const metadata: Metadata = {
-  title: "Insulation Contractor Leads | Exclusive Pay Per Lead Growth",
+  title: "Floor Coating Appointments | Booked Estimates for Contractors",
   description:
-    "Get exclusive insulation contractor leads from Appointly Solutions with fast follow up, qualification, and a pay per lead model built for booked estimates.",
+    "Appointly Solutions books floor coating and epoxy estimates straight onto your calendar with Meta ads and instant speed to lead. You just show up and quote.",
   keywords: [
-    "insulation contractor leads",
-    "exclusive insulation leads",
-    "pay per lead insulation",
+    "floor coating appointments",
+    "epoxy flooring leads",
+    "booked floor coating estimates",
+    "garage floor coating contractors",
     "Appointly Solutions",
   ],
   alternates: {
     canonical: "https://getappointly.co/insulation-contractor-leads",
   },
   openGraph: {
-    title: "Insulation Contractor Leads | Exclusive Pay Per Lead Growth",
+    title: "Floor Coating Appointments | Booked Estimates for Contractors",
     description:
-      "See how Appointly Solutions helps insulation contractors buy qualified leads with less risk and more booked estimate potential.",
+      "See how Appointly Solutions fills floor coating contractors' calendars with booked estimates using Meta ads and instant speed to lead.",
     url: "https://getappointly.co/insulation-contractor-leads",
     siteName: "Appointly Solutions",
     type: "website",
@@ -81,16 +82,17 @@ export default function InsulationContractorLeadsPage() {
           <div className="mx-auto max-w-6xl px-6">
             <div className="max-w-3xl">
               <p className="mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
-                For Insulation Contractors
+                For Floor Coating Contractors
               </p>
               <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-balance md:text-6xl">
-                Insulation leads that turn into{" "}
-                <span className="gradient-text">estimate appointments</span>
+                Floor coating estimates booked straight onto{" "}
+                <span className="gradient-text">your calendar</span>
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                If you want more attic, crawlspace, and whole-home insulation jobs,
-                you need better homeowner conversations in the right service area, not
-                just more random form fills. That is what this page is about.
+                If you want more garage floor coating, epoxy, and concrete coating jobs,
+                you need booked estimates in your service area, not raw leads to chase.
+                We run the Meta ads, hit every lead instantly, and book the appointment
+                for you. You just show up and quote.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
@@ -118,12 +120,12 @@ export default function InsulationContractorLeadsPage() {
                 What You Actually Need
               </p>
               <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">
-                You do not need more traffic. You need qualified estimates in your service area.
+                You do not need more traffic. You need booked floor coating estimates in your service area.
               </h2>
               <p className="mt-4 leading-relaxed text-muted-foreground">
-                Good leads should make sense for the kind of work you want to run,
+                Booked estimates should match the kind of work you want to run,
                 the towns you cover, and the crews you have available. That is the
-                difference between a busy phone and a healthier schedule.
+                difference between a busy phone and a calendar full of coating jobs.
               </p>
             </div>
 
@@ -152,21 +154,22 @@ export default function InsulationContractorLeadsPage() {
                 Why This Works Better
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
-                Better lead quality gives your team a better shot at closing work.
+                A booked estimate gives your crew a better shot at closing the coating job.
               </h2>
               <p className="mt-5 text-sm leading-7 text-muted-foreground md:text-base">
-                The right homeowner, the right service area, quick follow-up, and a
-                clear insulation need all matter. When those pieces line up, the lead
-                is much more likely to become a real estimate instead of a dead-end call.
+                The right homeowner, the right service area, instant speed to lead, and a
+                confirmed time on your calendar all matter. When those pieces line up, the
+                appointment is much more likely to become a signed coating job instead of a
+                dead-end call.
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
                 If exclusivity is your top concern, visit{" "}
                 <Link href="/exclusive-insulation-leads" className="text-primary transition-colors hover:opacity-80">
-                  Exclusive Insulation Leads
+                  Exclusive Appointments
                 </Link>{" "}
                 for a direct breakdown. If pricing model matters most, continue to{" "}
                 <Link href="/pay-per-lead-insulation" className="text-primary transition-colors hover:opacity-80">
-                  Pay Per Lead Insulation
+                  The Appointly Model
                 </Link>
                 .
               </p>
@@ -180,11 +183,11 @@ export default function InsulationContractorLeadsPage() {
                 Next Step
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-slate-950">
-                See what qualified lead flow could look like in your market.
+                See what a calendar of booked coating estimates could look like in your market.
               </h2>
               <p className="mt-4 text-sm leading-7 text-slate-700 md:text-base">
                 Book a strategy call and we will look at your service area, job types,
-                and how many estimate opportunities would actually make sense for your team.
+                and how many booked floor coating estimates would actually make sense for your crew.
               </p>
               <a
                 href={bookingUrl}
@@ -200,7 +203,7 @@ export default function InsulationContractorLeadsPage() {
         <ProofSection />
         <SeoResourceLinks
           title="Keep exploring the highest-intent pages."
-          description="These links reinforce the main service page with supporting pages around exclusivity, pricing, and contractor buying behavior."
+          description="These links reinforce the main service page with supporting pages around exclusive appointments, the Appointly Model, and how floor coating contractors fill their calendars."
           resources={getCommercialResources("insulation-contractor-leads")}
         />
       </main>

@@ -15,45 +15,45 @@ const marketPoints = [
     icon: MapPinned,
     title: "Built for tighter service areas",
     description:
-      "Smaller markets need cleaner targeting, cleaner qualification, and less wasted spend because local search volume is lower.",
+      "Smaller markets need cleaner targeting and less wasted ad spend, so we focus the Meta campaigns and only book floor coating estimates that fit your area.",
   },
   {
     icon: ShieldCheck,
     title: "Exclusivity matters more",
     description:
-      "In a 50K-300K population market, one shared lead can create more pricing pressure than it would in a major metro.",
+      "In a 50K-300K population market, a shared estimate can create more pricing pressure than it would in a major metro. We keep your booked appointments yours.",
   },
   {
     icon: Building2,
     title: "Crew planning is more sensitive",
     description:
-      "Local contractors in smaller metros often feel slower months faster, so flexible lead pacing is more useful than fixed retainers.",
+      "Coating crews in smaller metros feel slower months faster, so a steady flow of booked estimates onto the calendar matters more than chasing raw volume.",
   },
   {
     icon: Map,
-    title: "GBP signals carry more weight",
+    title: "Local visibility supports it",
     description:
-      "In smaller service areas, Google Business Profile strength, reviews, and local relevance can move visibility quickly.",
+      "A solid Google profile and reviews help you close the estimates we book, but the engine is Meta ads and instant speed to lead - not waiting on local search.",
   },
 ];
 
 export const metadata: Metadata = {
-  title: "Insulation Contractor Leads for Small Markets | Appointly Solutions",
+  title: "Booked Estimates for Small Markets | Appointly Solutions",
   description:
-    "See how Appointly Solutions helps insulation contractors in smaller markets generate exclusive, qualified leads with flexible pay per lead pricing.",
+    "See how Appointly Solutions books exclusive floor coating estimates for contractors in smaller metros using Meta ads, instant speed to lead, and the Appointly Model.",
   keywords: [
-    "insulation contractor leads small markets",
-    "small market insulation leads",
-    "local insulation lead generation",
-    "exclusive contractor leads",
+    "floor coating appointments small markets",
+    "small market coating estimates",
+    "local floor coating lead generation",
+    "exclusive coating appointments",
   ],
   alternates: {
     canonical: "https://getappointly.co/insulation-contractor-leads-small-markets",
   },
   openGraph: {
-    title: "Insulation Contractor Leads for Small Markets | Appointly Solutions",
+    title: "Booked Estimates for Small Markets | Appointly Solutions",
     description:
-      "Explore how Appointly Solutions fits insulation contractors serving smaller metros and regional service areas.",
+      "Explore how Appointly Solutions books floor coating estimates for contractors serving smaller metros and regional service areas.",
     url: "https://getappointly.co/insulation-contractor-leads-small-markets",
     siteName: "Appointly Solutions",
     type: "website",
@@ -77,13 +77,13 @@ export default function SmallMarketInsulationLeadsPage() {
                 Service Area Page
               </p>
               <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-balance md:text-6xl">
-                Insulation Contractor Leads for{" "}
+                Booked Estimates for{" "}
                 <span className="gradient-text">Small Markets</span>
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                Appointly Solutions is a strong fit for insulation contractors serving
-                small-to-mid-sized markets where local visibility matters, shared leads
-                create friction fast, and every booked estimate can materially affect the
+                Appointly Solutions is a strong fit for floor coating contractors serving
+                small-to-mid-sized markets where local visibility matters, shared estimates
+                create friction fast, and every booked appointment can materially affect the
                 schedule.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
@@ -98,7 +98,7 @@ export default function SmallMarketInsulationLeadsPage() {
                   href="/exclusive-insulation-leads"
                   className="inline-flex items-center justify-center rounded-xl border border-gray-300 bg-white px-8 py-4 text-sm font-semibold text-gray-700 transition-all hover:bg-gray-50"
                 >
-                  See Exclusive Leads
+                  Exclusive Appointments
                 </Link>
               </div>
             </div>
@@ -112,7 +112,7 @@ export default function SmallMarketInsulationLeadsPage() {
                 Why Smaller Markets Need a Different Approach
               </p>
               <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">
-                The local economics change when your service area is tighter.
+                The local economics change when your coating service area is tighter.
               </h2>
             </div>
 
@@ -145,18 +145,18 @@ export default function SmallMarketInsulationLeadsPage() {
               </h2>
               <p className="mt-5 text-sm leading-7 text-muted-foreground md:text-base">
                 In smaller metros and regional service areas, Appointly Solutions works
-                best when the contractor wants exclusive lead delivery, quick follow up,
-                and qualification standards that keep crews focused on real revenue
-                opportunities instead of noisy inquiries.
+                best when the contractor wants exclusive booked estimates, instant speed
+                to lead, and a clean handoff that keeps crews focused on real coating jobs
+                instead of chasing noisy inquiries.
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
                 If your main concern is ownership, visit{" "}
                 <Link href="/exclusive-insulation-leads" className="text-primary transition-opacity hover:opacity-80">
-                  Exclusive Insulation Leads
+                  Exclusive Appointments
                 </Link>
-                . If your team also performs spray foam work, continue to{" "}
+                . If your team also does epoxy and concrete work, continue to{" "}
                 <Link href="/spray-foam-contractor-leads" className="text-primary transition-opacity hover:opacity-80">
-                  Spray Foam Contractor Leads
+                  Epoxy & Concrete Coatings
                 </Link>
                 .
               </p>
@@ -171,8 +171,8 @@ export default function SmallMarketInsulationLeadsPage() {
               </h2>
               <p className="mt-4 text-sm leading-7 text-slate-700 md:text-base">
                 A strategy call with Appointly Solutions can help you look at population
-                size, service radius, current competition, and whether a pay-per-lead
-                model makes sense in your market.
+                size, service radius, current competition, and whether the Appointly Model
+                makes sense for booking coating estimates in your market.
               </p>
               <a
                 href={bookingUrl}
@@ -188,7 +188,7 @@ export default function SmallMarketInsulationLeadsPage() {
         <ProofSection />
         <SeoResourceLinks
           title="Related pages for contractors serving smaller service areas."
-          description="These resources support local market positioning with more detail on exclusivity, GBP strength, and seasonal planning."
+          description="These resources support local market positioning with more detail on exclusivity, booked estimates, and seasonal planning."
           resources={getCommercialResources("insulation-contractor-leads-small-markets")}
         />
       </main>

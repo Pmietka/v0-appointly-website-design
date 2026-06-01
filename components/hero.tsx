@@ -6,18 +6,18 @@ export function Hero() {
       <div className="mx-auto max-w-5xl px-6">
         <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
           <p className="mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-gray-500">
-            Lead Generation for Insulation Contractors
+            Booked Estimates for Floor Coating Contractors
           </p>
 
           <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-balance text-gray-900 md:text-6xl lg:text-7xl">
-            Keep the estimate calendar full with{" "}
-            <span className="marker-highlight">qualified insulation leads.</span>
+            Keep your calendar full of{" "}
+            <span className="marker-highlight">booked floor coating estimates.</span>
           </h1>
 
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-gray-600 md:text-lg">
-            We help insulation contractors bring in homeowner estimate requests inside
-            their service area, qualify the lead before handoff, and keep crews
-            working without another big monthly retainer.
+            We run the Meta ads, reach every homeowner the second they raise their
+            hand, and book the estimate straight onto your calendar. All you do is
+            show up, run the estimate, do the job, and collect the cash.
           </p>
 
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
@@ -44,7 +44,7 @@ export function Hero() {
             </div>
             <span className="font-display text-3xl font-bold text-gray-900">100%</span>
             <span className="text-center text-sm text-gray-500">
-              Exclusive market coverage for one insulation company
+              Exclusive coverage — one contractor per market
             </span>
           </div>
 
@@ -54,7 +54,7 @@ export function Hero() {
             </div>
             <span className="font-display text-3xl font-bold text-gray-900">8x</span>
             <span className="text-center text-sm text-gray-500">
-              Average return on lead spend
+              Average return on ad spend
             </span>
           </div>
 
@@ -64,7 +64,7 @@ export function Hero() {
             </div>
             <span className="font-display text-3xl font-bold text-gray-900">24-48h</span>
             <span className="text-center text-sm text-gray-500">
-              Typical first lead window after launch
+              Typical first booked estimate after launch
             </span>
           </div>
         </div>

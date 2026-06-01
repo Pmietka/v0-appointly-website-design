@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ArrowRight,
+  CalendarCheck2,
   CircleDollarSign,
   CreditCard,
-  MapPin,
   Megaphone,
-  SearchCheck,
-  Smartphone,
+  ShieldCheck,
+  Zap,
 } from "lucide-react";
 
 import { Footer } from "@/components/footer";
@@ -20,34 +20,34 @@ const bookingUrl = "https://client.getappointly.co/strategy-calendar";
 
 const steps = [
   {
-    icon: MapPin,
-    title: "Google profile and market setup",
-    description:
-      "We tighten up your Google Business Profile and service area positioning so local homeowners can find you with more confidence.",
-  },
-  {
     icon: Megaphone,
-    title: "Local ad campaigns",
+    title: "We generate the lead",
     description:
-      "We run campaigns aimed at homeowners in your target towns who are likely to need attic insulation, removal, or spray foam work.",
+      "We run Meta ads in your service area aimed at homeowners who actually want floor coating, epoxy, or concrete coating work done.",
   },
   {
-    icon: SearchCheck,
-    title: "Lead qualification",
+    icon: Zap,
+    title: "Speed to lead",
     description:
-      "Every lead is checked for homeowner status, project fit, and service area before it reaches your team.",
+      "We contact every lead immediately, before they can shop other contractors. The first one to reach them is usually the one who books the job.",
   },
   {
-    icon: Smartphone,
-    title: "Review follow-up",
+    icon: CalendarCheck2,
+    title: "We book the appointment",
     description:
-      "We include a review system your crew can use after completed jobs so your Google profile gets stronger over time.",
+      "We set the estimate into a time that works for you, on the spot or as soon as we reach them, and drop it straight onto your calendar.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Exclusive to your market",
+    description:
+      "We only work with one contractor per service area, so the appointments we book are never shared with a competitor.",
   },
   {
     icon: CreditCard,
-    title: "Pay per qualified lead",
+    title: "Retainer plus per-appointment fee",
     description:
-      "The model stays tied to approved lead delivery instead of a fixed monthly retainer that keeps running either way.",
+      "A retainer covers our labor and effort. On top of that, you pay a per-appointment fee for each booked estimate that lands on your calendar.",
   },
 ];
 
@@ -55,36 +55,36 @@ const processFaq = [
   {
     question: "Do I need to manage campaigns myself?",
     answer:
-      "No. We handle the setup, ads, qualification flow, and review process. Your team focuses on answering the phone, running estimates, and closing work.",
+      "No. We handle the ads, the speed-to-lead outreach, and the booking. Your team focuses on running estimates and closing work.",
   },
   {
-    question: "What does a qualified lead include?",
+    question: "What lands on my calendar?",
     answer:
-      "A qualified lead is a verified homeowner in your service area with a real insulation project and an indicated budget.",
+      "A booked estimate with a verified homeowner in your service area who wants floor coating work and agreed to a time that works for you.",
   },
   {
-    question: "What if a lead does not meet the criteria?",
+    question: "How does the pricing work?",
     answer:
-      "You do not pay for it. If the lead misses the agreed standards, it does not count.",
+      "You pay a retainer that covers our labor, plus a per-appointment fee for each booked estimate we put on your calendar.",
   },
 ];
 
 export const metadata: Metadata = {
-  title: "How It Works | Appointly Solutions Lead Generation Process",
+  title: "How It Works | The Appointly Model for Booked Estimates",
   description:
-    "Learn how Appointly Solutions generates, qualifies, follows up with, and books insulation leads on a cost per lead model.",
+    "Learn how Appointly Solutions fills your calendar: Meta ads, instant speed-to-lead outreach, and booked estimates, all on a retainer plus per-appointment model.",
   keywords: [
-    "how insulation leads work",
-    "lead generation process",
-    "cost per lead model",
+    "how appointment setting works",
+    "booked estimates for contractors",
+    "retainer plus per appointment",
   ],
   alternates: {
     canonical: "https://getappointly.co/how-it-works",
   },
   openGraph: {
-    title: "How It Works | Appointly Solutions Lead Generation Process",
+    title: "How It Works | The Appointly Model for Booked Estimates",
     description:
-      "See the full Appointly Solutions process from targeted campaigns to booked estimates for insulation contractors.",
+      "See the full Appointly process, from Meta ad campaigns and speed-to-lead to booked estimates on your calendar.",
     url: "https://getappointly.co/how-it-works",
     siteName: "Appointly Solutions",
     type: "website",
@@ -111,8 +111,8 @@ export default function HowItWorksPage() {
                 How <span className="gradient-text">Appointly Solutions</span> works
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                The process is built to help insulation contractors get more qualified
-                estimate opportunities without spending their day inside ad accounts.
+                The process is built to fill floor coating contractors' calendars with
+                booked estimates without them spending their day inside ad accounts.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
@@ -177,12 +177,12 @@ export default function HowItWorksPage() {
                 What You Get
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
-                The lead should feel ready for a real estimate conversation.
+                A booked estimate, ready for you to show up and close.
               </h2>
               <p className="mt-5 text-sm leading-7 text-muted-foreground md:text-base">
-                A typical lead includes verified contact details, service area fit, and
-                enough job context for your team to move into the estimate conversation
-                instead of starting from scratch.
+                Each appointment is a verified homeowner in your service area who wants
+                floor coating work and has agreed to a time that fits your calendar, so
+                your team walks into a real estimate instead of starting from scratch.
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
                 If you want more background on why the system was built this way, the{" "}
@@ -194,7 +194,7 @@ export default function HowItWorksPage() {
                   href="/insulation-contractor-leads"
                   className="text-primary transition-colors hover:opacity-80"
                 >
-                  Insulation Contractor Leads
+                  Floor Coating Appointments
                 </Link>
                 .
               </p>
@@ -208,11 +208,12 @@ export default function HowItWorksPage() {
                 What It Costs
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-slate-950">
-                Cost per lead, tied to performance.
+                A retainer, plus a fee per booked appointment.
               </h2>
               <p className="mt-4 text-sm leading-7 text-slate-700 md:text-base">
-                The conversation stays focused on lead quality, response speed, and booked
-                estimates instead of a big monthly fee that keeps running either way.
+                The retainer covers our labor and effort running the system. On top of
+                that, you pay a per-appointment fee for each booked estimate that lands
+                on your calendar, so the spend stays tied to real opportunities.
               </p>
             </article>
           </div>

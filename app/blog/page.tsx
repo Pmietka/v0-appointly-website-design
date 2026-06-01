@@ -9,14 +9,14 @@ import { formatBlogDate, getBlogPath, getBlogPosts } from "@/lib/blog";
 export const metadata: Metadata = {
   title: "Blog | Appointly Solutions",
   description:
-    "Read practical marketing guidance for insulation contractors, including lead generation, local SEO, Facebook ads, and conversion-focused growth ideas.",
+    "Read practical marketing guidance for floor coating and home service contractors, including booked estimates, Meta ads, local visibility, and growth ideas.",
   alternates: {
     canonical: "https://getappointly.co/blog",
   },
   openGraph: {
     title: "Blog | Appointly Solutions",
     description:
-      "Read practical marketing guidance for insulation contractors, including lead generation, local SEO, Facebook ads, and conversion-focused growth ideas.",
+      "Read practical marketing guidance for floor coating and home service contractors, including booked estimates, Meta ads, local visibility, and growth ideas.",
     url: "https://getappointly.co/blog",
     siteName: "Appointly Solutions",
     type: "website",
@@ -44,11 +44,11 @@ export default async function BlogIndexPage() {
                 Appointly Blog
               </p>
               <h1 className="font-display text-5xl font-bold tracking-tight leading-[1.05] text-balance md:text-6xl">
-                Practical ideas for insulation contractors who want{" "}
-                <span className="gradient-text">more qualified leads</span>
+                Practical ideas for contractors who want{" "}
+                <span className="gradient-text">more booked estimates</span>
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                These articles are built to help contractors improve lead flow, sharpen
+                These articles are built to help contractors fill their calendars, sharpen
                 their marketing, and make better decisions about channels, budgets,
                 and follow-up.
               </p>

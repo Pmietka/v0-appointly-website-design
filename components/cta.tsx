@@ -1,8 +1,8 @@
 import { ArrowRight, CheckCircle } from "lucide-react";
 
 const bullets = [
-  "No long-term retainer",
-  "Qualified homeowner leads only",
+  "Booked estimates, not just leads",
+  "Pay per booked appointment",
   "One contractor per market",
 ];
 
@@ -12,19 +12,19 @@ export function CTA() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="rounded-3xl border border-gray-200 bg-white p-12 text-center shadow-sm md:p-20">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-gray-500">
-            Ready for a better lead source?
+            Ready to fill your calendar?
           </p>
 
           <h2 className="font-display text-4xl font-bold leading-tight text-balance text-gray-900 md:text-5xl lg:text-6xl">
             Put more estimates on the calendar.{" "}
             <br className="hidden md:block" />
-            <span className="marker-highlight">Pay only for qualified leads.</span>
+            <span className="marker-highlight">Pay per booked appointment.</span>
           </h2>
 
           <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-gray-600">
             Book a strategy call and we will look at your service area, job mix, and
-            crew capacity to see whether this actually fits the kind of insulation work
-            you want more of.
+            crew capacity to see whether this actually fits the kind of floor coating
+            work you want more of.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-6">

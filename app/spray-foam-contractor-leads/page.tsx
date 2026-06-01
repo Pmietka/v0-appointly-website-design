@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Flame, ShieldCheck, TimerReset, Waves } from "lucide-react";
+import { ArrowRight, CalendarCheck2, Layers, ShieldCheck, TimerReset } from "lucide-react";
 
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
@@ -12,48 +12,49 @@ const bookingUrl = "https://client.getappointly.co/strategy-calendar";
 
 const sprayFoamPoints = [
   {
-    icon: Flame,
+    icon: Layers,
     title: "Built for specialized jobs",
     description:
-      "Spray foam leads need tighter qualification because the homeowner is usually searching for a specific fix, not general insulation education.",
+      "Epoxy and polyaspartic estimates need tighter targeting because the homeowner is usually searching for a specific finish - a garage floor, showroom, or warehouse coating - not general education.",
   },
   {
-    icon: Waves,
-    title: "Useful in seasonal swings",
+    icon: CalendarCheck2,
+    title: "Steady through seasonal swings",
     description:
-      "Spray foam demand can spike around weather changes and moisture issues, so flexible lead volume matters more than flat retainers.",
+      "Coating demand can spike with warmer weather and new-build cycles, so we pace the Meta ads and keep booking estimates onto your calendar as interest moves.",
   },
   {
     icon: ShieldCheck,
     title: "Exclusive market protection",
     description:
-      "Smaller pools of qualified contractors make exclusivity more valuable when each local opportunity carries more margin.",
+      "Smaller pools of qualified coating crews make exclusivity more valuable when each local job - garage, basement, patio, or showroom floor - carries real margin.",
   },
   {
     icon: TimerReset,
     title: "Faster response window",
     description:
-      "Homeowners looking for crawlspace encapsulation or spray foam repairs often move quickly, so fast follow up supports close rate.",
+      "Homeowners pricing an epoxy garage floor or concrete coating move quickly, so we contact them instantly - speed to lead - before they call another crew.",
   },
 ];
 
 export const metadata: Metadata = {
-  title: "Spray Foam Contractor Leads | Pay Per Lead Growth",
+  title: "Epoxy & Concrete Coating Appointments | Booked Estimates",
   description:
-    "Appointly Solutions helps spray foam contractors generate exclusive, qualified homeowner leads with a pay per lead model built for niche insulation demand.",
+    "Appointly Solutions books exclusive epoxy and concrete coating estimates onto your calendar with Meta ads and instant speed to lead, built for specialized coating demand.",
   keywords: [
-    "spray foam contractor leads",
-    "spray foam lead generation",
-    "pay per lead spray foam",
-    "exclusive spray foam leads",
+    "epoxy contractor appointments",
+    "concrete coating leads",
+    "polyaspartic coating estimates",
+    "garage floor coating appointments",
+    "exclusive coating appointments",
   ],
   alternates: {
     canonical: "https://getappointly.co/spray-foam-contractor-leads",
   },
   openGraph: {
-    title: "Spray Foam Contractor Leads | Pay Per Lead Growth",
+    title: "Epoxy & Concrete Coating Appointments | Booked Estimates",
     description:
-      "See how Appointly Solutions helps spray foam contractors capture qualified demand without relying on retainers.",
+      "See how Appointly Solutions books exclusive epoxy and concrete coating estimates onto your calendar through Meta ads and instant speed to lead.",
     url: "https://getappointly.co/spray-foam-contractor-leads",
     siteName: "Appointly Solutions",
     type: "website",
@@ -74,17 +75,18 @@ export default function SprayFoamContractorLeadsPage() {
           <div className="mx-auto max-w-6xl px-6">
             <div className="max-w-3xl">
               <p className="mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
-                Spray Foam Leads
+                Epoxy & Concrete Coatings
               </p>
               <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-balance md:text-6xl">
-                Spray Foam Contractor Leads Built for{" "}
+                Epoxy & Concrete Coating Appointments Built for{" "}
                 <span className="gradient-text">Specialized Demand</span>
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                Spray foam contractors usually need narrower targeting, better homeowner
-                qualification, and more flexible lead pacing than broad insulation
-                campaigns provide. Appointly Solutions is built to support that kind of
-                specialized market demand.
+                Epoxy and polyaspartic specialists need narrower targeting and faster
+                response than broad home service campaigns provide. Appointly Solutions
+                runs the Meta ads, contacts each homeowner instantly, and books the
+                coating estimate onto your calendar - garage floors, showrooms,
+                warehouses, patios, and basements.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
@@ -98,7 +100,7 @@ export default function SprayFoamContractorLeadsPage() {
                   href="/insulation-contractor-leads"
                   className="inline-flex items-center justify-center rounded-xl border border-gray-300 bg-white px-8 py-4 text-sm font-semibold text-gray-700 transition-all hover:bg-gray-50"
                 >
-                  See Main Lead Page
+                  Floor Coating Appointments
                 </Link>
               </div>
             </div>
@@ -112,7 +114,7 @@ export default function SprayFoamContractorLeadsPage() {
                 Why This Market Behaves Differently
               </p>
               <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">
-                Spray foam lead generation is usually narrower and more seasonal.
+                Booking coating estimates is usually narrower and more seasonal.
               </h2>
             </div>
 
@@ -141,22 +143,22 @@ export default function SprayFoamContractorLeadsPage() {
                 Where Appointly Fits
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
-                Better for contractors who need qualified jobs, not broad traffic.
+                Better for coating crews who need booked estimates, not raw traffic.
               </h2>
               <p className="mt-5 text-sm leading-7 text-muted-foreground md:text-base">
-                Appointly Solutions supports spray foam contractors with pay-per-lead
-                positioning, faster response expectations, and exclusivity that protects
-                a narrower local market. That makes it easier to compare lead cost against
-                real job value instead of against vague traffic metrics.
+                Appointly Solutions supports epoxy and concrete coating specialists with
+                Meta ads, instant speed to lead, and exclusivity that protects a narrower
+                local market. You compare what you pay per booked estimate against the
+                value of a real coating job, not against vague traffic metrics.
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
                 For the broader service page, return to{" "}
                 <Link href="/insulation-contractor-leads" className="text-primary transition-opacity hover:opacity-80">
-                  Insulation Contractor Leads
+                  Floor Coating Appointments
                 </Link>
-                . If pricing is the main question, continue to{" "}
+                . To understand how the model works, continue to{" "}
                 <Link href="/pay-per-lead-insulation" className="text-primary transition-opacity hover:opacity-80">
-                  Pay Per Lead Insulation
+                  The Appointly Model
                 </Link>
                 .
               </p>
@@ -164,15 +166,16 @@ export default function SprayFoamContractorLeadsPage() {
 
             <article className="rounded-3xl border border-primary/20 bg-primary/10 p-8 shadow-[0_0_70px_rgba(125,135,247,0.1)] md:p-10">
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-600">
-                Spray Foam Strategy
+                Coating Strategy
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
                 Review seasonality, close rate, and market fit before you scale.
               </h2>
               <p className="mt-4 text-sm leading-7 text-slate-700 md:text-base">
                 A strategy call with Appointly Solutions can help you compare your
-                average spray foam job value, service area, and demand timing against a
-                pay-per-lead model that flexes with your market.
+                average coating job value, service area, and demand timing against the
+                Appointly Model - a retainer plus a per-appointment fee for each booked
+                estimate we put on your calendar.
               </p>
               <a
                 href={bookingUrl}
@@ -187,8 +190,8 @@ export default function SprayFoamContractorLeadsPage() {
 
         <ProofSection />
         <SeoResourceLinks
-          title="Resources supporting spray foam lead generation."
-          description="These pages and articles strengthen the spray foam topic cluster with more detail on benchmarks, seasonality, and pricing."
+          title="Resources supporting epoxy and concrete coating appointments."
+          description="These pages and articles strengthen the coating topic cluster with more detail on booked estimates, seasonality, and the Appointly Model."
           resources={getCommercialResources("spray-foam-contractor-leads")}
         />
       </main>

@@ -12,45 +12,46 @@ const comparisons = [
     icon: SplitSquareVertical,
     title: "Shared lead marketplaces",
     description:
-      "Shared lead systems push multiple contractors into the same homeowner conversation, which drives down margins and raises response pressure.",
+      "Shared lead systems push several floor coating contractors into the same homeowner conversation, which drives down margins and raises response pressure.",
   },
   {
     icon: Crown,
-    title: "Exclusive lead delivery",
+    title: "Exclusive booked appointments",
     description:
-      "Appointly Solutions is built around protecting lead ownership so the opportunity has more room to turn into a meaningful sales conversation.",
+      "Appointly Solutions works with one coating contractor per market, so every booked estimate is yours alone and never sold to a competitor.",
   },
   {
     icon: ShieldCheck,
-    title: "Qualification before handoff",
+    title: "Booked, not just handed off",
     description:
-      "Exclusive is only valuable when the lead is also relevant. We focus on homeowner fit, project relevance, and real purchase intent.",
+      "Exclusive only matters when the appointment is real. We generate the lead, hit it instantly, and lock in a confirmed time on your calendar.",
   },
   {
     icon: Users,
     title: "Less chaos for your sales team",
     description:
-      "When your team is not competing with several contractors at once, follow up feels cleaner and close rate potential improves.",
+      "When you are not racing several contractors to the same homeowner, follow up feels cleaner and close rate potential improves.",
   },
 ];
 
 export const metadata: Metadata = {
-  title: "Exclusive Insulation Leads | No Shared Contractor Leads",
+  title: "Exclusive Floor Coating Appointments | One Contractor Per Market",
   description:
-    "Learn how Appointly Solutions delivers exclusive insulation leads so contractors can avoid shared lead competition and focus on qualified booked opportunities.",
+    "Appointly Solutions books exclusive floor coating estimates onto your calendar. One contractor per market, no shared leads, appointments booked for you.",
   keywords: [
-    "exclusive insulation leads",
-    "shared contractor leads",
-    "exclusive contractor leads",
+    "exclusive floor coating appointments",
+    "one contractor per market",
+    "exclusive epoxy flooring leads",
+    "floor coating estimates",
     "Appointly Solutions",
   ],
   alternates: {
     canonical: "https://getappointly.co/exclusive-insulation-leads",
   },
   openGraph: {
-    title: "Exclusive Insulation Leads | No Shared Contractor Leads",
+    title: "Exclusive Floor Coating Appointments | One Contractor Per Market",
     description:
-      "See why exclusive insulation leads outperform shared lead systems for many contractors.",
+      "See why exclusive booked floor coating appointments beat shared lead systems for coating contractors.",
     url: "https://getappointly.co/exclusive-insulation-leads",
     siteName: "Appointly Solutions",
     type: "website",
@@ -71,17 +72,17 @@ export default function ExclusiveInsulationLeadsPage() {
           <div className="mx-auto max-w-6xl px-6">
             <div className="max-w-3xl">
               <p className="text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-6">
-                Exclusive Leads
+                Exclusive Appointments
               </p>
               <h1 className="font-display text-5xl md:text-6xl font-bold tracking-tight leading-[1.05] text-balance">
-                Exclusive Insulation Leads Without the{" "}
+                Exclusive Floor Coating Appointments Without the{" "}
                 <span className="gradient-text">Shared Lead Scramble</span>
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                Contractors do not just want more leads. They want better conditions to
-                close. Appointly Solutions gives insulation contractors a model centered
-                on exclusive opportunities, better qualification, and less margin-killing
-                competition.
+                Floor coating contractors do not just want more leads. They want better
+                conditions to close. Appointly Solutions gives coating contractors one
+                market per contractor, booked estimates instead of raw leads, and less
+                margin-killing competition.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
@@ -95,7 +96,7 @@ export default function ExclusiveInsulationLeadsPage() {
                   href="/insulation-contractor-leads"
                   className="inline-flex items-center justify-center rounded-xl border border-gray-300 bg-white px-8 py-4 text-sm font-semibold text-gray-700 hover:bg-gray-50 transition-all"
                 >
-                  See Core Lead Page
+                  Floor Coating Appointments
                 </Link>
               </div>
             </div>
@@ -109,7 +110,7 @@ export default function ExclusiveInsulationLeadsPage() {
                 Shared Versus Exclusive
               </p>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
-                Why exclusivity matters to close rate and margin.
+                Why exclusive booked appointments matter to close rate and margin.
               </h2>
             </div>
 
@@ -138,21 +139,21 @@ export default function ExclusiveInsulationLeadsPage() {
                 Where Appointly Solutions Fits
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
-                Best for contractors who value quality over noise.
+                Best for coating contractors who value quality over noise.
               </h2>
               <p className="mt-5 text-sm leading-7 text-muted-foreground md:text-base">
-                Appointly Solutions works best for teams that want fewer wasted
-                conversations, cleaner follow up, and a system that aligns lead cost
-                with actual opportunity quality.
+                Appointly Solutions works best for crews that want fewer wasted
+                conversations, a calendar of booked estimates, and a system that ties
+                spend to appointments that actually show up.
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
-                To see how exclusive leads fit into the bigger delivery system, visit{" "}
+                To see how exclusive appointments fit into the bigger delivery system, visit{" "}
                 <Link href="/how-it-works" className="text-primary transition-opacity hover:opacity-80">
                   How It Works
                 </Link>
                 . If you are comparing pricing models, continue to{" "}
                 <Link href="/pay-per-lead-insulation" className="text-primary transition-opacity hover:opacity-80">
-                  Pay Per Lead Insulation
+                  The Appointly Model
                 </Link>
                 .
               </p>
@@ -163,12 +164,12 @@ export default function ExclusiveInsulationLeadsPage() {
                 Ready To Talk
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
-                Explore whether exclusive lead delivery fits your market.
+                Explore whether exclusive booked appointments fit your market.
               </h2>
               <p className="mt-4 text-sm leading-7 text-slate-700 md:text-base">
                 A strategy call with Appointly Solutions will show you where exclusive
-                insulation leads make sense, how qualification works, and what to expect
-                from the process.
+                floor coating appointments make sense, how the speed-to-lead booking works,
+                and what to expect from the process.
               </p>
               <a
                 href={bookingUrl}

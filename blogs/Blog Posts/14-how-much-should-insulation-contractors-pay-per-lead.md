@@ -1,199 +1,183 @@
-# How Much Should Insulation Contractors Pay Per Lead in 2025?
+# What's a Booked Floor Coating Estimate Actually Worth? How to Budget for Appointment Generation
 
-You're looking at a lead generation service. They're quoting you $125 per lead. Another service is quoting you $75. A third one says $175.
-
-Which one is actually a good deal?
-
-Here's the problem: you don't know your numbers well enough to answer that question. And if you don't know your numbers, you're going to overpay for leads that don't convert and underpay for leads that could fill your calendar.
-
-The right price per lead is different for every contractor. It depends on your close rate, your average job size, your service area, and how many leads you need to fill your calendar. The goal is to figure out the maximum you can afford to pay per lead and still make money.
-
-## The Industry Benchmark: $50 to $150 Per Lead
-
-Industry research across home services contractors shows that lead costs typically range from $50 to $150 per qualified lead. For insulation and spray foam specifically, most contractors are paying in the $80 to $130 range.
-
-But a benchmark is just a starting point. Your actual max cost per lead might be higher or lower depending on several factors.
-
-## The Factors That Determine Your Max Cost Per Lead
-
-### Your Average Job Size
-
-A spray foam contractor with an average job size of $5,000 can afford to pay more per lead than a contractor with an average job of $1,500.
-
-Let's say your close rate is 30 percent. That means for every three leads you get, you convert one into a job.
-
-If your average job is $5,000, then three leads at $100 per lead costs you $300. You convert one, you get a $5,000 job. You made $4,700 in gross profit (assuming 94 percent gross margin, which is typical for insulation work).
-
-If your average job is $1,500, then three leads at $100 per lead still costs you $300. You convert one, you get a $1,500 job. You made $1,200 in gross profit. That's barely profitable.
-
-The contractor with larger jobs can afford to pay more per lead. They have more margin to work with.
-
-### Your Close Rate
-
-Your close rate is how many leads you actually convert into jobs. If you get 20 leads and convert 6 into jobs, your close rate is 30 percent.
-
-Close rate varies wildly by contractor and by quality of leads. Some contractors close 50 percent of leads (these are usually leads from word of mouth or referrals). Some contractors close 10 percent (these are usually cold leads from digital marketing).
-
-A lead source from a high-quality provider might close at 40 percent. A lead source from a cheap provider might close at 5 percent. Even though the cheap source is literally cheaper per lead, your actual cost per converted job is higher.
-
-Here's the math: 20 leads at $50 per lead with a 5 percent close rate means you spent $1,000 to get one job.
-
-20 leads at $125 per lead with a 40 percent close rate means you spent $625 to get four jobs ($156 per job).
-
-The "expensive" leads are actually much cheaper per converted customer.
-
-### Your Lead Capacity
-
-How many jobs can you actually do in a month? If you can do 8 jobs per month at 30 percent close rate, you need 27 leads per month.
-
-If you can do 2 jobs per month, you only need 7 leads.
-
-The contractor who needs 27 leads has more flexibility on cost per lead. They can afford to buy more leads because they have the capacity to convert them.
-
-The contractor who only needs 7 leads per month should be more selective. Paying $150 per lead when you only need 7 might cost you more than it's worth. You'd be better off with fewer, cheaper leads.
-
-### Your Lead Quality Requirements
-
-Are you trying to reach homeowners in a specific income range? Are you only willing to service homes over 5,000 square feet? Are you trying to avoid certain neighborhoods or customer types?
-
-The more specific your targeting, the more expensive leads will be. A lead provider who guarantees they're only sending you leads from homes in the top 30 percent income bracket will charge more than someone who sends any lead in your service area.
-
-More selective often means better quality and higher close rates, which justifies higher cost per lead. But not always.
-
-## The Calculation: What's Your Maximum Cost Per Lead?
-
-Here's how to figure out the maximum you should pay per lead:
-
-Start with your average job gross profit. Let's say your average insulation job is $3,500 and your gross margin is 90 percent. Your gross profit is $3,150.
-
-Multiply by your close rate in decimal form. If your close rate is 25 percent (0.25), your expected gross profit per lead is $3,150 x 0.25 = $787.50.
-
-Subtract your other marketing costs, customer acquisition overhead, and overhead for managing leads. Let's say this is $100 per lead.
-
-Your actual profit per lead is $787.50 - $100 = $687.50.
-
-The maximum you should pay per lead is around 40 to 50 percent of that profit. That leaves you room for error, a low close rate month, and overhead you didn't expect.
-
-40 percent of $687.50 = $275 per lead.
-
-In this case, if someone's charging you more than $200 to $250 per lead, it's getting expensive. If they're charging less than $100, you should ask why the leads are so cheap. There might be a quality problem.
-
-Let's run another example with a smaller average job:
-
-Average job: $2,000. Gross margin: 85 percent = $1,700 gross profit.
-Close rate: 30 percent = $510 expected gross profit per lead.
-Other costs: $75 per lead.
-Actual profit: $435 per lead.
-Maximum cost per lead: 40 percent = $174 per lead.
-
-In this case, paying $150 per lead is reasonable. Paying $200 per lead is pushing it.
-
-## Why Cheap Leads Often Cost You More in the Long Run
-
-You'll sometimes see lead providers charging $30, $40, or $50 per lead. This seems amazing compared to $100 to $150.
-
-But ask yourself: why are they so cheap?
-
-Usually it's because:
-
-The lead quality is poor. The leads haven't been screened. You're getting tire kickers and DIY homeowners mixed in with actual buying customers.
-
-The leads are shared with competitors. You're buying the same lead as five other insulation contractors. Your close rate will be 1 percent instead of 30 percent.
-
-The leads are old or cold. They came from a lead marketplace that collects leads and sells them weeks or months later. By the time you call, they've already hired someone else.
-
-The provider doesn't care if you convert. They're just aggregating leads and selling them to anyone. They're not optimizing for your success.
-
-In all these cases, you might pay $40 per lead but never actually close any jobs. Your true cost per acquired customer is infinite.
-
-The best leads are more expensive because they're worth more. They're screened, current, targeted, and coming from a provider who's incentivized to make sure they're quality.
-
-## The Real Cost Isn't Per Lead, It's Per Customer
-
-Stop thinking about cost per lead. Start thinking about cost per acquired customer.
-
-Cost per lead: $100
-Close rate: 20 percent
-Cost per customer: $500
-
-Cost per lead: $150
-Close rate: 35 percent
-Cost per customer: $428
-
-The second option is more expensive per lead but cheaper per customer. That's what actually matters.
-
-Track your close rate by lead source. Track your average job size by lead source. Calculate your true customer acquisition cost. Then compare that across all your lead sources.
-
-The provider with the highest cost per lead might be your best investment.
-
-## What You Should Expect from a Reputable Lead Provider
-
-If you're paying $100 to $150 per lead, what should that include?
-
-Targeted leads from your specific service area.
-
-Leads from homeowners actively looking for insulation or spray foam services.
-
-A delivered lead within 24 to 48 hours of the inquiry.
-
-Screened leads that verify the homeowner is ready to accept a quote or estimate.
-
-Phone number and contact information you can call directly.
-
-No shared leads. You're the only contractor getting the lead.
-
-A provider who tracks their own metrics and can tell you their average close rate for contractors like you.
-
-If a provider is charging you $100+ per lead and can't guarantee these things, you're overpaying.
-
-## The Hidden Costs of Bad Lead Sources
-
-There are costs beyond the per-lead price:
-
-Your time calling dead leads. If 80 percent of your leads don't pick up the phone, you're wasting time. That costs money.
-
-Your sales team's frustration. Constantly calling bad leads demoralizes your team. They'll stop being as effective on good leads.
-
-Your reputation in the market. If you're taking on jobs without proper vetting, you might end up in difficult installations that hurt your brand. The cheap lead that costs $30 but requires twice as much work and turns a good customer into a nightmare? That cost way more than $30.
-
-Your cash flow. If you have to spend $5,000 on leads to get one job, your cash flow suffers. Better to spend $500 to get one job with a higher conversion rate.
-
-## The Seasonal Factor: Leads Cost More in Spring
-
-Spring is peak season for insulation contractors. Leads are more expensive in March, April, and May than they are in November, December, and January.
-
-In spring, a qualified insulation lead might cost $150 to $200. In winter, the same lead might cost $75 to $100.
-
-This is because demand is high. Everyone's hiring homeowners for spring projects. Lead providers have more buyers competing for inventory.
-
-Plan your budget accordingly. If you want to maximize ROI, consider front-loading your lead spend in off-season (when leads are cheaper) and relying more on referrals and word of mouth in peak season (when leads are expensive).
-
-## FAQ
-
-**Q: Should I negotiate the per-lead price with a provider?**
-
-A: Maybe. If you're committing to a large volume (100+ leads per month), you might get a volume discount. But beware of providers who negotiate down too much. They might be cutting quality to maintain margin. Better to pay the standard rate for quality leads than negotiate for cheap leads that don't convert.
-
-**Q: What if I get leads from multiple sources at different price points?**
-
-A: Track each source separately. Calculate the true cost per acquired customer for each. Double down on the sources with the lowest customer acquisition cost, even if the per-lead price is higher. Reduce or eliminate the sources with high customer acquisition cost.
-
-**Q: Is it ever worth buying cheap leads just to fill the pipeline?**
-
-A: No. Cheap leads that don't convert are worse than no leads at all. They waste your time, frustrate your team, and give you false hope. Better to have 10 qualified leads at $150 each than 50 garbage leads at $30 each.
-
-**Q: How do I know if the leads I'm getting are actually "qualified"?**
-
-A: A qualified lead should be a homeowner who specifically wants the service you're offering (insulation or spray foam), is ready to get quotes, and is in your service area. If a lead says "maybe someday" or "I'm just getting information," they're not qualified. Ask your provider what their qualification process is.
-
-**Q: Should I use multiple lead providers or stick with one?**
-
-A: Test both approaches. Some contractors find that one provider gives them consistent, reliable leads and they want to deepen that relationship. Others find that multiple sources provide more stability and flexibility. The key is measuring performance on each source and being willing to make adjustments.
+**Meta Description:** Stop thinking in leads. Learn what a booked epoxy floor estimate is worth, how to budget for appointment generation, and how the Appointly Model fills your calendar.
 
 ---
 
-The right cost per lead for your business depends on your numbers. Calculate your gross profit per lead, estimate your close rate by source, and figure out the maximum you can afford to pay while staying profitable.
+You're looking at ways to fill your calendar. One option quotes you a number for "leads." Another wants a fat monthly retainer for "exposure." A third promises the moon and delivers a spreadsheet of phone numbers nobody answers.
 
-Don't chase cheap leads. Chase cost-effective leads that convert into customers. There's a huge difference.
+Which one actually puts coated floors on your calendar?
 
-At Appointly, we price our leads at $100 per qualified insulation or spray foam lead in most markets. We don't cut corners on quality. Every lead is screened, verified, and targeted to your service area. We deliver within 2 to 3 weeks because we know speed matters for close rates. And because we operate on a pay-per-lead model, we're incentivized to make sure the leads convert. Your success is our success. If you want to understand whether our per-lead cost is right for your business, let's have a conversation. Reach out to Appointly today to discuss your specific numbers and see if we can help fill your pipeline profitably.
+Here's the real problem: most floor coating contractors are asking the wrong question. They're asking "how much should I pay per lead?" when the question that actually matters is "how much is a booked estimate worth to my business, and how do I budget to get enough of them?"
+
+A raw lead is just a name and a number. A booked estimate is a homeowner sitting in their garage at a scheduled time, waiting for you to show up and quote their floor. Those are not the same thing, and you should never pay for them like they are.
+
+This article breaks down what a booked floor coating estimate is actually worth, how to budget for appointment generation, and how to think about the numbers so you stay profitable.
+
+## Forget "Per Lead." Think "Per Booked Estimate."
+
+A lead is the start of the work, not the end of it. Somebody has to call that homeowner, fast, before they fill out three more forms and book your competitor. Somebody has to qualify them, handle the back-and-forth, and get them on the calendar at a time that works for your crew. Most of the value, and most of the failure, lives in that gap.
+
+When you buy raw leads, you're buying yourself a second job: the chasing. When you budget around booked estimates, you're buying the outcome, an appointment that's ready for you to show up and close.
+
+That's the entire shift. Once you measure your business in booked estimates instead of leads, your budgeting gets a lot clearer.
+
+## What Determines the Value of a Booked Estimate
+
+### Your Average Job Size
+
+A floor coating contractor with an average job of $5,000 can afford to invest more to get a booked estimate than one whose average job is $1,500.
+
+Let's say your close rate on booked estimates is 40 percent. That means for every five homeowners you actually meet with and quote, you win two jobs.
+
+If your average coated-floor job is $5,000, five booked estimates that turn into two jobs is $10,000 in revenue. Floor coating carries strong gross margins, so there's plenty of room in there to pay for the appointment generation and still come out well ahead.
+
+If your average job is $1,500, those same two jobs are only $3,000 in revenue. You have less margin to work with, so you'd want a lower cost per booked estimate or a higher close rate.
+
+The contractor with larger jobs (think full three-car garages, basements, and polyaspartic showroom floors) can afford to invest more per booked estimate. They have more margin per job.
+
+### Your Close Rate on Estimates
+
+Your close rate is how many of the estimates you actually run turn into signed jobs. If you quote 10 floors and sign 4, your close rate is 40 percent.
+
+Close rate varies a lot by contractor and by how the estimate was set up. A homeowner who got a fast callback, was clearly qualified, and is sitting at home expecting you closes far better than a cold name off a shared list who barely remembers filling out a form.
+
+Here's why this matters for budgeting: a cheap "lead" that closes at 5 percent is brutally expensive per job. A booked estimate that closes at 40 percent is cheap per job even if it costs more up front, because you're not burning days chasing dead numbers.
+
+Run the math. Twenty cold leads that close at 5 percent gets you one job. Five properly booked, qualified estimates that close at 40 percent gets you two jobs, with a fraction of the chasing. The booked estimates win, and it isn't close.
+
+### Your Crew Capacity
+
+How many floors can you actually coat in a month? If you can do 8 jobs per month at a 40 percent close rate, you need roughly 20 booked estimates per month.
+
+If you can only handle 2 jobs per month, you need about 5 booked estimates.
+
+The contractor who can install 8 floors a month wants the calendar packed and benefits from scaling appointment generation up. The one-crew shop should keep the booked-estimate flow steady so they're not buried in appointments they can't service. Either way, budgeting around booked estimates lets you dial the volume to match your capacity.
+
+### Your Targeting Requirements
+
+Are you trying to reach homeowners in a specific income range? Only quoting garages over a certain size, or only certain neighborhoods? The tighter your targeting, the more work goes into producing each qualified booked estimate, and the more each one is worth, because more of them turn into real, profitable jobs.
+
+More selective usually means higher show rates and higher close rates, which justifies a higher cost per booked estimate. A garage full of qualified, ready buyers beats a parking lot full of tire-kickers every time.
+
+## The Calculation: What Can You Invest Per Booked Estimate?
+
+Here's how to figure out what a booked estimate is worth to you:
+
+Start with your average job gross profit. Say your average coated-floor job is $3,500 with strong margins, leaving you roughly $3,000 in gross profit.
+
+Multiply by your close rate on estimates. If you close 40 percent (0.40) of the estimates you run, each booked estimate is worth $3,000 x 0.40 = $1,200 in expected gross profit before any acquisition cost.
+
+That's the number that matters. Each appointment that lands on your calendar is, on average, worth $1,200 in gross profit to your business. Now subtract what it costs to generate and book that appointment, plus your overhead for showing up and quoting. Whatever's left is your profit per booked estimate.
+
+The point of running this math is simple: a booked estimate is worth real money to a floor coating contractor. Far more than the cost of generating it should ever be. So the question isn't "what's the cheapest lead I can find." It's "how do I reliably get enough booked estimates on the calendar to keep my crew busy and stay profitable."
+
+Run it with a smaller job too:
+
+Average job: $2,000. Strong margins leave roughly $1,700 gross profit.
+Close rate on estimates: 35 percent. That's about $595 of expected gross profit per booked estimate.
+Even on smaller tickets, a booked estimate is worth hundreds of dollars in gross profit. There's plenty of room to pay for appointment generation and stay well in the black, as long as the appointments are real and you actually close.
+
+## Why "Cheap Leads" Usually Cost You More
+
+You'll see offers for dirt-cheap leads. It looks amazing compared to paying for fully booked estimates. But ask yourself why they're so cheap.
+
+Usually it's because:
+
+The leads aren't qualified. They haven't been screened. You're getting tire-kickers and "just curious" DIY homeowners mixed in with real buyers.
+
+The leads are shared. You're getting the same name as five other floor coating contractors. Whoever calls first wins, and if you're not staffed to call in seconds, that's never you.
+
+The leads are stale. They came from a marketplace that collected them and resold them later. By the time you call about their garage floor, they already hired someone.
+
+Nobody books the appointment. You get a phone number and a prayer. The actual work, calling fast, qualifying, and getting them on your calendar, is left entirely to you.
+
+In all of these cases, you might pay almost nothing per lead and still never coat a floor. Your true cost per job is sky-high once you count the wasted time.
+
+The reason a booked estimate is worth more is that the hard part is already done. The homeowner got a fast callback, got qualified, and is scheduled and expecting you. That's the difference between a name on a list and a job on the calendar.
+
+## The Real Number Is Cost Per Job, Not Cost Per Lead
+
+Stop thinking about cost per lead. Start thinking about cost per coated floor on your calendar.
+
+A pile of cheap leads with a 5 percent close rate can cost you more per job than a smaller set of booked estimates with a 40 percent close rate, even though the "price per lead" looks higher. The booked estimates are cheaper per job, eat less of your time, and don't demoralize you with dead-end calls.
+
+Track your show rate. Track your close rate. Track your average job size. Then compare cost per actual job across whatever you're doing to fill the calendar. The approach that produces booked estimates almost always wins on cost per job, which is the only number that pays you.
+
+## How to Budget for Appointment Generation
+
+Once you accept that a booked estimate is worth real gross profit, budgeting gets easy. Work backward from your capacity.
+
+Decide how many floors you want to coat next month. Multiply by how many booked estimates you need per job (1 divided by your close rate). That's your target number of booked estimates.
+
+Then set aside a budget for appointment generation that's comfortably less than the gross profit those jobs will produce. Because a booked floor coating estimate is worth hundreds to over a thousand dollars in gross profit, there's a healthy gap between what the appointments are worth and what it costs to generate them, and that gap is your money.
+
+The mistake is treating appointment generation as a cost to minimize instead of an investment that produces jobs. If every booked estimate reliably turns into gross profit that dwarfs its cost, you don't want fewer of them. You want as many as your crew can handle.
+
+## What You Should Expect From a Real Appointment Generation Partner
+
+If you're investing in appointment generation, here's what you should actually get:
+
+Booked estimates in your specific service area. Not statewide noise, your zip codes.
+
+Homeowners actively interested in floor coatings, generated through Meta ads that show your work to the right people.
+
+Speed to lead. The homeowner gets contacted immediately, before they shop three other contractors, while their interest is hot.
+
+An actual appointment on your calendar, scheduled into a time slot that works for your crew, not a phone number for you to chase.
+
+Exclusivity. One contractor per market. You're not racing four other shops for the same garage.
+
+A partner whose incentives line up with yours, who makes money when appointments actually get booked, not when a meaningless "exposure" report gets emailed.
+
+That's the Appointly Model: a retainer that covers our labor running the whole system, plus a per-appointment fee for each booked estimate that lands on your calendar. You're not buying raw leads. You're buying floors on the calendar.
+
+## The Hidden Costs of Chasing Raw Leads
+
+There are costs beyond the price tag:
+
+Your time calling dead numbers. If most of your leads don't pick up, you're burning hours you should spend coating floors. That's real money.
+
+Your frustration. Constantly calling cold, half-interested names wears you down. You start phoning it in on the good ones too.
+
+Your reputation. Taking on poorly-vetted jobs leads to bad fits, callbacks, and unhappy homeowners. A cheap lead that turns into a problem garage costs you far more than its price.
+
+Your cash flow. If you have to grind through dozens of dead leads to land one floor, your cash flow suffers. A steady stream of booked estimates that close is smoother and far more predictable.
+
+## The Seasonal Factor: Demand Climbs in Spring and Summer
+
+Spring and summer are prime time for floor coatings. Homeowners are cleaning out garages, finishing basements, and want that showroom floor before the weather's nice. Demand climbs, and so does competition for homeowner attention.
+
+When everyone's chasing the same homeowners, speed to lead matters even more. The contractor who contacts the homeowner first and gets the appointment booked wins. The one who calls back two hours later is talking to someone who's already scheduled with a competitor.
+
+Budget for it. Lean into appointment generation when demand is high and homeowners are ready to buy. That's when a booked, exclusive estimate is worth the most.
+
+## FAQ
+
+**Q: Isn't it cheaper to just buy leads and call them myself?**
+
+A: Only if your time is worth nothing and your follow-up is instant, around the clock. For most floor coating contractors it isn't. The math that matters is cost per coated floor, and booked estimates almost always win there because the chasing, qualifying, and scheduling is already handled.
+
+**Q: How do I know an appointment is actually qualified?**
+
+A: A qualified booked estimate is a homeowner who specifically wants a floor coating, has been contacted and screened, is in your service area, and is scheduled at a time that works for your crew. If it's just a name who said "maybe someday," it isn't a booked estimate.
+
+**Q: Should I run my own ads or use a done-for-you partner?**
+
+A: You can run top-of-funnel ads yourself for awareness and reviews. But the part that books jobs, instant follow-up and scheduling, is where most contractors fall down. A done-for-you partner on the Appointly Model runs the Meta ads, hits speed to lead, and books the estimate so you can stay on the job site.
+
+**Q: How much should I budget per booked estimate?**
+
+A: Work backward from your numbers. Calculate your gross profit per job, multiply by your close rate to find what each booked estimate is worth, and budget comfortably below that. Because a booked floor coating estimate is worth real gross profit, there's plenty of margin to invest in getting more of them.
+
+**Q: What about exclusivity? Does it matter?**
+
+A: Hugely. A shared lead gets called by five contractors and your close rate craters. An exclusive booked estimate, one contractor per market, means you're the only one walking into that garage. That's worth paying for.
+
+---
+
+The right way to budget for filling your calendar isn't "how cheap can I get a lead." It's "what is a booked estimate worth to my business, and how do I reliably get enough of them." Calculate your gross profit per job, estimate your close rate, and you'll see that a booked floor coating estimate is worth real money, far more than it costs to generate.
+
+Don't chase cheap leads. Invest in booked estimates that turn into coated floors. There's a huge difference.
+
+At Appointly, we don't sell raw leads. We fill your calendar with booked estimates. Here's the model: you pay a retainer that covers our labor running the entire system, plus a per-appointment fee for each booked estimate that lands on your calendar. We generate the lead through Meta ads, we contact the homeowner immediately with speed to lead before they can shop another contractor, and we book them into a time that works for you. One contractor per market, so you're never competing for the same garage. You just show up, run the estimate, coat the floor, and collect. Want to see what a calendar full of booked estimates does for your business? Head to [getappointly.co](https://getappointly.co) and let's talk numbers.

@@ -33,9 +33,9 @@ const callPrep = [
     icon: Target,
     title: "What We'll Cover",
     items: [
-      "Your current lead generation setup",
-      "Where qualified leads are slipping",
-      "Exactly how our system fills your calendar",
+      "Your current booking and follow-up setup",
+      "Where estimates are slipping away",
+      "Exactly how we fill your calendar with booked estimates",
     ],
   },
   {
@@ -88,9 +88,9 @@ export default function ThankYouPage() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-            You just took the next step toward a lead system that is built around
-            real estimate opportunities. Watch the short video below so we can spend
-            the call on your market, your service area, and your actual growth plan.
+            You just took the next step toward a system that books estimates straight
+            onto your calendar. Watch the short video below so we can spend the call on
+            your market, your service area, and your actual growth plan.
           </p>
         </div>
       </section>

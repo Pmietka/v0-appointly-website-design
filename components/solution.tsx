@@ -1,42 +1,42 @@
 import {
   ArrowRight,
+  CalendarCheck2,
   CreditCard,
-  MapPin,
   Megaphone,
   ShieldCheck,
-  Smartphone,
+  Zap,
 } from "lucide-react";
 
 const steps = [
   {
-    icon: MapPin,
-    title: "Google profile and market setup",
+    icon: Megaphone,
+    title: "We generate the lead",
     description:
-      "We tighten up your Google Business Profile and service area positioning so homeowners can actually find and trust you when they search locally.",
+      "We run Meta ads in your service area aimed at homeowners who actually want floor coating, epoxy, or concrete coating work done.",
   },
   {
-    icon: Megaphone,
-    title: "Ads built around estimate requests",
+    icon: Zap,
+    title: "Speed to lead",
     description:
-      "We run local campaigns aimed at homeowners who need attic insulation, spray foam, or removal work in the areas you actually want to service.",
+      "We contact every lead immediately, before they can shop other contractors. The first one to reach them is usually the one who books the job.",
+  },
+  {
+    icon: CalendarCheck2,
+    title: "We book the appointment",
+    description:
+      "We set the estimate into a time that works for you, either on the spot or as soon as we reach them, and drop it straight onto your calendar.",
   },
   {
     icon: ShieldCheck,
-    title: "Lead screening before handoff",
+    title: "Exclusive to your market",
     description:
-      "We screen for homeowner status, service area, project type, and fit before the lead reaches your team, so you spend less time on bad calls.",
-  },
-  {
-    icon: Smartphone,
-    title: "Review system after completed jobs",
-    description:
-      "We send review cards your team can hand out after a clean install so your Google profile gets stronger as more jobs are completed.",
+      "We only work with one contractor per service area, so the appointments we book are never shared with a competitor down the road.",
   },
   {
     icon: CreditCard,
-    title: "Pay when approved leads are delivered",
+    title: "Simple, results-based pricing",
     description:
-      "You are paying for qualified leads that match the agreed criteria, not for vague monthly activity reports or a long contract.",
+      "A retainer covers our labor and effort. On top of that, you pay a per-appointment fee for each booked estimate that lands on your calendar.",
   },
 ];
 
@@ -49,11 +49,11 @@ export function Solution() {
             Our System
           </p>
           <h2 className="font-display text-3xl font-bold leading-tight text-balance text-gray-900 md:text-4xl lg:text-5xl">
-            How the <span className="marker-highlight">lead system</span> works
+            How the <span className="marker-highlight">Appointly Model</span> works
           </h2>
           <p className="mt-4 leading-relaxed text-gray-600">
-            The goal is simple: more qualified estimate opportunities on the calendar
-            without asking your team to become full-time marketers.
+            We do the complete job of filling your calendar with booked estimates. All
+            you do is show up, run the estimate, do the job, and collect the cash.
           </p>
         </div>
 
@@ -85,11 +85,11 @@ export function Solution() {
                 The Result
               </span>
               <h3 className="mb-3 font-display text-xl font-bold leading-tight text-primary-foreground">
-                More estimate calls on the schedule. No shared lead chaos.
+                Booked estimates on your calendar. You just show up and close.
               </h3>
               <p className="text-sm leading-relaxed text-primary-foreground/80">
-                One contractor per market, screened homeowner leads, and a pricing model
-                that stays tied to actual delivery.
+                One contractor per market, appointments booked for you, and pricing that
+                stays tied to the estimates that actually land on your calendar.
               </p>
             </div>
 

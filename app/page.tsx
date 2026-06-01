@@ -15,23 +15,23 @@ import { formatBlogDate, getBlogPath, getBlogPosts } from "@/lib/blog";
 import { homepageResources } from "@/lib/seo-resources";
 
 export const metadata: Metadata = {
-  title: "Insulation Contractor Leads | Pay-Per-Lead Growth for Contractors",
+  title: "Booked Estimates for Floor Coating Contractors | Appointly Solutions",
   description:
-    "Appointly Solutions helps insulation contractors generate exclusive, qualified leads with pay-per-lead pricing, fast follow-up, and no monthly retainer.",
+    "Appointly Solutions fills your calendar with booked floor coating estimates. We run Meta ads, hit speed-to-lead, and book the appointment for you — you just show up and close.",
   keywords: [
-    "insulation contractor leads",
-    "pay per lead insulation",
-    "exclusive insulation leads",
-    "insulation lead generation",
-    "insulation marketing company",
+    "booked estimates for contractors",
+    "floor coating leads",
+    "epoxy floor contractor marketing",
+    "appointment setting for contractors",
+    "home service contractor appointments",
   ],
   alternates: {
     canonical: "https://getappointly.co",
   },
   openGraph: {
-    title: "Insulation Contractor Leads | Pay-Per-Lead Growth for Contractors",
+    title: "Booked Estimates for Floor Coating Contractors | Appointly Solutions",
     description:
-      "Generate exclusive insulation leads with a pay-per-lead model built for booked estimates, stronger qualification, and lower marketing risk.",
+      "Fill your calendar with booked estimates. Meta ads, instant speed-to-lead, and appointments booked for you with a retainer plus a per-appointment fee.",
     url: "https://getappointly.co",
     type: "website",
     siteName: "Appointly Solutions",
@@ -46,15 +46,15 @@ export default async function Page() {
       "@context": "https://schema.org",
       "@type": "Service",
       "@id": "https://getappointly.co/#service",
-      serviceType: "Insulation contractor lead generation",
-      name: "Pay-per-lead growth for insulation contractors",
+      serviceType: "Appointment generation for home service contractors",
+      name: "Booked estimates for floor coating contractors",
       provider: {
         "@id": "https://getappointly.co/#organization",
       },
       areaServed: ["US", "CA"],
       audience: {
         "@type": "Audience",
-        audienceType: "Insulation contractors",
+        audienceType: "Home service contractors",
       },
       offers: {
         "@type": "Offer",
@@ -93,7 +93,7 @@ export default async function Page() {
         <SeoResourceLinks
           eyebrow="More Detail"
           title="More specific answers for more specific questions."
-          description="These pages go deeper on exclusivity, how the pay-per-lead model works, spray foam leads, and what working with a smaller market looks like."
+          description="These pages go deeper on exclusivity, how the Appointly Model works, epoxy and concrete coating appointments, and what working with a smaller market looks like."
           resources={homepageResources}
         />
         <section className="section-divider bg-[hsl(var(--surface-subtle))] py-24 md:py-28">
@@ -104,7 +104,7 @@ export default async function Page() {
                   From the blog
                 </p>
                 <h2 className="mt-3 font-display text-3xl font-bold text-foreground md:text-4xl">
-                  Fresh articles for insulation contractors.
+                  Fresh articles for home service contractors.
                 </h2>
               </div>
               <Link

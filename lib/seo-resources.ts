@@ -7,19 +7,19 @@ type Resource = {
 export const homepageResources: Resource[] = [
   {
     href: "/insulation-contractor-leads",
-    title: "Insulation Contractor Leads",
+    title: "Floor Coating Appointments",
     description:
-      "Start with the core commercial page for qualified, exclusive insulation lead generation.",
+      "Start with the core page on booked floor coating estimates and how the Appointly Model fills your calendar.",
   },
   {
     href: "/spray-foam-contractor-leads",
-    title: "Spray Foam Contractor Leads",
+    title: "Epoxy & Concrete Coating Appointments",
     description:
-      "See the service framed for spray foam specialists who need narrower, higher-intent demand.",
+      "See the service framed for epoxy and concrete coating specialists who want booked estimates, not raw leads.",
   },
   {
     href: "/insulation-contractor-leads-small-markets",
-    title: "Leads for Small Markets",
+    title: "Appointments for Small Markets",
     description:
       "Explore how the model fits contractors serving smaller metros and regional service areas.",
   },
@@ -29,41 +29,41 @@ export const commercialResources: Record<string, Resource[]> = {
   "insulation-contractor-leads": [
     {
       href: "/exclusive-insulation-leads",
-      title: "Exclusive Insulation Leads",
+      title: "Exclusive Appointments",
       description:
         "Understand how one-contractor-per-market positioning supports margin and close rate.",
     },
     {
       href: "/pay-per-lead-insulation",
-      title: "Pay Per Lead Insulation",
+      title: "The Appointly Model",
       description:
-        "Compare the pricing model against retainer-style marketing and agency risk.",
+        "See how the retainer plus per-appointment fee works compared to retainer-only agencies.",
     },
     {
       href: "/blog/pay-per-lead-insulation-contractor-leads",
-      title: "Cost Benchmarks for Pay Per Lead",
+      title: "What Booked Estimates Are Worth",
       description:
-        "Read supporting blog content about cost structure, ROI, and contractor expectations.",
+        "Read supporting blog content on appointment economics, ROI, and what to expect.",
     },
   ],
   "exclusive-insulation-leads": [
     {
       href: "/insulation-contractor-leads",
-      title: "Core Lead Generation Page",
+      title: "Core Appointments Page",
       description:
-        "See how exclusivity fits into the broader Appointly lead delivery model.",
+        "See how exclusivity fits into the broader Appointly booked-estimate model.",
     },
     {
       href: "/appointment-setting-for-contractors",
       title: "Booked Estimate Workflows",
       description:
-        "Connect lead ownership with response speed and appointment-setting execution.",
+        "Connect market exclusivity with speed-to-lead and appointment-setting execution.",
     },
     {
       href: "/blog/exclusive-insulation-leads-no-monthly-fee",
-      title: "Why Contractors Prefer Exclusive Leads",
+      title: "Why Contractors Want Exclusivity",
       description:
-        "Read a blog breakdown of exclusivity, ownership, and why shared leads create noise.",
+        "Read a breakdown of exclusivity, ownership, and why shared leads create noise.",
     },
   ],
   "pay-per-lead-insulation": [
@@ -71,25 +71,25 @@ export const commercialResources: Record<string, Resource[]> = {
       href: "/insulation-marketing-agency",
       title: "Agency Alternative",
       description:
-        "Compare pay-per-lead economics against the traditional monthly retainer model.",
+        "Compare the Appointly Model against the traditional monthly retainer-only agency.",
     },
     {
       href: "/blog/how-much-should-insulation-contractors-pay-per-lead",
-      title: "How Much Should Leads Cost?",
+      title: "What Should an Appointment Cost?",
       description:
-        "Use supporting benchmarks to evaluate whether your acquisition costs are realistic.",
+        "Use supporting benchmarks to evaluate whether your appointment costs are realistic.",
     },
     {
       href: "/blog/contractor-lead-generation-no-retainer",
-      title: "Lead Generation Without a Retainer",
+      title: "Budgeting for Booked Estimates",
       description:
-        "See how contractors think about avoiding fixed monthly spend during slower periods.",
+        "See how contractors think about tying marketing spend to appointments that actually book.",
     },
   ],
   "insulation-marketing-agency": [
     {
       href: "/pay-per-lead-insulation",
-      title: "Pay Per Lead Insulation",
+      title: "The Appointly Model",
       description:
         "Jump to the pricing page if you are comparing performance-based alternatives.",
     },
@@ -103,7 +103,7 @@ export const commercialResources: Record<string, Resource[]> = {
       href: "/blog/get-more-insulation-jobs-without-seo-retainer",
       title: "More Jobs Without an SEO Retainer",
       description:
-        "See how faster channels and performance models fit contractors who need lead flow now.",
+        "See how faster channels and a results-based model fit contractors who need booked estimates now.",
     },
   ],
   "appointment-setting-for-contractors": [
@@ -111,45 +111,45 @@ export const commercialResources: Record<string, Resource[]> = {
       href: "/insulation-contractor-leads",
       title: "Upstream Lead Flow",
       description:
-        "Understand the lead quality assumptions behind better appointment-setting results.",
+        "Understand the Meta ad lead flow behind better appointment-setting results.",
     },
     {
       href: "/blog/get-insulation-jobs-without-word-of-mouth",
       title: "Replacing Referral Gaps",
       description:
-        "Read how contractors can create more dependable estimate opportunities beyond referrals.",
+        "Read how contractors can create more dependable booked estimates beyond referrals.",
     },
     {
       href: "/blog/facebook-ads-for-insulation-contractors",
-      title: "Facebook Ads for Contractors",
+      title: "Meta Ads for Contractors",
       description:
-        "See one of the traffic channels that feeds the booked-estimate process.",
+        "See the traffic channel that feeds the booked-estimate process.",
     },
   ],
   "spray-foam-contractor-leads": [
     {
       href: "/blog/spray-foam-lead-generation-pay-per-lead",
-      title: "Spray Foam Lead Benchmarks",
+      title: "Epoxy & Concrete Coating Demand",
       description:
-        "Read cost, seasonality, and ROI guidance specific to spray foam demand.",
+        "Read cost, seasonality, and ROI guidance specific to epoxy and concrete coating work.",
     },
     {
       href: "/blog/get-more-spray-foam-jobs-fast",
-      title: "How To Get Spray Foam Jobs Fast",
+      title: "How To Get Coating Jobs Fast",
       description:
-        "See supporting content for contractors who need demand quickly, not eventually.",
+        "See supporting content for contractors who need booked estimates quickly, not eventually.",
     },
     {
       href: "/pay-per-lead-insulation",
-      title: "Pay Per Lead Pricing Model",
+      title: "The Appointly Model",
       description:
-        "Compare spray foam economics against the broader Appointly pricing model.",
+        "Compare coating job economics against the Appointly pricing model.",
     },
   ],
   "insulation-contractor-leads-small-markets": [
     {
       href: "/blog/google-my-business-optimization-insulation-contractors",
-      title: "GBP Strategy for Smaller Markets",
+      title: "Local Visibility for Smaller Markets",
       description:
         "Use local visibility content that is especially relevant in lower-competition markets.",
     },
@@ -157,7 +157,7 @@ export const commercialResources: Record<string, Resource[]> = {
       href: "/blog/spring-marketing-plan-insulation-contractors",
       title: "Seasonal Planning for Smaller Areas",
       description:
-        "See how contractors can time campaigns when market size makes every lead count.",
+        "See how contractors can time campaigns when market size makes every appointment count.",
     },
     {
       href: "/exclusive-insulation-leads",
@@ -185,19 +185,19 @@ export function getBlogCommercialResources(slug: string): Resource[] {
         href: "/how-it-works",
         title: "How The System Works",
         description:
-          "See how Google Business Profile optimization and review growth fit into the full process.",
+          "See how Meta ads, speed-to-lead, and booked estimates fit into the full process.",
       },
       {
         href: "/insulation-contractor-leads-small-markets",
-        title: "Small Market Lead Generation",
+        title: "Small Market Appointments",
         description:
-          "Explore where local SEO and review velocity matter most in smaller service areas.",
+          "Explore where local visibility and review velocity matter most in smaller service areas.",
       },
       {
         href: "/insulation-contractor-leads",
-        title: "Core Lead Generation Page",
+        title: "Core Appointments Page",
         description:
-          "Return to the main commercial page for the overall Appointly system and qualification standards.",
+          "Return to the main page for the overall Appointly Model and how we fill your calendar.",
       },
     ];
   }

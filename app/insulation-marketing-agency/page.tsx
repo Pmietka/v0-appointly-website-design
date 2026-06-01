@@ -13,47 +13,48 @@ const bookingUrl = "https://client.getappointly.co/strategy-calendar";
 const agencyProblems = [
   {
     icon: BadgeAlert,
-    title: "Retainers before results",
+    title: "Retainer-only, with no appointments promised",
     description:
-      "Many agency models ask contractors to commit significant monthly spend before qualified opportunities ever show up.",
+      "Traditional agencies charge a monthly retainer and stop there. You carry the full spend with no booked estimates guaranteed in return.",
   },
   {
     icon: RefreshCw,
     title: "Unclear attribution",
     description:
-      "It can be hard to tell whether growth is coming from marketing, your own referrals, or delayed follow up cleanup.",
+      "It can be hard to tell whether growth is coming from the agency, your own referrals, or delayed follow up cleanup.",
   },
   {
     icon: Briefcase,
     title: "High overhead communication",
     description:
-      "Too many meetings and reports can distract from the actual question: are qualified homeowners reaching the calendar?",
+      "Too many meetings and reports can distract from the only question that matters: are floor coating estimates landing on your calendar?",
   },
   {
     icon: ShieldCheck,
     title: "A more accountable alternative",
     description:
-      "Appointly Solutions reframes the conversation around lead delivery quality, speed, and booking potential.",
+      "Appointly Solutions adds a per-appointment fee on top of the retainer, so spend is tied to booked estimates, instant speed to lead, and Meta ad delivery.",
   },
 ];
 
 export const metadata: Metadata = {
-  title: "Insulation Marketing Agency Alternative | Pay Per Lead",
+  title: "Agency Alternative for Floor Coating Contractors | The Appointly Model",
   description:
-    "Compare traditional insulation marketing agency models with the Appointly Solutions pay per lead approach for contractors who want clearer accountability.",
+    "Compare retainer-only marketing agencies with the Appointly Model: a retainer plus a per-appointment fee that fills floor coating contractors' calendars with booked estimates.",
   keywords: [
-    "insulation marketing agency",
-    "insulation marketing agency alternative",
-    "pay per lead contractor marketing",
+    "floor coating marketing agency alternative",
+    "the appointly model",
+    "booked floor coating appointments",
+    "epoxy contractor marketing",
     "Appointly Solutions",
   ],
   alternates: {
     canonical: "https://getappointly.co/insulation-marketing-agency",
   },
   openGraph: {
-    title: "Insulation Marketing Agency Alternative | Pay Per Lead",
+    title: "Agency Alternative for Floor Coating Contractors | The Appointly Model",
     description:
-      "See why some contractors prefer a pay per lead model over a traditional insulation marketing agency retainer.",
+      "See why coating contractors prefer the Appointly Model, booked appointments with a retainer plus per-appointment fee, over a retainer-only marketing agency.",
     url: "https://getappointly.co/insulation-marketing-agency",
     siteName: "Appointly Solutions",
     type: "website",
@@ -74,17 +75,17 @@ export default function InsulationMarketingAgencyPage() {
           <div className="mx-auto max-w-6xl px-6">
             <div className="max-w-3xl">
               <p className="mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
-                Comparison Page
+                Agency Alternative
               </p>
               <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-balance md:text-6xl">
-                An Insulation Marketing Agency Alternative Built Around{" "}
-                <span className="gradient-text">Qualified Lead Flow</span>
+                A Floor Coating Marketing Agency Alternative Built Around{" "}
+                <span className="gradient-text">Booked Appointments</span>
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                If you are searching for an insulation marketing agency, you may really
-                be searching for a better business model. Appointly Solutions uses a
-                pay per lead approach designed to reduce risk and keep attention on the
-                opportunities that matter.
+                If you are searching for a floor coating marketing agency, you may really
+                be searching for a better business model. The Appointly Model pairs a
+                retainer that covers our labor with a per-appointment fee, so the focus
+                stays on booked estimates landing on your calendar.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
@@ -98,7 +99,7 @@ export default function InsulationMarketingAgencyPage() {
                   href="/pay-per-lead-insulation"
                   className="inline-flex items-center justify-center rounded-xl border border-gray-300 bg-white px-8 py-4 text-sm font-semibold text-gray-700 transition-all hover:bg-gray-50"
                 >
-                  See Pricing Model
+                  The Appointly Model
                 </Link>
               </div>
             </div>
@@ -112,7 +113,7 @@ export default function InsulationMarketingAgencyPage() {
                 Why Contractors Look For Alternatives
               </p>
               <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">
-                The usual agency model can feel misaligned.
+                The retainer-only agency model can feel misaligned.
               </h2>
             </div>
 
@@ -141,18 +142,18 @@ export default function InsulationMarketingAgencyPage() {
                 How Appointly Solutions Differs
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
-                Built for contractors who want clarity around growth.
+                Built for coating contractors who want clarity around growth.
               </h2>
               <p className="mt-5 text-sm leading-7 text-muted-foreground md:text-base">
-                Appointly Solutions focuses on the operational side of lead generation:
-                targeting, fast response, qualification, and booked opportunity flow.
-                That is why many insulation contractors see it less as an agency and
-                more as a performance-oriented growth system.
+                Appointly Solutions handles the whole job of filling your calendar: Meta
+                ads to generate the lead, instant speed to lead, and booking the estimate
+                for you. That is why many floor coating contractors see it less as an
+                agency and more as a performance-oriented growth system.
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
                 For a broader commercial overview, see{" "}
                 <Link href="/insulation-contractor-leads" className="text-primary transition-opacity hover:opacity-80">
-                  Insulation Contractor Leads
+                  Floor Coating Appointments
                 </Link>
                 . If booked estimates are your main focus, continue to{" "}
                 <Link href="/appointment-setting-for-contractors" className="text-primary transition-opacity hover:opacity-80">
@@ -171,8 +172,8 @@ export default function InsulationMarketingAgencyPage() {
               </h2>
               <p className="mt-4 text-sm leading-7 text-slate-700 md:text-base">
                 A strategy call with Appointly Solutions can help you compare your
-                current agency or in-house marketing approach against a pay per lead
-                system designed for insulation contractors.
+                current agency or in-house marketing approach against the Appointly Model,
+                booked appointments designed for floor coating contractors.
               </p>
               <a
                 href={bookingUrl}
@@ -188,7 +189,7 @@ export default function InsulationMarketingAgencyPage() {
         <ProofSection />
         <SeoResourceLinks
           title="Resources for contractors comparing agencies and performance models."
-          description="These pages and articles add more depth around retainer fatigue, alternative pricing, and faster lead flow."
+          description="These pages and articles add more depth around the Appointly Model, booked appointments, and how speed to lead fills your calendar."
           resources={getCommercialResources("insulation-marketing-agency")}
         />
       </main>

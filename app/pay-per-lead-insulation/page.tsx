@@ -10,47 +10,48 @@ const bookingUrl = "https://client.getappointly.co/strategy-calendar";
 const reasons = [
   {
     icon: CircleDollarSign,
-    title: "Less upfront risk",
+    title: "Spend tied to booked appointments",
     description:
-      "A pay per lead model keeps the conversation tied to lead flow rather than large retainers that can feel disconnected from results.",
+      "On top of a retainer that covers our labor, you pay a per-appointment fee for each booked floor coating estimate that lands on your calendar. Your spend tracks real appointments, not guesswork.",
   },
   {
     icon: ShieldCheck,
-    title: "Clearer accountability",
+    title: "Clear accountability",
     description:
-      "When lead generation is tied to qualified opportunities, expectations around delivery quality become easier to define and track.",
+      "Because the per-appointment fee maps to confirmed estimates on your calendar, expectations around what you get for your spend are easy to define and track.",
   },
   {
     icon: Clock3,
-    title: "Operational focus",
+    title: "You focus on closing",
     description:
-      "Your team can spend less time guessing whether marketing is working and more time focusing on speed to lead and closing.",
+      "We handle the Meta ads, the speed to lead, and the booking. Your crew spends its time running estimates and coating floors instead of marketing.",
   },
   {
     icon: LineChart,
-    title: "Better planning",
+    title: "Easier planning",
     description:
-      "Knowing what a qualified lead costs can make growth forecasting and crew planning more practical.",
+      "When you know the retainer and the per-appointment fee, forecasting growth and planning crew capacity becomes far more practical.",
   },
 ];
 
 export const metadata: Metadata = {
-  title: "Pay Per Lead Insulation Marketing | Appointly Solutions",
+  title: "The Appointly Model | Retainer Plus Per-Appointment Pricing",
   description:
-    "Explore how Appointly Solutions helps insulation contractors grow with a pay per lead marketing model instead of large monthly retainers.",
+    "The Appointly Model pairs a retainer that covers our labor with a per-appointment fee for each booked floor coating estimate on your calendar. See how the pricing works.",
   keywords: [
-    "pay per lead insulation",
-    "pay per lead insulation marketing",
-    "insulation lead pricing",
+    "the appointly model",
+    "floor coating appointment pricing",
+    "retainer plus per appointment",
+    "booked floor coating estimates",
     "Appointly Solutions",
   ],
   alternates: {
     canonical: "https://getappointly.co/pay-per-lead-insulation",
   },
   openGraph: {
-    title: "Pay Per Lead Insulation Marketing | Appointly Solutions",
+    title: "The Appointly Model | Retainer Plus Per-Appointment Pricing",
     description:
-      "Learn why a pay per lead model can be a stronger fit than a traditional agency retainer for insulation contractors.",
+      "Learn how the Appointly Model combines a retainer with a per-appointment fee to fill floor coating contractors' calendars with booked estimates.",
     url: "https://getappointly.co/pay-per-lead-insulation",
     siteName: "Appointly Solutions",
     type: "website",
@@ -71,17 +72,17 @@ export default function PayPerLeadInsulationPage() {
           <div className="mx-auto max-w-6xl px-6">
             <div className="max-w-3xl">
               <p className="text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-6">
-                Pay Per Lead Pricing
+                The Appointly Model
               </p>
               <h1 className="font-display text-5xl md:text-6xl font-bold tracking-tight leading-[1.05] text-balance">
-                Pay Per Lead Insulation Marketing for Contractors Who Want{" "}
-                <span className="gradient-text">Less Guesswork</span>
+                The Appointly Model: Pricing Built Around Booked{" "}
+                <span className="gradient-text">Appointments</span>
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                Appointly Solutions was built around a pay per lead structure because
-                many contractors are tired of paying retainers before they see any
-                real opportunity flow. This page explains why that model can be more
-                practical for insulation growth.
+                The Appointly Model has two parts. A retainer covers our labor and effort
+                running your Meta ads and speed-to-lead booking, and a per-appointment fee
+                applies to each booked floor coating estimate that lands on your calendar.
+                This page explains exactly how that structure works.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
@@ -95,7 +96,7 @@ export default function PayPerLeadInsulationPage() {
                   href="/insulation-marketing-agency"
                   className="inline-flex items-center justify-center rounded-xl border border-gray-300 bg-white px-8 py-4 text-sm font-semibold text-gray-700 hover:bg-gray-50 transition-all"
                 >
-                  Compare Agency Models
+                  Agency Alternative
                 </Link>
               </div>
             </div>
@@ -109,7 +110,7 @@ export default function PayPerLeadInsulationPage() {
                 Why Contractors Like It
               </p>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
-                A pricing structure that stays closer to production.
+                A pricing structure that stays tied to booked appointments.
               </h2>
             </div>
 
@@ -135,25 +136,26 @@ export default function PayPerLeadInsulationPage() {
           <div className="mx-auto grid max-w-6xl gap-6 px-6 lg:grid-cols-2">
             <article className="glass-card rounded-3xl p-8 md:p-10">
               <p className="text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground">
-                What Appointly Solutions Means By Pay Per Lead
+                How The Appointly Model Works
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
-                Qualified opportunities are the center of the conversation.
+                A retainer for our labor, plus a fee per booked estimate.
               </h2>
               <p className="mt-5 text-sm leading-7 text-muted-foreground md:text-base">
-                Appointly Solutions uses a pay per lead model to keep decisions closer
-                to lead quality, booking potential, and service area fit. It is not
-                about chasing the lowest possible cost. It is about building a system
-                where expectations are easier to align.
+                The retainer covers the labor and effort we put into running your Meta
+                ads, hitting every lead instantly, and booking it. The per-appointment
+                fee applies to each floor coating estimate we place on your calendar. It
+                is not about chasing the lowest cost. It is a system where what you pay
+                maps directly to appointments that show up.
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
                 For the broader process, visit{" "}
                 <Link href="/how-it-works" className="text-primary transition-opacity hover:opacity-80">
                   How It Works
                 </Link>
-                . If your main concern is lead ownership, continue to{" "}
+                . If your main concern is exclusivity, continue to{" "}
                 <Link href="/exclusive-insulation-leads" className="text-primary transition-opacity hover:opacity-80">
-                  Exclusive Insulation Leads
+                  Exclusive Appointments
                 </Link>
                 .
               </p>
@@ -164,12 +166,12 @@ export default function PayPerLeadInsulationPage() {
                 Is It A Fit
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
-                Best for insulation contractors who want measured growth.
+                Best for floor coating contractors who want measured growth.
               </h2>
               <p className="mt-4 text-sm leading-7 text-slate-700 md:text-base">
-                A strategy call can help you decide whether Appointly Solutions and a
-                pay per lead approach make sense for your sales process, market, and
-                growth targets.
+                A strategy call can help you decide whether the Appointly Model, with its
+                retainer plus per-appointment fee, makes sense for your sales process,
+                market, and growth targets.
               </p>
               <a
                 href={bookingUrl}

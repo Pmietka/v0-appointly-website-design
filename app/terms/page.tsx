@@ -9,14 +9,14 @@ const lastUpdated = "March 27, 2026";
 export const metadata: Metadata = {
   title: "Terms of Service | Appointly Solutions",
   description:
-    "Read the Appointly Solutions Terms of Service covering service scope, eligibility, lead delivery, payment, liability, termination, and governing law.",
+    "Read the Appointly Solutions Terms of Service covering service scope, eligibility, appointment delivery, payment, liability, termination, and governing law.",
   alternates: {
     canonical: "https://getappointly.co/terms",
   },
   openGraph: {
     title: "Terms of Service | Appointly Solutions",
     description:
-      "Review the terms that govern Appointly Solutions lead generation services.",
+      "Review the terms that govern Appointly Solutions appointment generation services.",
     url: "https://getappointly.co/terms",
     siteName: "Appointly Solutions",
     type: "website",
@@ -27,22 +27,22 @@ const sections = [
   {
     title: "Service Description",
     body:
-      "Appointly Solutions provides lead generation services for insulation contractors using a cost per qualified lead model. Services may include campaign management, lead intake, qualification workflows, follow up, scheduling support, and related reporting.",
+      "Appointly Solutions provides appointment generation services for home service contractors using a retainer plus per-appointment model. Services may include Meta ad campaign management, lead intake, speed-to-lead outreach, appointment booking, scheduling support, and related reporting.",
   },
   {
     title: "Eligibility",
     body:
-      "Services are intended for United States based insulation contractors and related home service businesses that are legally able to enter into binding agreements and operate in their service areas.",
+      "Services are intended for United States based home service contractors that are legally able to enter into binding agreements and operate in their service areas.",
   },
   {
-    title: "Lead Delivery Terms",
+    title: "Appointment Delivery Terms",
     body:
-      "Lead qualification standards, target areas, and delivery expectations are defined during onboarding and may vary by market. Appointly Solutions will use commercially reasonable efforts to deliver leads that meet agreed criteria, but close rates and job revenue remain dependent on the contractor’s own sales process and operations.",
+      "Appointment standards, target areas, and delivery expectations are defined during onboarding and may vary by market. Appointly Solutions will use commercially reasonable efforts to book estimates that meet agreed criteria, but close rates and job revenue remain dependent on the contractor’s own sales process and operations.",
   },
   {
     title: "Payment Terms",
     body:
-      "Clients agree to pay for qualified leads according to the pricing and billing terms established in their service agreement. Late payments, disputes, and credits are handled according to the same agreement and any related written policies.",
+      "Clients agree to pay the retainer and per-appointment fees according to the pricing and billing terms established in their service agreement. Late payments, disputes, and credits are handled according to the same agreement and any related written policies.",
   },
   {
     title: "Intellectual Property",
@@ -85,7 +85,7 @@ export default function TermsPage() {
             </h1>
             <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
               These Terms of Service govern the use of the Appointly Solutions
-              website and lead generation services. Last updated {lastUpdated}.
+              website and appointment generation services. Last updated {lastUpdated}.
             </p>
           </div>
         </section>

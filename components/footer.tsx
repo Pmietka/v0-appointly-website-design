@@ -10,11 +10,11 @@ const companyLinks = [
 ];
 
 const solutionLinks = [
-  { href: "/insulation-contractor-leads", label: "Insulation Leads" },
-  { href: "/exclusive-insulation-leads", label: "Exclusive Leads" },
-  { href: "/pay-per-lead-insulation", label: "Pay Per Lead" },
+  { href: "/insulation-contractor-leads", label: "Floor Coating Leads" },
+  { href: "/exclusive-insulation-leads", label: "Exclusive Appointments" },
+  { href: "/pay-per-lead-insulation", label: "The Appointly Model" },
   { href: "/insulation-marketing-agency", label: "Agency Alternative" },
-  { href: "/spray-foam-contractor-leads", label: "Spray Foam Leads" },
+  { href: "/spray-foam-contractor-leads", label: "Epoxy & Concrete Coatings" },
   { href: "/insulation-contractor-leads-small-markets", label: "Small Markets" },
 ];
 
@@ -43,8 +43,8 @@ export function Footer() {
               </div>
             </div>
             <p className="mt-5 text-sm leading-7 text-slate-600">
-              Exclusive, qualified insulation leads built around booked estimates,
-              not vague agency promises.
+              Booked estimates for home service contractors, built around the
+              Appointly Model — you just show up and close.
             </p>
             <a
               href="mailto:patrick@getappointly.co"
@@ -114,7 +114,7 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-slate-400">
             <BrandMark className="h-6 w-6 text-slate-950" />
-            Performance-based lead generation
+            Performance-based appointment generation
           </div>
         </div>
       </div>
