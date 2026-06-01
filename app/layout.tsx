@@ -14,15 +14,15 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://getappointly.co"),
-  title: "Appointly Solutions | Pay-Per-Lead for Insulation Contractors",
+  title: "Appointly Solutions | Appointment Booking for Home Service Contractors",
   description:
-    "Get exclusive, qualified insulation leads. Startup fee, then pay only when we deliver. GMB optimization, Facebook ads, and NFC review system included. No monthly retainer.",
+    "We run Meta ads, qualify prospects, and book appointments straight onto your calendar. Pay for performance — only when we deliver booked estimates. Featured niche: floor coatings.",
   keywords: [
-    "insulation contractor leads",
-    "pay per lead insulation",
-    "insulation lead generation",
-    "exclusive insulation leads",
-    "insulation marketing",
+    "floor coating contractor appointments",
+    "epoxy floor coating marketing",
+    "appointment booking for contractors",
+    "home service contractor appointments",
+    "pay for performance contractor marketing",
     "Appointly Solutions",
   ],
   robots: {
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
     canonical: "https://getappointly.co",
   },
   openGraph: {
-    title: "Appointly Solutions | Pay-Per-Lead for Insulation Contractors",
+    title: "Appointly Solutions | Appointment Booking for Home Service Contractors",
     description:
-      "Get exclusive, qualified insulation leads. Startup fee, then pay only when we deliver. GMB optimization, Facebook ads, and NFC review system included. No monthly retainer.",
+      "We run Meta ads, qualify prospects, and book appointments straight onto your calendar. Pay for performance — only when we deliver booked estimates.",
     type: "website",
     url: "https://getappointly.co",
     siteName: "Appointly Solutions",
@@ -51,15 +51,15 @@ export const metadata: Metadata = {
         url: "https://getappointly.co/images/appointly-og.png",
         width: 1024,
         height: 350,
-        alt: "Appointly Solutions | Pay-Per-Lead for Insulation Contractors",
+        alt: "Appointly Solutions | Appointment Booking for Home Service Contractors",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Appointly Solutions | Pay-Per-Lead for Insulation Contractors",
+    title: "Appointly Solutions | Appointment Booking for Home Service Contractors",
     description:
-      "Get exclusive, qualified insulation leads. Startup fee, then pay only when we deliver. GMB optimization, Facebook ads, and NFC review system included. No monthly retainer.",
+      "We run Meta ads, qualify prospects, and book appointments straight onto your calendar. Pay for performance — only when we deliver booked estimates.",
     images: ["https://getappointly.co/images/appointly-og.png"],
   },
 };
@@ -87,7 +87,7 @@ export default function RootLayout({
                   url: "https://getappointly.co/images/appointly-logo.png",
                 },
                 description:
-                  "Appointly Solutions delivers exclusive, pre-qualified leads to insulation contractors on a pay-per-lead basis. We handle GMB optimization, Facebook ads, and lead qualification — you only pay when we deliver.",
+                  "Appointly Solutions runs Meta ads, qualifies prospects, and books appointments straight onto home service contractors' calendars on a pay-for-performance basis. We serve floor coating contractors, insulation contractors, and other home service trades.",
                 sameAs: [
                   "https://www.instagram.com/appointlychicago",
                   "https://www.facebook.com/profile.php?id=61587335026673",
@@ -102,7 +102,7 @@ export default function RootLayout({
                 url: "https://getappointly.co",
                 logo: "https://getappointly.co/images/appointly-logo.png",
                 description:
-                  "Pay-per-lead insulation contractor marketing. GMB optimization, Facebook ads, and NFC review cards. You only pay when we deliver a qualified lead.",
+                  "Appointly Solutions is a performance-based appointment booking agency for home service contractors. We handle Meta ads, prospect qualification, and calendar booking — you only pay when we deliver booked estimate appointments.",
                 address: {
                   "@type": "PostalAddress",
                   addressLocality: "Chicago",
@@ -110,7 +110,6 @@ export default function RootLayout({
                   addressCountry: "US",
                 },
                 areaServed: ["US", "CA"],
-                priceRange: "Pay Per Lead",
               },
               {
                 "@context": "https://schema.org",

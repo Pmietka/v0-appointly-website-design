@@ -3,7 +3,6 @@ import path from "path";
 
 const blogDirectories = [
   path.join(process.cwd(), "content", "blog"),
-  path.join(process.cwd(), "Blogs", "Blog Posts"),
 ];
 
 const latestPublishDate = new Date("2026-03-31T12:00:00Z");

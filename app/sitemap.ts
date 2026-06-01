@@ -38,10 +38,40 @@ const staticRoutes = [
     priority: 0.7,
   },
   {
+    url: `${base}/floor-coating-contractor-marketing`,
+    filePath: "app/floor-coating-contractor-marketing/page.tsx",
+    changeFrequency: "monthly" as const,
+    priority: 0.95,
+  },
+  {
+    url: `${base}/epoxy-floor-coating-appointments`,
+    filePath: "app/epoxy-floor-coating-appointments/page.tsx",
+    changeFrequency: "monthly" as const,
+    priority: 0.9,
+  },
+  {
+    url: `${base}/garage-floor-coating-appointments`,
+    filePath: "app/garage-floor-coating-appointments/page.tsx",
+    changeFrequency: "monthly" as const,
+    priority: 0.9,
+  },
+  {
+    url: `${base}/exclusive-floor-coating-appointments`,
+    filePath: "app/exclusive-floor-coating-appointments/page.tsx",
+    changeFrequency: "monthly" as const,
+    priority: 0.85,
+  },
+  {
+    url: `${base}/floor-coating-marketing-agency`,
+    filePath: "app/floor-coating-marketing-agency/page.tsx",
+    changeFrequency: "monthly" as const,
+    priority: 0.85,
+  },
+  {
     url: `${base}/insulation-contractor-leads`,
     filePath: "app/insulation-contractor-leads/page.tsx",
     changeFrequency: "monthly" as const,
-    priority: 0.9,
+    priority: 0.85,
   },
   {
     url: `${base}/exclusive-insulation-leads`,
