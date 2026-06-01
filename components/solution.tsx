@@ -1,5 +1,6 @@
 import {
   ArrowRight,
+  CalendarCheck2,
   CreditCard,
   MapPin,
   Megaphone,
@@ -12,31 +13,31 @@ const steps = [
     icon: MapPin,
     title: "Google profile and market setup",
     description:
-      "We tighten up your Google Business Profile and service area positioning so homeowners can actually find and trust you when they search locally.",
+      "We tighten up your Google Business Profile and service area positioning so homeowners can find and trust you when they search locally.",
   },
   {
     icon: Megaphone,
-    title: "Ads built around estimate requests",
+    title: "Meta ads built around estimate requests",
     description:
-      "We run local campaigns aimed at homeowners who need attic insulation, spray foam, or removal work in the areas you actually want to service.",
+      "We run targeted Meta ad campaigns aimed at homeowners in your service area who are actively looking for your specific trade.",
   },
   {
     icon: ShieldCheck,
-    title: "Lead screening before handoff",
+    title: "Prospect qualification before booking",
     description:
-      "We screen for homeowner status, service area, project type, and fit before the lead reaches your team, so you spend less time on bad calls.",
+      "We screen for homeowner status, service area, project type, and fit — then book the appointment directly onto your calendar so you walk into a prepared conversation.",
   },
   {
     icon: Smartphone,
     title: "Review system after completed jobs",
     description:
-      "We send review cards your team can hand out after a clean install so your Google profile gets stronger as more jobs are completed.",
+      "We send review cards your team can hand out after a clean job so your Google profile gets stronger as more work gets done.",
   },
   {
     icon: CreditCard,
-    title: "Pay when approved leads are delivered",
+    title: "Pay only for booked appointments delivered",
     description:
-      "You are paying for qualified leads that match the agreed criteria, not for vague monthly activity reports or a long contract.",
+      "You pay for booked estimate appointments that meet the agreed criteria, not for vague monthly activity reports or a long contract.",
   },
 ];
 
@@ -49,11 +50,11 @@ export function Solution() {
             Our System
           </p>
           <h2 className="font-display text-3xl font-bold leading-tight text-balance text-gray-900 md:text-4xl lg:text-5xl">
-            How the <span className="text-primary">lead system</span> works
+            How the <span className="text-primary">appointment system</span> works
           </h2>
           <p className="mt-4 leading-relaxed text-gray-600">
-            The goal is simple: more qualified estimate opportunities on the calendar
-            without asking your team to become full-time marketers.
+            The goal is simple: more qualified estimate opportunities booked straight
+            onto your calendar, without asking your team to become full-time marketers.
           </p>
         </div>
 
@@ -82,14 +83,15 @@ export function Solution() {
           <div className="relative flex flex-col justify-between overflow-hidden rounded-2xl bg-primary p-6 text-primary-foreground">
             <div>
               <span className="mb-3 block text-xs font-bold uppercase tracking-widest text-primary-foreground/70">
-                The Result
+                Pay for Performance
               </span>
               <h3 className="mb-3 font-display text-xl font-bold leading-tight text-primary-foreground">
-                More estimate calls on the schedule. No shared lead chaos.
+                When we do well, you do well. That is the whole model.
               </h3>
               <p className="text-sm leading-relaxed text-primary-foreground/80">
-                One contractor per market, screened homeowner leads, and a pricing model
-                that stays tied to actual delivery.
+                One contractor per market, prospects booked directly onto your calendar,
+                and a pay-for-performance model tied to actual booked appointments.
+                You show up, run the estimate, do the job, collect the cash.
               </p>
             </div>
 

@@ -2,7 +2,7 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 
 const bullets = [
   "No long-term retainer",
-  "Qualified homeowner leads only",
+  "Booked estimates on your calendar",
   "One contractor per market",
 ];
 
@@ -12,19 +12,18 @@ export function CTA() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="rounded-3xl border border-gray-200 bg-white p-12 text-center shadow-sm md:p-20">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-gray-500">
-            Ready for a better lead source?
+            Ready to fill your estimate calendar?
           </p>
 
           <h2 className="font-display text-4xl font-bold leading-tight text-balance text-gray-900 md:text-5xl lg:text-6xl">
-            Put more estimates on the calendar.{" "}
+            Put more booked estimates on the calendar.{" "}
             <br className="hidden md:block" />
-            <span className="text-primary">Pay only for qualified leads.</span>
+            <span className="text-primary">Pay only for appointments delivered.</span>
           </h2>
 
           <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-gray-600">
-            Book a strategy call and we will look at your service area, job mix, and
-            crew capacity to see whether this actually fits the kind of insulation work
-            you want more of.
+            Book a free strategy call and we will look at your service area, job types, and
+            crew capacity to see whether this is a fit for your business.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-6">
@@ -41,7 +40,7 @@ export function CTA() {
               href="https://client.getappointly.co/strategy-calendar"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-10 py-4 text-base font-bold text-primary-foreground transition-opacity hover:opacity-90"
             >
-              Book a Call Now
+              Book a free strategy call
               <ArrowRight className="h-4 w-4" />
             </a>
           </div>

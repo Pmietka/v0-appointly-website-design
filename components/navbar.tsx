@@ -8,7 +8,7 @@ import { BrandMark } from "@/components/brand-mark";
 
 const navLinks = [
   { href: "/how-it-works", label: "How It Works" },
-  { href: "/pay-per-lead-insulation", label: "Pricing" },
+  { href: "/floor-coating-contractor-marketing", label: "Floor Coatings" },
   { href: "/blog", label: "Blog" },
   { href: "/faq", label: "FAQ" },
 ];
@@ -47,7 +47,7 @@ export function Navbar() {
             href="https://client.getappointly.co/strategy-calendar"
             className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
           >
-            Book A Call
+            Book a free strategy call
           </a>
         </div>
 
@@ -78,7 +78,7 @@ export function Navbar() {
             onClick={() => setMobileOpen(false)}
             className="mt-2 inline-flex items-center justify-center rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
           >
-            Book A Call
+            Book a free strategy call
           </a>
         </div>
       )}

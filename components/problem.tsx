@@ -8,8 +8,8 @@ const problems = [
   },
   {
     icon: Users,
-    title: "Shared leads turn into price shopping",
-    text: "If the same homeowner talks to four insulation companies, the job often becomes a race to the bottom instead of a clean estimate conversation.",
+    title: "Shared prospects turn into price shopping",
+    text: "If the same homeowner gets four calls from competing contractors, the job often becomes a race to the bottom instead of a clean estimate conversation.",
   },
   {
     icon: Star,
@@ -18,8 +18,8 @@ const problems = [
   },
   {
     icon: Wrench,
-    title: "You are busy running installs",
-    text: "Attics, crawlspaces, callbacks, and crew scheduling leave little time to chase every web lead while you are still in the field.",
+    title: "You are busy running jobs",
+    text: "Job sites, callbacks, and crew scheduling leave little time to chase every inquiry while you are still in the field.",
   },
   {
     icon: AlertTriangle,
@@ -38,18 +38,18 @@ export function Problem() {
               Sound Familiar?
             </p>
             <h2 className="font-display text-3xl font-bold leading-tight text-balance text-gray-900 md:text-4xl lg:text-5xl">
-              What insulation contractors are up against every week
+              What home service contractors are up against every week
             </h2>
             <p className="mt-5 max-w-lg text-base leading-relaxed text-gray-600">
               Between estimates, installs, crew management, and follow-up, it is easy
-              for good homeowner leads to cool off before anyone calls them back.
+              for good estimate opportunities to cool off before anyone follows up.
             </p>
 
             <div className="mt-8 rounded-2xl border border-primary/20 bg-white p-5 shadow-sm">
               <p className="text-sm leading-relaxed text-gray-700">
-                The real problem is not just lead volume. It is getting the right
-                homeowner in the right area at the right time, before the job goes to
-                someone else.
+                The real problem is not just finding homeowners. It is getting a qualified
+                prospect in front of your team at the right time — booked on the calendar
+                before they move on to someone else.
               </p>
             </div>
           </div>

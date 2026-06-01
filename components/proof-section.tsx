@@ -2,16 +2,16 @@ import Image from "next/image";
 
 const quickStats = [
   {
-    stat: "6 new clients",
-    label: "6 new residential clients added in month two.",
+    stat: "First 2 / 2 closed",
+    label: "Closed on the very first two appointments we ever booked for this contractor.",
   },
   {
-    stat: "6 closed jobs / month",
-    label: "Closed jobs per month, held for three straight months.",
+    stat: "~60% close rate",
+    label: "Ongoing close rate on booked appointments — calendar stays consistently full.",
   },
   {
     stat: "24-48 hours",
-    label: "Typical time from campaign launch to first lead arriving.",
+    label: "Typical time from campaign launch to first booked appointment.",
   },
 ];
 
@@ -24,7 +24,7 @@ export function ProofSection() {
             Results
           </p>
           <h2 className="mt-3 font-display text-3xl font-bold text-foreground md:text-4xl">
-            Proof that the leads turn into real estimate conversations.
+            Proof that booked appointments show up and turn into real jobs.
           </h2>
         </div>
 
@@ -53,10 +53,10 @@ export function ProofSection() {
             <article className="overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-[0_24px_80px_rgba(15,23,42,0.08)]">
               <div className="px-8 py-6">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-                  Andre
+                  Epoxy &amp; garage coating contractor
                 </p>
                 <h3 className="mt-3 font-display text-2xl font-bold text-slate-950">
-                  In his second month, Andre brought in 6 new residential clients.
+                  In their second month, this floor coating contractor brought in 6 new residential clients.
                 </h3>
               </div>
               <div className="border-t border-slate-100 bg-slate-50 p-4 md:p-6">

@@ -4,8 +4,8 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Andre",
-    role: "Insulation contractor",
+    name: "A.",
+    role: "Epoxy & garage coating contractor",
     quote:
       "In my second month with Appointly, I was able to get 6 new residential clients.",
     result: "6 new clients in month 2",
@@ -13,10 +13,10 @@ const testimonials = [
     initial: "A",
   },
   {
-    name: "Wojtek",
-    role: "Insulation contractor",
+    name: "W.",
+    role: "Home service contractor",
     quote:
-      "I was already paying for leads with zero consistency. Three months with Appointly gave me 6 closed jobs every single month.",
+      "I was already paying for appointments with zero consistency. Three months with Appointly gave me 6 closed jobs every single month.",
     result: "6 closed jobs/month for 3 months straight",
     rating: 5,
     initial: "W",
@@ -32,10 +32,10 @@ export function Results() {
             Client Results
           </p>
           <h2 className="font-display text-3xl font-bold leading-tight text-balance text-gray-900 md:text-4xl lg:text-5xl">
-            What insulation contractors <span className="text-primary">actually say</span>
+            What home service contractors <span className="text-primary">actually say</span>
           </h2>
           <p className="mt-4 leading-relaxed text-gray-600">
-            Straight contractor feedback about what happened after the leads started coming in.
+            Real contractor outcomes from the calendar-first appointment system.
           </p>
         </div>
 
