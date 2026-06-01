@@ -1,199 +1,176 @@
-# How Much Should Insulation Contractors Pay Per Lead in 2025?
+# How Much Should Insulation Contractors Pay Per Booked Appointment in 2025?
 
-You're looking at a lead generation service. They're quoting you $125 per lead. Another service is quoting you $75. A third one says $175.
+You're looking at an appointment generation service. They're quoting you one price per booked appointment. Another service is quoting you less. A third one says more.
 
 Which one is actually a good deal?
 
-Here's the problem: you don't know your numbers well enough to answer that question. And if you don't know your numbers, you're going to overpay for leads that don't convert and underpay for leads that could fill your calendar.
+Here's the problem: you don't know your numbers well enough to answer that question. And if you don't know your numbers, you're going to overpay for appointments that don't close and underpay for a service whose quality you'll regret.
 
-The right price per lead is different for every contractor. It depends on your close rate, your average job size, your service area, and how many leads you need to fill your calendar. The goal is to figure out the maximum you can afford to pay per lead and still make money.
+The right investment per booked appointment is different for every contractor. It depends on your close rate, your average job size, your service area, and how many appointments you need to fill your calendar. The goal is to figure out the maximum you can afford to pay per confirmed appointment and still make strong money.
 
-## The Industry Benchmark: $50 to $150 Per Lead
+## Industry Benchmarks for Appointment Generation Costs
 
-Industry research across home services contractors shows that lead costs typically range from $50 to $150 per qualified lead. For insulation and spray foam specifically, most contractors are paying in the $80 to $130 range.
+Industry research across home services contractors suggests that when you factor in the full cost of getting from raw interest to a confirmed, calendar-booked appointment, contractors across the home services space typically see effective costs ranging from $100 to $300 per booked appointment depending on how aggressively qualified the booking is, the service type, and the market size.
 
-But a benchmark is just a starting point. Your actual max cost per lead might be higher or lower depending on several factors.
+For insulation and spray foam specifically — a strong seasonal niche alongside floor coatings and other home services — the effective cost per well-qualified booked appointment (pre-screened, confirmed, exclusive) tends to sit in the mid-to-upper portion of that range, because the qualification step adds real value.
 
-## The Factors That Determine Your Max Cost Per Lead
+But a benchmark is just a starting point. Your actual max cost per booked appointment depends heavily on your specific economics.
+
+## The Factors That Determine Your Max Cost Per Booked Appointment
 
 ### Your Average Job Size
 
-A spray foam contractor with an average job size of $5,000 can afford to pay more per lead than a contractor with an average job of $1,500.
+An insulation contractor with an average job size of $5,000 can afford to invest more per booked appointment than a contractor with an average job of $1,500.
 
-Let's say your close rate is 30 percent. That means for every three leads you get, you convert one into a job.
+Let's say your close rate on well-qualified booked appointments is 40%. That means for every 10 appointments, you close 4 jobs.
 
-If your average job is $5,000, then three leads at $100 per lead costs you $300. You convert one, you get a $5,000 job. You made $4,700 in gross profit (assuming 94 percent gross margin, which is typical for insulation work).
+If your average job is $5,000, then 10 appointments at a given cost per appointment = X invested. You convert 4, generating $20,000. The math works well at almost any reasonable appointment cost.
 
-If your average job is $1,500, then three leads at $100 per lead still costs you $300. You convert one, you get a $1,500 job. You made $1,200 in gross profit. That's barely profitable.
+If your average job is $1,500, then the same number of appointments at the same cost generates only $6,000 from those same 4 closings. The math gets tighter.
 
-The contractor with larger jobs can afford to pay more per lead. They have more margin to work with.
+The contractor with larger average jobs can afford to invest more per appointment. They have more margin to work with.
 
 ### Your Close Rate
 
-Your close rate is how many leads you actually convert into jobs. If you get 20 leads and convert 6 into jobs, your close rate is 30 percent.
+Your close rate is how many booked appointments you actually convert into jobs. Unlike raw "leads" (which include contacts that go nowhere), booked appointments are pre-qualified homeowners who have confirmed interest and scheduled a specific time. Your close rate on these should be significantly higher than on cold contacts.
 
-Close rate varies wildly by contractor and by quality of leads. Some contractors close 50 percent of leads (these are usually leads from word of mouth or referrals). Some contractors close 10 percent (these are usually cold leads from digital marketing).
+Industry experience suggests contractors who receive well-qualified, exclusive booked appointments — where a pre-screening call has already confirmed job type, location, timeline, and interest — can realistically close 30% to 60% of those visits. An epoxy and garage coating contractor we work with maintains roughly a 60% close rate on the appointments we send. Insulation contractors with a solid estimate process see similar results.
 
-A lead source from a high-quality provider might close at 40 percent. A lead source from a cheap provider might close at 5 percent. Even though the cheap source is literally cheaper per lead, your actual cost per converted job is higher.
+A close rate from a high-quality appointment service might be 40%. A close rate from a cheap service that calls anyone who fills out a form and dumps them on your calendar might be 5% to 10%. Even though the cheap service charges less per booking, your actual cost per closed job is far higher.
 
-Here's the math: 20 leads at $50 per lead with a 5 percent close rate means you spent $1,000 to get one job.
+Here's the math: 20 appointments at a lower cost per appointment with a 5% close rate means you close 1 job for a high total spend.
 
-20 leads at $125 per lead with a 40 percent close rate means you spent $625 to get four jobs ($156 per job).
+20 appointments at a higher cost per appointment with a 40% close rate means you close 8 jobs for a lower cost per closed job.
 
-The "expensive" leads are actually much cheaper per converted customer.
+The "expensive" service is often dramatically cheaper on a per-closed-job basis.
 
-### Your Lead Capacity
+### Your Appointment Capacity
 
-How many jobs can you actually do in a month? If you can do 8 jobs per month at 30 percent close rate, you need 27 leads per month.
+How many jobs can you actually do in a month? If you can do 8 jobs per month at 40% close rate on booked appointments, you need 20 confirmed appointments per month.
 
-If you can do 2 jobs per month, you only need 7 leads.
+If you can only do 2 jobs per month, you only need 5 appointments.
 
-The contractor who needs 27 leads has more flexibility on cost per lead. They can afford to buy more leads because they have the capacity to convert them.
+The contractor who needs 20 appointments has more flexibility on cost per appointment. They can invest more because they have the capacity to convert them.
 
-The contractor who only needs 7 leads per month should be more selective. Paying $150 per lead when you only need 7 might cost you more than it's worth. You'd be better off with fewer, cheaper leads.
+### Your Qualification Requirements
 
-### Your Lead Quality Requirements
+Are you trying to reach homeowners in a specific income range? Are you only servicing homes above a certain size? Are you focused on specific spray foam work types versus general insulation?
 
-Are you trying to reach homeowners in a specific income range? Are you only willing to service homes over 5,000 square feet? Are you trying to avoid certain neighborhoods or customer types?
+The more specific your qualification requirements, the more involved the pre-screening process, which reflects in appointment cost. A provider who guarantees they've screened for your specific criteria and that every appointment is exclusive to you will typically cost more than one who books anyone with a pulse.
 
-The more specific your targeting, the more expensive leads will be. A lead provider who guarantees they're only sending you leads from homes in the top 30 percent income bracket will charge more than someone who sends any lead in your service area.
+More selective means better quality and higher close rates, which justifies the higher investment per appointment.
 
-More selective often means better quality and higher close rates, which justifies higher cost per lead. But not always.
+## The Calculation: What's Your Maximum Cost Per Booked Appointment?
 
-## The Calculation: What's Your Maximum Cost Per Lead?
+Here's how to figure out the maximum you should pay per confirmed appointment:
 
-Here's how to figure out the maximum you should pay per lead:
+Start with your average job gross profit. Let's say your average insulation job is $3,500 and your gross margin is 90%. Your gross profit is $3,150.
 
-Start with your average job gross profit. Let's say your average insulation job is $3,500 and your gross margin is 90 percent. Your gross profit is $3,150.
+Multiply by your close rate in decimal form. If your close rate on pre-qualified appointments is 40% (0.40), your expected gross profit per appointment is $3,150 x 0.40 = $1,260.
 
-Multiply by your close rate in decimal form. If your close rate is 25 percent (0.25), your expected gross profit per lead is $3,150 x 0.25 = $787.50.
+Subtract your other overhead for managing estimates, driving to jobs, etc. Let's say this is $100 per appointment.
 
-Subtract your other marketing costs, customer acquisition overhead, and overhead for managing leads. Let's say this is $100 per lead.
+Your actual profit per appointment is $1,260 - $100 = $1,160.
 
-Your actual profit per lead is $787.50 - $100 = $687.50.
+The maximum you should pay per appointment is around 20% to 30% of that profit. That leaves you plenty of margin.
 
-The maximum you should pay per lead is around 40 to 50 percent of that profit. That leaves you room for error, a low close rate month, and overhead you didn't expect.
+30% of $1,160 = $348 per appointment.
 
-40 percent of $687.50 = $275 per lead.
-
-In this case, if someone's charging you more than $200 to $250 per lead, it's getting expensive. If they're charging less than $100, you should ask why the leads are so cheap. There might be a quality problem.
+In this case, if someone's charging you a reasonable appointment booking fee, you have a lot of room to work with.
 
 Let's run another example with a smaller average job:
 
-Average job: $2,000. Gross margin: 85 percent = $1,700 gross profit.
-Close rate: 30 percent = $510 expected gross profit per lead.
-Other costs: $75 per lead.
-Actual profit: $435 per lead.
-Maximum cost per lead: 40 percent = $174 per lead.
+Average job: $2,000. Gross margin: 85% = $1,700 gross profit.
+Close rate on pre-qualified appointments: 35% = $595 expected gross profit per appointment.
+Other costs: $75 per appointment.
+Actual profit per appointment: $520.
+Maximum cost per appointment: 30% = $156.
 
-In this case, paying $150 per lead is reasonable. Paying $200 per lead is pushing it.
+In this case, you need appointment costs to be reasonably priced to stay profitable. Know your numbers before you commit.
 
-## Why Cheap Leads Often Cost You More in the Long Run
+## Why Cheap "Lead" Services Often Cost You More in the Long Run
 
-You'll sometimes see lead providers charging $30, $40, or $50 per lead. This seems amazing compared to $100 to $150.
+You'll sometimes see services advertising extremely low per-contact costs. This seems amazing compared to quality appointment booking.
 
 But ask yourself: why are they so cheap?
 
 Usually it's because:
 
-The lead quality is poor. The leads haven't been screened. You're getting tire kickers and DIY homeowners mixed in with actual buying customers.
+The contacts haven't been screened. You're getting form fills from tire-kickers and curious homeowners mixed in with actual buying customers. You're doing all the qualification work yourself — and you're still paying per contact whether they qualify or not.
 
-The leads are shared with competitors. You're buying the same lead as five other insulation contractors. Your close rate will be 1 percent instead of 30 percent.
+The contacts are shared with competitors. You're being sent the same homeowner as five other insulation contractors. Your close rate will be a fraction of what you'd get from an exclusive booked appointment.
 
-The leads are old or cold. They came from a lead marketplace that collects leads and sells them weeks or months later. By the time you call, they've already hired someone else.
+The contacts are old or cold. They came from a marketplace that collects inquiries and sells them weeks or months later. By the time you call, they've already hired someone else.
 
-The provider doesn't care if you convert. They're just aggregating leads and selling them to anyone. They're not optimizing for your success.
+In all these cases, you might pay little per contact but never close jobs. Your true cost per acquired customer is much higher than it appears.
 
-In all these cases, you might pay $40 per lead but never actually close any jobs. Your true cost per acquired customer is infinite.
+The best appointment services cost more per booking because they're worth more. They're screened, current, targeted, and booked exclusively on your calendar from a provider who's incentivized to make sure you show up to real jobs.
 
-The best leads are more expensive because they're worth more. They're screened, current, targeted, and coming from a provider who's incentivized to make sure they're quality.
+## The Real Cost Isn't Per Appointment, It's Per Closed Job
 
-## The Real Cost Isn't Per Lead, It's Per Customer
+Stop thinking about cost per appointment. Start thinking about cost per acquired customer.
 
-Stop thinking about cost per lead. Start thinking about cost per acquired customer.
+Cost per appointment: $X
+Close rate: 40%
+Cost per customer: Low
 
-Cost per lead: $100
-Close rate: 20 percent
-Cost per customer: $500
+Cost per appointment: Lower but from a cheap, unqualified service
+Close rate: 5% to 10%
+Cost per customer: Much higher than it appears
 
-Cost per lead: $150
-Close rate: 35 percent
-Cost per customer: $428
+The provider with the higher cost per appointment might be your best investment when you run the real math.
 
-The second option is more expensive per lead but cheaper per customer. That's what actually matters.
+Track your close rate by appointment source. Track your average job size by appointment source. Calculate your true customer acquisition cost. Then compare that across all your sources.
 
-Track your close rate by lead source. Track your average job size by lead source. Calculate your true customer acquisition cost. Then compare that across all your lead sources.
+## What You Should Expect from a Quality Appointment Provider
 
-The provider with the highest cost per lead might be your best investment.
+If you're investing per booked appointment, what should that include?
 
-## What You Should Expect from a Reputable Lead Provider
+- Pre-qualification call confirming job type, location, timeline, and interest
+- Appointment booked with a specific date and time on your calendar
+- Homeowner has confirmed the appointment — not just a form fill
+- Exclusive booking — you're the only contractor getting this appointment
+- Appointments from homeowners in your specific service area
+- A provider who tracks performance and can share close rate data from similar contractors
 
-If you're paying $100 to $150 per lead, what should that include?
+If a provider can't deliver these things, the appointment cost isn't justified regardless of how low it is.
 
-Targeted leads from your specific service area.
+## The Seasonal Factor: Appointment Costs Vary
 
-Leads from homeowners actively looking for insulation or spray foam services.
+Spring and early summer are peak seasons for insulation contractors. More homeowners are motivated, there's more competition for advertising space, and acquisition costs rise.
 
-A delivered lead within 24 to 48 hours of the inquiry.
+In winter, the same level of appointment generation typically costs less because demand for advertising inventory is lower and fewer contractors are competing aggressively.
 
-Screened leads that verify the homeowner is ready to accept a quote or estimate.
-
-Phone number and contact information you can call directly.
-
-No shared leads. You're the only contractor getting the lead.
-
-A provider who tracks their own metrics and can tell you their average close rate for contractors like you.
-
-If a provider is charging you $100+ per lead and can't guarantee these things, you're overpaying.
-
-## The Hidden Costs of Bad Lead Sources
-
-There are costs beyond the per-lead price:
-
-Your time calling dead leads. If 80 percent of your leads don't pick up the phone, you're wasting time. That costs money.
-
-Your sales team's frustration. Constantly calling bad leads demoralizes your team. They'll stop being as effective on good leads.
-
-Your reputation in the market. If you're taking on jobs without proper vetting, you might end up in difficult installations that hurt your brand. The cheap lead that costs $30 but requires twice as much work and turns a good customer into a nightmare? That cost way more than $30.
-
-Your cash flow. If you have to spend $5,000 on leads to get one job, your cash flow suffers. Better to spend $500 to get one job with a higher conversion rate.
-
-## The Seasonal Factor: Leads Cost More in Spring
-
-Spring is peak season for insulation contractors. Leads are more expensive in March, April, and May than they are in November, December, and January.
-
-In spring, a qualified insulation lead might cost $150 to $200. In winter, the same lead might cost $75 to $100.
-
-This is because demand is high. Everyone's hiring homeowners for spring projects. Lead providers have more buyers competing for inventory.
-
-Plan your budget accordingly. If you want to maximize ROI, consider front-loading your lead spend in off-season (when leads are cheaper) and relying more on referrals and word of mouth in peak season (when leads are expensive).
+Plan your appointment budget accordingly. If you want to maximize ROI, consider maintaining consistent appointment flow year-round rather than trying to spike only in peak season — homeowners who inquire off-season are often more decisive because they're not comparison-shopping a dozen other contractors.
 
 ## FAQ
 
-**Q: Should I negotiate the per-lead price with a provider?**
+**Q: Should I negotiate the per-appointment price with a provider?**
 
-A: Maybe. If you're committing to a large volume (100+ leads per month), you might get a volume discount. But beware of providers who negotiate down too much. They might be cutting quality to maintain margin. Better to pay the standard rate for quality leads than negotiate for cheap leads that don't convert.
+A: If you're committing to a large and consistent volume, you might get a volume adjustment. But beware of providers who negotiate down too much. Appointment quality is directly tied to the economics of running qualified campaigns. If they're cutting price dramatically, ask what's being cut from the qualification process.
 
-**Q: What if I get leads from multiple sources at different price points?**
+**Q: What if I book appointments from multiple sources at different price points?**
 
-A: Track each source separately. Calculate the true cost per acquired customer for each. Double down on the sources with the lowest customer acquisition cost, even if the per-lead price is higher. Reduce or eliminate the sources with high customer acquisition cost.
+A: Track each source separately. Calculate the true cost per closed job for each. Double down on the sources with the lowest customer acquisition cost, even if the per-appointment investment is higher. Reduce or eliminate sources with high per-closed-job costs.
 
-**Q: Is it ever worth buying cheap leads just to fill the pipeline?**
+**Q: Is it ever worth booking cheap, unqualified contacts just to fill the pipeline?**
 
-A: No. Cheap leads that don't convert are worse than no leads at all. They waste your time, frustrate your team, and give you false hope. Better to have 10 qualified leads at $150 each than 50 garbage leads at $30 each.
+A: No. Contacts that don't convert waste your time, frustrate your team, and give you false hope about pipeline health. Better to have 10 confirmed appointments at a reasonable investment each than 50 raw contacts that go nowhere.
 
-**Q: How do I know if the leads I'm getting are actually "qualified"?**
+**Q: How do I know if the appointments I'm getting are actually "qualified"?**
 
-A: A qualified lead should be a homeowner who specifically wants the service you're offering (insulation or spray foam), is ready to get quotes, and is in your service area. If a lead says "maybe someday" or "I'm just getting information," they're not qualified. Ask your provider what their qualification process is.
+A: A qualified, booked appointment should be a homeowner who has specifically confirmed interest in your service, agreed to a date and time, is in your service area, and has had their job type and timeline verified by a pre-screening call. If an "appointment" is just someone who filled out an online form and expects you to cold-call them, that's not an appointment — that's a contact.
 
-**Q: Should I use multiple lead providers or stick with one?**
+**Q: Should I use multiple appointment providers or stick with one?**
 
-A: Test both approaches. Some contractors find that one provider gives them consistent, reliable leads and they want to deepen that relationship. Others find that multiple sources provide more stability and flexibility. The key is measuring performance on each source and being willing to make adjustments.
+A: Start with one. Once you understand the quality and your close rate, you can add more volume or sources if needed. The key is measuring performance on each source and being willing to make adjustments based on real data.
 
 ---
 
-The right cost per lead for your business depends on your numbers. Calculate your gross profit per lead, estimate your close rate by source, and figure out the maximum you can afford to pay while staying profitable.
+The right investment per booked appointment for your business depends on your numbers. Calculate your gross profit per appointment, know your close rate by source, and figure out the maximum you can invest while staying profitable.
 
-Don't chase cheap leads. Chase cost-effective leads that convert into customers. There's a huge difference.
+Don't chase cheap contacts. Chase cost-effective booked appointments that convert into closed jobs. There's a huge difference.
 
-At Appointly, we price our leads at $100 per qualified insulation or spray foam lead in most markets. We don't cut corners on quality. Every lead is screened, verified, and targeted to your service area. We deliver within 2 to 3 weeks because we know speed matters for close rates. And because we operate on a pay-per-lead model, we're incentivized to make sure the leads convert. Your success is our success. If you want to understand whether our per-lead cost is right for your business, let's have a conversation. Reach out to Appointly today to discuss your specific numbers and see if we can help fill your pipeline profitably.
+At Appointly, we price per booked, pre-qualified appointment. We don't cut corners on qualification. Every appointment is screened, confirmed, and booked exclusively on your calendar. If you want to understand whether our appointment model works for your specific numbers, let's talk.
+
+Book a free strategy call at getappointly.co.
