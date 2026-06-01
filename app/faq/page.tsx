@@ -15,29 +15,29 @@ const bookingUrl = "https://client.getappointly.co/strategy-calendar";
 
 const faqItems = [
   {
-    question: "What qualifies as a lead I get charged for?",
+    question: "What qualifies as a booked appointment I get charged for?",
     answer:
-      "A lead must be a verified homeowner, located in your service area, with a real insulation project and an indicated budget. If a lead does not meet all criteria, you do not pay for it.",
+      "A booked appointment must be a verified homeowner, located in your service area, with a real project and confirmed fit. The appointment is scheduled directly on your calendar before handoff. If an appointment does not meet all criteria, you do not pay for it.",
   },
   {
     question: "What is the startup fee for?",
     answer:
-      "It covers the initial setup work, including your Google profile setup, ad account build, creative, launch, and review card kit. After that, you only pay per qualified lead delivered.",
+      "It covers the initial setup work, including your Google profile setup, ad account build, creative, launch, and review card kit. After that, you only pay per booked appointment delivered.",
   },
   {
-    question: "Are my leads exclusive?",
+    question: "Are my appointments exclusive?",
     answer:
-      "Yes. We only work with one insulation contractor per market. Your leads are not sent to a local competitor.",
+      "Yes. We only work with one contractor per market. Your appointments are not shared with a competitor in the same area.",
   },
   {
     question: "What markets do you work in?",
     answer:
-      "We focus on small-to-mid-sized markets in the US and Canada where insulation contractors have room to grow and want cleaner lead flow.",
+      "We focus on small-to-mid-sized markets in the US and Canada where contractors have room to grow and want consistent booked estimate flow.",
   },
   {
-    question: "How fast do leads come in?",
+    question: "How fast do appointments come in?",
     answer:
-      "Most contractors see their first leads within 24 to 48 hours of campaign launch.",
+      "Most contractors see their first booked appointment within 24 to 48 hours of campaign launch.",
   },
   {
     question: "What if I want to pause or stop?",
@@ -47,31 +47,31 @@ const faqItems = [
   {
     question: "Do I need to run my own ads?",
     answer:
-      "No. We handle the creative, targeting, budget management, and optimization. Your team just needs to answer the phone and run the estimates.",
+      "No. We handle the creative, targeting, budget management, and optimization. Your team just needs to show up to the estimate and close the job.",
   },
   {
     question: "How do I get started?",
     answer:
-      "Book a strategy call. We review your market, service area, and current lead flow, then tell you whether Appointly is a fit for your business.",
+      "Book a strategy call. We review your market, service area, and current appointment flow, then tell you whether Appointly is a fit for your business.",
   },
 ];
 
 export const metadata: Metadata = {
-  title: "FAQ | Appointly Solutions Insulation Lead Generation",
+  title: "FAQ | Appointly Solutions Appointment Booking",
   description:
-    "Read answers to common questions about Appointly Solutions, exclusive insulation leads, qualification standards, pricing, and getting started.",
+    "Read answers to common questions about Appointly Solutions, how booked estimate appointments work, exclusivity, service areas, and getting started.",
   keywords: [
-    "insulation lead generation FAQ",
-    "cost per lead FAQ",
-    "exclusive leads questions",
+    "appointment booking FAQ",
+    "pay for performance contractor",
+    "exclusive contractor appointments",
   ],
   alternates: {
     canonical: "https://getappointly.co/faq",
   },
   openGraph: {
-    title: "FAQ | Appointly Solutions Insulation Lead Generation",
+    title: "FAQ | Appointly Solutions Appointment Booking",
     description:
-      "Explore common questions about Appointly Solutions and how our insulation lead generation model works.",
+      "Explore common questions about Appointly Solutions and how the pay-for-performance appointment booking model works.",
     url: "https://getappointly.co/faq",
     siteName: "Appointly Solutions",
     type: "website",
@@ -116,8 +116,8 @@ export default function FaqPage() {
                 FAQ for <span className="gradient-text">Appointly Solutions</span>
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                This page answers the questions insulation contractors usually ask about
-                lead quality, exclusivity, pricing, service areas, and getting started.
+                This page answers the questions home service contractors usually ask about
+                appointment quality, exclusivity, service areas, and getting started.
               </p>
             </div>
           </div>
@@ -161,13 +161,13 @@ export default function FaqPage() {
                   <Link href="/about" className="text-primary transition-colors hover:opacity-80">
                     About page
                   </Link>{" "}
-                  explains why Appointly Solutions is built around a cost-per-lead model.
-                  For the main service page, visit{" "}
+                  explains why Appointly Solutions is built around a pay-for-performance appointment model.
+                  For the featured niche, visit{" "}
                   <Link
-                    href="/insulation-contractor-leads"
+                    href="/floor-coating-contractor-marketing"
                     className="text-primary transition-colors hover:opacity-80"
                   >
-                    Insulation Contractor Leads
+                    Floor Coating Contractor Marketing
                   </Link>
                   .
                 </p>
@@ -182,13 +182,13 @@ export default function FaqPage() {
                 </h2>
                 <p className="mt-4 text-sm leading-7 text-slate-700">
                   Book a strategy call and we will walk through your area, your current
-                  lead flow, and whether Appointly makes sense for your team.
+                  appointment flow, and whether Appointly makes sense for your team.
                 </p>
                 <a
                   href={bookingUrl}
                   className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
                 >
-                  Book a Strategy Call
+                  Book a free strategy call
                   <ArrowRight className="h-4 w-4" />
                 </a>
               </article>

@@ -158,9 +158,9 @@ export default async function BlogPostPage({
                   Why it matters
                 </p>
                 <p className="mt-4 text-sm leading-7 text-slate-600">
-                  This article is part of the Appointly blog library, which is designed
-                  to help insulation contractors generate more qualified leads without
-                  relying on vague marketing promises.
+                  This article is part of the Appointly blog library, designed to help
+                  home service contractors book more qualified estimate appointments
+                  without relying on vague marketing promises.
                 </p>
               </div>
 
@@ -169,17 +169,18 @@ export default async function BlogPostPage({
                   Need help?
                 </p>
                 <h2 className="mt-4 text-2xl font-bold leading-tight text-slate-950">
-                  Want a lead system that matches what you just read?
+                  Want an appointment system that matches what you just read?
                 </h2>
                 <p className="mt-4 text-sm leading-7 text-slate-700">
-                  Book a strategy call and we'll walk through lead flow, qualification,
-                  and the channels that make the most sense for your market.
+                  Book a free strategy call and we will walk through appointment flow,
+                  prospect qualification, and the channels that make the most sense for
+                  your trade and market.
                 </p>
                 <a
                   href="https://client.getappointly.co/strategy-calendar"
                   className="mt-6 inline-flex items-center justify-center rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
                 >
-                  Book a Call
+                  Book a free strategy call
                 </a>
               </div>
             </aside>

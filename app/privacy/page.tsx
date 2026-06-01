@@ -38,7 +38,7 @@ const sections = [
   {
     title: "How We Use Information",
     body: [
-      "We use collected information to respond to inquiries, deliver lead generation services, schedule calls, improve our site performance, and understand how visitors interact with our pages.",
+      "We use collected information to respond to inquiries, deliver appointment booking services, schedule calls, improve our site performance, and understand how visitors interact with our pages.",
       "Appointly Solutions may also use your information to communicate service updates, share relevant follow up information, and support business operations related to lead delivery.",
     ],
   },
@@ -91,7 +91,7 @@ export default function PrivacyPage() {
             </h1>
             <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
               This Privacy Policy explains how Appointly Solutions collects, uses,
-              and protects information through this website and related lead generation
+              and protects information through this website and related appointment booking
               services. Last updated {lastUpdated}.
             </p>
           </div>

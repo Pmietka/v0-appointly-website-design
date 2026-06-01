@@ -22,13 +22,13 @@ const highlights = [
     icon: ShieldCheck,
     title: "One contractor per market",
     description:
-      "Your leads are not sold to another insulation company in the same market, which gives your team a cleaner shot at booking the estimate.",
+      "Your appointments are not shared with a competitor in the same market, which gives your team a cleaner shot at booking the estimate.",
   },
   {
     icon: BadgeCheck,
     title: "Homeowner and job fit checked",
     description:
-      "We screen for homeowner status, service area, and project fit before the lead reaches your team so you are not wasting time on junk calls.",
+      "We screen for homeowner status, service area, and project fit before the appointment is placed on your calendar so you are not wasting time on junk calls.",
   },
   {
     icon: PhoneCall,
@@ -40,27 +40,27 @@ const highlights = [
     icon: CalendarCheck2,
     title: "Built around estimate appointments",
     description:
-      "The target is not random web form volume. It is real homeowner conversations that can turn into insulation estimates and booked jobs.",
+      "The target is not random web form volume. It is qualified homeowner conversations booked on your calendar that can turn into insulation estimates and closed jobs.",
   },
 ];
 
 export const metadata: Metadata = {
-  title: "Insulation Contractor Leads | Exclusive Pay Per Lead Growth",
+  title: "Insulation Contractor Appointments | Exclusive Pay-for-Performance Booking",
   description:
-    "Get exclusive insulation contractor leads from Appointly Solutions with fast follow up, qualification, and a pay per lead model built for booked estimates.",
+    "Get exclusive insulation contractor appointments from Appointly Solutions — qualified homeowners booked directly on your calendar on a pay-for-performance basis.",
   keywords: [
-    "insulation contractor leads",
-    "exclusive insulation leads",
-    "pay per lead insulation",
+    "insulation contractor appointments",
+    "exclusive insulation appointments",
+    "pay for performance insulation",
     "Appointly Solutions",
   ],
   alternates: {
     canonical: "https://getappointly.co/insulation-contractor-leads",
   },
   openGraph: {
-    title: "Insulation Contractor Leads | Exclusive Pay Per Lead Growth",
+    title: "Insulation Contractor Appointments | Exclusive Pay-for-Performance Booking",
     description:
-      "See how Appointly Solutions helps insulation contractors buy qualified leads with less risk and more booked estimate potential.",
+      "See how Appointly Solutions helps insulation contractors get qualified estimate appointments with a pay-for-performance model and lower risk.",
     url: "https://getappointly.co/insulation-contractor-leads",
     siteName: "Appointly Solutions",
     type: "website",
@@ -84,20 +84,20 @@ export default function InsulationContractorLeadsPage() {
                 For Insulation Contractors
               </p>
               <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-balance md:text-6xl">
-                Insulation leads that turn into{" "}
-                <span className="gradient-text">estimate appointments</span>
+                Insulation estimate appointments,{" "}
+                <span className="gradient-text">booked and qualified</span> before they reach you
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
                 If you want more attic, crawlspace, and whole-home insulation jobs,
-                you need better homeowner conversations in the right service area, not
-                just more random form fills. That is what this page is about.
+                you need qualified homeowner conversations in the right service area —
+                not random form fills. That is what this page is about.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
                   href={bookingUrl}
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
                 >
-                  Book a Strategy Call
+                  Book a free strategy call
                   <ArrowRight className="h-4 w-4" />
                 </a>
                 <Link
@@ -118,10 +118,10 @@ export default function InsulationContractorLeadsPage() {
                 What You Actually Need
               </p>
               <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">
-                You do not need more traffic. You need qualified estimates in your service area.
+                You do not need more traffic. You need qualified appointments in your service area.
               </h2>
               <p className="mt-4 leading-relaxed text-muted-foreground">
-                Good leads should make sense for the kind of work you want to run,
+                Good appointments should match the kind of work you want to run,
                 the towns you cover, and the crews you have available. That is the
                 difference between a busy phone and a healthier schedule.
               </p>
@@ -152,21 +152,21 @@ export default function InsulationContractorLeadsPage() {
                 Why This Works Better
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
-                Better lead quality gives your team a better shot at closing work.
+                Better appointment quality gives your team a better shot at closing work.
               </h2>
               <p className="mt-5 text-sm leading-7 text-muted-foreground md:text-base">
                 The right homeowner, the right service area, quick follow-up, and a
-                clear insulation need all matter. When those pieces line up, the lead
-                is much more likely to become a real estimate instead of a dead-end call.
+                clear insulation need all matter. When those pieces line up, the
+                appointment is much more likely to turn into a closed job instead of a dead-end call.
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
                 If exclusivity is your top concern, visit{" "}
                 <Link href="/exclusive-insulation-leads" className="text-primary transition-colors hover:opacity-80">
-                  Exclusive Insulation Leads
+                  Exclusive Insulation Appointments
                 </Link>{" "}
-                for a direct breakdown. If pricing model matters most, continue to{" "}
+                for a direct breakdown. If the performance model matters most, continue to{" "}
                 <Link href="/pay-per-lead-insulation" className="text-primary transition-colors hover:opacity-80">
-                  Pay Per Lead Insulation
+                  Pay-For-Performance Model
                 </Link>
                 .
               </p>
@@ -180,17 +180,17 @@ export default function InsulationContractorLeadsPage() {
                 Next Step
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-slate-950">
-                See what qualified lead flow could look like in your market.
+                See what qualified appointment flow could look like in your market.
               </h2>
               <p className="mt-4 text-sm leading-7 text-slate-700 md:text-base">
                 Book a strategy call and we will look at your service area, job types,
-                and how many estimate opportunities would actually make sense for your team.
+                and how many estimate appointments would actually make sense for your team.
               </p>
               <a
                 href={bookingUrl}
                 className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
               >
-                Book a Strategy Call
+                Book a free strategy call
                 <ArrowRight className="h-4 w-4" />
               </a>
             </article>
@@ -200,7 +200,7 @@ export default function InsulationContractorLeadsPage() {
         <ProofSection />
         <SeoResourceLinks
           title="Keep exploring the highest-intent pages."
-          description="These links reinforce the main service page with supporting pages around exclusivity, pricing, and contractor buying behavior."
+          description="These links reinforce the insulation appointment page with supporting pages around exclusivity, performance model, and contractor buying behavior."
           resources={getCommercialResources("insulation-contractor-leads")}
         />
       </main>

@@ -12,45 +12,45 @@ const reasons = [
     icon: CircleDollarSign,
     title: "Less upfront risk",
     description:
-      "A pay per lead model keeps the conversation tied to lead flow rather than large retainers that can feel disconnected from results.",
+      "A pay-for-performance model keeps the conversation tied to real appointment flow rather than large retainers that can feel disconnected from results.",
   },
   {
     icon: ShieldCheck,
     title: "Clearer accountability",
     description:
-      "When lead generation is tied to qualified opportunities, expectations around delivery quality become easier to define and track.",
+      "When appointment generation is tied to qualified, booked opportunities, expectations around delivery quality become easier to define and track.",
   },
   {
     icon: Clock3,
     title: "Operational focus",
     description:
-      "Your team can spend less time guessing whether marketing is working and more time focusing on speed to lead and closing.",
+      "Your team can spend less time guessing whether marketing is working and more time focusing on speed to appointment and closing.",
   },
   {
     icon: LineChart,
     title: "Better planning",
     description:
-      "Knowing what a qualified lead costs can make growth forecasting and crew planning more practical.",
+      "Knowing what a booked appointment costs can make growth forecasting and crew planning more practical during insulation's seasonal peaks.",
   },
 ];
 
 export const metadata: Metadata = {
-  title: "Pay Per Lead Insulation Marketing | Appointly Solutions",
+  title: "Pay for Performance Insulation Marketing | Appointly Solutions",
   description:
-    "Explore how Appointly Solutions helps insulation contractors grow with a pay per lead marketing model instead of large monthly retainers.",
+    "Explore how Appointly Solutions helps insulation contractors grow with a pay-for-performance appointment model instead of large monthly retainers.",
   keywords: [
-    "pay per lead insulation",
-    "pay per lead insulation marketing",
-    "insulation lead pricing",
+    "pay for performance insulation",
+    "insulation appointment marketing",
+    "performance model insulation contractor",
     "Appointly Solutions",
   ],
   alternates: {
     canonical: "https://getappointly.co/pay-per-lead-insulation",
   },
   openGraph: {
-    title: "Pay Per Lead Insulation Marketing | Appointly Solutions",
+    title: "Pay for Performance Insulation Marketing | Appointly Solutions",
     description:
-      "Learn why a pay per lead model can be a stronger fit than a traditional agency retainer for insulation contractors.",
+      "Learn why a pay-for-performance appointment model can be a stronger fit than a traditional agency retainer for insulation contractors.",
     url: "https://getappointly.co/pay-per-lead-insulation",
     siteName: "Appointly Solutions",
     type: "website",
@@ -71,24 +71,24 @@ export default function PayPerLeadInsulationPage() {
           <div className="mx-auto max-w-6xl px-6">
             <div className="max-w-3xl">
               <p className="text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-6">
-                Pay Per Lead Pricing
+                Performance Model
               </p>
               <h1 className="font-display text-5xl md:text-6xl font-bold tracking-tight leading-[1.05] text-balance">
-                Pay Per Lead Insulation Marketing for Contractors Who Want{" "}
+                Pay for Performance Insulation Appointments for Contractors Who Want{" "}
                 <span className="gradient-text">Less Guesswork</span>
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                Appointly Solutions was built around a pay per lead structure because
-                many contractors are tired of paying retainers before they see any
-                real opportunity flow. This page explains why that model can be more
-                practical for insulation growth.
+                Appointly Solutions was built around a pay-for-performance structure
+                because many insulation contractors are tired of paying retainers before
+                they see any real booked appointments. This page explains why that model
+                can be more practical for insulation seasonal growth.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
                   href={bookingUrl}
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
                 >
-                  Book a Strategy Call
+                  Book a free strategy call
                   <ArrowRight className="h-4 w-4" />
                 </a>
                 <Link
@@ -109,7 +109,7 @@ export default function PayPerLeadInsulationPage() {
                 Why Contractors Like It
               </p>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
-                A pricing structure that stays closer to production.
+                A performance structure that stays closer to production.
               </h2>
             </div>
 
@@ -135,25 +135,25 @@ export default function PayPerLeadInsulationPage() {
           <div className="mx-auto grid max-w-6xl gap-6 px-6 lg:grid-cols-2">
             <article className="glass-card rounded-3xl p-8 md:p-10">
               <p className="text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground">
-                What Appointly Solutions Means By Pay Per Lead
+                What Appointly Solutions Means By Pay for Performance
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
-                Qualified opportunities are the center of the conversation.
+                Booked appointments are the center of the conversation.
               </h2>
               <p className="mt-5 text-sm leading-7 text-muted-foreground md:text-base">
-                Appointly Solutions uses a pay per lead model to keep decisions closer
-                to lead quality, booking potential, and service area fit. It is not
-                about chasing the lowest possible cost. It is about building a system
-                where expectations are easier to align.
+                Appointly Solutions uses a pay-for-performance model to keep decisions
+                closer to appointment quality, booking potential, and service area fit.
+                You pay per booked appointment — not per click or per impression. When
+                we do well, you do well.
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
                 For the broader process, visit{" "}
                 <Link href="/how-it-works" className="text-primary transition-opacity hover:opacity-80">
                   How It Works
                 </Link>
-                . If your main concern is lead ownership, continue to{" "}
+                . If your main concern is appointment ownership, continue to{" "}
                 <Link href="/exclusive-insulation-leads" className="text-primary transition-opacity hover:opacity-80">
-                  Exclusive Insulation Leads
+                  Exclusive Insulation Appointments
                 </Link>
                 .
               </p>
@@ -168,14 +168,14 @@ export default function PayPerLeadInsulationPage() {
               </h2>
               <p className="mt-4 text-sm leading-7 text-slate-700 md:text-base">
                 A strategy call can help you decide whether Appointly Solutions and a
-                pay per lead approach make sense for your sales process, market, and
-                growth targets.
+                pay-for-performance appointment model make sense for your sales process,
+                market, and seasonal growth targets.
               </p>
               <a
                 href={bookingUrl}
                 className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
               >
-                Book a Strategy Call
+                Book a free strategy call
                 <ArrowRight className="h-4 w-4" />
               </a>
             </article>

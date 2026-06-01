@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ArrowRight,
-  CircleDollarSign,
+  CalendarCheck2,
   CreditCard,
   MapPin,
   Megaphone,
@@ -27,27 +27,27 @@ const steps = [
   },
   {
     icon: Megaphone,
-    title: "Local ad campaigns",
+    title: "Meta ad campaigns built for your trade",
     description:
-      "We run campaigns aimed at homeowners in your target towns who are likely to need attic insulation, removal, or spray foam work.",
+      "We run campaigns aimed at homeowners in your target towns who are actively looking for your service.",
   },
   {
     icon: SearchCheck,
-    title: "Lead qualification",
+    title: "Prospect qualification and calendar booking",
     description:
-      "Every lead is checked for homeowner status, project fit, and service area before it reaches your team.",
+      "Every prospect is screened for homeowner status, project fit, and service area — then booked directly onto your calendar.",
   },
   {
     icon: Smartphone,
-    title: "Review follow-up",
+    title: "Review follow-up system",
     description:
       "We include a review system your crew can use after completed jobs so your Google profile gets stronger over time.",
   },
   {
     icon: CreditCard,
-    title: "Pay per qualified lead",
+    title: "Pay per booked appointment delivered",
     description:
-      "The model stays tied to approved lead delivery instead of a fixed monthly retainer that keeps running either way.",
+      "The model stays tied to actual booked appointment delivery — not a fixed monthly retainer that keeps running either way.",
   },
 ];
 
@@ -55,36 +55,36 @@ const processFaq = [
   {
     question: "Do I need to manage campaigns myself?",
     answer:
-      "No. We handle the setup, ads, qualification flow, and review process. Your team focuses on answering the phone, running estimates, and closing work.",
+      "No. We handle the setup, ads, qualification flow, and review process. Your team focuses on showing up to estimates, doing the work, and closing jobs.",
   },
   {
-    question: "What does a qualified lead include?",
+    question: "What does a booked appointment include?",
     answer:
-      "A qualified lead is a verified homeowner in your service area with a real insulation project and an indicated budget.",
+      "A booked appointment is a verified homeowner in your service area with a real project — screened for fit and scheduled directly on your calendar before we hand them off.",
   },
   {
-    question: "What if a lead does not meet the criteria?",
+    question: "What if an appointment does not meet the criteria?",
     answer:
-      "You do not pay for it. If the lead misses the agreed standards, it does not count.",
+      "You do not pay for it. If the appointment misses the agreed standards, it does not count.",
   },
 ];
 
 export const metadata: Metadata = {
-  title: "How It Works | Appointly Solutions Lead Generation Process",
+  title: "How It Works | Appointly Solutions Appointment Booking Process",
   description:
-    "Learn how Appointly Solutions generates, qualifies, follows up with, and books insulation leads on a cost per lead model.",
+    "Learn how Appointly Solutions runs Meta ads, qualifies prospects, and books estimate appointments directly on your calendar on a pay-for-performance basis.",
   keywords: [
-    "how insulation leads work",
-    "lead generation process",
-    "cost per lead model",
+    "how appointment booking works",
+    "contractor appointment process",
+    "pay for performance contractor marketing",
   ],
   alternates: {
     canonical: "https://getappointly.co/how-it-works",
   },
   openGraph: {
-    title: "How It Works | Appointly Solutions Lead Generation Process",
+    title: "How It Works | Appointly Solutions Appointment Booking Process",
     description:
-      "See the full Appointly Solutions process from targeted campaigns to booked estimates for insulation contractors.",
+      "See the full Appointly Solutions process from targeted campaigns to booked estimate appointments for home service contractors.",
     url: "https://getappointly.co/how-it-works",
     siteName: "Appointly Solutions",
     type: "website",
@@ -111,15 +111,15 @@ export default function HowItWorksPage() {
                 How <span className="gradient-text">Appointly Solutions</span> works
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                The process is built to help insulation contractors get more qualified
-                estimate opportunities without spending their day inside ad accounts.
+                The process is built to help home service contractors get more qualified
+                estimate appointments without spending their day inside ad accounts.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
                   href={bookingUrl}
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
                 >
-                  Book a Strategy Call
+                  Book a free strategy call
                   <ArrowRight className="h-4 w-4" />
                 </a>
                 <Link
@@ -140,7 +140,7 @@ export default function HowItWorksPage() {
                 Step By Step
               </p>
               <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">
-                The system behind each booked estimate opportunity.
+                The system behind each booked estimate appointment.
               </h2>
             </div>
 
@@ -177,24 +177,24 @@ export default function HowItWorksPage() {
                 What You Get
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
-                The lead should feel ready for a real estimate conversation.
+                Every appointment arrives on your calendar ready for a real estimate conversation.
               </h2>
               <p className="mt-5 text-sm leading-7 text-muted-foreground md:text-base">
-                A typical lead includes verified contact details, service area fit, and
-                enough job context for your team to move into the estimate conversation
-                instead of starting from scratch.
+                A typical booked appointment includes a verified homeowner, confirmed
+                service area fit, and enough project context for your team to move straight
+                into the estimate conversation instead of starting from scratch.
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
                 If you want more background on why the system was built this way, the{" "}
                 <Link href="/about" className="text-primary transition-colors hover:opacity-80">
                   About page
                 </Link>{" "}
-                shares the operating principles behind it. For the main service page, see{" "}
+                shares the operating principles behind it. For the featured niche overview, see{" "}
                 <Link
-                  href="/insulation-contractor-leads"
+                  href="/floor-coating-contractor-marketing"
                   className="text-primary transition-colors hover:opacity-80"
                 >
-                  Insulation Contractor Leads
+                  Floor Coating Contractor Marketing
                 </Link>
                 .
               </p>
@@ -202,17 +202,17 @@ export default function HowItWorksPage() {
 
             <article className="rounded-3xl border border-primary/20 bg-primary/10 p-8 shadow-[0_0_70px_rgba(125,135,247,0.10)] md:p-10">
               <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-primary/20 bg-white/60">
-                <CircleDollarSign className="h-5 w-5 text-slate-950" />
+                <CalendarCheck2 className="h-5 w-5 text-slate-950" />
               </div>
               <p className="mt-6 text-xs font-semibold uppercase tracking-[0.25em] text-slate-600">
-                What It Costs
+                The Model
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-slate-950">
-                Cost per lead, tied to performance.
+                Pay for booked appointments, not monthly retainers.
               </h2>
               <p className="mt-4 text-sm leading-7 text-slate-700 md:text-base">
-                The conversation stays focused on lead quality, response speed, and booked
-                estimates instead of a big monthly fee that keeps running either way.
+                You pay per appointment delivered. No retainer, no guesswork. When
+                we do well, you do well — that is the whole model.
               </p>
             </article>
           </div>
@@ -255,7 +255,7 @@ export default function HowItWorksPage() {
               <Link href="/faq" className="text-primary transition-colors hover:opacity-80">
                 FAQ
               </Link>{" "}
-              for detailed answers about lead qualification, exclusivity, and how to get started.
+              for detailed answers about appointment qualification, exclusivity, and how to get started.
             </p>
           </div>
         </section>
@@ -264,7 +264,7 @@ export default function HowItWorksPage() {
         <SeoResourceLinks
           title="Follow the process into the right next page."
           description="These pages expand the core process into the commercial angles contractors usually compare before booking a call."
-          resources={getCommercialResources("insulation-contractor-leads")}
+          resources={getCommercialResources("floor-coating-contractor-marketing")}
         />
       </main>
       <Footer />

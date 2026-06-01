@@ -15,45 +15,45 @@ const differentiators = [
     icon: ShieldCheck,
     title: "One contractor per market",
     description:
-      "We only work with one insulation contractor per service area. Your leads are never shared with a competitor.",
+      "We only work with one contractor per service area. Your appointments are never shared with a competitor.",
   },
   {
     icon: BadgeCheck,
-    title: "Fully qualified before delivery",
+    title: "Qualified and booked before handoff",
     description:
-      "Every lead is screened for homeowner status, service area, project scope, and budget before it ever reaches you.",
+      "Every prospect is screened for homeowner status, service area, and project fit — then booked directly onto your calendar before you ever hear from them.",
   },
   {
     icon: Clock3,
     title: "Full system included",
     description:
-      "GMB optimization, Facebook ads, and an NFC review card system are all part of the setup - not sold as add-ons.",
+      "GMB optimization, Meta ads, follow-up, and an NFC review card system are all part of the setup — not sold as add-ons.",
   },
   {
     icon: Zap,
     title: "No retainer. No contract.",
     description:
-      "You pay per qualified lead delivered. Cancel anytime with 7 days notice. No lock-in, no guesswork.",
+      "You pay per booked appointment delivered. Cancel anytime with notice. No lock-in, no guesswork.",
   },
 ];
 
 export const metadata: Metadata = {
-  title: "About Appointly Solutions | Insulation Lead Generation Agency",
+  title: "About Appointly Solutions | Appointment Booking Agency for Contractors",
   description:
-    "Learn why Appointly Solutions helps insulation contractors grow with exclusive, pre qualified leads, fast follow up, and a cost per lead model.",
+    "Learn why Appointly Solutions helps home service contractors grow with booked estimate appointments, fast follow-up, and a pay-for-performance model.",
   keywords: [
     "Appointly Solutions",
-    "insulation lead generation",
+    "contractor appointment booking",
     "about us",
-    "contractor marketing",
+    "home service contractor marketing",
   ],
   alternates: {
     canonical: "https://getappointly.co/about",
   },
   openGraph: {
-    title: "About Appointly Solutions | Insulation Lead Generation Agency",
+    title: "About Appointly Solutions | Appointment Booking Agency for Contractors",
     description:
-      "See the mission, approach, and values behind Appointly Solutions and how we help insulation contractors buy leads with less risk.",
+      "See the mission, approach, and values behind Appointly Solutions and how we help home service contractors book more qualified estimate appointments.",
     url: "https://getappointly.co/about",
     siteName: "Appointly Solutions",
     type: "website",
@@ -82,16 +82,16 @@ export default function AboutPage() {
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
                 Founded by brothers Patrick and Jacob Mietka in Chicago, IL, Appointly
                 Solutions was built out of frustration with agencies that charge retainers
-                without delivering results. We created the pay-per-lead model because
-                contractors deserve accountability - you should only pay when we actually
-                deliver.
+                without delivering results. We built a pay-for-performance model because
+                contractors deserve accountability — you should only pay when we actually
+                deliver booked estimate appointments.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
                   href={bookingUrl}
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
                 >
-                  Book a Strategy Call
+                  Book a free strategy call
                   <ArrowRight className="h-4 w-4" />
                 </a>
                 <Link
@@ -118,16 +118,16 @@ export default function AboutPage() {
                 Traditional agencies charge large monthly retainers before any result
                 shows up. That leaves contractors carrying all the risk while the
                 agency collects regardless. Appointly Solutions was built specifically
-                for owner-operators who are done paying for promises. The pay-per-lead
-                model exists for one reason: you should only pay when we actually deliver
-                something you can close.
+                for owner-operators who are done paying for promises. The
+                pay-for-performance model exists for one reason: you should only pay
+                when we actually deliver something you can close.
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
                 If you want the full breakdown, our{" "}
                 <Link href="/faq" className="text-primary transition-opacity hover:opacity-80">
                   FAQ page
                 </Link>{" "}
-                covers what qualifies as a lead and how the model works in practice.
+                covers what qualifies as a booked appointment and how the model works in practice.
               </p>
             </article>
 
@@ -136,13 +136,14 @@ export default function AboutPage() {
                 Our Approach
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
-                Pay per lead, no retainer, lower risk.
+                Pay for performance, no retainer, lower risk.
               </h2>
               <p className="mt-5 text-sm leading-7 text-muted-foreground md:text-base">
-                Appointly Solutions optimizes your GMB, runs Facebook lead gen ads,
-                qualifies every homeowner before they reach you, and ships you NFC review
-                cards to keep your Google profile growing. You pay per qualified lead
-                delivered - not for hours, reports, or guesswork.
+                Appointly Solutions optimizes your GMB, runs Meta ads, qualifies every
+                homeowner prospect, books them directly onto your calendar, and ships
+                you NFC review cards to keep your Google profile growing. You pay per
+                booked appointment delivered — not for hours, reports, or guesswork.
+                When we do well, you do well.
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
                 Our{" "}
@@ -150,14 +151,14 @@ export default function AboutPage() {
                   How It Works
                 </Link>{" "}
                 page walks through each step of the process from campaign launch to
-                booked estimate. You can also explore{" "}
+                booked estimate. You can also explore our{" "}
                 <Link
-                  href="/insulation-contractor-leads"
+                  href="/floor-coating-contractor-marketing"
                   className="text-primary transition-opacity hover:opacity-80"
                 >
-                  Insulation Contractor Leads
+                  floor coating appointments
                 </Link>{" "}
-                if you want the commercial overview first.
+                page if you want to see the featured niche overview.
               </p>
             </article>
           </div>
@@ -177,8 +178,8 @@ export default function AboutPage() {
                 Built around exclusivity, speed, and trust.
               </h2>
               <p className="mt-4 leading-relaxed text-muted-foreground">
-                Appointly Solutions is designed to give insulation contractors a
-                reliable growth engine that feels accountable from day one.
+                Appointly Solutions is designed to give home service contractors a
+                reliable appointment-booking engine that feels accountable from day one.
               </p>
             </div>
 
@@ -206,7 +207,7 @@ export default function AboutPage() {
         <ProofSection />
         <SeoResourceLinks
           title="Supporting pages worth visiting next."
-          description="These pages reinforce the about story with clearer commercial intent, pricing context, and proof-led comparisons."
+          description="These pages reinforce the about story with commercial context, performance-model comparisons, and proof-led examples."
           resources={getCommercialResources("insulation-marketing-agency")}
         />
 
@@ -220,23 +221,16 @@ export default function AboutPage() {
                 See if Appointly Solutions fits your market.
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-slate-700 md:text-base">
-                Book a strategy call and we will map out where your leads are coming
-                from, what is slipping through the cracks, and how a pay per lead
-                system could support your next stage of growth. If you want to compare
-                models first, visit{" "}
-                <Link
-                  href="/pay-per-lead-insulation"
-                  className="text-slate-950 underline decoration-slate-400/70 underline-offset-4 transition-colors hover:text-slate-700"
-                >
-                  Pay Per Lead Insulation
-                </Link>
-                .
+                Book a free strategy call and we will map out where your estimate
+                opportunities are coming from, what is slipping through the cracks, and
+                how a pay-for-performance appointment system could support your next stage
+                of growth.
               </p>
               <a
                 href={bookingUrl}
                 className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
               >
-                Book a Strategy Call
+                Book a free strategy call
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>

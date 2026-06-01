@@ -21,13 +21,13 @@ const marketPoints = [
     icon: ShieldCheck,
     title: "Exclusivity matters more",
     description:
-      "In a 50K-300K population market, one shared lead can create more pricing pressure than it would in a major metro.",
+      "In a 50K-300K population market, one shared appointment can create more pricing pressure than it would in a major metro.",
   },
   {
     icon: Building2,
     title: "Crew planning is more sensitive",
     description:
-      "Local contractors in smaller metros often feel slower months faster, so flexible lead pacing is more useful than fixed retainers.",
+      "Local insulation contractors in smaller metros often feel slower months faster, so flexible appointment pacing is more useful than fixed retainers.",
   },
   {
     icon: Map,
@@ -38,22 +38,22 @@ const marketPoints = [
 ];
 
 export const metadata: Metadata = {
-  title: "Insulation Contractor Leads for Small Markets | Appointly Solutions",
+  title: "Insulation Contractor Appointments for Small Markets | Pay for Performance | Appointly Solutions",
   description:
-    "See how Appointly Solutions helps insulation contractors in smaller markets generate exclusive, qualified leads with flexible pay per lead pricing.",
+    "See how Appointly Solutions helps insulation contractors in smaller markets generate exclusive, booked appointments on a pay-for-performance model.",
   keywords: [
-    "insulation contractor leads small markets",
-    "small market insulation leads",
-    "local insulation lead generation",
-    "exclusive contractor leads",
+    "insulation contractor appointments small markets",
+    "small market insulation appointments",
+    "local insulation appointment generation",
+    "exclusive contractor appointments",
   ],
   alternates: {
     canonical: "https://getappointly.co/insulation-contractor-leads-small-markets",
   },
   openGraph: {
-    title: "Insulation Contractor Leads for Small Markets | Appointly Solutions",
+    title: "Insulation Contractor Appointments for Small Markets | Pay for Performance | Appointly Solutions",
     description:
-      "Explore how Appointly Solutions fits insulation contractors serving smaller metros and regional service areas.",
+      "Explore how Appointly Solutions fits insulation contractors serving smaller metros and regional service areas on a pay-for-performance basis.",
     url: "https://getappointly.co/insulation-contractor-leads-small-markets",
     siteName: "Appointly Solutions",
     type: "website",
@@ -77,28 +77,29 @@ export default function SmallMarketInsulationLeadsPage() {
                 Service Area Page
               </p>
               <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-balance md:text-6xl">
-                Insulation Contractor Leads for{" "}
+                Insulation Contractor Appointments for{" "}
                 <span className="gradient-text">Small Markets</span>
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
                 Appointly Solutions is a strong fit for insulation contractors serving
-                small-to-mid-sized markets where local visibility matters, shared leads
-                create friction fast, and every booked estimate can materially affect the
-                schedule.
+                small-to-mid-sized markets where local visibility matters, shared
+                appointments create friction fast, and every booked estimate can
+                materially affect the schedule. We operate on a pay-for-performance
+                basis — when we do well, you do well.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
                   href={bookingUrl}
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
                 >
-                  Book a Strategy Call
+                  Book a free strategy call
                   <ArrowRight className="h-4 w-4" />
                 </a>
                 <Link
                   href="/exclusive-insulation-leads"
                   className="inline-flex items-center justify-center rounded-full border border-gray-300 bg-white px-8 py-4 text-sm font-semibold text-gray-700 transition-all hover:bg-gray-50"
                 >
-                  See Exclusive Leads
+                  See Exclusive Appointments
                 </Link>
               </div>
             </div>
@@ -141,22 +142,22 @@ export default function SmallMarketInsulationLeadsPage() {
                 Where Appointly Fits Best
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
-                Better for contractors who need quality over volume.
+                Better for insulation contractors who need quality over volume.
               </h2>
               <p className="mt-5 text-sm leading-7 text-muted-foreground md:text-base">
                 In smaller metros and regional service areas, Appointly Solutions works
-                best when the contractor wants exclusive lead delivery, quick follow up,
-                and qualification standards that keep crews focused on real revenue
-                opportunities instead of noisy inquiries.
+                best when the insulation contractor wants exclusive appointment delivery,
+                quick follow up, and qualification standards that keep crews focused on
+                real revenue opportunities instead of noisy inquiries.
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
-                If your main concern is ownership, visit{" "}
+                If your main concern is appointment ownership, visit{" "}
                 <Link href="/exclusive-insulation-leads" className="text-primary transition-opacity hover:opacity-80">
-                  Exclusive Insulation Leads
+                  Exclusive Insulation Appointments
                 </Link>
                 . If your team also performs spray foam work, continue to{" "}
                 <Link href="/spray-foam-contractor-leads" className="text-primary transition-opacity hover:opacity-80">
-                  Spray Foam Contractor Leads
+                  Spray Foam Contractor Appointments
                 </Link>
                 .
               </p>
@@ -171,14 +172,14 @@ export default function SmallMarketInsulationLeadsPage() {
               </h2>
               <p className="mt-4 text-sm leading-7 text-slate-700 md:text-base">
                 A strategy call with Appointly Solutions can help you look at population
-                size, service radius, current competition, and whether a pay-per-lead
-                model makes sense in your market.
+                size, service radius, current competition, and whether a pay-for-performance
+                appointment model makes sense in your insulation market.
               </p>
               <a
                 href={bookingUrl}
                 className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
               >
-                Book a Strategy Call
+                Book a free strategy call
                 <ArrowRight className="h-4 w-4" />
               </a>
             </article>
@@ -187,7 +188,7 @@ export default function SmallMarketInsulationLeadsPage() {
 
         <ProofSection />
         <SeoResourceLinks
-          title="Related pages for contractors serving smaller service areas."
+          title="Related pages for insulation contractors serving smaller service areas."
           description="These resources support local market positioning with more detail on exclusivity, GBP strength, and seasonal planning."
           resources={getCommercialResources("insulation-contractor-leads-small-markets")}
         />

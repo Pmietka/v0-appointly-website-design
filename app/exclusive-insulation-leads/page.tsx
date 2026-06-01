@@ -10,21 +10,21 @@ const bookingUrl = "https://client.getappointly.co/strategy-calendar";
 const comparisons = [
   {
     icon: SplitSquareVertical,
-    title: "Shared lead marketplaces",
+    title: "Shared appointment marketplaces",
     description:
-      "Shared lead systems push multiple contractors into the same homeowner conversation, which drives down margins and raises response pressure.",
+      "Shared systems push multiple contractors into the same homeowner conversation, which drives down margins and raises response pressure before the appointment is even set.",
   },
   {
     icon: Crown,
-    title: "Exclusive lead delivery",
+    title: "Exclusive appointment delivery",
     description:
-      "Appointly Solutions is built around protecting lead ownership so the opportunity has more room to turn into a meaningful sales conversation.",
+      "Appointly Solutions is built around protecting appointment ownership so each booked opportunity has more room to turn into a meaningful sales conversation.",
   },
   {
     icon: ShieldCheck,
     title: "Qualification before handoff",
     description:
-      "Exclusive is only valuable when the lead is also relevant. We focus on homeowner fit, project relevance, and real purchase intent.",
+      "Exclusivity is only valuable when the appointment is also relevant. We focus on homeowner fit, project relevance, and real purchase intent before booking.",
   },
   {
     icon: Users,
@@ -35,22 +35,22 @@ const comparisons = [
 ];
 
 export const metadata: Metadata = {
-  title: "Exclusive Insulation Leads | No Shared Contractor Leads",
+  title: "Exclusive Insulation Appointments | Pay for Performance | Appointly Solutions",
   description:
-    "Learn how Appointly Solutions delivers exclusive insulation leads so contractors can avoid shared lead competition and focus on qualified booked opportunities.",
+    "Appointly Solutions delivers exclusive booked appointments for insulation contractors on a pay-for-performance model — no shared competition, no retainers.",
   keywords: [
-    "exclusive insulation leads",
-    "shared contractor leads",
-    "exclusive contractor leads",
+    "exclusive insulation appointments",
+    "insulation contractor appointments",
+    "pay for performance insulation",
     "Appointly Solutions",
   ],
   alternates: {
     canonical: "https://getappointly.co/exclusive-insulation-leads",
   },
   openGraph: {
-    title: "Exclusive Insulation Leads | No Shared Contractor Leads",
+    title: "Exclusive Insulation Appointments | Pay for Performance | Appointly Solutions",
     description:
-      "See why exclusive insulation leads outperform shared lead systems for many contractors.",
+      "See why exclusive booked appointments on a pay-for-performance model outperform shared lead systems for insulation contractors.",
     url: "https://getappointly.co/exclusive-insulation-leads",
     siteName: "Appointly Solutions",
     type: "website",
@@ -71,31 +71,31 @@ export default function ExclusiveInsulationLeadsPage() {
           <div className="mx-auto max-w-6xl px-6">
             <div className="max-w-3xl">
               <p className="text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-6">
-                Exclusive Leads
+                Exclusive Appointments
               </p>
               <h1 className="font-display text-5xl md:text-6xl font-bold tracking-tight leading-[1.05] text-balance">
-                Exclusive Insulation Leads Without the{" "}
+                Exclusive Insulation Appointments Without the{" "}
                 <span className="gradient-text">Shared Lead Scramble</span>
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                Contractors do not just want more leads. They want better conditions to
-                close. Appointly Solutions gives insulation contractors a model centered
-                on exclusive opportunities, better qualification, and less margin-killing
-                competition.
+                Insulation contractors do not just want more volume. They want better
+                conditions to close. Appointly Solutions gives insulation contractors a
+                pay-for-performance model centered on exclusive booked appointments,
+                better qualification, and less margin-killing competition.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
                   href={bookingUrl}
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
                 >
-                  Book a Strategy Call
+                  Book a free strategy call
                   <ArrowRight className="h-4 w-4" />
                 </a>
                 <Link
                   href="/insulation-contractor-leads"
                   className="inline-flex items-center justify-center rounded-full border border-gray-300 bg-white px-8 py-4 text-sm font-semibold text-gray-700 hover:bg-gray-50 transition-all"
                 >
-                  See Core Lead Page
+                  See Core Insulation Page
                 </Link>
               </div>
             </div>
@@ -138,21 +138,22 @@ export default function ExclusiveInsulationLeadsPage() {
                 Where Appointly Solutions Fits
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
-                Best for contractors who value quality over noise.
+                Best for insulation contractors who value quality over noise.
               </h2>
               <p className="mt-5 text-sm leading-7 text-muted-foreground md:text-base">
-                Appointly Solutions works best for teams that want fewer wasted
-                conversations, cleaner follow up, and a system that aligns lead cost
-                with actual opportunity quality.
+                Appointly Solutions works best for insulation teams that want fewer wasted
+                conversations, cleaner follow up, and a pay-for-performance system that
+                aligns appointment cost with actual opportunity quality. When we do well,
+                you do well.
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
-                To see how exclusive leads fit into the bigger delivery system, visit{" "}
+                To see how exclusive appointments fit into the bigger delivery system, visit{" "}
                 <Link href="/how-it-works" className="text-primary transition-opacity hover:opacity-80">
                   How It Works
                 </Link>
-                . If you are comparing pricing models, continue to{" "}
+                . If you are comparing performance models, continue to{" "}
                 <Link href="/pay-per-lead-insulation" className="text-primary transition-opacity hover:opacity-80">
-                  Pay Per Lead Insulation
+                  Pay for Performance Insulation
                 </Link>
                 .
               </p>
@@ -163,18 +164,18 @@ export default function ExclusiveInsulationLeadsPage() {
                 Ready To Talk
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
-                Explore whether exclusive lead delivery fits your market.
+                Explore whether exclusive appointment delivery fits your market.
               </h2>
               <p className="mt-4 text-sm leading-7 text-slate-700 md:text-base">
                 A strategy call with Appointly Solutions will show you where exclusive
-                insulation leads make sense, how qualification works, and what to expect
-                from the process.
+                insulation appointments make sense, how qualification works, and what to
+                expect from the pay-for-performance process.
               </p>
               <a
                 href={bookingUrl}
                 className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
               >
-                Book a Strategy Call
+                Book a free strategy call
                 <ArrowRight className="h-4 w-4" />
               </a>
             </article>

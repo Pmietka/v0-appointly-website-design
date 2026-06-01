@@ -15,7 +15,7 @@ const agencyProblems = [
     icon: BadgeAlert,
     title: "Retainers before results",
     description:
-      "Many agency models ask contractors to commit significant monthly spend before qualified opportunities ever show up.",
+      "Many agency models ask contractors to commit significant monthly spend before booked appointments ever show up in the calendar.",
   },
   {
     icon: RefreshCw,
@@ -27,33 +27,33 @@ const agencyProblems = [
     icon: Briefcase,
     title: "High overhead communication",
     description:
-      "Too many meetings and reports can distract from the actual question: are qualified homeowners reaching the calendar?",
+      "Too many meetings and reports can distract from the actual question: are qualified homeowners reaching the calendar as booked appointments?",
   },
   {
     icon: ShieldCheck,
     title: "A more accountable alternative",
     description:
-      "Appointly Solutions reframes the conversation around lead delivery quality, speed, and booking potential.",
+      "Appointly Solutions reframes the conversation around booked appointment delivery, speed, and pay-for-performance accountability.",
   },
 ];
 
 export const metadata: Metadata = {
-  title: "Insulation Marketing Agency Alternative | Pay Per Lead",
+  title: "Insulation Marketing Agency Alternative | Pay for Performance | Appointly Solutions",
   description:
-    "Compare traditional insulation marketing agency models with the Appointly Solutions pay per lead approach for contractors who want clearer accountability.",
+    "Compare traditional insulation marketing agency models with the Appointly Solutions pay-for-performance appointment approach for contractors who want clearer accountability.",
   keywords: [
     "insulation marketing agency",
     "insulation marketing agency alternative",
-    "pay per lead contractor marketing",
+    "pay for performance contractor marketing",
     "Appointly Solutions",
   ],
   alternates: {
     canonical: "https://getappointly.co/insulation-marketing-agency",
   },
   openGraph: {
-    title: "Insulation Marketing Agency Alternative | Pay Per Lead",
+    title: "Insulation Marketing Agency Alternative | Pay for Performance | Appointly Solutions",
     description:
-      "See why some contractors prefer a pay per lead model over a traditional insulation marketing agency retainer.",
+      "See why some insulation contractors prefer a pay-for-performance appointment model over a traditional agency retainer.",
     url: "https://getappointly.co/insulation-marketing-agency",
     siteName: "Appointly Solutions",
     type: "website",
@@ -78,27 +78,27 @@ export default function InsulationMarketingAgencyPage() {
               </p>
               <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-balance md:text-6xl">
                 An Insulation Marketing Agency Alternative Built Around{" "}
-                <span className="gradient-text">Qualified Lead Flow</span>
+                <span className="gradient-text">Booked Appointments</span>
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
                 If you are searching for an insulation marketing agency, you may really
                 be searching for a better business model. Appointly Solutions uses a
-                pay per lead approach designed to reduce risk and keep attention on the
-                opportunities that matter.
+                pay-for-performance approach designed to reduce risk and keep attention on
+                booked appointments that put real jobs on the calendar.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
                   href={bookingUrl}
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
                 >
-                  Book a Strategy Call
+                  Book a free strategy call
                   <ArrowRight className="h-4 w-4" />
                 </a>
                 <Link
                   href="/pay-per-lead-insulation"
                   className="inline-flex items-center justify-center rounded-full border border-gray-300 bg-white px-8 py-4 text-sm font-semibold text-gray-700 transition-all hover:bg-gray-50"
                 >
-                  See Pricing Model
+                  See Performance Model
                 </Link>
               </div>
             </div>
@@ -144,15 +144,16 @@ export default function InsulationMarketingAgencyPage() {
                 Built for contractors who want clarity around growth.
               </h2>
               <p className="mt-5 text-sm leading-7 text-muted-foreground md:text-base">
-                Appointly Solutions focuses on the operational side of lead generation:
-                targeting, fast response, qualification, and booked opportunity flow.
-                That is why many insulation contractors see it less as an agency and
-                more as a performance-oriented growth system.
+                Appointly Solutions focuses on the operational side of appointment
+                generation: targeting, fast response, qualification, and booked
+                appointment flow. That is why many insulation contractors see it less as
+                an agency and more as a pay-for-performance growth system. When we do
+                well, you do well.
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
                 For a broader commercial overview, see{" "}
                 <Link href="/insulation-contractor-leads" className="text-primary transition-opacity hover:opacity-80">
-                  Insulation Contractor Leads
+                  Insulation Contractor Appointments
                 </Link>
                 . If booked estimates are your main focus, continue to{" "}
                 <Link href="/appointment-setting-for-contractors" className="text-primary transition-opacity hover:opacity-80">
@@ -171,14 +172,14 @@ export default function InsulationMarketingAgencyPage() {
               </h2>
               <p className="mt-4 text-sm leading-7 text-slate-700 md:text-base">
                 A strategy call with Appointly Solutions can help you compare your
-                current agency or in-house marketing approach against a pay per lead
-                system designed for insulation contractors.
+                current agency or in-house marketing approach against a pay-for-performance
+                appointment system designed specifically for insulation contractors.
               </p>
               <a
                 href={bookingUrl}
                 className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
               >
-                Book a Strategy Call
+                Book a free strategy call
                 <ArrowRight className="h-4 w-4" />
               </a>
             </article>
@@ -188,7 +189,7 @@ export default function InsulationMarketingAgencyPage() {
         <ProofSection />
         <SeoResourceLinks
           title="Resources for contractors comparing agencies and performance models."
-          description="These pages and articles add more depth around retainer fatigue, alternative pricing, and faster lead flow."
+          description="These pages and articles add more depth around retainer fatigue, alternative pricing, and faster appointment flow."
           resources={getCommercialResources("insulation-marketing-agency")}
         />
       </main>

@@ -33,9 +33,9 @@ const callPrep = [
     icon: Target,
     title: "What We'll Cover",
     items: [
-      "Your current lead generation setup",
-      "Where qualified leads are slipping",
-      "Exactly how our system fills your calendar",
+      "Your current appointment and job flow",
+      "Where qualified prospects are slipping through",
+      "Exactly how our system fills your estimate calendar",
     ],
   },
   {

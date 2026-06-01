@@ -27,7 +27,7 @@ const pillars = [
     icon: CalendarCheck2,
     title: "Booked estimate focus",
     description:
-      "Appointment setting is about converting raw interest into a real time on the calendar, not just logging a contact form entry.",
+      "Appointment setting is about converting real interest into a confirmed time on the calendar, not just logging a contact form entry.",
   },
   {
     icon: TimerReset,
@@ -38,22 +38,22 @@ const pillars = [
 ];
 
 export const metadata: Metadata = {
-  title: "Appointment Setting for Insulation Contractors",
+  title: "Appointment Setting for Home Service Contractors | Appointly Solutions",
   description:
-    "See how Appointly Solutions helps with appointment setting for insulation contractors through fast follow up, qualification, and booked estimate workflows.",
+    "See how Appointly Solutions handles appointment setting for home service contractors — fast follow-up, prospect qualification, and booked estimates on a pay-for-performance basis.",
   keywords: [
     "appointment setting for contractors",
-    "insulation appointment setting",
-    "booked estimates for insulation contractors",
+    "home service contractor appointments",
+    "booked estimates for contractors",
     "Appointly Solutions",
   ],
   alternates: {
     canonical: "https://getappointly.co/appointment-setting-for-contractors",
   },
   openGraph: {
-    title: "Appointment Setting for Insulation Contractors",
+    title: "Appointment Setting for Home Service Contractors | Appointly Solutions",
     description:
-      "Learn how Appointly Solutions helps insulation contractors turn leads into booked estimate appointments.",
+      "Learn how Appointly Solutions helps home service contractors turn qualified prospects into booked estimate appointments.",
     url: "https://getappointly.co/appointment-setting-for-contractors",
     siteName: "Appointly Solutions",
     type: "website",
@@ -74,24 +74,24 @@ export default function AppointmentSettingForContractorsPage() {
           <div className="mx-auto max-w-6xl px-6">
             <div className="max-w-3xl">
               <p className="mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
-                Booked Estimate Page
+                Booked Estimate Workflow
               </p>
               <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-balance md:text-6xl">
-                Booked Estimates Are the <span className="gradient-text">Result</span>{" "}
-                of the PPL System
+                Booked Estimates Are{" "}
+                <span className="gradient-text">Already Qualified</span> When They Reach You
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                When we deliver a qualified insulation lead, you're already halfway to
-                a booked estimate. We screen every homeowner for intent, budget, and
-                service area fit before they ever reach you - so your team walks into
-                real conversations, not cold inquiries.
+                When we deliver a booked appointment, you are already halfway to a
+                closed job. We screen every homeowner for intent, project fit, and
+                service area — then schedule them directly on your calendar so your
+                team walks into real conversations, not cold inquiries.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
                   href={bookingUrl}
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
                 >
-                  Book a Strategy Call
+                  Book a free strategy call
                   <ArrowRight className="h-4 w-4" />
                 </a>
                 <Link
@@ -112,7 +112,7 @@ export default function AppointmentSettingForContractorsPage() {
                 Why Appointment Setting Matters
               </p>
               <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">
-                More leads alone do not guarantee more revenue.
+                More prospects alone do not guarantee more revenue.
               </h2>
             </div>
 
@@ -149,13 +149,13 @@ export default function AppointmentSettingForContractorsPage() {
                 your team catching every inquiry in real time.
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
-                To understand the upstream lead source, see{" "}
-                <Link href="/insulation-contractor-leads" className="text-primary transition-opacity hover:opacity-80">
-                  Insulation Contractor Leads
+                To see the featured niche in action, visit{" "}
+                <Link href="/floor-coating-contractor-marketing" className="text-primary transition-opacity hover:opacity-80">
+                  Floor Coating Contractor Marketing
                 </Link>
                 . To compare the business model behind it, continue to{" "}
                 <Link href="/pay-per-lead-insulation" className="text-primary transition-opacity hover:opacity-80">
-                  Pay Per Lead Insulation
+                  Pay-For-Performance Model
                 </Link>
                 .
               </p>
@@ -166,18 +166,18 @@ export default function AppointmentSettingForContractorsPage() {
                 Book More Estimates
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
-                Talk through where leads are stalling in your current process.
+                Talk through where prospects are stalling in your current process.
               </h2>
               <p className="mt-4 text-sm leading-7 text-slate-700 md:text-base">
                 A strategy call with Appointly Solutions can help identify whether your
-                main bottleneck is lead volume, speed to lead, qualification, or
+                main bottleneck is prospect volume, speed to contact, qualification, or
                 appointment setting itself.
               </p>
               <a
                 href={bookingUrl}
                 className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
               >
-                Book a Strategy Call
+                Book a free strategy call
                 <ArrowRight className="h-4 w-4" />
               </a>
             </article>
@@ -187,7 +187,7 @@ export default function AppointmentSettingForContractorsPage() {
         <ProofSection />
         <SeoResourceLinks
           title="Pages that support the booked-estimate story."
-          description="These related pages connect appointment setting with lead quality, traffic sources, and contractor acquisition strategy."
+          description="These related pages connect appointment setting with appointment quality, traffic sources, and contractor acquisition strategy."
           resources={getCommercialResources("appointment-setting-for-contractors")}
         />
       </main>
