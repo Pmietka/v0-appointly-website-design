@@ -67,7 +67,7 @@ You never know if you're getting your money's worth. The agency claims "brand bu
 
 **"Strategy" That Never Materializes**
 
-Agencies sell you a comprehensive plan involving content, Google Ads, Meta ads, and organic growth. Then they execute whatever is cheapest for them and ignore the rest. Your actual calendar stays empty.
+Agencies sell you a comprehensive plan involving content, ads, and "long-term growth." Then they execute whatever is cheapest for them and ignore the rest. Your actual calendar stays empty.
 
 The result: contractors feel like they're being sold, not served.
 
@@ -225,7 +225,7 @@ A: You can, but why? If the done-for-you model is filling your calendar, just us
 
 A: Test it. Run the system, see how many homeowners actually show and how many you close, then judge by your own numbers. Real data beats promises every time.
 
-**Q: Is it unprofessional to skip SEO and brand building and just run on booked estimates?**
+**Q: Is it unprofessional to skip the long-term marketing projects and just run on booked estimates?**
 
 A: No. If your calendar is full and you're closing epoxy jobs, it's not unprofessional. You can add brand building later. Right now, execution beats perfection.
 

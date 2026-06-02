@@ -8,13 +8,13 @@
 
 You know the problem epoxy and floor coating contractors run into that a lot of home service guys never think about.
 
-A coated floor is a want, not an emergency. Nobody's furnace is broken. The homeowner just got tired of staring at a stained, cracked garage slab, or they finally finished the basement and want a floor that looks like a showroom. That desire is real, but it sits quiet until something nudges it — a neighbor's glossy garage, a scroll past the right ad, a spring cleanout. That's when they start looking for "epoxy garage floor" or "concrete floor coating near me."
+A coated floor is a want, not an emergency. Nobody's furnace is broken. The homeowner just got tired of staring at a stained, cracked garage slab, or they finally finished the basement and want a floor that looks like a showroom. That desire is real, but it sits quiet until something nudges it — a neighbor's glossy garage, a scroll past the right ad, a spring cleanout. That's the moment they decide they actually want it done.
 
-That means you can't just wait for people to come searching at the exact moment they're ready. You have to create the demand, catch it fast, and turn it into a booked estimate before the homeowner cools off. That's where traditional lead gen falls apart.
+That means you can't just wait around for people to stumble onto you at the exact moment they're ready. You have to create the demand, catch it fast, and turn it into a booked estimate before the homeowner cools off. That's where traditional lead gen falls apart.
 
 **Challenge 1: Demand Has to Be Created, Not Just Captured**
 
-Search-only strategies wait around for someone to type the exact right phrase at the exact right time. For a want-based purchase like floor coating, that's a thin, slow trickle. The contractors winning right now aren't waiting in line at the top of search results — they're putting a beautiful before-and-after garage floor in front of homeowners on Facebook and Instagram and creating the demand. Meta ads turn "someday I'll do my garage" into "I want a quote this week."
+Sitting back and hoping the right homeowner finds you on their own is a thin, slow trickle for a want-based purchase like floor coating. The contractors winning right now aren't waiting in line for someone to come looking — they're putting a beautiful before-and-after garage floor in front of homeowners on Facebook and Instagram and creating the demand. Meta ads turn "someday I'll do my garage" into "I want a quote this week."
 
 **Challenge 2: A Lead Is Worthless If Nobody Closes the Loop**
 
@@ -162,9 +162,9 @@ A: Because a lead is a maybe and a booked estimate is a homeowner expecting you 
 
 A: That depends on you — your pricing, your pitch, and how you walk the floor. But when you're standing in front of an expecting homeowner who isn't holding three other quotes, you're in a much stronger spot than chasing cold leads. Show up on time, sell the prep and the polyaspartic topcoat, and close.
 
-**Q: Should I still bother with SEO and search if I'm getting booked estimates?**
+**Q: How fast can the booked estimates actually start hitting my calendar?**
 
-A: Organic search is slow to build and worth having long term, but it doesn't fill next week's calendar. The booked-appointment model gets real estimates on your schedule now, through Meta ads and speed to lead. Most smart contractors keep the estimates flowing while organic builds in the background.
+A: Fast. The booked-appointment model gets real estimates on your schedule through Meta ads and speed to lead — not someday, but as soon as the ads are live and homeowners start raising their hands. That's the whole reason contractors choose it over slow channels that take months to maybe pay off.
 
 **Q: What if there isn't enough demand for floor coating in my area?**
 

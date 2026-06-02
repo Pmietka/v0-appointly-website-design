@@ -64,12 +64,12 @@ export default async function BlogIndexPage() {
                   Featured Articles
                 </p>
                 <h2 className="mt-3 font-display text-3xl font-bold text-foreground md:text-4xl">
-                  Start with the highest-impact topics.
+                  Start with the highest-impact topics for coating contractors.
                 </h2>
               </div>
               <p className="max-w-xl text-sm leading-7 text-muted-foreground md:text-base">
-                Each post is linked below and included in the sitemap so search engines
-                can discover every article cleanly.
+                Straight, practical advice on pricing, selling, and booking more floor
+                coating jobs - written for contractors, not marketers.
               </p>
             </div>
 

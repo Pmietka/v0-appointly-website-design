@@ -31,9 +31,9 @@ const marketPoints = [
   },
   {
     icon: Map,
-    title: "Local visibility supports it",
+    title: "You capture the local demand",
     description:
-      "A solid Google profile and reviews help you close the estimates we book, but the engine is Meta ads and instant speed to lead - not waiting on local search.",
+      "In a smaller market there are only so many homeowners who want a floor coated each month. We reach them through Meta ads and book the estimate before a competitor ever hears about the job.",
   },
 ];
 
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   keywords: [
     "floor coating appointments small markets",
     "small market coating estimates",
-    "local floor coating lead generation",
+    "booked floor coating estimates",
     "exclusive coating appointments",
   ],
   alternates: {

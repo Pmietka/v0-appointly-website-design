@@ -16,7 +16,7 @@ Let's start with the obvious: timing. Winter ends, the garage gets cleaned out, 
 
 Epoxy and polyaspartic floor coatings are exactly the kind of project homeowners plan in spring. The garage is empty, the motivation is high, and the buying intent is real. A beautiful, easy-to-clean garage or showroom floor is a "before the season gets going" project, which is why the surge hits when the weather breaks.
 
-This creates a seasonal surge in demand. Searches for "epoxy garage floor," "concrete coating contractor," and "polyaspartic flooring" climb in early spring, stay elevated through the warm months, then taper off.
+This creates a seasonal surge in demand. Homeowners who've been staring at that ugly slab all winter start raising their hands in early spring, the activity stays elevated through the warm months, then tapers off.
 
 More demand means more homeowners raising their hands. More homeowners means more competition. And more competition means the contractor who responds first and books the appointment wins.
 
@@ -28,7 +28,7 @@ You can't wait until March 1st to start preparing. By then, you're already behin
 
 January and February are the months to set everything up:
 
-- Audit and optimize your Google My Business profile
+- Audit and build out your Google Business Profile as a trust signal
 - Create or refresh your Meta ad campaigns and creative
 - Line up your appointment generation system so booked estimates start landing before peak
 - Train your crew on the schedule and estimate process
@@ -43,11 +43,11 @@ If you haven't done this yet, start today. You still have time to prepare. Contr
 
 ## The Step-by-Step Spring Marketing Plan
 
-### Phase 1: GMB Preparation (January)
+### Phase 1: Google Business Profile Prep (January)
 
-Your Google My Business profile is the foundation. Before anything else, make sure it's optimized.
+Your Google Business Profile is where a homeowner checks you out before they trust you with their floor. Before anything else, make sure it's complete and loaded with proof.
 
-Go to your Google My Business account. Check that everything is accurate:
+Go to your Google Business Profile. Check that everything is accurate:
 
 - Business name is correct
 - Address is correct (or service area is correctly defined if you don't have a physical shop)
@@ -56,11 +56,11 @@ Go to your Google My Business account. Check that everything is accurate:
 - Business hours are correct
 - Service areas are defined
 - Photos are recent and high-quality
-- Your description mentions "epoxy flooring," "garage floor coating," or "concrete coatings"
+- Your description clearly explains the coating work you do
 
-Write or update your business description. Use terms like "epoxy floor coating" or "polyaspartic garage floors" in the first two sentences. Google looks at this when deciding whether to show you in local search.
+Write or update your business description so a homeowner instantly understands you do epoxy and polyaspartic floor coatings and you do them well. This is part of how a homeowner decides whether to trust you.
 
-Add 10 to 15 high-quality photos of your work. Before-and-after shots of a cracked, oil-stained slab next to a glossy flaked finish beat generic stock photos every time. Show garages, basements, patios, and showroom floors.
+Add 10 to 15 high-quality photos of your work. Before-and-after shots of a cracked, oil-stained slab next to a glossy flaked finish beat generic stock photos every time. Show garages, basements, patios, and showroom floors. These photos do the selling before you ever arrive to quote.
 
 This takes maybe 2 to 3 hours. It's free, and it's one of the most important steps you can take. Don't skip it.
 
@@ -102,7 +102,7 @@ Set your peak-season targets now. March and April are your big months. Decide ho
 
 By early March, everything should be ready:
 
-- GMB is optimized and current
+- Your Google Business Profile is complete and loaded with reviews and photos
 - Meta ads are running with strong before-and-after creative
 - Your appointment generation system is booking estimates onto your calendar
 - Your crew knows how to handle the schedule and run estimates efficiently
@@ -118,9 +118,9 @@ April is typically your peak month. The phone is ringing, the calendar is full, 
 
 Don't take your foot off the gas, but don't try to rebuild everything at once either. Stick to what's booking estimates.
 
-If you're booked solid and closing well, you can throttle the booked-estimate flow to match your crew's capacity. Better to have a steady stream of qualified estimates you can actually service than a flood you can't get to, which leads to no-shows and burned-out crews.
+If you're booked solid and closing well, you can throttle the booked-estimate flow to match your crew's capacity. Better to have a steady stream of estimates you can actually service than a flood you can't get to, which leads to no-shows and burned-out crews.
 
-Keep optimizing small things. Test new ad creative. Respond to reviews. Add fresh floor photos to GMB. But don't try to reinvent your whole strategy in April.
+Keep optimizing small things. Test new ad creative. Respond to reviews. Add fresh floor photos to your Google profile. But don't try to reinvent your whole strategy in April.
 
 ### Phase 6: May to Late Summer (Maintain the Pipeline, Don't Panic)
 
@@ -132,7 +132,7 @@ Maintain a steady flow of booked estimates at a reduced level. Fewer jobs coming
 
 - Refine your messaging based on spring results
 - Shoot new before-and-after creative for fall
-- Strengthen your GMB profile with fresh photos and posts
+- Strengthen your Google profile with fresh photos and reviews
 - Analyze what worked in spring and what didn't
 - Stay in front of homeowners who got an estimate in spring but haven't pulled the trigger yet
 - Plan your fall push
@@ -147,7 +147,7 @@ Meta ads and creative you run for awareness and demand: a steady monthly spend t
 
 Appointment generation on the Appointly Model: a retainer that covers the labor of running the whole system, plus a per-appointment fee for each booked estimate that lands on your calendar. You scale the number of booked estimates to your crew's capacity.
 
-GMB management and content, plus a buffer for testing new offers, round it out.
+Google profile maintenance and content, plus a buffer for testing new offers, round it out.
 
 The exact figure depends on your market and how many floors you can coat. The principle is the same for every contractor: front-load your effort into spring when homeowners are actually ready to buy. The same spend in the slow season works less hard because the demand isn't there.
 
@@ -157,7 +157,7 @@ And remember the math from the booking side: a single coated garage floor is oft
 
 You wait until March to start. By then, the contractors who prepared in January already have full calendars. You're playing catch-up.
 
-You try to do everything at once. Meta ads, Google Ads, SEO, content, social, referral campaigns, all at the same time. You dilute your budget and see results from none of it. Pick the channels that book estimates and go deep.
+You try to do everything at once. Meta ads, Google Ads, content, social, referral campaigns, all at the same time. You dilute your budget and see results from none of it. Pick the channels that book estimates and go deep.
 
 You ignore speed to lead. You generate a homeowner's interest, then take three hours to call back. In peak season, that lead is already gone. Whoever contacts them first books the estimate. If you can't respond in minutes, have a system that does.
 
@@ -177,9 +177,9 @@ A: You're behind, but it's not too late. You can still book estimates in March, 
 
 A: Push harder in spring when demand peaks, maintain a steady flow the rest of the year. A lot of floor coating contractors do a big chunk of their volume in the warm months, so that's where the ROI is. The slower stretches need a smaller, steady effort to keep the pipeline alive.
 
-**Q: What if I don't have time to optimize GMB right now?**
+**Q: What if I don't have time to build out my Google profile right now?**
 
-A: Hire someone to do it. A freelancer can knock out a complete GMB optimization in a few hours for a couple hundred dollars. It's one of the highest-ROI uses of your money before peak. Worth outsourcing if you're slammed.
+A: Hire someone to do it. A freelancer can knock out a complete Google Business Profile build-out in a few hours for a couple hundred dollars. It's one of the highest-ROI uses of your money before peak because it's the first thing homeowners check. Worth outsourcing if you're slammed.
 
 **Q: How do I know if my spring marketing plan is working?**
 
@@ -193,6 +193,6 @@ A: You can run top-of-funnel ads yourself, but the part that wins spring, instan
 
 Spring is the most important selling season for floor coating contractors. The ones who prepare now will have calendars full of booked estimates and be picking their jobs. The ones who don't will be scrambling and losing work to competitors.
 
-Your prep work starts today: Google My Business optimization, Meta ad creative, and a locked-in system for booking estimates. By the time March arrives, your engine should be running. By April, your calendar should be full of homeowners scheduled and waiting for you to quote their garage, basement, or showroom floor.
+Your prep work starts today: a complete Google Business Profile, Meta ad creative, and a locked-in system for booking estimates. By the time March arrives, your engine should be running. By April, your calendar should be full of homeowners scheduled and waiting for you to quote their garage, basement, or showroom floor.
 
 Appointly is built for floor coating contractors who want a booked spring calendar without becoming a marketing department. Here's how it works: you pay a retainer that covers our labor running the entire system, plus a per-appointment fee for each booked estimate that lands on your calendar. We generate the lead through Meta ads, we contact the homeowner immediately with speed to lead before they shop another contractor, and we book them into a time that works for your crew. We work with one contractor per market, so you're never racing the competition for the same garage. You just show up, run the estimate, coat the floor, and collect. If you want to be one of the contractors with a packed spring calendar, head to [getappointly.co](https://getappointly.co) and let's build your season.
