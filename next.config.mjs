@@ -3,6 +3,13 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  async rewrites() {
+    return [
+      // Serve the self-contained pitch deck (public/deck/index.html) at the
+      // clean URL /deck in both dev and production.
+      { source: "/deck", destination: "/deck/index.html" },
+    ]
+  },
 }
 
 export default nextConfig

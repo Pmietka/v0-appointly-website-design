@@ -171,6 +171,42 @@ export default function HowItWorksPage() {
         </section>
 
         <section className="section-divider py-24 md:py-32">
+          <div className="mx-auto max-w-6xl px-6">
+            <div className="mb-12 max-w-2xl">
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
+                The Full Pitch
+              </p>
+              <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">
+                Walk through the Appointly Solutions deck.
+              </h2>
+              <p className="mt-5 text-sm leading-7 text-muted-foreground md:text-base">
+                The same seven-slide pitch we share on strategy calls. Use the arrows or
+                the bottom navigation to step through it, or open it{" "}
+                <a
+                  href="/deck"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary transition-colors hover:opacity-80"
+                >
+                  full screen in its own tab
+                </a>
+                .
+              </p>
+            </div>
+
+            <div className="glass-card overflow-hidden rounded-3xl p-2 shadow-[0_0_70px_rgba(125,135,247,0.10)]">
+              <iframe
+                src="/deck"
+                title="Appointly Solutions pitch deck"
+                loading="lazy"
+                allowFullScreen
+                className="h-[620px] w-full rounded-2xl border-0 bg-white md:h-[760px]"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section className="section-divider py-24 md:py-32">
           <div className="mx-auto grid max-w-6xl gap-6 px-6 lg:grid-cols-[1.2fr_0.8fr]">
             <article className="glass-card rounded-3xl p-8 md:p-10">
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
