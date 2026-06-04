@@ -256,6 +256,87 @@
   .proof-strip .psv{font-size:32px;font-weight:700;letter-spacing:-.02em;line-height:1}
   .proof-strip .psl{font-size:13px;color:var(--ink-3);margin-top:4px}
   .proof-strip .pvd{width:1px;height:38px;background:var(--line)}
+
+  /* ===================== REDESIGN v2 ===================== */
+  .tag{display:none}
+  .pad{padding:0 80px}
+  .body{padding:54px 80px 44px;max-width:none;gap:26px;justify-content:flex-start}
+
+  /* decorative holographic orb */
+  .orb{position:absolute;border-radius:999px;filter:blur(95px);opacity:.6;z-index:0;pointer-events:none;
+    background:conic-gradient(from 210deg at 42% 38%,#ffc9e6,#f4fff6,#c9ffe2,#f6fbff,#cfe6ff,#fdf4ff,#ffd6ee,#ffc9e6)}
+  .orb.tr{width:640px;height:640px;right:-170px;top:-230px}
+  .orb.br{width:560px;height:560px;right:-160px;bottom:-240px}
+  .orb.bl{width:560px;height:560px;left:-190px;bottom:-230px}
+
+  /* COVER */
+  .slide.cover .pad{align-items:center;z-index:10}
+  .col.wide{max-width:1140px;gap:30px}
+  .slide.cover h1{font-size:92px;line-height:.99;letter-spacing:-.03em}
+  .slide.cover .hl{padding:0 16px}
+  .slide.cover .lead{font-size:26px;line-height:1.5;max-width:780px}
+  .slide.cover .cta{font-size:21px;padding:20px 34px;border-radius:14px}
+  .proof .lbl{font-size:11px}
+  .proof .pill{font-size:13px;padding:6px 13px}
+
+  /* SLIDE 2 — qualifier cards */
+  .qualgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:4px;width:100%;max-width:1120px}
+  .qual{display:flex;align-items:center;gap:18px;border:1px solid var(--line);border-radius:18px;padding:24px 26px;background:#fff;box-shadow:0 6px 18px -12px rgba(0,0,0,.12)}
+  .qual .qtext{font-size:21px;font-weight:500;line-height:1.3;color:var(--ink)}
+  .qual .qc{flex-shrink:0;width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#cfffae,#ace5ff);display:grid;place-items:center}
+  .qual .qc::after{content:"";width:15px;height:9px;border-left:3px solid #0f5132;border-bottom:3px solid #0f5132;transform:rotate(-45deg);margin-top:-4px}
+  .slide.s2 .answer{font-size:36px;margin-top:18px}
+
+  /* SLIDE 3 — fill height, larger stats */
+  .slide.s3 .body{gap:22px}
+  .slide.s3 .stats.big{flex:1;max-height:380px;align-items:stretch;margin-top:6px}
+  .slide.s3 .stat{display:flex;flex-direction:column;justify-content:center;gap:8px}
+  .slide.s3 .stats.big .sv{font-size:72px}
+  .slide.s3 .stats.big .sv.word{font-size:42px}
+  .slide.s3 .stats.big .sl{font-size:17px;max-width:260px}
+
+  /* SLIDE 4 — step flow (centerpiece) */
+  .slide.s4 .body{gap:18px}
+  .slide.s4 h2{font-size:48px}
+  .slide.s4 .sub{font-size:19px}
+  .stepflow{display:flex;align-items:stretch;gap:14px;margin-top:22px;width:100%;flex:1;max-height:520px}
+  .sfarrow{flex:0 0 auto;align-self:center;font-size:30px;color:var(--ink-4);font-weight:300}
+  .sfcard{flex:1;display:flex;flex-direction:column;gap:16px;border:1px solid var(--line);border-radius:22px;padding:30px 26px;background:#fff;box-shadow:0 14px 36px -18px rgba(0,0,0,.18);position:relative;overflow:hidden}
+  .sfcard::after{content:"";position:absolute;inset:0;border-radius:22px;background:linear-gradient(160deg,rgba(207,255,174,.16),rgba(172,229,255,.08) 45%,transparent 70%);pointer-events:none}
+  .sfnum{width:66px;height:66px;border-radius:19px;background:linear-gradient(135deg,#cfffae,#ace5ff);color:#0f3d2e;font-size:30px;font-weight:800;display:grid;place-items:center;box-shadow:0 10px 22px -10px rgba(80,160,140,.5);position:relative;z-index:1}
+  .sfcard .sft{font-size:23px;font-weight:650;font-weight:600;letter-spacing:-.015em;line-height:1.15;position:relative;z-index:1}
+  .sfcard .sfd{font-size:15.5px;color:var(--ink-3);line-height:1.5;position:relative;z-index:1}
+
+  /* SLIDE 5 — comparison as centerpiece (two 50% columns) */
+  .slide.s5 .body{gap:20px;padding:44px 80px}
+  .slide.s5 h2{font-size:46px}
+  .slide.s5 .compare{max-width:none;gap:26px;margin-top:6px;flex:1;align-items:stretch}
+  .slide.s5 .cc{flex:1;padding:40px 42px;border-radius:26px;gap:8px;justify-content:flex-start}
+  .slide.s5 .cc .ch{font-size:26px;display:flex;align-items:center;gap:12px;margin-bottom:14px}
+  .slide.s5 .cc ul{flex:1;justify-content:space-evenly;gap:6px}
+  .slide.s5 .compare li{font-size:21px;line-height:1.35;padding-left:36px}
+  .slide.s5 .compare .bad li::before{font-size:24px;left:6px;top:-2px}
+  .slide.s5 .compare .good li::before{font-size:19px;left:4px;top:1px}
+  .s5tag{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.16em;padding:5px 11px;border-radius:8px}
+  .s5tag.b{color:#b91c1c;background:#fee2e2}
+  .s5tag.g{color:#15803d;background:#dcfce7}
+
+  /* SLIDE 6 — bigger value points */
+  .slide.s6 h2{font-size:52px}
+  .slide.s6 .vlist.lg{gap:24px;margin-top:24px;max-width:1080px}
+  .slide.s6 .vlist.lg li{font-size:26px;padding-left:64px;line-height:1.38;color:var(--ink)}
+  .slide.s6 .vlist.lg li .vn{width:44px;height:44px;font-size:19px;border-radius:13px;top:-3px}
+
+  /* SLIDE 7 — proof: big vertical photos, evenly centered, no top gap */
+  .slide.s7 .body{justify-content:flex-start;padding:32px 72px 26px;gap:12px}
+  .slide.s7 h2{font-size:42px}
+  .slide.s7 .proofs{flex:1;max-width:none;gap:30px;margin-top:2px;justify-content:center;align-items:stretch}
+  .slide.s7 .pcard{flex:0 1 300px;max-width:312px;padding:20px;gap:7px;border-radius:22px;justify-content:flex-start}
+  .slide.s7 .pcard .photo{margin:-20px -20px 8px;width:calc(100% + 40px);aspect-ratio:4/5;object-fit:cover;border-radius:0}
+  .slide.s7 .pcard .who{font-size:18px}
+  .slide.s7 .pcard .where{font-size:13px}
+  .slide.s7 .pcard .pstat{font-size:15px}
+  .slide.s7 .pcard .quote{font-size:14.5px;line-height:1.5}
 </style>
 </head>
 <body>
@@ -281,20 +362,14 @@
         <div class="canvas-pos" id="canvas">
 
           <!-- Cover -->
-          <section class="slide active">
+          <section class="slide cover active">
             <div class="grid-bg"></div>
+            <div class="orb tr"></div>
             <div class="pad">
-              <div class="col">
-                <span class="tag">Floor Coating Growth System</span>
-                <h1>We book Floor Coating Jobs. <span class="hl"><span class="foil"></span><span class="shine"></span>You just show up.</span></h1>
+              <div class="col wide">
+                <h1>We book Floor Coating&nbsp;Jobs.<br><span class="hl"><span class="foil"></span><span class="shine"></span>You just show up.</span></h1>
                 <p class="lead">Pay per appointment. We cover the ad spend. You pay only when a qualified homeowner is on your calendar.</p>
                 <a class="cta">Talk to us<span class="arr">&rarr;</span></a>
-              </div>
-              <div class="stack">
-                <div class="blob"></div>
-                <div class="card c1">Finished epoxy garage floor</div>
-                <div class="card c2">Booked appointment</div>
-                <div class="card c3">Homeowner ready to buy</div>
               </div>
             </div>
             <div class="proof">
@@ -303,62 +378,61 @@
           </section>
 
           <!-- 01 Is this for you -->
-          <section class="slide">
+          <section class="slide s2">
             <div class="grid-bg"></div>
+            <div class="orb bl"></div>
             <div class="body">
-              <span class="tag">Is this for you?</span>
               <h2 class="xl">We know how to get<br>Floor Coating Jobs.</h2>
-              <p class="sub">It's worked in Chicago, Coastal Florida, Dallas&ndash;Fort Worth, Grand Rapids, and dozens of other markets. If this sounds like you, it'll work for you too:</p>
-              <ul class="check lg">
-                <li>You serve a market of wealthy, older homeowners</li>
-                <li>You already get estimate requests, so you know demand exists</li>
-                <li>You have a closer who can walk into a home and sell</li>
-                <li>You have room for more appointments every month</li>
-              </ul>
+              <div class="qualgrid">
+                <div class="qual"><span class="qc"></span><span class="qtext">You serve a market of wealthy, older homeowners</span></div>
+                <div class="qual"><span class="qc"></span><span class="qtext">You already get estimate requests &mdash; demand exists</span></div>
+                <div class="qual"><span class="qc"></span><span class="qtext">You have a closer who can walk in and sell</span></div>
+                <div class="qual"><span class="qc"></span><span class="qtext">You have room for more appointments every month</span></div>
+              </div>
               <p class="answer">Then yes &mdash; you're leaving <span class="hl"><span class="foil"></span><span class="shine"></span>jobs on the table.</span></p>
             </div>
           </section>
 
           <!-- 02 The model -->
-          <section class="slide">
+          <section class="slide s3">
             <div class="grid-bg"></div>
+            <div class="orb tr"></div>
             <div class="body">
-              <span class="tag">The model</span>
               <h2 class="xl">How we get clients <span class="hl"><span class="foil"></span><span class="shine"></span>8 new jobs</span> a month.</h2>
               <p class="sub">We run the ads with our own money, because we're good at it. You pay only once a qualified appointment is booked onto your calendar.</p>
               <div class="stats big">
                 <div class="stat"><div class="sv">$0</div><div class="sl">Ad spend risk to you &mdash; we front it</div></div>
-                <div class="stat"><div class="sv word accent">Pay&nbsp;per<br>appointment</div><div class="sl">No retainers, no lead fees, nothing else</div></div>
-                <div class="stat"><div class="sv accent">8 jobs</div><div class="sl">Average for our latest clients in month two</div></div>
+                <div class="stat"><div class="sv word">Pay&nbsp;per<br>appointment</div><div class="sl">No retainers, no lead fees, nothing else</div></div>
+                <div class="stat"><div class="sv">8 jobs</div><div class="sl">Average for our latest clients in month two</div></div>
               </div>
             </div>
           </section>
 
           <!-- 03 The mechanism -->
-          <section class="slide">
+          <section class="slide s4">
             <div class="grid-bg"></div>
             <div class="body">
-              <span class="tag">The mechanism</span>
               <h2 class="xl">From ad to <span class="hl"><span class="foil"></span><span class="shine"></span>booked appointment.</span></h2>
-              <p class="sub">A repeatable system built specifically for floor coating contractors &mdash; not a generic ad agency playbook.</p>
-              <div class="steps">
-                <div class="step"><div class="sn">Step 01</div><div class="st">We launch proven ads</div><div class="sd">We start with creatives already proven to convert, customized with your local footage and market.</div></div>
-                <div class="step"><div class="sn">Step 02</div><div class="st">We track everything daily</div><div class="sd">Dozens of metrics monitored every day. Every 2 to 3 days non-performers are cut and replaced.</div></div>
-                <div class="step"><div class="sn">Step 03</div><div class="st">Winners get scaled</div><div class="sd">Testing repeats until we have the exact creatives and targeting hitting your appointment goals.</div></div>
-                <div class="step"><div class="sn">Step 04</div><div class="st">We improve with your data</div><div class="sd">Closed a job? We note who. Wasted trip? We note that too. More of who converts, fewer who don't.</div></div>
+              <div class="stepflow">
+                <div class="sfcard"><div class="sfnum">1</div><div class="sft">We launch proven ads</div><div class="sfd">Creatives already proven to convert, customized with your local footage and market.</div></div>
+                <div class="sfarrow">&rarr;</div>
+                <div class="sfcard"><div class="sfnum">2</div><div class="sft">We track it daily</div><div class="sfd">Dozens of metrics every day. Every 2&ndash;3 days, non-performers are cut and replaced.</div></div>
+                <div class="sfarrow">&rarr;</div>
+                <div class="sfcard"><div class="sfnum">3</div><div class="sft">Winners get scaled</div><div class="sfd">We push the exact creatives and targeting that hit your appointment goals.</div></div>
+                <div class="sfarrow">&rarr;</div>
+                <div class="sfcard"><div class="sfnum">4</div><div class="sft">We improve with your data</div><div class="sfd">Closed a job? Wasted trip? We feed it back. More of who converts, fewer who don't.</div></div>
               </div>
             </div>
           </section>
 
           <!-- 04 Appointments beat leads -->
-          <section class="slide">
+          <section class="slide s5">
             <div class="grid-bg"></div>
             <div class="body">
-              <span class="tag">Why appointments beat leads</span>
               <h2>Paying for leads is a <span class="hl"><span class="foil"></span><span class="shine"></span>waste of money.</span></h2>
               <div class="compare">
                 <div class="cc bad">
-                  <div class="ch">Paying for leads</div>
+                  <div class="ch"><span class="s5tag b">Leads</span> Paying for leads</div>
                   <ul>
                     <li>You chase them yourself</li>
                     <li>Call 5 min late and they're gone</li>
@@ -368,12 +442,12 @@
                   </ul>
                 </div>
                 <div class="cc good">
-                  <div class="ch">Appointly appointments</div>
+                  <div class="ch"><span class="s5tag g">Appointly</span> Booked appointments</div>
                   <ul>
                     <li>We call within 60 seconds</li>
                     <li>Qualified, warmed up, booked</li>
                     <li>Only vetted homeowners on your calendar</li>
-                    <li>They're expecting you. You just show up.</li>
+                    <li>They're expecting you &mdash; you just show up</li>
                     <li>We handle all the phone work</li>
                   </ul>
                 </div>
@@ -382,10 +456,10 @@
           </section>
 
           <!-- 05 What you get -->
-          <section class="slide">
+          <section class="slide s6">
             <div class="grid-bg"></div>
+            <div class="orb br"></div>
             <div class="body">
-              <span class="tag">What you're getting</span>
               <h2>A world-class acquisition team, for the <span class="hl"><span class="foil"></span><span class="shine"></span>price of an appointment.</span></h2>
               <ul class="vlist lg">
                 <li><span class="vn">1</span>We call every lead within 60 seconds, before they forget they clicked the ad.</li>
@@ -398,10 +472,9 @@
           </section>
 
           <!-- 06 Proof -->
-          <section class="slide">
+          <section class="slide s7">
             <div class="grid-bg bottom"></div>
             <div class="body">
-              <span class="tag">Proof</span>
               <h2>It <span class="hl"><span class="foil"></span><span class="shine"></span>worked.</span></h2>
               <div class="proofs">
                 <div class="pcard">
