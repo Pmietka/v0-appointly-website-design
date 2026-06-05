@@ -32,9 +32,9 @@ export function Footer() {
               <img
                 src="/images/appointly-logo-lockup.png"
                 alt="Appointly Solutions"
-                width={144}
-                height={50}
-                className="h-10 w-auto"
+                width={173}
+                height={60}
+                className="h-12 w-auto"
               />
             </div>
             <p className="mt-5 text-sm leading-7 text-slate-600">

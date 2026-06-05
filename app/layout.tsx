@@ -47,8 +47,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://getappointly.co/images/appointly-og.png",
-        width: 1024,
-        height: 350,
+        width: 1200,
+        height: 630,
         alt: "Appointly Solutions | Booked Estimates for Home Service Contractors",
       },
     ],
