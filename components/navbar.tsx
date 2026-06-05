@@ -22,9 +22,9 @@ export function Navbar() {
           <img
             src="/images/appointly-logo-lockup.png"
             alt="Appointly Solutions"
-            width={132}
-            height={46}
-            className="h-9 w-auto"
+            width={158}
+            height={55}
+            className="h-11 w-auto"
           />
         </Link>
 

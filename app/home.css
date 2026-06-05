@@ -17,7 +17,7 @@ html { scroll-behavior: smooth; }
 .dscroll *{box-sizing:border-box;margin:0;padding:0}
 .dscroll .wrap{position:relative;z-index:1;width:100%;max-width:1080px;margin:0 auto;padding:0 clamp(20px,5vw,40px)}
 .dscroll section{position:relative;overflow:hidden}
-.dscroll section[id]{scroll-margin-top:84px}
+.dscroll section[id]{scroll-margin-top:98px}
 .dscroll .sec{padding:clamp(60px,13vw,128px) 0}
 .dscroll .sec.tint{background:var(--tint)}
 
@@ -153,15 +153,14 @@ html { scroll-behavior: smooth; }
 /* ── sticky nav ───────────────────────────────────────────────────── */
 .dscroll .snav{position:sticky;top:0;z-index:50;background:rgba(250,250,250,.82);
   backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.dscroll .snav-in{max-width:1080px;margin:0 auto;padding:0 clamp(20px,5vw,40px);height:64px;
+.dscroll .snav-in{max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,40px);height:78px;
   display:flex;align-items:center;justify-content:space-between;gap:16px}
-.dscroll .snav-logo{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--ink);font-weight:700;
-  font-size:16px;letter-spacing:-.01em}
-.dscroll .snav-logo img{height:30px;width:auto;display:block}
-.dscroll .snav-links{display:flex;align-items:center;gap:clamp(18px,3vw,32px)}
-.dscroll .snav-links a{font-size:14px;font-weight:500;color:var(--ink-2);text-decoration:none;transition:color .15s}
+.dscroll .snav-logo{display:flex;align-items:center;text-decoration:none}
+.dscroll .snav-logo img{height:44px;width:auto;display:block}
+.dscroll .snav-right{display:flex;align-items:center;gap:clamp(20px,3vw,34px)}
+.dscroll .snav-links{display:flex;align-items:center;gap:clamp(20px,2.4vw,32px)}
+.dscroll .snav-links a{font-size:15px;font-weight:500;color:var(--ink-2);text-decoration:none;transition:color .15s}
 .dscroll .snav-links a:hover{color:var(--ink)}
-.dscroll .snav-right{display:flex;align-items:center;gap:12px}
 .dscroll .snav .btn{padding:10px 18px;font-size:14px;border-radius:10px}
 .dscroll .snav-burger{display:none;width:42px;height:42px;border:1px solid var(--line);border-radius:10px;
   background:#fff;cursor:pointer;align-items:center;justify-content:center;color:var(--ink)}
@@ -172,6 +171,9 @@ html { scroll-behavior: smooth; }
 .dscroll .snav-mobile a:last-child{border-bottom:none}
 
 @media(max-width:760px){
+  .dscroll .snav-in{height:68px}
+  .dscroll .snav-logo img{height:38px}
+  .dscroll .snav-right{gap:10px}
   .dscroll .snav-links{display:none}
   .dscroll .snav-burger{display:flex}
   .dscroll .snav-mobile.open{display:block}

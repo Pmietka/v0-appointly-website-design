@@ -8,9 +8,10 @@ import { Menu, X } from "lucide-react";
 export const BOOKING_URL = "https://client.getappointly.co/strategy-calendar";
 
 const links = [
-  { href: "#proof", label: "Proof" },
   { href: "#how-it-works", label: "How It Works" },
   { href: "#is-this-for-you", label: "Is This For You" },
+  { href: "#proof", label: "Proof" },
+  { href: "#what-you-get", label: "What You Get" },
 ];
 
 export function SiteNav() {
@@ -20,18 +21,17 @@ export function SiteNav() {
     <nav className="snav" aria-label="Primary">
       <div className="snav-in">
         <a href="#top" className="snav-logo" aria-label="Appointly Solutions home">
-          <img src="/images/appointly-logo-lockup.png" alt="Appointly Solutions" width={86} height={30} />
+          <img src="/images/appointly-logo-lockup.png" alt="Appointly Solutions" width={129} height={45} />
         </a>
 
-        <div className="snav-links">
-          {links.map((l) => (
-            <a key={l.href} href={l.href}>
-              {l.label}
-            </a>
-          ))}
-        </div>
-
         <div className="snav-right">
+          <div className="snav-links">
+            {links.map((l) => (
+              <a key={l.href} href={l.href}>
+                {l.label}
+              </a>
+            ))}
+          </div>
           <a className="btn" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
             Book a Call
           </a>

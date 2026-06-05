@@ -240,7 +240,7 @@ export default function HomePage() {
       </section>
 
       {/* What you get */}
-      <section className="sec">
+      <section className="sec" id="what-you-get">
         <div className="orb b" />
         <div className="wrap">
           <p className="eyebrow">What you&apos;re getting</p>
