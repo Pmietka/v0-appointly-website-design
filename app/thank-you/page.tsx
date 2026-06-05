@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Calendar, CheckCircle, Clock, Target } from "lucide-react";
 
-import { BrandMark } from "@/components/brand-mark";
 
 export const metadata: Metadata = {
   title: "Thank You | Appointly Solutions",
@@ -60,13 +59,8 @@ export default function ThankYouPage() {
 
       <nav className="border-b border-slate-200/80 bg-white/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <a href="/" className="flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-950 shadow-sm">
-              <BrandMark className="h-8 w-8" />
-            </div>
-            <span className="font-display text-sm font-bold uppercase tracking-[0.2em] text-foreground">
-              Appointly
-            </span>
+          <a href="/" className="flex items-center" aria-label="Appointly Solutions home">
+            <img src="/images/appointly-logo-lockup.png" alt="Appointly Solutions" width={132} height={46} className="h-9 w-auto" />
           </a>
           <a
             href="https://client.getappointly.co/strategy-calendar"
@@ -170,11 +164,8 @@ export default function ThankYouPage() {
 
       <footer className="border-t border-slate-200 py-8">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 md:flex-row">
-          <div className="flex items-center gap-3">
-            <BrandMark className="h-6 w-6 text-slate-950" />
-            <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-foreground">
-              Appointly
-            </span>
+          <div className="flex items-center gap-2">
+            <img src="/images/appointly-logo-lockup.png" alt="Appointly Solutions" width={104} height={36} className="h-7 w-auto" />
           </div>
           <p className="text-xs text-muted-foreground">
             &copy; {new Date().getFullYear()} Appointly Solutions. All rights reserved.

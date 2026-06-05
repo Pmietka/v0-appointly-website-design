@@ -82,7 +82,7 @@ export default function RootLayout({
                 url: "https://getappointly.co",
                 logo: {
                   "@type": "ImageObject",
-                  url: "https://getappointly.co/images/appointly-logo.png",
+                  url: "https://getappointly.co/images/appointly-logo-mark.png",
                 },
                 description:
                   "Appointly Solutions fills home service contractors' calendars with booked estimates. We run Meta ads, contact every lead instantly, and book the appointment for you. You pay a retainer plus a per-appointment fee for each booked estimate.",
@@ -98,7 +98,7 @@ export default function RootLayout({
                 "@id": "https://getappointly.co/#localbusiness",
                 name: "Appointly Solutions",
                 url: "https://getappointly.co",
-                logo: "https://getappointly.co/images/appointly-logo.png",
+                logo: "https://getappointly.co/images/appointly-logo-mark.png",
                 description:
                   "Appointment generation for home service contractors. We run Meta ads, hit speed-to-lead, and book estimates straight onto your calendar. You pay a retainer plus a per-appointment fee for each booked estimate.",
                 address: {

@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-import { BrandMark } from "@/components/brand-mark";
 
 const companyLinks = [
   { href: "/about", label: "About" },
@@ -29,18 +28,14 @@ export function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6">
         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
           <div className="max-w-xs">
-            <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-950 shadow-sm">
-                <BrandMark className="h-9 w-9" />
-              </div>
-              <div>
-                <span className="font-display text-sm font-bold uppercase tracking-[0.18em] text-slate-950">
-                  Appointly
-                </span>
-                <p className="mt-1 text-[11px] uppercase tracking-[0.22em] text-slate-500">
-                  Solutions
-                </p>
-              </div>
+            <div className="flex items-center">
+              <img
+                src="/images/appointly-logo-lockup.png"
+                alt="Appointly Solutions"
+                width={144}
+                height={50}
+                className="h-10 w-auto"
+              />
             </div>
             <p className="mt-5 text-sm leading-7 text-slate-600">
               Booked estimates for home service contractors, built around the
@@ -113,7 +108,7 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Appointly Solutions. All rights reserved.
           </p>
           <div className="flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-slate-400">
-            <BrandMark className="h-6 w-6 text-slate-950" />
+            <img src="/images/appointly-logo-icon.png" alt="" aria-hidden="true" className="h-6 w-6" />
             Performance-based appointment generation
           </div>
         </div>

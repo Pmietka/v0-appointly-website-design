@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
-import { BrandMark } from "@/components/brand-mark";
 
 const navLinks = [
   { href: "/how-it-works", label: "How It Works" },
@@ -19,18 +18,14 @@ export function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-gray-200 bg-white/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="flex items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-gray-200 bg-white text-gray-900 shadow-sm">
-            <BrandMark className="h-8 w-8" />
-          </div>
-          <div className="leading-none">
-            <span className="font-display text-sm font-bold uppercase tracking-[0.18em] text-gray-900">
-              Appointly
-            </span>
-            <p className="mt-1 text-[11px] uppercase tracking-[0.22em] text-gray-500">
-              Solutions
-            </p>
-          </div>
+        <Link href="/" className="flex items-center" aria-label="Appointly Solutions home">
+          <img
+            src="/images/appointly-logo-lockup.png"
+            alt="Appointly Solutions"
+            width={132}
+            height={46}
+            className="h-9 w-auto"
+          />
         </Link>
 
         <div className="hidden items-center gap-10 md:flex">

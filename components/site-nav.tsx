@@ -3,8 +3,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
-import { BrandMark } from "@/components/brand-mark";
-
 // Single source of truth for the booking calendar. Do not introduce a second
 // booking system; every CTA on the homepage points here.
 export const BOOKING_URL = "https://client.getappointly.co/strategy-calendar";
@@ -22,21 +20,7 @@ export function SiteNav() {
     <nav className="snav" aria-label="Primary">
       <div className="snav-in">
         <a href="#top" className="snav-logo" aria-label="Appointly Solutions home">
-          <span
-            aria-hidden="true"
-            style={{
-              display: "grid",
-              placeItems: "center",
-              width: 30,
-              height: 30,
-              borderRadius: 9,
-              background: "var(--ink)",
-              color: "#fff",
-            }}
-          >
-            <BrandMark className="h-5 w-5" />
-          </span>
-          <span>Appointly Solutions</span>
+          <img src="/images/appointly-logo-lockup.png" alt="Appointly Solutions" width={86} height={30} />
         </a>
 
         <div className="snav-links">
