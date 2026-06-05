@@ -8,8 +8,13 @@ const nextConfig = {
       // Serve the self-contained pitch deck (public/deck/index.html) at the
       // clean URL /deck in both dev and production.
       { source: "/deck", destination: "/deck/index.html" },
-      // Responsive, vertically scrollable version of the deck for mobile.
-      { source: "/deck-scroll", destination: "/deck-scroll/index.html" },
+    ]
+  },
+  async redirects() {
+    return [
+      // /deck-scroll was promoted to the homepage. Permanent 301 so existing
+      // cold-outreach links pointing at /deck-scroll keep working.
+      { source: "/deck-scroll", destination: "/", statusCode: 301 },
     ]
   },
 }
