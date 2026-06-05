@@ -104,7 +104,7 @@ export default async function BlogPostPage({
                 name: "Appointly Solutions",
                 logo: {
                   "@type": "ImageObject",
-                  url: `${baseUrl}/images/appointly-logo.png`,
+                  url: `${baseUrl}/images/appointly-logo-mark.png`,
                 },
               },
             }),

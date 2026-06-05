@@ -157,7 +157,7 @@ html { scroll-behavior: smooth; }
   display:flex;align-items:center;justify-content:space-between;gap:16px}
 .dscroll .snav-logo{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--ink);font-weight:700;
   font-size:16px;letter-spacing:-.01em}
-.dscroll .snav-logo img{height:26px;width:auto;display:block}
+.dscroll .snav-logo img{height:30px;width:auto;display:block}
 .dscroll .snav-links{display:flex;align-items:center;gap:clamp(18px,3vw,32px)}
 .dscroll .snav-links a{font-size:14px;font-weight:500;color:var(--ink-2);text-decoration:none;transition:color .15s}
 .dscroll .snav-links a:hover{color:var(--ink)}
