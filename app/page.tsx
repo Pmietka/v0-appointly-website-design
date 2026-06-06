@@ -162,9 +162,9 @@ export default function HomePage() {
             </div>
 
             <div className="proof">
-              <img className="photo" src="/images/proof/andre.webp" alt="Andre S., Appointly client in Chicago" width={1080} height={1350} loading="lazy" />
+              <img className="photo" src="/images/proof/andre.webp" alt="Andre S. of Great Lakes Elite Coatings, Appointly client in Chicago" width={1080} height={1350} loading="lazy" />
               <div className="pin">
-                <div className="who">Andre S.</div>
+                <div className="who">Andre S. &middot; Great Lakes Elite Coatings</div>
                 <div className="where">Chicago, IL</div>
                 <div className="pstat">8 new jobs in his second month</div>
                 <div className="quote">&ldquo;The appointments were already warmed up. I just showed up and closed.&rdquo;</div>
@@ -172,9 +172,9 @@ export default function HomePage() {
             </div>
 
             <div className="proof">
-              <img className="photo" src="/images/proof/carlos-team.webp" alt="Carlos V. and his crew in Portland" width={1080} height={1350} loading="lazy" />
+              <img className="photo" src="/images/proof/carlos-team.webp" alt="Carlos V. of Diamond Group and his crew in Portland" width={1080} height={1350} loading="lazy" />
               <div className="pin">
-                <div className="who">Carlos V.</div>
+                <div className="who">Carlos V. &middot; Diamond Group</div>
                 <div className="where">Portland, OR</div>
                 <div className="pstat">1st appt closed, covered full onboarding cost</div>
                 <div className="quote">&ldquo;One job paid for everything. From there it just kept coming.&rdquo;</div>
