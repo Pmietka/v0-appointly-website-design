@@ -337,6 +337,45 @@
   .slide.s7 .pcard .where{font-size:12.5px;margin-top:-4px}
   .slide.s7 .pcard .pstat{font-size:13.5px;padding:7px 11px}
   .slide.s7 .pcard .quote{font-size:13px;line-height:1.42}
+
+  /* ===== NEW SLIDES: comparison (s8) / pricing (s9) / get started (s10) ===== */
+  .slide.s8 .body,.slide.s9 .body,.slide.s10 .body{justify-content:flex-start;padding:44px 80px 36px;gap:18px}
+  .slide.s8 .body h2,.slide.s9 .body h2,.slide.s10 .body h2{font-size:46px}
+
+  /* visible fill-in placeholder */
+  .ph{font-family:"JetBrains Mono",monospace;background:#fff7ed;border:1px dashed #f59e0b;color:#b45309;
+    border-radius:8px;padding:2px 10px;font-weight:700;display:inline-block;line-height:1.35}
+
+  /* comparison grid */
+  .cmpgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1.3fr;align-content:start;grid-auto-rows:min-content;
+    flex:0 0 auto;width:100%;max-width:1130px;margin-top:8px;
+    border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 14px 36px -22px rgba(0,0,0,.16)}
+  .cmpgrid>div{padding:14px 18px;border-bottom:1px solid var(--line);font-size:15px;color:var(--ink-3);
+    display:flex;align-items:center;line-height:1.3}
+  .cmpgrid>div:nth-last-child(-n+5){border-bottom:none}
+  .cmpgrid .dim{font-weight:600;color:var(--ink);font-size:14.5px}
+  .cmpgrid .ch{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-4);background:#fafafa}
+  .cmpgrid .appt{background:#eef3ff;color:var(--ink);font-weight:600}
+  .cmpgrid .ch.appt{background:var(--ink);color:#fff;letter-spacing:.1em}
+  .payoff{margin-top:18px;font-size:25px;font-weight:600;letter-spacing:-.01em;color:var(--ink);line-height:1.3}
+  .payoff strong{font-weight:700}
+
+  /* pricing block */
+  .priceblock{margin-top:12px;border:1px solid var(--line);border-radius:20px;background:#fff;padding:32px 36px;
+    max-width:660px;box-shadow:0 18px 44px -24px rgba(0,0,0,.18);display:flex;flex-direction:column;gap:13px}
+  .priceblock .ptag{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-3)}
+  .priceblock .pprice{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .priceblock .pprice .ph{font-size:38px;padding:6px 14px}
+  .priceblock .punit{font-size:18px;color:var(--ink-3);font-weight:500}
+  .priceblock .pnote{font-size:14px;color:var(--ink-3)}
+  .priceblock ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:4px}
+  .priceblock li{font-size:16px;color:var(--ink-2);line-height:1.4;padding-left:26px;position:relative}
+  .priceblock li::before{content:"";position:absolute;left:0;top:5px;width:15px;height:15px;border-radius:999px;background:linear-gradient(135deg,#cfffae,#ace5ff)}
+
+  /* get started */
+  .actionline{font-size:26px;font-weight:600;letter-spacing:-.01em;line-height:1.32;color:var(--ink);max-width:1000px;margin-top:2px}
+  .actionline strong{font-weight:700}
+  .slide.s10 .stepflow{flex:0 0 auto;max-height:none;margin-top:22px}
 </style>
 </head>
 <body>
@@ -345,7 +384,7 @@
     <div class="header-inner">
       <div class="crumb">
         <div class="div"></div>
-        <span class="meta"><span class="cur mono" id="curNum">01</span><span class="sep">/</span><span class="tot mono">07</span><span class="name" id="curName">Cover</span></span>
+        <span class="meta"><span class="cur mono" id="curNum">01</span><span class="sep">/</span><span class="tot mono">10</span><span class="name" id="curName">Cover</span></span>
       </div>
       <span class="niche">For US home service contractors</span>
       <button class="fsbtn" id="fsBtn" title="Enter full-screen (press F)">
@@ -502,6 +541,93 @@
             </div>
           </section>
 
+          <!-- Comparison -->
+          <section class="slide s8">
+            <div class="grid-bg"></div>
+            <div class="body">
+              <h2>Not DIY. Not an agency. <span class="hl"><span class="foil"></span><span class="shine"></span>A partner.</span></h2>
+              <div class="cmpgrid">
+                <div class="ch dim"></div>
+                <div class="ch">DIY</div>
+                <div class="ch">Marketing Agency</div>
+                <div class="ch">Shared Leads</div>
+                <div class="ch appt">Appointly</div>
+
+                <div class="dim">Who does the work</div>
+                <div>All on you</div>
+                <div>You manage them</div>
+                <div>You chase cold leads</div>
+                <div class="appt">We run everything</div>
+
+                <div class="dim">Ad spend risk</div>
+                <div>On you</div>
+                <div>On you</div>
+                <div>On you</div>
+                <div class="appt">On us</div>
+
+                <div class="dim">What you get</div>
+                <div>Maybe</div>
+                <div>Promises</div>
+                <div>Leads sold to many</div>
+                <div class="appt">Exclusive booked appointments</div>
+
+                <div class="dim">Works while you're on the job</div>
+                <div>No</div>
+                <div>No</div>
+                <div>No</div>
+                <div class="appt">Yes</div>
+
+                <div class="dim">What you pay for</div>
+                <div>Your time</div>
+                <div>Monthly fees</div>
+                <div>Leads that flake</div>
+                <div class="appt">Booked appointments</div>
+              </div>
+              <!-- DECISION TO CONFIRM (jobs vs appointments): the payoff says "jobs" but the grid cells say
+                   "appointments". Intentional tension, left as written. To resolve, change "jobs" to
+                   "appointments" in the .payoff line below. Do not auto-resolve. -->
+              <p class="payoff">You're not paying for effort or promises. <strong>You're paying for jobs.</strong></p>
+            </div>
+          </section>
+
+          <!-- Pricing -->
+          <section class="slide s9">
+            <div class="grid-bg"></div>
+            <div class="body">
+              <h2>Simple <span class="hl"><span class="foil"></span><span class="shine"></span>pricing.</span></h2>
+              <p class="sub">You pay one flat rate for every qualified appointment we book onto your calendar. We cover the ad spend. You never pay for a raw lead, only for a booked homeowner who shows up ready for an estimate.</p>
+              <div class="priceblock">
+                <div class="ptag">Per booked appointment</div>
+                <!-- PLACEHOLDER {{PRICE_PER_APPOINTMENT}}: fill in the per appointment rate. No default. -->
+                <div class="pprice"><span class="ph">{{PRICE_PER_APPOINTMENT}}</span><span class="punit">per booked appointment</span></div>
+                <!-- PLACEHOLDER {{VOLUME_NOTE}} (optional): note about volume based pricing, or delete this line. -->
+                <div class="pnote">Volume note: <span class="ph">{{VOLUME_NOTE}}</span></div>
+                <ul>
+                  <li>We cover the ad spend</li>
+                  <li>You never pay for a raw lead</li>
+                  <li>Only booked homeowners ready for an estimate</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- How to get started -->
+          <section class="slide s10">
+            <div class="grid-bg bottom"></div>
+            <div class="body">
+              <h2>How to <span class="hl"><span class="foil"></span><span class="shine"></span>get started.</span></h2>
+              <!-- PLACEHOLDER {{REP_NAME}}: default "Jacob". Change the name below if needed. -->
+              <p class="actionline">Tell <strong>Jacob</strong> how many jobs you want on your calendar each month. We handle the rest, from the ads to the booked appointment.</p>
+              <div class="stepflow">
+                <div class="sfcard"><div class="sfnum">1</div><div class="sft">Tell us your target number of appointments per month.</div></div>
+                <div class="sfarrow">&rarr;</div>
+                <div class="sfcard"><div class="sfnum">2</div><div class="sft">We launch the ads and book your calendar.</div></div>
+                <div class="sfarrow">&rarr;</div>
+                <div class="sfcard"><div class="sfnum">3</div><div class="sft">You show up and close.</div></div>
+              </div>
+            </div>
+          </section>
+
         </div>
       </div>
       <button class="arrow prev" id="prevBtn" aria-label="Previous slide">
@@ -522,7 +648,7 @@
 </div>
 
 <script>
-  const titles = ["Cover","Is this for you?","The model","Proof","The mechanism","Leads vs appointments","What you get"];
+  const titles = ["Cover","Is this for you?","The model","Proof","The mechanism","Leads vs appointments","What you get","Comparison","Pricing","Get started"];
   const slides = Array.from(document.querySelectorAll('.slide'));
   const total = slides.length;
   let idx = 0;

@@ -248,6 +248,102 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Comparison */}
+      <section className="sec tint">
+        <div className="wrap">
+          <h2>Not DIY. Not an agency. <span className="hl">A partner.</span></h2>
+          <div className="cmptable">
+            <div className="cmpgrid">
+              <div className="ch dim" />
+              <div className="ch">DIY</div>
+              <div className="ch">Marketing Agency</div>
+              <div className="ch">Shared Leads</div>
+              <div className="ch appt">Appointly</div>
+
+              <div className="dim">Who does the work</div>
+              <div>All on you</div>
+              <div>You manage them</div>
+              <div>You chase cold leads</div>
+              <div className="appt">We run everything</div>
+
+              <div className="dim">Ad spend risk</div>
+              <div>On you</div>
+              <div>On you</div>
+              <div>On you</div>
+              <div className="appt">On us</div>
+
+              <div className="dim">What you get</div>
+              <div>Maybe</div>
+              <div>Promises</div>
+              <div>Leads sold to many</div>
+              <div className="appt">Exclusive booked appointments</div>
+
+              <div className="dim">Works while you&apos;re on the job</div>
+              <div>No</div>
+              <div>No</div>
+              <div>No</div>
+              <div className="appt">Yes</div>
+
+              <div className="dim">What you pay for</div>
+              <div>Your time</div>
+              <div>Monthly fees</div>
+              <div>Leads that flake</div>
+              <div className="appt">Booked appointments</div>
+            </div>
+          </div>
+          {/*
+            DECISION TO CONFIRM (jobs vs appointments): the payoff says "jobs" but the grid cells say
+            "appointments". Intentional tension, left as written. To resolve, change "jobs" to
+            "appointments" in the .payoff line below. Do not auto-resolve.
+          */}
+          <p className="payoff">You&apos;re not paying for effort or promises. <strong>You&apos;re paying for jobs.</strong></p>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="sec">
+        <div className="wrap">
+          <h2>Simple <span className="hl">pricing.</span></h2>
+          <p className="sub">
+            You pay one flat rate for every qualified appointment we book onto your
+            calendar. We cover the ad spend. You never pay for a raw lead, only for a
+            booked homeowner who shows up ready for an estimate.
+          </p>
+          <div className="priceblock">
+            <div className="ptag">Per booked appointment</div>
+            {/* PLACEHOLDER {{PRICE_PER_APPOINTMENT}}: fill in the per appointment rate. No default. */}
+            <div className="pprice">
+              <span className="ph">{"{{PRICE_PER_APPOINTMENT}}"}</span>
+              <span className="punit">per booked appointment</span>
+            </div>
+            {/* PLACEHOLDER {{VOLUME_NOTE}} (optional): note about volume based pricing, or delete this line. */}
+            <div className="pnote">Volume note: <span className="ph">{"{{VOLUME_NOTE}}"}</span></div>
+            <ul>
+              <li>We cover the ad spend</li>
+              <li>You never pay for a raw lead</li>
+              <li>Only booked homeowners ready for an estimate</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* How to get started */}
+      <section className="sec tint">
+        <div className="wrap">
+          <h2>How to <span className="hl">get started.</span></h2>
+          {/* PLACEHOLDER {{REP_NAME}}: default "Jacob". Change the name below if needed. */}
+          <p className="actionline">
+            Tell <strong>Jacob</strong> how many jobs you want on your calendar each
+            month. We handle the rest, from the ads to the booked appointment.
+          </p>
+          <div className="grid g3">
+            <div className="step"><div className="sn">1</div><div className="st">Tell us your target number of appointments per month.</div></div>
+            <div className="step"><div className="sn">2</div><div className="st">We launch the ads and book your calendar.</div></div>
+            <div className="step"><div className="sn">3</div><div className="st">You show up and close.</div></div>
+          </div>
+        </div>
+      </section>
+
       {/* Secondary: insulation contractors (clearly subordinate to the floor coating lead) */}
       <section className="sec insul">
         <div className="wrap">
