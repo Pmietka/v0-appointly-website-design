@@ -281,6 +281,7 @@
 
   /* SLIDE 2 — qualifier cards */
   .qualgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:4px;width:100%;max-width:1120px}
+  .qualgrid.q3{grid-template-columns:repeat(3,1fr)}
   .qual{display:flex;align-items:center;gap:18px;border:1px solid var(--line);border-radius:18px;padding:24px 26px;background:#fff;box-shadow:0 6px 18px -12px rgba(0,0,0,.12)}
   .qual .qtext{font-size:21px;font-weight:500;line-height:1.3;color:var(--ink)}
   .qual .qc{flex-shrink:0;width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#cfffae,#ace5ff);display:grid;place-items:center}
@@ -339,31 +340,44 @@
   .slide.s7 .pcard .quote{font-size:13px;line-height:1.42}
 
   /* ===== NEW SLIDES: comparison (s8) / pricing (s9) / get started (s10) ===== */
-  .slide.s8 .body,.slide.s9 .body,.slide.s10 .body{justify-content:flex-start;padding:44px 80px 36px;gap:18px}
-  .slide.s8 .body h2,.slide.s9 .body h2,.slide.s10 .body h2{font-size:46px}
+  .slide.s9 .body,.slide.s10 .body{justify-content:flex-start;padding:44px 80px 36px;gap:18px}
+  .slide.s9 .body h2,.slide.s10 .body h2{font-size:46px}
 
-  /* visible fill-in placeholder */
-  .ph{font-family:"JetBrains Mono",monospace;background:#fff7ed;border:1px dashed #f59e0b;color:#b45309;
-    border-radius:8px;padding:2px 10px;font-weight:700;display:inline-block;line-height:1.35}
-
-  /* comparison grid */
-  .cmpgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1.3fr;align-content:start;grid-auto-rows:min-content;
-    flex:0 0 auto;width:100%;max-width:1130px;margin-top:8px;
-    border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 14px 36px -22px rgba(0,0,0,.16)}
-  .cmpgrid>div{padding:14px 18px;border-bottom:1px solid var(--line);font-size:15px;color:var(--ink-3);
-    display:flex;align-items:center;line-height:1.3}
+  /* ---- comparison slide ---- */
+  .slide.s8 .body{justify-content:flex-start;align-items:center;text-align:center;padding:28px 56px 20px;gap:9px}
+  .slide.s8 .body h2{font-size:42px}
+  .cmpeyebrow{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.22em;color:var(--ink-4)}
+  .cmpsub{font-size:17px;color:var(--ink-3);line-height:1.5;max-width:790px;margin:2px auto 0}
+  .cmpcard{position:relative;width:100%;max-width:1080px;margin-top:12px}
+  .cmpbar{position:absolute;top:-4px;right:0;width:218px;height:6px;border-radius:6px 6px 0 0;
+    background:linear-gradient(90deg,#60a5fa,#2563eb);z-index:2}
+  .cmpgrid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr 218px;align-content:start;grid-auto-rows:min-content;
+    border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 16px 40px -22px rgba(0,0,0,.18);text-align:left}
+  .cmpgrid>div{padding:11px 16px;border-bottom:1px solid var(--line);font-size:14px;color:var(--ink-3);
+    display:flex;align-items:center;gap:9px;line-height:1.35}
   .cmpgrid>div:nth-last-child(-n+5){border-bottom:none}
-  .cmpgrid .dim{font-weight:600;color:var(--ink);font-size:14.5px}
-  .cmpgrid .ch{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-4);background:#fafafa}
-  .cmpgrid .appt{background:#eef3ff;color:var(--ink);font-weight:600}
-  .cmpgrid .ch.appt{background:var(--ink);color:#fff;letter-spacing:.1em}
-  .payoff{margin-top:18px;font-size:25px;font-weight:600;letter-spacing:-.01em;color:var(--ink);line-height:1.3}
+  .cmpgrid .dim{font-weight:600;color:var(--ink);font-size:13.5px}
+  .cmpgrid .dim svg{width:17px;height:17px;color:var(--ink-3);flex-shrink:0}
+  .cmpgrid .ch{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-4);background:#fafafa}
+  .cmpgrid .appt{background:#eef4ff;color:var(--ink)}
+  .cmpgrid .ch.appt{background:var(--ink);color:#fff;letter-spacing:.03em;font-size:13px;font-weight:700;gap:7px}
+  .cmpgrid .ch.appt svg{width:16px;height:16px;color:#fff;flex-shrink:0}
+  .cmpgrid .out{align-items:flex-start;padding-top:14px;padding-bottom:14px;font-size:13.5px;color:var(--ink-2);font-weight:500}
+  .cmpgrid .out.dim{font-weight:700;color:var(--ink)}
+  .cmpgrid .out.appt{font-weight:600;color:var(--ink)}
+  .cmpgrid .bin{justify-content:center}
+  .cmpgrid .bin svg{width:19px;height:19px}
+  .cmpgrid .xmark{color:var(--ink-4)}
+  .cmpgrid .chk{color:#16a34a}
+  .payoff{margin-top:16px;font-size:23px;font-weight:600;letter-spacing:-.01em;color:var(--ink);line-height:1.3;text-align:center}
   .payoff strong{font-weight:700}
+  .cmpcaption{font-size:12.5px;font-style:italic;color:var(--ink-4);max-width:760px;margin:6px auto 0;line-height:1.4;text-align:center}
 
   /* pricing block */
   .priceblock{margin-top:12px;border:1px solid var(--line);border-radius:20px;background:#fff;padding:32px 36px;
     max-width:660px;box-shadow:0 18px 44px -24px rgba(0,0,0,.18);display:flex;flex-direction:column;gap:13px}
   .priceblock .ptag{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-3)}
+  .priceblock .pclaim{font-size:30px;font-weight:700;letter-spacing:-.02em;color:var(--ink);line-height:1.15}
   .priceblock .pprice{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
   .priceblock .pprice .ph{font-size:38px;padding:6px 14px}
   .priceblock .punit{font-size:18px;color:var(--ink-3);font-weight:500}
@@ -421,14 +435,13 @@
             <div class="grid-bg"></div>
             <div class="orb bl"></div>
             <div class="body">
-              <h2 class="xl">We know how to get<br>Floor Coating Jobs.</h2>
-              <div class="qualgrid">
-                <div class="qual"><span class="qc"></span><span class="qtext">You serve a market of wealthy, older homeowners</span></div>
-                <div class="qual"><span class="qc"></span><span class="qtext">You already get estimate requests &mdash; demand exists</span></div>
-                <div class="qual"><span class="qc"></span><span class="qtext">You have a closer who can walk in and sell</span></div>
-                <div class="qual"><span class="qc"></span><span class="qtext">You have room for more appointments every month</span></div>
+              <h2>We know how to get Floor Coating Jobs. <span class="hl"><span class="foil"></span><span class="shine"></span>Is this for you?</span></h2>
+              <div class="qualgrid q3">
+                <div class="qual"><span class="qc"></span><span class="qtext">Access to a market of wealthy homeowners.</span></div>
+                <div class="qual"><span class="qc"></span><span class="qtext">Your team can run and close in home estimates.</span></div>
+                <div class="qual"><span class="qc"></span><span class="qtext">You have room for more appointments.</span></div>
               </div>
-              <p class="answer">Then yes &mdash; you're leaving <span class="hl"><span class="foil"></span><span class="shine"></span>jobs on the table.</span></p>
+              <p class="answer">Then yes. You're leaving <span class="hl"><span class="foil"></span><span class="shine"></span>jobs on the table.</span></p>
             </div>
           </section>
 
@@ -545,48 +558,66 @@
           <section class="slide s8">
             <div class="grid-bg"></div>
             <div class="body">
+              <p class="cmpeyebrow">Compare the options</p>
               <h2>Not DIY. Not an agency. <span class="hl"><span class="foil"></span><span class="shine"></span>A partner.</span></h2>
-              <div class="cmpgrid">
-                <div class="ch dim"></div>
-                <div class="ch">DIY</div>
-                <div class="ch">Marketing Agency</div>
-                <div class="ch">Shared Leads</div>
-                <div class="ch appt">Appointly</div>
+              <p class="cmpsub">Appointly is the partner option. We front the ad spend, qualify every homeowner, and book appointments straight onto your calendar. You just show up and close.</p>
+              <div class="cmpcard">
+                <div class="cmpbar"></div>
+                <div class="cmpgrid">
+                  <div class="ch dim"></div>
+                  <div class="ch">DIY</div>
+                  <div class="ch">Marketing Agency</div>
+                  <div class="ch">Shared Leads</div>
+                  <div class="ch appt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="17" rx="2.5"/><path d="M3 9.5h18"/><path d="M8 2.5v4M16 2.5v4"/><path d="m8.5 15 2.3 2.3 4.7-4.7"/></svg>Appointly</div>
 
-                <div class="dim">Who does the work</div>
-                <div>All on you</div>
-                <div>You manage them</div>
-                <div>You chase cold leads</div>
-                <div class="appt">We run everything</div>
+                  <div class="dim out"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg>Outcome</div>
+                  <div class="out">All on you. Hard to keep up while you work.</div>
+                  <div class="out">Promises and meetings. Slow to show results.</div>
+                  <div class="out">Cold leads sold to many. You do the chasing.</div>
+                  <div class="out appt">Qualified appointments booked on your calendar.</div>
 
-                <div class="dim">Ad spend risk</div>
-                <div>On you</div>
-                <div>On you</div>
-                <div>On you</div>
-                <div class="appt">On us</div>
+                  <div class="dim"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Who runs it</div>
+                  <div>You</div>
+                  <div>You manage them</div>
+                  <div>You chase leads</div>
+                  <div class="appt">We run everything</div>
 
-                <div class="dim">What you get</div>
-                <div>Maybe</div>
-                <div>Promises</div>
-                <div>Leads sold to many</div>
-                <div class="appt">Exclusive booked appointments</div>
+                  <div class="dim"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>Ad spend risk</div>
+                  <div>On you</div>
+                  <div>On you</div>
+                  <div>On you</div>
+                  <div class="appt">On us</div>
 
-                <div class="dim">Works while you're on the job</div>
-                <div>No</div>
-                <div>No</div>
-                <div>No</div>
-                <div class="appt">Yes</div>
+                  <div class="dim"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19"/></svg>What you pay for</div>
+                  <div>Your time</div>
+                  <div>Monthly fees</div>
+                  <div>Leads that flake</div>
+                  <div class="appt">Booked appointments</div>
 
-                <div class="dim">What you pay for</div>
-                <div>Your time</div>
-                <div>Monthly fees</div>
-                <div>Leads that flake</div>
-                <div class="appt">Booked appointments</div>
+                  <div class="dim"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg>Works while you're on the job</div>
+                  <div class="bin"><svg class="xmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></div>
+                  <div class="bin"><svg class="xmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></div>
+                  <div class="bin"><svg class="xmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></div>
+                  <div class="bin appt"><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+
+                  <div class="dim"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M7.5 11V7.5a4.5 4.5 0 0 1 9 0V11"/></svg>Exclusive to you</div>
+                  <div class="bin"><svg class="xmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></div>
+                  <div class="bin"><svg class="xmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></div>
+                  <div class="bin"><svg class="xmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></div>
+                  <div class="bin appt"><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+
+                  <div class="dim"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v15a1 1 0 0 0 1 1h15"/><path d="m7 13 4-4 3 3 5-6"/></svg>You only pay for results</div>
+                  <div class="bin"><svg class="xmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></div>
+                  <div class="bin"><svg class="xmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></div>
+                  <div class="bin"><svg class="xmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></div>
+                  <div class="bin appt"><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+                </div>
               </div>
-              <!-- DECISION TO CONFIRM (jobs vs appointments): the payoff says "jobs" but the grid cells say
-                   "appointments". Intentional tension, left as written. To resolve, change "jobs" to
-                   "appointments" in the .payoff line below. Do not auto-resolve. -->
-              <p class="payoff">You're not paying for effort or promises. <strong>You're paying for jobs.</strong></p>
+              <!-- JOBS VS APPOINTMENTS (not finalized): an earlier draft considered "jobs" instead of
+                   "appointments" in the payoff for the live call dynamic. Built as "appointments" for now.
+                   To swap, change the one word in the <strong> below. Do not auto-resolve. -->
+              <p class="payoff">You're not paying for effort or promises. <strong>You're paying for booked appointments.</strong></p>
+              <p class="cmpcaption">Comparison based on contractor conversations and campaign results. Outcomes depend on market, pricing, and close rate.</p>
             </div>
           </section>
 
@@ -597,11 +628,8 @@
               <h2>Simple <span class="hl"><span class="foil"></span><span class="shine"></span>pricing.</span></h2>
               <p class="sub">You pay one flat rate for every qualified appointment we book onto your calendar. We cover the ad spend. You never pay for a raw lead, only for a booked homeowner who shows up ready for an estimate.</p>
               <div class="priceblock">
-                <div class="ptag">Per booked appointment</div>
-                <!-- PLACEHOLDER {{PRICE_PER_APPOINTMENT}}: fill in the per appointment rate. No default. -->
-                <div class="pprice"><span class="ph">{{PRICE_PER_APPOINTMENT}}</span><span class="punit">per booked appointment</span></div>
-                <!-- PLACEHOLDER {{VOLUME_NOTE}} (optional): note about volume based pricing, or delete this line. -->
-                <div class="pnote">Volume note: <span class="ph">{{VOLUME_NOTE}}</span></div>
+                <div class="ptag">How pricing works</div>
+                <div class="pclaim">One flat rate for every booked appointment.</div>
                 <ul>
                   <li>We cover the ad spend</li>
                   <li>You never pay for a raw lead</li>
