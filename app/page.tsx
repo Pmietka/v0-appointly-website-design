@@ -124,12 +124,11 @@ export default function HomePage() {
       {/* Is this for you? */}
       <section className="sec tint" id="is-this-for-you">
         <div className="wrap">
-          <h2>Is this for you?</h2>
-          <div className="grid g2">
-            <div className="qual"><span className="qc" /><span className="qt">You serve a market of wealthy, older homeowners</span></div>
-            <div className="qual"><span className="qc" /><span className="qt">You already get estimate requests, so demand exists</span></div>
-            <div className="qual"><span className="qc" /><span className="qt">You have a closer who can walk in and sell</span></div>
-            <div className="qual"><span className="qc" /><span className="qt">You have room for more appointments every month</span></div>
+          <h2>We know how to get Floor Coating Jobs. <span className="hl">Is this for you?</span></h2>
+          <div className="grid g3">
+            <div className="qual"><span className="qc" /><span className="qt">Access to a market of wealthy homeowners.</span></div>
+            <div className="qual"><span className="qc" /><span className="qt">Your team can run and close in home estimates.</span></div>
+            <div className="qual"><span className="qc" /><span className="qt">You have room for more appointments.</span></div>
           </div>
           <p className="answer">
             Then yes. You&apos;re leaving <span className="hl">jobs on the table.</span>
