@@ -47,7 +47,7 @@ html { scroll-behavior: smooth; }
 .dscroll .orb.b{width:min(70vw,520px);aspect-ratio:1;left:-16vw;bottom:-16vw}
 
 /* hero */
-.dscroll .hero .lead{margin-top:24px}
+.dscroll .hero .lead{margin-top:24px;font-size:clamp(20px,2.6vw,24px);color:var(--ink);font-weight:500}
 .dscroll .pills{display:flex;flex-wrap:wrap;gap:9px;margin-top:34px;align-items:center}
 .dscroll .pills .lbl{font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:var(--ink-4);font-weight:700;margin-right:4px}
 .dscroll .pill{font-size:clamp(12px,2.2vw,14px);font-weight:600;color:var(--ink-3);padding:7px 14px;border-radius:999px;

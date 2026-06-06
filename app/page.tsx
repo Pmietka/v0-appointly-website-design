@@ -85,7 +85,6 @@ export default function HomePage() {
       <section className="sec hero" id="top">
         <div className="orb a" />
         <div className="wrap">
-          <p className="eyebrow">For US home service contractors</p>
           <h1>
             We book {LEAD_TRADE}.{" "}
             <span className="hl">You just show up.</span>
@@ -111,8 +110,7 @@ export default function HomePage() {
       {/* Is this for you? */}
       <section className="sec tint" id="is-this-for-you">
         <div className="wrap">
-          <p className="eyebrow">Is this for you?</p>
-          <h2>We know how to get Floor Coating Jobs.</h2>
+          <h2>Is this for you?</h2>
           <div className="grid g2">
             <div className="qual"><span className="qc" /><span className="qt">You serve a market of wealthy, older homeowners</span></div>
             <div className="qual"><span className="qc" /><span className="qt">You already get estimate requests, so demand exists</span></div>
@@ -129,7 +127,6 @@ export default function HomePage() {
       <section className="sec" id="how-it-works">
         <div className="orb a" />
         <div className="wrap">
-          <p className="eyebrow">The model</p>
           <h2>
             How we get clients <span className="hl">8 new jobs</span> a month.
           </h2>
@@ -148,7 +145,6 @@ export default function HomePage() {
       {/* Proof — only real, approved testimonials render. Empty slots render nothing. */}
       <section className="sec tint" id="proof">
         <div className="wrap">
-          <p className="eyebrow">Proof</p>
           <h2>It <span className="hl">works.</span></h2>
           <div className="grid g3">
             <div className="proof">
@@ -198,7 +194,6 @@ export default function HomePage() {
       {/* The mechanism */}
       <section className="sec">
         <div className="wrap">
-          <p className="eyebrow">The mechanism</p>
           <h2>From ad to <span className="hl">booked appointment.</span></h2>
           <div className="grid g4">
             <div className="step"><div className="sn">1</div><div className="st">We launch proven ads</div><div className="sd">Creatives already proven to convert, customized with your local footage and market.</div></div>
@@ -212,7 +207,6 @@ export default function HomePage() {
       {/* Leads vs appointments */}
       <section className="sec tint">
         <div className="wrap">
-          <p className="eyebrow">Why appointments beat leads</p>
           <h2>Paying for leads is a <span className="hl">waste of money.</span></h2>
           <div className="cmp">
             <div className="cc bad">
@@ -243,7 +237,6 @@ export default function HomePage() {
       <section className="sec" id="what-you-get">
         <div className="orb b" />
         <div className="wrap">
-          <p className="eyebrow">What you&apos;re getting</p>
           <h2>A world-class acquisition team, for the <span className="hl">price of an appointment.</span></h2>
           <ul className="vlist">
             <li><span className="vn">1</span>We call every lead within 60 seconds, before they forget they clicked the ad.</li>
@@ -258,7 +251,6 @@ export default function HomePage() {
       {/* Secondary: insulation contractors (clearly subordinate to the floor coating lead) */}
       <section className="sec insul">
         <div className="wrap">
-          <p className="ieyebrow">Also for insulation contractors</p>
           <h3>Not floor coating? We book insulation appointments too.</h3>
           <p className="sub">
             Same model, same team. We run the ads, hit speed to lead, and put
