@@ -1,7 +1,21 @@
 import type { Metadata, Viewport } from "next";
+import { Fragment } from "react";
+import { Target, User, Shield, CreditCard, Clock, Lock, LineChart, CalendarCheck, Check, X } from "lucide-react";
 
 import { SiteNav, BOOKING_URL } from "@/components/site-nav";
 import "./home.css";
+
+// Comparison data drives both the desktop table and the mobile stacked cards.
+const COMPARE_COLS = ["DIY", "Marketing Agency", "Shared Leads", "Appointly"];
+const COMPARE_ROWS = [
+  { label: "Outcome", Icon: Target, kind: "text", out: true, vals: ["All on you. Hard to keep up while you work.", "Promises and meetings. Slow to show results.", "Cold leads sold to many. You do the chasing.", "Qualified appointments booked on your calendar."] },
+  { label: "Who runs it", Icon: User, kind: "text", out: false, vals: ["You", "You manage them", "You chase leads", "We run everything"] },
+  { label: "Ad spend risk", Icon: Shield, kind: "text", out: false, vals: ["On you", "On you", "On you", "On us"] },
+  { label: "What you pay for", Icon: CreditCard, kind: "text", out: false, vals: ["Your time", "Monthly fees", "Leads that flake", "Booked appointments"] },
+  { label: "Works while you're on the job", Icon: Clock, kind: "bin", out: false, vals: [false, false, false, true] },
+  { label: "Exclusive to you", Icon: Lock, kind: "bin", out: false, vals: [false, false, false, true] },
+  { label: "You only pay for results", Icon: LineChart, kind: "bin", out: false, vals: [false, false, false, true] },
+] as const;
 
 // Keep the deck-scroll theme color (viewport meta is added by Next by default).
 export const viewport: Viewport = {
@@ -249,54 +263,78 @@ export default function HomePage() {
       </section>
 
       {/* Comparison */}
-      <section className="sec tint">
+      <section className="sec tint cmpsec">
         <div className="wrap">
+          <p className="cmpeyebrow">Compare the options</p>
           <h2>Not DIY. Not an agency. <span className="hl">A partner.</span></h2>
+          <p className="cmpsub">
+            Appointly is the partner option. We front the ad spend, qualify every
+            homeowner, and book appointments straight onto your calendar. You just
+            show up and close.
+          </p>
+
+          {/* Desktop: comparison table */}
           <div className="cmptable">
-            <div className="cmpgrid">
-              <div className="ch dim" />
-              <div className="ch">DIY</div>
-              <div className="ch">Marketing Agency</div>
-              <div className="ch">Shared Leads</div>
-              <div className="ch appt">Appointly</div>
-
-              <div className="dim">Who does the work</div>
-              <div>All on you</div>
-              <div>You manage them</div>
-              <div>You chase cold leads</div>
-              <div className="appt">We run everything</div>
-
-              <div className="dim">Ad spend risk</div>
-              <div>On you</div>
-              <div>On you</div>
-              <div>On you</div>
-              <div className="appt">On us</div>
-
-              <div className="dim">What you get</div>
-              <div>Maybe</div>
-              <div>Promises</div>
-              <div>Leads sold to many</div>
-              <div className="appt">Exclusive booked appointments</div>
-
-              <div className="dim">Works while you&apos;re on the job</div>
-              <div>No</div>
-              <div>No</div>
-              <div>No</div>
-              <div className="appt">Yes</div>
-
-              <div className="dim">What you pay for</div>
-              <div>Your time</div>
-              <div>Monthly fees</div>
-              <div>Leads that flake</div>
-              <div className="appt">Booked appointments</div>
+            <div className="cmpcard">
+              <div className="cmpbar" />
+              <div className="cmpgrid">
+                <div className="ch dim" />
+                <div className="ch">DIY</div>
+                <div className="ch">Marketing Agency</div>
+                <div className="ch">Shared Leads</div>
+                <div className="ch appt"><CalendarCheck className="ci" />Appointly</div>
+                {COMPARE_ROWS.map((r) => {
+                  const RowIcon = r.Icon;
+                  return (
+                    <Fragment key={r.label}>
+                      <div className={r.out ? "dim out" : "dim"}><RowIcon className="ci" />{r.label}</div>
+                      {r.vals.map((v, ci) => {
+                        const appt = ci === 3 ? " appt" : "";
+                        if (r.kind === "bin") {
+                          return (
+                            <div key={ci} className={`bin${appt}`}>
+                              {v ? <Check className="ci chk" /> : <X className="ci xmark" />}
+                            </div>
+                          );
+                        }
+                        return <div key={ci} className={`${r.out ? "out" : ""}${appt}`.trim()}>{v}</div>;
+                      })}
+                    </Fragment>
+                  );
+                })}
+              </div>
             </div>
           </div>
+
+          {/* Mobile: stacked option cards, Appointly first and highlighted */}
+          <div className="cmpcards">
+            {[3, 0, 1, 2].map((ci) => (
+              <div key={ci} className={ci === 3 ? "optcard appt" : "optcard"}>
+                <div className="optname">{ci === 3 && <CalendarCheck className="ci" />}{COMPARE_COLS[ci]}</div>
+                {COMPARE_ROWS.map((r) => {
+                  const RowIcon = r.Icon;
+                  return (
+                    <div className="optrow" key={r.label}>
+                      <span className="ol"><RowIcon className="ci" />{r.label}</span>
+                      <span className="ov">
+                        {r.kind === "bin"
+                          ? (r.vals[ci] ? <Check className="ci chk" /> : <X className="ci xmark" />)
+                          : r.vals[ci]}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            ))}
+          </div>
+
           {/*
-            DECISION TO CONFIRM (jobs vs appointments): the payoff says "jobs" but the grid cells say
-            "appointments". Intentional tension, left as written. To resolve, change "jobs" to
-            "appointments" in the .payoff line below. Do not auto-resolve.
+            JOBS VS APPOINTMENTS (not finalized): an earlier draft considered "jobs" instead of
+            "appointments" in the payoff for the live call dynamic. Built as "appointments" for now.
+            To swap, change the one word in the <strong> below. Do not auto-resolve.
           */}
-          <p className="payoff">You&apos;re not paying for effort or promises. <strong>You&apos;re paying for jobs.</strong></p>
+          <p className="payoff">You&apos;re not paying for effort or promises. <strong>You&apos;re paying for booked appointments.</strong></p>
+          <p className="cmpcaption">Comparison based on contractor conversations and campaign results. Outcomes depend on market, pricing, and close rate.</p>
         </div>
       </section>
 
@@ -310,14 +348,8 @@ export default function HomePage() {
             booked homeowner who shows up ready for an estimate.
           </p>
           <div className="priceblock">
-            <div className="ptag">Per booked appointment</div>
-            {/* PLACEHOLDER {{PRICE_PER_APPOINTMENT}}: fill in the per appointment rate. No default. */}
-            <div className="pprice">
-              <span className="ph">{"{{PRICE_PER_APPOINTMENT}}"}</span>
-              <span className="punit">per booked appointment</span>
-            </div>
-            {/* PLACEHOLDER {{VOLUME_NOTE}} (optional): note about volume based pricing, or delete this line. */}
-            <div className="pnote">Volume note: <span className="ph">{"{{VOLUME_NOTE}}"}</span></div>
+            <div className="ptag">How pricing works</div>
+            <div className="pclaim">One flat rate for every booked appointment.</div>
             <ul>
               <li>We cover the ad spend</li>
               <li>You never pay for a raw lead</li>
