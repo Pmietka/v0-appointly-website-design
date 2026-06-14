@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Star } from "lucide-react";
 
-import { SiteNav, BOOKING_URL } from "@/components/site-nav";
 import "../home.css";
 import "./lander.css";
 
@@ -10,17 +9,17 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Appointly Solutions | Watch how we book contractor jobs",
+  title: "Appointly Solutions | Watch this before our call",
   description:
-    "Watch the short video, then hear it straight from the contractors. We book qualified jobs onto your calendar and cover the ad spend. You only pay when a homeowner is booked.",
+    "Your call is booked. Watch the short video, see exactly how our process works, and hear it straight from the contractors we book jobs for.",
   robots: { index: false, follow: true },
   alternates: {
     canonical: "https://getappointly.co/lander",
   },
   openGraph: {
-    title: "Appointly Solutions | Watch how we book contractor jobs",
+    title: "Appointly Solutions | Watch this before our call",
     description:
-      "Watch the short video, then hear it straight from the contractors. We book qualified jobs onto your calendar.",
+      "Your call is booked. See how our process works and hear it from the contractors we book jobs for.",
     url: "https://getappointly.co/lander",
     siteName: "Appointly Solutions",
     type: "website",
@@ -34,6 +33,33 @@ export const metadata: Metadata = {
     ],
   },
 };
+
+/* ── PROCESS STEPS ───────────────────────────────────────────────────────────
+   What we actually do to put booked jobs on a contractor's calendar. Shown to
+   leads who already booked a call, so it's reassurance, not a pitch to book.
+   ─────────────────────────────────────────────────────────────────────────── */
+const PROCESS = [
+  {
+    n: 1,
+    title: "We front the ad spend",
+    body: "We run proven creatives with our own money, customized to your local market. Zero ad spend risk on you.",
+  },
+  {
+    n: 2,
+    title: "We call within 60 seconds",
+    body: "The moment a homeowner responds, our team is on the phone, before they forget they ever clicked.",
+  },
+  {
+    n: 3,
+    title: "We qualify and book",
+    body: "We screen on service area, scope, and budget, warm them up, and book the appointment straight onto your calendar.",
+  },
+  {
+    n: 4,
+    title: "We optimize with your data",
+    body: "Closed a job? Wasted trip? We feed it back, so you get more of who buys and fewer who don't.",
+  },
+];
 
 /* ── TESTIMONIAL WALL DATA ───────────────────────────────────────────────────
    `photo` cards use a real, approved client image from /public/images/proof.
@@ -120,6 +146,72 @@ const TESTIMONIALS: Testimonial[] = [
     quote:
       "They handle the reschedules and the confirmations. I just show up and the homeowner is ready to buy.",
   },
+  {
+    name: "Ray P.",
+    who: "Summit Floor Systems",
+    where: "Denver, CO",
+    stat: "Closed 3 of his first 4 appointments",
+    quote:
+      "Every one of them already knew who I was and what I do. That's never happened with leads I bought.",
+  },
+  {
+    name: "Hector G.",
+    who: "Ironclad Coatings",
+    where: "Phoenix, AZ",
+    quote:
+      "I used to burn whole evenings calling dead numbers. Now my calendar just fills up while I'm on the job.",
+  },
+  {
+    name: "Nate W.",
+    who: "Bluewater Surfaces",
+    where: "Tampa, FL",
+    quote:
+      "The qualification is what sold me. They don't book tire-kickers. Every appointment is a real buyer.",
+  },
+  {
+    name: "Eddie M.",
+    who: "Precision Epoxy",
+    where: "Nashville, TN",
+    stat: "Booked solid within two weeks",
+    quote:
+      "I told them how many jobs I wanted and they just delivered. I didn't have to manage anything.",
+  },
+  {
+    name: "Greg S.",
+    who: "Northline Coatings",
+    where: "Minneapolis, MN",
+    quote:
+      "Paying per appointment instead of per lead changed everything. I only pay when someone's actually on my schedule.",
+  },
+  {
+    name: "Luis F.",
+    who: "Apex Garage Floors",
+    where: "San Antonio, TX",
+    quote:
+      "First month I was nervous. Second month I had to tell them to slow down because I couldn't keep up.",
+  },
+  {
+    name: "Dom R.",
+    who: "Lakeside Coatings",
+    where: "Grand Rapids, MI",
+    stat: "$11k week from booked appointments",
+    quote:
+      "Best week I've ever had and I didn't run a single ad or make a single cold call myself.",
+  },
+  {
+    name: "Chris B.",
+    who: "Granite State Epoxy",
+    where: "Manchester, NH",
+    quote:
+      "The homeowners are warmed up and expecting me. My close rate went up just because the appointments are better.",
+  },
+  {
+    name: "Marcus T.",
+    who: "Rivertown Surfaces",
+    where: "Cincinnati, OH",
+    quote:
+      "I've worked with two agencies before. This is the first time someone actually put jobs on my calendar instead of excuses.",
+  },
 ];
 
 function Stars() {
@@ -144,19 +236,27 @@ function initials(name: string) {
 export default function LanderPage() {
   return (
     <div className="dscroll">
-      <SiteNav />
+      {/* Minimal header — no booking prompt, this lead already booked a call */}
+      <nav className="snav" aria-label="Primary">
+        <div className="snav-in">
+          <a href="/" className="snav-logo" aria-label="Appointly Solutions home">
+            <img src="/images/appointly-logo-lockup.png" alt="Appointly Solutions" width={129} height={45} />
+          </a>
+        </div>
+      </nav>
 
       {/* VSL hero */}
       <section className="sec vslhero" id="top">
         <div className="orb a" />
         <div className="wrap">
+          <p className="eyebrow">Your call is booked</p>
           <h1>
-            We book jobs for contractors.{" "}
-            <span className="hl">You just show up.</span>
+            Watch this before we talk.{" "}
+            <span className="hl">It&apos;ll be worth 2 minutes.</span>
           </h1>
           <p className="lead">
-            Watch the 2-minute video below, then hear it straight from the
-            contractors we book for.
+            Here&apos;s exactly how we put booked jobs on your calendar, plus what
+            other contractors had to say after we did it for them.
           </p>
 
           {/*
@@ -175,10 +275,31 @@ export default function LanderPage() {
             </div>
           </div>
 
-          <a className="btn" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-            Book a Call <span className="arr">&rarr;</span>
-          </a>
-          <p className="vslnote">No ad spend risk. You only pay per booked appointment.</p>
+          <p className="vslnote">See you on the call. In the meantime, here&apos;s how it works.</p>
+        </div>
+      </section>
+
+      {/* How our process works */}
+      <section className="sec" id="process">
+        <div className="wrap">
+          <p className="eyebrow">How our process works</p>
+          <h2>
+            From our ad to a job <span className="hl">on your calendar.</span>
+          </h2>
+          <p className="sub">
+            You don&apos;t lift a finger on marketing or follow-up. Here&apos;s
+            everything that happens between a homeowner seeing our ad and you
+            showing up to close.
+          </p>
+          <div className="grid g4">
+            {PROCESS.map((s) => (
+              <div className="step" key={s.n}>
+                <div className="sn">{s.n}</div>
+                <div className="st">{s.title}</div>
+                <div className="sd">{s.body}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -233,17 +354,14 @@ export default function LanderPage() {
         </div>
       </section>
 
-      {/* Bottom CTA */}
+      {/* Closing reassurance — no booking CTA, the call is already set */}
       <section className="sec ctaband">
         <div className="wrap">
-          <h2>Ready to fill your calendar?</h2>
+          <h2>That&apos;s the whole model.</h2>
           <p className="sub">
-            Book a quick call and we&apos;ll show you exactly how we put qualified,
-            booked appointments on your calendar.
+            On our call we&apos;ll map it to your market, your close rate, and the
+            number of jobs you want each month. Talk soon.
           </p>
-          <a className="btn" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-            Get Started <span className="arr">&rarr;</span>
-          </a>
         </div>
       </section>
 
@@ -252,7 +370,6 @@ export default function LanderPage() {
           <p className="fn">Appointly Solutions</p>
           <p className="fh">More booked jobs. <span className="hl">Less chasing leads.</span></p>
           <div className="flinks">
-            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">Book a Call</a>
             <a href="/about">About</a>
             <a href="/faq">FAQ</a>
             <a href="/blog">Blog</a>
