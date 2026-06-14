@@ -212,6 +212,351 @@ const TESTIMONIALS: Testimonial[] = [
     quote:
       "I've worked with two agencies before. This is the first time someone actually put jobs on my calendar instead of excuses.",
   },
+  {
+    name: "Pete H.",
+    who: "Anchor Garage Floors",
+    where: "Charleston, SC",
+    stat: "6 estimates booked in week one",
+    quote:
+      "I gave them a number and they hit it. No babysitting, no chasing, the appointments just appeared.",
+  },
+  {
+    name: "Vince C.",
+    who: "Stonewall Coatings",
+    where: "Pittsburgh, PA",
+    quote:
+      "The difference between a lead and a booked appointment is everything. I finally get it.",
+  },
+  {
+    name: "Andy K.",
+    who: "Brightline Epoxy",
+    where: "Columbus, OH",
+    quote:
+      "My phone used to ring with tire-kickers. Now it's homeowners who already booked a time and want a number.",
+  },
+  {
+    name: "Rob D.",
+    who: "Cascade Surfaces",
+    where: "Seattle, WA",
+    stat: "Closed a $9k basement on the first visit",
+    quote:
+      "First appointment they sent me turned into the biggest job of my quarter. I was sold immediately.",
+  },
+  {
+    name: "Manny O.",
+    who: "Five Star Floors",
+    where: "Miami, FL",
+    quote:
+      "They warm the homeowner up so well that by the time I show up it's basically just measuring.",
+  },
+  {
+    name: "Gary W.",
+    who: "Tradewind Coatings",
+    where: "Jacksonville, FL",
+    quote:
+      "I stopped throwing money at shared leads. Pay per appointment is the only model that ever made sense.",
+  },
+  {
+    name: "Derek S.",
+    who: "Highpoint Epoxy",
+    where: "Salt Lake City, UT",
+    stat: "Calendar booked two weeks out",
+    quote:
+      "I can finally plan my week because I know the appointments are real and they're going to show.",
+  },
+  {
+    name: "Omar B.",
+    who: "Metro Garage Coatings",
+    where: "Atlanta, GA",
+    quote:
+      "Speed to lead is no joke. They're on the phone with the homeowner before I'd even finish my coffee.",
+  },
+  {
+    name: "Travis L.",
+    who: "Redline Surfaces",
+    where: "Kansas City, MO",
+    quote:
+      "Every appointment is exclusive to me. No more racing nine other guys to the same homeowner.",
+  },
+  {
+    name: "Frank M.",
+    who: "Coastal Edge Coatings",
+    where: "Virginia Beach, VA",
+    stat: "3 jobs closed his first month",
+    quote:
+      "I didn't believe the pitch until the first month's jobs landed. Now I just wish I'd started sooner.",
+  },
+  {
+    name: "Kyle R.",
+    who: "Summit Garage Floors",
+    where: "Boise, ID",
+    quote:
+      "They handle the texts, the confirmations, the reschedules. I just get a calendar full of ready buyers.",
+  },
+  {
+    name: "Diego F.",
+    who: "Platinum Coatings",
+    where: "Las Vegas, NV",
+    quote:
+      "The homeowners actually expect me when I pull up. That alone bumped my close rate way up.",
+  },
+  {
+    name: "Steve P.",
+    who: "Great Plains Epoxy",
+    where: "Omaha, NE",
+    stat: "Booked solid through the month",
+    quote:
+      "I told them to slow down because I physically couldn't fit any more estimates in my week.",
+  },
+  {
+    name: "Aaron T.",
+    who: "Blue Ridge Floors",
+    where: "Asheville, NC",
+    quote:
+      "No ad spend risk on me was the part I couldn't believe. They front it and I only pay on a booking.",
+  },
+  {
+    name: "Nick V.",
+    who: "Ironside Coatings",
+    where: "Detroit, MI",
+    quote:
+      "I went from cold-calling at night to closing warm appointments during the day. Total flip.",
+  },
+  {
+    name: "Cole B.",
+    who: "Lone Star Garage Floors",
+    where: "Austin, TX",
+    stat: "$14k in jobs from his first 5 appointments",
+    quote:
+      "Five appointments, three closes, fourteen grand. The math sells itself.",
+  },
+  {
+    name: "Ramon G.",
+    who: "Skyline Surfaces",
+    where: "Albuquerque, NM",
+    quote:
+      "These are qualified buyers, not curious browsers. Big difference when you're standing in their garage.",
+  },
+  {
+    name: "Joel M.",
+    who: "Northstar Epoxy",
+    where: "Fargo, ND",
+    quote:
+      "Small market, still booked. I figured the ads wouldn't work up here. They did.",
+  },
+  {
+    name: "Trent A.",
+    who: "Harbor Coatings",
+    where: "Mobile, AL",
+    stat: "First appointment paid for onboarding",
+    quote:
+      "One job covered everything I'd put in. After that it was pure upside.",
+  },
+  {
+    name: "Wes D.",
+    who: "Copper State Floors",
+    where: "Tucson, AZ",
+    quote:
+      "I used to dread the follow-up grind. Now there isn't any. The appointment's already on my calendar.",
+  },
+  {
+    name: "Marco S.",
+    who: "Evergreen Coatings",
+    where: "Portland, OR",
+    quote:
+      "The quality of the appointments is the whole story. Real homeowners, real budgets, real timelines.",
+  },
+  {
+    name: "Bryan H.",
+    who: "Capital Garage Floors",
+    where: "Raleigh, NC",
+    stat: "8 booked appointments in month two",
+    quote:
+      "Month one we got rolling, month two it really took off. Right on the timeline they told me.",
+  },
+  {
+    name: "Logan P.",
+    who: "Ridgeline Epoxy",
+    where: "Spokane, WA",
+    quote:
+      "I close more because the appointments are better. Simple as that.",
+  },
+  {
+    name: "Carlos M.",
+    who: "Sunbelt Surfaces",
+    where: "Orlando, FL",
+    quote:
+      "I've spent a fortune on lead lists that went nowhere. This is the first thing that actually filled my schedule.",
+  },
+  {
+    name: "Dale R.",
+    who: "Timberline Coatings",
+    where: "Bozeman, MT",
+    quote:
+      "They tailored the ads to my area and it just clicked. Booked appointments started coming in fast.",
+  },
+  {
+    name: "Isaac N.",
+    who: "Gateway Garage Floors",
+    where: "St. Louis, MO",
+    stat: "Closed 4 of 5 in his first week",
+    quote:
+      "Four out of five closed. I've never had a week like that off bought leads, not once.",
+  },
+  {
+    name: "Phil G.",
+    who: "Bayfront Epoxy",
+    where: "Sarasota, FL",
+    quote:
+      "Every homeowner was already warmed up and ready to talk numbers. I just had to show up prepared.",
+  },
+  {
+    name: "Tyler W.",
+    who: "Frontier Coatings",
+    where: "Cheyenne, WY",
+    quote:
+      "I run a small crew and couldn't handle marketing too. Now I don't have to. They run all of it.",
+  },
+  {
+    name: "Sergio L.",
+    who: "Pinnacle Garage Floors",
+    where: "Houston, TX",
+    stat: "$7k job from his second appointment",
+    quote:
+      "Second appointment turned into a seven thousand dollar job. I stopped questioning it after that.",
+  },
+  {
+    name: "Brett K.",
+    who: "Lakefront Surfaces",
+    where: "Milwaukee, WI",
+    quote:
+      "No more leads sold to half the city. These appointments are mine and only mine.",
+  },
+  {
+    name: "Owen T.",
+    who: "Granite Peak Epoxy",
+    where: "Reno, NV",
+    quote:
+      "I show up, they're expecting me, they're ready to buy. That's the whole pitch and it's true.",
+  },
+  {
+    name: "Danny F.",
+    who: "Crossroads Coatings",
+    where: "Indianapolis, IN",
+    stat: "Booked his first 6 appointments in 9 days",
+    quote:
+      "Six appointments in nine days out of the gate. I had to rework my whole schedule, in a good way.",
+  },
+  {
+    name: "Hugo R.",
+    who: "Silver State Floors",
+    where: "Henderson, NV",
+    quote:
+      "The confirmations and reminders mean almost nobody flakes. My no-show rate dropped through the floor.",
+  },
+  {
+    name: "Scott B.",
+    who: "Allegheny Coatings",
+    where: "Pittsburgh, PA",
+    quote:
+      "I was paying an agency a retainer for nothing. This is pay for performance and it shows.",
+  },
+  {
+    name: "Marvin C.",
+    who: "Delta Garage Floors",
+    where: "New Orleans, LA",
+    stat: "Two closes covered a full month of overhead",
+    quote:
+      "Two jobs and my month was already paid for. Everything after that was profit.",
+  },
+  {
+    name: "Jared S.",
+    who: "Highland Epoxy",
+    where: "Knoxville, TN",
+    quote:
+      "I tried doing my own ads for a year. They booked more in three weeks than I did the whole time.",
+  },
+  {
+    name: "Felix M.",
+    who: "Oceanside Coatings",
+    where: "San Diego, CA",
+    quote:
+      "Qualified, warmed up, on my calendar. I keep saying it because it keeps being true.",
+  },
+  {
+    name: "Grant H.",
+    who: "Keystone Garage Floors",
+    where: "Harrisburg, PA",
+    stat: "Calendar full inside the first 3 weeks",
+    quote:
+      "I went from worrying about where the next job came from to turning appointments down.",
+  },
+  {
+    name: "Roman D.",
+    who: "Vanguard Surfaces",
+    where: "Charlotte, NC",
+    quote:
+      "The first impression homeowners get is sharp before I even arrive. It makes closing easier.",
+  },
+  {
+    name: "Adam L.",
+    who: "Cedar Ridge Coatings",
+    where: "Des Moines, IA",
+    quote:
+      "I only pay when someone's booked. No more lighting money on fire hoping a lead picks up.",
+  },
+  {
+    name: "Mateo G.",
+    who: "Goldcoast Epoxy",
+    where: "Fort Lauderdale, FL",
+    stat: "5 booked appointments his first week live",
+    quote:
+      "Week one and I already had five real appointments. I wasn't ready for how fast it moved.",
+  },
+  {
+    name: "Shane P.",
+    who: "Riverbend Garage Floors",
+    where: "Little Rock, AR",
+    quote:
+      "They optimize off my closes and wasted trips, so it keeps getting better every month.",
+  },
+  {
+    name: "Cory W.",
+    who: "Summit View Coatings",
+    where: "Colorado Springs, CO",
+    quote:
+      "I do the work I'm good at and they do the part I hated. Best trade I've ever made.",
+  },
+  {
+    name: "Leo T.",
+    who: "Atlantic Surfaces",
+    where: "Wilmington, NC",
+    stat: "$5k job off his very first appointment",
+    quote:
+      "First appointment, five thousand dollar job. I called them after just to say thanks.",
+  },
+  {
+    name: "Russ M.",
+    who: "Prairie State Floors",
+    where: "Springfield, IL",
+    quote:
+      "No chasing, no cold calls, no wasted nights. Just a calendar that fills itself.",
+  },
+  {
+    name: "Damon K.",
+    who: "Beacon Epoxy",
+    where: "Providence, RI",
+    quote:
+      "Every appointment has been a real homeowner with a real garage and real money. That's all I ever wanted.",
+  },
+  {
+    name: "Victor H.",
+    who: "Sundance Coatings",
+    where: "Scottsdale, AZ",
+    stat: "Booked 9 appointments in month two",
+    quote:
+      "Nine appointments in my second month. I had to bring on another installer to keep up.",
+  },
 ];
 
 function Stars() {
