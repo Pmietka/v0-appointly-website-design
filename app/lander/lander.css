@@ -1,0 +1,73 @@
+/* ============================================================================
+   /lander page styles. Builds on the shared .dscroll design system (imported
+   from ../home.css) and adds two things this page needs:
+     1. A VSL (video sales letter) hero slot.
+     2. A dense "wall of testimonials" you get bombarded by as you scroll.
+   Everything stays scoped under .dscroll so it cannot leak into the Tailwind
+   side of the site.
+   ============================================================================ */
+
+/* ── VSL hero ─────────────────────────────────────────────────────────────── */
+.dscroll .vslhero{padding:clamp(40px,8vw,80px) 0 clamp(48px,9vw,96px)}
+.dscroll .vslhero .wrap{display:flex;flex-direction:column;align-items:center;text-align:center}
+.dscroll .vslhero h1{max-width:14ch}
+.dscroll .vslhero .lead{margin-left:auto;margin-right:auto;text-align:center}
+
+/* the video frame — responsive 16:9 box. Drop any embed (YouTube, Wistia,
+   Vimeo, <video>) inside .vslframe and it will fill the box. */
+.dscroll .vslframe{position:relative;width:100%;max-width:880px;aspect-ratio:16/9;margin:clamp(28px,5vw,44px) auto 0;
+  border-radius:20px;overflow:hidden;background:#0c0c0c;border:1px solid var(--line);
+  box-shadow:0 30px 70px -30px rgba(0,0,0,.5)}
+.dscroll .vslframe iframe,.dscroll .vslframe video,.dscroll .vslframe > div{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* placeholder shown until a real embed is dropped in */
+.dscroll .vslplaceholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;
+  color:#fff;cursor:pointer;
+  background:radial-gradient(120% 120% at 50% 0%,#1f2937 0%,#0c0c0c 60%)}
+.dscroll .vslplaceholder .play{width:84px;height:84px;border-radius:999px;display:grid;place-items:center;
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(6px);
+  transition:transform .15s,background .15s}
+.dscroll .vslplaceholder:hover .play{transform:scale(1.06);background:rgba(255,255,255,.18)}
+.dscroll .vslplaceholder .play::after{content:"";margin-left:6px;width:0;height:0;
+  border-left:26px solid #fff;border-top:16px solid transparent;border-bottom:16px solid transparent}
+.dscroll .vslplaceholder .vlabel{font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+
+.dscroll .vslhero .btn{margin-top:clamp(28px,5vw,40px)}
+.dscroll .vslnote{font-size:13px;color:var(--ink-4);margin-top:14px}
+
+/* ── testimonial wall ─────────────────────────────────────────────────────── */
+.dscroll .wallhead{text-align:center}
+.dscroll .wallhead .wallsub{font-size:clamp(16px,2.3vw,21px);color:var(--ink-3);line-height:1.5;max-width:680px;margin:18px auto 0}
+
+/* masonry-style columns so cards of different heights pack tightly — the
+   "bombarded" feeling. Falls back to a single column on small screens. */
+.dscroll .wall{margin-top:clamp(30px,5vw,46px);column-gap:clamp(14px,2.5vw,18px);column-count:1}
+@media(min-width:680px){.dscroll .wall{column-count:2}}
+@media(min-width:980px){.dscroll .wall{column-count:3}}
+
+.dscroll .tcard{break-inside:avoid;-webkit-column-break-inside:avoid;margin-bottom:clamp(14px,2.5vw,18px);
+  background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(20px,3.5vw,26px);
+  box-shadow:0 14px 36px -26px rgba(0,0,0,.24);display:flex;flex-direction:column;gap:14px}
+
+/* photo testimonial card */
+.dscroll .tcard .tphoto{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;background:#f0f0f0;
+  border-radius:12px;margin:-2px 0 4px}
+
+.dscroll .tcard .stars{display:flex;gap:3px;color:#f59e0b}
+.dscroll .tcard .stars .ci{width:18px;height:18px;fill:#f59e0b}
+.dscroll .tcard .tquote{font-size:clamp(15px,2.1vw,17px);line-height:1.55;color:var(--ink)}
+.dscroll .tcard .tquote .mk{background:linear-gradient(180deg,transparent 60%,#cffbef 60%);padding:0 2px}
+.dscroll .tcard .tmeta{display:flex;align-items:center;gap:12px;margin-top:2px}
+.dscroll .tcard .tavatar{width:44px;height:44px;border-radius:999px;flex-shrink:0;object-fit:cover;
+  display:grid;place-items:center;font-weight:700;color:#0f3d2e;font-size:16px;
+  background:linear-gradient(135deg,#cfffae,#ace5ff)}
+.dscroll .tcard .tname{font-size:15px;font-weight:700;letter-spacing:-.01em;line-height:1.2}
+.dscroll .tcard .twho{font-size:13px;color:var(--ink-4);margin-top:2px}
+.dscroll .tcard .tstat{font-size:13.5px;font-weight:600;color:#0f766e;background:#ecfdf5;border-radius:8px;
+  padding:7px 11px;align-self:flex-start}
+
+/* little stat strip above the wall */
+.dscroll .wallstats{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(20px,5vw,56px);margin-top:clamp(26px,4vw,36px)}
+.dscroll .wallstats .ws{display:flex;flex-direction:column;align-items:center;gap:4px}
+.dscroll .wallstats .wsv{font-size:clamp(30px,5vw,46px);font-weight:700;letter-spacing:-.03em;line-height:1}
+.dscroll .wallstats .wsl{font-size:13px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
