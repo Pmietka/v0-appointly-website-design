@@ -1,8 +1,18 @@
 import type { Metadata, Viewport } from "next";
-import { Star } from "lucide-react";
+import { Fragment } from "react";
+import {
+  Star, Plus, CalendarCheck, Check, X, ImageIcon,
+  Target, User, Shield, CreditCard, Clock, Lock, LineChart,
+} from "lucide-react";
 
 import "../home.css";
 import "./lander.css";
+
+/* Per-lead booking details are injected by the funnel at send time. Swap these
+   placeholders for the real scheduled time and the homeowner's add-to-calendar
+   / manage-booking link (or template tokens like {{CALL_TIME}}). */
+const CALL_TIME = "your scheduled time";
+const CALENDAR_URL = "https://client.getappointly.co/strategy-calendar";
 
 export const viewport: Viewport = {
   themeColor: "#fafafa",
@@ -58,6 +68,49 @@ const PROCESS = [
     n: 4,
     title: "We optimize with your data",
     body: "Closed a job? Wasted trip? We feed it back, so you get more of who buys and fewer who don't.",
+  },
+];
+
+/* ── COMPARISON (reused from the homepage so the two pages stay consistent) ──
+   Why us vs a lead company. Same rows the cold page uses; rendered as a desktop
+   table and mobile stacked cards.
+   ─────────────────────────────────────────────────────────────────────────── */
+const COMPARE_COLS = ["DIY", "Marketing Agency", "Shared Leads", "Appointly"];
+const COMPARE_ROWS = [
+  { label: "Outcome", Icon: Target, kind: "text", out: true, vals: ["All on you. Hard to keep up while you work.", "Promises and meetings. Slow to show results.", "Cold leads sold to many. You do the chasing.", "Qualified appointments booked on your calendar."] },
+  { label: "Who runs it", Icon: User, kind: "text", out: false, vals: ["You", "You manage them", "You chase leads", "We run everything"] },
+  { label: "Ad spend risk", Icon: Shield, kind: "text", out: false, vals: ["On you", "On you", "On you", "On us"] },
+  { label: "What you pay for", Icon: CreditCard, kind: "text", out: false, vals: ["Your time", "Monthly fees", "Leads that flake", "Booked appointments"] },
+  { label: "Works while you're on the job", Icon: Clock, kind: "bin", out: false, vals: [false, false, false, true] },
+  { label: "Exclusive to you", Icon: Lock, kind: "bin", out: false, vals: [false, false, false, true] },
+  { label: "You only pay for results", Icon: LineChart, kind: "bin", out: false, vals: [false, false, false, true] },
+] as const;
+
+/* ── FAQ (pulled from /faq — the questions that eat call time) ─────────────── */
+const FAQ = [
+  {
+    q: "How does the pricing work?",
+    a: "Two parts. A retainer covers our labor running the system, and on top of that you pay a per-appointment fee for each booked estimate that lands on your calendar. We front the ad spend ourselves.",
+  },
+  {
+    q: "What counts as a booked appointment?",
+    a: "A verified homeowner in your service area who wants floor coating work and has agreed to an estimate time that fits your calendar. Not a raw lead or a form fill — an actual booked estimate.",
+  },
+  {
+    q: "What if an appointment doesn't close?",
+    a: "Not every estimate closes, and that's normal. We feed your close and no-show data back into targeting so the homeowners we book keep getting more qualified over time.",
+  },
+  {
+    q: "Are my appointments exclusive?",
+    a: "Yes. We only work with one contractor per market. The estimates we book are never shared with a local competitor.",
+  },
+  {
+    q: "Is there a long-term contract?",
+    a: "No long-term lock-in. You can cancel anytime; we just ask for a short notice period so campaigns can be wound down cleanly.",
+  },
+  {
+    q: "What areas and trades do you cover?",
+    a: "Small-to-mid-sized markets across the US and Canada where contractors have room to grow. Our main focus right now is floor coating and epoxy contractors.",
   },
 ];
 
@@ -578,7 +631,32 @@ function initials(name: string) {
     .toUpperCase();
 }
 
+/* Inline featured testimonial — proof parked next to the claim it backs up. */
+function FeaturedQuote({ t }: { t: Testimonial }) {
+  return (
+    <figure className="fquote">
+      <Stars />
+      <blockquote className="fq">&ldquo;{t.quote}&rdquo;</blockquote>
+      <figcaption className="fattr">
+        {t.photo ? (
+          <img className="favatar" src={t.photo} alt="" width={42} height={42} loading="lazy" />
+        ) : (
+          <span className="favatar" aria-hidden>{initials(t.name)}</span>
+        )}
+        <span className="fwho">
+          <strong>{t.name}</strong> &middot; {t.who} &middot; {t.where}
+        </span>
+      </figcaption>
+    </figure>
+  );
+}
+
 export default function LanderPage() {
+  // Strongest testimonials pulled out to sit beside specific claims.
+  const tAndre = TESTIMONIALS[1]; // showed up and closed
+  const tBrian = TESTIMONIALS[6]; // no more shared leads
+  const tNate = TESTIMONIALS[11]; // they don't book tire-kickers
+
   return (
     <div className="dscroll">
       {/* Minimal header — no booking prompt, this lead already booked a call */}
@@ -590,22 +668,23 @@ export default function LanderPage() {
         </div>
       </nav>
 
-      {/* VSL hero */}
+      {/* 1 · Hero — affirm the decision, point at the video */}
       <section className="sec vslhero" id="top">
         <div className="orb a" />
         <div className="wrap">
           <p className="eyebrow">Your call is booked</p>
           <h1>
-            Watch this before we talk.{" "}
-            <span className="hl">It&apos;ll be worth 2 minutes.</span>
+            You just did what most contractors{" "}
+            <span className="hl">talk themselves out of.</span>
           </h1>
           <p className="lead">
-            Here&apos;s exactly how we put booked jobs on your calendar, plus what
-            other contractors had to say after we did it for them.
+            Take three minutes before we talk. See who we are, how we fill your
+            calendar, and the contractors already living it. Show up ready to
+            decide, not to ask questions.
           </p>
 
           {/*
-            VSL EMBED SLOT — drop your video here.
+            2 · VSL EMBED SLOT — drop your video here (opens with Mark's cold open).
             Replace the .vslplaceholder block below with one of:
               <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="VSL"
                 allow="autoplay; fullscreen; picture-in-picture" allowFullScreen />
@@ -620,19 +699,86 @@ export default function LanderPage() {
             </div>
           </div>
 
-          <p className="vslnote">See you on the call. In the meantime, here&apos;s how it works.</p>
+          <p className="vslnote">Prefer to read? Everything in the video is on this page too — just scroll.</p>
         </div>
       </section>
 
-      {/* How our process works */}
-      <section className="sec" id="process">
+      {/* 3 · Proof bar — instant legitimacy for people who scrolled past the video */}
+      <section className="sec proofbar" id="proof-bar">
         <div className="wrap">
-          <p className="eyebrow">How our process works</p>
+          {/*
+            PLACEHOLDER NUMBERS — confirm the real figures before sending. These
+            should be aggregate, defensible, and easy to back up on the call.
+          */}
+          <div className="pbnums">
+            <div className="pbnum"><span className="pbv">30+</span><span className="pbl">Contractors booked</span></div>
+            <div className="pbnum"><span className="pbv">1,200+</span><span className="pbl">Appointments booked</span></div>
+            <div className="pbnum"><span className="pbv">18</span><span className="pbl">States &amp; provinces</span></div>
+            <div className="pbnum"><span className="pbv">8 / mo</span><span className="pbl">Avg jobs, month two</span></div>
+          </div>
+          <div className="pbfaces" aria-hidden>
+            <img className="pbface" src="/images/proof/mark-afab.webp" alt="" width={54} height={54} loading="lazy" />
+            <img className="pbface" src="/images/proof/andre.webp" alt="" width={54} height={54} loading="lazy" />
+            <img className="pbface" src="/images/proof/carlos-team.webp" alt="" width={54} height={54} loading="lazy" />
+            <span className="pbmore">+27</span>
+          </div>
+          <p className="pbcap">Real floor coating contractors, real booked estimates.</p>
+        </div>
+      </section>
+
+      {/* 4 · Who you're actually talking to */}
+      <section className="sec" id="founders">
+        <div className="wrap">
+          <p className="eyebrow">First, who you&apos;re actually talking to</p>
           <h2>
-            From our ad to a job <span className="hl">on your calendar.</span>
+            Two brothers from Chicago, <span className="hl">not a faceless agency.</span>
           </h2>
           <p className="sub">
-            You don&apos;t lift a finger on marketing or follow-up. Here&apos;s
+            We built Appointly out of frustration with agencies that charge big
+            retainers and deliver nothing. So we tied most of your spend to booked
+            estimates you can actually show up to and close.
+          </p>
+          {/*
+            FOUNDER PHOTOS — drop real headshots at /images/team/patrick.webp and
+            /images/team/jacob.webp, then swap the initials span for an <img
+            className="fphoto" ... />. Real faces beat stock photos every time.
+          */}
+          <div className="founders">
+            <article className="founder">
+              <span className="fphoto" aria-hidden>P</span>
+              <div>
+                <div className="fname">Patrick Mietka</div>
+                <div className="frole">Co-founder</div>
+                <p className="fbio">
+                  Runs the campaigns and the numbers. The person making sure the ad
+                  spend we front turns into estimates on your calendar.
+                </p>
+              </div>
+            </article>
+            <article className="founder">
+              <span className="fphoto" aria-hidden>J</span>
+              <div>
+                <div className="fname">Jacob Mietka</div>
+                <div className="frole">Co-founder</div>
+                <p className="fbio">
+                  Leads the speed-to-lead and booking side. He&apos;ll likely be the
+                  one you talk to about your market and your numbers.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* 5 · How your calendar gets filled */}
+      <section className="sec tint" id="process">
+        <div className="wrap">
+          <p className="eyebrow">How it works</p>
+          <h2>
+            Here&apos;s exactly how your calendar <span className="hl">gets filled.</span>
+          </h2>
+          <p className="sub">
+            You don&apos;t lift a finger on marketing or follow-up. This is
             everything that happens between a homeowner seeing our ad and you
             showing up to close.
           </p>
@@ -645,27 +791,137 @@ export default function LanderPage() {
               </div>
             ))}
           </div>
+
+          {/* Proof in context: a real booked calendar beats any claim. */}
+          <div className="shotrow">
+            <figure className="shotfig">
+              {/* Replace with <div className="shot"><img src="/images/proof/booked-calendar.png" alt="A week of booked floor coating estimates" /></div> */}
+              <div className="shot ph">
+                <ImageIcon className="shicon" aria-hidden />
+                <span className="shlabel">Screenshot: a real booked calendar</span>
+              </div>
+              <figcaption>A week of estimates we booked straight onto a client&apos;s calendar.</figcaption>
+            </figure>
+          </div>
+
+          <FeaturedQuote t={tAndre} />
         </div>
       </section>
 
-      {/* Testimonial wall — you get bombarded as you scroll */}
-      <section className="sec tint" id="proof">
+      {/* 6 · What a qualified appointment means */}
+      <section className="sec" id="quality">
+        <div className="wrap">
+          <p className="eyebrow">What you&apos;re actually getting</p>
+          <h2>
+            What a <span className="hl">qualified appointment</span> means.
+          </h2>
+          <p className="sub">
+            We don&apos;t book junk to hit a number. A qualified appointment is a
+            verified homeowner in your service area who wants the work, fits your
+            scope and budget, and has agreed to an estimate time that fits your
+            calendar. If it&apos;s not all of that, we don&apos;t book it.
+          </p>
+          <div className="shotrow two">
+            <figure className="shotfig">
+              {/* Replace with <div className="shot"><img src="/images/proof/text-thread.png" alt="Speed-to-lead text exchange with a homeowner" /></div> */}
+              <div className="shot ph">
+                <ImageIcon className="shicon" aria-hidden />
+                <span className="shlabel">Screenshot: a real homeowner text exchange</span>
+              </div>
+              <figcaption>How we reach and qualify a homeowner within 60 seconds of them raising their hand.</figcaption>
+            </figure>
+            <FeaturedQuote t={tNate} />
+          </div>
+        </div>
+      </section>
+
+      {/* 7 · Why us over a lead company (reuses the homepage comparison) */}
+      <section className="sec tint cmpsec" id="why-us">
+        <div className="wrap">
+          <p className="cmpeyebrow">Compare the options</p>
+          <h2>Why contractors pick us <span className="hl">over a lead company.</span></h2>
+          <p className="cmpsub">
+            We front the ad spend, qualify every homeowner, and book appointments
+            straight onto your calendar. You just show up and close.
+          </p>
+
+          {/* Desktop: comparison table */}
+          <div className="cmptable">
+            <div className="cmpcard">
+              <div className="cmpbar" />
+              <div className="cmpgrid">
+                <div className="ch dim" />
+                <div className="ch">DIY</div>
+                <div className="ch">Marketing Agency</div>
+                <div className="ch">Shared Leads</div>
+                <div className="ch appt"><CalendarCheck className="ci" />Appointly</div>
+                {COMPARE_ROWS.map((r) => {
+                  const RowIcon = r.Icon;
+                  return (
+                    <Fragment key={r.label}>
+                      <div className={r.out ? "dim out" : "dim"}><RowIcon className="ci" />{r.label}</div>
+                      {r.vals.map((v, ci) => {
+                        const appt = ci === 3 ? " appt" : "";
+                        if (r.kind === "bin") {
+                          return (
+                            <div key={ci} className={`bin${appt}`}>
+                              {v ? <Check className="ci chk" /> : <X className="ci xmark" />}
+                            </div>
+                          );
+                        }
+                        return <div key={ci} className={`${r.out ? "out" : ""}${appt}`.trim()}>{v}</div>;
+                      })}
+                    </Fragment>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile: stacked option cards, Appointly first and highlighted */}
+          <div className="cmpcards">
+            {[3, 0, 1, 2].map((ci) => (
+              <div key={ci} className={ci === 3 ? "optcard appt" : "optcard"}>
+                <div className="optname">{ci === 3 && <CalendarCheck className="ci" />}{COMPARE_COLS[ci]}</div>
+                {COMPARE_ROWS.map((r) => {
+                  const RowIcon = r.Icon;
+                  return (
+                    <div className="optrow" key={r.label}>
+                      <span className="ol"><RowIcon className="ci" />{r.label}</span>
+                      <span className="ov">
+                        {r.kind === "bin"
+                          ? (r.vals[ci] ? <Check className="ci chk" /> : <X className="ci xmark" />)
+                          : r.vals[ci]}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            ))}
+          </div>
+
+          <div className="cmpquote"><FeaturedQuote t={tBrian} /></div>
+        </div>
+      </section>
+
+      {/* 8 · The wall of proof — for the people who want to binge evidence */}
+      <section className="sec" id="wall">
         <div className="wrap wallhead">
           <h2>
-            Don&apos;t take our word for it. <span className="hl">Take theirs.</span>
+            Still want proof? <span className="hl">We&apos;ve got more than you&apos;ll watch.</span>
           </h2>
           <p className="wallsub">
-            Real contractors, real booked jobs. This is what happens when you stop
-            chasing leads and start showing up to appointments.
+            Real contractors, real booked jobs, from markets all over the country.
+            Read as many as you want.
           </p>
-          <div className="wallstats">
-            <div className="ws"><span className="wsv">8 jobs</span><span className="wsl">Avg / mo, month two</span></div>
-            <div className="ws"><span className="wsv">60 sec</span><span className="wsl">Speed to lead</span></div>
-            <div className="ws"><span className="wsv">$0</span><span className="wsl">Ad spend risk</span></div>
-          </div>
         </div>
 
         <div className="wrap">
+          {/*
+            To add video testimonials to the wall, drop extra <figure className="tcard">
+            cards here with a <video>/<iframe> on top instead of the photo — the
+            masonry grid packs them in with the text cards automatically.
+          */}
           <div className="wall">
             {TESTIMONIALS.map((t, i) => (
               <figure className="tcard" key={i}>
@@ -699,13 +955,48 @@ export default function LanderPage() {
         </div>
       </section>
 
-      {/* Closing reassurance — no booking CTA, the call is already set */}
-      <section className="sec ctaband">
+      {/* 9 · FAQ — the questions that usually eat call time */}
+      <section className="sec tint" id="faq">
+        <div className="wrap wallhead">
+          <p className="eyebrow">Before we talk</p>
+          <h2>Questions you might be <span className="hl">sitting on.</span></h2>
+        </div>
         <div className="wrap">
-          <h2>That&apos;s the whole model.</h2>
-          <p className="sub">
-            On our call we&apos;ll map it to your market, your close rate, and the
-            number of jobs you want each month. Talk soon.
+          <div className="faqlist">
+            {FAQ.map((f) => (
+              <details className="faqitem" key={f.q}>
+                <summary>
+                  {f.q}
+                  <span className="fqi" aria-hidden><Plus className="h-4 w-4" /></span>
+                </summary>
+                <div className="faqa">{f.a}</div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 10 · What happens on our call — the closer */}
+      <section className="sec" id="call">
+        <div className="wrap wallhead">
+          <p className="eyebrow">What happens on our call</p>
+          <h2>A working session, <span className="hl">not a sales pitch.</span></h2>
+          <p className="wallsub">
+            It runs about 20 minutes, it&apos;s low pressure, and by the end
+            you&apos;ll know whether we&apos;re a fit for your market. Here&apos;s the agenda.
+          </p>
+        </div>
+        <div className="wrap">
+          <ul className="agenda">
+            <li><span className="ac" aria-hidden /><span className="at"><strong>Your market.</strong> We check whether your area is open — we only take one floor coating contractor per market.</span></li>
+            <li><span className="ac" aria-hidden /><span className="at"><strong>Your numbers.</strong> Your target jobs per month, your best neighborhoods, and your close rate.</span></li>
+            <li><span className="ac" aria-hidden /><span className="at"><strong>The plan.</strong> Exactly how we&apos;d fill your calendar and what the retainer plus per-appointment pricing looks like for you.</span></li>
+            <li><span className="ac" aria-hidden /><span className="at"><strong>Your call.</strong> If it&apos;s a fit, we map out next steps. If it&apos;s not, we&apos;ll tell you straight.</span></li>
+          </ul>
+          <p className="prep">
+            Come ready with three things: <strong>your target number of jobs a month</strong>,
+            <strong> your best neighborhoods</strong>, and <strong>your rough close rate</strong>.
+            That&apos;s all we need to map it to your business.
           </p>
         </div>
       </section>
@@ -723,6 +1014,21 @@ export default function LanderPage() {
           </div>
         </div>
       </footer>
+
+      {/* Persistent show-up nudge — plugs the biggest leak on a post-booking page.
+          CALL_TIME and CALENDAR_URL are placeholders; inject the real per-lead
+          values (booked time + add-to-calendar link) at send time. */}
+      <div className="nudge">
+        <div className="nudge-in">
+          <span className="nleft">
+            <span className="ndot" aria-hidden />
+            <span><span className="nstrong">Your call is booked.</span> <span className="nmuted">{CALL_TIME} — we&apos;re holding your market.</span></span>
+          </span>
+          <a className="nbtn" href={CALENDAR_URL} target="_blank" rel="noopener noreferrer">
+            <CalendarCheck className="h-4 w-4" /> Add to calendar
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
