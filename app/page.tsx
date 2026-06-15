@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Fragment } from "react";
 import { Target, User, Shield, CreditCard, Clock, Lock, LineChart, CalendarCheck, Check, X } from "lucide-react";
 
-import { SiteNav, BOOKING_URL } from "@/components/site-nav";
+import { SiteNav, BOOKING_URL, PHONE_DISPLAY, PHONE_HREF } from "@/components/site-nav";
 import "./home.css";
 
 // Comparison data drives both the desktop table and the mobile stacked cards.
@@ -401,6 +401,9 @@ export default function HomePage() {
           <a className="btn" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
             Get Started <span className="arr">&rarr;</span>
           </a>
+          <p className="ctacall">
+            Or call us now at <a href={PHONE_HREF}>{PHONE_DISPLAY}</a>
+          </p>
         </div>
       </section>
 
@@ -408,8 +411,13 @@ export default function HomePage() {
         <div className="wrap">
           <p className="fn">Appointly Solutions</p>
           <p className="fh">More booked jobs. <span className="hl">Less chasing leads.</span></p>
+          <p className="fcall">
+            Questions? Call us at{" "}
+            <a href={PHONE_HREF}>{PHONE_DISPLAY}</a>
+          </p>
           <div className="flinks">
             <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">Book a Call</a>
+            <a href={PHONE_HREF}>Call {PHONE_DISPLAY}</a>
             <a href="/about">About</a>
             <a href="/faq">FAQ</a>
             <a href="/blog">Blog</a>

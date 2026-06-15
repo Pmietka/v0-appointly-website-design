@@ -1,5 +1,7 @@
 import Link from "next/link";
+import { Phone } from "lucide-react";
 
+import { PHONE_DISPLAY, PHONE_HREF } from "@/components/site-nav";
 
 const companyLinks = [
   { href: "/about", label: "About" },
@@ -42,8 +44,15 @@ export function Footer() {
               Appointly Model — you just show up and close.
             </p>
             <a
+              href={PHONE_HREF}
+              className="mt-4 flex items-center gap-2 text-base font-semibold text-slate-900 transition-colors hover:text-slate-600"
+            >
+              <Phone className="h-4 w-4 text-slate-400" aria-hidden />
+              {PHONE_DISPLAY}
+            </a>
+            <a
               href="mailto:patrick@getappointly.co"
-              className="mt-3 block text-sm text-slate-500 transition-colors hover:text-slate-700"
+              className="mt-2 block text-sm text-slate-500 transition-colors hover:text-slate-700"
             >
               patrick@getappointly.co
             </a>

@@ -1,11 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 
 // Single source of truth for the booking calendar. Do not introduce a second
 // booking system; every CTA on the homepage points here.
 export const BOOKING_URL = "https://client.getappointly.co/strategy-calendar";
+
+// Single source of truth for the company phone number, surfaced site-wide.
+export const PHONE_DISPLAY = "651-299-3265";
+export const PHONE_HREF = "tel:+16512993265";
 
 const links = [
   { href: "#how-it-works", label: "How It Works" },
@@ -32,6 +36,10 @@ export function SiteNav() {
               </a>
             ))}
           </div>
+          <a className="snav-call" href={PHONE_HREF}>
+            <Phone className="h-4 w-4" aria-hidden />
+            {PHONE_DISPLAY}
+          </a>
           <a className="btn" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
             Book a Call
           </a>
@@ -54,6 +62,9 @@ export function SiteNav() {
             {l.label}
           </a>
         ))}
+        <a href={PHONE_HREF} onClick={() => setOpen(false)}>
+          Call {PHONE_DISPLAY}
+        </a>
       </div>
     </nav>
   );

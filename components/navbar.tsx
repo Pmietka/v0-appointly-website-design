@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 
-import { BOOKING_URL } from "@/components/site-nav";
+import { BOOKING_URL, PHONE_DISPLAY, PHONE_HREF } from "@/components/site-nav";
 
 // Matches the homepage SiteNav look so the header is consistent across the
 // whole site. These are page links (Blog, FAQ, etc. stay their own pages).
@@ -51,6 +51,14 @@ export function Navbar() {
           </div>
 
           <a
+            href={PHONE_HREF}
+            className="hidden items-center gap-2 text-[15px] font-semibold text-[#171717] transition-colors hover:text-[#525252] sm:flex"
+          >
+            <Phone className="h-4 w-4 text-[#737373]" aria-hidden />
+            {PHONE_DISPLAY}
+          </a>
+
+          <a
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
@@ -87,6 +95,14 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
+          <a
+            href={PHONE_HREF}
+            onClick={() => setMobileOpen(false)}
+            className="flex items-center gap-2 py-[13px] text-base font-semibold text-[#171717]"
+          >
+            <Phone className="h-4 w-4 text-[#737373]" aria-hidden />
+            {PHONE_DISPLAY}
+          </a>
         </div>
       )}
     </nav>
