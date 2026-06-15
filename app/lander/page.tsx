@@ -292,9 +292,9 @@ export default function LanderPage() {
             <span className="hl">your calendar.</span>
           </h1>
           <p className="lead">
-            You already booked the call. This page shows you the rest. Take three
-            minutes: see who we are, how we fill your calendar, and the
-            contractors already living it. Show up ready to decide.
+            Our secrets, revealed. See exactly how we deliver pay per appointment
+            results for floor coating companies, all on this page. Then decide if
+            it fits you.
           </p>
 
           {/*
