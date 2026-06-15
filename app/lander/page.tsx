@@ -9,12 +9,6 @@ import { TestimonialWall } from "./testimonial-wall";
 import "../home.css";
 import "./lander.css";
 
-/* Per-lead booking details are injected by the funnel at send time. Swap these
-   placeholders for the real scheduled time and the homeowner's add-to-calendar
-   / manage-booking link (or template tokens like {{CALL_TIME}}). */
-const CALL_TIME = "your scheduled time";
-const CALENDAR_URL = "https://client.getappointly.co/strategy-calendar";
-
 export const viewport: Viewport = {
   themeColor: "#fafafa",
 };
@@ -596,21 +590,6 @@ export default function LanderPage() {
           </div>
         </div>
       </footer>
-
-      {/* Persistent show-up nudge — plugs the biggest leak on a post-booking page.
-          CALL_TIME and CALENDAR_URL are placeholders; inject the real per-lead
-          values (booked time + add-to-calendar link) at send time. */}
-      <div className="nudge">
-        <div className="nudge-in">
-          <span className="nleft">
-            <span className="ndot" aria-hidden />
-            <span><span className="nstrong">Your call is booked.</span> <span className="nmuted">{CALL_TIME} — we&apos;re holding your market.</span></span>
-          </span>
-          <a className="nbtn" href={CALENDAR_URL} target="_blank" rel="noopener noreferrer">
-            <CalendarCheck className="h-4 w-4" /> Add to calendar
-          </a>
-        </div>
-      </div>
     </div>
   );
 }
