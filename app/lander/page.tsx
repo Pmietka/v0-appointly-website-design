@@ -3,7 +3,7 @@ import { Fragment } from "react";
 import {
   Star, Plus, CalendarCheck, Check, X, ImageIcon,
   Target, User, Shield, CreditCard, Clock, Lock, LineChart,
-  Banknote, PhoneCall, Ear,
+  Banknote, PhoneCall, Filter, Handshake,
 } from "lucide-react";
 
 import { TestimonialWall } from "./testimonial-wall";
@@ -41,13 +41,14 @@ export const metadata: Metadata = {
 };
 
 /* ── HOW IT WORKS ────────────────────────────────────────────────────────────
-   Four simple, icon-led steps. Big graphic, a few words each — no paragraphs.
+   Five simple, icon-led steps. Big graphic, a few words each — no paragraphs.
    ─────────────────────────────────────────────────────────────────────────── */
 const FLOW = [
   { n: 1, Icon: Banknote, label: "We pay for the ads", sub: "No risk to you" },
   { n: 2, Icon: PhoneCall, label: "We call in 60 seconds", sub: "Before they cool off" },
-  { n: 3, Icon: CalendarCheck, label: "We book your calendar", sub: "Qualified estimates only" },
-  { n: 4, Icon: Ear, label: "We listen to you", sub: "You tell us what works" },
+  { n: 3, Icon: Filter, label: "We screen out the junk", sub: "Only book what you would book" },
+  { n: 4, Icon: CalendarCheck, label: "We book your calendar", sub: "Confirmed times only" },
+  { n: 5, Icon: Handshake, label: "You show up and close", sub: "We've done the rest" },
 ];
 
 /* ── BOOKED CALENDAR ─────────────────────────────────────────────────────────
@@ -420,9 +421,8 @@ export default function LanderPage() {
             Here&apos;s exactly how your calendar <span className="hl">gets filled.</span>
           </h2>
           <p className="sub">
-            You don&apos;t lift a finger on marketing or follow-up. This is
-            everything that happens between a homeowner seeing our ad and you
-            showing up to close.
+            You don&apos;t waste time chasing down homeowners. We book in
+            homeowners looking to get their floors coated and you close the jobs.
           </p>
           <div className="flow">
             {FLOW.map((s) => {
