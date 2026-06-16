@@ -197,18 +197,37 @@
 .dscroll .shotfig figcaption{font-size:14px;color:var(--ink-3);line-height:1.45;margin-top:12px;text-align:center}
 
 /* booked-calendar component (recreated week view) */
-.dscroll .calshot{width:100%;background:#fff;border:1px solid var(--line);border-radius:16px;overflow-x:auto;
-  -webkit-overflow-scrolling:touch;box-shadow:0 20px 50px -28px rgba(15,23,42,.3)}
-.dscroll .calgrid{display:grid;grid-template-columns:repeat(6,minmax(116px,1fr));min-width:700px}
-.dscroll .calday{padding:16px 16px 24px;border-left:1px solid var(--line);min-height:168px}
-.dscroll .calday:first-child{border-left:0}
-.dscroll .caldayhd{text-align:center;margin-bottom:18px}
-.dscroll .caldow{display:block;font-size:11px;font-weight:700;letter-spacing:.09em;color:var(--ink-4)}
-.dscroll .caldate{display:block;font-size:14px;font-weight:600;color:var(--ink-2);margin-top:4px}
-.dscroll .calappts{display:flex;flex-direction:column;gap:10px}
+.dscroll .calshot{width:100%;background:#fff;border:1px solid var(--line);border-radius:16px;
+  box-shadow:0 20px 50px -28px rgba(15,23,42,.3)}
+
+/* Mobile-first: a vertical agenda — each day is a full-width row, no sideways scroll */
+.dscroll .calgrid{display:flex;flex-direction:column}
+.dscroll .calday{display:flex;gap:14px;padding:14px 16px;border-top:1px solid var(--line);align-items:flex-start}
+.dscroll .calday:first-child{border-top:0}
+.dscroll .caldayhd{flex:none;width:58px;text-align:left;display:flex;align-items:baseline;gap:6px}
+.dscroll .caldow{font-size:11px;font-weight:700;letter-spacing:.09em;color:var(--ink-4)}
+.dscroll .caldate{font-size:13px;font-weight:600;color:var(--ink-2)}
+.dscroll .calappts{flex:1;min-width:0;display:flex;flex-direction:column;gap:8px}
+.dscroll .calappts:empty::after{content:"—";color:var(--ink-4);font-size:13px}
 .dscroll .calappt{display:flex;align-items:flex-start;gap:8px;font-size:13px;line-height:1.35;color:var(--ink)}
-.dscroll .calpip{flex-shrink:0;width:8px;height:8px;border-radius:999px;background:#3b82f6;margin-top:4px}
+.dscroll .caltxt{min-width:0}
+.dscroll .calpip{flex-shrink:0;width:8px;height:8px;border-radius:999px;background:#3b82f6;margin-top:5px}
 .dscroll .calwhen{font-weight:600}
+
+/* Wider screens: the full week grid, 6 columns side by side */
+@media(min-width:720px){
+  .dscroll .calshot{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .dscroll .calgrid{display:grid;grid-template-columns:repeat(6,minmax(116px,1fr));min-width:700px}
+  .dscroll .calday{flex-direction:column;gap:0;padding:16px 16px 24px;border-top:0;
+    border-left:1px solid var(--line);min-height:168px}
+  .dscroll .calday:first-child{border-left:0}
+  .dscroll .caldayhd{width:auto;display:block;text-align:center;margin-bottom:18px}
+  .dscroll .caldow{display:block}
+  .dscroll .caldate{display:block;margin-top:4px;font-size:14px}
+  .dscroll .calappts{gap:10px}
+  .dscroll .calappts:empty::after{content:none}
+  .dscroll .calpip{margin-top:4px}
+}
 
 /* ── FAQ: native details accordion, no client JS needed ───────────────────── */
 .dscroll .faqlist{max-width:820px;margin:clamp(28px,5vw,44px) auto 0;display:flex;flex-direction:column;gap:12px}
