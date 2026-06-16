@@ -3,6 +3,7 @@ import { Fragment } from "react";
 import {
   Star, Plus, CalendarCheck, Check, X, ImageIcon,
   Target, User, Shield, CreditCard, Clock, Lock, LineChart,
+  Banknote, PhoneCall, Ear,
 } from "lucide-react";
 
 import { TestimonialWall } from "./testimonial-wall";
@@ -39,31 +40,14 @@ export const metadata: Metadata = {
   },
 };
 
-/* ── PROCESS STEPS ───────────────────────────────────────────────────────────
-   What we actually do to put booked jobs on a contractor's calendar. Shown to
-   leads who already booked a call, so it's reassurance, not a pitch to book.
+/* ── HOW IT WORKS ────────────────────────────────────────────────────────────
+   Four simple, icon-led steps. Big graphic, a few words each — no paragraphs.
    ─────────────────────────────────────────────────────────────────────────── */
-const PROCESS = [
-  {
-    n: 1,
-    title: "We front the ad spend",
-    body: "We run proven creatives with our own money, customized to your local market. Zero ad spend risk on you.",
-  },
-  {
-    n: 2,
-    title: "We call within 60 seconds",
-    body: "The moment a homeowner responds, our team is on the phone, before they forget they ever clicked.",
-  },
-  {
-    n: 3,
-    title: "We qualify and book",
-    body: "We screen on service area, scope, and budget, warm them up, and book the appointment straight onto your calendar.",
-  },
-  {
-    n: 4,
-    title: "We optimize with your data",
-    body: "Closed a job? Wasted trip? We feed it back, so you get more of who buys and fewer who don't.",
-  },
+const FLOW = [
+  { n: 1, Icon: Banknote, label: "We pay for the ads", sub: "No risk to you" },
+  { n: 2, Icon: PhoneCall, label: "We call in 60 seconds", sub: "Before they cool off" },
+  { n: 3, Icon: CalendarCheck, label: "We book your calendar", sub: "Qualified estimates only" },
+  { n: 4, Icon: Ear, label: "We listen to you", sub: "You tell us what works" },
 ];
 
 /* ── COMPARISON (reused from the homepage so the two pages stay consistent) ──
@@ -243,27 +227,30 @@ function initials(name: string) {
 function FeaturedQuote({ t }: { t: Testimonial }) {
   return (
     <figure className="fquote">
+      <span className="fqmark" aria-hidden>&ldquo;</span>
       <Stars />
-      <blockquote className="fq">&ldquo;{t.quote}&rdquo;</blockquote>
+      <blockquote className="fq">{t.quote}</blockquote>
       <figcaption className="fattr">
         {t.photo ? (
-          <img className="favatar" src={t.photo} alt="" width={42} height={42} loading="lazy" />
+          <img className="favatar" src={t.photo} alt="" width={56} height={56} loading="lazy" />
         ) : (
           <span className="favatar" aria-hidden>{initials(t.name)}</span>
         )}
         <span className="fwho">
-          <strong>{t.name}</strong> &middot; {t.who} &middot; {t.where}
+          <strong>{t.name}</strong>
+          <span className="fwsub">{t.who} &middot; {t.where}</span>
         </span>
+        {t.stat && <span className="fstat">{t.stat}</span>}
       </figcaption>
     </figure>
   );
 }
 
 export default function LanderPage() {
-  // Strongest testimonials pulled out to sit beside specific claims.
-  const tAndre = TESTIMONIALS[1]; // showed up and closed
-  const tBrian = TESTIMONIALS[6]; // no more shared leads
-  const tNate = TESTIMONIALS[11]; // they don't book tire-kickers
+  // The three real, photo'd clients, featured beside the claims they back up.
+  const tMark = TESTIMONIALS[0]; // AFAB Services
+  const tAndre = TESTIMONIALS[1]; // Great Lakes Elite Coatings
+  const tCarlos = TESTIMONIALS[2]; // Diamond Group
 
   return (
     <div className="dscroll">
@@ -336,51 +323,7 @@ export default function LanderPage() {
         </div>
       </section>
 
-      {/* 4 · Who you're actually talking to */}
-      <section className="sec" id="founders">
-        <div className="wrap">
-          <p className="eyebrow">First, who you&apos;re actually talking to</p>
-          <h2>
-            Two brothers from Chicago, <span className="hl">not a faceless agency.</span>
-          </h2>
-          <p className="sub">
-            We built Appointly out of frustration with agencies that charge big
-            retainers and deliver nothing. So we tied most of your spend to booked
-            estimates you can actually show up to and close.
-          </p>
-          {/*
-            FOUNDER PHOTOS — drop real headshots at /images/team/patrick.webp and
-            /images/team/jacob.webp, then swap the initials span for an <img
-            className="fphoto" ... />. Real faces beat stock photos every time.
-          */}
-          <div className="founders">
-            <article className="founder">
-              <span className="fphoto" aria-hidden>P</span>
-              <div>
-                <div className="fname">Patrick Mietka</div>
-                <div className="frole">Co-founder</div>
-                <p className="fbio">
-                  Runs the campaigns and the numbers. The person making sure the ad
-                  spend we front turns into estimates on your calendar.
-                </p>
-              </div>
-            </article>
-            <article className="founder">
-              <span className="fphoto" aria-hidden>J</span>
-              <div>
-                <div className="fname">Jacob Mietka</div>
-                <div className="frole">Co-founder</div>
-                <p className="fbio">
-                  Leads the speed-to-lead and booking side. He&apos;ll likely be the
-                  one you talk to about your market and your numbers.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      {/* 5 · How your calendar gets filled */}
+      {/* 4 · How your calendar gets filled */}
       <section className="sec tint" id="process">
         <div className="wrap">
           <p className="eyebrow">How it works</p>
@@ -392,14 +335,18 @@ export default function LanderPage() {
             everything that happens between a homeowner seeing our ad and you
             showing up to close.
           </p>
-          <div className="grid g4">
-            {PROCESS.map((s) => (
-              <div className="step" key={s.n}>
-                <div className="sn">{s.n}</div>
-                <div className="st">{s.title}</div>
-                <div className="sd">{s.body}</div>
-              </div>
-            ))}
+          <div className="flow">
+            {FLOW.map((s) => {
+              const Icon = s.Icon;
+              return (
+                <div className="flowstep" key={s.n}>
+                  <span className="flownum">{s.n}</span>
+                  <span className="flowicon"><Icon aria-hidden /></span>
+                  <span className="flowlabel">{s.label}</span>
+                  <span className="flowsub">{s.sub}</span>
+                </div>
+              );
+            })}
           </div>
 
           {/* Proof in context: a real booked calendar beats any claim. */}
@@ -440,7 +387,7 @@ export default function LanderPage() {
               </div>
               <figcaption>How we reach and qualify a homeowner within 60 seconds of them raising their hand.</figcaption>
             </figure>
-            <FeaturedQuote t={tNate} />
+            <FeaturedQuote t={tMark} />
           </div>
         </div>
       </section>
@@ -510,7 +457,7 @@ export default function LanderPage() {
             ))}
           </div>
 
-          <div className="cmpquote"><FeaturedQuote t={tBrian} /></div>
+          <FeaturedQuote t={tCarlos} />
         </div>
       </section>
 
@@ -531,8 +478,52 @@ export default function LanderPage() {
         </div>
       </section>
 
-      {/* 9 · FAQ — the questions that usually eat call time */}
-      <section className="sec tint" id="faq">
+      {/* 9 · Who you're actually talking to */}
+      <section className="sec tint" id="founders">
+        <div className="wrap">
+          <p className="eyebrow">Who you&apos;re actually talking to</p>
+          <h2>
+            Two brothers from Chicago, <span className="hl">not a faceless agency.</span>
+          </h2>
+          <p className="sub">
+            We built Appointly out of frustration with agencies that charge big
+            retainers and deliver nothing. So we tied most of your spend to booked
+            estimates you can actually show up to and close.
+          </p>
+          {/*
+            FOUNDER PHOTOS — drop real headshots at /images/team/patrick.webp and
+            /images/team/jacob.webp, then swap the initials span for an <img
+            className="fphoto" ... />. Real faces beat stock photos every time.
+          */}
+          <div className="founders">
+            <article className="founder">
+              <span className="fphoto" aria-hidden>P</span>
+              <div>
+                <div className="fname">Patrick Mietka</div>
+                <div className="frole">Co-founder</div>
+                <p className="fbio">
+                  Runs the campaigns and the numbers. The person making sure the ad
+                  spend we front turns into estimates on your calendar.
+                </p>
+              </div>
+            </article>
+            <article className="founder">
+              <span className="fphoto" aria-hidden>J</span>
+              <div>
+                <div className="fname">Jacob Mietka</div>
+                <div className="frole">Co-founder</div>
+                <p className="fbio">
+                  Leads the speed-to-lead and booking side. He&apos;ll likely be the
+                  one you talk to about your market and your numbers.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* 10 · FAQ — the questions that usually eat call time */}
+      <section className="sec" id="faq">
         <div className="wrap wallhead">
           <p className="eyebrow">Before we talk</p>
           <h2>Questions you might be <span className="hl">sitting on.</span></h2>
@@ -552,8 +543,8 @@ export default function LanderPage() {
         </div>
       </section>
 
-      {/* 10 · What happens on our call — the closer */}
-      <section className="sec" id="call">
+      {/* 11 · What happens on our call — the closer */}
+      <section className="sec tint" id="call">
         <div className="wrap wallhead">
           <p className="eyebrow">What happens on our call</p>
           <h2>A working session, <span className="hl">not a sales pitch.</span></h2>
