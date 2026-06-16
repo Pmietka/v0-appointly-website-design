@@ -81,9 +81,9 @@
 /* ── proof bar: instant legitimacy for non-watchers ───────────────────────── */
 .dscroll .proofbar{background:var(--ink);color:#fff}
 .dscroll .proofbar .wrap{text-align:center}
-.dscroll .proofbar .pbnums{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(22px,4vw,32px);max-width:820px;margin:0 auto}
-@media(min-width:760px){.dscroll .proofbar .pbnums{grid-template-columns:repeat(4,1fr)}}
-.dscroll .proofbar .pbnum{display:flex;flex-direction:column;gap:6px}
+.dscroll .proofbar .pbnums{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;
+  gap:clamp(28px,6vw,64px);max-width:880px;margin:0 auto}
+.dscroll .proofbar .pbnum{display:flex;flex-direction:column;align-items:center;gap:6px;min-width:120px;max-width:200px}
 .dscroll .proofbar .pbv{font-size:clamp(34px,6vw,58px);font-weight:700;letter-spacing:-.03em;line-height:1;
   background:linear-gradient(135deg,#cfffae,#ace5ff);-webkit-background-clip:text;background-clip:text;color:transparent}
 .dscroll .proofbar .pbl{font-size:13px;color:rgba(255,255,255,.66);text-transform:uppercase;letter-spacing:.08em;font-weight:600;line-height:1.3}

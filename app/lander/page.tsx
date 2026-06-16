@@ -308,9 +308,8 @@ export default function LanderPage() {
             should be aggregate, defensible, and easy to back up on the call.
           */}
           <div className="pbnums">
-            <div className="pbnum"><span className="pbv">30+</span><span className="pbl">Contractors booked</span></div>
-            <div className="pbnum"><span className="pbv">1,200+</span><span className="pbl">Appointments booked</span></div>
-            <div className="pbnum"><span className="pbv">18</span><span className="pbl">States &amp; provinces</span></div>
+            <div className="pbnum"><span className="pbv">500+</span><span className="pbl">Jobs booked in for our clients</span></div>
+            <div className="pbnum"><span className="pbv">0</span><span className="pbl">Shared leads</span></div>
             <div className="pbnum"><span className="pbv">8 / mo</span><span className="pbl">Avg jobs, month two</span></div>
           </div>
           <div className="pbfaces" aria-hidden>
