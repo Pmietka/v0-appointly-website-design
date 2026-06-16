@@ -580,17 +580,6 @@ export default function LanderPage() {
           */}
           <div className="founders">
             <article className="founder">
-              <span className="fphoto" aria-hidden>P</span>
-              <div>
-                <div className="fname">Patrick Mietka</div>
-                <div className="frole">Co-founder</div>
-                <p className="fbio">
-                  Runs the campaigns and the numbers. The person making sure the ad
-                  spend we front turns into estimates on your calendar.
-                </p>
-              </div>
-            </article>
-            <article className="founder">
               <span className="fphoto" aria-hidden>J</span>
               <div>
                 <div className="fname">Jacob Mietka</div>
@@ -598,6 +587,17 @@ export default function LanderPage() {
                 <p className="fbio">
                   Leads the speed-to-lead and booking side. He&apos;ll likely be the
                   one you talk to about your market and your numbers.
+                </p>
+              </div>
+            </article>
+            <article className="founder">
+              <span className="fphoto" aria-hidden>P</span>
+              <div>
+                <div className="fname">Patrick Mietka</div>
+                <div className="frole">Co-founder</div>
+                <p className="fbio">
+                  Runs the campaigns and the numbers. The person making sure the ad
+                  spend we front turns into estimates on your calendar.
                 </p>
               </div>
             </article>
