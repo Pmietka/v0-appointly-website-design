@@ -50,6 +50,27 @@ const FLOW = [
   { n: 4, Icon: Ear, label: "We listen to you", sub: "You tell us what works" },
 ];
 
+/* ── BOOKED CALENDAR ─────────────────────────────────────────────────────────
+   A real week of booked estimates, recreated as a crisp on-brand component so
+   it stays sharp and responsive. Names/times are from an actual client week.
+   ─────────────────────────────────────────────────────────────────────────── */
+const WEEK = [
+  { dow: "MON", date: "Jun 1", appts: [] as { time: string; name: string }[] },
+  { dow: "TUE", date: "2", appts: [{ time: "2pm", name: "Maryse Deslouches" }] },
+  { dow: "WED", date: "3", appts: [] as { time: string; name: string }[] },
+  { dow: "THU", date: "4", appts: [{ time: "3pm", name: "Justin Lucas" }] },
+  { dow: "FRI", date: "5", appts: [] as { time: string; name: string }[] },
+  {
+    dow: "SAT",
+    date: "6",
+    appts: [
+      { time: "10am", name: "Mike Mer" },
+      { time: "1pm", name: "Chris Lencheski" },
+      { time: "2:30pm", name: "Nana Joseph" },
+    ],
+  },
+];
+
 /* ── COMPARISON (reused from the homepage so the two pages stay consistent) ──
    Why us vs a lead company. Same rows the cold page uses; rendered as a desktop
    table and mobile stacked cards.
@@ -222,6 +243,35 @@ function initials(name: string) {
     .toUpperCase();
 }
 
+/* A real client's booked week, rebuilt as a sharp, responsive calendar. */
+function BookedCalendar() {
+  const label =
+    "A booked week: Tuesday 2pm Maryse Deslouches, Thursday 3pm Justin Lucas, " +
+    "Saturday 10am Mike Mer, 1pm Chris Lencheski, 2:30pm Nana Joseph.";
+  return (
+    <div className="calshot">
+      <div className="calgrid" role="img" aria-label={label}>
+        {WEEK.map((d) => (
+          <div className="calday" key={d.dow}>
+            <div className="caldayhd">
+              <span className="caldow">{d.dow}</span>
+              <span className="caldate">{d.date}</span>
+            </div>
+            <div className="calappts">
+              {d.appts.map((a, i) => (
+                <div className="calappt" key={i}>
+                  <span className="calpip" aria-hidden />
+                  <span className="caltxt"><span className="calwhen">{a.time}</span> {a.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 /* Inline featured testimonial — proof parked next to the claim it backs up. */
 function FeaturedQuote({ t }: { t: Testimonial }) {
   return (
@@ -391,11 +441,7 @@ export default function LanderPage() {
           {/* Proof in context: a real booked calendar beats any claim. */}
           <div className="shotrow">
             <figure className="shotfig">
-              {/* Replace with <div className="shot"><img src="/images/proof/booked-calendar.png" alt="A week of booked floor coating estimates" /></div> */}
-              <div className="shot ph">
-                <ImageIcon className="shicon" aria-hidden />
-                <span className="shlabel">Screenshot: a real booked calendar</span>
-              </div>
+              <BookedCalendar />
               <figcaption>A week of estimates we booked straight onto a client&apos;s calendar.</figcaption>
             </figure>
           </div>
