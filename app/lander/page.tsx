@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Fragment } from "react";
 import {
-  Star, Plus, Play, CalendarCheck, Check, X, ImageIcon,
+  Star, Plus, CalendarCheck, Check, X, ImageIcon,
   Target, User, Shield, CreditCard, Clock, Lock, LineChart,
   Banknote, PhoneCall, Ear,
 } from "lucide-react";
@@ -118,7 +118,6 @@ const TESTIMONIALS: Testimonial[] = [
     quote:
       "You've already paved the ground. I just go in and sweep it up. You guys are doing a great job.",
     photo: "/images/proof/mark-afab.webp",
-    video: true,
   },
   {
     name: "Andre S.",
@@ -329,18 +328,13 @@ export default function LanderPage() {
           <h2>They show up <span className="hl">ready to buy.</span></h2>
           <article className="casestudy">
             <div className="csvideo">
-              {/*
-                CASE STUDY VIDEO — drop Mark's clip here. Replace the .vthumb block
-                with one of:
-                  <video src="/videos/mark.mp4" poster="/images/proof/mark-afab.webp" controls playsInline />
-                  <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Mark — AFAB Services"
-                    allow="autoplay; fullscreen; picture-in-picture" allowFullScreen />
-              */}
-              <div className="vthumb" role="button" tabIndex={0} aria-label="Play Mark's video">
-                <img src={tMark.photo} alt="" aria-hidden />
-                <span className="vbadge"><Play className="ci" aria-hidden /> Video</span>
-                <span className="vplay" aria-hidden><span className="vplay-btn" /></span>
-              </div>
+              <video
+                src="/videos/mark-afab.mp4"
+                poster="/images/proof/mark-afab.webp"
+                controls
+                playsInline
+                preload="metadata"
+              />
             </div>
             <div className="csbody">
               <Stars />
