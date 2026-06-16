@@ -365,7 +365,7 @@ export default function LanderPage() {
             <img className="pbface" src="/images/proof/mark-afab.webp" alt="" width={54} height={54} loading="lazy" />
             <img className="pbface" src="/images/proof/andre.webp" alt="" width={54} height={54} loading="lazy" />
             <img className="pbface" src="/images/proof/carlos-team.webp" alt="" width={54} height={54} loading="lazy" />
-            <span className="pbmore">+27</span>
+            <span className="pbmore">+12</span>
           </div>
           <p className="pbcap">Real floor coating contractors, real booked estimates.</p>
         </div>
