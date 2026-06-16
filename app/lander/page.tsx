@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Fragment } from "react";
 import {
-  Star, Plus, CalendarCheck, Check, X, ImageIcon,
+  Star, Plus, Play, CalendarCheck, Check, X, ImageIcon,
   Target, User, Shield, CreditCard, Clock, Lock, LineChart,
   Banknote, PhoneCall, Ear,
 } from "lucide-react";
@@ -322,7 +322,53 @@ export default function LanderPage() {
         </div>
       </section>
 
-      {/* 4 · How your calendar gets filled */}
+      {/* 4 · Case study — featured client story, right under the stats */}
+      <section className="sec" id="case-study">
+        <div className="wrap">
+          <p className="eyebrow">Case study &middot; AFAB Services</p>
+          <h2>They show up <span className="hl">ready to buy.</span></h2>
+          <article className="casestudy">
+            <div className="csvideo">
+              {/*
+                CASE STUDY VIDEO — drop Mark's clip here. Replace the .vthumb block
+                with one of:
+                  <video src="/videos/mark.mp4" poster="/images/proof/mark-afab.webp" controls playsInline />
+                  <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Mark — AFAB Services"
+                    allow="autoplay; fullscreen; picture-in-picture" allowFullScreen />
+              */}
+              <div className="vthumb" role="button" tabIndex={0} aria-label="Play Mark's video">
+                <img src={tMark.photo} alt="" aria-hidden />
+                <span className="vbadge"><Play className="ci" aria-hidden /> Video</span>
+                <span className="vplay" aria-hidden><span className="vplay-btn" /></span>
+              </div>
+            </div>
+            <div className="csbody">
+              <Stars />
+              <blockquote className="csquote">
+                &ldquo;You&apos;ve already paved the ground. I just go in and sweep it up.&rdquo;
+              </blockquote>
+              <p className="csnarr">
+                Mark was already running a busy home improvement company that never
+                slows down. He had a profitable floor coating business sitting right
+                there, and no time to actually sell it.
+              </p>
+              <p className="csnarr">
+                Now we send him homeowners who are mostly ready to go. He shows up,
+                gives the estimate, chats, sends the proposal. The jobs pile in.
+              </p>
+              <div className="csmeta">
+                <div className="cswrap">
+                  <div className="csname">{tMark.name}</div>
+                  <div className="cswho">{tMark.who} &middot; {tMark.where}</div>
+                </div>
+                {tMark.stat && <span className="csstat">{tMark.stat}</span>}
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      {/* 5 · How your calendar gets filled */}
       <section className="sec tint" id="process">
         <div className="wrap">
           <p className="eyebrow">How it works</p>
@@ -386,7 +432,7 @@ export default function LanderPage() {
               </div>
               <figcaption>How we reach and qualify a homeowner within 60 seconds of them raising their hand.</figcaption>
             </figure>
-            <FeaturedQuote t={tMark} />
+            <FeaturedQuote t={tCarlos} />
           </div>
         </div>
       </section>
@@ -455,8 +501,6 @@ export default function LanderPage() {
               </div>
             ))}
           </div>
-
-          <FeaturedQuote t={tCarlos} />
         </div>
       </section>
 
