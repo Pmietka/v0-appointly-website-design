@@ -593,8 +593,14 @@ export default function LanderPage() {
               </div>
             </article>
             <article className="founder">
-              {/* TODO: swap for real photo at /images/team/patrick.webp once available */}
-              <span className="fphoto" aria-hidden>P</span>
+              <img
+                className="fphoto"
+                src="/images/team/patrick.webp"
+                alt="Patrick Mietka, co-founder of Appointly"
+                width={104}
+                height={104}
+                loading="lazy"
+              />
               <div>
                 <div className="fname">Patrick Mietka</div>
                 <div className="frole">Co-founder</div>
