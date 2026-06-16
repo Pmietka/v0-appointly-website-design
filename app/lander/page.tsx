@@ -58,7 +58,7 @@ const FLOW = [
 const QUALIFICATIONS = [
   { Icon: MapPin, label: "Homeowner is located in your service area." },
   { Icon: Target, label: "Has a real need and expressed interest in floor coating." },
-  { Icon: Ruler, label: "Fits your scope.", detail: "The job size and job budget fits." },
+  { Icon: Ruler, label: "No tire kickers.", detail: "Fits your scope: right job size and job budget." },
   { Icon: CalendarClock, label: "Agreed upon time for an estimate that fits your calendar." },
 ];
 
