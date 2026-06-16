@@ -573,14 +573,16 @@ export default function LanderPage() {
             retainers and deliver nothing. So we tied most of your spend to booked
             estimates you can actually show up to and close.
           </p>
-          {/*
-            FOUNDER PHOTOS — drop real headshots at /images/team/patrick.webp and
-            /images/team/jacob.webp, then swap the initials span for an <img
-            className="fphoto" ... />. Real faces beat stock photos every time.
-          */}
           <div className="founders">
             <article className="founder">
-              <span className="fphoto" aria-hidden>J</span>
+              <img
+                className="fphoto"
+                src="/images/team/jacob.webp"
+                alt="Jacob Mietka, co-founder of Appointly"
+                width={104}
+                height={104}
+                loading="lazy"
+              />
               <div>
                 <div className="fname">Jacob Mietka</div>
                 <div className="frole">Co-founder</div>
@@ -591,6 +593,7 @@ export default function LanderPage() {
               </div>
             </article>
             <article className="founder">
+              {/* TODO: swap for real photo at /images/team/patrick.webp once available */}
               <span className="fphoto" aria-hidden>P</span>
               <div>
                 <div className="fname">Patrick Mietka</div>
