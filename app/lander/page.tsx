@@ -3,7 +3,7 @@ import { Fragment } from "react";
 import {
   Star, Plus, CalendarCheck, Check, X, ImageIcon,
   Target, User, Shield, CreditCard, Clock, Lock, LineChart,
-  Banknote, PhoneCall, Filter, Handshake,
+  Banknote, PhoneCall, Filter, Handshake, MapPin, Ruler, CalendarClock,
 } from "lucide-react";
 
 import { TestimonialWall } from "./testimonial-wall";
@@ -49,6 +49,17 @@ const FLOW = [
   { n: 3, Icon: Filter, label: "We screen out the junk", sub: "Only book what you would book" },
   { n: 4, Icon: CalendarCheck, label: "We book your calendar", sub: "Confirmed times only" },
   { n: 5, Icon: Handshake, label: "You show up and close", sub: "We've done the rest" },
+];
+
+/* ── WHAT QUALIFIES ──────────────────────────────────────────────────────────
+   The bar every appointment has to clear, as a scannable checklist instead of
+   a paragraph. If it doesn't clear all four, we don't book it.
+   ─────────────────────────────────────────────────────────────────────────── */
+const QUALIFICATIONS = [
+  { Icon: MapPin, label: "Homeowner is located in your service area." },
+  { Icon: Target, label: "Has a real need and expressed interest in floor coating." },
+  { Icon: Ruler, label: "Fits your scope.", detail: "The job size and job budget fits." },
+  { Icon: CalendarClock, label: "Agreed upon time for an estimate that fits your calendar." },
 ];
 
 /* ── BOOKED CALENDAR ─────────────────────────────────────────────────────────
@@ -457,12 +468,20 @@ export default function LanderPage() {
           <h2>
             What a <span className="hl">qualified appointment</span> means.
           </h2>
-          <p className="sub">
-            We don&apos;t book junk to hit a number. A qualified appointment is a
-            verified homeowner in your service area who wants the work, fits your
-            scope and budget, and has agreed to an estimate time that fits your
-            calendar. If it&apos;s not all of that, we don&apos;t book it.
-          </p>
+          <ul className="quallist">
+            {QUALIFICATIONS.map((q) => {
+              const Icon = q.Icon;
+              return (
+                <li className="qualrow" key={q.label}>
+                  <span className="qualicon"><Icon aria-hidden /></span>
+                  <span className="qualtext">
+                    <span className="quallabel">{q.label}</span>
+                    {q.detail ? <span className="qualdetail">{q.detail}</span> : null}
+                  </span>
+                </li>
+              );
+            })}
+          </ul>
           <div className="shotrow two">
             <figure className="shotfig">
               {/* Replace with <div className="shot"><img src="/images/proof/text-thread.png" alt="Speed-to-lead text exchange with a homeowner" /></div> */}
