@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
-import { Fragment } from "react";
+import { Fragment, type ReactNode } from "react";
 import {
-  Star, Plus, CalendarCheck, Check, X, ImageIcon,
+  Star, Plus, CalendarCheck, Check, X,
   Target, User, Shield, CreditCard, Clock, Lock, LineChart,
   Banknote, PhoneCall, Filter, Handshake, MapPin, Ruler, CalendarClock,
 } from "lucide-react";
@@ -307,11 +307,89 @@ function FeaturedQuote({ t }: { t: Testimonial }) {
   );
 }
 
+/* ── PHONE-CALL TRANSCRIPT ───────────────────────────────────────────────────
+   A recorded-call graphic, deliberately NOT a text thread: a dark call header
+   with phone icon, live "connected" dot and an inline waveform, then speaker-
+   labelled transcript lines. [area]/[street] are styled, anonymized slots.
+   ─────────────────────────────────────────────────────────────────────────── */
+const CALL_LINES: { who: "sarah" | "linda"; speaker: string; text: ReactNode }[] = [
+  { who: "sarah", speaker: "Sarah · Appointly", text: <>Hi Linda, calling about the garage floor coating you just looked into. Is this for your own home?</> },
+  { who: "linda", speaker: "Linda · Homeowner", text: <>Yep, we own it. Two car garage, pretty rough.</> },
+  { who: "sarah", speaker: "Sarah · Appointly", text: <>Perfect, that&apos;s exactly what they handle. You&apos;re over in <span className="callslot">[area]</span>?</> },
+  { who: "linda", speaker: "Linda · Homeowner", text: <>Right off <span className="callslot">[street]</span>.</> },
+  { who: "sarah", speaker: "Sarah · Appointly", text: <>Great. I&apos;ve got Thursday at 10 for a free estimate. Work for you?</> },
+  { who: "linda", speaker: "Linda · Homeowner", text: <>Thursday works.</> },
+  { who: "sarah", speaker: "Sarah · Appointly", text: <>Done. Mike will call when he&apos;s on his way.</> },
+  { who: "linda", speaker: "Linda · Homeowner", text: <>Sounds great, thanks.</> },
+];
+
+const CALL_CHECKS = ["Homeowner", "Real project", "In service area", "Time locked"];
+
+// Bar heights (out of 24) for the inline call-recording waveform accent.
+const CALL_WAVE = [6, 13, 19, 9, 23, 14, 8, 17, 21, 10, 15, 7, 13, 9, 18, 11];
+
+function CallTranscript() {
+  return (
+    <figure className="shotfig">
+      <div className="callcard">
+        <div className="callhd">
+          <span className="callphone" aria-hidden>
+            <PhoneCall />
+          </span>
+          <span className="callmeta">
+            <span className="calltitle">Connected in 47 seconds</span>
+            <span className="callstatus">
+              <span className="calllive" aria-hidden /> Recorded call
+            </span>
+          </span>
+          <svg className="callwave" viewBox="0 0 84 24" aria-hidden role="presentation">
+            {CALL_WAVE.map((h, i) => (
+              <rect key={i} x={i * 5} y={(24 - h) / 2} width="2.6" height={h} rx="1.3" />
+            ))}
+          </svg>
+        </div>
+
+        <div className="calllog">
+          {CALL_LINES.map((l, i) => (
+            <div className={`callline ${l.who}`} key={i}>
+              <span className="callspk">{l.speaker}</span>
+              <p className="callsay">{l.text}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="callchecks">
+          {CALL_CHECKS.map((c) => (
+            <span className="callchk" key={c}>
+              <Check aria-hidden /> {c}
+            </span>
+          ))}
+        </div>
+      </div>
+      <figcaption>
+        This is every appointment, before it ever reaches your calendar. We call
+        in under a minute, qualify on the spot, and only book homeowners ready
+        for a real estimate.
+      </figcaption>
+    </figure>
+  );
+}
+
 export default function LanderPage() {
   // The three real, photo'd clients, featured beside the claims they back up.
   const tMark = TESTIMONIALS[0]; // AFAB Services
   const tAndre = TESTIMONIALS[1]; // Great Lakes Elite Coatings
-  const tCarlos = TESTIMONIALS[2]; // Diamond Group
+
+  // Quote paired with the phone-call transcript in the appointment-quality row.
+  const tQuality: Testimonial = {
+    name: "Mark T",
+    who: "AFAB Services",
+    where: "Port St Lucie, FL",
+    stat: "No more tire kickers",
+    quote:
+      "By the time I show up, they already know they want it. I'm just there to give the number.",
+    photo: tMark.photo,
+  };
 
   return (
     <div className="dscroll">
@@ -482,16 +560,15 @@ export default function LanderPage() {
               );
             })}
           </ul>
+          <div className="qproofhead">
+            <p className="eyebrow">Appointment quality</p>
+            <h3>
+              We turn away more homeowners than <span className="hl">we book.</span>
+            </h3>
+          </div>
           <div className="shotrow two">
-            <figure className="shotfig">
-              {/* Replace with <div className="shot"><img src="/images/proof/text-thread.png" alt="Speed-to-lead text exchange with a homeowner" /></div> */}
-              <div className="shot ph">
-                <ImageIcon className="shicon" aria-hidden />
-                <span className="shlabel">Screenshot: a real homeowner text exchange</span>
-              </div>
-              <figcaption>How we reach and qualify a homeowner within 60 seconds of them raising their hand.</figcaption>
-            </figure>
-            <FeaturedQuote t={tCarlos} />
+            <CallTranscript />
+            <FeaturedQuote t={tQuality} />
           </div>
         </div>
       </section>
