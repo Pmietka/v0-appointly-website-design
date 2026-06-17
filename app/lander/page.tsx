@@ -328,14 +328,34 @@ const CALL_CHECKS = ["Homeowner", "Real project", "In service area", "Time locke
 // Bar heights (out of 24) for the inline call-recording waveform accent.
 const CALL_WAVE = [6, 13, 19, 9, 23, 14, 8, 17, 21, 10, 15, 7, 13, 9, 18, 11];
 
-/* Supporting band under the two proof cards: who's actually making the calls. */
-const QUAL_BAR = [
-  { Icon: MessageCircle, label: "Native English speakers" },
-  { Icon: Phone, label: "1,000s of calls taken" },
-  { Icon: Award, label: "Trained sales professionals" },
-  { Icon: CalendarSync, label: "We handle reschedules" },
-  { Icon: Megaphone, label: "We presell your services" },
+/* Phone-team block (under the founders): a villain-vs-us contrast, grayscale.
+   The stakes come first, then the proof points pay them off. */
+const PHONE_LOSE = [
+  "A cheap call center reading a script",
+  "Mispronounces your business, sounds offshore",
+  "Books anyone to hit a quota",
+  "Your customer's first impression of you, wasted",
 ];
+const PHONE_WIN = [
+  "A trained closer who sounds like your company",
+  "Native English speakers, no friction",
+  "Presells your service so they arrive half sold",
+  "Only books the homeowners actually ready to buy",
+];
+
+// Each credential reframed with a close-rate payoff line.
+const PHONE_CREDS = [
+  { Icon: Award, label: "Trained sales professionals", payoff: "Not a call center, your brand sounds the part" },
+  { Icon: Phone, label: "1,000s of calls taken", payoff: "They know how to handle a hesitant homeowner" },
+  { Icon: Megaphone, label: "We presell your services", payoff: "Prospects arrive half sold, you close easier" },
+  { Icon: MessageCircle, label: "Native English speakers", payoff: "No friction, no “let me transfer you”" },
+  { Icon: CalendarSync, label: "We handle reschedules", payoff: "We chase the flakes so your calendar stays full" },
+];
+
+/* Optional team-on-the-phones photo. Leave empty to collapse the slot cleanly;
+   set to a real image path (e.g. "/images/team/phones.jpg") to show it. Never a
+   stock photo. */
+const PHONE_TEAM_PHOTO = "";
 
 function CallTranscript() {
   return (
@@ -621,19 +641,60 @@ export default function LanderPage() {
             </article>
           </div>
 
-          {/* Part two: who's on the phone — intentionally grayscale, no green,
-              so it reads as a distinct second half of this section. */}
+          {/* Part two: who's on the phone — intentionally grayscale, no green.
+              Stakes first (villain vs us), then the proof points pay them off. */}
           <div className="phoneteam">
-            <h3 className="phoneteamhd">
-              Who is representing your company over the phone.
-            </h3>
-            <ul className="phonecreds">
-              {QUAL_BAR.map((q) => {
-                const Icon = q.Icon;
+            <div className="pthead">
+              <h3 className="ptheadline">
+                The person on the phone can win or lose the job before you ever
+                show up.
+              </h3>
+              <p className="ptsub">
+                Most agencies hand your customers to a cheap call center and
+                quietly cost you deals. We put trained closers on every call, so
+                homeowners show up warmer and you close more of them.
+              </p>
+            </div>
+
+            <div className={PHONE_TEAM_PHOTO ? "ptbody haspic" : "ptbody"}>
+              <div className="ptcontrast">
+                <div className="ptcol lose">
+                  <p className="ptcolhd">What most agencies put on the phone</p>
+                  <ul>
+                    {PHONE_LOSE.map((t) => (
+                      <li key={t}><X className="ptmark" aria-hidden /><span>{t}</span></li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="ptcol win">
+                  <p className="ptcolhd">What we put on the phone</p>
+                  <ul>
+                    {PHONE_WIN.map((t) => (
+                      <li key={t}><Check className="ptmark" aria-hidden /><span>{t}</span></li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              {/* Optional team photo — beside the contrast on desktop, stacked on
+                  mobile. Collapses entirely when PHONE_TEAM_PHOTO is empty. */}
+              {PHONE_TEAM_PHOTO ? (
+                <figure className="ptphoto">
+                  <img src={PHONE_TEAM_PHOTO} alt="Our team taking homeowner calls" loading="lazy" />
+                </figure>
+              ) : null}
+            </div>
+
+            <ul className="ptproof">
+              {PHONE_CREDS.map((c) => {
+                const Icon = c.Icon;
                 return (
-                  <li className="phonecred" key={q.label}>
-                    <span className="phonecredicon"><Icon aria-hidden /></span>
-                    <span className="phonecredlabel">{q.label}</span>
+                  <li className="ptproofitem" key={c.label}>
+                    <span className="ptprooficon"><Icon aria-hidden /></span>
+                    <span className="ptprooftext">
+                      <span className="ptprooflabel">{c.label}</span>
+                      <span className="ptproofpayoff">{c.payoff}</span>
+                    </span>
                   </li>
                 );
               })}
