@@ -66,6 +66,19 @@
 .dscroll .tcard .tstat{font-size:13.5px;font-weight:600;color:#0f766e;background:#ecfdf5;border-radius:8px;
   padding:7px 11px;align-self:flex-start}
 
+/* clean text-only quote card (no gray-initial avatar) — sits in the same masonry */
+.dscroll .qcard{break-inside:avoid;-webkit-column-break-inside:avoid;margin-bottom:clamp(14px,2.5vw,18px);
+  background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(20px,3vw,26px);
+  display:flex;flex-direction:column;gap:12px;box-shadow:0 14px 36px -30px rgba(0,0,0,.22)}
+.dscroll .qcard .stars{display:flex;gap:3px;color:#f59e0b}
+.dscroll .qcard .stars .ci{width:18px;height:18px;fill:#f59e0b}
+.dscroll .qcard .tquote{font-size:clamp(15px,2.1vw,17px);line-height:1.55;color:var(--ink)}
+.dscroll .qcard .tstat{font-size:13.5px;font-weight:600;color:#0f766e;background:#ecfdf5;border-radius:8px;
+  padding:5px 10px;align-self:flex-start}
+.dscroll .qcard .qattr{display:flex;flex-direction:column;gap:2px;margin-top:2px}
+.dscroll .qcard .qname{font-size:15px;font-weight:700;letter-spacing:-.01em;line-height:1.2;color:var(--ink)}
+.dscroll .qcard .qwho{font-size:13px;color:var(--ink-4)}
+
 /* little stat strip above the wall */
 .dscroll .wallstats{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(20px,5vw,56px);margin-top:clamp(26px,4vw,36px)}
 .dscroll .wallstats .ws{display:flex;flex-direction:column;align-items:center;gap:4px}
@@ -360,6 +373,9 @@
 .dscroll .vthumb{position:relative;aspect-ratio:16/9;background:#0c0c0c;cursor:pointer;display:block;width:100%;border:0}
 .dscroll .vthumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.82}
 .dscroll .vthumb iframe,.dscroll .vthumb video{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
+/* portrait clips (e.g. Adrian) show in full, letterboxed on the card's dark bg */
+.dscroll .vthumb .vvideo{object-fit:contain;background:#0c0c0c}
+.dscroll .vthumb-btn{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;background:#0c0c0c;cursor:pointer}
 .dscroll .vbadge{position:absolute;top:14px;left:14px;z-index:2;display:inline-flex;align-items:center;gap:6px;
   background:rgba(0,0,0,.62);color:#fff;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
   padding:6px 11px;border-radius:8px;backdrop-filter:blur(4px)}

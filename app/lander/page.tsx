@@ -135,15 +135,19 @@ const FAQ = [
    ─────────────────────────────────────────────────────────────────────────── */
 export type Testimonial = {
   name: string;
-  who: string;
-  where: string;
+  who?: string;
+  where?: string;
   stat?: string;
   quote: string;
   photo?: string;
-  video?: boolean; // renders as the highlighted video testimonial at the top of the wall
+  video?: boolean;    // renders as a video card (matches the Mark/Adrian clip style)
+  videoSrc?: string;  // mp4 source for a real, playable video card
+  poster?: string;    // poster frame for the video card
+  featured?: boolean; // keep in the top media group even without a photo (e.g. photo pending)
 };
 
 const TESTIMONIALS: Testimonial[] = [
+  /* ── Featured cards with media (rendered up top) ─────────────────────────── */
   {
     name: "Mark T.",
     who: "AFAB Services",
@@ -154,14 +158,6 @@ const TESTIMONIALS: Testimonial[] = [
     photo: "/images/proof/mark-afab.webp",
   },
   {
-    name: "Andre S.",
-    who: "Great Lakes Elite Coatings",
-    where: "Chicago, IL",
-    stat: "8 new jobs in his second month",
-    quote: "The appointments were already warmed up. I just showed up and closed.",
-    photo: "/images/proof/andre.webp",
-  },
-  {
     name: "Carlos V.",
     who: "Diamond Group",
     where: "Portland, OR",
@@ -170,70 +166,66 @@ const TESTIMONIALS: Testimonial[] = [
     photo: "/images/proof/carlos-team.webp",
   },
   {
-    name: "Devin R.",
-    who: "Floor Coating Co.",
-    where: "Dallas Fort Worth, TX",
-    quote:
-      "I stopped buying leads months ago. These are actual booked appointments with people expecting me.",
-  },
-  {
-    name: "Tony M.",
-    who: "Premier Surfaces",
-    where: "Grand Rapids, MI",
-    stat: "Calendar full 3 weeks out",
-    quote:
-      "First week we booked five estimates. I didn't make a single phone call to chase anyone down.",
-  },
-  {
-    name: "Sam K.",
-    who: "Coastal Coatings",
-    where: "Coastal Florida",
-    quote:
-      "The speed to lead is unreal. They're calling the homeowner before I even see the notification.",
-  },
-  {
-    name: "Brian L.",
-    who: "Elite Epoxy",
-    where: "Portland, OR",
-    quote:
-      "No more flaky shared leads sold to ten other guys. Every appointment is mine and it's qualified.",
-  },
-  {
-    name: "Jose A.",
-    who: "Garage Pros",
+    name: "Andre S.",
+    who: "Great Lakes Elite Coatings",
     where: "Chicago, IL",
-    stat: "ROI positive in month one",
+    stat: "8 new jobs in his second month",
     quote:
-      "I was skeptical about paying per appointment. Then I closed the first two and did the math. It's a no brainer.",
+      "By the time I show up, they already know they want it. I'm just there to give the number.",
+    photo: "/images/proof/andre.webp",
   },
   {
-    name: "Will D.",
-    who: "Diamond Group",
-    where: "Dallas Fort Worth, TX",
-    quote:
-      "They handle the reschedules and the confirmations. I just show up and the homeowner is ready to buy.",
+    // FLAG: Dave's photo + profile are NOT in the project. Rendering with the
+    // initials fallback until a real photo (e.g. /images/proof/dave.webp) is added.
+    name: "Dave",
+    featured: true,
+    quote: "The appointments were already warmed up. I just showed up and closed.",
   },
   {
-    name: "Ray P.",
-    who: "Summit Floor Systems",
-    where: "Denver, CO",
-    stat: "Closed 3 of his first 4 appointments",
+    // Video testimonial — clip + poster generated from the uploaded .MOV.
+    // No spoken-quote text was provided, so the card shows the clip + name only.
+    name: "Adrian",
+    video: true,
+    videoSrc: "/videos/adrian.mp4",
+    poster: "/images/proof/adrian-poster.jpg",
+    quote: "",
+  },
+
+  /* ── Text-only cards (below; hard numbers first) ─────────────────────────── */
+  {
+    name: "Nate",
     quote:
-      "Every one of them already knew who I was and what I do. That's never happened with leads I bought.",
+      "As you know, I track all my business data. After a slow first few weeks, over the last 2 months I'm at a 58% close rate from your appointments, which is about on par with my own warm leads. You just give me a lot more volume.",
   },
   {
-    name: "Hector G.",
-    who: "Ironclad Coatings",
-    where: "Phoenix, AZ",
-    quote:
-      "I used to burn whole evenings calling dead numbers. Now my calendar just fills up while I'm on the job.",
+    name: "Viktor",
+    quote: "I closed 4 of my first 7 appointments.",
   },
   {
-    name: "Nate W.",
-    who: "Bluewater Surfaces",
-    where: "Tampa, FL",
+    name: "Jose",
     quote:
-      "The qualification is what sold me. They don't book tire-kickers. Every appointment is a real buyer.",
+      "After closing 4 jobs the first month, I've got 2 more this month that will cross the line, and I'm already at 5 jobs with 8 days left.",
+  },
+  {
+    // FLAG: "market shown" was requested for Kyle but no city/company was given.
+    // Shown without a market line for now to avoid inventing one.
+    name: "Kyle T.",
+    quote:
+      "Great. I'm closing one of them for sure, and the other one will close too, he might just take a couple weeks.",
+  },
+  {
+    name: "Sam",
+    quote:
+      "Besides a few people, pretty much everyone has been as good as you can get. We need to get more of them, because these are great.",
+  },
+  {
+    name: "Will",
+    quote:
+      "Yeah dude, I really don't have to do much. I show up, we do the estimate, and it usually goes really well. They're pretty warmed up.",
+  },
+  {
+    name: "Max",
+    quote: "My calendar is full. Hasn't been this way all year.",
   },
 ];
 
@@ -300,7 +292,9 @@ function FeaturedQuote({ t }: { t: Testimonial }) {
         )}
         <span className="fwho">
           <strong>{t.name}</strong>
-          <span className="fwsub">{t.who} &middot; {t.where}</span>
+          {(t.who || t.where) && (
+            <span className="fwsub">{[t.who, t.where].filter(Boolean).join(" · ")}</span>
+          )}
         </span>
         {t.stat && <span className="fstat">{t.stat}</span>}
       </figcaption>
@@ -406,8 +400,16 @@ function CallTranscript() {
 
 export default function LanderPage() {
   // The three real, photo'd clients, featured beside the claims they back up.
-  const tMark = TESTIMONIALS[0]; // AFAB Services
-  const tAndre = TESTIMONIALS[1]; // Great Lakes Elite Coatings
+  const tMark = TESTIMONIALS.find((t) => t.name === "Mark T.")!; // AFAB Services
+  const tAndre = TESTIMONIALS.find((t) => t.name === "Andre S.")!; // Great Lakes Elite Coatings
+
+  // How-it-works featured quote — this line is Dave's, not Andre's.
+  // FLAG: Dave's photo + profile aren't in the project, so this renders with the
+  // initials fallback and no company/market line until his assets are added.
+  const tDave: Testimonial = {
+    name: "Dave",
+    quote: "The appointments were already warmed up. I just showed up and closed.",
+  };
 
   // Quote paired with the phone-call transcript in the appointment-quality row.
   const tQuality: Testimonial = {
@@ -564,7 +566,7 @@ export default function LanderPage() {
             </figure>
           </div>
 
-          <FeaturedQuote t={tAndre} />
+          <FeaturedQuote t={tDave} />
         </div>
       </section>
 
