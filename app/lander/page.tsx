@@ -175,11 +175,9 @@ const TESTIMONIALS: Testimonial[] = [
     photo: "/images/proof/andre.webp",
   },
   {
-    // FLAG: Dave's photo + profile are NOT in the project. Rendering with the
-    // initials fallback until a real photo (e.g. /images/proof/dave.webp) is added.
     name: "Dave",
-    featured: true,
     quote: "The appointments were already warmed up. I just showed up and closed.",
+    photo: "/images/proof/dave.webp",
   },
   {
     // Video testimonial — clip + poster generated from the uploaded .MOV.
@@ -403,11 +401,10 @@ export default function LanderPage() {
   const tAndre = TESTIMONIALS.find((t) => t.name === "Andre S.")!; // Great Lakes Elite Coatings
 
   // How-it-works featured quote — this line is Dave's, not Andre's.
-  // FLAG: Dave's photo + profile aren't in the project, so this renders with the
-  // initials fallback and no company/market line until his assets are added.
   const tDave: Testimonial = {
     name: "Dave",
     quote: "The appointments were already warmed up. I just showed up and closed.",
+    photo: "/images/proof/dave.webp",
   };
 
   // Quote paired with the phone-call transcript in the appointment-quality row.
