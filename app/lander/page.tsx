@@ -207,8 +207,7 @@ const TESTIMONIALS: Testimonial[] = [
       "After closing 4 jobs the first month, I've got 2 more this month that will cross the line, and I'm already at 5 jobs with 8 days left.",
   },
   {
-    // FLAG: "market shown" was requested for Kyle but no city/company was given.
-    // Shown without a market line for now to avoid inventing one.
+    // Per client: Kyle does not need a market line — first name + last initial only.
     name: "Kyle T.",
     quote:
       "Great. I'm closing one of them for sure, and the other one will close too, he might just take a couple weeks.",
