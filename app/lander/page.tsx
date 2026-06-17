@@ -580,22 +580,69 @@ export default function LanderPage() {
             <CallTranscript />
             <FeaturedQuote t={tQuality} />
           </div>
-
-          <ul className="qualbar">
-            {QUAL_BAR.map((q) => {
-              const Icon = q.Icon;
-              return (
-                <li className="qualbaritem" key={q.label}>
-                  <span className="qualbaricon"><Icon aria-hidden /></span>
-                  <span className="qualbarlabel">{q.label}</span>
-                </li>
-              );
-            })}
-          </ul>
         </div>
       </section>
 
-      {/* 7 · Why us over a lead company (reuses the homepage comparison) */}
+      {/* 7 · Who you're actually talking to — moved directly under Appointment Quality */}
+      <section className="sec tint" id="founders">
+        <div className="wrap">
+          <p className="eyebrow">Who you&apos;re actually talking to</p>
+          <h2>
+            Two hungry entrepreneurial brothers <span className="hl">from Chicago.</span>
+          </h2>
+          <p className="sub">
+            We&apos;re both finance majors with years of experience growing
+            businesses, and the exact people you want treating your business like
+            their own.
+          </p>
+          <div className="founders">
+            <article className="founder">
+              <img className="fphoto" src="/images/team/jacob.jpg" alt="Jacob Mietka, co-founder of Appointly Solutions" width={150} height={150} loading="lazy" />
+              <div>
+                <div className="fname">Jacob Mietka</div>
+                <div className="frole">Co-founder</div>
+                <p className="fbio">
+                  Leads the speed to lead and booking side. Sales manager.
+                  He&apos;ll talk to you about your business and market.
+                  Responsible for scaling 20+ home service businesses.
+                </p>
+              </div>
+            </article>
+            <article className="founder">
+              <img className="fphoto" src="/images/team/patrick.jpg" alt="Patrick Mietka, co-founder of Appointly Solutions" width={150} height={150} loading="lazy" />
+              <div>
+                <div className="fname">Patrick Mietka</div>
+                <div className="frole">Co-founder</div>
+                <p className="fbio">
+                  Runs the campaigns and the numbers. The person making sure the ad
+                  spend we front turns into estimates on your calendar.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          {/* Part two: who's on the phone — intentionally grayscale, no green,
+              so it reads as a distinct second half of this section. */}
+          <div className="phoneteam">
+            <h3 className="phoneteamhd">
+              Who is representing your company over the phone.
+            </h3>
+            <ul className="phonecreds">
+              {QUAL_BAR.map((q) => {
+                const Icon = q.Icon;
+                return (
+                  <li className="phonecred" key={q.label}>
+                    <span className="phonecredicon"><Icon aria-hidden /></span>
+                    <span className="phonecredlabel">{q.label}</span>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* 8 · Why us over a lead company (reuses the homepage comparison) */}
       <section className="sec tint cmpsec" id="why-us">
         <div className="wrap">
           <p className="cmpeyebrow">Compare the options</p>
@@ -662,7 +709,7 @@ export default function LanderPage() {
         </div>
       </section>
 
-      {/* 8 · The wall of proof — for the people who want to binge evidence */}
+      {/* 9 · The wall of proof — for the people who want to binge evidence */}
       <section className="sec" id="wall">
         <div className="wrap wallhead">
           <h2>
@@ -676,45 +723,6 @@ export default function LanderPage() {
 
         <div className="wrap">
           <TestimonialWall items={TESTIMONIALS} />
-        </div>
-      </section>
-
-      {/* 9 · Who you're actually talking to */}
-      <section className="sec tint" id="founders">
-        <div className="wrap">
-          <p className="eyebrow">Who you&apos;re actually talking to</p>
-          <h2>
-            Two brothers from Chicago, <span className="hl">not a faceless agency.</span>
-          </h2>
-          <p className="sub">
-            We built Appointly out of frustration with agencies that charge big
-            retainers and deliver nothing. So we tied most of your spend to booked
-            estimates you can actually show up to and close.
-          </p>
-          <div className="founders">
-            <article className="founder">
-              <img className="fphoto" src="/images/team/jacob.jpg" alt="Jacob Mietka, co-founder of Appointly Solutions" width={104} height={104} loading="lazy" />
-              <div>
-                <div className="fname">Jacob Mietka</div>
-                <div className="frole">Co-founder</div>
-                <p className="fbio">
-                  Leads the speed-to-lead and booking side. He&apos;ll likely be the
-                  one you talk to about your market and your numbers.
-                </p>
-              </div>
-            </article>
-            <article className="founder">
-              <img className="fphoto" src="/images/team/patrick.jpg" alt="Patrick Mietka, co-founder of Appointly Solutions" width={104} height={104} loading="lazy" />
-              <div>
-                <div className="fname">Patrick Mietka</div>
-                <div className="frole">Co-founder</div>
-                <p className="fbio">
-                  Runs the campaigns and the numbers. The person making sure the ad
-                  spend we front turns into estimates on your calendar.
-                </p>
-              </div>
-            </article>
-          </div>
         </div>
       </section>
 
