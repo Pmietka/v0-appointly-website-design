@@ -179,19 +179,37 @@
 .dscroll .callwave rect{fill:rgba(255,255,255,.85)}
 .dscroll .calllog{display:flex;flex-direction:column;gap:14px;padding:clamp(16px,3.4vw,22px)}
 .dscroll .callline{padding-left:12px;border-left:2px solid var(--line)}
-.dscroll .callline.sarah{border-left-color:#3b82f6}
-.dscroll .callline.linda{border-left-color:#10b981}
+.dscroll .callline.sarah{border-left-color:#16795c}
+.dscroll .callline.linda{border-left-color:#cbd5e1}
 .dscroll .callspk{display:block;font-size:11px;font-weight:700;letter-spacing:.04em;
   text-transform:uppercase;margin-bottom:3px}
-.dscroll .callline.sarah .callspk{color:#2563eb}
-.dscroll .callline.linda .callspk{color:#0f766e}
+.dscroll .callline.sarah .callspk{color:#0f766e}
+.dscroll .callline.linda .callspk{color:var(--ink-3)}
 .dscroll .callsay{margin:0;font-size:clamp(14px,2.1vw,15px);line-height:1.45;color:var(--ink);text-wrap:pretty}
-.dscroll .callslot{background:#eef2f7;border:1px solid var(--line);border-radius:6px;padding:0 6px;
-  color:var(--ink-3);font-weight:600;font-size:.92em;white-space:nowrap}
 .dscroll .callchecks{display:flex;flex-wrap:wrap;gap:8px 16px;padding:14px clamp(16px,3.4vw,22px);
   border-top:1px solid var(--line);background:#fbfdff}
 .dscroll .callchk{display:flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;color:var(--ink-2)}
 .dscroll .callchk svg{flex:none;width:15px;height:15px;color:#0f766e;stroke-width:2.5}
+
+/* two-card row: equal height, left wider (58/42), quote vertically centred */
+.dscroll .shotrow.qrow{align-items:stretch}
+.dscroll .qrow .shotfig{display:flex;flex-direction:column}
+.dscroll .qrow .callcard{flex:1}
+.dscroll .qrow .calllog{flex:1}
+.dscroll .qrow .fquote{height:100%;justify-content:center}
+@media(min-width:720px){.dscroll .shotrow.two.qrow{grid-template-columns:1.38fr 1fr}}
+
+/* supporting band under the cards: a single full-width row of 5 qualifiers */
+.dscroll .qualbar{list-style:none;margin:clamp(28px,5vw,44px) 0 0;padding:clamp(18px,2.6vw,24px) clamp(8px,2vw,20px);
+  display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(16px,2.4vw,22px);
+  background:#fbfdff;border:1px solid var(--line);border-radius:18px;box-shadow:0 16px 40px -32px rgba(15,23,42,.28)}
+@media(min-width:760px){.dscroll .qualbar{grid-template-columns:repeat(5,1fr)}}
+.dscroll .qualbaritem{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px}
+.dscroll .qualbaricon{width:clamp(40px,5.4vw,48px);height:clamp(40px,5.4vw,48px);border-radius:14px;
+  background:linear-gradient(135deg,#cfffae,#ace5ff);display:grid;place-items:center;color:#0f3d2e;
+  box-shadow:0 12px 24px -14px rgba(80,160,140,.55)}
+.dscroll .qualbaricon svg{width:clamp(19px,2.6vw,22px);height:clamp(19px,2.6vw,22px);stroke-width:1.9}
+.dscroll .qualbarlabel{font-size:clamp(13px,1.8vw,14.5px);font-weight:600;line-height:1.3;color:var(--ink-2)}
 
 /* ── HOW IT WORKS: icon-led steps, big graphic + a few words ──────────────── */
 .dscroll .flow{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(12px,2.2vw,18px);margin-top:clamp(28px,5vw,44px)}

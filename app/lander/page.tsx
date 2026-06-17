@@ -1,9 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { Fragment, type ReactNode } from "react";
+import { Fragment } from "react";
 import {
   Star, Plus, CalendarCheck, Check, X,
   Target, User, Shield, CreditCard, Clock, Lock, LineChart,
   Banknote, PhoneCall, Filter, Handshake, MapPin, Ruler, CalendarClock,
+  MessageCircle, Phone, Award, CalendarSync, Megaphone,
 } from "lucide-react";
 
 import { TestimonialWall } from "./testimonial-wall";
@@ -310,23 +311,31 @@ function FeaturedQuote({ t }: { t: Testimonial }) {
 /* ── PHONE-CALL TRANSCRIPT ───────────────────────────────────────────────────
    A recorded-call graphic, deliberately NOT a text thread: a dark call header
    with phone icon, live "connected" dot and an inline waveform, then speaker-
-   labelled transcript lines. [area]/[street] are styled, anonymized slots.
+   labelled transcript lines. Appointly lines read brand green, homeowner lines
+   neutral — two colours only, no chat bubbles.
    ─────────────────────────────────────────────────────────────────────────── */
-const CALL_LINES: { who: "sarah" | "linda"; speaker: string; text: ReactNode }[] = [
-  { who: "sarah", speaker: "Sarah · Appointly", text: <>Hi Linda, calling about the garage floor coating you just looked into. Is this for your own home?</> },
-  { who: "linda", speaker: "Linda · Homeowner", text: <>Yep, we own it. Two car garage, pretty rough.</> },
-  { who: "sarah", speaker: "Sarah · Appointly", text: <>Perfect, that&apos;s exactly what they handle. You&apos;re over in <span className="callslot">[area]</span>?</> },
-  { who: "linda", speaker: "Linda · Homeowner", text: <>Right off <span className="callslot">[street]</span>.</> },
-  { who: "sarah", speaker: "Sarah · Appointly", text: <>Great. I&apos;ve got Thursday at 10 for a free estimate. Work for you?</> },
-  { who: "linda", speaker: "Linda · Homeowner", text: <>Thursday works.</> },
-  { who: "sarah", speaker: "Sarah · Appointly", text: <>Done. Mike will call when he&apos;s on his way.</> },
-  { who: "linda", speaker: "Linda · Homeowner", text: <>Sounds great, thanks.</> },
+const CALL_LINES: { who: "sarah" | "linda"; speaker: string; text: string }[] = [
+  { who: "sarah", speaker: "Sarah · Appointly", text: "What's got you interested in getting the garage coated?" },
+  { who: "linda", speaker: "Linda · Homeowner", text: "It's been peeling for years, we finally want it done right." },
+  { who: "sarah", speaker: "Sarah · Appointly", text: "Got it. And what were you looking to have done?" },
+  { who: "linda", speaker: "Linda · Homeowner", text: "The whole two car garage, something durable." },
+  { who: "sarah", speaker: "Sarah · Appointly", text: "Great. We have availability at 6 on Tuesday or 5 on Wednesday. We'll bring samples and give you an exact estimate." },
+  { who: "linda", speaker: "Linda · Homeowner", text: "Tuesday at 6 works for us." },
 ];
 
 const CALL_CHECKS = ["Homeowner", "Real project", "In service area", "Time locked"];
 
 // Bar heights (out of 24) for the inline call-recording waveform accent.
 const CALL_WAVE = [6, 13, 19, 9, 23, 14, 8, 17, 21, 10, 15, 7, 13, 9, 18, 11];
+
+/* Supporting band under the two proof cards: who's actually making the calls. */
+const QUAL_BAR = [
+  { Icon: MessageCircle, label: "Native English speakers" },
+  { Icon: Phone, label: "1,000s of calls taken" },
+  { Icon: Award, label: "Trained sales professionals" },
+  { Icon: CalendarSync, label: "We handle reschedules" },
+  { Icon: Megaphone, label: "We presell your services" },
+];
 
 function CallTranscript() {
   return (
@@ -382,13 +391,13 @@ export default function LanderPage() {
 
   // Quote paired with the phone-call transcript in the appointment-quality row.
   const tQuality: Testimonial = {
-    name: "Mark T",
-    who: "AFAB Services",
-    where: "Port St Lucie, FL",
+    name: "Andre",
+    who: "Great Lakes Elite Coatings",
+    where: "Chicago suburbs",
     stat: "No more tire kickers",
     quote:
       "By the time I show up, they already know they want it. I'm just there to give the number.",
-    photo: tMark.photo,
+    photo: tAndre.photo,
   };
 
   return (
@@ -563,13 +572,26 @@ export default function LanderPage() {
           <div className="qproofhead">
             <p className="eyebrow">Appointment quality</p>
             <h3>
-              We turn away more homeowners than <span className="hl">we book.</span>
+              Our professional team only books the appointments{" "}
+              <span className="hl">you&apos;d book yourself.</span>
             </h3>
           </div>
-          <div className="shotrow two">
+          <div className="shotrow two qrow">
             <CallTranscript />
             <FeaturedQuote t={tQuality} />
           </div>
+
+          <ul className="qualbar">
+            {QUAL_BAR.map((q) => {
+              const Icon = q.Icon;
+              return (
+                <li className="qualbaritem" key={q.label}>
+                  <span className="qualbaricon"><Icon aria-hidden /></span>
+                  <span className="qualbarlabel">{q.label}</span>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </section>
 
