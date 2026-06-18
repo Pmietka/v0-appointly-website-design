@@ -16,8 +16,8 @@ import { VidalyticsPlayer } from "../lander/vidalytics-player";
 // GoHighLevel survey widget (the qualifier + lead capture). GHL captures the
 // lead inside the iframe, so every contractor who submits feeds the GHL
 // recovery sequence even if they do not finish booking.
-const SURVEY_BASE = "https://link.getappointly.co/widget/survey/pHjOTCm6PhMSXdHi5VPO";
-const SURVEY_ID = "pHjOTCm6PhMSXdHi5VPO";
+const SURVEY_BASE = "https://link.getappointly.co/widget/survey/0Cl9xV4Y7IC3zYZzSzV5";
+const SURVEY_ID = "0Cl9xV4Y7IC3zYZzSzV5";
 
 // GoHighLevel booking widget (the calendar that captures the bookers).
 const CALENDAR_SRC = "https://link.getappointly.co/widget/booking/U3zYpjFagC8HFqQw21rC";
