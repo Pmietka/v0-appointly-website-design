@@ -205,6 +205,13 @@ const COMPARE_ROWS = [
 export default function ApplyClient() {
   const leadFired = useRef(false);
   const [surveyOpen, setSurveyOpen] = useState(false);
+  const [surveyDone, setSurveyDone] = useState(false);
+
+  // Open the survey fresh each time (reset back to the survey, not the calendar).
+  function openSurvey() {
+    setSurveyDone(false);
+    setSurveyOpen(true);
+  }
 
   // While the survey popup is open, lock body scroll and close it on Escape.
   useEffect(() => {
@@ -239,11 +246,8 @@ export default function ApplyClient() {
         (window as any).fbq("track", "Lead");
       }
 
-      // Close the popup and reveal the booking calendar.
-      setSurveyOpen(false);
-      window.setTimeout(() => {
-        document.getElementById("book")?.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 150);
+      // Swap the popup from the survey to the booking calendar.
+      setSurveyDone(true);
     }
     window.addEventListener("message", onMessage);
     return () => window.removeEventListener("message", onMessage);
@@ -294,7 +298,7 @@ export default function ApplyClient() {
                 contractor per market. Answer a few quick questions, then pick a
                 time. We will confirm on the call whether your area is open.
               </p>
-              <button type="button" className="ctabtn" onClick={() => setSurveyOpen(true)}>
+              <button type="button" className="ctabtn" onClick={openSurvey}>
                 <span className="ctabtn-top">Check Availability</span>
                 <span className="ctabtn-main">Yes! I&apos;d Like a Pipeline Full of Estimates</span>
               </button>
@@ -303,9 +307,6 @@ export default function ApplyClient() {
                   <span className="trustbadge" key={b}><Check aria-hidden /> {b}</span>
                 ))}
               </div>
-              <p className="formhint">
-                Already ready to book? <a href="#book">Pick a time below.</a>
-              </p>
             </div>
           </div>
         </div>
@@ -354,7 +355,7 @@ export default function ApplyClient() {
               We take one floor coating contractor per market. Find out if yours
               is still open before someone else claims it.
             </p>
-            <button type="button" className="ctabtn ctabtn-inline" onClick={() => setSurveyOpen(true)}>
+            <button type="button" className="ctabtn ctabtn-inline" onClick={openSurvey}>
               <span className="ctabtn-top">Check Availability</span>
               <span className="ctabtn-main">Claim Your Market</span>
             </button>
@@ -452,17 +453,19 @@ export default function ApplyClient() {
         </div>
       </section>
 
-      {/* Closing CTA, the booking calendar */}
+      {/* Closing CTA. Opens the survey; the calendar follows on submit. */}
       <section className="sec tint" id="book">
         <div className="wrap wallhead">
           <h2>Ready to <span className="hl">fill your calendar?</span></h2>
           <p className="wallsub">
-            Book your strategy call. About 20 minutes &middot; No obligation &middot; By application only.
+            Answer a few quick questions, then book your strategy call. About 20
+            minutes &middot; No obligation &middot; By application only.
           </p>
-        </div>
-        <div className="wrap">
-          <div className="calwrap">
-            <GhlCalendar />
+          <div className="closingcta">
+            <button type="button" className="ctabtn ctabtn-inline" onClick={openSurvey}>
+              <span className="ctabtn-top">Check Availability</span>
+              <span className="ctabtn-main">Yes! I&apos;d Like a Pipeline Full of Estimates</span>
+            </button>
           </div>
         </div>
       </section>
@@ -488,7 +491,14 @@ export default function ApplyClient() {
               <X aria-hidden />
             </button>
             <div className="svmodal-body">
-              <GhlSurvey />
+              {surveyDone ? (
+                <>
+                  <p className="svmodal-head">You&apos;re in. Now pick a time.</p>
+                  <GhlCalendar />
+                </>
+              ) : (
+                <GhlSurvey />
+              )}
             </div>
           </div>
         </div>
