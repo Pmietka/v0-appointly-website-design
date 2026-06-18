@@ -13,18 +13,12 @@ import { VidalyticsPlayer } from "../lander/vidalytics-player";
    CONFIGURABLE CONSTANTS. Edit these, nothing else, to wire the page up.
    ============================================================================ */
 
-// GoHighLevel survey widget (the qualifier + lead capture). GHL captures the
-// lead inside the iframe, so every contractor who submits feeds the GHL
-// recovery sequence even if they do not finish booking.
-const SURVEY_BASE = "https://link.getappointly.co/widget/survey/0Cl9xV4Y7IC3zYZzSzV5";
-const SURVEY_ID = "0Cl9xV4Y7IC3zYZzSzV5";
+// GoHighLevel booking widget. Every CTA on the page opens this calendar.
+const CALENDAR_BASE = "https://link.getappointly.co/widget/booking/5dpXziFD54sh4H7n0oaF";
+const CALENDAR_ID = "5dpXziFD54sh4H7n0oaF";
 
-// GoHighLevel booking widget (the calendar that captures the bookers).
-const CALENDAR_SRC = "https://link.getappointly.co/widget/booking/U3zYpjFagC8HFqQw21rC";
-const CALENDAR_ID = "U3zYpjFagC8HFqQw21rC";
-
-// GHL embed loader. Auto-resizes the scrolling="no" survey and booking iframes
-// so they show their full height with no inner scrollbar. Loaded once.
+// GHL embed loader. Auto-resizes the scrolling="no" booking iframe so it shows
+// its full height with no inner scrollbar. Loaded once.
 const GHL_EMBED_JS = "https://link.getappointly.co/js/form_embed.js";
 
 // PLACEHOLDER: paste the numeric Meta Pixel ID. I (Patrick) will paste this.
@@ -79,11 +73,11 @@ fbq('track', 'PageView');`;
 }
 
 /* ============================================================================
-   GoHighLevel embeds: survey (the qualifier form) and booking calendar.
+   GoHighLevel booking calendar embed.
    ============================================================================ */
 
-// Inject GHL's form_embed.js once. It listens for the iframes' postMessage and
-// sets their height so the survey and calendar render fully with no scrollbar.
+// Inject GHL's form_embed.js once. It listens for the iframe's postMessage and
+// sets its height so the calendar renders fully with no inner scrollbar.
 function GhlEmbedScript() {
   useEffect(() => {
     if (document.getElementById("ghl-embed-js")) return;
@@ -97,12 +91,12 @@ function GhlEmbedScript() {
   return null;
 }
 
-// Append the UTM params, the source tag, and the landing URL to the survey src
-// so attribution travels into GHL with the lead.
-// NOTE: GHL must be configured to capture these (as contact fields or as the
-// contact source). Confirm the field mapping in the survey settings.
-function surveySrc(): string {
-  if (typeof window === "undefined") return SURVEY_BASE;
+// Append the UTM params, the source tag, and the landing URL to the calendar
+// src so attribution travels into GHL with the booking.
+// NOTE: confirm GHL captures these on the booking widget (contact fields or
+// source). Extra query params are otherwise ignored.
+function withAttribution(base: string): string {
+  if (typeof window === "undefined") return base;
   const here = new URLSearchParams(window.location.search);
   const out = new URLSearchParams();
   ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"].forEach((k) => {
@@ -112,30 +106,18 @@ function surveySrc(): string {
   out.set("source", "apply-page"); // distinguishes this arm from the instant-form arm
   out.set("page_url", window.location.href);
   const qs = out.toString();
-  return qs ? `${SURVEY_BASE}?${qs}` : SURVEY_BASE;
-}
-
-function GhlSurvey() {
-  // Start from the bare src for SSR, then add attribution params on the client
-  // (avoids a hydration mismatch since window is not available on the server).
-  const [src, setSrc] = useState(SURVEY_BASE);
-  useEffect(() => setSrc(surveySrc()), []);
-  return (
-    <iframe
-      className="ghlsurvey"
-      src={src}
-      id={SURVEY_ID}
-      title="Apply for your market"
-      scrolling="no"
-    />
-  );
+  return qs ? `${base}?${qs}` : base;
 }
 
 function GhlCalendar() {
+  // Start from the bare src for SSR, then add attribution params on the client
+  // (avoids a hydration mismatch since window is not available on the server).
+  const [src, setSrc] = useState(CALENDAR_BASE);
+  useEffect(() => setSrc(withAttribution(CALENDAR_BASE)), []);
   return (
     <iframe
       className="ghlcal"
-      src={CALENDAR_SRC}
+      src={src}
       id={CALENDAR_ID}
       title="Book your strategy call"
       scrolling="no"
@@ -204,50 +186,43 @@ const COMPARE_ROWS = [
 
 export default function ApplyClient() {
   const leadFired = useRef(false);
-  const [surveyOpen, setSurveyOpen] = useState(false);
-  const [surveyDone, setSurveyDone] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
-  // Open the survey fresh each time (reset back to the survey, not the calendar).
-  function openSurvey() {
-    setSurveyDone(false);
-    setSurveyOpen(true);
+  function openCalendar() {
+    setModalOpen(true);
   }
 
-  // While the survey popup is open, lock body scroll and close it on Escape.
+  // While the calendar popup is open, lock body scroll and close it on Escape.
   useEffect(() => {
-    if (!surveyOpen) return;
+    if (!modalOpen) return;
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     function onKey(e: KeyboardEvent) {
-      if (e.key === "Escape") setSurveyOpen(false);
+      if (e.key === "Escape") setModalOpen(false);
     }
     window.addEventListener("keydown", onKey);
     return () => {
       document.body.style.overflow = prev;
       window.removeEventListener("keydown", onKey);
     };
-  }, [surveyOpen]);
+  }, [modalOpen]);
 
-  // When the GHL survey is submitted, fire the Meta Pixel Lead and move the
-  // contractor to the booking calendar. The survey is a cross-origin iframe, so
-  // we observe submission through the postMessage GHL's form_embed.js emits. The
-  // exact shape varies by GHL version, so match defensively (a submit-like
-  // message from the GHL origin). VERIFY against the live survey, and note the
-  // most reliable place to track Lead is inside GHL's own survey tracking.
+  // Fire the Meta Pixel Lead when the booking is confirmed. The calendar is a
+  // cross-origin iframe, so we observe the booking through the postMessage GHL's
+  // form_embed.js emits. The exact shape varies by GHL version, so match
+  // defensively (a submit-like message from the GHL origin) and fire at most
+  // once. VERIFY against the live calendar; the most reliable place to track a
+  // booking is inside GHL's own calendar tracking.
   useEffect(() => {
     function onMessage(e: MessageEvent) {
       if (typeof e.origin !== "string" || !e.origin.includes("getappointly.co")) return;
       const raw = typeof e.data === "string" ? e.data : JSON.stringify(e.data ?? "");
       if (!/submit/i.test(raw)) return; // resize messages do not contain "submit"
 
-      // Fire the Lead pixel once (only when a real pixel id is set).
       if (pixelReady && !leadFired.current && typeof (window as any).fbq === "function") {
         leadFired.current = true;
         (window as any).fbq("track", "Lead");
       }
-
-      // Swap the popup from the survey to the booking calendar.
-      setSurveyDone(true);
     }
     window.addEventListener("message", onMessage);
     return () => window.removeEventListener("message", onMessage);
@@ -298,7 +273,7 @@ export default function ApplyClient() {
                 contractor per market. Answer a few quick questions, then pick a
                 time. We will confirm on the call whether your area is open.
               </p>
-              <button type="button" className="ctabtn" onClick={openSurvey}>
+              <button type="button" className="ctabtn" onClick={openCalendar}>
                 <span className="ctabtn-top">Check Availability</span>
                 <span className="ctabtn-main">Yes! I&apos;d Like a Pipeline Full of Estimates</span>
               </button>
@@ -355,7 +330,7 @@ export default function ApplyClient() {
               We take one floor coating contractor per market. Find out if yours
               is still open before someone else claims it.
             </p>
-            <button type="button" className="ctabtn ctabtn-inline" onClick={openSurvey}>
+            <button type="button" className="ctabtn ctabtn-inline" onClick={openCalendar}>
               <span className="ctabtn-top">Check Availability</span>
               <span className="ctabtn-main">Claim Your Market</span>
             </button>
@@ -462,7 +437,7 @@ export default function ApplyClient() {
             minutes &middot; No obligation &middot; By application only.
           </p>
           <div className="closingcta">
-            <button type="button" className="ctabtn ctabtn-inline" onClick={openSurvey}>
+            <button type="button" className="ctabtn ctabtn-inline" onClick={openCalendar}>
               <span className="ctabtn-top">Check Availability</span>
               <span className="ctabtn-main">Yes! I&apos;d Like a Pipeline Full of Estimates</span>
             </button>
@@ -470,15 +445,15 @@ export default function ApplyClient() {
         </div>
       </section>
 
-      {/* Survey popup. The GHL survey is mounted only while open so the embed
-          script resizes a freshly loaded iframe each time. */}
-      {surveyOpen && (
+      {/* Booking popup. The GHL calendar is mounted only while open so the
+          embed script resizes a freshly loaded iframe each time. */}
+      {modalOpen && (
         <div
           className="svmodal"
           role="dialog"
           aria-modal="true"
-          aria-label="Apply for your market"
-          onClick={() => setSurveyOpen(false)}
+          aria-label="Book your strategy call"
+          onClick={() => setModalOpen(false)}
         >
           <div className="svmodal-box" onClick={(e) => e.stopPropagation()}>
             <button
@@ -486,19 +461,12 @@ export default function ApplyClient() {
               className="svmodal-close"
               aria-label="Close"
               autoFocus
-              onClick={() => setSurveyOpen(false)}
+              onClick={() => setModalOpen(false)}
             >
               <X aria-hidden />
             </button>
             <div className="svmodal-body">
-              {surveyDone ? (
-                <>
-                  <p className="svmodal-head">You&apos;re in. Now pick a time.</p>
-                  <GhlCalendar />
-                </>
-              ) : (
-                <GhlSurvey />
-              )}
+              <GhlCalendar />
             </div>
           </div>
         </div>
