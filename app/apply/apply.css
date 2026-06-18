@@ -84,6 +84,12 @@
   transition:background .15s,color .15s}
 .dscroll .svmodal-close:hover{background:var(--tint);color:var(--ink)}
 .dscroll .svmodal-close svg{width:18px;height:18px}
+/* On mobile the calendar is tall and the popup scrolls, so pin the close
+   button to the viewport corner instead of letting it scroll away. */
+@media(max-width:760px){
+  .dscroll .svmodal-close{position:fixed;top:10px;right:10px;z-index:120;
+    box-shadow:0 6px 16px -6px rgba(0,0,0,.4)}
+}
 .dscroll .svmodal-body{margin-top:6px}
 .dscroll .svmodal-head{text-align:center;font-size:clamp(18px,2.6vw,22px);font-weight:700;
   color:var(--ink);margin:4px 0 14px;letter-spacing:-.01em}
