@@ -315,6 +315,22 @@ function Stars() {
 export default function ApplyClient() {
   const tMark = TESTIMONIALS.find((t) => t.name === "Mark T.")!;
   const leadFired = useRef(false);
+  const [surveyOpen, setSurveyOpen] = useState(false);
+
+  // While the survey popup is open, lock body scroll and close it on Escape.
+  useEffect(() => {
+    if (!surveyOpen) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    function onKey(e: KeyboardEvent) {
+      if (e.key === "Escape") setSurveyOpen(false);
+    }
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = prev;
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [surveyOpen]);
 
   // Fire the Meta Pixel Lead event when the GHL survey is submitted. The survey
   // lives in a cross-origin iframe, so we can only observe it through the
@@ -381,10 +397,13 @@ export default function ApplyClient() {
             <div className="heroform" id="apply">
               <p className="formkicker">
                 <strong>Apply for your market.</strong> We take one floor coating
-                contractor per market. Tell us about your business, then pick a
+                contractor per market. Answer a few quick questions, then pick a
                 time. We will confirm on the call whether your area is open.
               </p>
-              <GhlSurvey />
+              <button type="button" className="ctabtn" onClick={() => setSurveyOpen(true)}>
+                <span className="ctabtn-top">Check Availability</span>
+                <span className="ctabtn-main">Yes! I&apos;d Like a Pipeline Full of Estimates</span>
+              </button>
               <p className="formhint">
                 Already ready to book? <a href="#book">Pick a time below.</a>
               </p>
@@ -682,6 +701,33 @@ export default function ApplyClient() {
           </div>
         </div>
       </section>
+
+      {/* Survey popup. The GHL survey is mounted only while open so the embed
+          script resizes a freshly loaded iframe each time. */}
+      {surveyOpen && (
+        <div
+          className="svmodal"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Apply for your market"
+          onClick={() => setSurveyOpen(false)}
+        >
+          <div className="svmodal-box" onClick={(e) => e.stopPropagation()}>
+            <button
+              type="button"
+              className="svmodal-close"
+              aria-label="Close"
+              autoFocus
+              onClick={() => setSurveyOpen(false)}
+            >
+              <X aria-hidden />
+            </button>
+            <div className="svmodal-body">
+              <GhlSurvey />
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Footer. Minimal: wordmark, phone, privacy, terms only */}
       <footer>
