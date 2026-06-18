@@ -20,6 +20,11 @@
   box-shadow:0 30px 70px -30px rgba(0,0,0,.5)}
 .dscroll .vslframe iframe,.dscroll .vslframe video,.dscroll .vslframe > div{position:absolute;inset:0;width:100%;height:100%;border:0}
 
+/* Vidalytics Smart Player wrapper — same look as .vslframe, but the embed brings
+   its own responsive 16:9 box, so no forced aspect-ratio or absolute children */
+.dscroll .vslvid{width:100%;max-width:880px;margin:clamp(28px,5vw,44px) auto 0;border-radius:20px;
+  overflow:hidden;background:#0c0c0c;border:1px solid var(--line);box-shadow:0 30px 70px -30px rgba(0,0,0,.5)}
+
 /* placeholder shown until a real embed is dropped in */
 .dscroll .vslplaceholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;
   color:#fff;cursor:pointer;

@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 
 import { TestimonialWall } from "./testimonial-wall";
+import { VidalyticsPlayer } from "./vidalytics-player";
 import "../home.css";
 import "./lander.css";
 
@@ -444,22 +445,9 @@ export default function LanderPage() {
             it fits you.
           </p>
 
-          {/*
-            2 · VSL EMBED SLOT — the video opens with Mark's cold open, and its
-            THUMBNAIL/POSTER is the booked calendar (ties straight to the headline).
-            When the video is ready, replace the .vslplaceholder block with e.g.:
-              <video src="/videos/vsl.mp4" poster="/images/proof/booked-calendar.png" controls playsInline />
-              <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="VSL"
-                allow="autoplay; fullscreen; picture-in-picture" allowFullScreen />
-            For YouTube/Wistia, set the custom thumbnail to the calendar image so
-            the still frame shows the full calendar before play.
-            The .vslframe keeps a clean responsive 16:9 box around whatever you add.
-          */}
-          <div className="vslframe">
-            <div className="vslplaceholder" role="button" tabIndex={0} aria-label="Play the video">
-              <span className="play" aria-hidden />
-              <span className="vlabel">Watch: in a month, this is your calendar</span>
-            </div>
+          {/* 2 · VSL — Vidalytics Smart Player (manages its own poster + 16:9 box) */}
+          <div className="vslvid">
+            <VidalyticsPlayer />
           </div>
 
           <p className="vslnote">Prefer to read? Everything in the video is on this page too — just scroll.</p>
