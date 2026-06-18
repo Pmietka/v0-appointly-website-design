@@ -15,7 +15,10 @@ import { VidalyticsPlayer } from "../lander/vidalytics-player";
 
 // GoHighLevel booking widget. Every CTA on the page opens this calendar.
 const CALENDAR_BASE = "https://link.getappointly.co/widget/booking/5dpXziFD54sh4H7n0oaF";
-const CALENDAR_ID = "5dpXziFD54sh4H7n0oaF";
+// IMPORTANT: use the exact id from the GHL embed code (with the timestamp
+// suffix). form_embed.js keys off this id to auto-size the iframe; without the
+// suffix it never resizes and the widget shows its own inner scrollbar.
+const CALENDAR_ID = "5dpXziFD54sh4H7n0oaF_1781819159698";
 
 // GHL embed loader. Auto-resizes the scrolling="no" booking iframe so it shows
 // its full height with no inner scrollbar. Loaded once.
@@ -120,7 +123,7 @@ function GhlCalendar() {
       src={src}
       id={CALENDAR_ID}
       title="Book your strategy call"
-      scrolling="auto"
+      scrolling="no"
     />
   );
 }
