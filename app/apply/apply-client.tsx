@@ -151,7 +151,7 @@ const STEPS = [
 const CLIENT_WINS = [
   {
     name: "Mark T.", who: "AFAB Services", where: "Port St. Lucie, FL",
-    stat: "$6k job, closed on 2nd appointment",
+    stat: "6 completed jobs in the first month",
     quote: "You've already paved the ground. I just go in and sweep it up. You guys are doing a great job.",
     photo: "/images/proof/mark-afab.webp",
   },
