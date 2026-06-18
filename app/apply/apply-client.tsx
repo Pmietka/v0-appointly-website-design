@@ -412,8 +412,8 @@ export default function ApplyClient() {
         </div>
       </nav>
 
-      {/* 2 · Hero */}
-      <section className="sec vslhero" id="top">
+      {/* 2 · Hero. VSL and the apply form side by side (stacks on mobile). */}
+      <section className="sec applyhero" id="top">
         <div className="orb a" />
         <div className="wrap">
           <p className="eyebrow">For floor coating contractors</p>
@@ -426,14 +426,22 @@ export default function ApplyClient() {
             homeowner is booked on your calendar. No ad spend risk. No shared leads.
           </p>
 
-          <div className="vslvid">
-            <VidalyticsPlayer />
+          <div className="herorow">
+            <div className="herovsl">
+              <div className="vslvid">
+                <VidalyticsPlayer />
+              </div>
+              <p className="vslnote">Watch how it works, then apply.</p>
+            </div>
+            <div className="heroform" id="apply-1">
+              <p className="formkicker">
+                <strong>Apply for your market.</strong> We take one floor coating
+                contractor per market. Tell us about your business and book your
+                call. We will confirm on the call whether your area is open.
+              </p>
+              <LeadCalendarUnit id="apply-1" />
+            </div>
           </div>
-          <p className="vslnote">Watch how it works, then apply below.</p>
-
-          <a className="btn" href="#apply-1">
-            Apply to work with us <span className="arr">&rarr;</span>
-          </a>
         </div>
       </section>
 
@@ -465,23 +473,7 @@ export default function ApplyClient() {
         </div>
       </section>
 
-      {/* 5 · First form and calendar unit */}
-      <section className="sec" id="apply-1">
-        <div className="wrap wallhead">
-          <p className="eyebrow">Apply for your market</p>
-          <h2>Tell us about <span className="hl">your business.</span></h2>
-          <p className="wallsub">
-            We take one floor coating contractor per market. Tell us about your
-            business and book your call. We will confirm on the call whether your
-            area is open.
-          </p>
-        </div>
-        <div className="wrap">
-          <LeadCalendarUnit id="apply-1" />
-        </div>
-      </section>
-
-      {/* 6 · What happens on the call */}
+      {/* 5 · What happens on the call */}
       <section className="sec tint" id="call">
         <div className="wrap wallhead">
           <p className="eyebrow">What happens on the call</p>
