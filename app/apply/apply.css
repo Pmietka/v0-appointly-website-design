@@ -51,6 +51,15 @@
 .dscroll .trustbadge{display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:600;color:var(--ink-2)}
 .dscroll .trustbadge svg{flex:none;width:16px;height:16px;color:#0f766e;stroke-width:2.6}
 
+/* second CTA under the three steps */
+.dscroll .stepscta{margin-top:clamp(30px,5vw,46px);display:flex;flex-direction:column;align-items:center;
+  gap:16px;text-align:center}
+.dscroll .stepsctaline{font-size:clamp(16px,2.3vw,20px);font-weight:600;color:var(--ink);max-width:600px;line-height:1.4}
+.dscroll .ctabtn.ctabtn-inline{width:min(100%,460px)}
+
+/* the comparison table is desktop only on /apply (removed entirely on mobile) */
+@media(max-width:820px){.dscroll .applycmp{display:none}}
+
 /* ── GoHighLevel embeds ─────────────────────────────────────────────────────
    Both iframes carry scrolling="no" and are auto-resized by form_embed.js. The
    min-height is just a floor so they never collapse before the script runs. */

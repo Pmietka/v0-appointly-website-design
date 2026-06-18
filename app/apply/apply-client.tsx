@@ -221,24 +221,29 @@ export default function ApplyClient() {
     };
   }, [surveyOpen]);
 
-  // Fire the Meta Pixel Lead event when the GHL survey is submitted. The survey
-  // lives in a cross-origin iframe, so we can only observe it through the
-  // postMessage that GHL's form_embed.js emits. The exact message shape varies
-  // by GHL version, so we match defensively (a submit-like message from the GHL
-  // origin) and fire at most once.
-  // VERIFY against the live survey, and note the most reliable place to track
-  // Lead is inside GHL's own pixel/tracking settings on the survey.
+  // When the GHL survey is submitted, fire the Meta Pixel Lead and move the
+  // contractor to the booking calendar. The survey is a cross-origin iframe, so
+  // we observe submission through the postMessage GHL's form_embed.js emits. The
+  // exact shape varies by GHL version, so match defensively (a submit-like
+  // message from the GHL origin). VERIFY against the live survey, and note the
+  // most reliable place to track Lead is inside GHL's own survey tracking.
   useEffect(() => {
-    if (!pixelReady) return;
     function onMessage(e: MessageEvent) {
       if (typeof e.origin !== "string" || !e.origin.includes("getappointly.co")) return;
       const raw = typeof e.data === "string" ? e.data : JSON.stringify(e.data ?? "");
       if (!/submit/i.test(raw)) return; // resize messages do not contain "submit"
-      if (leadFired.current) return;
-      leadFired.current = true;
-      if (typeof (window as any).fbq === "function") {
+
+      // Fire the Lead pixel once (only when a real pixel id is set).
+      if (pixelReady && !leadFired.current && typeof (window as any).fbq === "function") {
+        leadFired.current = true;
         (window as any).fbq("track", "Lead");
       }
+
+      // Close the popup and reveal the booking calendar.
+      setSurveyOpen(false);
+      window.setTimeout(() => {
+        document.getElementById("book")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 150);
     }
     window.addEventListener("message", onMessage);
     return () => window.removeEventListener("message", onMessage);
@@ -344,11 +349,44 @@ export default function ApplyClient() {
               </div>
             ))}
           </div>
+          <div className="stepscta">
+            <p className="stepsctaline">
+              We take one floor coating contractor per market. Find out if yours
+              is still open before someone else claims it.
+            </p>
+            <button type="button" className="ctabtn ctabtn-inline" onClick={() => setSurveyOpen(true)}>
+              <span className="ctabtn-top">Check Availability</span>
+              <span className="ctabtn-main">Claim Your Market</span>
+            </button>
+          </div>
         </div>
       </section>
 
-      {/* Comparison table */}
-      <section className="sec tint cmpsec" id="why-us">
+      {/* Recent Client Wins */}
+      <section className="sec tint" id="wins">
+        <div className="wrap wallhead">
+          <p className="eyebrow">Proof</p>
+          <h2>Recent <span className="hl">client wins.</span></h2>
+        </div>
+        <div className="wrap">
+          <div className="grid g3">
+            {CLIENT_WINS.map((t) => (
+              <div className="proof" key={t.name}>
+                <img className="photo" src={t.photo} alt={`${t.name} of ${t.who}`} width={1080} height={1350} loading="lazy" />
+                <div className="pin">
+                  <div className="who">{t.name} &middot; {t.who}</div>
+                  <div className="where">{t.where}</div>
+                  <div className="pstat">{t.stat}</div>
+                  <div className="quote">&ldquo;{t.quote}&rdquo;</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Comparison table (desktop only, hidden on mobile) */}
+      <section className="sec cmpsec applycmp" id="why-us">
         <div className="wrap">
           <p className="cmpeyebrow">Compare the options</p>
           <h2>Why contractors pick us <span className="hl">over a lead company.</span></h2>
@@ -411,29 +449,6 @@ export default function ApplyClient() {
           </div>
 
           <p className="payoff">You are paying for <strong>booked appointments.</strong></p>
-        </div>
-      </section>
-
-      {/* Recent Client Wins */}
-      <section className="sec" id="wins">
-        <div className="wrap wallhead">
-          <p className="eyebrow">Proof</p>
-          <h2>Recent <span className="hl">client wins.</span></h2>
-        </div>
-        <div className="wrap">
-          <div className="grid g3">
-            {CLIENT_WINS.map((t) => (
-              <div className="proof" key={t.name}>
-                <img className="photo" src={t.photo} alt={`${t.name} of ${t.who}`} width={1080} height={1350} loading="lazy" />
-                <div className="pin">
-                  <div className="who">{t.name} &middot; {t.who}</div>
-                  <div className="where">{t.where}</div>
-                  <div className="pstat">{t.stat}</div>
-                  <div className="quote">&ldquo;{t.quote}&rdquo;</div>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
