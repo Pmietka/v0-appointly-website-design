@@ -46,6 +46,11 @@
 .dscroll .ctabtn-top{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:#9be7c4}
 .dscroll .ctabtn-main{font-size:clamp(17px,2.6vw,22px);font-weight:700;letter-spacing:-.01em;line-height:1.22;text-wrap:balance}
 
+/* trust badges under the CTA */
+.dscroll .trustbadges{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 20px;margin-top:16px}
+.dscroll .trustbadge{display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:600;color:var(--ink-2)}
+.dscroll .trustbadge svg{flex:none;width:16px;height:16px;color:#0f766e;stroke-width:2.6}
+
 /* ── GoHighLevel embeds ─────────────────────────────────────────────────────
    Both iframes carry scrolling="no" and are auto-resized by form_embed.js. The
    min-height is just a floor so they never collapse before the script runs. */
