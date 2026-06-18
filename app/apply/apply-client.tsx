@@ -16,12 +16,19 @@ import type { Testimonial } from "../lander/page";
    CONFIGURABLE CONSTANTS. Edit these, nothing else, to wire the page up.
    ============================================================================ */
 
-// PLACEHOLDER: paste the GoHighLevel inbound webhook URL the form POSTs to.
-// I (Patrick) will paste this. Until then submits are caught and logged.
-const GHL_WEBHOOK_URL = "PASTE_GHL_INBOUND_WEBHOOK_URL_HERE";
+// GoHighLevel survey widget (the qualifier + lead capture). GHL captures the
+// lead inside the iframe, so every contractor who submits feeds the GHL
+// recovery sequence even if they do not finish booking.
+const SURVEY_BASE = "https://link.getappointly.co/widget/survey/pHjOTCm6PhMSXdHi5VPO";
+const SURVEY_ID = "pHjOTCm6PhMSXdHi5VPO";
 
-// The GHL strategy calendar embedded as an iframe after the form is submitted.
-const CALENDAR_EMBED_BASE = "https://client.getappointly.co/strategy-calendar";
+// GoHighLevel booking widget (the calendar that captures the bookers).
+const CALENDAR_SRC = "https://link.getappointly.co/widget/booking/U3zYpjFagC8HFqQw21rC";
+const CALENDAR_ID = "U3zYpjFagC8HFqQw21rC";
+
+// GHL embed loader. Auto-resizes the scrolling="no" survey and booking iframes
+// so they show their full height with no inner scrollbar. Loaded once.
+const GHL_EMBED_JS = "https://link.getappointly.co/js/form_embed.js";
 
 // PLACEHOLDER: paste the numeric Meta Pixel ID. I (Patrick) will paste this.
 // While it stays a placeholder the pixel stays dormant (no init, no errors).
@@ -43,7 +50,7 @@ function MetaPixel() {
     if (!pixelReady) return;
     if (document.getElementById("meta-pixel")) return;
     // Standard Meta Pixel base code. Defines fbq, inits with our id, and fires
-    // the PageView. The Lead event is fired by the form on submit.
+    // the PageView. The Lead event is fired on survey submit (see ApplyClient).
     const s = document.createElement("script");
     s.id = "meta-pixel";
     s.text = `!function(f,b,e,v,n,t,s)
@@ -75,154 +82,67 @@ fbq('track', 'PageView');`;
 }
 
 /* ============================================================================
-   The lead form + embedded calendar. Used twice on the page (top and bottom),
-   both instances share this exact logic.
+   GoHighLevel embeds: survey (the qualifier form) and booking calendar.
    ============================================================================ */
 
-const REVENUE_BANDS = ["Under $200k", "$200k to $500k", "$500k to $1M", "$1M+"];
+// Inject GHL's form_embed.js once. It listens for the iframes' postMessage and
+// sets their height so the survey and calendar render fully with no scrollbar.
+function GhlEmbedScript() {
+  useEffect(() => {
+    if (document.getElementById("ghl-embed-js")) return;
+    const s = document.createElement("script");
+    s.id = "ghl-embed-js";
+    s.src = GHL_EMBED_JS;
+    s.type = "text/javascript";
+    s.async = true;
+    document.body.appendChild(s);
+  }, []);
+  return null;
+}
 
-// Pull UTM params, the source tag, and the full landing URL off the live page.
-function collectHidden() {
-  const params = new URLSearchParams(window.location.search);
-  const utmKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"];
-  const utm: Record<string, string> = {};
-  utmKeys.forEach((k) => {
-    utm[k] = params.get(k) || "";
+// Append the UTM params, the source tag, and the landing URL to the survey src
+// so attribution travels into GHL with the lead.
+// NOTE: GHL must be configured to capture these (as contact fields or as the
+// contact source). Confirm the field mapping in the survey settings.
+function surveySrc(): string {
+  if (typeof window === "undefined") return SURVEY_BASE;
+  const here = new URLSearchParams(window.location.search);
+  const out = new URLSearchParams();
+  ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"].forEach((k) => {
+    const v = here.get(k);
+    if (v) out.set(k, v);
   });
-  return {
-    ...utm,
-    source: "apply-page", // distinguishes this arm from the instant-form arm in GHL
-    page_url: window.location.href,
-  };
+  out.set("source", "apply-page"); // distinguishes this arm from the instant-form arm
+  out.set("page_url", window.location.href);
+  const qs = out.toString();
+  return qs ? `${SURVEY_BASE}?${qs}` : SURVEY_BASE;
 }
 
-// Build the prefilled calendar iframe src.
-// NOTE: GHL calendar prefill param names vary by calendar version. Confirm the
-// exact accepted params against the live strategy calendar and adjust these
-// keys (first_name, phone) if the booking form does not prefill.
-function calendarSrc(firstName: string, phone: string) {
-  const p = new URLSearchParams({ first_name: firstName, phone });
-  return `${CALENDAR_EMBED_BASE}?${p.toString()}`;
-}
-
-function LeadCalendarUnit({ id }: { id: string }) {
-  const [firstName, setFirstName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [revenue, setRevenue] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-  const [calSrc, setCalSrc] = useState("");
-  const calRef = useRef<HTMLDivElement>(null);
-
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    if (!firstName || !phone || !revenue) return; // all three are required
-
-    // 1. Fire the Meta Pixel Lead event (the optimization event for this page).
-    if (pixelReady && typeof (window as any).fbq === "function") {
-      (window as any).fbq("track", "Lead");
-    }
-
-    // 2. POST to GHL, fire and forget. Never block the UI on the network.
-    const payload = {
-      first_name: firstName,
-      phone,
-      annual_revenue: revenue,
-      ...collectHidden(),
-    };
-    try {
-      fetch(GHL_WEBHOOK_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-        keepalive: true,
-      }).catch((err) => console.error("Apply webhook failed:", err));
-    } catch (err) {
-      console.error("Apply webhook failed:", err);
-    }
-
-    // 3. Reveal the calendar and scroll to it. Feels instant, no network wait.
-    setCalSrc(calendarSrc(firstName, phone));
-    setSubmitted(true);
-    setTimeout(() => {
-      calRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 60);
-  }
-
+function GhlSurvey() {
+  // Start from the bare src for SSR, then add attribution params on the client
+  // (avoids a hydration mismatch since window is not available on the server).
+  const [src, setSrc] = useState(SURVEY_BASE);
+  useEffect(() => setSrc(surveySrc()), []);
   return (
-    <div className="applyunit">
-      {!submitted ? (
-        <div className="applybox">
-          <form className="afform" onSubmit={handleSubmit} noValidate>
-            <div className="afield">
-              <label className="aflabel" htmlFor={`${id}-first`}>First name</label>
-              <input
-                id={`${id}-first`}
-                className="afinput"
-                type="text"
-                name="first_name"
-                autoComplete="given-name"
-                required
-                value={firstName}
-                onChange={(e) => setFirstName(e.target.value)}
-              />
-            </div>
+    <iframe
+      className="ghlsurvey"
+      src={src}
+      id={SURVEY_ID}
+      title="Apply for your market"
+      scrolling="no"
+    />
+  );
+}
 
-            <div className="afield">
-              <label className="aflabel" htmlFor={`${id}-phone`}>Phone</label>
-              <input
-                id={`${id}-phone`}
-                className="afinput"
-                type="tel"
-                name="phone"
-                autoComplete="tel"
-                inputMode="tel"
-                required
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-              />
-            </div>
-
-            <div className="afield">
-              <span className="aflabel">What is your business doing in annual revenue?</span>
-              <div className="revbands" role="radiogroup" aria-label="Annual revenue">
-                {REVENUE_BANDS.map((band) => (
-                  <label className="revband" key={band}>
-                    <input
-                      type="radio"
-                      name={`${id}-revenue`}
-                      value={band}
-                      required
-                      checked={revenue === band}
-                      onChange={() => setRevenue(band)}
-                    />
-                    <span>{band}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
-
-            <p className="consent">
-              By submitting you agree to receive calls and texts from Appointly
-              about your inquiry. Message and data rates may apply.
-            </p>
-
-            <button className="btn afsubmit" type="submit">
-              Book my call <span className="arr">&rarr;</span>
-            </button>
-          </form>
-        </div>
-      ) : (
-        <div className="calwrap" ref={calRef} id={`${id}-calendar`}>
-          <p className="calhead">Last step. Pick a time below.</p>
-          <iframe
-            className="califrame"
-            src={calSrc}
-            title="Book your strategy call"
-            loading="lazy"
-          />
-        </div>
-      )}
-    </div>
+function GhlCalendar() {
+  return (
+    <iframe
+      className="ghlcal"
+      src={CALENDAR_SRC}
+      id={CALENDAR_ID}
+      title="Book your strategy call"
+      scrolling="no"
+    />
   );
 }
 
@@ -394,10 +314,35 @@ function Stars() {
 
 export default function ApplyClient() {
   const tMark = TESTIMONIALS.find((t) => t.name === "Mark T.")!;
+  const leadFired = useRef(false);
+
+  // Fire the Meta Pixel Lead event when the GHL survey is submitted. The survey
+  // lives in a cross-origin iframe, so we can only observe it through the
+  // postMessage that GHL's form_embed.js emits. The exact message shape varies
+  // by GHL version, so we match defensively (a submit-like message from the GHL
+  // origin) and fire at most once.
+  // VERIFY against the live survey, and note the most reliable place to track
+  // Lead is inside GHL's own pixel/tracking settings on the survey.
+  useEffect(() => {
+    if (!pixelReady) return;
+    function onMessage(e: MessageEvent) {
+      if (typeof e.origin !== "string" || !e.origin.includes("getappointly.co")) return;
+      const raw = typeof e.data === "string" ? e.data : JSON.stringify(e.data ?? "");
+      if (!/submit/i.test(raw)) return; // resize messages do not contain "submit"
+      if (leadFired.current) return;
+      leadFired.current = true;
+      if (typeof (window as any).fbq === "function") {
+        (window as any).fbq("track", "Lead");
+      }
+    }
+    window.addEventListener("message", onMessage);
+    return () => window.removeEventListener("message", onMessage);
+  }, []);
 
   return (
     <div className="dscroll">
       <MetaPixel />
+      <GhlEmbedScript />
 
       {/* 1 · Header. Logo left, phone right. Nothing else. */}
       <nav className="snav applyhead" aria-label="Primary">
@@ -433,13 +378,16 @@ export default function ApplyClient() {
               </div>
               <p className="vslnote">Watch how it works, then apply.</p>
             </div>
-            <div className="heroform" id="apply-1">
+            <div className="heroform" id="apply">
               <p className="formkicker">
                 <strong>Apply for your market.</strong> We take one floor coating
-                contractor per market. Tell us about your business and book your
-                call. We will confirm on the call whether your area is open.
+                contractor per market. Tell us about your business, then pick a
+                time. We will confirm on the call whether your area is open.
               </p>
-              <LeadCalendarUnit id="apply-1" />
+              <GhlSurvey />
+              <p className="formhint">
+                Already ready to book? <a href="#book">Pick a time below.</a>
+              </p>
             </div>
           </div>
         </div>
@@ -719,17 +667,19 @@ export default function ApplyClient() {
         </div>
       </section>
 
-      {/* 15 · Closing CTA, second form and calendar unit */}
-      <section className="sec tint" id="apply-2">
+      {/* 15 · Closing CTA, the booking calendar */}
+      <section className="sec tint" id="book">
         <div className="wrap wallhead">
           <h2>Ready to <span className="hl">fill your calendar?</span></h2>
           <p className="wallsub">
-            Apply now and book your call. We will tell you on the call whether your
-            market is open.
+            Pick a time below and book your call. We will tell you on the call
+            whether your market is open.
           </p>
         </div>
         <div className="wrap">
-          <LeadCalendarUnit id="apply-2" />
+          <div className="calwrap">
+            <GhlCalendar />
+          </div>
         </div>
       </section>
 
