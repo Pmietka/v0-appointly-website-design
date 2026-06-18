@@ -155,7 +155,6 @@ const TRUST_BADGES = ["No contracts", "Pay per show", "Exclusive leads"];
 const STATS = [
   { v: "$0", l: "Ad spend you risk. We front it." },
   { v: "100%", l: "Exclusive. One contractor per market." },
-  { v: "60 sec", l: "To your first call with the homeowner." },
   { v: "8 / mo", l: "Average jobs for newest clients, month two." },
 ];
 

@@ -75,3 +75,11 @@
 .dscroll .svmodal-close:hover{background:var(--tint);color:var(--ink)}
 .dscroll .svmodal-close svg{width:18px;height:18px}
 .dscroll .svmodal-body{margin-top:6px}
+
+/* Leaner stat bar on /apply: trim the vertical padding and the number scale,
+   and tighten the gap above the face row. (apply.css only loads on /apply, so
+   the /lander proof bar is unaffected.) */
+.dscroll .proofbar.sec{padding:clamp(28px,5vw,48px) 0}
+.dscroll .proofbar .pbv{font-size:clamp(28px,4.6vw,42px)}
+.dscroll .proofbar .pbfaces{margin-top:clamp(16px,2.4vw,22px)}
+.dscroll .proofbar .pbcap{margin-top:12px}
