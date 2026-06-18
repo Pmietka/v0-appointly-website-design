@@ -120,7 +120,7 @@ function GhlCalendar() {
       src={src}
       id={CALENDAR_ID}
       title="Book your strategy call"
-      scrolling="no"
+      scrolling="auto"
     />
   );
 }
