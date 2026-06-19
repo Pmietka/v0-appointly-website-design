@@ -267,3 +267,15 @@ html { scroll-behavior: smooth; }
 
 /* focus visibility for keyboard users */
 .dscroll a:focus-visible,.dscroll button:focus-visible{outline:2px solid #2563eb;outline-offset:2px;border-radius:6px}
+
+/* founders: who you're actually talking to (shared with /lander) */
+.dscroll .founders{display:grid;gap:clamp(16px,3vw,20px);grid-template-columns:1fr;margin-top:clamp(28px,5vw,44px)}
+@media(min-width:720px){.dscroll .founders{grid-template-columns:1fr 1fr}}
+.dscroll .founder{display:flex;gap:clamp(16px,3vw,22px);align-items:center;background:#fff;border:1px solid var(--line);
+  border-radius:20px;padding:clamp(20px,3.5vw,28px);box-shadow:0 14px 36px -26px rgba(0,0,0,.24)}
+.dscroll .founder .fphoto{width:clamp(112px,22vw,150px);height:clamp(112px,22vw,150px);border-radius:18px;object-fit:cover;
+  flex-shrink:0;background:linear-gradient(135deg,#cfffae,#ace5ff);display:grid;place-items:center;
+  font-size:clamp(28px,6vw,38px);font-weight:800;color:#0f3d2e}
+.dscroll .founder .fname{font-size:clamp(19px,2.6vw,23px);font-weight:700;letter-spacing:-.01em}
+.dscroll .founder .frole{font-size:13px;color:var(--ink-4);text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-top:3px}
+.dscroll .founder .fbio{font-size:clamp(14px,2vw,16px);color:var(--ink-3);line-height:1.5;margin-top:10px}

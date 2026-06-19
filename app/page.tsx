@@ -390,6 +390,46 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Who you're actually talking to (founders) */}
+      <section className="sec" id="founders">
+        <div className="wrap">
+          <p className="eyebrow">Who you&apos;re actually talking to</p>
+          <h2>
+            Two hungry entrepreneurial brothers <span className="hl">from Chicago.</span>
+          </h2>
+          <p className="sub">
+            We&apos;re both finance majors with years of experience growing
+            businesses, and the exact people you want treating your business like
+            their own.
+          </p>
+          <div className="founders">
+            <article className="founder">
+              <img className="fphoto" src="/images/team/jacob.jpg" alt="Jacob Mietka, co-founder of Appointly Solutions" width={150} height={150} loading="lazy" />
+              <div>
+                <div className="fname">Jacob Mietka</div>
+                <div className="frole">Co-founder</div>
+                <p className="fbio">
+                  Leads the speed to lead and booking side. Sales manager.
+                  He&apos;ll talk to you about your business and market.
+                  Responsible for scaling 20+ home service businesses.
+                </p>
+              </div>
+            </article>
+            <article className="founder">
+              <img className="fphoto" src="/images/team/patrick.jpg" alt="Patrick Mietka, co-founder of Appointly Solutions" width={150} height={150} loading="lazy" />
+              <div>
+                <div className="fname">Patrick Mietka</div>
+                <div className="frole">Co-founder</div>
+                <p className="fbio">
+                  Runs the campaigns and the numbers. The person making sure the ad
+                  spend we front turns into estimates on your calendar.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
       {/* Bottom CTA */}
       <section className="sec ctaband">
         <div className="wrap">
