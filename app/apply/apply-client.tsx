@@ -24,9 +24,8 @@ const CALENDAR_ID = "5dpXziFD54sh4H7n0oaF_1781819159698";
 // its full height with no inner scrollbar. Loaded once.
 const GHL_EMBED_JS = "https://link.getappointly.co/js/form_embed.js";
 
-// PLACEHOLDER: paste the numeric Meta Pixel ID. I (Patrick) will paste this.
-// While it stays a placeholder the pixel stays dormant (no init, no errors).
-const META_PIXEL_ID = "PASTE_META_PIXEL_ID_HERE";
+// Meta Pixel / dataset id. Fires PageView on load and Lead on booking.
+const META_PIXEL_ID = "985991997226201";
 
 // The hero VSL is the same Vidalytics "in a month, this is your calendar" video
 // used on /lander. It lives in ../lander/vidalytics-player. To swap the video
