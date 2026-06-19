@@ -70,3 +70,61 @@
 .dscroll .proofbar .pbv{font-size:clamp(28px,4.6vw,42px)}
 .dscroll .proofbar .pbfaces{margin-top:clamp(16px,2.4vw,22px)}
 .dscroll .proofbar .pbcap{margin-top:12px}
+
+/* ── qualification survey modal ─────────────────────────────────────────────
+   Centered popup on a dimmed overlay. Inherits Plus Jakarta Sans from .dscroll.
+   Blue accent (#2563eb) for the progress bar, step label, and option cards. */
+.dscroll .qmodal{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;
+  padding:clamp(10px,3vw,28px);background:rgba(10,10,10,.62);
+  -webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);overflow:hidden;animation:qfade .15s ease-out}
+@keyframes qfade{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.dscroll .qmodal{animation:none}}
+.dscroll .qmodal-box{position:relative;display:flex;flex-direction:column;width:100%;max-width:600px;
+  max-height:92vh;max-height:92dvh;background:#fff;border-radius:20px;overflow:hidden;
+  box-shadow:0 40px 90px -30px rgba(0,0,0,.6)}
+
+/* thin progress bar pinned to the top edge */
+.dscroll .qprogress{flex:none;height:4px;width:100%;background:#e5e7eb}
+.dscroll .qprogress-bar{display:block;height:100%;background:#2563eb;transition:width .3s ease}
+
+.dscroll .qclose{position:absolute;top:14px;right:14px;z-index:3;width:36px;height:36px;border-radius:999px;
+  border:1px solid var(--line);background:#fff;display:grid;place-items:center;cursor:pointer;color:var(--ink-2);
+  transition:background .15s,color .15s}
+.dscroll .qclose:hover{background:var(--tint);color:var(--ink)}
+.dscroll .qclose svg{width:18px;height:18px}
+
+.dscroll .qbody{flex:1;min-height:0;overflow-y:auto;padding:clamp(26px,5vw,40px)}
+.dscroll .qstep{display:flex;flex-direction:column}
+.dscroll .qlabel{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:#2563eb;margin-bottom:12px}
+.dscroll .qquestion{font-size:clamp(22px,4vw,28px);font-weight:700;letter-spacing:-.02em;line-height:1.2;color:var(--ink)}
+.dscroll .qsubhead{font-size:clamp(14px,2.2vw,16px);color:var(--ink-3);line-height:1.5;margin-top:8px}
+
+.dscroll .qoptions{display:flex;flex-direction:column;gap:12px;margin-top:clamp(20px,4vw,28px)}
+.dscroll .qoption{width:100%;text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:14px;
+  padding:clamp(16px,3.4vw,20px) clamp(18px,3.4vw,22px);font-size:clamp(16px,2.4vw,18px);font-weight:700;
+  color:var(--ink);cursor:pointer;font-family:inherit;transition:border-color .15s,background .15s}
+.dscroll .qoption:hover{border-color:#2563eb;background:#eff4ff}
+.dscroll .qoption.sel{border-color:#2563eb;background:#eff4ff}
+
+.dscroll .qinput{width:100%;margin-top:clamp(20px,4vw,28px);font-size:16px;padding:15px 16px;border:1.5px solid var(--line);
+  border-radius:12px;background:#fff;color:var(--ink);font-family:inherit}
+.dscroll .qstep .qinput + .qinput{margin-top:12px}
+.dscroll .qinput:focus{outline:none;border-color:#2563eb;box-shadow:0 0 0 3px rgba(37,99,235,.18)}
+
+.dscroll .qsubmit{margin-top:16px;width:100%;border:none;cursor:pointer;font-family:inherit;
+  background:#2563eb;color:#fff;font-weight:700;font-size:16px;border-radius:12px;padding:16px 20px;
+  transition:background .15s,opacity .15s}
+.dscroll .qsubmit:hover{background:#1d4ed8}
+.dscroll .qsubmit:disabled{opacity:.5;cursor:not-allowed}
+
+.dscroll .qconsent{font-size:12.5px;color:var(--ink-4);line-height:1.45;margin-top:12px}
+
+.dscroll .qback{align-self:flex-start;display:inline-flex;align-items:center;gap:6px;margin-top:18px;
+  background:none;border:none;cursor:pointer;font-family:inherit;font-size:14px;font-weight:600;color:var(--ink-4);
+  padding:4px 0;transition:color .15s}
+.dscroll .qback:hover{color:var(--ink-2)}
+.dscroll .qback svg{width:16px;height:16px}
+
+/* booking calendar shown after submit. No fixed height: form_embed.js sizes it;
+   the modal body scrolls if it is taller than the viewport. */
+.dscroll #appointly-cal{display:block;width:100%;border:0;min-height:560px;background:#fff}
