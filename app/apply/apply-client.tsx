@@ -6,15 +6,15 @@ import {
   Target, User, Shield, CreditCard, Clock, Lock, LineChart,
 } from "lucide-react";
 
-import { BOOKING_URL, PHONE_DISPLAY, PHONE_HREF } from "@/components/site-nav";
+import { PHONE_DISPLAY, PHONE_HREF } from "@/components/site-nav";
 import { VidalyticsPlayer } from "../lander/vidalytics-player";
 
 /* ============================================================================
    CONFIGURABLE CONSTANTS. Edit these, nothing else, to wire the page up.
    ============================================================================ */
 
-// Every CTA links to the booking calendar (BOOKING_URL from site-nav,
-// https://client.getappointly.co/strategy-calendar).
+// Every CTA on this page links to this booking calendar.
+const BOOKING_URL = "https://client.getappointly.co/strategy-calendar-8186";
 
 // Meta Pixel / dataset id. Fires PageView on load and Lead on CTA click.
 const META_PIXEL_ID = "985991997226201";
