@@ -16,10 +16,8 @@ import { VidalyticsPlayer } from "../lander/vidalytics-player";
 // Meta Pixel / dataset id. Fires PageView on load and Lead on survey submit.
 const META_PIXEL_ID = "985991997226201";
 
-// PLACEHOLDER: the GoHighLevel inbound webhook the survey POSTs to. I (Patrick)
-// will paste this. Until then submits are caught and logged, and the calendar
-// still shows.
-const GHL_WEBHOOK_URL = "PASTE_GHL_INBOUND_WEBHOOK_URL_HERE";
+// The GoHighLevel inbound webhook the survey POSTs to.
+const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/bv8PsVl3lvidD0j8bBqP/webhook-trigger/c9547f8b-20ad-4fe2-8436-41c1f681bd0f";
 
 // GHL booking widget embedded in the modal after the survey is submitted.
 const CALENDAR_BASE = "https://link.getappointly.co/widget/booking/U3zYpjFagC8HFqQw21rC";
