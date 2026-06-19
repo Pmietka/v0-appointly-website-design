@@ -182,7 +182,7 @@ export default function ApplyClient() {
                 contractor per market. Answer a few quick questions, then pick a
                 time. We will confirm on the call whether your area is open.
               </p>
-              <a className="ctabtn" href={BOOKING_URL} target="_blank" rel="noopener noreferrer" onClick={handleCtaClick}>
+              <a className="ctabtn" href={BOOKING_URL} onClick={handleCtaClick}>
                 <span className="ctabtn-top">Check Availability</span>
                 <span className="ctabtn-main">Yes! I&apos;d Like a Pipeline Full of Estimates</span>
               </a>
@@ -239,7 +239,7 @@ export default function ApplyClient() {
               We take one floor coating contractor per market. Find out if yours
               is still open before someone else claims it.
             </p>
-            <a className="ctabtn ctabtn-inline" href={BOOKING_URL} target="_blank" rel="noopener noreferrer" onClick={handleCtaClick}>
+            <a className="ctabtn ctabtn-inline" href={BOOKING_URL} onClick={handleCtaClick}>
               <span className="ctabtn-top">Check Availability</span>
               <span className="ctabtn-main">Claim Your Market</span>
             </a>
@@ -346,7 +346,7 @@ export default function ApplyClient() {
             &middot; By application only.
           </p>
           <div className="closingcta">
-            <a className="ctabtn ctabtn-inline" href={BOOKING_URL} target="_blank" rel="noopener noreferrer" onClick={handleCtaClick}>
+            <a className="ctabtn ctabtn-inline" href={BOOKING_URL} onClick={handleCtaClick}>
               <span className="ctabtn-top">Check Availability</span>
               <span className="ctabtn-main">Yes! I&apos;d Like a Pipeline Full of Estimates</span>
             </a>
