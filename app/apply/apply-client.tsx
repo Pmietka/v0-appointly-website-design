@@ -93,29 +93,46 @@ function GhlEmbedScript() {
   return null;
 }
 
-// Append the UTM params, the source tag, and the landing URL to the calendar
-// src so attribution travels into GHL with the booking.
-// NOTE: confirm GHL captures these on the booking widget (contact fields or
-// source). Extra query params are otherwise ignored.
+// Read a cookie value by name (e.g. the Meta pixel's _fbp).
+function readCookie(name: string): string | null {
+  const escaped = name.replace(/([.$?*|{}()[\]\\/+^])/g, "\\$1");
+  const m = document.cookie.match(new RegExp("(?:^|; )" + escaped + "=([^;]*)"));
+  return m ? decodeURIComponent(m[1]) : null;
+}
+
+// Build the calendar src with attribution: the UTM params and Meta click id
+// (fbclid) from the URL, the Meta browser id (fbp) from the _fbp cookie, plus
+// our source tag and the landing URL. The iframe then loads as
+// .../widget/booking/ID?fbclid=...&utm_source=...&fbp=... instead of bare.
+// NOTE: confirm GHL captures these (contact fields / source); extras are ignored.
 function withAttribution(base: string): string {
   if (typeof window === "undefined") return base;
   const here = new URLSearchParams(window.location.search);
   const out = new URLSearchParams();
+
   ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"].forEach((k) => {
     const v = here.get(k);
     if (v) out.set(k, v);
   });
-  out.set("source", "apply-page"); // distinguishes this arm from the instant-form arm
+
+  const fbclid = here.get("fbclid"); // Meta click id from the ad URL
+  if (fbclid) out.set("fbclid", fbclid);
+
+  const fbp = readCookie("_fbp"); // Meta browser id, set by the pixel base code
+  if (fbp) out.set("fbp", fbp);
+
+  out.set("source", "apply-page"); // distinguishes this arm from other arms
   out.set("page_url", window.location.href);
+
   const qs = out.toString();
   return qs ? `${base}?${qs}` : base;
 }
 
 function GhlCalendar() {
-  // Start from the bare src for SSR, then add attribution params on the client
-  // (avoids a hydration mismatch since window is not available on the server).
-  const [src, setSrc] = useState(CALENDAR_BASE);
-  useEffect(() => setSrc(withAttribution(CALENDAR_BASE)), []);
+  // The calendar only mounts client-side (inside the popup), so window, the URL
+  // params, and the _fbp cookie are all available. Compute the src once so the
+  // iframe loads with the attribution params from the first request.
+  const [src] = useState(() => withAttribution(CALENDAR_BASE));
   return (
     <iframe
       className="ghlcal"
