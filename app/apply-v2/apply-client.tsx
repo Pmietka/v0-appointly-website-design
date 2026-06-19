@@ -1,8 +1,8 @@
 "use client";
 
-import { Fragment, useEffect, useRef } from "react";
+import { Fragment, useEffect, useState } from "react";
 import {
-  Phone, CalendarCheck, Check, X,
+  Phone, CalendarCheck, Check, X, ArrowLeft,
   Target, User, Shield, CreditCard, Clock, Lock, LineChart,
 } from "lucide-react";
 
@@ -13,11 +13,14 @@ import { VidalyticsPlayer } from "../lander/vidalytics-player";
    CONFIGURABLE CONSTANTS. Edit these, nothing else, to wire the page up.
    ============================================================================ */
 
-// Every CTA on this page links to this booking calendar.
-const BOOKING_URL = "https://client.getappointly.co/strategy-calendar-8186";
-
-// Meta Pixel / dataset id. Fires PageView on load and Lead on CTA click.
+// Meta Pixel / dataset id. Fires PageView on load and Lead on survey submit.
 const META_PIXEL_ID = "985991997226201";
+
+// The GoHighLevel inbound webhook the survey POSTs to.
+const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/bv8PsVl3lvidD0j8bBqP/webhook-trigger/c9547f8b-20ad-4fe2-8436-41c1f681bd0f";
+
+// GHL booking widget embedded in the modal after the survey is submitted.
+const CALENDAR_BASE = "https://link.getappointly.co/widget/booking/U3zYpjFagC8HFqQw21rC";
 
 // The hero VSL is the same Vidalytics "in a month, this is your calendar" video
 // used on /lander. It lives in ../lander/vidalytics-player. To swap the video
@@ -63,6 +66,225 @@ fbq('track', 'PageView');`;
         src={`https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1`}
       />
     </noscript>
+  );
+}
+
+/* ============================================================================
+   Qualification survey modal. Opens from any CTA. Four steps, then on submit it
+   POSTs the lead to GHL and swaps in the booking calendar (prefilled).
+   ============================================================================ */
+
+type Tracking = {
+  fbclid: string; fbc: string; fbp: string;
+  utm_source: string; utm_medium: string; utm_campaign: string;
+  utm_term: string; utm_content: string; page_url: string;
+};
+
+const EMPTY_TRACKING: Tracking = {
+  fbclid: "", fbc: "", fbp: "",
+  utm_source: "", utm_medium: "", utm_campaign: "", utm_term: "", utm_content: "",
+  page_url: "",
+};
+
+function readCookie(name: string): string {
+  if (typeof document === "undefined") return "";
+  const escaped = name.replace(/([.$?*|{}()[\]\\/+^])/g, "\\$1");
+  const m = document.cookie.match(new RegExp("(?:^|; )" + escaped + "=([^;]*)"));
+  return m ? decodeURIComponent(m[1]) : "";
+}
+
+// Read the Meta click id + cookies and the UTM params. Called once on page load.
+function readTracking(): Tracking {
+  if (typeof window === "undefined") return EMPTY_TRACKING;
+  const p = new URLSearchParams(window.location.search);
+  const get = (k: string) => p.get(k) || "";
+  return {
+    fbclid: get("fbclid"),
+    fbc: readCookie("_fbc"),
+    fbp: readCookie("_fbp"),
+    utm_source: get("utm_source"),
+    utm_medium: get("utm_medium"),
+    utm_campaign: get("utm_campaign"),
+    utm_term: get("utm_term"),
+    utm_content: get("utm_content"),
+    page_url: window.location.href,
+  };
+}
+
+const REPS_OPTIONS = ["I run them all myself", "1 to 4 reps", "5 to 10 reps", "10+ reps"];
+const REVENUE_OPTIONS = ["Under $200k", "$200k to $500k", "$500k to $1M", "$1M+"];
+
+function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () => void }) {
+  const [step, setStep] = useState(1);
+  const [reps, setReps] = useState("");
+  const [revenue, setRevenue] = useState("");
+  const [city, setCity] = useState("");
+  const [fullName, setFullName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+  const [calSrc, setCalSrc] = useState("");
+
+  // Lock body scroll while open and close on Escape.
+  useEffect(() => {
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    function onKey(e: KeyboardEvent) {
+      if (e.key === "Escape") onClose();
+    }
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = prev;
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [onClose]);
+
+  // Load GHL's form_embed.js once the calendar is shown. It auto-sizes the
+  // iframe, so we never set a fixed height.
+  useEffect(() => {
+    if (!submitted) return;
+    if (document.getElementById("ghl-embed-js")) return;
+    const s = document.createElement("script");
+    s.id = "ghl-embed-js";
+    s.src = "https://link.getappointly.co/js/form_embed.js";
+    s.type = "text/javascript";
+    s.async = true;
+    document.body.appendChild(s);
+  }, [submitted]);
+
+  // Progress fills as they advance; full once the calendar shows.
+  const pct = submitted ? 100 : step * 25;
+
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (!fullName.trim() || !phone.trim() || !email.trim()) return;
+
+    // 1. Fire the Meta Pixel Lead event.
+    if (pixelReady && typeof (window as any).fbq === "function") {
+      (window as any).fbq("track", "Lead");
+    }
+
+    // 2. Split the full name: first word is the first name, the rest is last.
+    const parts = fullName.trim().split(/\s+/);
+    const first_name = parts.shift() || "";
+    const last_name = parts.join(" ");
+
+    // 3. POST to GHL, fire and forget. Never block the UI on the network.
+    const payload = {
+      first_name, last_name, phone, email,
+      reps, revenue, city,
+      fbclid: tracking.fbclid, fbc: tracking.fbc, fbp: tracking.fbp,
+      utm_source: tracking.utm_source, utm_medium: tracking.utm_medium,
+      utm_campaign: tracking.utm_campaign, utm_term: tracking.utm_term,
+      utm_content: tracking.utm_content,
+      source: "apply-page",
+      page_url: tracking.page_url,
+    };
+    try {
+      fetch(GHL_WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+        keepalive: true,
+      }).catch((err) => console.error("Apply webhook failed:", err));
+    } catch (err) {
+      console.error("Apply webhook failed:", err);
+    }
+
+    // 4. Swap the survey for the booking calendar, prefilled.
+    // NOTE: confirm these prefill param names (first_name, last_name, email,
+    // phone) against this booking widget. Test with fake values and adjust the
+    // keys here if the calendar form does not populate.
+    const cal =
+      CALENDAR_BASE +
+      `?first_name=${encodeURIComponent(first_name)}` +
+      `&last_name=${encodeURIComponent(last_name)}` +
+      `&email=${encodeURIComponent(email)}` +
+      `&phone=${encodeURIComponent(phone)}`;
+    setCalSrc(cal);
+    setSubmitted(true);
+  }
+
+  return (
+    <div className="qmodal" role="dialog" aria-modal="true" aria-label="Apply for your market" onClick={onClose}>
+      <div className="qmodal-box" onClick={(e) => e.stopPropagation()}>
+        <div className="qprogress"><span className="qprogress-bar" style={{ width: `${pct}%` }} /></div>
+        <button type="button" className="qclose" aria-label="Close" onClick={onClose}>
+          <X aria-hidden />
+        </button>
+
+        <div className="qbody">
+          {submitted ? (
+            <iframe
+              src={calSrc}
+              id="appointly-cal"
+              title="Book your strategy call"
+              scrolling="no"
+              style={{ width: "100%", border: "none", overflow: "hidden" }}
+            />
+          ) : step === 1 ? (
+            <div className="qstep">
+              <p className="qlabel">Step 1 of 4</p>
+              <h2 className="qquestion">How many sales reps do you have?</h2>
+              <p className="qsubhead">Counting yourself if you run estimates.</p>
+              <div className="qoptions">
+                {REPS_OPTIONS.map((o) => (
+                  <button type="button" key={o} className={`qoption${reps === o ? " sel" : ""}`}
+                    onClick={() => { setReps(o); setStep(2); }}>{o}</button>
+                ))}
+              </div>
+            </div>
+          ) : step === 2 ? (
+            <div className="qstep">
+              <p className="qlabel">Step 2 of 4</p>
+              <h2 className="qquestion">What revenue are you on track for this year?</h2>
+              <p className="qsubhead">Just checking fit.</p>
+              <div className="qoptions">
+                {REVENUE_OPTIONS.map((o) => (
+                  <button type="button" key={o} className={`qoption${revenue === o ? " sel" : ""}`}
+                    onClick={() => { setRevenue(o); setStep(3); }}>{o}</button>
+                ))}
+              </div>
+              <button type="button" className="qback" onClick={() => setStep(1)}>
+                <ArrowLeft aria-hidden /> Go Back
+              </button>
+            </div>
+          ) : step === 3 ? (
+            <form className="qstep" onSubmit={(e) => { e.preventDefault(); if (city.trim()) setStep(4); }}>
+              <p className="qlabel">Step 3 of 4</p>
+              <h2 className="qquestion">What city or area are you in?</h2>
+              <p className="qsubhead">One contractor per market, so we check availability.</p>
+              <input className="qinput" type="text" placeholder="City or area" autoComplete="address-level2"
+                value={city} onChange={(e) => setCity(e.target.value)} required autoFocus />
+              <button type="submit" className="qsubmit" disabled={!city.trim()}>Next</button>
+              <button type="button" className="qback" onClick={() => setStep(2)}>
+                <ArrowLeft aria-hidden /> Go Back
+              </button>
+            </form>
+          ) : (
+            <form className="qstep" onSubmit={handleSubmit}>
+              <p className="qlabel">Step 4 of 4</p>
+              <h2 className="qquestion">Last step. Where do we reach you?</h2>
+              <p className="qsubhead">Next you pick a time that works.</p>
+              <input className="qinput" type="text" placeholder="Full name" autoComplete="name"
+                value={fullName} onChange={(e) => setFullName(e.target.value)} required autoFocus />
+              <input className="qinput" type="tel" placeholder="Phone" autoComplete="tel"
+                value={phone} onChange={(e) => setPhone(e.target.value)} required />
+              <input className="qinput" type="email" placeholder="Email" autoComplete="email"
+                value={email} onChange={(e) => setEmail(e.target.value)} required />
+              <button type="submit" className="qsubmit">Submit</button>
+              <p className="qconsent">
+                By submitting you agree to receive calls and texts from Appointly
+                about your inquiry.
+              </p>
+              <button type="button" className="qback" onClick={() => setStep(3)}>
+                <ArrowLeft aria-hidden /> Go Back
+              </button>
+            </form>
+          )}
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -126,21 +348,16 @@ const COMPARE_ROWS = [
    ============================================================================ */
 
 export default function ApplyClient() {
-  const leadFired = useRef(false);
+  const [open, setOpen] = useState(false);
+  const [tracking, setTracking] = useState<Tracking>(EMPTY_TRACKING);
 
-  // Fire the Meta Pixel Lead once when a CTA is clicked. The booking itself
-  // happens off-site on the GHL calendar, which we cannot observe from here, so
-  // the click is the conversion signal we can track on this page.
-  function handleCtaClick() {
-    if (pixelReady && !leadFired.current && typeof (window as any).fbq === "function") {
-      leadFired.current = true;
-      (window as any).fbq("track", "Lead");
-    }
-  }
+  // Capture Meta + UTM attribution on page load (URL params and cookies).
+  useEffect(() => setTracking(readTracking()), []);
 
   return (
     <div className="dscroll">
       <MetaPixel />
+      {open && <QualifyModal tracking={tracking} onClose={() => setOpen(false)} />}
 
       {/* Header. Logo left, phone right. Nothing else. */}
       <nav className="snav applyhead" aria-label="Primary">
@@ -182,10 +399,10 @@ export default function ApplyClient() {
                 contractor per market. Answer a few quick questions, then pick a
                 time. We will confirm on the call whether your area is open.
               </p>
-              <a className="ctabtn" href={BOOKING_URL} onClick={handleCtaClick}>
+              <button type="button" className="ctabtn" onClick={() => setOpen(true)}>
                 <span className="ctabtn-top">Check Availability</span>
                 <span className="ctabtn-main">Yes! I&apos;d Like a Pipeline Full of Estimates</span>
-              </a>
+              </button>
               <div className="trustbadges">
                 {TRUST_BADGES.map((b) => (
                   <span className="trustbadge" key={b}><Check aria-hidden /> {b}</span>
@@ -239,10 +456,10 @@ export default function ApplyClient() {
               We take one floor coating contractor per market. Find out if yours
               is still open before someone else claims it.
             </p>
-            <a className="ctabtn ctabtn-inline" href={BOOKING_URL} onClick={handleCtaClick}>
+            <button type="button" className="ctabtn ctabtn-inline" onClick={() => setOpen(true)}>
               <span className="ctabtn-top">Check Availability</span>
               <span className="ctabtn-main">Claim Your Market</span>
-            </a>
+            </button>
           </div>
         </div>
       </section>
@@ -346,10 +563,10 @@ export default function ApplyClient() {
             &middot; By application only.
           </p>
           <div className="closingcta">
-            <a className="ctabtn ctabtn-inline" href={BOOKING_URL} onClick={handleCtaClick}>
+            <button type="button" className="ctabtn ctabtn-inline" onClick={() => setOpen(true)}>
               <span className="ctabtn-top">Check Availability</span>
               <span className="ctabtn-main">Yes! I&apos;d Like a Pipeline Full of Estimates</span>
-            </a>
+            </button>
           </div>
         </div>
       </section>
