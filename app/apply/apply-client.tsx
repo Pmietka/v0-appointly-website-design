@@ -1,30 +1,22 @@
 "use client";
 
-import { Fragment, useEffect, useRef, useState } from "react";
+import { Fragment, useEffect, useRef } from "react";
 import {
   Phone, CalendarCheck, Check, X,
   Target, User, Shield, CreditCard, Clock, Lock, LineChart,
 } from "lucide-react";
 
-import { PHONE_DISPLAY, PHONE_HREF } from "@/components/site-nav";
+import { BOOKING_URL, PHONE_DISPLAY, PHONE_HREF } from "@/components/site-nav";
 import { VidalyticsPlayer } from "../lander/vidalytics-player";
 
 /* ============================================================================
    CONFIGURABLE CONSTANTS. Edit these, nothing else, to wire the page up.
    ============================================================================ */
 
-// GoHighLevel booking widget. Every CTA on the page opens this calendar.
-const CALENDAR_BASE = "https://link.getappointly.co/widget/booking/5dpXziFD54sh4H7n0oaF";
-// IMPORTANT: use the exact id from the GHL embed code (with the timestamp
-// suffix). form_embed.js keys off this id to auto-size the iframe; without the
-// suffix it never resizes and the widget shows its own inner scrollbar.
-const CALENDAR_ID = "5dpXziFD54sh4H7n0oaF_1781819159698";
+// Every CTA links to the booking calendar (BOOKING_URL from site-nav,
+// https://client.getappointly.co/strategy-calendar).
 
-// GHL embed loader. Auto-resizes the scrolling="no" booking iframe so it shows
-// its full height with no inner scrollbar. Loaded once.
-const GHL_EMBED_JS = "https://link.getappointly.co/js/form_embed.js";
-
-// Meta Pixel / dataset id. Fires PageView on load and Lead on booking.
+// Meta Pixel / dataset id. Fires PageView on load and Lead on CTA click.
 const META_PIXEL_ID = "985991997226201";
 
 // The hero VSL is the same Vidalytics "in a month, this is your calendar" video
@@ -71,76 +63,6 @@ fbq('track', 'PageView');`;
         src={`https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1`}
       />
     </noscript>
-  );
-}
-
-/* ============================================================================
-   GoHighLevel booking calendar embed.
-   ============================================================================ */
-
-// Inject GHL's form_embed.js once. It listens for the iframe's postMessage and
-// sets its height so the calendar renders fully with no inner scrollbar.
-function GhlEmbedScript() {
-  useEffect(() => {
-    if (document.getElementById("ghl-embed-js")) return;
-    const s = document.createElement("script");
-    s.id = "ghl-embed-js";
-    s.src = GHL_EMBED_JS;
-    s.type = "text/javascript";
-    s.async = true;
-    document.body.appendChild(s);
-  }, []);
-  return null;
-}
-
-// Read a cookie value by name (e.g. the Meta pixel's _fbp).
-function readCookie(name: string): string | null {
-  const escaped = name.replace(/([.$?*|{}()[\]\\/+^])/g, "\\$1");
-  const m = document.cookie.match(new RegExp("(?:^|; )" + escaped + "=([^;]*)"));
-  return m ? decodeURIComponent(m[1]) : null;
-}
-
-// Build the calendar src with attribution: the UTM params and Meta click id
-// (fbclid) from the URL, the Meta browser id (fbp) from the _fbp cookie, plus
-// our source tag and the landing URL. The iframe then loads as
-// .../widget/booking/ID?fbclid=...&utm_source=...&fbp=... instead of bare.
-// NOTE: confirm GHL captures these (contact fields / source); extras are ignored.
-function withAttribution(base: string): string {
-  if (typeof window === "undefined") return base;
-  const here = new URLSearchParams(window.location.search);
-  const out = new URLSearchParams();
-
-  ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"].forEach((k) => {
-    const v = here.get(k);
-    if (v) out.set(k, v);
-  });
-
-  const fbclid = here.get("fbclid"); // Meta click id from the ad URL
-  if (fbclid) out.set("fbclid", fbclid);
-
-  const fbp = readCookie("_fbp"); // Meta browser id, set by the pixel base code
-  if (fbp) out.set("fbp", fbp);
-
-  out.set("source", "apply-page"); // distinguishes this arm from other arms
-  out.set("page_url", window.location.href);
-
-  const qs = out.toString();
-  return qs ? `${base}?${qs}` : base;
-}
-
-function GhlCalendar() {
-  // The calendar only mounts client-side (inside the popup), so window, the URL
-  // params, and the _fbp cookie are all available. Compute the src once so the
-  // iframe loads with the attribution params from the first request.
-  const [src] = useState(() => withAttribution(CALENDAR_BASE));
-  return (
-    <iframe
-      className="ghlcal"
-      src={src}
-      id={CALENDAR_ID}
-      title="Book your strategy call"
-      scrolling="auto"
-    />
   );
 }
 
@@ -205,52 +127,20 @@ const COMPARE_ROWS = [
 
 export default function ApplyClient() {
   const leadFired = useRef(false);
-  const [modalOpen, setModalOpen] = useState(false);
 
-  function openCalendar() {
-    setModalOpen(true);
+  // Fire the Meta Pixel Lead once when a CTA is clicked. The booking itself
+  // happens off-site on the GHL calendar, which we cannot observe from here, so
+  // the click is the conversion signal we can track on this page.
+  function handleCtaClick() {
+    if (pixelReady && !leadFired.current && typeof (window as any).fbq === "function") {
+      leadFired.current = true;
+      (window as any).fbq("track", "Lead");
+    }
   }
-
-  // While the calendar popup is open, lock body scroll and close it on Escape.
-  useEffect(() => {
-    if (!modalOpen) return;
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    function onKey(e: KeyboardEvent) {
-      if (e.key === "Escape") setModalOpen(false);
-    }
-    window.addEventListener("keydown", onKey);
-    return () => {
-      document.body.style.overflow = prev;
-      window.removeEventListener("keydown", onKey);
-    };
-  }, [modalOpen]);
-
-  // Fire the Meta Pixel Lead when the booking is confirmed. The calendar is a
-  // cross-origin iframe, so we observe the booking through the postMessage GHL's
-  // form_embed.js emits. The exact shape varies by GHL version, so match
-  // defensively (a submit-like message from the GHL origin) and fire at most
-  // once. VERIFY against the live calendar; the most reliable place to track a
-  // booking is inside GHL's own calendar tracking.
-  useEffect(() => {
-    function onMessage(e: MessageEvent) {
-      if (typeof e.origin !== "string" || !e.origin.includes("getappointly.co")) return;
-      const raw = typeof e.data === "string" ? e.data : JSON.stringify(e.data ?? "");
-      if (!/submit/i.test(raw)) return; // resize messages do not contain "submit"
-
-      if (pixelReady && !leadFired.current && typeof (window as any).fbq === "function") {
-        leadFired.current = true;
-        (window as any).fbq("track", "Lead");
-      }
-    }
-    window.addEventListener("message", onMessage);
-    return () => window.removeEventListener("message", onMessage);
-  }, []);
 
   return (
     <div className="dscroll">
       <MetaPixel />
-      <GhlEmbedScript />
 
       {/* Header. Logo left, phone right. Nothing else. */}
       <nav className="snav applyhead" aria-label="Primary">
@@ -265,7 +155,7 @@ export default function ApplyClient() {
         </div>
       </nav>
 
-      {/* Hero. Pay-per-show hook, VSL, and the survey CTA side by side. */}
+      {/* Hero. Pay-per-show hook, VSL, and the booking CTA side by side. */}
       <section className="sec applyhero" id="top">
         <div className="orb a" />
         <div className="wrap">
@@ -292,10 +182,10 @@ export default function ApplyClient() {
                 contractor per market. Answer a few quick questions, then pick a
                 time. We will confirm on the call whether your area is open.
               </p>
-              <button type="button" className="ctabtn" onClick={openCalendar}>
+              <a className="ctabtn" href={BOOKING_URL} target="_blank" rel="noopener noreferrer" onClick={handleCtaClick}>
                 <span className="ctabtn-top">Check Availability</span>
                 <span className="ctabtn-main">Yes! I&apos;d Like a Pipeline Full of Estimates</span>
-              </button>
+              </a>
               <div className="trustbadges">
                 {TRUST_BADGES.map((b) => (
                   <span className="trustbadge" key={b}><Check aria-hidden /> {b}</span>
@@ -349,10 +239,10 @@ export default function ApplyClient() {
               We take one floor coating contractor per market. Find out if yours
               is still open before someone else claims it.
             </p>
-            <button type="button" className="ctabtn ctabtn-inline" onClick={openCalendar}>
+            <a className="ctabtn ctabtn-inline" href={BOOKING_URL} target="_blank" rel="noopener noreferrer" onClick={handleCtaClick}>
               <span className="ctabtn-top">Check Availability</span>
               <span className="ctabtn-main">Claim Your Market</span>
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -447,49 +337,22 @@ export default function ApplyClient() {
         </div>
       </section>
 
-      {/* Closing CTA. Opens the survey; the calendar follows on submit. */}
+      {/* Closing CTA. Links to the booking calendar. */}
       <section className="sec tint" id="book">
         <div className="wrap wallhead">
           <h2>Ready to <span className="hl">fill your calendar?</span></h2>
           <p className="wallsub">
-            Answer a few quick questions, then book your strategy call. About 20
-            minutes &middot; No obligation &middot; By application only.
+            Book your strategy call. About 20 minutes &middot; No obligation
+            &middot; By application only.
           </p>
           <div className="closingcta">
-            <button type="button" className="ctabtn ctabtn-inline" onClick={openCalendar}>
+            <a className="ctabtn ctabtn-inline" href={BOOKING_URL} target="_blank" rel="noopener noreferrer" onClick={handleCtaClick}>
               <span className="ctabtn-top">Check Availability</span>
               <span className="ctabtn-main">Yes! I&apos;d Like a Pipeline Full of Estimates</span>
-            </button>
+            </a>
           </div>
         </div>
       </section>
-
-      {/* Booking popup. The GHL calendar is mounted only while open so the
-          embed script resizes a freshly loaded iframe each time. */}
-      {modalOpen && (
-        <div
-          className="svmodal"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Book your strategy call"
-          onClick={() => setModalOpen(false)}
-        >
-          <div className="svmodal-box" onClick={(e) => e.stopPropagation()}>
-            <button
-              type="button"
-              className="svmodal-close"
-              aria-label="Close"
-              autoFocus
-              onClick={() => setModalOpen(false)}
-            >
-              <X aria-hidden />
-            </button>
-            <div className="svmodal-body">
-              <GhlCalendar />
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Footer. Minimal: wordmark, phone, privacy, terms only */}
       <footer>
