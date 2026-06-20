@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 
 import { PHONE_DISPLAY, PHONE_HREF } from "@/components/site-nav";
-import { VidalyticsPlayer } from "../lander/vidalytics-player";
+import { ApplyVsl } from "./apply-vsl";
 
 /* ============================================================================
    CONFIGURABLE CONSTANTS. Edit these, nothing else, to wire the page up.
@@ -172,7 +172,7 @@ export default function ApplyClient() {
           <div className="herorow">
             <div className="herovsl">
               <div className="vslvid">
-                <VidalyticsPlayer />
+                <ApplyVsl />
               </div>
               <p className="vslnote">Watch how it works, then apply.</p>
             </div>
