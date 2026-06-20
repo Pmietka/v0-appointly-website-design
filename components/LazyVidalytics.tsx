@@ -1,32 +1,32 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Play } from "lucide-react";
 
 /* ============================================================================
    LazyVidalytics
 
    The Vidalytics Smart Player loads several megabytes and runs a lot of
-   main-thread JS on init, which used to block the hero (the LCP element) from
-   painting. This component defers all of that:
+   main-thread JS when it initializes. Running that during the initial paint
+   delays the hero (the LCP element). This component keeps the heavy loader off
+   the critical path WITHOUT changing playback behavior:
 
-   - On first render it shows a lightweight placeholder at the exact 16:9 player
-     dimensions (the video's own Vidalytics thumbnail + a centered play button).
-     The box reserves its space with padding-top, so swapping in the real player
-     causes zero layout shift.
-   - The real Vidalytics loader is injected only when the user clicks the
-     placeholder OR the section scrolls within ~600px of the viewport
-     (IntersectionObserver). The observer path means a scrolling viewer finds the
-     player already mounted while the hero still paints instantly.
+   - It renders a poster placeholder (the video's own Vidalytics thumbnail) at the
+     exact 16:9 player dimensions, reserving the space so swapping in the real
+     player causes zero layout shift.
+   - It auto-initializes the player — it never gates playback behind a click.
+     These are autoplay-muted VSLs that must start on load; the player shows its
+     own "click to unmute" overlay. Initialization is simply deferred to just
+     after the hero paints (IntersectionObserver for near-viewport, plus an idle
+     fallback) so the player's init work yields to first paint.
 
-   The players on this site do not autoplay (loader config autoplay.enabled:false),
-   so behavior after init is identical to before: the viewer presses play.
+   The injected loader is the verbatim dashboard snippet, so the player behaves
+   exactly as configured (autoplay, unmute overlay, etc.).
    ============================================================================ */
 
 type LazyVidalyticsProps = {
   /** The Vidalytics embed id, e.g. "pPhKygFs09UtbTBO". */
   embedId: string;
-  /** Poster shown before the player mounts (the embed's own Vidalytics thumbnail). */
+  /** Poster shown until the player mounts (the embed's own Vidalytics thumbnail). */
   poster: string;
   /** Vidalytics account id. Same for every embed on this site. */
   accountId?: string;
@@ -52,23 +52,50 @@ export function LazyVidalytics({
   const scriptId = `vidalytics-loader-${embedId}`;
   const loaderBase = `https://fast.vidalytics.com/embeds/${accountId}/${embedId}/`;
 
-  // Init when the section nears the viewport, before the user scrolls to it.
+  // Promote the placeholder to the real player automatically, just after first
+  // paint. No user interaction is required, so autoplay-muted still works.
   useEffect(() => {
     if (activated) return;
-    const el = wrapRef.current;
-    if (!el || typeof IntersectionObserver === "undefined") return;
+    let done = false;
+    const go = () => {
+      if (!done) {
+        done = true;
+        setActivated(true);
+      }
+    };
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((e) => e.isIntersecting)) {
-          setActivated(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: "600px" },
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
+    // Near-viewport trigger (fires immediately for an above-the-fold hero, and
+    // pre-loads a below-the-fold video as it is scrolled toward).
+    let observer: IntersectionObserver | undefined;
+    const el = wrapRef.current;
+    if (el && typeof IntersectionObserver !== "undefined") {
+      observer = new IntersectionObserver(
+        (entries) => {
+          if (entries.some((e) => e.isIntersecting)) {
+            go();
+            observer?.disconnect();
+          }
+        },
+        { rootMargin: "600px" },
+      );
+      observer.observe(el);
+    }
+
+    // Idle fallback so an above-the-fold hero starts promptly even before any
+    // scroll, while still yielding the main thread to the first paint.
+    const ric: (cb: () => void, opts?: { timeout: number }) => number =
+      (typeof window !== "undefined" && (window as typeof window & {
+        requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number;
+      }).requestIdleCallback) ||
+      ((cb: () => void) => window.setTimeout(cb, 500));
+    const idleId = ric(go, { timeout: 1500 });
+
+    return () => {
+      observer?.disconnect();
+      if (typeof window !== "undefined" && window.cancelIdleCallback) {
+        window.cancelIdleCallback(idleId);
+      }
+    };
   }, [activated]);
 
   // Inject the Vidalytics loader once the target div is in the DOM. This is the
@@ -96,65 +123,27 @@ export function LazyVidalytics({
   }, [activated, scriptId, containerId, loaderBase]);
 
   if (activated) {
-    // Same box the dashboard snippet produces; the player builds itself inside.
+    // Same box the dashboard snippet produces; the player builds itself inside
+    // and autoplays / shows its own "click to unmute" overlay as configured.
     return <div id={containerId} style={BOX_STYLE} />;
   }
 
+  // Poster-only placeholder (no play button): looks like the muted video's first
+  // frame so the swap to the autoplaying player is seamless and shift-free.
   return (
-    <div ref={wrapRef} style={BOX_STYLE}>
-      <button
-        type="button"
-        onClick={() => setActivated(true)}
-        aria-label="Play video"
+    <div ref={wrapRef} style={BOX_STYLE} aria-hidden="true">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={poster}
+        alt=""
         style={{
           position: "absolute",
           inset: 0,
           width: "100%",
           height: "100%",
-          padding: 0,
-          border: 0,
-          cursor: "pointer",
-          background: "#000",
-          overflow: "hidden",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
+          objectFit: "cover",
         }}
-      >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={poster}
-          alt=""
-          aria-hidden="true"
-          style={{
-            position: "absolute",
-            inset: 0,
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-          }}
-        />
-        <span
-          style={{
-            position: "relative",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            width: 72,
-            height: 72,
-            borderRadius: "9999px",
-            background: "#3974ff",
-            boxShadow: "0 6px 24px rgba(0,0,0,0.35)",
-          }}
-        >
-          <Play
-            aria-hidden="true"
-            fill="#ffffff"
-            color="#ffffff"
-            style={{ width: 28, height: 28, marginLeft: 3 }}
-          />
-        </span>
-      </button>
+      />
     </div>
   );
 }
