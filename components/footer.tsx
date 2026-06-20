@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone } from "lucide-react";
 
 import { PHONE_DISPLAY, PHONE_HREF } from "@/components/site-nav";
@@ -31,7 +32,7 @@ export function Footer() {
         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
           <div className="max-w-xs">
             <div className="flex items-center">
-              <img
+              <Image
                 src="/images/appointly-logo-lockup.png"
                 alt="Appointly Solutions"
                 width={173}
@@ -117,7 +118,7 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Appointly Solutions. All rights reserved.
           </p>
           <div className="flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-slate-400">
-            <img src="/images/appointly-logo-icon.png" alt="" aria-hidden="true" className="h-6 w-6" />
+            <Image src="/images/appointly-logo-icon.png" alt="" aria-hidden="true" width={24} height={24} className="h-6 w-6" />
             Performance-based appointment generation
           </div>
         </div>

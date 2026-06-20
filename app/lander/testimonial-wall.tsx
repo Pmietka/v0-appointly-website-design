@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Star, Play } from "lucide-react";
 
 import type { Testimonial } from "./page";
@@ -49,12 +50,13 @@ function TestimonialCard({ t }: { t: Testimonial }) {
         </div>
       ) : (
         t.photo && (
-          <img
+          <Image
             className="tphoto"
             src={t.photo}
             alt={sub ? `${t.name} of ${t.who}` : t.name}
             width={1080}
             height={1350}
+            sizes="(max-width: 768px) 90vw, 340px"
             loading="lazy"
           />
         )
@@ -64,7 +66,7 @@ function TestimonialCard({ t }: { t: Testimonial }) {
       {t.stat && <figcaption className="tstat">{t.stat}</figcaption>}
       <div className="tmeta">
         {avatar ? (
-          <img className="tavatar" src={avatar} alt="" width={44} height={44} loading="lazy" />
+          <Image className="tavatar" src={avatar} alt="" width={44} height={44} sizes="44px" loading="lazy" />
         ) : (
           <span className="tavatar" aria-hidden>{initials(t.name)}</span>
         )}

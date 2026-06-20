@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Fragment } from "react";
+import Image from "next/image";
 import { Target, User, Shield, CreditCard, Clock, Lock, LineChart, CalendarCheck, Check, X } from "lucide-react";
 
 import { SiteNav, BOOKING_URL, PHONE_DISPLAY, PHONE_HREF } from "@/components/site-nav";
@@ -161,7 +162,7 @@ export default function HomePage() {
           <h2>It <span className="hl">works.</span></h2>
           <div className="grid g3">
             <div className="proof">
-              <img className="photo" src="/images/proof/mark-afab.webp" alt="Mark T. of AFAB Services" width={1080} height={1350} loading="lazy" />
+              <Image className="photo" src="/images/proof/mark-afab.webp" alt="Mark T. of AFAB Services" width={1080} height={1350} sizes="(max-width: 768px) 90vw, 360px" loading="lazy" />
               <div className="pin">
                 <div className="who">Mark T. &middot; AFAB Services</div>
                 <div className="where">Port St. Lucie, FL</div>
@@ -171,7 +172,7 @@ export default function HomePage() {
             </div>
 
             <div className="proof">
-              <img className="photo" src="/images/proof/andre.webp" alt="Andre S. of Great Lakes Elite Coatings, Appointly client in Chicago" width={1080} height={1350} loading="lazy" />
+              <Image className="photo" src="/images/proof/andre.webp" alt="Andre S. of Great Lakes Elite Coatings, Appointly client in Chicago" width={1080} height={1350} sizes="(max-width: 768px) 90vw, 360px" loading="lazy" />
               <div className="pin">
                 <div className="who">Andre S. &middot; Great Lakes Elite Coatings</div>
                 <div className="where">Chicago, IL</div>
@@ -181,7 +182,7 @@ export default function HomePage() {
             </div>
 
             <div className="proof">
-              <img className="photo" src="/images/proof/carlos-team.webp" alt="Carlos V. of Diamond Group and his crew in Portland" width={1080} height={1350} loading="lazy" />
+              <Image className="photo" src="/images/proof/carlos-team.webp" alt="Carlos V. of Diamond Group and his crew in Portland" width={1080} height={1350} sizes="(max-width: 768px) 90vw, 360px" loading="lazy" />
               <div className="pin">
                 <div className="who">Carlos V. &middot; Diamond Group</div>
                 <div className="where">Portland, OR</div>
@@ -404,7 +405,7 @@ export default function HomePage() {
           </p>
           <div className="founders">
             <article className="founder">
-              <img className="fphoto" src="/images/team/jacob.jpg" alt="Jacob Mietka, co-founder of Appointly Solutions" width={150} height={150} loading="lazy" />
+              <Image className="fphoto" src="/images/team/jacob.jpg" alt="Jacob Mietka, co-founder of Appointly Solutions" width={150} height={150} sizes="150px" loading="lazy" />
               <div>
                 <div className="fname">Jacob Mietka</div>
                 <div className="frole">Co-founder</div>
@@ -416,7 +417,7 @@ export default function HomePage() {
               </div>
             </article>
             <article className="founder">
-              <img className="fphoto" src="/images/team/patrick.jpg" alt="Patrick Mietka, co-founder of Appointly Solutions" width={150} height={150} loading="lazy" />
+              <Image className="fphoto" src="/images/team/patrick.jpg" alt="Patrick Mietka, co-founder of Appointly Solutions" width={150} height={150} sizes="150px" loading="lazy" />
               <div>
                 <div className="fname">Patrick Mietka</div>
                 <div className="frole">Co-founder</div>

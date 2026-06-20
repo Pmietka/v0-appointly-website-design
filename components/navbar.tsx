@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 
@@ -28,12 +29,13 @@ export function Navbar() {
     >
       <div className="mx-auto flex h-[68px] max-w-[1180px] items-center justify-between gap-4 px-5 sm:px-10 md:h-[78px]">
         <Link href="/" className="flex items-center" aria-label="Appointly Solutions home">
-          <img
+          <Image
             src="/images/appointly-logo-lockup.png"
             alt="Appointly Solutions"
             width={158}
             height={55}
             className="h-9 w-auto md:h-11"
+            priority
           />
         </Link>
 

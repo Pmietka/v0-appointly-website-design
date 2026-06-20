@@ -1,8 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    unoptimized: true,
-  },
   async rewrites() {
     return [
       // Serve the self-contained pitch deck (public/deck/index.html) at the

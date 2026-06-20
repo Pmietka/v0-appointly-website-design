@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Script from "next/script";
 
 export const metadata: Metadata = {
@@ -25,13 +26,13 @@ export default function OptInPage() {
       {/* Minimal header. Logo only, no nav. */}
       <header className="border-b border-[#e5e5e5] bg-[#fafafa]">
         <div className="mx-auto flex h-[68px] max-w-[1180px] items-center justify-center px-5 sm:px-10 md:h-[78px]">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/images/appointly-logo-lockup.png"
             alt="Appointly Solutions"
             width={158}
             height={55}
             className="h-9 w-auto md:h-11"
+            priority
           />
         </div>
       </header>

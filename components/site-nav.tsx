@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Menu, X, Phone } from "lucide-react";
 
 // Single source of truth for the booking calendar. Do not introduce a second
@@ -25,7 +26,7 @@ export function SiteNav() {
     <nav className="snav" aria-label="Primary">
       <div className="snav-in">
         <a href="#top" className="snav-logo" aria-label="Appointly Solutions home">
-          <img src="/images/appointly-logo-lockup.png" alt="Appointly Solutions" width={129} height={45} />
+          <Image src="/images/appointly-logo-lockup.png" alt="Appointly Solutions" width={129} height={45} priority />
         </a>
 
         <div className="snav-right">

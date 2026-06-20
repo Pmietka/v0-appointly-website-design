@@ -1,13 +1,20 @@
 "use client";
 
-import { Fragment, useEffect, useRef } from "react";
+import { Fragment, useRef } from "react";
+import Image from "next/image";
+import Script from "next/script";
 import {
   Phone, CalendarCheck, Check, X,
   Target, User, Shield, CreditCard, Clock, Lock, LineChart,
 } from "lucide-react";
 
 import { PHONE_DISPLAY, PHONE_HREF } from "@/components/site-nav";
-import { ApplyVsl } from "./apply-vsl";
+import { LazyVidalytics } from "@/components/LazyVidalytics";
+
+// The /apply hero VSL (Vidalytics embed yab2hhU03er3If8m) and its poster thumbnail.
+const VSL_EMBED_ID = "yab2hhU03er3If8m";
+const VSL_POSTER =
+  "https://fast.vidalytics.com/video/FeX1NGyU/pOKLz4nprExR5OCF/280657/257484__FFMPEG/thumb/thumbnail-5_0.jpg";
 
 /* ============================================================================
    CONFIGURABLE CONSTANTS. Edit these, nothing else, to wire the page up.
@@ -19,9 +26,8 @@ const BOOKING_URL = "https://client.getappointly.co/strategy-calendar-8186";
 // Meta Pixel / dataset id. Fires PageView on load and Lead on CTA click.
 const META_PIXEL_ID = "985991997226201";
 
-// The hero VSL is the same Vidalytics "in a month, this is your calendar" video
-// used on /lander. It lives in ../lander/vidalytics-player. To swap the video
-// later, change the embed ids in that one file.
+// The hero VSL is deferred via <LazyVidalytics> (see components/LazyVidalytics).
+// To swap the video later, change VSL_EMBED_ID / VSL_POSTER above.
 
 /* ============================================================================
    Meta Pixel helpers
@@ -31,14 +37,15 @@ const META_PIXEL_ID = "985991997226201";
 const pixelReady = /^\d+$/.test(META_PIXEL_ID);
 
 function MetaPixel() {
-  useEffect(() => {
-    if (!pixelReady) return;
-    if (document.getElementById("meta-pixel")) return;
-    // Standard Meta Pixel base code. Defines fbq, inits with our id, and fires
-    // the PageView. The Lead event is fired on survey submit (see ApplyClient).
-    const s = document.createElement("script");
-    s.id = "meta-pixel";
-    s.text = `!function(f,b,e,v,n,t,s)
+  if (!pixelReady) return null;
+  // Standard Meta Pixel base code, loaded via next/script with afterInteractive so
+  // it stays off the critical path but is ready before any CTA click fires Lead.
+  // Defines fbq, inits with our id, and fires PageView. The Lead event is fired on
+  // CTA click (see handleCtaClick).
+  return (
+    <>
+      <Script id="meta-pixel" strategy="afterInteractive">
+        {`!function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
@@ -47,13 +54,9 @@ t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '${META_PIXEL_ID}');
-fbq('track', 'PageView');`;
-    document.head.appendChild(s);
-  }, []);
-
-  if (!pixelReady) return null;
-  return (
-    <noscript>
+fbq('track', 'PageView');`}
+      </Script>
+      <noscript>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         height="1"
@@ -62,7 +65,8 @@ fbq('track', 'PageView');`;
         alt=""
         src={`https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1`}
       />
-    </noscript>
+      </noscript>
+    </>
   );
 }
 
@@ -146,7 +150,7 @@ export default function ApplyClient() {
       <nav className="snav applyhead" aria-label="Primary">
         <div className="snav-in">
           <a href="/" className="snav-logo" aria-label="Appointly Solutions home">
-            <img src="/images/appointly-logo-lockup.png" alt="Appointly Solutions" width={129} height={45} />
+            <Image src="/images/appointly-logo-lockup.png" alt="Appointly Solutions" width={129} height={45} priority />
           </a>
           <a className="snav-call" href={PHONE_HREF}>
             <Phone className="h-4 w-4" aria-hidden />
@@ -172,7 +176,7 @@ export default function ApplyClient() {
           <div className="herorow">
             <div className="herovsl">
               <div className="vslvid">
-                <ApplyVsl />
+                <LazyVidalytics embedId={VSL_EMBED_ID} poster={VSL_POSTER} />
               </div>
               <p className="vslnote">Watch how it works, then apply.</p>
             </div>
@@ -208,9 +212,9 @@ export default function ApplyClient() {
             ))}
           </div>
           <div className="pbfaces" aria-hidden>
-            <img className="pbface" src="/images/proof/mark-afab.webp" alt="" width={54} height={54} loading="lazy" />
-            <img className="pbface" src="/images/proof/andre.webp" alt="" width={54} height={54} loading="lazy" />
-            <img className="pbface" src="/images/proof/carlos-team.webp" alt="" width={54} height={54} loading="lazy" />
+            <Image className="pbface" src="/images/proof/mark-afab.webp" alt="" width={54} height={54} sizes="54px" loading="lazy" />
+            <Image className="pbface" src="/images/proof/andre.webp" alt="" width={54} height={54} sizes="54px" loading="lazy" />
+            <Image className="pbface" src="/images/proof/carlos-team.webp" alt="" width={54} height={54} sizes="54px" loading="lazy" />
             <span className="pbmore">+12</span>
           </div>
           <p className="pbcap">Real floor coating contractors, real booked estimates.</p>
@@ -257,7 +261,7 @@ export default function ApplyClient() {
           <div className="grid g3">
             {CLIENT_WINS.map((t) => (
               <div className="proof" key={t.name}>
-                <img className="photo" src={t.photo} alt={`${t.name} of ${t.who}`} width={1080} height={1350} loading="lazy" />
+                <Image className="photo" src={t.photo} alt={`${t.name} of ${t.who}`} width={1080} height={1350} sizes="(max-width: 768px) 90vw, 360px" loading="lazy" />
                 <div className="pin">
                   <div className="who">{t.name} &middot; {t.who}</div>
                   <div className="where">{t.where}</div>

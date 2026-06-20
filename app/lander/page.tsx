@@ -7,10 +7,17 @@ import {
   MessageCircle, Phone, Award, CalendarSync, Megaphone,
 } from "lucide-react";
 
+import Image from "next/image";
+
 import { TestimonialWall } from "./testimonial-wall";
-import { VidalyticsPlayer } from "./vidalytics-player";
+import { LazyVidalytics } from "@/components/LazyVidalytics";
 import "../home.css";
 import "./lander.css";
+
+// The hero VSL (shared Vidalytics embed pPhKygFs09UtbTBO) and its poster thumbnail.
+const VSL_EMBED_ID = "pPhKygFs09UtbTBO";
+const VSL_POSTER =
+  "https://fast.vidalytics.com/video/FeX1NGyU/7ly5Jas9bcV1jSMM/img/thumbnail/Vsl2.0-Cover-6a33347b2ca87.jpg";
 
 export const viewport: Viewport = {
   themeColor: "#fafafa",
@@ -284,7 +291,7 @@ function FeaturedQuote({ t }: { t: Testimonial }) {
       <blockquote className="fq">{t.quote}</blockquote>
       <figcaption className="fattr">
         {t.photo ? (
-          <img className="favatar" src={t.photo} alt="" width={56} height={56} loading="lazy" />
+          <Image className="favatar" src={t.photo} alt="" width={56} height={56} sizes="56px" loading="lazy" />
         ) : (
           <span className="favatar" aria-hidden>{initials(t.name)}</span>
         )}
@@ -425,7 +432,7 @@ export default function LanderPage() {
       <nav className="snav" aria-label="Primary">
         <div className="snav-in">
           <a href="/" className="snav-logo" aria-label="Appointly Solutions home">
-            <img src="/images/appointly-logo-lockup.png" alt="Appointly Solutions" width={129} height={45} />
+            <Image src="/images/appointly-logo-lockup.png" alt="Appointly Solutions" width={129} height={45} priority />
           </a>
         </div>
       </nav>
@@ -447,7 +454,7 @@ export default function LanderPage() {
 
           {/* 2 · VSL — Vidalytics Smart Player (manages its own poster + 16:9 box) */}
           <div className="vslvid">
-            <VidalyticsPlayer />
+            <LazyVidalytics embedId={VSL_EMBED_ID} poster={VSL_POSTER} />
           </div>
 
           <p className="vslnote">Prefer to read? Everything in the video is on this page too — just scroll.</p>
@@ -467,9 +474,9 @@ export default function LanderPage() {
             <div className="pbnum"><span className="pbv">8 / mo</span><span className="pbl">Avg jobs, month two</span></div>
           </div>
           <div className="pbfaces" aria-hidden>
-            <img className="pbface" src="/images/proof/mark-afab.webp" alt="" width={54} height={54} loading="lazy" />
-            <img className="pbface" src="/images/proof/andre.webp" alt="" width={54} height={54} loading="lazy" />
-            <img className="pbface" src="/images/proof/carlos-team.webp" alt="" width={54} height={54} loading="lazy" />
+            <Image className="pbface" src="/images/proof/mark-afab.webp" alt="" width={54} height={54} sizes="54px" loading="lazy" />
+            <Image className="pbface" src="/images/proof/andre.webp" alt="" width={54} height={54} sizes="54px" loading="lazy" />
+            <Image className="pbface" src="/images/proof/carlos-team.webp" alt="" width={54} height={54} sizes="54px" loading="lazy" />
             <span className="pbmore">+12</span>
           </div>
           <p className="pbcap">Real floor coating contractors, real booked estimates.</p>
@@ -603,7 +610,7 @@ export default function LanderPage() {
           </p>
           <div className="founders">
             <article className="founder">
-              <img className="fphoto" src="/images/team/jacob.jpg" alt="Jacob Mietka, co-founder of Appointly Solutions" width={150} height={150} loading="lazy" />
+              <Image className="fphoto" src="/images/team/jacob.jpg" alt="Jacob Mietka, co-founder of Appointly Solutions" width={150} height={150} sizes="150px" loading="lazy" />
               <div>
                 <div className="fname">Jacob Mietka</div>
                 <div className="frole">Co-founder</div>
@@ -615,7 +622,7 @@ export default function LanderPage() {
               </div>
             </article>
             <article className="founder">
-              <img className="fphoto" src="/images/team/patrick.jpg" alt="Patrick Mietka, co-founder of Appointly Solutions" width={150} height={150} loading="lazy" />
+              <Image className="fphoto" src="/images/team/patrick.jpg" alt="Patrick Mietka, co-founder of Appointly Solutions" width={150} height={150} sizes="150px" loading="lazy" />
               <div>
                 <div className="fname">Patrick Mietka</div>
                 <div className="frole">Co-founder</div>

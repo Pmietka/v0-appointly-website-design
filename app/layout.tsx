@@ -70,6 +70,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Warm up the Vidalytics origins so the deferred player and its poster
+            thumbnail connect faster once the embed initializes. */}
+        <link rel="preconnect" href="https://fast.vidalytics.com" />
+        <link rel="preconnect" href="https://stats.vidalytics.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
