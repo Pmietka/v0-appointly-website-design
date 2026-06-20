@@ -4,16 +4,25 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "Get Started | Appointly Solutions",
   description:
-    "Start a conversation with Appointly Solutions. We book qualified floor coating estimates onto your calendar. Pay per appointment, no shared leads.",
+    "Start a conversation with Appointly Solutions. We book qualified floor coating estimates onto your calendar. Pay per appointment.",
   alternates: {
     canonical: "https://getappointly.co/opt-in",
   },
 };
 
+/* Business details for the SMS / carrier brand compliance footer. These must
+   match the details used to verify the brand. */
+const BUSINESS_NAME = "Appointly Solutions";
+const BUSINESS_ADDRESS = "5350 N Neenah Ave, Chicago, IL, USA";
+// CONFIRM: this must be the exact business email used to verify the brand.
+const BUSINESS_EMAIL = "support@getappointly.co";
+// CONFIRM: this must be the exact phone number used to verify the brand.
+const BUSINESS_PHONE = "773-729-8807";
+
 export default function OptInPage() {
   return (
     <>
-      {/* Minimal header. Logo only, no links, no phone, no nav. */}
+      {/* Minimal header. Logo only, no nav. */}
       <header className="border-b border-[#e5e5e5] bg-[#fafafa]">
         <div className="mx-auto flex h-[68px] max-w-[1180px] items-center justify-center px-5 sm:px-10 md:h-[78px]">
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -43,22 +52,35 @@ export default function OptInPage() {
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
               We run the ads, qualify every homeowner, and book the estimate for
-              you. You pay per appointment, never for a shared lead. Send us a
-              message using the chat in the corner and we will tell you whether
-              your market is open.
+              you. You only pay per booked appointment. Send us a message using
+              the chat in the corner and we will tell you whether your market is
+              open.
             </p>
           </div>
         </section>
       </main>
 
-      {/* Minimal footer. Wordmark only, no links, no phone. */}
+      {/* Compliance footer: business name, address, email, phone, and the
+          required Terms and Privacy Policy links. */}
       <footer className="border-t border-slate-200 bg-white py-10">
-        <div className="mx-auto max-w-6xl px-6 text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">
-            Appointly Solutions
+        <div className="mx-auto max-w-3xl px-6 text-center text-sm text-muted-foreground">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-foreground/80">
+            {BUSINESS_NAME}
           </p>
-          <p className="mt-3 text-sm text-muted-foreground">
-            More booked jobs. Less chasing leads.
+          <p className="mt-3">{BUSINESS_ADDRESS}</p>
+          <p className="mt-1">
+            <a className="underline underline-offset-2 hover:text-foreground" href={`mailto:${BUSINESS_EMAIL}`}>
+              {BUSINESS_EMAIL}
+            </a>
+            <span className="px-2">·</span>
+            <a className="underline underline-offset-2 hover:text-foreground" href={`tel:${BUSINESS_PHONE.replace(/[^0-9+]/g, "")}`}>
+              {BUSINESS_PHONE}
+            </a>
+          </p>
+          <p className="mt-4">
+            <a className="underline underline-offset-2 hover:text-foreground" href="/privacy">Privacy Policy</a>
+            <span className="px-2">·</span>
+            <a className="underline underline-offset-2 hover:text-foreground" href="/terms">Terms of Service</a>
           </p>
         </div>
       </footer>
