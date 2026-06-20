@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 const BUSINESS_NAME = "Appointly Solutions";
 const BUSINESS_ADDRESS = "5350 N Neenah Ave, Chicago, IL, USA";
 // CONFIRM: this must be the exact business email used to verify the brand.
-const BUSINESS_EMAIL = "support@getappointly.co";
+const BUSINESS_EMAIL = "patrick@getappointly.co";
 // CONFIRM: this must be the exact phone number used to verify the brand.
 const BUSINESS_PHONE = "773-729-8807";
 
