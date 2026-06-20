@@ -136,6 +136,8 @@ export function LazyVidalytics({
       <img
         src={poster}
         alt=""
+        fetchPriority="high"
+        decoding="async"
         style={{
           position: "absolute",
           inset: 0,

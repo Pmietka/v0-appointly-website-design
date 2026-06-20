@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
 
+import { LazyExternalScript } from "@/components/deferred-loader";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -128,10 +129,6 @@ export default function RootLayout({
             ]),
           }}
         />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-MM0NQN3HP0"
-          strategy="afterInteractive"
-        />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
@@ -140,6 +137,13 @@ export default function RootLayout({
             gtag('config', 'G-MM0NQN3HP0');
           `}
         </Script>
+        {/* Heavy gtag.js library is deferred to first interaction / short timeout
+            to keep it off the initial load (TBT) window. Config above is queued in
+            dataLayer and flushed once the library loads, so the page_view is kept. */}
+        <LazyExternalScript
+          id="ga-lib"
+          src="https://www.googletagmanager.com/gtag/js?id=G-MM0NQN3HP0"
+        />
       </head>
       <body
         className={`${jakarta.variable} font-sans antialiased`}

@@ -10,6 +10,7 @@ import {
 
 import { PHONE_DISPLAY, PHONE_HREF } from "@/components/site-nav";
 import { LazyVidalytics } from "@/components/LazyVidalytics";
+import { LazyExternalScript } from "@/components/deferred-loader";
 
 // The hero VSL (shared Vidalytics embed pPhKygFs09UtbTBO) and its poster thumbnail.
 const VSL_EMBED_ID = "pPhKygFs09UtbTBO";
@@ -47,17 +48,14 @@ function MetaPixel() {
   return (
     <>
       <Script id="meta-pixel" strategy="afterInteractive">
-        {`!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+        {`!function(f,b,e,n){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[]}(window,document,'script');
 fbq('init', '${META_PIXEL_ID}');
 fbq('track', 'PageView');`}
       </Script>
+      {/* fbevents.js is deferred to first interaction / short timeout to keep it
+          off the initial load (TBT) window. The fbq() calls above and the survey
+          Lead event queue and are sent once the library loads. */}
+      <LazyExternalScript id="meta-pixel-lib" src="https://connect.facebook.net/en_US/fbevents.js" />
       <noscript>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
