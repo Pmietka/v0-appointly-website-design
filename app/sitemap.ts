@@ -80,6 +80,12 @@ const staticRoutes = [
     priority: 0.8,
   },
   {
+    url: `${base}/opt-in`,
+    filePath: "app/opt-in/page.tsx",
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  },
+  {
     url: `${base}/privacy`,
     filePath: "app/privacy/page.tsx",
     changeFrequency: "yearly" as const,
