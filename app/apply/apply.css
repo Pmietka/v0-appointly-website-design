@@ -38,13 +38,23 @@
 .dscroll .formhint a{color:var(--ink);font-weight:700;text-decoration:underline;text-underline-offset:3px}
 .dscroll .formhint a:hover{color:var(--ink-2)}
 
-/* the big two-line CTA button (an anchor that links to the booking calendar) */
+/* the big two-line CTA button (an anchor that links to the booking calendar).
+   Brand green gradient with a glow + gentle attention pulse so it stands out
+   against the light sections. */
 .dscroll .ctabtn{display:flex;flex-direction:column;align-items:center;gap:5px;width:100%;cursor:pointer;
-  text-decoration:none;background:var(--ink);color:#fff;border:none;border-radius:16px;padding:clamp(18px,3vw,24px) clamp(20px,3vw,28px);
-  text-align:center;transition:background .15s,transform .15s;box-shadow:0 20px 44px -18px rgba(15,23,42,.55)}
-.dscroll .ctabtn:hover{background:#000;transform:translateY(-1px)}
-.dscroll .ctabtn-top{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:#9be7c4}
-.dscroll .ctabtn-main{font-size:clamp(17px,2.6vw,22px);font-weight:700;letter-spacing:-.01em;line-height:1.22;text-wrap:balance}
+  text-decoration:none;background:linear-gradient(135deg,#10b981 0%,#0f766e 100%);color:#fff;border:none;border-radius:16px;
+  padding:clamp(20px,3.2vw,26px) clamp(20px,3vw,28px);
+  text-align:center;transition:background .15s,transform .15s,box-shadow .15s,filter .15s;
+  box-shadow:0 18px 42px -14px rgba(16,185,129,.6),0 0 0 1px rgba(16,185,129,.28) inset;
+  animation:ctapulse 2.6s ease-in-out infinite}
+.dscroll .ctabtn:hover{transform:translateY(-2px);filter:brightness(1.06);animation:none;
+  box-shadow:0 26px 54px -14px rgba(16,185,129,.75),0 0 0 1px rgba(16,185,129,.4) inset}
+.dscroll .ctabtn-top{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.18em;color:#d1fae5}
+.dscroll .ctabtn-main{font-size:clamp(18px,2.7vw,23px);font-weight:800;letter-spacing:-.01em;line-height:1.22;text-wrap:balance}
+@keyframes ctapulse{
+  0%,100%{box-shadow:0 18px 42px -14px rgba(16,185,129,.55),0 0 0 0 rgba(16,185,129,.32)}
+  50%{box-shadow:0 20px 46px -14px rgba(16,185,129,.62),0 0 0 10px rgba(16,185,129,0)}}
+@media(prefers-reduced-motion:reduce){.dscroll .ctabtn{animation:none}}
 
 /* trust badges under the CTA */
 .dscroll .trustbadges{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 20px;margin-top:16px}
