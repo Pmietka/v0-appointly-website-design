@@ -134,9 +134,17 @@ export default function ApplyClient() {
   // happens off-site on the GHL calendar, which we cannot observe from here, so
   // the click is the conversion signal we can track on this page.
   function handleCtaClick() {
-    if (pixelReady && !leadFired.current && typeof (window as any).fbq === "function") {
-      leadFired.current = true;
-      (window as any).fbq("track", "Lead");
+    if (!pixelReady || leadFired.current) return;
+    leadFired.current = true;
+    const fbq = (window as any).fbq;
+    if (typeof fbq === "function" && fbq.callMethod) {
+      // fbevents.js has loaded: track normally.
+      fbq("track", "Lead");
+    } else {
+      // The library is deferred and may not have loaded before this same-tab
+      // navigation unloads the page, which would drop a queued event. Send the
+      // Lead directly as an image beacon instead so the click is never lost.
+      new window.Image().src = `https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=Lead&noscript=1`;
     }
   }
 
@@ -144,20 +152,26 @@ export default function ApplyClient() {
     <div className="dscroll">
       <MetaPixel />
 
-      {/* Header. Logo left, phone right. Nothing else. */}
+      {/* Header. Logo left; phone + "Book a Call" CTA right. The book button is
+          always visible; the phone hides on small screens where both won't fit. */}
       <nav className="snav applyhead" aria-label="Primary">
         <div className="snav-in">
           <a href="/" className="snav-logo" aria-label="Appointly Solutions home">
             <Image src="/images/appointly-logo-lockup.png" alt="Appointly Solutions" width={129} height={45} priority />
           </a>
-          <a className="snav-call" href={PHONE_HREF}>
-            <Phone className="h-4 w-4" aria-hidden />
-            {PHONE_DISPLAY}
-          </a>
+          <div className="snav-right">
+            <a className="snav-call" href={PHONE_HREF}>
+              <Phone className="h-4 w-4" aria-hidden />
+              {PHONE_DISPLAY}
+            </a>
+            <a className="snav-book" href={BOOKING_URL} onClick={handleCtaClick}>
+              Book a Call
+            </a>
+          </div>
         </div>
       </nav>
 
-      {/* Hero. Pay-per-show hook, VSL, and the booking CTA side by side. */}
+      {/* Hero. Pay-per-show hook, then CTA → big centered VSL → CTA, stacked. */}
       <section className="sec applyhero" id="top">
         <div className="orb a" />
         <div className="wrap">
@@ -171,29 +185,38 @@ export default function ApplyClient() {
             estimates straight onto your calendar. No contracts. No BS.
           </p>
 
-          <div className="herorow">
-            <div className="herovsl">
-              <div className="vslvid">
-                <LazyVidalytics embedId={VSL_EMBED_ID} poster={VSL_POSTER} />
-              </div>
-              <p className="vslnote">Watch how it works, then apply.</p>
+          {/* CTA above the VSL */}
+          <div className="herocta">
+            <a className="ctabtn" href={BOOKING_URL} onClick={handleCtaClick}>
+              <span className="ctabtn-top">Check Availability</span>
+              <span className="ctabtn-main">Yes! I&apos;d Like a Pipeline Full of Estimates</span>
+            </a>
+            <div className="trustbadges">
+              {TRUST_BADGES.map((b) => (
+                <span className="trustbadge" key={b}><Check aria-hidden /> {b}</span>
+              ))}
             </div>
-            <div className="heroform" id="apply">
-              <p className="formkicker">
-                <strong>Apply for your market.</strong> We take one floor coating
-                contractor per market. Answer a few quick questions, then pick a
-                time. We will confirm on the call whether your area is open.
-              </p>
-              <a className="ctabtn" href={BOOKING_URL} onClick={handleCtaClick}>
-                <span className="ctabtn-top">Check Availability</span>
-                <span className="ctabtn-main">Yes! I&apos;d Like a Pipeline Full of Estimates</span>
-              </a>
-              <div className="trustbadges">
-                {TRUST_BADGES.map((b) => (
-                  <span className="trustbadge" key={b}><Check aria-hidden /> {b}</span>
-                ))}
-              </div>
+          </div>
+
+          {/* The VSL, front and center */}
+          <div className="herovsl">
+            <div className="vslvid">
+              <LazyVidalytics embedId={VSL_EMBED_ID} poster={VSL_POSTER} />
             </div>
+            <p className="vslnote">Watch how it works, then apply.</p>
+          </div>
+
+          {/* CTA below the VSL */}
+          <div className="herocta" id="apply">
+            <p className="formkicker">
+              <strong>Apply for your market.</strong> We take one floor coating
+              contractor per market. Grab a time and we will confirm on the call
+              whether your area is open.
+            </p>
+            <a className="ctabtn" href={BOOKING_URL} onClick={handleCtaClick}>
+              <span className="ctabtn-top">Check Availability</span>
+              <span className="ctabtn-main">Yes! I&apos;d Like a Pipeline Full of Estimates</span>
+            </a>
           </div>
         </div>
       </section>
