@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, useEffect, useRef, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import Image from "next/image";
 import Script from "next/script";
 import {
@@ -24,7 +24,10 @@ const VSL_POSTER =
 // Every CTA on this page links to this booking calendar.
 const BOOKING_URL = "https://client.getappointly.co/strategy-calendar-8186";
 
-// Meta Pixel / dataset id. Fires PageView on load and Lead on CTA click.
+// Meta Pixel / dataset id. Fires PageView on load. No click or conversion
+// events fire from this page: every CTA is an outbound link to the GHL
+// calendar, and the real conversion (the booking) happens there, so firing
+// anything here would count intent as a conversion.
 const META_PIXEL_ID = "985991997226201";
 
 // The hero VSL is deferred via <LazyVidalytics> (see components/LazyVidalytics).
@@ -39,10 +42,9 @@ const pixelReady = /^\d+$/.test(META_PIXEL_ID);
 
 function MetaPixel() {
   if (!pixelReady) return null;
-  // Standard Meta Pixel base code, loaded via next/script with afterInteractive so
-  // it stays off the critical path but is ready before any CTA click fires Lead.
-  // Defines fbq, inits with our id, and fires PageView. The Lead event is fired on
-  // CTA click (see handleCtaClick).
+  // Standard Meta Pixel base code, loaded via next/script with afterInteractive
+  // so it stays off the critical path. Defines fbq, inits with our id, and
+  // fires PageView. Nothing else fires from this page.
   return (
     <>
       <Script id="meta-pixel" strategy="afterInteractive">
@@ -51,8 +53,8 @@ fbq('init', '${META_PIXEL_ID}');
 fbq('track', 'PageView');`}
       </Script>
       {/* fbevents.js is deferred to first interaction / short timeout to keep it
-          off the initial load (TBT) window. The fbq() calls above and the CTA
-          Lead click queue and are sent once the library loads. */}
+          off the initial load (TBT) window. The fbq() calls above queue and are
+          sent once the library loads. */}
       <LazyExternalScript id="meta-pixel-lib" src="https://connect.facebook.net/en_US/fbevents.js" />
       <noscript>
       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -128,8 +130,6 @@ const COMPARE_ROWS = [
    ============================================================================ */
 
 export default function ApplyClient() {
-  const leadFired = useRef(false);
-
   // Ad traffic (utm_source or fbclid in the URL) gets the VSL directly under a
   // compressed hero, above the CTA. Checked client side after mount and
   // defaulting to the organic order, so organic visitors get zero layout shift.
@@ -139,24 +139,6 @@ export default function ApplyClient() {
       setAdTraffic(true);
     }
   }, []);
-
-  // Fire the Meta Pixel Lead once when a CTA is clicked. The booking itself
-  // happens off-site on the GHL calendar, which we cannot observe from here, so
-  // the click is the conversion signal we can track on this page.
-  function handleCtaClick() {
-    if (!pixelReady || leadFired.current) return;
-    leadFired.current = true;
-    const fbq = (window as any).fbq;
-    if (typeof fbq === "function" && fbq.callMethod) {
-      // fbevents.js has loaded: track normally.
-      fbq("track", "Lead");
-    } else {
-      // The library is deferred and may not have loaded before this same-tab
-      // navigation unloads the page, which would drop a queued event. Send the
-      // Lead directly as an image beacon instead so the click is never lost.
-      new window.Image().src = `https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=Lead&noscript=1`;
-    }
-  }
 
   return (
     <div className="dscroll applypage">
@@ -174,7 +156,7 @@ export default function ApplyClient() {
               <Phone className="h-4 w-4" aria-hidden />
               {PHONE_DISPLAY}
             </a>
-            <a className="snav-book" href={BOOKING_URL} onClick={handleCtaClick}>
+            <a className="snav-book" href={BOOKING_URL}>
               Book a Call
             </a>
           </div>
@@ -208,7 +190,7 @@ export default function ApplyClient() {
                 <p className="vslnote">Watch how it works, then apply.</p>
               </div>
               <div className="herocta" id="apply">
-                <a className="ctabtn" href={BOOKING_URL} onClick={handleCtaClick}>
+                <a className="ctabtn" href={BOOKING_URL}>
                   Yes! I&apos;d Like a Pipeline Full of Estimates
                 </a>
                 <div className="trustbadges">
@@ -222,7 +204,7 @@ export default function ApplyClient() {
             <>
               {/* Organic: CTA above the VSL */}
               <div className="herocta">
-                <a className="ctabtn" href={BOOKING_URL} onClick={handleCtaClick}>
+                <a className="ctabtn" href={BOOKING_URL}>
                   Yes! I&apos;d Like a Pipeline Full of Estimates
                 </a>
                 <div className="trustbadges">
@@ -247,7 +229,7 @@ export default function ApplyClient() {
                   contractor per market. Grab a time and we will confirm on the call
                   whether your area is open.
                 </p>
-                <a className="ctabtn" href={BOOKING_URL} onClick={handleCtaClick}>
+                <a className="ctabtn" href={BOOKING_URL}>
                   Yes! I&apos;d Like a Pipeline Full of Estimates
                 </a>
               </div>
@@ -299,7 +281,7 @@ export default function ApplyClient() {
               We take one floor coating contractor per market. Find out if yours
               is still open before someone else claims it.
             </p>
-            <a className="ctabtn ctabtn-inline" href={BOOKING_URL} onClick={handleCtaClick}>
+            <a className="ctabtn ctabtn-inline" href={BOOKING_URL}>
               Claim Your Market
             </a>
           </div>
@@ -405,7 +387,7 @@ export default function ApplyClient() {
             &middot; By application only.
           </p>
           <div className="closingcta">
-            <a className="ctabtn ctabtn-inline" href={BOOKING_URL} onClick={handleCtaClick}>
+            <a className="ctabtn ctabtn-inline" href={BOOKING_URL}>
               Yes! I&apos;d Like a Pipeline Full of Estimates
             </a>
           </div>
