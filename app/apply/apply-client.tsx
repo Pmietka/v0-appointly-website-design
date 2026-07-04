@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, useRef } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Script from "next/script";
 import {
@@ -73,12 +73,12 @@ fbq('track', 'PageView');`}
    ============================================================================ */
 
 // Trust badges under the hero CTA (mirrors the reference funnel's badge row).
-const TRUST_BADGES = ["No contracts", "Pay per show", "Exclusive leads"];
+const TRUST_BADGES = ["No contracts", "Pay per show", "Exclusive estimates"];
 
 // Proof bar stats.
 // PLACEHOLDER NUMBERS: confirm these are real and defensible before sending.
 const STATS = [
-  { v: "$0", l: "Ad spend you risk. We front it." },
+  { v: "$0", l: "Upfront. You only pay when a homeowner shows." },
   { v: "100%", l: "Exclusive. One contractor per market." },
   { v: "8 / mo", l: "Average jobs for newest clients, month two." },
 ];
@@ -87,7 +87,7 @@ const STATS = [
 const STEPS = [
   { n: 1, t: "Apply & Book", d: "Answer a few quick questions and grab a time on the calendar." },
   { n: 2, t: "Strategy Call", d: "A 20 minute call. We check your market, your numbers, and map the plan. Low pressure." },
-  { n: 3, t: "Partner With Us", d: "If it is a fit, we run the ads on our own dime and book qualified estimates onto your calendar." },
+  { n: 3, t: "Partner With Us", d: "If it is a fit, we start booking qualified estimates straight onto your calendar." },
 ];
 
 // Recent client wins (real, approved photo testimonials only).
@@ -112,12 +112,12 @@ const CLIENT_WINS = [
   },
 ];
 
-const COMPARE_COLS = ["DIY", "Marketing Agency", "Shared Leads", "Appointly"];
+const COMPARE_COLS = ["DIY", "Marketing Agency", "Shared Contacts", "Appointly"];
 const COMPARE_ROWS = [
-  { label: "Outcome", Icon: Target, kind: "text", out: true, vals: ["All on you. Hard to keep up while you work.", "Promises and meetings. Slow to show results.", "Cold leads sold to many. You do the chasing.", "Qualified appointments booked on your calendar."] },
-  { label: "Who runs it", Icon: User, kind: "text", out: false, vals: ["You", "You manage them", "You chase leads", "We run everything"] },
-  { label: "Ad spend risk", Icon: Shield, kind: "text", out: false, vals: ["On you", "On you", "On you", "On us"] },
-  { label: "What you pay for", Icon: CreditCard, kind: "text", out: false, vals: ["Your time", "Monthly fees", "Leads that flake", "Booked appointments"] },
+  { label: "Outcome", Icon: Target, kind: "text", out: true, vals: ["All on you. Hard to keep up while you work.", "Promises and meetings. Slow to show results.", "Cold contacts sold to many. You do the chasing.", "Qualified appointments booked on your calendar."] },
+  { label: "Who runs it", Icon: User, kind: "text", out: false, vals: ["You", "You manage them", "You chase contacts", "We run everything"] },
+  { label: "Upfront risk", Icon: Shield, kind: "text", out: false, vals: ["On you", "On you", "On you", "None. Pay per show"] },
+  { label: "What you pay for", Icon: CreditCard, kind: "text", out: false, vals: ["Your time", "Monthly fees", "Contacts that flake", "Booked appointments"] },
   { label: "Works while you're on the job", Icon: Clock, kind: "bin", out: false, vals: [false, false, false, true] },
   { label: "Exclusive to you", Icon: Lock, kind: "bin", out: false, vals: [false, false, false, true] },
   { label: "You only pay for results", Icon: LineChart, kind: "bin", out: false, vals: [false, false, false, true] },
@@ -129,6 +129,16 @@ const COMPARE_ROWS = [
 
 export default function ApplyClient() {
   const leadFired = useRef(false);
+
+  // Ad traffic (utm_source or fbclid in the URL) gets the VSL directly under a
+  // compressed hero, above the CTA. Checked client side after mount and
+  // defaulting to the organic order, so organic visitors get zero layout shift.
+  const [adTraffic, setAdTraffic] = useState(false);
+  useEffect(() => {
+    if (/[?&](utm_source|fbclid)=/i.test(window.location.search)) {
+      setAdTraffic(true);
+    }
+  }, []);
 
   // Fire the Meta Pixel Lead once when a CTA is clicked. The booking itself
   // happens off-site on the GHL calendar, which we cannot observe from here, so
@@ -149,7 +159,7 @@ export default function ApplyClient() {
   }
 
   return (
-    <div className="dscroll">
+    <div className="dscroll applypage">
       <MetaPixel />
 
       {/* Header. Logo left; phone + "Book a Call" CTA right. The book button is
@@ -171,8 +181,10 @@ export default function ApplyClient() {
         </div>
       </nav>
 
-      {/* Hero. Pay-per-show hook, then CTA → big centered VSL → CTA, stacked. */}
-      <section className="sec applyhero" id="top">
+      {/* Hero. Pay-per-show hook. Organic order: CTA, VSL, CTA. Ad traffic
+          (utm_source / fbclid) gets a compressed hero with the VSL first, then
+          the CTA and trust badges. */}
+      <section className={adTraffic ? "sec applyhero advsl" : "sec applyhero"} id="top">
         <div className="orb a" />
         <div className="wrap">
           <p className="eyebrow">For floor coating contractors</p>
@@ -181,43 +193,66 @@ export default function ApplyClient() {
             <span className="hl">sits down for your estimate.</span>
           </h1>
           <p className="lead">
-            We run the ads on our own dime and book prequalified, exclusive
-            estimates straight onto your calendar. No contracts. No BS.
+            {adTraffic
+              ? "We generate, qualify, and book exclusive estimates straight onto your calendar."
+              : "We generate, qualify, and book exclusive estimates straight onto your calendar. You only pay when a homeowner shows. No contracts. No BS."}
           </p>
 
-          {/* CTA above the VSL */}
-          <div className="herocta">
-            <a className="ctabtn" href={BOOKING_URL} onClick={handleCtaClick}>
-              <span className="ctabtn-top">Check Availability</span>
-              <span className="ctabtn-main">Yes! I&apos;d Like a Pipeline Full of Estimates</span>
-            </a>
-            <div className="trustbadges">
-              {TRUST_BADGES.map((b) => (
-                <span className="trustbadge" key={b}><Check aria-hidden /> {b}</span>
-              ))}
-            </div>
-          </div>
+          {adTraffic ? (
+            <>
+              {/* Ad traffic: the VSL comes first, then one CTA with badges. */}
+              <div className="herovsl">
+                <div className="vslvid">
+                  <LazyVidalytics embedId={VSL_EMBED_ID} poster={VSL_POSTER} />
+                </div>
+                <p className="vslnote">Watch how it works, then apply.</p>
+              </div>
+              <div className="herocta" id="apply">
+                <a className="ctabtn" href={BOOKING_URL} onClick={handleCtaClick}>
+                  Yes! I&apos;d Like a Pipeline Full of Estimates
+                </a>
+                <div className="trustbadges">
+                  {TRUST_BADGES.map((b) => (
+                    <span className="trustbadge" key={b}><Check aria-hidden /> {b}</span>
+                  ))}
+                </div>
+              </div>
+            </>
+          ) : (
+            <>
+              {/* Organic: CTA above the VSL */}
+              <div className="herocta">
+                <a className="ctabtn" href={BOOKING_URL} onClick={handleCtaClick}>
+                  Yes! I&apos;d Like a Pipeline Full of Estimates
+                </a>
+                <div className="trustbadges">
+                  {TRUST_BADGES.map((b) => (
+                    <span className="trustbadge" key={b}><Check aria-hidden /> {b}</span>
+                  ))}
+                </div>
+              </div>
 
-          {/* The VSL, front and center */}
-          <div className="herovsl">
-            <div className="vslvid">
-              <LazyVidalytics embedId={VSL_EMBED_ID} poster={VSL_POSTER} />
-            </div>
-            <p className="vslnote">Watch how it works, then apply.</p>
-          </div>
+              {/* The VSL, front and center */}
+              <div className="herovsl">
+                <div className="vslvid">
+                  <LazyVidalytics embedId={VSL_EMBED_ID} poster={VSL_POSTER} />
+                </div>
+                <p className="vslnote">Watch how it works, then apply.</p>
+              </div>
 
-          {/* CTA below the VSL */}
-          <div className="herocta" id="apply">
-            <p className="formkicker">
-              <strong>Apply for your market.</strong> We take one floor coating
-              contractor per market. Grab a time and we will confirm on the call
-              whether your area is open.
-            </p>
-            <a className="ctabtn" href={BOOKING_URL} onClick={handleCtaClick}>
-              <span className="ctabtn-top">Check Availability</span>
-              <span className="ctabtn-main">Yes! I&apos;d Like a Pipeline Full of Estimates</span>
-            </a>
-          </div>
+              {/* CTA below the VSL */}
+              <div className="herocta" id="apply">
+                <p className="formkicker">
+                  <strong>Apply for your market.</strong> We take one floor coating
+                  contractor per market. Grab a time and we will confirm on the call
+                  whether your area is open.
+                </p>
+                <a className="ctabtn" href={BOOKING_URL} onClick={handleCtaClick}>
+                  Yes! I&apos;d Like a Pipeline Full of Estimates
+                </a>
+              </div>
+            </>
+          )}
         </div>
       </section>
 
@@ -265,8 +300,7 @@ export default function ApplyClient() {
               is still open before someone else claims it.
             </p>
             <a className="ctabtn ctabtn-inline" href={BOOKING_URL} onClick={handleCtaClick}>
-              <span className="ctabtn-top">Check Availability</span>
-              <span className="ctabtn-main">Claim Your Market</span>
+              Claim Your Market
             </a>
           </div>
         </div>
@@ -299,9 +333,9 @@ export default function ApplyClient() {
       <section className="sec cmpsec applycmp" id="why-us">
         <div className="wrap">
           <p className="cmpeyebrow">Compare the options</p>
-          <h2>Why contractors pick us <span className="hl">over a lead company.</span></h2>
+          <h2>Why contractors pick us <span className="hl">over the other options.</span></h2>
           <p className="cmpsub">
-            We front the ad spend, qualify every homeowner, and book appointments
+            We generate the demand, qualify every homeowner, and book appointments
             straight onto your calendar. You just show up and close.
           </p>
 
@@ -312,7 +346,7 @@ export default function ApplyClient() {
                 <div className="ch dim" />
                 <div className="ch">DIY</div>
                 <div className="ch">Marketing Agency</div>
-                <div className="ch">Shared Leads</div>
+                <div className="ch">Shared Contacts</div>
                 <div className="ch appt"><CalendarCheck className="ci" />Appointly</div>
                 {COMPARE_ROWS.map((r) => {
                   const RowIcon = r.Icon;
@@ -372,8 +406,7 @@ export default function ApplyClient() {
           </p>
           <div className="closingcta">
             <a className="ctabtn ctabtn-inline" href={BOOKING_URL} onClick={handleCtaClick}>
-              <span className="ctabtn-top">Check Availability</span>
-              <span className="ctabtn-main">Yes! I&apos;d Like a Pipeline Full of Estimates</span>
+              Yes! I&apos;d Like a Pipeline Full of Estimates
             </a>
           </div>
         </div>

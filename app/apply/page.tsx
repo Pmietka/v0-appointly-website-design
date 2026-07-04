@@ -14,7 +14,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Appointly Solutions | Apply to work with us",
   description:
-    "We book floor coating estimates onto your calendar. We run the ads with our own money and you pay only when a qualified homeowner is booked. Apply to work with us.",
+    "We generate, qualify, and book exclusive floor coating estimates straight onto your calendar. You only pay when a qualified homeowner shows. Apply to work with us.",
   robots: { index: false, follow: true },
 };
 
