@@ -12,10 +12,10 @@ import { PHONE_DISPLAY, PHONE_HREF } from "@/components/site-nav";
 import { LazyVidalytics } from "@/components/LazyVidalytics";
 import { LazyExternalScript } from "@/components/deferred-loader";
 
-// The hero VSL (shared Vidalytics embed pPhKygFs09UtbTBO) and its poster thumbnail.
-const VSL_EMBED_ID = "pPhKygFs09UtbTBO";
-const VSL_POSTER =
-  "https://fast.vidalytics.com/video/FeX1NGyU/7ly5Jas9bcV1jSMM/img/thumbnail/Vsl2.0-Cover-6a33347b2ca87.jpg";
+// The hero VSL (Vidalytics embed yab2hhU03er3If8m). No poster thumbnail URL yet,
+// so LazyVidalytics fills the 16:9 box with a neutral placeholder until the
+// player mounts (which happens automatically just after first paint).
+const VSL_EMBED_ID = "yab2hhU03er3If8m";
 
 /* ============================================================================
    CONFIGURABLE CONSTANTS. Edit these, nothing else, to wire the page up.
@@ -86,6 +86,22 @@ const EMPTY_TRACKING: Tracking = {
   utm_source: "", utm_medium: "", utm_campaign: "", utm_term: "", utm_content: "",
   page_url: "",
 };
+
+// GHL's calendar phone field is an international input: it silently ignores a
+// prefill value it can't parse. A number typed as "(555) 123-4567" often fails,
+// while E.164 ("+15551234567") populates reliably. Normalize before prefilling:
+// keep a leading +, strip everything else to digits, and assume US (+1) for a
+// bare 10-digit number.
+function normalizePhone(raw: string): string {
+  const trimmed = raw.trim();
+  const hasPlus = trimmed.startsWith("+");
+  const digits = trimmed.replace(/\D/g, "");
+  if (!digits) return "";
+  if (hasPlus) return "+" + digits;
+  if (digits.length === 10) return "+1" + digits;
+  if (digits.length === 11 && digits.startsWith("1")) return "+" + digits;
+  return "+" + digits;
+}
 
 function readCookie(name: string): string {
   if (typeof document === "undefined") return "";
@@ -193,16 +209,17 @@ function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () =
       console.error("Apply webhook failed:", err);
     }
 
-    // 4. Swap the survey for the booking calendar, prefilled.
-    // NOTE: confirm these prefill param names (first_name, last_name, email,
-    // phone) against this booking widget. Test with fake values and adjust the
-    // keys here if the calendar form does not populate.
-    const cal =
-      CALENDAR_BASE +
-      `?first_name=${encodeURIComponent(first_name)}` +
-      `&last_name=${encodeURIComponent(last_name)}` +
-      `&email=${encodeURIComponent(email)}` +
-      `&phone=${encodeURIComponent(phone)}`;
+    // 4. Swap the survey for the booking calendar, prefilled. GHL reads these
+    // query params on the iframe src (first_name, last_name, email, phone). The
+    // phone must be E.164 or the calendar's phone field ignores it, so normalize.
+    const params = new URLSearchParams({
+      first_name,
+      last_name,
+      name: fullName.trim(),
+      email,
+      phone: normalizePhone(phone),
+    });
+    const cal = `${CALENDAR_BASE}?${params.toString()}`;
     setCalSrc(cal);
     setSubmitted(true);
   }
@@ -364,16 +381,21 @@ export default function ApplyClient() {
       <MetaPixel />
       {open && <QualifyModal tracking={tracking} onClose={() => setOpen(false)} />}
 
-      {/* Header. Logo left, phone right. Nothing else. */}
+      {/* Header. Logo left; phone + apply CTA right. */}
       <nav className="snav applyhead" aria-label="Primary">
         <div className="snav-in">
           <a href="/" className="snav-logo" aria-label="Appointly Solutions home">
             <Image src="/images/appointly-logo-lockup.png" alt="Appointly Solutions" width={129} height={45} priority />
           </a>
-          <a className="snav-call" href={PHONE_HREF}>
-            <Phone className="h-4 w-4" aria-hidden />
-            {PHONE_DISPLAY}
-          </a>
+          <div className="applynav-right">
+            <a className="snav-call" href={PHONE_HREF}>
+              <Phone className="h-4 w-4" aria-hidden />
+              {PHONE_DISPLAY}
+            </a>
+            <button type="button" className="navcta" onClick={() => setOpen(true)}>
+              Check Availability
+            </button>
+          </div>
         </div>
       </nav>
 
@@ -394,7 +416,7 @@ export default function ApplyClient() {
           <div className="herorow">
             <div className="herovsl">
               <div className="vslvid">
-                <LazyVidalytics embedId={VSL_EMBED_ID} poster={VSL_POSTER} />
+                <LazyVidalytics embedId={VSL_EMBED_ID} />
               </div>
               <p className="vslnote">Watch how it works, then apply.</p>
             </div>
@@ -575,6 +597,14 @@ export default function ApplyClient() {
           </div>
         </div>
       </section>
+
+      {/* Sticky apply CTA on mobile only. Keeps the primary action a thumb-tap
+          away while the video plays, no matter how far the page is scrolled. */}
+      <div className="mcta">
+        <button type="button" className="mcta-btn" onClick={() => setOpen(true)}>
+          Check Availability — Apply Now
+        </button>
+      </div>
 
       {/* Footer. Minimal: wordmark, phone, privacy, terms only */}
       <footer>

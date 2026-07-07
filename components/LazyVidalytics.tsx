@@ -26,8 +26,10 @@ import { useEffect, useRef, useState } from "react";
 type LazyVidalyticsProps = {
   /** The Vidalytics embed id, e.g. "pPhKygFs09UtbTBO". */
   embedId: string;
-  /** Poster shown until the player mounts (the embed's own Vidalytics thumbnail). */
-  poster: string;
+  /** Poster shown until the player mounts (the embed's own Vidalytics thumbnail).
+   *  Optional: when a new embed has no thumbnail URL yet, omit it and a neutral
+   *  dark placeholder fills the same 16:9 box so there is still no layout shift. */
+  poster?: string;
   /** Vidalytics account id. Same for every embed on this site. */
   accountId?: string;
 };
@@ -128,24 +130,31 @@ export function LazyVidalytics({
     return <div id={containerId} style={BOX_STYLE} />;
   }
 
-  // Poster-only placeholder (no play button): looks like the muted video's first
-  // frame so the swap to the autoplaying player is seamless and shift-free.
+  // Poster placeholder (no play button): looks like the muted video's first frame
+  // so the swap to the autoplaying player is seamless and shift-free. When no
+  // poster URL is provided, fall back to a neutral dark box of the same size.
   return (
-    <div ref={wrapRef} style={BOX_STYLE} aria-hidden="true">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={poster}
-        alt=""
-        fetchPriority="high"
-        decoding="async"
-        style={{
-          position: "absolute",
-          inset: 0,
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-        }}
-      />
+    <div
+      ref={wrapRef}
+      style={{ ...BOX_STYLE, background: "#0b0f16" }}
+      aria-hidden="true"
+    >
+      {poster ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={poster}
+          alt=""
+          fetchPriority="high"
+          decoding="async"
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+          }}
+        />
+      ) : null}
     </div>
   );
 }
