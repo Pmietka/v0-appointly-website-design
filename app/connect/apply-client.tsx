@@ -129,8 +129,8 @@ function readTracking(): Tracking {
 }
 
 const ROLE_OPTIONS = ["Owner / CEO", "Marketing or Sales Leader", "Salesperson", "Other"];
-const REVENUE_OPTIONS = ["$0 - $1M Per Year", "$1M - $2M Per Year", "$2M - $5M Per Year", "$5M - $10M Per Year", "$10M+ Per Year"];
-const REPS_OPTIONS = ["I run all the leads myself", "1-4 reps", "5-10 reps", "10-20 reps", "20+ reps"];
+const REVENUE_OPTIONS = ["$0 - $500K Per Year", "$500K - $1M Per Year", "$1M - $5M Per Year", "$5M+ Per Year"];
+const REPS_OPTIONS = ["I run all the leads myself", "1-3 reps", "3-10 reps", "10+ reps"];
 
 function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () => void }) {
   const [step, setStep] = useState(1);
