@@ -210,12 +210,16 @@ function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () =
     }
 
     // 4. Swap the survey for the booking calendar, prefilled. GHL reads these
-    // query params on the iframe src (first_name, last_name, email, phone). The
-    // phone must be E.164 or the calendar's phone field ignores it, so normalize.
+    // query params on the iframe src. This calendar's default form has a single
+    // combined "Full Name" field, prefilled with `full_name` (the split
+    // first_name/last_name keys don't map to it); email/phone fill from `email`
+    // and `phone`. The phone must be E.164 or the field ignores it, so normalize.
+    // first_name/last_name are kept as a harmless fallback if the form is ever
+    // switched to split name fields.
     const params = new URLSearchParams({
+      full_name: fullName.trim(),
       first_name,
       last_name,
-      name: fullName.trim(),
       email,
       phone: normalizePhone(phone),
     });
