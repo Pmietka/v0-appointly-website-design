@@ -25,7 +25,7 @@ const VSL_POSTER =
 const META_PIXEL_ID = "985991997226201";
 
 // The GoHighLevel inbound webhook the survey POSTs to.
-const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/bv8PsVl3lvidD0j8bBqP/webhook-trigger/c9547f8b-20ad-4fe2-8436-41c1f681bd0f";
+const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/bv8PsVl3lvidD0j8bBqP/webhook-trigger/37e334fa-fbb1-438a-9898-b20b6cbd4031";
 
 // GHL booking widget embedded in the modal after the survey is submitted.
 const CALENDAR_BASE = "https://link.getappointly.co/widget/booking/U3zYpjFagC8HFqQw21rC";
