@@ -112,14 +112,15 @@ function readTracking(): Tracking {
   };
 }
 
-const REPS_OPTIONS = ["I run them all myself", "1 to 4 reps", "5 to 10 reps", "10+ reps"];
-const REVENUE_OPTIONS = ["Under $200k", "$200k to $500k", "$500k to $1M", "$1M+"];
+const ROLE_OPTIONS = ["Owner / CEO", "Marketing or Sales Leader", "Salesperson", "Other"];
+const REVENUE_OPTIONS = ["$0 - $1M Per Year", "$1M - $2M Per Year", "$2M - $5M Per Year", "$5M - $10M Per Year", "$10M+ Per Year"];
+const REPS_OPTIONS = ["I run all the leads myself", "1-4 reps", "5-10 reps", "10-20 reps", "20+ reps"];
 
 function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () => void }) {
   const [step, setStep] = useState(1);
-  const [reps, setReps] = useState("");
+  const [role, setRole] = useState("");
   const [revenue, setRevenue] = useState("");
-  const [city, setCity] = useState("");
+  const [reps, setReps] = useState("");
   const [fullName, setFullName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
@@ -173,7 +174,7 @@ function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () =
     // 3. POST to GHL, fire and forget. Never block the UI on the network.
     const payload = {
       first_name, last_name, phone, email,
-      reps, revenue, city,
+      role, revenue, reps,
       fbclid: tracking.fbclid, fbc: tracking.fbc, fbp: tracking.fbp,
       utm_source: tracking.utm_source, utm_medium: tracking.utm_medium,
       utm_campaign: tracking.utm_campaign, utm_term: tracking.utm_term,
@@ -226,20 +227,20 @@ function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () =
           ) : step === 1 ? (
             <div className="qstep">
               <p className="qlabel">Step 1 of 4</p>
-              <h2 className="qquestion">How many sales reps do you have?</h2>
-              <p className="qsubhead">Counting yourself if you run estimates.</p>
+              <h2 className="qquestion">What is your role in the company?</h2>
+              <p className="qsubhead">We only partner directly with decision makers.</p>
               <div className="qoptions">
-                {REPS_OPTIONS.map((o) => (
-                  <button type="button" key={o} className={`qoption${reps === o ? " sel" : ""}`}
-                    onClick={() => { setReps(o); setStep(2); }}>{o}</button>
+                {ROLE_OPTIONS.map((o) => (
+                  <button type="button" key={o} className={`qoption${role === o ? " sel" : ""}`}
+                    onClick={() => { setRole(o); setStep(2); }}>{o}</button>
                 ))}
               </div>
             </div>
           ) : step === 2 ? (
             <div className="qstep">
               <p className="qlabel">Step 2 of 4</p>
-              <h2 className="qquestion">What revenue are you on track for this year?</h2>
-              <p className="qsubhead">Just checking fit.</p>
+              <h2 className="qquestion">What are you on track to do this year in revenue?</h2>
+              <p className="qsubhead">We only ask to see if we would be a good fit.</p>
               <div className="qoptions">
                 {REVENUE_OPTIONS.map((o) => (
                   <button type="button" key={o} className={`qoption${revenue === o ? " sel" : ""}`}
@@ -251,27 +252,30 @@ function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () =
               </button>
             </div>
           ) : step === 3 ? (
-            <form className="qstep" onSubmit={(e) => { e.preventDefault(); if (city.trim()) setStep(4); }}>
+            <div className="qstep">
               <p className="qlabel">Step 3 of 4</p>
-              <h2 className="qquestion">What city or area are you in?</h2>
-              <p className="qsubhead">One contractor per market, so we check availability.</p>
-              <input className="qinput" type="text" placeholder="City or area" autoComplete="address-level2"
-                value={city} onChange={(e) => setCity(e.target.value)} required autoFocus />
-              <button type="submit" className="qsubmit" disabled={!city.trim()}>Next</button>
+              <h2 className="qquestion">How many sales reps do you have?</h2>
+              <p className="qsubhead">Including yourself if you run the appointments.</p>
+              <div className="qoptions">
+                {REPS_OPTIONS.map((o) => (
+                  <button type="button" key={o} className={`qoption${reps === o ? " sel" : ""}`}
+                    onClick={() => { setReps(o); setStep(4); }}>{o}</button>
+                ))}
+              </div>
               <button type="button" className="qback" onClick={() => setStep(2)}>
                 <ArrowLeft aria-hidden /> Go Back
               </button>
-            </form>
+            </div>
           ) : (
             <form className="qstep" onSubmit={handleSubmit}>
               <p className="qlabel">Step 4 of 4</p>
-              <h2 className="qquestion">Last step. Where do we reach you?</h2>
-              <p className="qsubhead">Next you pick a time that works.</p>
-              <input className="qinput" type="text" placeholder="Full name" autoComplete="name"
+              <h2 className="qquestion">Fill out your details to book your call</h2>
+              <p className="qsubhead">Enter your info below — on the next step you&apos;ll pick a time that works for you.</p>
+              <input className="qinput" type="text" placeholder="Enter your full name" autoComplete="name"
                 value={fullName} onChange={(e) => setFullName(e.target.value)} required autoFocus />
-              <input className="qinput" type="tel" placeholder="Phone" autoComplete="tel"
+              <input className="qinput" type="tel" placeholder="+1 (555) 000-0000" autoComplete="tel"
                 value={phone} onChange={(e) => setPhone(e.target.value)} required />
-              <input className="qinput" type="email" placeholder="Email" autoComplete="email"
+              <input className="qinput" type="email" placeholder="your@email.com" autoComplete="email"
                 value={email} onChange={(e) => setEmail(e.target.value)} required />
               <button type="submit" className="qsubmit">Submit</button>
               <p className="qconsent">

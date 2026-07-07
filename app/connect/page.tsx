@@ -17,10 +17,10 @@ export const metadata: Metadata = {
     "We book floor coating estimates onto your calendar. We run the ads with our own money and you pay only when a qualified homeowner is booked. Apply to work with us.",
   robots: { index: false, follow: true },
   alternates: {
-    canonical: "https://getappointly.co/apply-v2",
+    canonical: "https://getappointly.co/connect",
   },
 };
 
-export default function ApplyV2Page() {
+export default function ConnectPage() {
   return <ApplyClient />;
 }
