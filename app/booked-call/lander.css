@@ -1,0 +1,391 @@
+/* ============================================================================
+   /lander page styles. Builds on the shared .dscroll design system (imported
+   from ../home.css) and adds two things this page needs:
+     1. A VSL (video sales letter) hero slot.
+     2. A dense "wall of testimonials" you get bombarded by as you scroll.
+   Everything stays scoped under .dscroll so it cannot leak into the Tailwind
+   side of the site.
+   ============================================================================ */
+
+/* ── VSL hero ─────────────────────────────────────────────────────────────── */
+.dscroll .vslhero{padding:clamp(40px,8vw,80px) 0 clamp(48px,9vw,96px)}
+.dscroll .vslhero .wrap{display:flex;flex-direction:column;align-items:center;text-align:center}
+.dscroll .vslhero h1{max-width:14ch}
+.dscroll .vslhero .lead{margin-left:auto;margin-right:auto;text-align:center}
+
+/* the video frame — responsive 16:9 box. Drop any embed (YouTube, Wistia,
+   Vimeo, <video>) inside .vslframe and it will fill the box. */
+.dscroll .vslframe{position:relative;width:100%;max-width:880px;aspect-ratio:16/9;margin:clamp(28px,5vw,44px) auto 0;
+  border-radius:20px;overflow:hidden;background:#0c0c0c;border:1px solid var(--line);
+  box-shadow:0 30px 70px -30px rgba(0,0,0,.5)}
+.dscroll .vslframe iframe,.dscroll .vslframe video,.dscroll .vslframe > div{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* Vidalytics Smart Player wrapper — same look as .vslframe, but the embed brings
+   its own responsive 16:9 box, so no forced aspect-ratio or absolute children */
+.dscroll .vslvid{width:100%;max-width:880px;margin:clamp(28px,5vw,44px) auto 0;border-radius:20px;
+  overflow:hidden;background:#0c0c0c;border:1px solid var(--line);box-shadow:0 30px 70px -30px rgba(0,0,0,.5)}
+
+/* placeholder shown until a real embed is dropped in */
+.dscroll .vslplaceholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;
+  color:#fff;cursor:pointer;
+  background:radial-gradient(120% 120% at 50% 0%,#1f2937 0%,#0c0c0c 60%)}
+.dscroll .vslplaceholder .play{width:84px;height:84px;border-radius:999px;display:grid;place-items:center;
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(6px);
+  transition:transform .15s,background .15s}
+.dscroll .vslplaceholder:hover .play{transform:scale(1.06);background:rgba(255,255,255,.18)}
+.dscroll .vslplaceholder .play::after{content:"";margin-left:6px;width:0;height:0;
+  border-left:26px solid #fff;border-top:16px solid transparent;border-bottom:16px solid transparent}
+.dscroll .vslplaceholder .vlabel{font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+
+.dscroll .vslhero .btn{margin-top:clamp(28px,5vw,40px)}
+.dscroll .vslnote{font-size:13px;color:var(--ink-4);margin-top:14px}
+
+/* ── testimonial wall ─────────────────────────────────────────────────────── */
+.dscroll .wallhead{text-align:center}
+.dscroll .wallhead .wallsub{font-size:clamp(16px,2.3vw,21px);color:var(--ink-3);line-height:1.5;max-width:680px;margin:18px auto 0}
+
+/* masonry-style columns so cards of different heights pack tightly — the
+   "bombarded" feeling. Falls back to a single column on small screens. */
+.dscroll .wall{margin-top:clamp(30px,5vw,46px);column-gap:clamp(14px,2.5vw,18px);column-count:1}
+@media(min-width:680px){.dscroll .wall{column-count:2}}
+@media(min-width:980px){.dscroll .wall{column-count:3}}
+
+.dscroll .tcard{break-inside:avoid;-webkit-column-break-inside:avoid;margin-bottom:clamp(14px,2.5vw,18px);
+  background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(20px,3.5vw,26px);
+  box-shadow:0 14px 36px -26px rgba(0,0,0,.24);display:flex;flex-direction:column;gap:14px}
+
+/* photo testimonial card */
+.dscroll .tcard .tphoto{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;background:#f0f0f0;
+  border-radius:12px;margin:-2px 0 4px}
+
+.dscroll .tcard .stars{display:flex;gap:3px;color:#f59e0b}
+.dscroll .tcard .stars .ci{width:18px;height:18px;fill:#f59e0b}
+.dscroll .tcard .tquote{font-size:clamp(15px,2.1vw,17px);line-height:1.55;color:var(--ink)}
+.dscroll .tcard .tquote .mk{background:linear-gradient(180deg,transparent 60%,#cffbef 60%);padding:0 2px}
+.dscroll .tcard .tmeta{display:flex;align-items:center;gap:12px;margin-top:2px}
+.dscroll .tcard .tavatar{width:44px;height:44px;border-radius:999px;flex-shrink:0;object-fit:cover;
+  display:grid;place-items:center;font-weight:700;color:#0f3d2e;font-size:16px;
+  background:linear-gradient(135deg,#cfffae,#ace5ff)}
+.dscroll .tcard .tname{font-size:15px;font-weight:700;letter-spacing:-.01em;line-height:1.2}
+.dscroll .tcard .twho{font-size:13px;color:var(--ink-4);margin-top:2px}
+.dscroll .tcard .tstat{font-size:13.5px;font-weight:600;color:#0f766e;background:#ecfdf5;border-radius:8px;
+  padding:7px 11px;align-self:flex-start}
+
+/* clean text-only quote card (no gray-initial avatar) — sits in the same masonry */
+.dscroll .qcard{break-inside:avoid;-webkit-column-break-inside:avoid;margin-bottom:clamp(14px,2.5vw,18px);
+  background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(20px,3vw,26px);
+  display:flex;flex-direction:column;gap:12px;box-shadow:0 14px 36px -30px rgba(0,0,0,.22)}
+.dscroll .qcard .stars{display:flex;gap:3px;color:#f59e0b}
+.dscroll .qcard .stars .ci{width:18px;height:18px;fill:#f59e0b}
+.dscroll .qcard .tquote{font-size:clamp(15px,2.1vw,17px);line-height:1.55;color:var(--ink)}
+.dscroll .qcard .tstat{font-size:13.5px;font-weight:600;color:#0f766e;background:#ecfdf5;border-radius:8px;
+  padding:5px 10px;align-self:flex-start}
+.dscroll .qcard .qattr{display:flex;flex-direction:column;gap:2px;margin-top:2px}
+.dscroll .qcard .qname{font-size:15px;font-weight:700;letter-spacing:-.01em;line-height:1.2;color:var(--ink)}
+.dscroll .qcard .qwho{font-size:13px;color:var(--ink-4)}
+
+/* little stat strip above the wall */
+.dscroll .wallstats{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(20px,5vw,56px);margin-top:clamp(26px,4vw,36px)}
+.dscroll .wallstats .ws{display:flex;flex-direction:column;align-items:center;gap:4px}
+.dscroll .wallstats .wsv{font-size:clamp(30px,5vw,46px);font-weight:700;letter-spacing:-.03em;line-height:1}
+.dscroll .wallstats .wsl{font-size:13px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+
+/* ============================================================================
+   POST-BOOKING SECTIONS
+   Added when /lander was reframed for leads who already booked a call. These
+   build on the shared .dscroll tokens and the homepage step/compare styles.
+   ============================================================================ */
+
+/* ── proof bar: instant legitimacy for non-watchers ───────────────────────── */
+.dscroll .proofbar{background:var(--ink);color:#fff}
+.dscroll .proofbar .wrap{text-align:center}
+.dscroll .proofbar .pbnums{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;
+  gap:clamp(28px,6vw,64px);max-width:880px;margin:0 auto}
+.dscroll .proofbar .pbnum{display:flex;flex-direction:column;align-items:center;gap:6px;min-width:120px;max-width:200px}
+.dscroll .proofbar .pbv{font-size:clamp(34px,6vw,58px);font-weight:700;letter-spacing:-.03em;line-height:1;
+  background:linear-gradient(135deg,#cfffae,#ace5ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.dscroll .proofbar .pbl{font-size:13px;color:rgba(255,255,255,.66);text-transform:uppercase;letter-spacing:.08em;font-weight:600;line-height:1.3}
+.dscroll .proofbar .pbfaces{display:flex;justify-content:center;align-items:center;margin-top:clamp(26px,4vw,38px)}
+.dscroll .proofbar .pbface{width:54px;height:54px;border-radius:999px;object-fit:cover;border:2px solid var(--ink);
+  margin-left:-14px;background:#333}
+.dscroll .proofbar .pbface:first-child{margin-left:0}
+.dscroll .proofbar .pbmore{margin-left:-14px;width:54px;height:54px;border-radius:999px;border:2px solid var(--ink);
+  background:#262626;color:#fff;font-size:13px;font-weight:700;display:grid;place-items:center}
+.dscroll .proofbar .pbcap{font-size:14px;color:rgba(255,255,255,.66);margin-top:16px}
+
+/* ── case study: featured client story right under the stats ──────────────── */
+.dscroll .casestudy{display:grid;grid-template-columns:1fr;gap:clamp(22px,3.5vw,40px);align-items:center;
+  margin-top:clamp(22px,4vw,32px);background:#fff;border:1px solid var(--line);border-radius:24px;
+  padding:clamp(20px,3vw,32px);box-shadow:0 26px 64px -32px rgba(15,23,42,.32)}
+@media(min-width:860px){.dscroll .casestudy{grid-template-columns:minmax(240px,330px) 1fr}}
+.dscroll .csvideo{position:relative;width:100%;max-width:330px;margin:0 auto;aspect-ratio:9/16;
+  border-radius:20px;overflow:hidden;background:#0c0c0c;border:1px solid var(--line);
+  box-shadow:0 26px 56px -26px rgba(0,0,0,.55)}
+.dscroll .csvideo video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;background:#0c0c0c}
+.dscroll .csbody{display:flex;flex-direction:column;gap:clamp(13px,2vw,17px)}
+.dscroll .csbody .stars{display:flex;gap:3px;color:#f59e0b}
+.dscroll .csbody .stars .ci{width:20px;height:20px;fill:#f59e0b}
+.dscroll .csquote{font-size:clamp(22px,3.2vw,32px);font-weight:700;letter-spacing:-.02em;
+  line-height:1.22;color:var(--ink);text-wrap:balance}
+.dscroll .csnarr{font-size:clamp(15px,2vw,17px);line-height:1.6;color:var(--ink-3);text-wrap:pretty}
+.dscroll .csmeta{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:6px}
+.dscroll .csmeta .cswrap{display:flex;flex-direction:column;line-height:1.25}
+.dscroll .csname{font-size:clamp(16px,2vw,18px);font-weight:700;letter-spacing:-.01em}
+.dscroll .cswho{font-size:13px;color:var(--ink-4);margin-top:2px}
+.dscroll .csstat{margin-left:auto;font-size:13.5px;font-weight:700;color:#0f766e;background:#ecfdf5;
+  border:1px solid #d1fae5;border-radius:999px;padding:8px 15px;white-space:nowrap}
+
+/* ── founders: who you're actually talking to ─────────────────────────────── */
+.dscroll .founders{display:grid;gap:clamp(16px,3vw,20px);grid-template-columns:1fr;margin-top:clamp(28px,5vw,44px)}
+@media(min-width:720px){.dscroll .founders{grid-template-columns:1fr 1fr}}
+.dscroll .founder{display:flex;gap:clamp(16px,3vw,22px);align-items:center;background:#fff;border:1px solid var(--line);
+  border-radius:20px;padding:clamp(20px,3.5vw,28px);box-shadow:0 14px 36px -26px rgba(0,0,0,.24)}
+.dscroll .founder .fphoto{width:clamp(112px,22vw,150px);height:clamp(112px,22vw,150px);border-radius:18px;object-fit:cover;
+  flex-shrink:0;background:linear-gradient(135deg,#cfffae,#ace5ff);display:grid;place-items:center;
+  font-size:clamp(28px,6vw,38px);font-weight:800;color:#0f3d2e}
+.dscroll .founder .fname{font-size:clamp(19px,2.6vw,23px);font-weight:700;letter-spacing:-.01em}
+.dscroll .founder .frole{font-size:13px;color:var(--ink-4);text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-top:3px}
+.dscroll .founder .fbio{font-size:clamp(14px,2vw,16px);color:var(--ink-3);line-height:1.5;margin-top:10px}
+
+/* founders part two — phone team: villain-vs-us contrast, GRAYSCALE ONLY (no
+   green). Structure over shadow: a divider under the header, bordered cards, a
+   heavier icon weight, and one strong dark anchor (the "win" column). */
+.dscroll .phoneteam{margin-top:clamp(44px,7vw,76px);padding-top:clamp(34px,5vw,52px);
+  border-top:1px solid var(--line)}
+.dscroll .pthead{max-width:780px}
+.dscroll .ptheadline{font-size:clamp(23px,3.9vw,36px);font-weight:700;letter-spacing:-.025em;
+  line-height:1.18;color:#0a0a0a;text-wrap:balance}
+.dscroll .ptsub{margin-top:14px;font-size:clamp(15px,2vw,18px);line-height:1.55;color:#4b5563;max-width:700px}
+.dscroll .pthead::after{content:"";display:block;height:1px;background:#d1d5db;margin-top:clamp(22px,3.4vw,30px)}
+
+/* centerpiece: contrast block (+ optional photo beside it) */
+.dscroll .ptbody{margin-top:clamp(24px,4vw,34px);display:grid;gap:clamp(18px,3vw,26px);grid-template-columns:1fr}
+@media(min-width:900px){.dscroll .ptbody.haspic{grid-template-columns:1.5fr .9fr;align-items:stretch}}
+.dscroll .ptcontrast{display:grid;gap:clamp(14px,2.4vw,18px);grid-template-columns:1fr}
+@media(min-width:680px){.dscroll .ptcontrast{grid-template-columns:1fr 1fr;align-items:stretch}}
+.dscroll .ptcol{border-radius:18px;padding:clamp(20px,3vw,28px);display:flex;flex-direction:column;gap:14px}
+.dscroll .ptcol.lose{background:#f3f4f6;border:1px solid #e5e7eb}
+.dscroll .ptcol.win{background:#0a0a0a;border:1px solid #0a0a0a;box-shadow:0 26px 56px -28px rgba(0,0,0,.55)}
+@media(min-width:680px){.dscroll .ptcol.win{transform:translateY(-8px)}}
+.dscroll .ptcolhd{margin:0;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.dscroll .ptcol.lose .ptcolhd{color:#6b7280}
+.dscroll .ptcol.win .ptcolhd{color:#fff}
+.dscroll .ptcol ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.dscroll .ptcol li{display:flex;align-items:flex-start;gap:10px;line-height:1.4}
+.dscroll .ptcol.lose li{color:#6b7280;font-weight:500;font-size:clamp(14px,2vw,15.5px)}
+.dscroll .ptcol.win li{color:#f9fafb;font-weight:600;font-size:clamp(14px,2vw,16px)}
+.dscroll .ptmark{flex:none;width:18px;height:18px;margin-top:1px;stroke-width:2.6}
+.dscroll .ptcol.lose .ptmark{color:#9ca3af}
+.dscroll .ptcol.win .ptmark{color:#fff}
+
+/* optional team photo — desaturated to match; collapses when no image present */
+.dscroll .ptphoto{margin:0;border-radius:18px;overflow:hidden;border:1px solid #e5e7eb;
+  background:#f3f4f6;filter:grayscale(1);min-height:220px}
+.dscroll .ptphoto img{display:block;width:100%;height:100%;object-fit:cover}
+
+/* proof row: five compact items. Flex + centered wrap so a partial last row
+   sits centered under the gap (3-then-2), never shoved left; 5-across when wide */
+.dscroll .ptproof{list-style:none;margin:clamp(26px,4.4vw,40px) 0 0;padding:0;
+  display:flex;flex-wrap:wrap;justify-content:center;gap:14px}
+.dscroll .ptproofitem{flex:0 1 100%;display:flex;align-items:flex-start;gap:11px;
+  background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:clamp(14px,1.8vw,18px)}
+@media(min-width:560px){.dscroll .ptproofitem{flex:0 1 calc(33.333% - 14px)}}
+@media(min-width:1040px){.dscroll .ptproofitem{flex:0 1 calc(20% - 14px)}}
+.dscroll .ptprooficon{flex:none;width:40px;height:40px;border-radius:11px;background:#f3f4f6;
+  border:1px solid #e2e8f0;display:grid;place-items:center;color:#111827}
+.dscroll .ptprooficon svg{width:20px;height:20px;stroke-width:2.1}
+.dscroll .ptprooftext{display:flex;flex-direction:column;gap:3px;min-width:0}
+.dscroll .ptprooflabel{font-size:14px;font-weight:700;line-height:1.25;color:#0a0a0a}
+.dscroll .ptproofpayoff{font-size:12.5px;line-height:1.35;color:#6b7280}
+
+/* ── inline featured quote: proof next to the claim it backs ──────────────── */
+.dscroll .fquote{position:relative;overflow:hidden;margin:clamp(24px,4vw,34px) auto 0;max-width:780px;
+  background:linear-gradient(180deg,#ffffff,#fbfdff);border:1px solid var(--line);border-radius:20px;
+  padding:clamp(24px,4vw,32px);display:flex;flex-direction:column;gap:15px;
+  box-shadow:0 24px 54px -30px rgba(15,23,42,.3)}
+.dscroll .fquote::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;
+  background:linear-gradient(180deg,#cfffae,#ace5ff)}
+.dscroll .shotrow .fquote{margin-top:0}
+.dscroll .fqmark{position:absolute;top:6px;right:24px;font-family:Georgia,"Times New Roman",serif;
+  font-size:96px;line-height:1;color:var(--line);pointer-events:none;user-select:none}
+.dscroll .fquote .stars{display:flex;gap:3px;color:#f59e0b;position:relative}
+.dscroll .fquote .stars .ci{width:18px;height:18px;fill:#f59e0b}
+.dscroll .fquote .fq{position:relative;font-size:clamp(18px,2.5vw,23px);line-height:1.5;color:var(--ink);
+  font-weight:600;letter-spacing:-.01em;text-wrap:pretty}
+.dscroll .fquote .fattr{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:2px}
+.dscroll .fquote .favatar{width:56px;height:56px;border-radius:999px;object-fit:cover;flex-shrink:0;
+  background:linear-gradient(135deg,#cfffae,#ace5ff);display:grid;place-items:center;font-weight:700;color:#0f3d2e;font-size:18px;
+  box-shadow:0 8px 18px -8px rgba(0,0,0,.35)}
+.dscroll .fquote .fwho{display:flex;flex-direction:column;line-height:1.25;min-width:0}
+.dscroll .fquote .fwho strong{font-size:16px;font-weight:700;color:var(--ink)}
+.dscroll .fquote .fwsub{font-size:13px;color:var(--ink-4)}
+.dscroll .fquote .fstat{margin-left:auto;font-size:13px;font-weight:700;color:#0f766e;background:#ecfdf5;
+  border:1px solid #d1fae5;border-radius:999px;padding:7px 14px;white-space:nowrap}
+
+/* ── appointment-quality proof: header + phone-call transcript card ────────── */
+.dscroll .qproofhead{text-align:center;max-width:680px;margin:clamp(40px,7vw,72px) auto 0}
+.dscroll .qproofhead .eyebrow{margin-bottom:12px}
+.dscroll .qproofhead h3{font-size:clamp(24px,4.4vw,40px);font-weight:600;letter-spacing:-.025em;
+  line-height:1.2;text-wrap:balance;color:var(--ink)}
+
+/* recorded-call card — deliberately not a text/SMS thread */
+.dscroll .callcard{display:flex;flex-direction:column;width:100%;background:#fff;border:1px solid var(--line);
+  border-radius:20px;overflow:hidden;box-shadow:0 24px 54px -30px rgba(15,23,42,.3)}
+.dscroll .callhd{display:flex;align-items:center;gap:12px;padding:14px 16px;
+  background:linear-gradient(135deg,#0f3d2e,#16795c);color:#fff}
+.dscroll .callphone{flex:none;width:38px;height:38px;border-radius:999px;display:grid;place-items:center;
+  background:rgba(255,255,255,.16)}
+.dscroll .callphone svg{width:18px;height:18px;color:#fff;stroke-width:2}
+.dscroll .callmeta{display:flex;flex-direction:column;gap:2px;min-width:0}
+.dscroll .calltitle{font-size:14px;font-weight:700;letter-spacing:-.01em}
+.dscroll .callstatus{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:600;
+  text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.82)}
+.dscroll .calllive{width:7px;height:7px;border-radius:999px;background:#34d399;flex:none;
+  animation:callpulse 1.8s ease-out infinite}
+@keyframes callpulse{0%{box-shadow:0 0 0 0 rgba(52,211,153,.55)}100%{box-shadow:0 0 0 7px rgba(52,211,153,0)}}
+@media(prefers-reduced-motion:reduce){.dscroll .calllive{animation:none}}
+.dscroll .callwave{margin-left:auto;flex:none;height:22px;width:auto}
+.dscroll .callwave rect{fill:rgba(255,255,255,.85)}
+.dscroll .calllog{display:flex;flex-direction:column;gap:14px;padding:clamp(16px,3.4vw,22px)}
+.dscroll .callline{padding-left:12px;border-left:2px solid var(--line)}
+.dscroll .callline.sarah{border-left-color:#16795c}
+.dscroll .callline.linda{border-left-color:#cbd5e1}
+.dscroll .callspk{display:block;font-size:11px;font-weight:700;letter-spacing:.04em;
+  text-transform:uppercase;margin-bottom:3px}
+.dscroll .callline.sarah .callspk{color:#0f766e}
+.dscroll .callline.linda .callspk{color:var(--ink-3)}
+.dscroll .callsay{margin:0;font-size:clamp(14px,2.1vw,15px);line-height:1.45;color:var(--ink);text-wrap:pretty}
+.dscroll .callchecks{display:flex;flex-wrap:wrap;gap:8px 16px;padding:14px clamp(16px,3.4vw,22px);
+  border-top:1px solid var(--line);background:#fbfdff}
+.dscroll .callchk{display:flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;color:var(--ink-2)}
+.dscroll .callchk svg{flex:none;width:15px;height:15px;color:#0f766e;stroke-width:2.5}
+
+/* two-card row: equal height, left wider (58/42), quote vertically centred */
+.dscroll .shotrow.qrow{align-items:stretch}
+.dscroll .qrow .shotfig{display:flex;flex-direction:column}
+.dscroll .qrow .callcard{flex:1}
+.dscroll .qrow .calllog{flex:1}
+.dscroll .qrow .fquote{height:100%;justify-content:center}
+@media(min-width:720px){.dscroll .shotrow.two.qrow{grid-template-columns:1.38fr 1fr}}
+
+/* ── HOW IT WORKS: icon-led steps, big graphic + a few words ──────────────── */
+.dscroll .flow{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(12px,2.2vw,18px);margin-top:clamp(28px,5vw,44px)}
+@media(min-width:840px){.dscroll .flow{grid-template-columns:repeat(5,1fr)}}
+.dscroll .flowstep{position:relative;background:#fff;border:1px solid var(--line);border-radius:22px;
+  padding:clamp(22px,3.2vw,30px) clamp(16px,2.5vw,22px);display:flex;flex-direction:column;align-items:center;
+  text-align:center;gap:clamp(12px,2vw,16px);box-shadow:0 16px 40px -28px rgba(0,0,0,.24)}
+.dscroll .flownum{position:absolute;top:14px;left:16px;font-size:13px;font-weight:800;color:var(--ink-4);letter-spacing:.02em}
+.dscroll .flowicon{width:clamp(66px,11vw,86px);height:clamp(66px,11vw,86px);border-radius:24px;
+  background:linear-gradient(135deg,#cfffae,#ace5ff);display:grid;place-items:center;color:#0f3d2e;
+  box-shadow:0 14px 28px -12px rgba(80,160,140,.55)}
+.dscroll .flowicon svg{width:clamp(30px,5.4vw,42px);height:clamp(30px,5.4vw,42px);stroke-width:1.9}
+.dscroll .flowlabel{font-size:clamp(17px,2.3vw,20px);font-weight:700;letter-spacing:-.01em;line-height:1.2;color:var(--ink)}
+.dscroll .flowsub{font-size:clamp(13px,1.8vw,15px);color:var(--ink-3);line-height:1.35;font-weight:500}
+
+/* ── WHAT QUALIFIES: scannable checklist chart ────────────────────────────── */
+.dscroll .quallist{list-style:none;margin:clamp(28px,5vw,44px) auto 0;padding:0;max-width:760px;
+  display:flex;flex-direction:column;gap:12px}
+.dscroll .qualrow{display:flex;align-items:center;gap:clamp(14px,2.4vw,18px);background:#fff;
+  border:1px solid var(--line);border-radius:16px;padding:clamp(16px,2.4vw,20px) clamp(18px,2.6vw,24px);
+  box-shadow:0 16px 40px -30px rgba(0,0,0,.24)}
+.dscroll .qualicon{flex:none;width:clamp(42px,6vw,52px);height:clamp(42px,6vw,52px);border-radius:14px;
+  background:linear-gradient(135deg,#cfffae,#ace5ff);display:grid;place-items:center;color:#0f3d2e;
+  box-shadow:0 12px 24px -14px rgba(80,160,140,.55)}
+.dscroll .qualicon svg{width:clamp(20px,3vw,26px);height:clamp(20px,3vw,26px);stroke-width:1.9}
+.dscroll .qualtext{display:flex;flex-direction:column;gap:3px}
+.dscroll .quallabel{font-size:clamp(15px,2vw,18px);font-weight:700;letter-spacing:-.01em;line-height:1.3;color:var(--ink)}
+.dscroll .qualdetail{font-size:clamp(13px,1.8vw,15px);color:var(--ink-3);line-height:1.35;font-weight:500}
+
+/* ── evidence screenshots: raw proof, given real estate ───────────────────── */
+.dscroll .shotrow{display:grid;gap:clamp(16px,3vw,22px);grid-template-columns:1fr;margin-top:clamp(26px,4.5vw,40px);align-items:start}
+@media(min-width:720px){.dscroll .shotrow.two{grid-template-columns:1fr 1fr}}
+.dscroll .shotfig{margin:0}
+.dscroll .shot{position:relative;width:100%;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#fff;
+  box-shadow:0 20px 50px -28px rgba(0,0,0,.3)}
+.dscroll .shot img{display:block;width:100%;height:auto}
+/* placeholder used until a real screenshot is dropped in */
+.dscroll .shot.ph{aspect-ratio:4/3;border-style:dashed;border-color:#d4d4d4;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:10px;background:repeating-linear-gradient(135deg,#fafafa,#fafafa 14px,#f4f4f5 14px,#f4f4f5 28px);
+  color:var(--ink-4);text-align:center;padding:24px}
+.dscroll .shot.ph .shicon{width:46px;height:46px;color:var(--ink-4)}
+.dscroll .shot.ph .shlabel{font-size:14px;font-weight:600;color:var(--ink-3)}
+.dscroll .shotfig figcaption{font-size:14px;color:var(--ink-3);line-height:1.45;margin-top:12px;text-align:center}
+
+/* booked-calendar component (recreated week view) */
+.dscroll .calshot{width:100%;background:#fff;border:1px solid var(--line);border-radius:16px;
+  box-shadow:0 20px 50px -28px rgba(15,23,42,.3)}
+
+/* Mobile-first: a vertical agenda — each day is a full-width row, no sideways scroll */
+.dscroll .calgrid{display:flex;flex-direction:column}
+.dscroll .calday{display:flex;gap:14px;padding:14px 16px;border-top:1px solid var(--line);align-items:flex-start}
+.dscroll .calday:first-child{border-top:0}
+.dscroll .caldayhd{flex:none;width:58px;text-align:left;display:flex;align-items:baseline;gap:6px}
+.dscroll .caldow{font-size:11px;font-weight:700;letter-spacing:.09em;color:var(--ink-4)}
+.dscroll .caldate{font-size:13px;font-weight:600;color:var(--ink-2)}
+.dscroll .calappts{flex:1;min-width:0;display:flex;flex-direction:column;gap:8px}
+.dscroll .calappts:empty::after{content:"—";color:var(--ink-4);font-size:13px}
+.dscroll .calappt{display:flex;align-items:flex-start;gap:8px;font-size:13px;line-height:1.35;color:var(--ink)}
+.dscroll .caltxt{min-width:0}
+.dscroll .calpip{flex-shrink:0;width:8px;height:8px;border-radius:999px;background:#3b82f6;margin-top:5px}
+.dscroll .calwhen{font-weight:600}
+
+/* Wider screens: the full week grid, 6 columns side by side */
+@media(min-width:720px){
+  .dscroll .calshot{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .dscroll .calgrid{display:grid;grid-template-columns:repeat(6,minmax(116px,1fr));min-width:700px}
+  .dscroll .calday{flex-direction:column;gap:0;padding:16px 16px 24px;border-top:0;
+    border-left:1px solid var(--line);min-height:168px}
+  .dscroll .calday:first-child{border-left:0}
+  .dscroll .caldayhd{width:auto;display:block;text-align:center;margin-bottom:18px}
+  .dscroll .caldow{display:block}
+  .dscroll .caldate{display:block;margin-top:4px;font-size:14px}
+  .dscroll .calappts{gap:10px}
+  .dscroll .calappts:empty::after{content:none}
+  .dscroll .calpip{margin-top:4px}
+}
+
+/* ── FAQ: native details accordion, no client JS needed ───────────────────── */
+.dscroll .faqlist{max-width:820px;margin:clamp(28px,5vw,44px) auto 0;display:flex;flex-direction:column;gap:12px}
+.dscroll .faqitem{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;
+  box-shadow:0 12px 30px -26px rgba(0,0,0,.2)}
+.dscroll .faqitem summary{list-style:none;cursor:pointer;padding:clamp(18px,3vw,22px) clamp(20px,3.5vw,26px);
+  display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:clamp(16px,2.3vw,19px);
+  font-weight:600;color:var(--ink);letter-spacing:-.01em}
+.dscroll .faqitem summary::-webkit-details-marker{display:none}
+.dscroll .faqitem summary .fqi{flex-shrink:0;width:26px;height:26px;border-radius:8px;background:var(--tint);
+  display:grid;place-items:center;transition:transform .2s;color:var(--ink-2)}
+.dscroll .faqitem[open] summary .fqi{transform:rotate(45deg)}
+.dscroll .faqitem .faqa{padding:0 clamp(20px,3.5vw,26px) clamp(20px,3vw,24px);font-size:clamp(15px,2vw,17px);
+  color:var(--ink-3);line-height:1.6}
+
+/* ── what happens on our call: agenda ─────────────────────────────────────── */
+.dscroll .agenda{max-width:760px;margin:clamp(28px,5vw,40px) auto 0;list-style:none;display:flex;flex-direction:column;gap:clamp(14px,2.5vw,18px)}
+.dscroll .agenda li{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;
+  padding:clamp(16px,3vw,20px) clamp(18px,3.2vw,22px);text-align:left}
+.dscroll .agenda li .ac{flex-shrink:0;width:26px;height:26px;border-radius:999px;background:linear-gradient(135deg,#cfffae,#ace5ff);
+  display:grid;place-items:center;margin-top:1px}
+.dscroll .agenda li .ac::after{content:"";width:9px;height:5px;border-left:2.5px solid #0f5132;border-bottom:2.5px solid #0f5132;
+  transform:rotate(-45deg);margin-top:-2px}
+.dscroll .agenda li .at{font-size:clamp(15px,2.1vw,18px);line-height:1.45;color:var(--ink)}
+.dscroll .agenda li .at strong{font-weight:700}
+.dscroll .prep{max-width:760px;margin:clamp(20px,3vw,26px) auto 0;text-align:center;font-size:clamp(15px,2vw,17px);
+  color:var(--ink-3);line-height:1.55}
+.dscroll .prep strong{color:var(--ink);font-weight:700}
+
+/* ── highlighted video testimonial (Mark) above the wall ──────────────────── */
+/* video testimonial — same card size as the others; the clip sits where a photo
+   would, in a 4/5 frame, with a small "Video" badge */
+.dscroll .tcard .tmedia{position:relative;width:100%;aspect-ratio:4/5;border-radius:12px;overflow:hidden;
+  background:#0c0c0c;margin:-2px 0 4px}
+.dscroll .tcard .tvideo{position:absolute;inset:0;width:100%;height:100%;border:0;
+  object-fit:cover;object-position:center 22%;background:#0c0c0c}
+.dscroll .vbadge{position:absolute;top:12px;left:12px;z-index:2;display:inline-flex;align-items:center;gap:6px;
+  background:rgba(0,0,0,.62);color:#fff;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:5px 9px;border-radius:8px;backdrop-filter:blur(4px)}
+.dscroll .vbadge .ci{width:12px;height:12px;fill:#fff}
+
+/* ── "see more" reveal for the wall ───────────────────────────────────────── */
+.dscroll .wallmore{display:flex;justify-content:center;margin-top:clamp(22px,4vw,30px)}
+.dscroll .btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.dscroll .btn.ghost:hover{background:var(--tint);transform:translateY(-1px)}
+.dscroll .btn .arr{display:inline-block}
