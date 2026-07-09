@@ -2,6 +2,7 @@ import React from "react"
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 
 import { LazyExternalScript } from "@/components/deferred-loader";
 import "./globals.css";
@@ -149,6 +150,7 @@ export default function RootLayout({
         className={`${jakarta.variable} font-sans antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
