@@ -128,7 +128,12 @@ function readTracking(): Tracking {
   };
 }
 
-const ROLE_OPTIONS = ["Owner / CEO", "Marketing or Sales Leader", "Salesperson", "Other"];
+// Selecting this role is a soft dead end: the visitor has no running business
+// to fill a calendar for, so they never advance past step 1 and no Lead /
+// conversion event fires. Kept as a named constant so the branch below stays
+// in sync with the label shown in the option list.
+const NOT_YET_ROLE = "I do not own a business yet";
+const ROLE_OPTIONS = ["Owner / CEO", "Marketing or Sales Leader", "Salesperson", NOT_YET_ROLE];
 const REVENUE_OPTIONS = ["$0 - $500K Per Year", "$500K - $1M Per Year", "$1M - $5M Per Year", "$5M+ Per Year"];
 const REPS_OPTIONS = ["I run all the leads myself", "1-3 reps", "4-10 reps", "10+ reps"];
 
@@ -142,6 +147,10 @@ function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () =
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [calSrc, setCalSrc] = useState("");
+  // Set when the visitor picks NOT_YET_ROLE at step 1. Shows a soft dead end in
+  // the same modal instead of advancing the survey, so the booking calendar and
+  // the Lead event are never reached.
+  const [notYet, setNotYet] = useState(false);
 
   // Lock body scroll while open and close on Escape.
   useEffect(() => {
@@ -237,7 +246,13 @@ function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () =
         </button>
 
         <div className="qbody">
-          {submitted ? (
+          {notYet ? (
+            <div className="qstep">
+              <h2 className="qquestion">Come back when you launch</h2>
+              <p className="qsubhead">Our model works by filling the calendar of a running coating business. Once you are up and doing jobs, apply again and we will take great care of you.</p>
+              <button type="button" className="qsubmit" onClick={onClose}>Close</button>
+            </div>
+          ) : submitted ? (
             <iframe
               src={calSrc}
               id="appointly-cal"
@@ -253,7 +268,10 @@ function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () =
               <div className="qoptions">
                 {ROLE_OPTIONS.map((o) => (
                   <button type="button" key={o} className={`qoption${role === o ? " sel" : ""}`}
-                    onClick={() => { setRole(o); setStep(2); }}>{o}</button>
+                    onClick={() => {
+                      if (o === NOT_YET_ROLE) { setNotYet(true); return; }
+                      setRole(o); setStep(2);
+                    }}>{o}</button>
                 ))}
               </div>
             </div>
