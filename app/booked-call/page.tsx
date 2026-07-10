@@ -566,7 +566,74 @@ export default function BookedCallPage() {
         </div>
       </section>
 
-      {/* 6 · What a qualified appointment means */}
+      {/* 6 · Why us over a lead company (reuses the homepage comparison) */}
+      <section className="sec tint cmpsec" id="why-us">
+        <div className="wrap">
+          <p className="cmpeyebrow">Compare the options</p>
+          <h2>Why contractors pick us <span className="hl">over a lead company.</span></h2>
+          <p className="cmpsub">
+            We front the ad spend, qualify every homeowner, and book appointments
+            straight onto your calendar. You just show up and close.
+          </p>
+
+          {/* Desktop: comparison table */}
+          <div className="cmptable">
+            <div className="cmpcard">
+              <div className="cmpbar" />
+              <div className="cmpgrid">
+                <div className="ch dim" />
+                <div className="ch">DIY</div>
+                <div className="ch">Marketing Agency</div>
+                <div className="ch">Shared Leads</div>
+                <div className="ch appt"><CalendarCheck className="ci" />Appointly</div>
+                {COMPARE_ROWS.map((r) => {
+                  const RowIcon = r.Icon;
+                  return (
+                    <Fragment key={r.label}>
+                      <div className={r.out ? "dim out" : "dim"}><RowIcon className="ci" />{r.label}</div>
+                      {r.vals.map((v, ci) => {
+                        const appt = ci === 3 ? " appt" : "";
+                        if (r.kind === "bin") {
+                          return (
+                            <div key={ci} className={`bin${appt}`}>
+                              {v ? <Check className="ci chk" /> : <X className="ci xmark" />}
+                            </div>
+                          );
+                        }
+                        return <div key={ci} className={`${r.out ? "out" : ""}${appt}`.trim()}>{v}</div>;
+                      })}
+                    </Fragment>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile: stacked option cards, Appointly first and highlighted */}
+          <div className="cmpcards">
+            {[3, 0, 1, 2].map((ci) => (
+              <div key={ci} className={ci === 3 ? "optcard appt" : "optcard"}>
+                <div className="optname">{ci === 3 && <CalendarCheck className="ci" />}{COMPARE_COLS[ci]}</div>
+                {COMPARE_ROWS.map((r) => {
+                  const RowIcon = r.Icon;
+                  return (
+                    <div className="optrow" key={r.label}>
+                      <span className="ol"><RowIcon className="ci" />{r.label}</span>
+                      <span className="ov">
+                        {r.kind === "bin"
+                          ? (r.vals[ci] ? <Check className="ci chk" /> : <X className="ci xmark" />)
+                          : r.vals[ci]}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7 · What a qualified appointment means */}
       <section className="sec" id="quality">
         <div className="wrap">
           <p className="eyebrow">What you&apos;re actually getting</p>
@@ -601,7 +668,7 @@ export default function BookedCallPage() {
         </div>
       </section>
 
-      {/* 7 · Who you're actually talking to — moved directly under Appointment Quality */}
+      {/* 8 · Who you're actually talking to — moved directly under Appointment Quality */}
       <section className="sec tint" id="founders">
         <div className="wrap">
           <p className="eyebrow">Who you&apos;re actually talking to</p>
@@ -697,73 +764,6 @@ export default function BookedCallPage() {
                 );
               })}
             </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* 8 · Why us over a lead company (reuses the homepage comparison) */}
-      <section className="sec tint cmpsec" id="why-us">
-        <div className="wrap">
-          <p className="cmpeyebrow">Compare the options</p>
-          <h2>Why contractors pick us <span className="hl">over a lead company.</span></h2>
-          <p className="cmpsub">
-            We front the ad spend, qualify every homeowner, and book appointments
-            straight onto your calendar. You just show up and close.
-          </p>
-
-          {/* Desktop: comparison table */}
-          <div className="cmptable">
-            <div className="cmpcard">
-              <div className="cmpbar" />
-              <div className="cmpgrid">
-                <div className="ch dim" />
-                <div className="ch">DIY</div>
-                <div className="ch">Marketing Agency</div>
-                <div className="ch">Shared Leads</div>
-                <div className="ch appt"><CalendarCheck className="ci" />Appointly</div>
-                {COMPARE_ROWS.map((r) => {
-                  const RowIcon = r.Icon;
-                  return (
-                    <Fragment key={r.label}>
-                      <div className={r.out ? "dim out" : "dim"}><RowIcon className="ci" />{r.label}</div>
-                      {r.vals.map((v, ci) => {
-                        const appt = ci === 3 ? " appt" : "";
-                        if (r.kind === "bin") {
-                          return (
-                            <div key={ci} className={`bin${appt}`}>
-                              {v ? <Check className="ci chk" /> : <X className="ci xmark" />}
-                            </div>
-                          );
-                        }
-                        return <div key={ci} className={`${r.out ? "out" : ""}${appt}`.trim()}>{v}</div>;
-                      })}
-                    </Fragment>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-
-          {/* Mobile: stacked option cards, Appointly first and highlighted */}
-          <div className="cmpcards">
-            {[3, 0, 1, 2].map((ci) => (
-              <div key={ci} className={ci === 3 ? "optcard appt" : "optcard"}>
-                <div className="optname">{ci === 3 && <CalendarCheck className="ci" />}{COMPARE_COLS[ci]}</div>
-                {COMPARE_ROWS.map((r) => {
-                  const RowIcon = r.Icon;
-                  return (
-                    <div className="optrow" key={r.label}>
-                      <span className="ol"><RowIcon className="ci" />{r.label}</span>
-                      <span className="ov">
-                        {r.kind === "bin"
-                          ? (r.vals[ci] ? <Check className="ci chk" /> : <X className="ci xmark" />)
-                          : r.vals[ci]}
-                      </span>
-                    </div>
-                  );
-                })}
-              </div>
-            ))}
           </div>
         </div>
       </section>

@@ -495,31 +495,8 @@ export default function ApplyClient() {
         </div>
       </section>
 
-      {/* Recent Client Wins */}
-      <section className="sec tint" id="wins">
-        <div className="wrap wallhead">
-          <p className="eyebrow">Proof</p>
-          <h2>Recent <span className="hl">client wins.</span></h2>
-        </div>
-        <div className="wrap">
-          <div className="grid g3">
-            {CLIENT_WINS.map((t) => (
-              <div className="proof" key={t.name}>
-                <Image className="photo" src={t.photo} alt={`${t.name} of ${t.who}`} width={1080} height={1350} sizes="(max-width: 768px) 90vw, 360px" loading="lazy" />
-                <div className="pin">
-                  <div className="who">{t.name} &middot; {t.who}</div>
-                  <div className="where">{t.where}</div>
-                  <div className="pstat">{t.stat}</div>
-                  <div className="quote">&ldquo;{t.quote}&rdquo;</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Comparison table (desktop only, hidden on mobile) */}
-      <section className="sec cmpsec applycmp" id="why-us">
+      {/* Comparison table — reasons contractors choose us over the alternatives */}
+      <section className="sec tint cmpsec" id="why-us">
         <div className="wrap">
           <p className="cmpeyebrow">Compare the options</p>
           <h2>Why contractors pick us <span className="hl">over a lead company.</span></h2>
@@ -582,6 +559,29 @@ export default function ApplyClient() {
           </div>
 
           <p className="payoff">You are paying for <strong>booked appointments.</strong></p>
+        </div>
+      </section>
+
+      {/* Recent Client Wins */}
+      <section className="sec" id="wins">
+        <div className="wrap wallhead">
+          <p className="eyebrow">Proof</p>
+          <h2>Recent <span className="hl">client wins.</span></h2>
+        </div>
+        <div className="wrap">
+          <div className="grid g3">
+            {CLIENT_WINS.map((t) => (
+              <div className="proof" key={t.name}>
+                <Image className="photo" src={t.photo} alt={`${t.name} of ${t.who}`} width={1080} height={1350} sizes="(max-width: 768px) 90vw, 360px" loading="lazy" />
+                <div className="pin">
+                  <div className="who">{t.name} &middot; {t.who}</div>
+                  <div className="where">{t.where}</div>
+                  <div className="pstat">{t.stat}</div>
+                  <div className="quote">&ldquo;{t.quote}&rdquo;</div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

@@ -156,112 +156,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Proof — only real, approved testimonials render. Empty slots render nothing. */}
-      <section className="sec tint" id="proof">
-        <div className="wrap">
-          <h2>It <span className="hl">works.</span></h2>
-          <div className="grid g3">
-            <div className="proof">
-              <Image className="photo" src="/images/proof/mark-afab.webp" alt="Mark T. of AFAB Services" width={1080} height={1350} sizes="(max-width: 768px) 90vw, 360px" loading="lazy" />
-              <div className="pin">
-                <div className="who">Mark T. &middot; AFAB Services</div>
-                <div className="where">Port St. Lucie, FL</div>
-                <div className="pstat">$6k job, closed on 2nd appointment</div>
-                <div className="quote">&ldquo;You&apos;ve already paved the ground. I just go in and sweep it up. You guys are doing a great job.&rdquo;</div>
-              </div>
-            </div>
-
-            <div className="proof">
-              <Image className="photo" src="/images/proof/andre.webp" alt="Andre S. of Great Lakes Elite Coatings, Appointly client in Chicago" width={1080} height={1350} sizes="(max-width: 768px) 90vw, 360px" loading="lazy" />
-              <div className="pin">
-                <div className="who">Andre S. &middot; Great Lakes Elite Coatings</div>
-                <div className="where">Chicago, IL</div>
-                <div className="pstat">8 new jobs in his second month</div>
-                <div className="quote">&ldquo;The appointments were already warmed up. I just showed up and closed.&rdquo;</div>
-              </div>
-            </div>
-
-            <div className="proof">
-              <Image className="photo" src="/images/proof/carlos-team.webp" alt="Carlos V. of Diamond Group and his crew in Portland" width={1080} height={1350} sizes="(max-width: 768px) 90vw, 360px" loading="lazy" />
-              <div className="pin">
-                <div className="who">Carlos V. &middot; Diamond Group</div>
-                <div className="where">Portland, OR</div>
-                <div className="pstat">1st appt closed, covered full onboarding cost</div>
-                <div className="quote">&ldquo;One job paid for everything. From there it just kept coming.&rdquo;</div>
-              </div>
-            </div>
-
-            {/*
-              REAL CLIENT TESTIMONIAL SLOTS — fill in with approved quotes only.
-              Render nothing until approved (no empty or fake cards). To enable a
-              slot, copy a .proof block above and drop in the real photo, name,
-              location, stat, and quote.
-
-              [ ] San Pro
-              [ ] Diamond Group
-              [ ] Advanced Insulation Technology
-            */}
-          </div>
-        </div>
-      </section>
-
-      {/* The mechanism */}
-      <section className="sec">
-        <div className="wrap">
-          <h2>From ad to <span className="hl">booked appointment.</span></h2>
-          <div className="grid g4">
-            <div className="step"><div className="sn">1</div><div className="st">We launch proven ads</div><div className="sd">Creatives already proven to convert, customized with your local footage and market.</div></div>
-            <div className="step"><div className="sn">2</div><div className="st">Experts track it daily</div><div className="sd">Our team watches dozens of metrics every day. Every 2 to 3 days, the creatives that aren&apos;t performing get cut and replaced.</div></div>
-            <div className="step"><div className="sn">3</div><div className="st">Winners get scaled</div><div className="sd">We push the exact creatives and targeting that hit your appointment goals.</div></div>
-            <div className="step"><div className="sn">4</div><div className="st">We improve with your data</div><div className="sd">Closed a job? Wasted trip? We feed it back. More of who converts, fewer who don&apos;t.</div></div>
-          </div>
-        </div>
-      </section>
-
-      {/* Leads vs appointments */}
-      <section className="sec tint">
-        <div className="wrap">
-          <h2>Paying for leads is a <span className="hl">waste of money.</span></h2>
-          <div className="cmp">
-            <div className="cc bad">
-              <div className="ch"><span className="ctag b">Leads</span> Paying for leads</div>
-              <ul>
-                <li>You&apos;re in the field with no time to call</li>
-                <li>You chase them yourself</li>
-                <li>Call 5 min late and they&apos;re gone</li>
-                <li>30 leads, maybe 2 legit</li>
-                <li>Competing with 10 other companies</li>
-              </ul>
-            </div>
-            <div className="cc good">
-              <div className="ch"><span className="ctag g">Appointly</span> Booked appointments</div>
-              <ul>
-                <li>We call within 60 seconds</li>
-                <li>Qualified, warmed up, booked</li>
-                <li>Only vetted homeowners on your calendar</li>
-                <li>They&apos;re expecting you, you just show up</li>
-                <li>We handle all the phone work</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* What you get */}
-      <section className="sec" id="what-you-get">
-        <div className="orb b" />
-        <div className="wrap">
-          <h2>A world-class acquisition team, for the <span className="hl">price of an appointment.</span></h2>
-          <ul className="vlist">
-            <li><span className="vn">1</span>We call every lead within 60 seconds, before they forget they clicked the ad.</li>
-            <li><span className="vn">2</span>We qualify on service area, project scope, and budget. We only book people you&apos;d book yourself.</li>
-            <li><span className="vn">3</span>We warm them up so they&apos;re ready to buy the moment you walk through their garage door.</li>
-            <li><span className="vn">4</span>We book at your preferred times, handle all reschedules, and confirm day of.</li>
-            <li><span className="vn">5</span>Your customer&apos;s first impression of your company is world-class, before you ever arrive.</li>
-          </ul>
-        </div>
-      </section>
-
       {/* Comparison */}
       <section className="sec tint cmpsec">
         <div className="wrap">
@@ -334,7 +228,112 @@ export default function HomePage() {
             To swap, change the one word in the <strong> below. Do not auto-resolve.
           */}
           <p className="payoff">You&apos;re not paying for effort or promises. <strong>You&apos;re paying for booked appointments.</strong></p>
-          <p className="cmpcaption">Comparison based on contractor conversations and campaign results. Outcomes depend on market, pricing, and close rate.</p>
+        </div>
+      </section>
+
+      {/* Proof — only real, approved testimonials render. Empty slots render nothing. */}
+      <section className="sec" id="proof">
+        <div className="wrap">
+          <h2>It <span className="hl">works.</span></h2>
+          <div className="grid g3">
+            <div className="proof">
+              <Image className="photo" src="/images/proof/mark-afab.webp" alt="Mark T. of AFAB Services" width={1080} height={1350} sizes="(max-width: 768px) 90vw, 360px" loading="lazy" />
+              <div className="pin">
+                <div className="who">Mark T. &middot; AFAB Services</div>
+                <div className="where">Port St. Lucie, FL</div>
+                <div className="pstat">$6k job, closed on 2nd appointment</div>
+                <div className="quote">&ldquo;You&apos;ve already paved the ground. I just go in and sweep it up. You guys are doing a great job.&rdquo;</div>
+              </div>
+            </div>
+
+            <div className="proof">
+              <Image className="photo" src="/images/proof/andre.webp" alt="Andre S. of Great Lakes Elite Coatings, Appointly client in Chicago" width={1080} height={1350} sizes="(max-width: 768px) 90vw, 360px" loading="lazy" />
+              <div className="pin">
+                <div className="who">Andre S. &middot; Great Lakes Elite Coatings</div>
+                <div className="where">Chicago, IL</div>
+                <div className="pstat">8 new jobs in his second month</div>
+                <div className="quote">&ldquo;The appointments were already warmed up. I just showed up and closed.&rdquo;</div>
+              </div>
+            </div>
+
+            <div className="proof">
+              <Image className="photo" src="/images/proof/carlos-team.webp" alt="Carlos V. of Diamond Group and his crew in Portland" width={1080} height={1350} sizes="(max-width: 768px) 90vw, 360px" loading="lazy" />
+              <div className="pin">
+                <div className="who">Carlos V. &middot; Diamond Group</div>
+                <div className="where">Portland, OR</div>
+                <div className="pstat">1st appt closed, covered full onboarding cost</div>
+                <div className="quote">&ldquo;One job paid for everything. From there it just kept coming.&rdquo;</div>
+              </div>
+            </div>
+
+            {/*
+              REAL CLIENT TESTIMONIAL SLOTS — fill in with approved quotes only.
+              Render nothing until approved (no empty or fake cards). To enable a
+              slot, copy a .proof block above and drop in the real photo, name,
+              location, stat, and quote.
+
+              [ ] San Pro
+              [ ] Diamond Group
+              [ ] Advanced Insulation Technology
+            */}
+          </div>
+        </div>
+      </section>
+
+      {/* The mechanism */}
+      <section className="sec tint">
+        <div className="wrap">
+          <h2>From ad to <span className="hl">booked appointment.</span></h2>
+          <div className="grid g4">
+            <div className="step"><div className="sn">1</div><div className="st">We launch proven ads</div><div className="sd">Creatives already proven to convert, customized with your local footage and market.</div></div>
+            <div className="step"><div className="sn">2</div><div className="st">Experts track it daily</div><div className="sd">Our team watches dozens of metrics every day. Every 2 to 3 days, the creatives that aren&apos;t performing get cut and replaced.</div></div>
+            <div className="step"><div className="sn">3</div><div className="st">Winners get scaled</div><div className="sd">We push the exact creatives and targeting that hit your appointment goals.</div></div>
+            <div className="step"><div className="sn">4</div><div className="st">We improve with your data</div><div className="sd">Closed a job? Wasted trip? We feed it back. More of who converts, fewer who don&apos;t.</div></div>
+          </div>
+        </div>
+      </section>
+
+      {/* Leads vs appointments */}
+      <section className="sec">
+        <div className="wrap">
+          <h2>Paying for leads is a <span className="hl">waste of money.</span></h2>
+          <div className="cmp">
+            <div className="cc bad">
+              <div className="ch"><span className="ctag b">Leads</span> Paying for leads</div>
+              <ul>
+                <li>You&apos;re in the field with no time to call</li>
+                <li>You chase them yourself</li>
+                <li>Call 5 min late and they&apos;re gone</li>
+                <li>30 leads, maybe 2 legit</li>
+                <li>Competing with 10 other companies</li>
+              </ul>
+            </div>
+            <div className="cc good">
+              <div className="ch"><span className="ctag g">Appointly</span> Booked appointments</div>
+              <ul>
+                <li>We call within 60 seconds</li>
+                <li>Qualified, warmed up, booked</li>
+                <li>Only vetted homeowners on your calendar</li>
+                <li>They&apos;re expecting you, you just show up</li>
+                <li>We handle all the phone work</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What you get */}
+      <section className="sec tint" id="what-you-get">
+        <div className="orb b" />
+        <div className="wrap">
+          <h2>A world-class acquisition team, for the <span className="hl">price of an appointment.</span></h2>
+          <ul className="vlist">
+            <li><span className="vn">1</span>We call every lead within 60 seconds, before they forget they clicked the ad.</li>
+            <li><span className="vn">2</span>We qualify on service area, project scope, and budget. We only book people you&apos;d book yourself.</li>
+            <li><span className="vn">3</span>We warm them up so they&apos;re ready to buy the moment you walk through their garage door.</li>
+            <li><span className="vn">4</span>We book at your preferred times, handle all reschedules, and confirm day of.</li>
+            <li><span className="vn">5</span>Your customer&apos;s first impression of your company is world-class, before you ever arrive.</li>
+          </ul>
         </div>
       </section>
 

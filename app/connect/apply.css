@@ -84,9 +84,6 @@
 /* closing CTA button, centered under the heading */
 .dscroll .closingcta{display:flex;justify-content:center;margin-top:clamp(24px,4vw,32px)}
 
-/* the comparison table is desktop only on /apply (removed entirely on mobile) */
-@media(max-width:820px){.dscroll .applycmp{display:none}}
-
 /* Leaner stat bar on /apply: trim the vertical padding and the number scale,
    and tighten the gap above the face row. (apply.css only loads on /apply, so
    the /lander proof bar is unaffected.) */
