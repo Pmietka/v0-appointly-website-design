@@ -101,7 +101,7 @@ const CLIENT_WINS = [
     photo: "/images/proof/mark-afab.webp",
   },
   {
-    name: "Andre S.", who: "Great Lakes Elite Coatings", where: "Chicago, IL",
+    name: "Andre S.", who: "D&V maintenance", where: "Chicago, IL",
     stat: "8 new jobs in his second month",
     quote: "By the time I show up, they already know they want it. I'm just there to give the number.",
     photo: "/images/proof/andre.webp",

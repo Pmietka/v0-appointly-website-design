@@ -175,7 +175,7 @@ const TESTIMONIALS: Testimonial[] = [
   },
   {
     name: "Andre S.",
-    who: "Great Lakes Elite Coatings",
+    who: "D&V maintenance",
     where: "Chicago, IL",
     stat: "8 new jobs in his second month",
     quote:
@@ -406,7 +406,7 @@ function CallTranscript() {
 export default function LanderPage() {
   // The three real, photo'd clients, featured beside the claims they back up.
   const tMark = TESTIMONIALS.find((t) => t.name === "Mark T.")!; // AFAB Services
-  const tAndre = TESTIMONIALS.find((t) => t.name === "Andre S.")!; // Great Lakes Elite Coatings
+  const tAndre = TESTIMONIALS.find((t) => t.name === "Andre S.")!; // D&V maintenance
 
   // How-it-works featured quote — this line is Dave's, not Andre's.
   const tDave: Testimonial = {
@@ -418,7 +418,7 @@ export default function LanderPage() {
   // Quote paired with the phone-call transcript in the appointment-quality row.
   const tQuality: Testimonial = {
     name: "Andre",
-    who: "Great Lakes Elite Coatings",
+    who: "D&V maintenance",
     where: "Chicago suburbs",
     stat: "No more tire kickers",
     quote:
