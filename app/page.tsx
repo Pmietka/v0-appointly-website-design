@@ -172,9 +172,9 @@ export default function HomePage() {
             </div>
 
             <div className="proof">
-              <Image className="photo" src="/images/proof/andre.webp" alt="Andre S. of Great Lakes Elite Coatings, Appointly client in Chicago" width={1080} height={1350} sizes="(max-width: 768px) 90vw, 360px" loading="lazy" />
+              <Image className="photo" src="/images/proof/andre.webp" alt="Andre S. of D&V maintenance, Appointly client in Chicago" width={1080} height={1350} sizes="(max-width: 768px) 90vw, 360px" loading="lazy" />
               <div className="pin">
-                <div className="who">Andre S. &middot; Great Lakes Elite Coatings</div>
+                <div className="who">Andre S. &middot; D&V maintenance</div>
                 <div className="where">Chicago, IL</div>
                 <div className="pstat">8 new jobs in his second month</div>
                 <div className="quote">&ldquo;The appointments were already warmed up. I just showed up and closed.&rdquo;</div>
