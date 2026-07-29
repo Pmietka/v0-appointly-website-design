@@ -1,0 +1,520 @@
+/*
+ * Styles for /showcase — an unindexed gallery of ad creative we run for
+ * clients. Dark canvas so the creatives themselves carry all the color.
+ */
+
+.sc-root {
+  --sc-ink: #0a0a0b;
+  --sc-panel: #141416;
+  --sc-panel-2: #1c1c1f;
+  --sc-line: rgba(255, 255, 255, 0.1);
+  --sc-text: #f5f4f2;
+  --sc-muted: rgba(245, 244, 242, 0.58);
+  --sc-accent: #ffbb38;
+
+  min-height: 100vh;
+  background-color: var(--sc-ink);
+  color: var(--sc-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Soft warm glow behind the header so the page doesn't read as a flat block. */
+.sc-root::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(60rem 34rem at 50% -12%, rgba(255, 187, 56, 0.14), transparent 70%),
+    radial-gradient(44rem 30rem at 88% 8%, rgba(90, 130, 255, 0.09), transparent 70%);
+  z-index: 0;
+}
+
+.sc-shell {
+  position: relative;
+  z-index: 1;
+  max-width: 88rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .sc-shell {
+    padding: 0 2.5rem;
+  }
+}
+
+/* ---------------------------------------------------------------- header */
+
+.sc-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--sc-line);
+}
+
+.sc-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  letter-spacing: -0.01em;
+  color: var(--sc-text);
+  text-decoration: none;
+}
+
+.sc-brand-mark {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: var(--sc-accent);
+}
+
+.sc-topbar-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--sc-line);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--sc-text);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.18s ease, border-color 0.18s ease;
+}
+
+.sc-topbar-cta:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.24);
+}
+
+/* ------------------------------------------------------------------ hero */
+
+.sc-hero {
+  padding: 4.5rem 0 3rem;
+  max-width: 46rem;
+}
+
+@media (min-width: 768px) {
+  .sc-hero {
+    padding: 6.5rem 0 4rem;
+  }
+}
+
+.sc-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.8125rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 187, 56, 0.3);
+  background: rgba(255, 187, 56, 0.1);
+  color: var(--sc-accent);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.sc-eyebrow-dot {
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 999px;
+  background: var(--sc-accent);
+}
+
+.sc-title {
+  margin: 1.5rem 0 0;
+  font-size: clamp(2.25rem, 6vw, 4rem);
+  line-height: 1.03;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.sc-title em {
+  font-style: normal;
+  color: var(--sc-accent);
+}
+
+.sc-lede {
+  margin: 1.25rem 0 0;
+  font-size: clamp(1rem, 1.6vw, 1.1875rem);
+  line-height: 1.6;
+  color: var(--sc-muted);
+  max-width: 38rem;
+}
+
+/* Small run-rate stats under the lede. */
+.sc-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.25rem;
+  margin-top: 2.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.sc-stat-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.sc-stat-label {
+  display: block;
+  margin-top: 0.1875rem;
+  font-size: 0.75rem;
+  color: var(--sc-muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------- gallery */
+
+.sc-gallery {
+  padding-bottom: 5rem;
+  columns: 1;
+  column-gap: 1.25rem;
+}
+
+@media (min-width: 720px) {
+  .sc-gallery {
+    columns: 2;
+  }
+}
+
+@media (min-width: 1180px) {
+  .sc-gallery {
+    columns: 3;
+    column-gap: 1.5rem;
+  }
+}
+
+.sc-card {
+  break-inside: avoid;
+  margin: 0 0 1.25rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: var(--sc-panel);
+  border: 1px solid var(--sc-line);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+@media (min-width: 1180px) {
+  .sc-card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.sc-card:hover {
+  border-color: rgba(255, 255, 255, 0.22);
+  transform: translateY(-2px);
+}
+
+/* Media well — holds the creative plus the watermark overlay. */
+.sc-media {
+  position: relative;
+  display: block;
+  background: var(--sc-panel-2);
+  line-height: 0;
+}
+
+.sc-media img,
+.sc-media video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/*
+ * Watermark. Tiled diagonal wordmark drawn twice in the SVG — dark offset
+ * copy underneath, light copy on top — so it stays legible over both the
+ * bright and the near-black creatives. Never intercepts clicks.
+ */
+.sc-watermark {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='170' viewBox='0 0 300 170'%3E%3Cg font-family='Helvetica,Arial,sans-serif' font-size='16' font-weight='700' letter-spacing='2' text-anchor='middle'%3E%3Ctext x='151' y='87' fill='rgba(0,0,0,0.20)' transform='rotate(-24 150 85)'%3EAPPOINTLY SOLUTIONS%3C/text%3E%3Ctext x='150' y='85' fill='rgba(255,255,255,0.30)' transform='rotate(-24 150 85)'%3EAPPOINTLY SOLUTIONS%3C/text%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-position: center;
+}
+
+/* Corner lockup so the mark is unambiguous even on a cropped screenshot. */
+.sc-watermark-badge {
+  position: absolute;
+  right: 0.625rem;
+  bottom: 0.625rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.3125rem 0.5625rem;
+  border-radius: 999px;
+  background: rgba(10, 10, 11, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.sc-watermark-badge svg {
+  width: 0.75rem;
+  height: 0.75rem;
+  color: var(--sc-accent);
+}
+
+/* ------------------------------------------------------------ video bits */
+
+.sc-video-btn {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  background: rgba(10, 10, 11, 0.28);
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.sc-video-btn:hover {
+  background: rgba(10, 10, 11, 0.14);
+}
+
+/* Once playing, the button sits invisible on top so a click still pauses. */
+.sc-video-btn[data-playing="true"] {
+  background: transparent;
+}
+
+.sc-video-btn[data-playing="true"] .sc-video-glyph {
+  opacity: 0;
+}
+
+.sc-video-btn[data-playing="true"]:hover .sc-video-glyph {
+  opacity: 1;
+}
+
+.sc-video-glyph {
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  color: #0a0a0b;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.sc-video-btn:hover .sc-video-glyph {
+  transform: scale(1.06);
+}
+
+.sc-video-glyph svg {
+  width: 1.375rem;
+  height: 1.375rem;
+}
+
+.sc-sound-btn {
+  position: absolute;
+  left: 0.625rem;
+  bottom: 0.625rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3125rem;
+  padding: 0.3125rem 0.625rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(10, 10, 11, 0.62);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.sc-sound-btn svg {
+  width: 0.8125rem;
+  height: 0.8125rem;
+}
+
+.sc-sound-btn:hover {
+  background: rgba(10, 10, 11, 0.85);
+}
+
+/* ------------------------------------------------------------- card meta */
+
+.sc-card-body {
+  padding: 1rem 1.125rem 1.25rem;
+}
+
+.sc-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  margin-bottom: 0.625rem;
+}
+
+.sc-tag {
+  padding: 0.1875rem 0.5rem;
+  border-radius: 0.375rem;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid var(--sc-line);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: rgba(245, 244, 242, 0.72);
+}
+
+.sc-tag--video {
+  background: rgba(255, 187, 56, 0.14);
+  border-color: rgba(255, 187, 56, 0.32);
+  color: var(--sc-accent);
+}
+
+.sc-card-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.35;
+}
+
+.sc-card-note {
+  margin: 0.4375rem 0 0;
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: var(--sc-muted);
+}
+
+/* ------------------------------------------------------------- note tile */
+
+.sc-note {
+  padding: 1.5rem 1.375rem;
+  background: linear-gradient(165deg, rgba(255, 187, 56, 0.11), rgba(255, 255, 255, 0.02));
+}
+
+.sc-note-title {
+  margin: 0 0 0.75rem;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--sc-accent);
+}
+
+.sc-note-body {
+  margin: 0 0 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: rgba(245, 244, 242, 0.8);
+}
+
+.sc-note-body:last-child {
+  margin-bottom: 0;
+}
+
+/* ------------------------------------------------------------------- cta */
+
+.sc-cta {
+  margin: 0 0 5rem;
+  padding: 3rem 1.5rem;
+  border-radius: 1.25rem;
+  border: 1px solid var(--sc-line);
+  background: linear-gradient(160deg, rgba(255, 187, 56, 0.1), rgba(255, 255, 255, 0.02));
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .sc-cta {
+    padding: 4rem 3rem;
+  }
+}
+
+.sc-cta h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 3.4vw, 2.25rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+.sc-cta p {
+  margin: 0.875rem auto 0;
+  max-width: 34rem;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--sc-muted);
+}
+
+.sc-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.75rem;
+  padding: 0.875rem 1.75rem;
+  border-radius: 999px;
+  background: var(--sc-accent);
+  color: #0a0a0b;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.sc-cta-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(255, 187, 56, 0.28);
+}
+
+/* ---------------------------------------------------------------- footer */
+
+.sc-footer {
+  border-top: 1px solid var(--sc-line);
+  padding: 2rem 0 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--sc-muted);
+}
+
+.sc-footer a {
+  color: var(--sc-muted);
+  text-decoration: none;
+}
+
+.sc-footer a:hover {
+  color: var(--sc-text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sc-card,
+  .sc-cta-btn,
+  .sc-video-glyph {
+    transition: none;
+  }
+
+  .sc-card:hover,
+  .sc-cta-btn:hover {
+    transform: none;
+  }
+}
