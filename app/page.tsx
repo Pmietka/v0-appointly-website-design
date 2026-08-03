@@ -11,7 +11,7 @@ const COMPARE_COLS = ["DIY", "Marketing Agency", "Shared Leads", "Appointly"];
 const COMPARE_ROWS = [
   { label: "Outcome", Icon: Target, kind: "text", out: true, vals: ["All on you. Hard to keep up while you work.", "Promises and meetings. Slow to show results.", "Cold leads sold to many. You do the chasing.", "Qualified appointments booked on your calendar."] },
   { label: "Who runs it", Icon: User, kind: "text", out: false, vals: ["You", "You manage them", "You chase leads", "We run everything"] },
-  { label: "Ad spend risk", Icon: Shield, kind: "text", out: false, vals: ["On you", "On you", "On you", "On us"] },
+  { label: "Upfront risk", Icon: Shield, kind: "text", out: false, vals: ["On you", "On you", "On you", "None. Pay per appointment"] },
   { label: "What you pay for", Icon: CreditCard, kind: "text", out: false, vals: ["Your time", "Monthly fees", "Leads that flake", "Booked appointments"] },
   { label: "Works while you're on the job", Icon: Clock, kind: "bin", out: false, vals: [false, false, false, true] },
   { label: "Exclusive to you", Icon: Lock, kind: "bin", out: false, vals: [false, false, false, true] },
@@ -33,14 +33,14 @@ const LEAD_TRADE = "Floor Coating Jobs";
 export const metadata: Metadata = {
   title: "Appointly Solutions | More booked jobs. Less chasing leads.",
   description:
-    "We book floor coating jobs for contractors. Pay per appointment: we cover the ad spend, and you only pay when a qualified homeowner is booked on your calendar.",
+    "We book floor coating jobs for contractors. Pay per appointment: you only pay when a qualified homeowner is booked on your calendar.",
   alternates: {
     canonical: "https://getappointly.co/",
   },
   openGraph: {
     title: "Appointly Solutions | More booked jobs. Less chasing leads.",
     description:
-      "We book floor coating jobs for contractors. Pay per appointment: we cover the ad spend, and you only pay when a qualified homeowner is booked on your calendar.",
+      "We book floor coating jobs for contractors. Pay per appointment: you only pay when a qualified homeowner is booked on your calendar.",
     url: "https://getappointly.co/",
     siteName: "Appointly Solutions",
     type: "website",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Appointly Solutions | More booked jobs. Less chasing leads.",
     description:
-      "We book floor coating jobs for contractors. Pay per appointment: we cover the ad spend, and you only pay when a qualified homeowner is booked on your calendar.",
+      "We book floor coating jobs for contractors. Pay per appointment: you only pay when a qualified homeowner is booked on your calendar.",
     images: ["https://getappointly.co/images/og-home.png"],
   },
 };
@@ -105,8 +105,8 @@ export default function HomePage() {
             <span className="hl">You just show up.</span>
           </h1>
           <p className="lead">
-            Pay per appointment. We cover the ad spend. You pay only when a
-            qualified homeowner is on your calendar.
+            Pay per appointment. You pay only when a qualified homeowner is on
+            your calendar.
           </p>
           <a className="btn" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
             Book a Call <span className="arr">&rarr;</span>
@@ -145,11 +145,11 @@ export default function HomePage() {
             How we get clients <span className="hl">8 new jobs</span> a month.
           </h2>
           <p className="sub">
-            We run the ads with our own money, because we&apos;re good at it. You
+            We run the ads for you, because we&apos;re good at it. You
             pay only once a qualified appointment is booked onto your calendar.
           </p>
           <div className="grid g3">
-            <div className="stat"><div className="sv">$0</div><div className="sl">Ad spend risk to you. We front it.</div></div>
+            <div className="stat"><div className="sv">$0</div><div className="sl">Owed until an appointment is booked on your calendar</div></div>
             <div className="stat"><div className="sv word">Pay per appointment</div><div className="sl">We don&apos;t sell leads. We book appointments.</div></div>
             <div className="stat"><div className="sv">8 jobs</div><div className="sl">Average for our latest clients in month two</div></div>
           </div>
@@ -268,7 +268,7 @@ export default function HomePage() {
           <p className="cmpeyebrow">Compare the options</p>
           <h2>Not DIY. Not an agency. <span className="hl">A partner.</span></h2>
           <p className="cmpsub">
-            Appointly is the partner option. We front the ad spend, qualify every
+            Appointly is the partner option. We run the campaigns, qualify every
             homeowner, and book appointments straight onto your calendar. You just
             show up and close.
           </p>
@@ -344,14 +344,13 @@ export default function HomePage() {
           <h2>Simple <span className="hl">pricing.</span></h2>
           <p className="sub">
             You pay one flat rate for every qualified appointment we book onto your
-            calendar. We cover the ad spend. You never pay for a raw lead, only for a
+            calendar. You never pay for a raw lead, only for a
             booked homeowner who shows up ready for an estimate.
           </p>
           <div className="priceblock">
             <div className="ptag">How pricing works</div>
             <div className="pclaim">One flat rate for every booked appointment.</div>
             <ul>
-              <li>We cover the ad spend</li>
               <li>You never pay for a raw lead</li>
               <li>Only booked homeowners ready for an estimate</li>
             </ul>
@@ -423,7 +422,7 @@ export default function HomePage() {
                 <div className="frole">Co-founder</div>
                 <p className="fbio">
                   Runs the campaigns and the numbers. The person making sure the ad
-                  spend we front turns into estimates on your calendar.
+                  spend turns into estimates on your calendar.
                 </p>
               </div>
             </article>

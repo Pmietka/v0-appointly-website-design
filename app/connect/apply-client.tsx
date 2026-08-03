@@ -324,7 +324,7 @@ const TRUST_BADGES = ["No contracts", "Pay per show", "Exclusive leads"];
 // Proof bar stats.
 // PLACEHOLDER NUMBERS: confirm these are real and defensible before sending.
 const STATS = [
-  { v: "$0", l: "Ad spend you risk. We front it." },
+  { v: "$0", l: "Owed until an estimate is booked." },
   { v: "100%", l: "Exclusive. One contractor per market." },
   { v: "8 / mo", l: "Average jobs for newest clients, month two." },
 ];
@@ -333,7 +333,7 @@ const STATS = [
 const STEPS = [
   { n: 1, t: "Apply & Book", d: "Answer a few quick questions and grab a time on the calendar." },
   { n: 2, t: "Strategy Call", d: "A 20 minute call. We check your market, your numbers, and map the plan. Low pressure." },
-  { n: 3, t: "Partner With Us", d: "If it is a fit, we run the ads on our own dime and book qualified estimates onto your calendar." },
+  { n: 3, t: "Partner With Us", d: "If it is a fit, we run the ads and book qualified estimates onto your calendar." },
 ];
 
 // Recent client wins (real, approved photo testimonials only).
@@ -362,7 +362,7 @@ const COMPARE_COLS = ["DIY", "Marketing Agency", "Shared Leads", "Appointly"];
 const COMPARE_ROWS = [
   { label: "Outcome", Icon: Target, kind: "text", out: true, vals: ["All on you. Hard to keep up while you work.", "Promises and meetings. Slow to show results.", "Cold leads sold to many. You do the chasing.", "Qualified appointments booked on your calendar."] },
   { label: "Who runs it", Icon: User, kind: "text", out: false, vals: ["You", "You manage them", "You chase leads", "We run everything"] },
-  { label: "Ad spend risk", Icon: Shield, kind: "text", out: false, vals: ["On you", "On you", "On you", "On us"] },
+  { label: "Upfront risk", Icon: Shield, kind: "text", out: false, vals: ["On you", "On you", "On you", "None. Pay per appointment"] },
   { label: "What you pay for", Icon: CreditCard, kind: "text", out: false, vals: ["Your time", "Monthly fees", "Leads that flake", "Booked appointments"] },
   { label: "Works while you're on the job", Icon: Clock, kind: "bin", out: false, vals: [false, false, false, true] },
   { label: "Exclusive to you", Icon: Lock, kind: "bin", out: false, vals: [false, false, false, true] },
@@ -413,7 +413,7 @@ export default function ApplyClient() {
             <span className="hl">sits down for your estimate.</span>
           </h1>
           <p className="lead">
-            We run the ads on our own dime and book prequalified, exclusive
+            We run the ads and book prequalified, exclusive
             estimates straight onto your calendar. No contracts. No BS.
           </p>
 
@@ -524,7 +524,7 @@ export default function ApplyClient() {
           <p className="cmpeyebrow">Compare the options</p>
           <h2>Why contractors pick us <span className="hl">over a lead company.</span></h2>
           <p className="cmpsub">
-            We front the ad spend, qualify every homeowner, and book appointments
+            We run the campaigns, qualify every homeowner, and book appointments
             straight onto your calendar. You just show up and close.
           </p>
 

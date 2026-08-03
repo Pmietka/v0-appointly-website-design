@@ -3,7 +3,7 @@ import { Fragment } from "react";
 import {
   Star, Plus, CalendarCheck, Check, X,
   Target, User, Shield, CreditCard, Clock, Lock, LineChart,
-  Banknote, PhoneCall, Filter, Handshake, MapPin, Ruler, CalendarClock,
+  PhoneCall, Filter, Handshake, MapPin, Ruler, CalendarClock,
   MessageCircle, Phone, Award, CalendarSync, Megaphone,
 } from "lucide-react";
 
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
    Five simple, icon-led steps. Big graphic, a few words each — no paragraphs.
    ─────────────────────────────────────────────────────────────────────────── */
 const FLOW = [
-  { n: 1, Icon: Banknote, label: "We pay for the ads", sub: "No risk to you" },
+  { n: 1, Icon: Megaphone, label: "We run the ads", sub: "Built for your market" },
   { n: 2, Icon: PhoneCall, label: "We call in 60 seconds", sub: "Before they cool off" },
   { n: 3, Icon: Filter, label: "We screen out the junk", sub: "Only book what you would book" },
   { n: 4, Icon: CalendarCheck, label: "We book your calendar", sub: "Confirmed times only" },
@@ -100,7 +100,7 @@ const COMPARE_COLS = ["DIY", "Marketing Agency", "Shared Leads", "Appointly"];
 const COMPARE_ROWS = [
   { label: "Outcome", Icon: Target, kind: "text", out: true, vals: ["All on you. Hard to keep up while you work.", "Promises and meetings. Slow to show results.", "Cold leads sold to many. You do the chasing.", "Qualified appointments booked on your calendar."] },
   { label: "Who runs it", Icon: User, kind: "text", out: false, vals: ["You", "You manage them", "You chase leads", "We run everything"] },
-  { label: "Ad spend risk", Icon: Shield, kind: "text", out: false, vals: ["On you", "On you", "On you", "On us"] },
+  { label: "Upfront risk", Icon: Shield, kind: "text", out: false, vals: ["On you", "On you", "On you", "None. Pay per appointment"] },
   { label: "What you pay for", Icon: CreditCard, kind: "text", out: false, vals: ["Your time", "Monthly fees", "Leads that flake", "Booked appointments"] },
   { label: "Works while you're on the job", Icon: Clock, kind: "bin", out: false, vals: [false, false, false, true] },
   { label: "Exclusive to you", Icon: Lock, kind: "bin", out: false, vals: [false, false, false, true] },
@@ -111,7 +111,7 @@ const COMPARE_ROWS = [
 const FAQ = [
   {
     q: "How does the pricing work?",
-    a: "Two parts. A retainer covers our labor running the system, and on top of that you pay a per-appointment fee for each booked estimate that lands on your calendar. We front the ad spend ourselves.",
+    a: "Two parts. A retainer covers our labor running the system, and on top of that you pay a per-appointment fee for each booked estimate that lands on your calendar.",
   },
   {
     q: "What counts as a booked appointment?",
@@ -628,7 +628,7 @@ export default function LanderPage() {
                 <div className="frole">Co-founder</div>
                 <p className="fbio">
                   Runs the campaigns and the numbers. The person making sure the ad
-                  spend we front turns into estimates on your calendar.
+                  spend turns into estimates on your calendar.
                 </p>
               </div>
             </article>
@@ -702,7 +702,7 @@ export default function LanderPage() {
           <p className="cmpeyebrow">Compare the options</p>
           <h2>Why contractors pick us <span className="hl">over a lead company.</span></h2>
           <p className="cmpsub">
-            We front the ad spend, qualify every homeowner, and book appointments
+            We run the campaigns, qualify every homeowner, and book appointments
             straight onto your calendar. You just show up and close.
           </p>
 
