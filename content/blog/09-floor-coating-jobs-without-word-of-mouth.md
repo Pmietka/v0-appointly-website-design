@@ -84,13 +84,13 @@ Cost: A daily ad budget you set and control.
 
 This is the channel most coating contractors should lean on. Instead of learning the ad platform, writing the offer, and chasing every lead yourself, you hand the whole job to a company like Appointly that fills your calendar with booked estimates.
 
-Here's how the Appointly Model works. We charge a retainer that covers our labor and effort, the work of running the entire system. On top of that, you pay a [per-appointment fee](/pricing) for each booked estimate that lands on your calendar. We generate the lead through Meta ads, we contact that homeowner immediately ([speed to lead](/blog/speed-to-lead-wins-floor-coating-jobs)) before they shop three other coating crews, and we book them into a time that works for you. You just show up, walk the garage, quote the job, and collect.
+Here's how the Appointly Model works. You pay one flat [per-appointment fee](/pricing) for each booked estimate that lands on your calendar, and nothing for leads that never book. The work of running the entire system is included. We generate the lead through Meta ads, we contact that homeowner immediately ([speed to lead](/blog/speed-to-lead-wins-floor-coating-jobs)) before they shop three other coating crews, and we book them into a time that works for you. You just show up, walk the garage, quote the job, and collect.
 
 Set-up work: Minimal. A short call to set your service area, pricing, and the kind of work you want.
 
 Lead time: Fast. Your calendar starts filling as the campaign ramps.
 
-Cost: A retainer that covers our labor plus a per-appointment fee for each booked estimate. No raw leads to chase, no ad platform to babysit.
+Cost: one flat fee per booked appointment for each booked estimate. No raw leads to chase, no ad platform to babysit.
 
 ## Building a Predictable Pipeline
 
@@ -134,7 +134,7 @@ Let's compare a predictable pipeline against relying on word of mouth.
 
 Say an average epoxy garage floor is $4,000. That's $240,000 from referrals and another $240,000 from booked estimates. Nearly half a million in revenue from a calendar you actually control.
 
-When you're paying a retainer that covers the labor of running the system plus a per-appointment fee for each booked estimate, the math is simple: if a coated garage is worth $4,000 to you and you close a healthy share of the estimates that land on your calendar, the cost of those appointments is a small slice of the revenue they produce.
+When you're paying one flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book, the math is simple: if a coated garage is worth $4,000 to you and you close a healthy share of the estimates that land on your calendar, the cost of those appointments is a small slice of the revenue they produce.
 
 ## The Transition Strategy
 
@@ -198,6 +198,6 @@ Start now. Get in front of homeowners who don't know you yet. Reach them first. 
 
 In six months, you'll have a pipeline that doesn't collapse when a couple of referral sources dry up. In a year, you'll wonder why you waited.
 
-If you don't want to manage any of it, that's exactly what we do. With the Appointly Model, you pay a retainer that covers our labor for running the whole system, plus a per-appointment fee for each booked estimate that lands on your calendar. We generate the lead through Meta ads, hit speed to lead so you reach the homeowner before your competition does, and book the estimate at a time that works for you. You just show up, quote the floor, and collect.
+If you don't want to manage any of it, that's exactly what we do. With the Appointly Model, you pay one flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book. We generate the lead through Meta ads, hit speed to lead so you reach the homeowner before your competition does, and book the estimate at a time that works for you. You just show up, quote the floor, and collect.
 
 [Visit getappointly.co to see how we fill your calendar with booked estimates.](https://getappointly.co)

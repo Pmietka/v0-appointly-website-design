@@ -96,7 +96,7 @@ The leads come in, and then they sit. The homeowner who fills out your form is c
 
 If you're in a real crunch and need confirmed estimates on the calendar this week, hand the whole front end to a company that does it for you.
 
-That's what Appointly does. Here's the model, plainly. We charge a retainer that covers our labor, the work of running the entire system, and on top of that you pay a [per-appointment fee](/pricing) for each booked estimate that lands on your calendar. We don't sell you a pile of raw leads to chase. We do the complete job of filling your calendar:
+That's what Appointly does. Here's the model, plainly. you pay one flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book. We don't sell you a pile of raw leads to chase. We do the complete job of filling your calendar:
 
 1. We generate the lead through Meta ads on Facebook and Instagram.
 2. We contact that homeowner immediately, speed to lead, before they shop three other coating companies.
@@ -118,7 +118,7 @@ No learning curve. No ad creative to design. No sitting by the phone to catch a 
 
 **Cost:**
 
-A retainer that covers our labor plus a per-appointment fee for each booked estimate. You're paying for estimates on your calendar, not clicks and not maybes.
+one flat fee per booked appointment for each booked estimate. You're paying for estimates on your calendar, not clicks and not maybes.
 
 ## The Combo Play: Run These Together
 
@@ -166,7 +166,7 @@ Your Google profile is free. But running Meta ads and paying for booked estimate
 
 What matters is the relationship between what you spend and what an epoxy floor is worth to you. If an average garage floor is $4,000 and you close a solid share of the estimates that land on your calendar, the cost of those appointments is a small fraction of the revenue they bring in. The hungrier you are for work, the more you turn the dial up.
 
-With the Appointly Model, you're not gambling on clicks. You pay a retainer that covers our labor for running the system, plus a per-appointment fee for each booked estimate. That keeps the math clean: you know what each confirmed estimate costs, and you know what a closed floor is worth.
+With the Appointly Model, you're not gambling on clicks. you pay one flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book. That keeps the math clean: you know what each confirmed estimate costs, and you know what a closed floor is worth.
 
 ## Common Mistakes When Trying to Move Fast
 
@@ -226,6 +226,6 @@ Start with your Google profile if you haven't. Get your work in front of homeown
 
 One week from now you'll have appointments landing. One month from now you'll be busy.
 
-Here's how the Appointly Model works for floor coating contractors. You pay a retainer that covers our labor for running the whole system, plus a per-appointment fee for each booked estimate that lands on your calendar. We generate the lead through Meta ads, we hit speed to lead so you reach the homeowner before your competition does, and we book the estimate at a time that works for you. You just show up, quote the floor, and collect.
+Here's how the Appointly Model works for floor coating contractors. you pay one flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book. We generate the lead through Meta ads, we hit speed to lead so you reach the homeowner before your competition does, and we book the estimate at a time that works for you. You just show up, quote the floor, and collect.
 
 [Visit getappointly.co to book a call and start filling your calendar with booked estimates.](https://getappointly.co)

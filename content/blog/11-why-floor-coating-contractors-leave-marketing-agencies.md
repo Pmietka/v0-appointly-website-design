@@ -78,7 +78,7 @@ You don't need another agency billing you to write articles. You need your calen
 
 That's the Appointly Model, and it's why coating contractors are switching. Here's how it works:
 
-- You pay a **retainer** that covers our labor and effort, the work of running the entire system end to end.
+- You pay **one flat fee per booked estimate**. The work of running the entire system end to end is included.
 - On top of that, you pay a **per-appointment fee** for each booked estimate that actually lands on your calendar.
 - We **generate the lead** through Meta ads on Facebook and Instagram, targeted at homeowners in your service area with the kind of before-and-after garage floor that stops the scroll.
 - We **contact that lead immediately**, speed to lead, before they shop two other coating crews. The homeowner who inquires at 8 p.m. is comparing companies by 8:15. We're the one who calls first.
@@ -109,4 +109,4 @@ A: With the right approach, weeks, not months. That's how long it takes to launc
 
 ---
 
-If you're done with agencies that bill you for activity and want a calendar full of booked estimates, Appointly is built for floor coating contractors. With the Appointly Model, you pay a retainer that covers our labor for running the whole system, plus a per-appointment fee for each booked estimate that lands on your calendar. We generate the lead through Meta ads, hit speed to lead so you reach the homeowner before your competition does, and book the estimate at a time that works for you, one coating contractor per market. You just show up, quote the floor, and collect. Reach out to Appointly today at [getappointly.co](https://getappointly.co).
+If you're done with agencies that bill you for activity and want a calendar full of booked estimates, Appointly is built for floor coating contractors. With the Appointly Model, you pay one flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book. We generate the lead through Meta ads, hit speed to lead so you reach the homeowner before your competition does, and book the estimate at a time that works for you, one coating contractor per market. You just show up, quote the floor, and collect. Reach out to Appointly today at [getappointly.co](https://getappointly.co).

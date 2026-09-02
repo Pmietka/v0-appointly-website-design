@@ -36,7 +36,7 @@ const steps = [
     icon: CreditCard,
     title: "Simple, results-based pricing",
     description:
-      "A retainer covers our labor and effort. On top of that, you pay a per-appointment fee for each booked estimate that lands on your calendar.",
+      "You pay one flat fee for each booked estimate that lands on your calendar. Nothing for leads that never book.",
   },
 ];
 

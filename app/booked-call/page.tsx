@@ -112,7 +112,7 @@ const COMPARE_ROWS = [
 const FAQ = [
   {
     q: "How does the pricing work?",
-    a: "Two parts. A retainer covers our labor running the system, and on top of that you pay a per-appointment fee for each booked estimate that lands on your calendar.",
+    a: "One part. You pay a flat fee for each booked estimate that lands on your calendar. Nothing for leads that never book.",
   },
   {
     q: "What counts as a booked appointment?",
@@ -820,7 +820,7 @@ export default function BookedCallPage() {
           <ul className="agenda">
             <li><span className="ac" aria-hidden /><span className="at"><strong>Your market.</strong> We check whether your area is open — we only take one floor coating contractor per market.</span></li>
             <li><span className="ac" aria-hidden /><span className="at"><strong>Your numbers.</strong> Your target jobs per month, your best neighborhoods, and your close rate.</span></li>
-            <li><span className="ac" aria-hidden /><span className="at"><strong>The plan.</strong> Exactly how we&apos;d fill your calendar and what the retainer plus per-appointment pricing looks like for you.</span></li>
+            <li><span className="ac" aria-hidden /><span className="at"><strong>The plan.</strong> Exactly how we&apos;d fill your calendar and what the per-appointment pricing looks like for you.</span></li>
             <li><span className="ac" aria-hidden /><span className="at"><strong>Your call.</strong> If it&apos;s a fit, we map out next steps. If it&apos;s not, we&apos;ll tell you straight.</span></li>
           </ul>
           <p className="prep">

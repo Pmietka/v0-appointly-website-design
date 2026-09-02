@@ -108,7 +108,7 @@ When you're scrambling for work, you discount. You quote scared. A homeowner say
 
 When your calendar is already full of estimates, the math flips. You can quote your real number, present the premium system first, and walk away from the tire-kickers who only want the cheapest bid. Abundance is the best negotiating position there is.
 
-That's the entire logic behind the **Appointly Model**. You pay a retainer that covers our labor running the system, plus a [per-appointment fee](/pricing) for each [booked estimate](/floor-coating-leads) that lands on your calendar. We run the [Meta ads](/blog/meta-ads-for-floor-coating-contractors), contact every lead instantly before they shop three other coaters, and book the estimate into a time that works for you. You show up to a homeowner who's expecting you, quote on value instead of fear, do the job, and collect.
+That's the entire logic behind the **Appointly Model**. you pay one flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book. We run the [Meta ads](/blog/meta-ads-for-floor-coating-contractors), contact every lead instantly before they shop three other coaters, and book the estimate into a time that works for you. You show up to a homeowner who's expecting you, quote on value instead of fear, do the job, and collect.
 
 A full calendar isn't just more revenue. It's the thing that lets you hold your price and protect the margin you actually built the business to earn.
 

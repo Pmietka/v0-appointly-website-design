@@ -16,7 +16,7 @@ const reasons = [
     icon: CircleDollarSign,
     title: "Spend tied to booked appointments",
     description:
-      "On top of a retainer that covers our labor, you pay a per-appointment fee for each booked floor coating estimate that lands on your calendar. Your spend tracks real appointments, not guesswork.",
+      "You pay one flat fee for each booked floor coating estimate that lands on your calendar, and nothing for leads that never book. Your spend tracks real appointments, not guesswork.",
   },
   {
     icon: ShieldCheck,
@@ -34,15 +34,15 @@ const reasons = [
     icon: LineChart,
     title: "Easier planning",
     description:
-      "When you know the retainer and the per-appointment fee, forecasting growth and planning crew capacity becomes far more practical.",
+      "When you know exactly what each booked estimate costs, forecasting growth and planning crew capacity becomes far more practical.",
   },
 ];
 
 const faqItems = [
   {
-    question: "What does the retainer cover?",
+    question: "What does the per-appointment fee cover?",
     answer:
-      "The labor of running your system: building and managing the Meta ads, contacting every lead within minutes, following up with the ones who do not answer, and booking estimates onto your calendar.",
+      "Everything it takes to put the estimate on your calendar: building and managing the Meta ads, contacting every lead within minutes, following up with the ones who do not answer, and booking the appointment. There is no separate monthly fee.",
   },
   {
     question: "What counts as a billable appointment?",
@@ -62,13 +62,13 @@ const faqItems = [
 ];
 
 export const metadata: Metadata = {
-  title: "Appointly Pricing | Retainer Plus Per-Appointment Fee",
+  title: "Appointly Pricing | Pay Per Booked Appointment",
   description:
-    "How Appointly pricing works: a retainer that covers our labor plus a per-appointment fee for each booked floor coating estimate placed on your calendar.",
+    "How Appointly pricing works: one flat fee for each booked floor coating estimate placed on your calendar, and nothing for leads that never book.",
   keywords: [
     "the appointly model",
     "floor coating appointment pricing",
-    "retainer plus per appointment",
+    "pay per appointment",
     "booked floor coating estimates",
     "Appointly Solutions",
   ],
@@ -76,9 +76,9 @@ export const metadata: Metadata = {
     canonical: "https://getappointly.co/pricing",
   },
   openGraph: {
-    title: "Appointly Pricing | Retainer Plus Per-Appointment Fee",
+    title: "Appointly Pricing | Pay Per Booked Appointment",
     description:
-      "Learn how the Appointly Model combines a retainer with a per-appointment fee to fill floor coating contractors' calendars with booked estimates.",
+      "Learn how the Appointly Model charges one flat fee per booked appointment to fill floor coating contractors' calendars with estimates.",
     url: "https://getappointly.co/pricing",
     siteName: "Appointly Solutions",
     type: "website",
@@ -107,10 +107,9 @@ export default function PayPerLeadInsulationPage() {
                 <span className="gradient-text">Appointments</span>
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                The Appointly Model has two parts. A retainer covers our labor and effort
-                running your Meta ads and speed-to-lead booking, and a per-appointment fee
-                applies to each booked floor coating estimate that lands on your calendar.
-                This page explains exactly how that structure works.
+                The Appointly Model has one moving part. You pay a flat fee for each
+                booked floor coating estimate that lands on your calendar, and nothing
+                for leads that never book. This page explains exactly how that works.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
@@ -167,12 +166,12 @@ export default function PayPerLeadInsulationPage() {
                 How The Appointly Model Works
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
-                A retainer for our labor, plus a fee per booked estimate.
+                One flat fee per booked estimate. Nothing else.
               </h2>
               <p className="mt-5 text-sm leading-7 text-muted-foreground md:text-base">
-                The retainer covers the labor and effort we put into running your Meta
-                ads, hitting every lead instantly, and booking it. The per-appointment
-                fee applies to each floor coating estimate we place on your calendar. It
+                The per-appointment fee covers everything we do to put the estimate on
+                your calendar: running your Meta ads, hitting every lead instantly, and
+                booking it. You are charged for each floor coating estimate we place on your calendar and for nothing else. It
                 is not about chasing the lowest cost. It is a system where what you pay
                 maps directly to appointments that show up.
               </p>
@@ -198,7 +197,7 @@ export default function PayPerLeadInsulationPage() {
               </h2>
               <p className="mt-4 text-sm leading-7 text-slate-700 md:text-base">
                 A strategy call can help you decide whether the Appointly Model, with its
-                retainer plus per-appointment fee, makes sense for your sales process,
+                pay-per-appointment pricing, makes sense for your sales process,
                 market, and growth targets.
               </p>
               <a

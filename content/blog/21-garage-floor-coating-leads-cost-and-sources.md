@@ -65,7 +65,7 @@ Facebook and Instagram ads work differently. Instead of waiting for someone to s
 
 This is the model Appointly runs. The provider builds and manages the Meta ads, calls every lead within minutes, qualifies the homeowner, and puts a confirmed estimate on your calendar. You do not receive a lead. You receive an appointment.
 
-**What it costs:** Per booked appointment, not per lead. Call-center style services in the coating space commonly charge $75 to $150 per booked appointment. Appointly prices per booked estimate on top of a retainer that covers the labor of running the system, and we walk through the exact numbers for your market on a call. See the [pricing page](/pricing) for how the model is structured.
+**What it costs:** Per booked appointment, not per lead. Call-center style services in the coating space commonly charge $75 to $150 per booked appointment. Appointly charges one flat fee per booked estimate and nothing for leads that never book, and we walk through the exact number for your market on a call. See the [pricing page](/pricing) for how the model is structured.
 
 **What you actually get:** A homeowner who owns the property, wants floor coating work, lives inside your service area, and picked a time. Exclusive to you, because we only work with [one contractor per market](/exclusive-floor-coating-leads).
 
@@ -87,7 +87,7 @@ On a $3,500 job with a gross profit around $1,750 to $2,050, every one of these 
 ## Red Flags When Buying Garage Floor Coating Leads
 
 - **"Exclusive" with an asterisk.** Ask how many contractors receive each lead and what happens if the homeowner submitted the same form on two sites.
-- **Setup fees that dwarf the lead cost.** A $2,000 to $4,000 setup fee is a retainer wearing a costume.
+- **Setup fees that dwarf the lead cost.** A $2,000 to $4,000 setup fee is a monthly fee wearing a costume.
 - **No refund policy for bad contact info.** Wrong numbers, renters, and out-of-area addresses should never be billable.
 - **Nobody calls the lead but you.** If the provider's job ends when the form is submitted, you are buying a to-do list.
 

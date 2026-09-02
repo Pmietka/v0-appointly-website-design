@@ -11,7 +11,7 @@ cluster: marketing-channels
 
 You've probably been pitched by a [marketing agency](/floor-coating-marketing-agency-alternative). "We'll get you in front of everyone searching for a garage floor. We'll make your name show up everywhere. Your phone will ring off the hook."
 
-Then you hire them. You pay a flat retainer every month for 6 months. By month three they're showing you charts and dashboards full of activity. By month six, your phone did not ring off the hook, and your calendar is just as empty as it was.
+Then you hire them. You pay a flat monthly fee every month for 6 months. By month three they're showing you charts and dashboards full of activity. By month six, your phone did not ring off the hook, and your calendar is just as empty as it was.
 
 You're not alone. This happens to floor coating contractors constantly.
 
@@ -53,7 +53,7 @@ Why? Because:
 
 2. It's safer for them. If they promise booked estimates and you don't get them, that's their fault. If they promise "activity" and "exposure," that's a fuzzy target nobody can hold them to. It's way safer to promise the thing they fully control.
 
-3. It keeps you paying. As long as the report shows movement, the retainer renews — whether or not you ever stand in a garage with a quote.
+3. It keeps you paying. As long as the report shows movement, the monthly fee renews — whether or not you ever stand in a garage with a quote.
 
 This is not always malicious. It's just how the incentive structure works. They've found a business model that's easy to sell, easy to report, and hard for you to dispute. You can't argue with a chart that's pointing up and to the right.
 
@@ -135,7 +135,7 @@ Let me show you the cost of paying for activity and waiting.
 
 Scenario A: You hire a typical agency.
 
-- You pay a flat retainer every month for 6 months
+- You pay a flat monthly fee every month for 6 months
 - You get zero booked estimates for months 1 and 2 (just "we're building")
 - Months 3 to 6, you get dashboards and a trickle of raw leads you still have to chase yourself
 - After 6 months, you've spent a small fortune and booked very few estimates
@@ -209,6 +209,6 @@ Dashboards are a vanity metric. Booked estimates are profit.
 
 Stop measuring marketing by what agencies want to report. Start measuring it by what matters: real estimates with real homeowners on your calendar, ready to talk about coating their floor.
 
-If you need booked estimates fast without managing ads or waiting months on promises, here's how Appointly works: you pay a retainer that covers our labor running the whole system, plus a per-appointment fee for each booked estimate that lands on your calendar. We run the Meta ads, hit speed to lead before homeowners can shop other coaters, and book the estimate into a time that works for you. One contractor per market, exclusive. You just show up, quote the floor, and collect the cash.
+If you need booked estimates fast without managing ads or waiting months on promises, here's how Appointly works: you pay one flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book. We run the Meta ads, hit speed to lead before homeowners can shop other coaters, and book the estimate into a time that works for you. One contractor per market, exclusive. You just show up, quote the floor, and collect the cash.
 
 [Visit getappointly.co and let's talk about filling your calendar.](https://getappointly.co)

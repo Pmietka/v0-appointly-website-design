@@ -152,7 +152,7 @@ If you can spend 30 minutes a week on it, do it yourself. If you can't, hire som
 
 A strong reputation helps you close the estimates you've got. But it doesn't put estimates on the calendar in the first place. For that, you need homeowners booked onto your schedule — fast.
 
-At Appointly, we book estimates for floor coating contractors. Here's the model: you pay a retainer that covers our labor running the whole system, plus a [per-appointment fee](/pricing) for each booked estimate that lands on your calendar. We run the Meta ads, contact every lead instantly with real [speed to lead](/blog/speed-to-lead-wins-floor-coating-jobs) before they shop other coaters, and book the estimate into a time that works for you. One contractor per market, exclusive. You just show up, quote the floor, and collect.
+At Appointly, we book estimates for floor coating contractors. Here's the model: you pay one flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book. We run the Meta ads, contact every lead instantly with real [speed to lead](/blog/speed-to-lead-wins-floor-coating-jobs) before they shop other coaters, and book the estimate into a time that works for you. One contractor per market, exclusive. You just show up, quote the floor, and collect.
 
 Build your reputation so every estimate is easy to close. Then let Appointly fill the calendar.
 

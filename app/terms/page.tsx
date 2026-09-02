@@ -27,7 +27,7 @@ const sections = [
   {
     title: "Service Description",
     body:
-      "Appointly Solutions provides appointment generation services for home service contractors using a retainer plus per-appointment model. Services may include Meta ad campaign management, lead intake, speed-to-lead outreach, appointment booking, scheduling support, and related reporting.",
+      "Appointly Solutions provides appointment generation services for home service contractors using a pay-per-appointment model. Services may include Meta ad campaign management, lead intake, speed-to-lead outreach, appointment booking, scheduling support, and related reporting.",
   },
   {
     title: "Eligibility",
@@ -42,7 +42,7 @@ const sections = [
   {
     title: "Payment Terms",
     body:
-      "Clients agree to pay the retainer and per-appointment fees according to the pricing and billing terms established in their service agreement. Late payments, disputes, and credits are handled according to the same agreement and any related written policies.",
+      "Clients agree to pay the per-appointment fees according to the pricing and billing terms established in their service agreement. Late payments, disputes, and credits are handled according to the same agreement and any related written policies.",
   },
   {
     title: "Intellectual Property",

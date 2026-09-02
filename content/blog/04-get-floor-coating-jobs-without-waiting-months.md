@@ -50,7 +50,7 @@ Once the site is dialed in, upkeep is light:
 - Check your Google Business Profile monthly (hours, reviews, fresh photos)
 - Patch technical issues as they pop up (broken links, slow pages)
 
-You can do most of this yourself, or hand it to a freelancer for a few hours a month. Nothing like an open-ended retainer that bills you for the privilege of waiting.
+You can do most of this yourself, or hand it to a freelancer for a few hours a month. Nothing like an open-ended monthly fee that bills you for the privilege of waiting.
 
 ## Your Google Business Profile as a Trust Signal
 
@@ -73,7 +73,7 @@ Done right, the profile is the proof that closes the homeowner once you're stand
 
 **The Cost:**
 
-Mostly a one-time setup to claim, verify, load photos, and fill it out, then a little time each month to post and manage reviews. You can do it yourself or hand it off cheaply. Either way it's a fraction of an open-ended monthly retainer, and it pays off fast as a closing tool.
+Mostly a one-time setup to claim, verify, load photos, and fill it out, then a little time each month to post and manage reviews. You can do it yourself or hand it off cheaply. Either way it's a fraction of an open-ended monthly fee, and it pays off fast as a closing tool.
 
 ## Meta Ads (Facebook and Instagram)
 
@@ -105,7 +105,7 @@ Instead of paying month after month for the hope of someday, or running ads your
 
 How the Appointly Model works:
 
-- A retainer covers our labor for running the whole system — building and managing the Meta ads, writing creative, manning the phones, and handling the booking
+- One flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book
 - We generate the lead through Meta (Facebook and Instagram) ads
 - We contact the lead immediately — speed to lead — before they shop other coating crews
 - We book them into a time that works for your calendar
@@ -138,7 +138,7 @@ You're not buying a list of names. You're buying confirmed estimates. You open y
 - Commitment: none
 
 **The Appointly Model (Booked Appointments)**
-- Cost: a retainer that covers our labor plus a per-appointment fee for each booked estimate
+- Cost: one flat fee per booked appointment for each booked estimate
 - Timeline: booked estimates on your calendar fast
 - Results: confirmed appointments, done for you, exclusively in your market
 - Control: you focus on quoting and closing; we run the machine
@@ -170,7 +170,7 @@ Your calendar stays full while your reputation gets stronger with every job.
 - The booked-appointment system keeps the calendar consistent and exclusive in your market
 - You ride out seasonal swings instead of getting whipsawed by them
 
-The contractor who instead signs a 12-month, full-price agency retainer is out serious money in year one with no guarantee of results — and still writing that check in year two with nothing on the calendar to show for it.
+The contractor who instead signs a 12-month, full-price agency monthly fee is out serious money in year one with no guarantee of results — and still writing that check in year two with nothing on the calendar to show for it.
 
 ## FAQ
 
@@ -198,4 +198,4 @@ A: No. That's the whole point. We generate the lead, hit speed to lead before th
 
 ## Stop Overpaying for Marketing That Doesn't Fill Your Calendar
 
-Get booked epoxy and floor coating estimates on your schedule instead of waiting months for an agency to maybe deliver. Start at [getappointly.co](https://getappointly.co). With the Appointly Model, a retainer covers our labor while we run the Meta ads, hit every lead with speed to lead, and book the estimate into a time that works for you. You pay a per-appointment fee for each booked estimate that lands on your calendar. You just show up, quote the floor, and collect the cash. One contractor per market.
+Get booked epoxy and floor coating estimates on your schedule instead of waiting months for an agency to maybe deliver. Start at [getappointly.co](https://getappointly.co). With the Appointly Model, we run the Meta ads, hit every lead with speed to lead, and book the estimate into a time that works for you. You pay one flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book. You just show up, quote the floor, and collect the cash. One contractor per market.

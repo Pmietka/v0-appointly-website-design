@@ -15,9 +15,9 @@ const bookingUrl = "https://client.getappointly.co/strategy-calendar";
 const agencyProblems = [
   {
     icon: BadgeAlert,
-    title: "Retainer-only, with no appointments promised",
+    title: "Monthly fees, with no appointments promised",
     description:
-      "Traditional agencies charge a monthly retainer and stop there. You carry the full spend with no booked estimates guaranteed in return.",
+      "Traditional agencies charge a monthly fee and stop there. You carry the full spend with no booked estimates guaranteed in return.",
   },
   {
     icon: RefreshCw,
@@ -35,7 +35,7 @@ const agencyProblems = [
     icon: ShieldCheck,
     title: "A more accountable alternative",
     description:
-      "Appointly Solutions adds a per-appointment fee on top of the retainer, so spend is tied to booked estimates, instant speed to lead, and Meta ad delivery.",
+      "Appointly Solutions charges per booked appointment and nothing else, so every dollar is tied to an estimate on your calendar, backed by instant speed to lead and Meta ad delivery.",
   },
 ];
 
@@ -51,7 +51,7 @@ const faqItems = [
       "Most clients do not. Appointly covers the channel that produces the fastest booked estimates for coating contractors, which is Meta ads plus instant follow-up. Reviews, your Google profile, and referrals are things you can keep running yourself.",
   },
   {
-    question: "What should I ask an agency before signing a retainer?",
+    question: "What should I ask an agency before signing a monthly contract?",
     answer:
       "Ask what they are accountable for. If the answer is impressions, clicks, or leads rather than booked estimates, you carry all the risk. Ask who calls the leads and how fast. Ask for the contract length and what happens if nothing books.",
   },
@@ -65,7 +65,7 @@ const faqItems = [
 export const metadata: Metadata = {
   title: "Floor Coating Marketing Agency Alternative | Appointly",
   description:
-    "Compare retainer-only marketing agencies with the Appointly Model, where a per-appointment fee ties your spend to booked floor coating estimates.",
+    "Compare monthly-fee marketing agencies with the Appointly Model, where you pay per booked floor coating estimate and nothing for activity.",
   keywords: [
     "floor coating marketing agency alternative",
     "the appointly model",
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Floor Coating Marketing Agency Alternative | Appointly",
     description:
-      "See why coating contractors prefer booked appointments with a per-appointment fee over a retainer-only marketing agency.",
+      "See why coating contractors prefer paying per booked appointment over a monthly-fee marketing agency.",
     url: "https://getappointly.co/floor-coating-marketing-agency-alternative",
     siteName: "Appointly Solutions",
     type: "website",
@@ -109,9 +109,9 @@ export default function InsulationMarketingAgencyPage() {
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
                 If you are searching for a floor coating marketing agency, you may really
-                be searching for a better business model. The Appointly Model pairs a
-                retainer that covers our labor with a per-appointment fee, so the focus
-                stays on booked estimates landing on your calendar.
+                be searching for a better business model. The Appointly Model charges
+                one flat fee per booked appointment, so the focus stays on booked
+                estimates landing on your calendar.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
@@ -139,7 +139,7 @@ export default function InsulationMarketingAgencyPage() {
                 Why Contractors Look For Alternatives
               </p>
               <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">
-                The retainer-only agency model can feel misaligned.
+                The monthly-fee agency model can feel misaligned.
               </h2>
             </div>
 

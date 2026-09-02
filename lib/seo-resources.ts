@@ -51,7 +51,7 @@ export const commercialResources: Record<string, Resource[]> = {
       href: servicePages.pricing,
       title: "Pricing",
       description:
-        "See how the retainer plus per-appointment fee works compared to retainer-only agencies.",
+        "See how paying per booked appointment compares to monthly-fee agencies.",
     },
     {
       href: blog("what-is-a-booked-floor-coating-estimate-worth"),
@@ -109,7 +109,7 @@ export const commercialResources: Record<string, Resource[]> = {
       href: servicePages.agencyAlternative,
       title: "Agency Alternative",
       description:
-        "Compare the Appointly Model against the traditional monthly retainer-only agency.",
+        "Compare the Appointly Model against the traditional monthly-fee agency.",
     },
     {
       href: blog("what-is-a-booked-floor-coating-estimate-worth"),
@@ -248,7 +248,7 @@ const clusterResources: Record<string, Resource[]> = {
       href: servicePages.pricing,
       title: "Pricing",
       description:
-        "See how the retainer plus per-appointment fee works and what a booked estimate costs.",
+        "See how pay-per-appointment pricing works and what a booked estimate costs.",
     },
     {
       href: servicePages.floorCoatingLeads,
@@ -268,7 +268,7 @@ const clusterResources: Record<string, Resource[]> = {
       href: servicePages.agencyAlternative,
       title: "Agency Alternative",
       description:
-        "Compare retainer-only agencies with a model where spend is tied to booked estimates.",
+        "Compare monthly-fee agencies with a model where spend is tied to booked estimates.",
     },
     {
       href: servicePages.floorCoatingLeads,
@@ -280,7 +280,7 @@ const clusterResources: Record<string, Resource[]> = {
       href: servicePages.pricing,
       title: "Pricing",
       description:
-        "What the retainer covers and what you pay per booked appointment.",
+        "What the per-appointment fee covers and what you pay per booked estimate.",
     },
   ],
   sales: [

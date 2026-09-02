@@ -102,7 +102,7 @@ Here's the part that makes or breaks spring: an ad that generates a lead is wort
 
 Get your booked-estimate engine ready before peak, not during it. The goal is to have appointments landing on your calendar by late February or early March, right as demand starts climbing.
 
-This is where the Appointly Model fits. Instead of buying raw leads and scrambling to chase them yourself in the busiest weeks of the year, you have a system that generates the lead through Meta ads, contacts the homeowner immediately with speed to lead, and books the estimate into a time that works for your crew. You pay a retainer that covers our labor running the whole system, plus a per-appointment fee for each booked estimate that lands on your calendar.
+This is where the Appointly Model fits. Instead of buying raw leads and scrambling to chase them yourself in the busiest weeks of the year, you have a system that generates the lead through Meta ads, contacts the homeowner immediately with speed to lead, and books the estimate into a time that works for your crew. you pay one flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book.
 
 Set your peak-season targets now. March and April are your big months. Decide how many booked estimates per week your crew can handle and set the volume to match. And remember exclusivity matters: one contractor per market means you're the only shop walking into those garages, which is exactly what you want when competition is at its highest.
 
@@ -153,7 +153,7 @@ If you're aiming to fill your calendar with floor coating jobs through spring, t
 
 Meta ads and creative you run for awareness and demand: a steady monthly spend through March, April, and May, with your strongest before-and-after content.
 
-Appointment generation on the Appointly Model: a retainer that covers the labor of running the whole system, plus a per-appointment fee for each booked estimate that lands on your calendar. You scale the number of booked estimates to your crew's capacity.
+Appointment generation on the Appointly Model: one flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book. You scale the number of booked estimates to your crew's capacity.
 
 Google profile maintenance and content, plus a buffer for testing new offers, round it out.
 
@@ -203,4 +203,4 @@ Spring is the most important selling season for floor coating contractors. The o
 
 Your prep work starts today: a complete Google Business Profile, Meta ad creative, and a locked-in system for booking estimates. By the time March arrives, your engine should be running. By April, your calendar should be full of homeowners scheduled and waiting for you to quote their garage, basement, or showroom floor.
 
-Appointly is built for floor coating contractors who want a booked spring calendar without becoming a marketing department. Here's how it works: you pay a retainer that covers our labor running the entire system, plus a per-appointment fee for each booked estimate that lands on your calendar. We generate the lead through Meta ads, we contact the homeowner immediately with speed to lead before they shop another contractor, and we book them into a time that works for your crew. We work with one contractor per market, so you're never racing the competition for the same garage. You just show up, run the estimate, coat the floor, and collect. If you want to be one of the contractors with a packed spring calendar, head to [getappointly.co](https://getappointly.co) and let's build your season.
+Appointly is built for floor coating contractors who want a booked spring calendar without becoming a marketing department. Here's how it works: you pay one flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book. We generate the lead through Meta ads, we contact the homeowner immediately with speed to lead before they shop another contractor, and we book them into a time that works for your crew. We work with one contractor per market, so you're never racing the competition for the same garage. You just show up, run the estimate, coat the floor, and collect. If you want to be one of the contractors with a packed spring calendar, head to [getappointly.co](https://getappointly.co) and let's build your season.

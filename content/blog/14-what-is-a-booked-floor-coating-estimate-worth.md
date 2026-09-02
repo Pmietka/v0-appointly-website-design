@@ -12,7 +12,7 @@ cluster: economics
 
 ---
 
-You're looking at ways to fill your calendar. One option quotes you a number for "leads." Another wants a fat monthly retainer for "exposure." A third promises the moon and delivers a spreadsheet of phone numbers nobody answers.
+You're looking at ways to fill your calendar. One option quotes you a number for "leads." Another wants a fat monthly fee for "exposure." A third promises the moon and delivers a spreadsheet of phone numbers nobody answers.
 
 Which one actually puts coated floors on your calendar?
 
@@ -138,7 +138,7 @@ Exclusivity. One contractor per market. You're not racing four other shops for t
 
 A partner whose incentives line up with yours, who makes money when appointments actually get booked, not when a meaningless "exposure" report gets emailed.
 
-That's the Appointly Model: a retainer that covers our labor running the whole system, plus a per-appointment fee for each booked estimate that lands on your calendar. You're not buying raw leads. You're buying floors on the calendar.
+That's the Appointly Model: one flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book. You're not buying raw leads. You're buying floors on the calendar.
 
 ## The Hidden Costs of Chasing Raw Leads
 
@@ -188,4 +188,4 @@ The right way to budget for filling your calendar isn't "how cheap can I get a l
 
 Don't chase cheap leads. Invest in booked estimates that turn into coated floors. There's a huge difference.
 
-At Appointly, we don't sell raw leads. We fill your calendar with booked estimates. Here's the model: you pay a retainer that covers our labor running the entire system, plus a per-appointment fee for each booked estimate that lands on your calendar. We generate the lead through Meta ads, we contact the homeowner immediately with speed to lead before they can shop another contractor, and we book them into a time that works for you. One contractor per market, so you're never competing for the same garage. You just show up, run the estimate, coat the floor, and collect. Want to see what a calendar full of booked estimates does for your business? Head to [getappointly.co](https://getappointly.co) and let's talk numbers.
+At Appointly, we don't sell raw leads. We fill your calendar with booked estimates. Here's the model: you pay one flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book. We generate the lead through Meta ads, we contact the homeowner immediately with speed to lead before they can shop another contractor, and we book them into a time that works for you. One contractor per market, so you're never competing for the same garage. You just show up, run the estimate, coat the floor, and collect. Want to see what a calendar full of booked estimates does for your business? Head to [getappointly.co](https://getappointly.co) and let's talk numbers.

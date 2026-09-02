@@ -37,7 +37,7 @@ const differentiators = [
     icon: Zap,
     title: "Spend tied to booked estimates",
     description:
-      "A retainer covers our labor; a per-appointment fee covers each booked estimate. Most of your spend stays tied to real opportunities.",
+      "You pay one flat fee per booked estimate. Every dollar you spend is tied to a real appointment on your calendar.",
   },
 ];
 
@@ -96,10 +96,9 @@ export default function AboutPage() {
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
                 Founded by brothers Patrick and Jacob Mietka in Chicago, IL, Appointly
                 Solutions was built out of frustration with agencies that charge big
-                retainers without delivering results. We created the Appointly Model so
-                contractors get accountability - a retainer that covers our labor, plus a
-                per-appointment fee tied to the booked estimates we actually put on your
-                calendar.
+                monthly fees without delivering results. We created the Appointly Model so
+                contractors get accountability: one flat fee per booked estimate we
+                actually put on your calendar, and nothing for activity.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
@@ -130,7 +129,7 @@ export default function AboutPage() {
                 Contractors deserve a model that rewards results.
               </h2>
               <p className="mt-5 text-sm leading-7 text-muted-foreground md:text-base">
-                Traditional agencies charge large monthly retainers before any result
+                Traditional agencies charge large monthly fees before any result
                 shows up. That leaves contractors carrying all the risk while the
                 agency collects regardless. Appointly Solutions was built specifically
                 for owner-operators who are done paying for promises. The Appointly Model
@@ -156,8 +155,8 @@ export default function AboutPage() {
               <p className="mt-5 text-sm leading-7 text-muted-foreground md:text-base">
                 Appointly Solutions runs your Meta ads, contacts every homeowner the
                 second they raise their hand, and books the estimate straight onto your
-                calendar. You pay a retainer that covers our labor, plus a per-appointment
-                fee for each booked estimate - not for hours, reports, or guesswork.
+                calendar. You pay a flat fee for each booked estimate, not for hours,
+                reports, or guesswork.
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
                 Our{" "}

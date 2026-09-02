@@ -220,7 +220,7 @@ Yes. Floor coating isn't as seasonal as people think. Polyaspartic coatings cure
 
 Meta ads work, but the lead is only worth something if it gets called within minutes and booked onto your calendar. That's the hard part, and it's why most floor coating contractors hand it off.
 
-At Appointly, we run the whole thing. The model is simple: you pay a retainer that covers our labor running the system, plus a [per-appointment fee](/pricing) for each booked estimate that lands on your calendar. We build and run the Meta ads, we hit every lead with speed to lead before they can shop other coaters, and we book the estimate into a time that works for you. [One contractor per market](/exclusive-floor-coating-leads), exclusive. You just show up, quote the floor, and collect.
+At Appointly, we run the whole thing. The model is simple: you pay one flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book. We build and run the Meta ads, we hit every lead with speed to lead before they can shop other coaters, and we book the estimate into a time that works for you. [One contractor per market](/exclusive-floor-coating-leads), exclusive. You just show up, quote the floor, and collect.
 
 Run your own ads if you want to learn the game. When you're ready to stop chasing leads and just close booked estimates, hand it to us.
 

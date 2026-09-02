@@ -200,8 +200,8 @@ export default function SprayFoamContractorLeadsPage() {
               <p className="mt-4 text-sm leading-7 text-slate-700 md:text-base">
                 A strategy call with Appointly Solutions can help you compare your
                 average coating job value, service area, and demand timing against the
-                Appointly Model - a retainer plus a per-appointment fee for each booked
-                estimate we put on your calendar.
+                Appointly Model: one flat fee for each booked estimate we put on your
+                calendar.
               </p>
               <a
                 href={bookingUrl}

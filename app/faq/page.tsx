@@ -18,7 +18,7 @@ const faqItems = [
   {
     question: "How does the pricing work?",
     answer:
-      "Two parts. A retainer covers our labor and effort running the system. On top of that, you pay a per-appointment fee for each booked estimate that lands on your calendar.",
+      "One part. You pay a flat fee for each booked estimate that lands on your calendar. No monthly fee, and nothing for leads that never book.",
   },
   {
     question: "What counts as a booked appointment?",
@@ -26,7 +26,7 @@ const faqItems = [
       "A verified homeowner in your service area who wants floor coating work and has agreed to an estimate time that fits your calendar. Not a raw lead or a form fill - an actual booked estimate.",
   },
   {
-    question: "What does the retainer cover?",
+    question: "What does the per-appointment fee cover?",
     answer:
       "Everything we do to fill your calendar: building and running your Meta ads, contacting every lead instantly with speed-to-lead outreach, and booking the estimates onto your calendar.",
   },

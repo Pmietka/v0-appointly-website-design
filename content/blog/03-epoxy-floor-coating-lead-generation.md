@@ -152,7 +152,7 @@ Here's the real financial picture, framed around what matters — booked estimat
 - You're the bottleneck, so the calendar is only as full as your free time
 
 **The Appointly Model: Booked Estimates, Done For You**
-- A retainer covers our labor running the whole machine
+- One flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book
 - Meta ads generate demand in your market, exclusively
 - Speed to lead catches every homeowner fast
 - Each booked estimate that lands on your calendar carries a per-appointment fee
@@ -182,4 +182,4 @@ A: Ask the provider directly how many booked estimates they expect to deliver in
 
 ## Get Booked Floor Coating Estimates, Not Raw Leads
 
-Stop dialing cold leads and start running estimates. Get booked epoxy and floor coating appointments on your calendar at [getappointly.co](https://getappointly.co). With the Appointly Model, a retainer covers our labor — we build and run the Meta ads, hit every lead with speed to lead, and book the estimate into a time that works for you. You just show up, quote the floor, and collect the cash. One contractor per market.
+Stop dialing cold leads and start running estimates. Get booked epoxy and floor coating appointments on your calendar at [getappointly.co](https://getappointly.co). With the Appointly Model, we build and run the Meta ads, hit every lead with speed to lead, and book the estimate into a time that works for you. You pay one flat fee per booked estimate and nothing for leads that never book. You just show up, quote the floor, and collect the cash. One contractor per market.

@@ -98,23 +98,23 @@ Ask how fast a new lead gets contacted. If the answer is "we deliver it to you w
 
 **Red Flag 6: Hidden Fees**
 
-Get the structure in writing. A retainer that covers their labor, plus a per-appointment fee for each booked estimate — that should be clear and simple. If "platform fees," "verification fees," and surprise add-ons start creeping in, walk.
+Get the structure in writing. One fee per booked estimate, and nothing for leads that never book. That should be clear and simple. If "platform fees," "verification fees," and surprise add-ons start creeping in, walk.
 
 ## How the Pricing Actually Works
 
 This one gets misunderstood, so let's be plain about it.
 
-The Appointly Model has two parts, and both are honest about what you're paying for.
+The Appointly Model has one part, and it is honest about what you are paying for.
 
-**The Retainer Covers the Labor**
+**What the Fee Covers**
 
-Running the whole machine is real work — building and managing the Meta (Facebook and Instagram) ad campaigns, writing creative, manning the phones to hit every lead instantly, and handling the back-and-forth to book each estimate into a slot that fits your route. The retainer covers that labor and effort. It's not a seat fee for nothing; it's what keeps the system running so estimates keep landing on your calendar.
+Running the whole machine is real work — building and managing the Meta (Facebook and Instagram) ad campaigns, writing creative, manning the phones to hit every lead instantly, and handling the back-and-forth to book each estimate into a slot that fits your route. All of that is included in the per-appointment fee. You are not paying a seat fee for nothing; you are paying for estimates that land on your calendar.
 
 **The Per-Appointment Fee Covers Each Booked Estimate**
 
-On top of the retainer, you pay a per-appointment fee for each booked estimate that hits your calendar. A confirmed time, with a homeowner who's expecting you to walk their garage or basement and quote the job. You're paying for the appointment, not a name on a list.
+You pay a per-appointment fee for each booked estimate that hits your calendar. A confirmed time, with a homeowner who's expecting you to walk their garage or basement and quote the job. You're paying for the appointment, not a name on a list.
 
-Make sure any provider you talk to can explain their structure that cleanly. A retainer for the work of running the system, a fee per booked estimate. No mystery, no shell games.
+Make sure any provider you talk to can explain their structure that cleanly. One fee per booked estimate, with the work of running the system included. No mystery, no shell games.
 
 ## How to Spot a Real Exclusive-Appointment Provider
 
@@ -142,7 +142,7 @@ Ask for references from contractors doing work like yours. Call them. Ask how ma
 
 **The Agreement Is Simple**
 
-A real agreement is short and clear. A retainer for the labor, a per-appointment fee for each booked estimate, exclusivity in your market. No fine-print traps, no surprise charges, no early termination penalties. You should understand exactly what you're paying for in ten minutes.
+A real agreement is short and clear. One flat fee per booked estimate, exclusivity in your market. No fine-print traps, no surprise charges, no early termination penalties. You should understand exactly what you're paying for in ten minutes.
 
 ## The Calculation That Actually Matters
 
@@ -172,10 +172,10 @@ A: No. That's the whole point of the model. We generate the lead through Meta ad
 
 **Q: How is this priced?**
 
-A: A retainer covers our labor for running the entire system, and you pay a per-appointment fee for each booked estimate that lands on your calendar. You're paying for confirmed estimates, not a list of names.
+A: You pay one flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book. You're paying for confirmed estimates, not a list of names.
 
 ---
 
 ## Get Exclusive, Booked Floor Coating Estimates
 
-Stop splitting demand with the crew across town. Get exclusive, booked epoxy and floor coating estimates on your calendar — one contractor per market. Start at [getappointly.co](https://getappointly.co). With the Appointly Model, a retainer covers our labor — we run the Meta ads, hit every lead with speed to lead, and book the estimate into a time that works for you. You show up, quote the floor, and collect the cash.
+Stop splitting demand with the crew across town. Get exclusive, booked epoxy and floor coating estimates on your calendar — one contractor per market. Start at [getappointly.co](https://getappointly.co). With the Appointly Model, we run the Meta ads, hit every lead with speed to lead, and book the estimate into a time that works for you. You pay one flat fee per booked estimate and nothing for leads that never book. You show up, quote the floor, and collect the cash.

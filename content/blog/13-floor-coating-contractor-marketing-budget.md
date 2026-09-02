@@ -25,7 +25,7 @@ The average floor coating contractor spends between 2 and 5 percent of revenue o
 Yet contractors try. They'll spend money on:
 
 - A website redesign ($3,000 to $8,000)
-- A generalist agency retainer that bills for activity ($500 to $3,000 per month)
+- A generalist agency monthly fee that bills for activity ($500 to $3,000 per month)
 - Google Ads that they don't know how to manage ($1,000 to $2,000 per month)
 - Yellow Pages or contractor directory listings ($500 to $1,000 per month)
 - Sponsorships of local sports teams ($500 to $2,000 per month)
@@ -74,9 +74,9 @@ The catch with running this yourself: a lead that just clicks an ad isn't worth 
 
 ### 3. A Done-For-You Appointment Generation System
 
-Don't hire an expensive agency on retainer that bills you for activity you can't measure. Instead, consider a partner who delivers booked estimates, not vague "exposure."
+Don't hire an expensive agency on monthly fee that bills you for activity you can't measure. Instead, consider a partner who delivers booked estimates, not vague "exposure."
 
-This is the Appointly Model. Instead of paying for raw leads and hoping you can chase them down, you pay a retainer that covers our labor running the whole system, plus a per-appointment fee for each booked estimate that lands on your calendar. We run the Meta ads, we hit the lead the second it comes in ([speed to lead](/blog/speed-to-lead-wins-floor-coating-jobs), before they shop three other contractors), and we book them into a time slot that works for you.
+This is the Appointly Model. Instead of paying for raw leads and hoping you can chase them down, you pay one flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book. We run the Meta ads, we hit the lead the second it comes in ([speed to lead](/blog/speed-to-lead-wins-floor-coating-jobs), before they shop three other contractors), and we book them into a time slot that works for you.
 
 That structure matters because the bottleneck for most floor coating contractors isn't getting clicks. It's the time between a homeowner raising their hand and someone actually getting them on the calendar. A lead that sits for two hours is usually gone. A lead that gets a call back in two minutes is yours.
 
@@ -98,7 +98,7 @@ Here's how to think about spending it:
 
 - Google Business Profile build-out and maintenance: $500 one-time, then $0 (you do it)
 - Meta ads you run yourself for top-of-funnel awareness and reviews: $500 to $1,000/month
-- A done-for-you appointment generation partner on the Appointly Model: retainer that covers the labor plus a per-appointment fee for each booked estimate
+- A done-for-you appointment generation partner on the Appointly Model: one flat fee per booked estimate
 - Buffer for testing new creative and offers: $300 to $500/month
 
 The exact numbers flex based on how many jobs you can handle. If you can install five garage floors a week, you want the calendar packed and you scale appointment generation up. If you're a one-crew shop, you keep the booked-estimate flow steady so you're not buried.
@@ -111,7 +111,7 @@ The biggest mistake is underfunding the channels that book jobs and overfunding 
 
 Most contractors will shy away from paid ads because they're worried about "running ads wrong" or they got bad results once and gave up. But the failure usually wasn't the ad. It was the follow-up. They generated a lead, took four hours to call it, and the homeowner had already booked someone else. That's not evidence that Meta doesn't work. That's evidence that speed to lead was missing.
 
-They'll also overfund things like website redesigns or generalist agency retainers because those feel "legitimate." But a $5,000 website redesign that books zero estimates is worse than money spent on a system that actually fills your calendar.
+They'll also overfund things like website redesigns or generalist agency monthly fees because those feel "legitimate." But a $5,000 website redesign that books zero estimates is worse than money spent on a system that actually fills your calendar.
 
 The other mistake is spreading the budget too thin. If you have $3,000/month, putting $500 on five different channels means each channel is underfunded. You don't get results from any of them. Better to concentrate on getting booked estimates on the calendar, prove the ROI, and then expand.
 
@@ -119,7 +119,7 @@ The other mistake is spreading the budget too thin. If you have $3,000/month, pu
 
 Let me save you some cash. Don't spend money on these as a small floor coating contractor:
 
-Generalist agencies on retainer that can't tie a single dollar to a booked job. You already know this doesn't work for you.
+Generalist agencies on monthly fee that can't tie a single dollar to a booked job. You already know this doesn't work for you.
 
 Google Ads without proper setup. If you don't know what you're doing, Google Ads will bleed money. Either hire someone who does or start with Meta where the learning curve is lower and the visuals do the selling.
 
@@ -159,7 +159,7 @@ A: Give it a real window and enough booked estimates to judge it. One week and o
 
 **Q: Is it better to hire a big marketing agency or a specialist partner?**
 
-A: For your budget and business model, a specialist who is on the hook for booked estimates beats a big agency that bills a fat retainer for activity. With the Appointly Model, the retainer covers the labor of running the system and you pay a per-appointment fee for each booked estimate. That keeps everyone focused on the only thing that matters: floors on the calendar.
+A: For your budget and business model, a specialist who is on the hook for booked estimates beats a big agency that bills a fat monthly fee for activity. With the Appointly Model, you pay one flat fee for each booked estimate and nothing for activity. That keeps everyone focused on the only thing that matters: floors on the calendar.
 
 **Q: What if I already have a marketing budget and it's not working?**
 
@@ -169,4 +169,4 @@ A: Audit where the money is going. Can you tie any of it to a booked estimate th
 
 Your marketing budget is a business investment, not an expense. Spend it like a floor coating contractor, not like a Fortune 500 company. Focus on what books estimates, measure your ROI per coated floor, and double down on what works.
 
-Appointly is built for floor coating and epoxy contractors who want a full calendar without becoming a marketing department. Here's how it works: you pay a retainer that covers our labor running the entire system, plus a per-appointment fee for each booked estimate that lands on your calendar. We generate the lead through Meta ads, we contact that homeowner immediately with speed to lead before they can shop another contractor, and we book them into a time that works for you. We work with one contractor per market, so you're not competing with the shop down the road. You just show up, run the estimate, coat the floor, and collect the check. If you're tired of wasting money on marketing that doesn't deliver, head to [getappointly.co](https://getappointly.co) and let's fill your calendar.
+Appointly is built for floor coating and epoxy contractors who want a full calendar without becoming a marketing department. Here's how it works: you pay one flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book. We generate the lead through Meta ads, we contact that homeowner immediately with speed to lead before they can shop another contractor, and we book them into a time that works for you. We work with one contractor per market, so you're not competing with the shop down the road. You just show up, run the estimate, coat the floor, and collect the check. If you're tired of wasting money on marketing that doesn't deliver, head to [getappointly.co](https://getappointly.co) and let's fill your calendar.

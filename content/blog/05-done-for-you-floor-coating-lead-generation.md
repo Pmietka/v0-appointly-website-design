@@ -1,14 +1,14 @@
 ---
 seo_title: "Done-For-You Floor Coating Lead Generation"
-meta_description: "How floor coating contractors get booked estimates without managing ads. Compare retainer-only agencies to a done-for-you model that fills your calendar."
+meta_description: "How floor coating contractors get booked estimates without managing ads. Compare monthly-fee agencies to a done-for-you model that fills your calendar."
 date: 2025-12-16
 updated: 2026-09-02
 author: patrick
 cluster: marketing-channels
 ---
-# Floor Coating Lead Generation Done For You: Pay a Retainer Plus Per Booked Estimate
+# Floor Coating Lead Generation Done For You: Pay a monthly fee Plus Per Booked Estimate
 
-**Meta Description:** How floor coating contractors get booked estimates without managing ads. Compare retainer-only agencies to a done-for-you model that fills your calendar.
+**Meta Description:** How floor coating contractors get booked estimates without managing ads. Compare monthly-fee agencies to a done-for-you model that fills your calendar.
 
 ---
 
@@ -16,25 +16,24 @@ cluster: marketing-channels
 
 Your business is built on results. You quote a garage floor, you coat it, you get paid. Simple.
 
-Yet when you hire a typical [marketing agency](/floor-coating-marketing-agency-alternative), they flip that model on its head. You pay a fat retainer first, and what you get back is a pile of raw "leads" you have to chase yourself.
+Yet when you hire a typical [marketing agency](/floor-coating-marketing-agency-alternative), they flip that model on its head. You pay a fat monthly fee first, and what you get back is a pile of raw "leads" you have to chase yourself.
 
-Most agencies operate on a retainer alone. They charge a flat monthly fee whether they hand you 2 names or 20 names. Whether those names ever pick up the phone or not. Whether you ever stand in a single garage with a quote in hand. The money leaves your account every month like clockwork, and the work of turning a name into a [booked estimate](/floor-coating-leads) falls entirely on you.
+Most agencies operate on a monthly fee alone. They charge a flat monthly fee whether they hand you 2 names or 20 names. Whether those names ever pick up the phone or not. Whether you ever stand in a single garage with a quote in hand. The money leaves your account every month like clockwork, and the work of turning a name into a [booked estimate](/floor-coating-leads) falls entirely on you.
 
 This mismatch is why so many floor coating contractors hate working with agencies.
 
-**The Retainer-Only Agency Model:**
-- You pay a flat monthly retainer upfront
+**The monthly-fee agency Model:**
+- You pay a flat monthly fee upfront
 - Agency does vague "marketing work" (often unclear what)
 - You get raw leads, not booked appointments
 - You have to call, chase, and qualify them yourself
 - Most never answer because they already called three other coaters
 - You pay the same whether your calendar fills or stays empty
 
-The agency's incentive is to keep collecting the retainer, not to put an estimate on your calendar. They make money whether you succeed or fail, and they never touch the phone.
+The agency's incentive is to keep collecting the monthly fee, not to put an estimate on your calendar. They make money whether you succeed or fail, and they never touch the phone.
 
 **The Done-For-You Booked Estimate Model (the Appointly Model):**
-- You pay a retainer that covers our labor running the whole system
-- On top of that, you pay a per-appointment fee for each booked estimate that lands on your calendar
+- One flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book
 - We generate the lead through Meta ads, contact it instantly, and book it into a time that works for you
 - You don't buy raw leads. You get booked estimates on your calendar
 - You just show up, quote the epoxy job, and collect the cash
@@ -45,7 +44,7 @@ One model dumps work on you and bills you regardless. One model does the entire 
 
 Every contractor has a story.
 
-"We hired an agency and paid them a hefty monthly retainer for 6 months. In month 7, they said we were 'building momentum' and needed to stay committed. In month 12, we finally got some names, but they were tire-kickers who never showed. We burned a year learning that this wasn't the right fit."
+"We hired an agency and paid them a hefty monthly fee for 6 months. In month 7, they said we were 'building momentum' and needed to stay committed. In month 12, we finally got some names, but they were tire-kickers who never showed. We burned a year learning that this wasn't the right fit."
 
 Or this one:
 
@@ -53,13 +52,13 @@ Or this one:
 
 Or:
 
-"We got a list of 30 'leads' one month. We called all of them. Half had wrong numbers. The other half barely remembered filling out a form. Not one turned into a booked estimate without us doing all the chasing. We were paying a retainer to do our own follow-up."
+"We got a list of 30 'leads' one month. We called all of them. Half had wrong numbers. The other half barely remembered filling out a form. Not one turned into a booked estimate without us doing all the chasing. We were paying a monthly fee to do our own follow-up."
 
 The frustration comes from several things.
 
 **Misaligned Incentives**
 
-The agency gets paid the same whether your calendar has 1 estimate or 10. They have no reason to obsess over whether anyone actually books. They just need to keep you on the retainer.
+The agency gets paid the same whether your calendar has 1 estimate or 10. They have no reason to obsess over whether anyone actually books. They just need to keep you on the monthly fee.
 
 **Raw Leads Instead of Booked Appointments**
 
@@ -71,7 +70,7 @@ A floor coating lead goes cold in minutes. Homeowners shopping a garage floor fi
 
 **Unclear ROI**
 
-You never know if you're getting your money's worth. The agency claims "brand building" or "pipeline development" when your calendar is empty. Measuring ROI on a retainer alone is nearly impossible because you're paying for activity, not booked estimates.
+You never know if you're getting your money's worth. The agency claims "brand building" or "pipeline development" when your calendar is empty. Measuring ROI on a monthly fee alone is nearly impossible because you're paying for activity, not booked estimates.
 
 **"Strategy" That Never Materializes**
 
@@ -81,31 +80,30 @@ The result: contractors feel like they're being sold, not served.
 
 ## What Done-For-You Booking Actually Looks Like in Practice
 
-Here's a real comparison between a retainer-only agency setup and the Appointly Model, where we run everything and book the estimate for you.
+Here's a real comparison between a monthly-fee agency setup and the Appointly Model, where we run everything and book the estimate for you.
 
 **Scenario: A Garage Floor Coating Contractor in a Mid-Market City**
 
 They need their calendar full of estimates. They're comparing two options.
 
-**Option A: Retainer-Only Agency**
-- Flat monthly retainer, billed no matter what
+**Option A: monthly-fee agency**
+- Flat monthly fee, billed no matter what
 - They hand you raw leads, you do all the calling
 - "Booked appointments? That's on you. We just generate the leads."
 - Average no-show and no-answer rate: high, because nobody calls leads fast
 - Your calendar: unpredictable, mostly empty
 
-Month after month, you pay the retainer, get a list of names, chase them yourself, and stand in maybe a handful of garages. The retainer never changes. Whether you booked 2 estimates or 8, the bill is identical, and you did all the phone work.
+Month after month, you pay the monthly fee, get a list of names, chase them yourself, and stand in maybe a handful of garages. The monthly fee never changes. Whether you booked 2 estimates or 8, the bill is identical, and you did all the phone work.
 
 **Option B: The Appointly Model (Done-For-You Booked Estimates)**
-- A retainer that covers our labor running the entire system
-- A per-appointment fee for each booked estimate that actually lands on your calendar
+- One flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book
 - We run the Meta ads, we hit speed to lead, we book the time slot
 - Exclusive: one floor coating contractor per market, so you're never competing with our other clients
 - Your calendar: filled with scheduled estimates you just show up to
 
-Here you're not paying for activity and hoping. You're paying a retainer for us to run the machine, plus a fee tied to each estimate we actually put on your calendar. You spend your time quoting epoxy and polyaspartic jobs, not dialing dead numbers.
+Here you're not paying for activity and hoping. You're paying one fee per estimate we actually put on your calendar. You spend your time quoting epoxy and polyaspartic jobs, not dialing dead numbers.
 
-Run the math with example floor coating job values. Say a typical epoxy garage floor is worth $4,000. If we book you a handful of estimates a week and you close even a fraction of them, the [per-appointment fee](/pricing) and retainer are a rounding error against the jobs you land. That's the point: your cost is tied to booked estimates and the labor to produce them, not a flat retainer that bills the same whether you work or not.
+Run the math with example floor coating job values. Say a typical epoxy garage floor is worth $4,000. If we book you a handful of estimates a week and you close even a fraction of them, the [per-appointment fee](/pricing) is a rounding error against the jobs you land. That's the point: your cost is tied to booked estimates, not a flat monthly fee that bills the same whether you work or not.
 
 This is why floor coating contractors are switching.
 
@@ -145,7 +143,7 @@ A legitimate provider can explain it plainly: targeted Meta ads to homeowners in
 
 **Red Flag 6: They Bill You Even When the Calendar Is Empty**
 
-A flat retainer with nothing tied to actual booked estimates means they get paid whether you ever stand in a garage or not. The Appointly Model is different: the retainer covers our labor running the system, and the per-appointment fee is tied directly to estimates that actually land on your calendar.
+A flat monthly fee with nothing tied to actual booked estimates means they get paid whether you ever stand in a garage or not. The Appointly Model is different: the only fee is the per-appointment fee, tied directly to estimates that actually land on your calendar.
 
 ## What Done-For-You Looks Like When Done Right
 
@@ -153,7 +151,7 @@ Here are the characteristics of a legitimate done-for-you booked appointment ser
 
 **Clear, Honest Structure**
 
-The pricing is explained plainly: a retainer that covers our labor running the whole system, plus a per-appointment fee for each booked estimate. No mystery, no hidden games.
+The pricing is explained plainly: one flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book. No mystery, no hidden games.
 
 **Meta Ads Run For You**
 
@@ -198,8 +196,8 @@ Before you commit any money, get answers to these questions.
 
 **About Pricing Structure**
 
-- How does your pricing work? (Should be: a retainer that covers your labor, plus a per-appointment fee for each booked estimate.)
-- What exactly does the retainer cover?
+- How does your pricing work? (Should be: one flat fee per booked estimate, nothing for activity.)
+- What exactly does the monthly fee cover?
 - Is the per-appointment fee tied to estimates that actually land on my calendar?
 
 **About Flexibility and Tracking**
@@ -211,7 +209,7 @@ Before you commit any money, get answers to these questions.
 **Get It All In Writing**
 
 Before you hand over money, get a written agreement that spells out:
-- The retainer and what it covers
+- The monthly fee and what it covers
 - The per-appointment fee and what counts as a booked estimate
 - Speed-to-lead and booking process
 - Exclusivity terms
@@ -223,7 +221,7 @@ If they won't put it in writing, don't work with them.
 
 **Q: If I go done-for-you, won't I lose the marketing strategy an agency provides?**
 
-A: Probably, and it might not matter. Most retainer agencies' "strategy" is generic. If you're getting booked estimates on your calendar, that IS your lead generation strategy. You can handle branding and website details separately or not at all. Booked appointments beat strategy talks every time.
+A: Probably, and it might not matter. Most monthly fee agencies' "strategy" is generic. If you're getting booked estimates on your calendar, that IS your lead generation strategy. You can handle branding and website details separately or not at all. Booked appointments beat strategy talks every time.
 
 **Q: Can I do both? Use an agency for some leads and a done-for-you service for booked estimates?**
 
@@ -245,4 +243,4 @@ A: Start with one, especially since the best ones are exclusive to your market a
 
 ## Stop Buying Activity. Start Getting Booked Estimates.
 
-With the Appointly Model, you pay a retainer that covers our labor running the whole system, plus a per-appointment fee for each booked estimate that lands on your calendar. We generate the lead through Meta ads, contact it instantly with real speed to lead before they can shop other coaters, and book the estimate into a time that works for you. You just show up, quote the floor, do the job, and collect the cash. One contractor per market, exclusive. Start at [getappointly.co](https://getappointly.co) and see why floor coating contractors are leaving retainer-only agencies behind.
+With the Appointly Model, you pay one flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book. We generate the lead through Meta ads, contact it instantly with real speed to lead before they can shop other coaters, and book the estimate into a time that works for you. You just show up, quote the floor, do the job, and collect the cash. One contractor per market, exclusive. Start at [getappointly.co](https://getappointly.co) and see why floor coating contractors are leaving monthly-fee agencies behind.

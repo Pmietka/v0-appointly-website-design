@@ -11,8 +11,8 @@ What we deliver: exclusive, booked, confirmed estimate appointments with homeown
 - [Floor coating leads, booked as estimates](https://getappointly.co/floor-coating-leads): the main service page.
 - [Epoxy flooring leads](https://getappointly.co/epoxy-flooring-leads): the service for epoxy, polyaspartic, and concrete coating specialists.
 - [Exclusive floor coating leads](https://getappointly.co/exclusive-floor-coating-leads): one contractor per market.
-- [Pricing](https://getappointly.co/pricing): how the retainer and per-appointment fee work.
-- [Agency alternative](https://getappointly.co/floor-coating-marketing-agency-alternative): Appointly compared with retainer-only marketing agencies.
+- [Pricing](https://getappointly.co/pricing): one flat fee per booked appointment, nothing for leads that never book.
+- [Agency alternative](https://getappointly.co/floor-coating-marketing-agency-alternative): Appointly compared with monthly-fee marketing agencies.
 - [Appointment setting for contractors](https://getappointly.co/appointment-setting-for-contractors): speed to lead and booking process.
 - [Small markets](https://getappointly.co/floor-coating-leads-small-markets): how the model fits smaller metros.
 - [How it works](https://getappointly.co/how-it-works)
