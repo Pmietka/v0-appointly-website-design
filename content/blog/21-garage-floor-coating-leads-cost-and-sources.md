@@ -63,7 +63,7 @@ Facebook and Instagram ads work differently. Instead of waiting for someone to s
 
 ## Source 4: Booked-Appointment Services
 
-This is the model Appointly runs. The provider pays for and runs the Meta ads, calls every lead within minutes, qualifies the homeowner, and puts a confirmed estimate on your calendar. You do not receive a lead. You receive an appointment.
+This is the model Appointly runs. The provider builds and manages the Meta ads, calls every lead within minutes, qualifies the homeowner, and puts a confirmed estimate on your calendar. You do not receive a lead. You receive an appointment.
 
 **What it costs:** Per booked appointment, not per lead. Call-center style services in the coating space commonly charge $75 to $150 per booked appointment. Appointly prices per booked estimate on top of a retainer that covers the labor of running the system, and we walk through the exact numbers for your market on a call. See the [pricing page](/pricing) for how the model is structured.
 
