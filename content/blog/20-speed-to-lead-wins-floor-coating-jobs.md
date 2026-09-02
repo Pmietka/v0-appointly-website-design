@@ -1,3 +1,11 @@
+---
+seo_title: "Speed to Lead Wins Floor Coating Jobs"
+meta_description: "Homeowners book whoever calls first. What slow follow-up costs floor coating contractors, and how instant contact wins the jobs you paid to generate."
+date: 2026-03-31
+updated: 2026-09-02
+author: jacob
+cluster: sales
+---
 # Speed to Lead: Why the First Floor Coating Contractor to Call Wins the Job
 
 **Meta Description:** Homeowners book whoever calls back first. Here's what slow follow-up costs floor coating contractors and how instant contact wins the jobs you paid to generate.
@@ -84,4 +92,4 @@ That's not a job you can squeeze in between estimates. It's a separate function 
 
 ## Win the Jobs You're Already Paying to Generate
 
-Speed to lead is exactly what the Appointly Model is built around, so you stop losing jobs while you're on a site. You pay a retainer that covers our labor running the whole system, plus a per-appointment fee for each booked estimate that lands on your calendar. We run the Meta (Facebook and Instagram) ads that generate the homeowner, and the moment that lead comes in, we contact them instantly, before they shop the next three coaters. Then we don't just hand you a name; we book the estimate into a time slot that works for you, on your calendar. You stay heads-down on the floor you're coating today while we lock in the floor you'll coat next week. You just show up, run the estimate, do the job, and collect. See how it works at [getappointly.co](https://getappointly.co) and stop being the second contractor to call.
+Speed to lead is exactly what the Appointly Model is built around, so you stop losing jobs while you're on a site. You pay a retainer that covers our labor running the whole system, plus a [per-appointment fee](/pricing) for each [booked estimate](/floor-coating-leads) that lands on your calendar. We run the [Meta (Facebook and Instagram) ads](/blog/meta-ads-for-floor-coating-contractors) that generate the homeowner, and the moment that lead comes in, we contact them instantly, before they shop the next three coaters. Then we don't just hand you a name; we book the estimate into a time slot that works for you, on your calendar. You stay heads-down on the floor you're coating today while we lock in the floor you'll coat next week. You just show up, run the estimate, do the job, and collect. See how [appointment setting for contractors](/appointment-setting-for-contractors) works and stop being the second contractor to call.

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
+import { Breadcrumbs } from "@/components/breadcrumbs";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import {
@@ -62,9 +63,9 @@ const faqItems = [
 ];
 
 export const metadata: Metadata = {
-  title: "FAQ | The Appointly Model for Booked Estimates",
+  title: "FAQ | Booked Floor Coating Estimates | Appointly",
   description:
-    "Answers to common questions about Appointly Solutions: how the retainer plus per-appointment pricing works, exclusivity, speed to lead, and getting started.",
+    "Answers about how Appointly books floor coating estimates: pricing, what counts as an appointment, exclusivity, speed to lead, and how to get started.",
   keywords: [
     "appointment generation FAQ",
     "booked estimates FAQ",
@@ -74,7 +75,7 @@ export const metadata: Metadata = {
     canonical: "https://getappointly.co/faq",
   },
   openGraph: {
-    title: "FAQ | The Appointly Model for Booked Estimates",
+    title: "FAQ | Booked Floor Coating Estimates | Appointly",
     description:
       "Explore common questions about Appointly Solutions and how we fill your calendar with booked estimates.",
     url: "https://getappointly.co/faq",
@@ -113,6 +114,7 @@ export default function FaqPage() {
           </div>
 
           <div className="mx-auto max-w-6xl px-6">
+            <Breadcrumbs items={[{ name: "FAQ", href: "/faq" }]} className="mb-8" />
             <div className="max-w-3xl">
               <p className="mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
                 Frequently Asked Questions
@@ -170,7 +172,7 @@ export default function FaqPage() {
                   explains why Appointly Solutions is built around the Appointly Model.
                   For the main service page, visit{" "}
                   <Link
-                    href="/insulation-contractor-leads"
+                    href="/floor-coating-leads"
                     className="text-primary transition-colors hover:opacity-80"
                   >
                     Floor Coating Appointments

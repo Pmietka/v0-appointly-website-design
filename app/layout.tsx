@@ -35,9 +35,6 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
-  alternates: {
-    canonical: "https://getappointly.co",
-  },
   openGraph: {
     title: "Appointly Solutions | Booked Estimates for Home Service Contractors",
     description:
@@ -95,6 +92,16 @@ export default function RootLayout({
                   "https://www.instagram.com/appointlychicago",
                   "https://www.facebook.com/profile.php?id=61587335026673",
                   "https://www.linkedin.com/company/appointlysolutions",
+                ],
+                founder: [
+                  { "@id": "https://getappointly.co/about#patrick-mietka" },
+                  { "@id": "https://getappointly.co/about#jacob-mietka" },
+                ],
+                knowsAbout: [
+                  "Floor coating lead generation",
+                  "Epoxy and polyaspartic garage floor coating marketing",
+                  "Meta ads for home service contractors",
+                  "Appointment setting for contractors",
                 ],
               },
               {

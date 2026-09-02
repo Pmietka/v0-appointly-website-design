@@ -31,14 +31,14 @@ export const viewport: Viewport = {
 const LEAD_TRADE = "Floor Coating Jobs";
 
 export const metadata: Metadata = {
-  title: "Appointly Solutions | More booked jobs. Less chasing leads.",
+  title: "Booked Floor Coating Jobs for Contractors | Appointly",
   description:
     "We book floor coating jobs for contractors. Pay per appointment: you only pay when a qualified homeowner is booked on your calendar.",
   alternates: {
     canonical: "https://getappointly.co/",
   },
   openGraph: {
-    title: "Appointly Solutions | More booked jobs. Less chasing leads.",
+    title: "Booked Floor Coating Jobs for Contractors | Appointly",
     description:
       "We book floor coating jobs for contractors. Pay per appointment: you only pay when a qualified homeowner is booked on your calendar.",
     url: "https://getappointly.co/",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Appointly Solutions | More booked jobs. Less chasing leads.",
+    title: "Booked Floor Coating Jobs for Contractors | Appointly",
     description:
       "We book floor coating jobs for contractors. Pay per appointment: you only pay when a qualified homeowner is booked on your calendar.",
     images: ["https://getappointly.co/images/og-home.png"],
@@ -78,13 +78,6 @@ export default function HomePage() {
         availability: "https://schema.org/InStock",
         url: BOOKING_URL,
       },
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://getappointly.co/" },
-      ],
     },
   ];
 
@@ -382,7 +375,7 @@ export default function HomePage() {
           <p className="sub">
             Same model, same team. We run the ads, hit speed to lead, and put
             booked estimates on your calendar.{" "}
-            <a className="ilink" href="/insulation-contractor-leads">
+            <a className="ilink" href="/floor-coating-leads">
               See how it works for insulation contractors
             </a>
             .
@@ -458,12 +451,37 @@ export default function HomePage() {
           <div className="flinks">
             <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">Book a Call</a>
             <a href={PHONE_HREF}>Call {PHONE_DISPLAY}</a>
+            <a href="/how-it-works">How It Works</a>
+            <a href="/pricing">Pricing</a>
             <a href="/about">About</a>
             <a href="/faq">FAQ</a>
             <a href="/blog">Blog</a>
             <a href="/privacy">Privacy</a>
             <a href="/terms">Terms</a>
           </div>
+          <nav className="fexplore" aria-label="Floor coating contractor resources">
+            <p className="fexplore-title">For floor coating contractors</p>
+            <div className="fexplore-cols">
+              <div>
+                <p className="fexplore-h">Services</p>
+                <a href="/floor-coating-leads">Floor coating leads, booked as estimates</a>
+                <a href="/epoxy-flooring-leads">Epoxy flooring leads</a>
+                <a href="/exclusive-floor-coating-leads">Exclusive floor coating leads</a>
+                <a href="/appointment-setting-for-contractors">Appointment setting for contractors</a>
+                <a href="/floor-coating-marketing-agency-alternative">Marketing agency alternative</a>
+                <a href="/floor-coating-leads-small-markets">Small market coverage</a>
+              </div>
+              <div>
+                <p className="fexplore-h">Guides</p>
+                <a href="/blog/floor-coating-pricing-and-margins">Floor coating pricing and margins</a>
+                <a href="/blog/what-is-a-booked-floor-coating-estimate-worth">What a booked estimate is worth</a>
+                <a href="/blog/garage-floor-coating-leads-cost-and-sources">Garage floor coating leads: cost and sources</a>
+                <a href="/blog/how-to-close-more-floor-coating-estimates">How to close more estimates</a>
+                <a href="/blog/polyaspartic-vs-epoxy-garage-floors">Polyaspartic vs epoxy</a>
+                <a href="/blog/how-to-start-a-floor-coating-business">How to start a floor coating business</a>
+              </div>
+            </div>
+          </nav>
         </div>
       </footer>
     </div>

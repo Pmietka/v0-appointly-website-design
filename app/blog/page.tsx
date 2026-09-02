@@ -2,19 +2,20 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, CalendarDays, Clock3, Search } from "lucide-react";
 
+import { Breadcrumbs } from "@/components/breadcrumbs";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { formatBlogDate, getBlogPath, getBlogPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Blog | Appointly Solutions",
+  title: "Floor Coating Contractor Marketing Blog | Appointly",
   description:
-    "Read practical marketing guidance for floor coating and home service contractors, including booked estimates, Meta ads, local visibility, and growth ideas.",
+    "Guides for floor coating contractors on pricing, closing estimates, Meta ads, reviews, seasonality, and getting booked jobs instead of chasing leads.",
   alternates: {
     canonical: "https://getappointly.co/blog",
   },
   openGraph: {
-    title: "Blog | Appointly Solutions",
+    title: "Floor Coating Contractor Marketing Blog | Appointly",
     description:
       "Read practical marketing guidance for floor coating and home service contractors, including booked estimates, Meta ads, local visibility, and growth ideas.",
     url: "https://getappointly.co/blog",
@@ -39,6 +40,7 @@ export default async function BlogIndexPage() {
           </div>
 
           <div className="mx-auto max-w-6xl px-6">
+            <Breadcrumbs items={[{ name: "Blog", href: "/blog" }]} className="mb-8" />
             <div className="max-w-3xl">
               <p className="mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
                 Appointly Blog

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, CalendarCheck2, MessageSquareReply, PhoneCall, TimerReset } from "lucide-react";
 
+import { Breadcrumbs } from "@/components/breadcrumbs";
+import { FaqBlock } from "@/components/faq-block";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { ProofSection } from "@/components/proof-section";
@@ -37,10 +39,33 @@ const pillars = [
   },
 ];
 
+const faqItems = [
+  {
+    question: "How fast do you contact a new floor coating lead?",
+    answer:
+      "A branded text goes out the moment the form is submitted, and a call follows within minutes. Contractors who call back within five minutes are far more likely to reach the homeowner than those who wait an hour.",
+  },
+  {
+    question: "What if the homeowner does not answer the first call?",
+    answer:
+      "We keep going. Our team follows up by call and text over several days, at different times, until the homeowner either books or tells us no.",
+  },
+  {
+    question: "How do I receive the booked appointments?",
+    answer:
+      "Each estimate lands on your calendar with the homeowner's name, address, phone number, the work they described, and the confirmed time. Most clients also get a text notification.",
+  },
+  {
+    question: "Can appointment setting work if I only have one crew?",
+    answer:
+      "Yes. We book around the days and time windows you give us, so a single crew can run estimates on set days and installs on the others.",
+  },
+];
+
 export const metadata: Metadata = {
   title: "Appointment Setting for Floor Coating Contractors",
   description:
-    "Appointly Solutions fills your calendar with booked floor coating estimates using Meta ads, instant speed to lead, and persistent follow up so you just show up and quote.",
+    "Appointly contacts every floor coating lead within minutes, follows up until they answer, and books the estimate onto your calendar. You just show up and quote.",
   keywords: [
     "appointment setting for contractors",
     "floor coating appointment setting",
@@ -54,7 +79,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Appointment Setting for Floor Coating Contractors",
     description:
-      "Learn how Appointly Solutions contacts every floor coating lead instantly and books the estimate onto your calendar so you just show up and quote.",
+      "Learn how Appointly contacts every floor coating lead instantly and books the estimate onto your calendar so you just show up and quote.",
     url: "https://getappointly.co/appointment-setting-for-contractors",
     siteName: "Appointly Solutions",
     type: "website",
@@ -73,6 +98,7 @@ export default function AppointmentSettingForContractorsPage() {
           </div>
 
           <div className="mx-auto max-w-6xl px-6">
+            <Breadcrumbs items={[{ name: "Appointment Setting", href: "/appointment-setting-for-contractors" }]} className="mb-8" />
             <div className="max-w-3xl">
               <p className="mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
                 Booked Estimate Page
@@ -151,11 +177,11 @@ export default function AppointmentSettingForContractorsPage() {
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
                 To see the floor coating estimates we deliver, visit{" "}
-                <Link href="/insulation-contractor-leads" className="text-primary transition-opacity hover:opacity-80">
+                <Link href="/floor-coating-leads" className="text-primary transition-opacity hover:opacity-80">
                   Floor Coating Appointments
                 </Link>
                 . To understand the business model behind it, continue to{" "}
-                <Link href="/pay-per-lead-insulation" className="text-primary transition-opacity hover:opacity-80">
+                <Link href="/pricing" className="text-primary transition-opacity hover:opacity-80">
                   The Appointly Model
                 </Link>
                 .
@@ -185,6 +211,7 @@ export default function AppointmentSettingForContractorsPage() {
           </div>
         </section>
 
+        <FaqBlock items={faqItems} />
         <ProofSection />
         <SeoResourceLinks
           title="Pages that support the booked-estimate story."

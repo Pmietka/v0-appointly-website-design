@@ -85,6 +85,42 @@ function renderBlockquote(lines: string[]) {
   return `<blockquote class="border-l-4 border-[hsl(var(--primary))] bg-[hsl(var(--primary))]/[0.08] px-6 py-5 text-slate-700">${renderParagraph(lines)}</blockquote>`;
 }
 
+function splitTableRow(row: string) {
+  return row
+    .trim()
+    .replace(/^\|/, "")
+    .replace(/\|$/, "")
+    .split("|")
+    .map((cell) => cell.trim());
+}
+
+function isTableSeparator(line: string) {
+  return /^\|?\s*:?-{2,}:?\s*(\|\s*:?-{2,}:?\s*)*\|?$/.test(line.trim());
+}
+
+function renderTable(rows: string[]) {
+  const [header, ...body] = rows.map(splitTableRow);
+  const head = `<thead><tr>${header
+    .map(
+      (cell) =>
+        `<th scope="col" class="border-b border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">${renderInline(cell)}</th>`,
+    )
+    .join("")}</tr></thead>`;
+  const rowsHtml = body
+    .map(
+      (cells) =>
+        `<tr>${cells
+          .map(
+            (cell) =>
+              `<td class="border-b border-slate-100 px-4 py-3 align-top text-sm leading-7 text-slate-600 md:text-base">${renderInline(cell)}</td>`,
+          )
+          .join("")}</tr>`,
+    )
+    .join("");
+
+  return `<div class="overflow-x-auto rounded-2xl border border-slate-200"><table class="w-full border-collapse">${head}<tbody>${rowsHtml}</tbody></table></div>`;
+}
+
 function renderCodeBlock(lines: string[]) {
   return `<pre class="overflow-x-auto rounded-2xl bg-slate-950 px-6 py-5 text-sm leading-7 text-slate-100"><code>${escapeHtml(lines.join("\n"))}</code></pre>`;
 }
@@ -123,6 +159,23 @@ export function BlogMarkdown({ content }: { content: string }) {
       }
 
       blocks.push(renderCodeBlock(codeLines));
+      continue;
+    }
+
+    if (
+      trimmed.startsWith("|") &&
+      index + 1 < lines.length &&
+      isTableSeparator(lines[index + 1])
+    ) {
+      const tableRows: string[] = [trimmed];
+      index += 2;
+
+      while (index < lines.length && lines[index].trim().startsWith("|")) {
+        tableRows.push(lines[index].trim());
+        index += 1;
+      }
+
+      blocks.push(renderTable(tableRows));
       continue;
     }
 
@@ -180,7 +233,8 @@ export function BlogMarkdown({ content }: { content: string }) {
         /^#{2,4}\s+/.test(nextTrimmed) ||
         /^>\s?/.test(nextTrimmed) ||
         /^[-*]\s+/.test(nextTrimmed) ||
-        /^\d+\.\s+/.test(nextTrimmed)
+        /^\d+\.\s+/.test(nextTrimmed) ||
+        nextTrimmed.startsWith("|")
       ) {
         break;
       }

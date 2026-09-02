@@ -2,10 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, BadgeCheck, Clock3, ShieldCheck, Zap } from "lucide-react";
 
+import Image from "next/image";
+
+import { Breadcrumbs } from "@/components/breadcrumbs";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { ProofSection } from "@/components/proof-section";
 import { SeoResourceLinks } from "@/components/seo-resource-links";
+import { authors, personSchema } from "@/lib/authors";
 import { getCommercialResources } from "@/lib/seo-resources";
 
 const bookingUrl = "https://client.getappointly.co/strategy-calendar";
@@ -38,9 +42,9 @@ const differentiators = [
 ];
 
 export const metadata: Metadata = {
-  title: "About Appointly Solutions | Booked Estimates for Contractors",
+  title: "About Appointly | Booked Floor Coating Estimates",
   description:
-    "Learn why Appointly Solutions helps home service contractors grow with booked estimates, instant speed-to-lead, and a retainer plus per-appointment model.",
+    "Meet Patrick and Jacob Mietka, the Chicago brothers behind Appointly, and why they built a model that books floor coating estimates instead of selling leads.",
   keywords: [
     "Appointly Solutions",
     "appointment generation for contractors",
@@ -51,7 +55,7 @@ export const metadata: Metadata = {
     canonical: "https://getappointly.co/about",
   },
   openGraph: {
-    title: "About Appointly Solutions | Booked Estimates for Contractors",
+    title: "About Appointly | Booked Floor Coating Estimates",
     description:
       "See the mission, approach, and values behind Appointly Solutions and how we fill contractors' calendars with booked estimates.",
     url: "https://getappointly.co/about",
@@ -65,6 +69,15 @@ export default function AboutPage() {
     <>
       <Navbar />
       <main className="overflow-hidden">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [personSchema(authors.patrick), personSchema(authors.jacob)],
+            }),
+          }}
+        />
         <section className="relative pt-32 pb-20 md:pt-44 md:pb-28">
           <div className="absolute inset-0 -z-10">
             <div className="absolute top-0 right-0 h-[720px] w-[720px] rounded-full bg-primary/[0.06] blur-[140px]" />
@@ -72,6 +85,7 @@ export default function AboutPage() {
           </div>
 
           <div className="mx-auto max-w-6xl px-6">
+            <Breadcrumbs items={[{ name: "About", href: "/about" }]} className="mb-8" />
             <div className="max-w-3xl">
               <p className="mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
                 About Appointly Solutions
@@ -153,10 +167,10 @@ export default function AboutPage() {
                 page walks through each step of the process from campaign launch to
                 booked estimate. You can also explore{" "}
                 <Link
-                  href="/insulation-contractor-leads"
+                  href="/floor-coating-leads"
                   className="text-primary transition-opacity hover:opacity-80"
                 >
-                  Floor Coating Appointments
+                  Floor Coating Leads
                 </Link>{" "}
                 if you want the commercial overview first.
               </p>
@@ -204,11 +218,55 @@ export default function AboutPage() {
           </div>
         </section>
 
+        <section className="section-divider py-24 md:py-32" id="founders">
+          <div className="mx-auto max-w-6xl px-6">
+            <div className="max-w-2xl">
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
+                Who You Are Working With
+              </p>
+              <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">
+                Two brothers from Chicago who run the whole system themselves.
+              </h2>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
+                There is no account manager between you and the people running your
+                campaigns. Patrick runs the ads and the numbers. Jacob runs speed to
+                lead and booking. Both of them write the guides on this site.
+              </p>
+            </div>
+
+            <div className="mt-12 grid gap-6 md:grid-cols-2">
+              {[authors.patrick, authors.jacob].map((person) => (
+                <article
+                  key={person.id}
+                  id={`${person.id}-mietka`}
+                  className="glass-card flex gap-5 rounded-3xl p-6 scroll-mt-32"
+                >
+                  <Image
+                    src={person.image.replace("https://getappointly.co", "")}
+                    alt={`${person.name}, ${person.role}`}
+                    width={96}
+                    height={96}
+                    sizes="96px"
+                    className="h-24 w-24 shrink-0 rounded-2xl object-cover"
+                  />
+                  <div>
+                    <h3 className="font-display text-xl font-semibold text-foreground">
+                      {person.name}
+                    </h3>
+                    <p className="mt-1 text-sm font-medium text-primary">{person.role}</p>
+                    <p className="mt-3 text-sm leading-7 text-muted-foreground">{person.bio}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <ProofSection />
         <SeoResourceLinks
           title="Supporting pages worth visiting next."
           description="These pages reinforce the about story with clearer commercial intent, pricing context, and proof-led comparisons."
-          resources={getCommercialResources("insulation-marketing-agency")}
+          resources={getCommercialResources("floor-coating-marketing-agency-alternative")}
         />
 
         <section className="section-divider py-24 md:py-32">
@@ -226,10 +284,10 @@ export default function AboutPage() {
                 could support your next stage of growth. If you want to see the pricing
                 first, visit{" "}
                 <Link
-                  href="/pay-per-lead-insulation"
+                  href="/pricing"
                   className="text-slate-950 underline decoration-slate-400/70 underline-offset-4 transition-colors hover:text-slate-700"
                 >
-                  The Appointly Model
+                  Pricing
                 </Link>
                 .
               </p>

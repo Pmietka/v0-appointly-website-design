@@ -1,36 +1,29 @@
 import fs from "fs/promises";
 import path from "path";
 
-const blogDirectories = [
-  path.join(process.cwd(), "content", "blog"),
-  path.join(process.cwd(), "Blogs", "Blog Posts"),
-];
+const blogDirectory = path.join(process.cwd(), "content", "blog");
 
+// Posts without an explicit `date:` in their frontmatter fall back to a weekly
+// schedule counted back from this date.
 const latestPublishDate = new Date("2026-03-31T12:00:00Z");
-
-async function getBlogDirectory() {
-  for (const directory of blogDirectories) {
-    try {
-      await fs.access(directory);
-      return directory;
-    } catch {
-      // Try the next location.
-    }
-  }
-
-  return blogDirectories[0];
-}
 
 export type BlogPost = {
   slug: string;
   title: string;
+  /** <title> tag. Kept to roughly 60 characters. Falls back to `title`. */
+  seoTitle: string;
   description: string;
   body: string;
   order: number;
   fileName: string;
   publishedAt: Date;
   updatedAt: Date;
+  /** True when the post declares its own publish date in frontmatter. */
+  hasExplicitDate: boolean;
   readingTime: number;
+  authorId: string;
+  cluster: string;
+  image: string;
 };
 
 function slugFromFileName(fileName: string) {
@@ -135,13 +128,19 @@ function estimateReadingTime(text: string) {
   return Math.max(1, Math.round(words / 220));
 }
 
+function parseDate(value?: string) {
+  if (!value) return null;
+  const parsed = new Date(value.length === 10 ? `${value}T12:00:00Z` : value);
+  return Number.isNaN(parsed.getTime()) ? null : parsed;
+}
+
 function getScheduledPublishDate(order: number, latestOrder: number) {
   const publishDate = new Date(latestPublishDate);
   publishDate.setUTCDate(latestPublishDate.getUTCDate() - (latestOrder - order) * 7);
   return publishDate;
 }
 
-function parsePost(fileName: string, raw: string, stats: { birthtime: Date; mtime: Date }): BlogPost {
+function parsePost(fileName: string, raw: string): BlogPost {
   const slug = slugFromFileName(fileName);
   const orderMatch = fileName.match(/^(\d+)-/);
   const order = orderMatch ? Number(orderMatch[1]) : 0;
@@ -157,51 +156,65 @@ function parsePost(fileName: string, raw: string, stats: { birthtime: Date; mtim
     extractDescription(content) ||
     `Read ${title} on Appointly Solutions.`;
   const body = stripIntro(content);
+  const explicitDate = parseDate(data.date);
+  const publishedAt = explicitDate ?? latestPublishDate;
+  const updatedAt = parseDate(data.updated) ?? publishedAt;
 
   return {
     slug,
     title,
+    seoTitle: data.seo_title?.trim() || title,
     description,
     body,
     order,
     fileName,
-    publishedAt: stats.birthtime,
-    updatedAt: stats.mtime,
+    publishedAt,
+    updatedAt,
+    hasExplicitDate: Boolean(explicitDate),
     readingTime: estimateReadingTime(body),
+    authorId: data.author?.trim() || "patrick",
+    cluster: data.cluster?.trim() || "general",
+    image: data.image?.trim() || "/images/appointly-og.png",
   };
 }
 
 export async function getBlogPosts(): Promise<BlogPost[]> {
-  const blogDirectory = await getBlogDirectory();
   const fileNames = (await fs.readdir(blogDirectory)).filter((file) => file.endsWith(".md"));
   const posts = await Promise.all(
     fileNames.map(async (fileName) => {
-      const filePath = path.join(blogDirectory, fileName);
-      const [raw, stats] = await Promise.all([
-        fs.readFile(filePath, "utf8"),
-        fs.stat(filePath),
-      ]);
-
-      return parsePost(fileName, raw, {
-        birthtime: stats.birthtime,
-        mtime: stats.mtime,
-      });
+      const raw = await fs.readFile(path.join(blogDirectory, fileName), "utf8");
+      return parsePost(fileName, raw);
     }),
   );
 
   const latestOrder = posts.reduce((max, post) => Math.max(max, post.order), 0);
-  const postsWithScheduledDates = posts.map((post) => ({
-    ...post,
-    publishedAt: getScheduledPublishDate(post.order, latestOrder),
-  }));
+  const postsWithDates = posts.map((post) => {
+    if (post.hasExplicitDate) return post;
+    const publishedAt = getScheduledPublishDate(post.order, latestOrder);
+    return { ...post, publishedAt, updatedAt: publishedAt };
+  });
 
-  return postsWithScheduledDates.sort((a, b) => {
+  return postsWithDates.sort((a, b) => {
+    if (b.publishedAt.getTime() !== a.publishedAt.getTime()) {
+      return b.publishedAt.getTime() - a.publishedAt.getTime();
+    }
     if (b.order !== a.order) {
       return b.order - a.order;
     }
 
     return a.title.localeCompare(b.title);
   });
+}
+
+/**
+ * Topical related posts: same cluster first, then everything else, newest
+ * first. Never includes the post itself.
+ */
+export function getRelatedPosts(post: BlogPost, allPosts: BlogPost[], limit = 3) {
+  const others = allPosts.filter((item) => item.slug !== post.slug);
+  const sameCluster = others.filter((item) => item.cluster === post.cluster);
+  const rest = others.filter((item) => item.cluster !== post.cluster);
+  return [...sameCluster, ...rest].slice(0, limit);
 }
 
 export async function getBlogPost(slug: string) {

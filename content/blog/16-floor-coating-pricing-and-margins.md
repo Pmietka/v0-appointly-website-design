@@ -1,3 +1,11 @@
+---
+seo_title: "Floor Coating Pricing and Margins: What Crews Make"
+meta_description: "A straight-talk breakdown of floor coating pricing, material vs labor cost, day-rate math, and the gross margins a 2-person crew can actually hit."
+date: 2026-03-03
+updated: 2026-09-02
+author: patrick
+cluster: economics
+---
 # How Much Can You Make Coating Garage Floors? A Floor Coating Pricing and Margin Breakdown
 
 **Meta Description:** A straight-talk breakdown of floor coating pricing, material vs labor cost, day-rate math, and the gross margins a 2-person crew can actually hit.
@@ -42,7 +50,7 @@ The rest is labor, overhead, and profit. Which means **the single biggest lever 
 
 This is where contractors either build a profitable business or grind themselves into the ground.
 
-A trained two-person crew running a polyaspartic system can complete a standard two-car garage in **one day** start to finish: grind, patch, base coat, broadcast flake, scrape, topcoat. That one-day turnaround is the entire reason polyaspartic is worth selling, and we'll come back to it.
+A trained two-person crew running a [polyaspartic](/blog/polyaspartic-vs-epoxy-garage-floors) system can complete a standard two-car garage in **one day** start to finish: grind, patch, base coat, broadcast flake, scrape, topcoat. That one-day turnaround is the entire reason polyaspartic is worth selling, and we'll come back to it.
 
 A pure epoxy job usually needs a **multi-day** cycle because the base coat has to cure overnight before you can topcoat. Same labor hours spread across two trips, which kills your scheduling density.
 
@@ -100,7 +108,7 @@ When you're scrambling for work, you discount. You quote scared. A homeowner say
 
 When your calendar is already full of estimates, the math flips. You can quote your real number, present the premium system first, and walk away from the tire-kickers who only want the cheapest bid. Abundance is the best negotiating position there is.
 
-That's the entire logic behind the **Appointly Model**. You pay a retainer that covers our labor running the system, plus a per-appointment fee for each booked estimate that lands on your calendar. We run the Meta ads, contact every lead instantly before they shop three other coaters, and book the estimate into a time that works for you. You show up to a homeowner who's expecting you, quote on value instead of fear, do the job, and collect.
+That's the entire logic behind the **Appointly Model**. You pay a retainer that covers our labor running the system, plus a [per-appointment fee](/pricing) for each [booked estimate](/floor-coating-leads) that lands on your calendar. We run the [Meta ads](/blog/meta-ads-for-floor-coating-contractors), contact every lead instantly before they shop three other coaters, and book the estimate into a time that works for you. You show up to a homeowner who's expecting you, quote on value instead of fear, do the job, and collect.
 
 A full calendar isn't just more revenue. It's the thing that lets you hold your price and protect the margin you actually built the business to earn.
 

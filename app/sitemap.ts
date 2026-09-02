@@ -1,116 +1,47 @@
-import fs from "fs/promises";
-import path from "path";
 import { MetadataRoute } from "next";
 
 import { getBlogPosts } from "@/lib/blog";
+import { servicePages } from "@/lib/seo-resources";
 
 const base = "https://getappointly.co";
 
-const staticRoutes = [
-  {
-    url: base,
-    filePath: "app/page.tsx",
-    changeFrequency: "weekly" as const,
-    priority: 1,
-  },
-  {
-    url: `${base}/blog`,
-    filePath: "app/blog/page.tsx",
-    changeFrequency: "weekly" as const,
-    priority: 0.8,
-  },
-  {
-    url: `${base}/about`,
-    filePath: "app/about/page.tsx",
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
-  },
-  {
-    url: `${base}/how-it-works`,
-    filePath: "app/how-it-works/page.tsx",
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
-  },
-  {
-    url: `${base}/faq`,
-    filePath: "app/faq/page.tsx",
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
-  },
-  {
-    url: `${base}/insulation-contractor-leads`,
-    filePath: "app/insulation-contractor-leads/page.tsx",
-    changeFrequency: "monthly" as const,
-    priority: 0.9,
-  },
-  {
-    url: `${base}/exclusive-insulation-leads`,
-    filePath: "app/exclusive-insulation-leads/page.tsx",
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
-  },
-  {
-    url: `${base}/pay-per-lead-insulation`,
-    filePath: "app/pay-per-lead-insulation/page.tsx",
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
-  },
-  {
-    url: `${base}/insulation-marketing-agency`,
-    filePath: "app/insulation-marketing-agency/page.tsx",
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
-  },
-  {
-    url: `${base}/appointment-setting-for-contractors`,
-    filePath: "app/appointment-setting-for-contractors/page.tsx",
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
-  },
-  {
-    url: `${base}/spray-foam-contractor-leads`,
-    filePath: "app/spray-foam-contractor-leads/page.tsx",
-    changeFrequency: "monthly" as const,
-    priority: 0.85,
-  },
-  {
-    url: `${base}/insulation-contractor-leads-small-markets`,
-    filePath: "app/insulation-contractor-leads-small-markets/page.tsx",
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
-  },
-  {
-    url: `${base}/privacy`,
-    filePath: "app/privacy/page.tsx",
-    changeFrequency: "yearly" as const,
-    priority: 0.3,
-  },
-  {
-    url: `${base}/terms`,
-    filePath: "app/terms/page.tsx",
-    changeFrequency: "yearly" as const,
-    priority: 0.3,
-  },
+// Date of the last meaningful content change to each static page. Update the
+// entry when the page copy changes so lastmod stays honest; a build timestamp
+// would mark every URL as modified on every deploy.
+const staticRoutes: {
+  path: string;
+  lastModified: string;
+  changeFrequency: "weekly" | "monthly" | "yearly";
+  priority: number;
+}[] = [
+  { path: "/", lastModified: "2026-09-02", changeFrequency: "weekly", priority: 1 },
+  { path: "/blog", lastModified: "2026-09-02", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/about", lastModified: "2026-09-02", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/how-it-works", lastModified: "2026-09-02", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/faq", lastModified: "2026-09-02", changeFrequency: "monthly", priority: 0.7 },
+  { path: servicePages.floorCoatingLeads, lastModified: "2026-09-02", changeFrequency: "monthly", priority: 0.9 },
+  { path: servicePages.epoxyFlooringLeads, lastModified: "2026-09-02", changeFrequency: "monthly", priority: 0.85 },
+  { path: servicePages.exclusive, lastModified: "2026-09-02", changeFrequency: "monthly", priority: 0.8 },
+  { path: servicePages.pricing, lastModified: "2026-09-02", changeFrequency: "monthly", priority: 0.8 },
+  { path: servicePages.agencyAlternative, lastModified: "2026-09-02", changeFrequency: "monthly", priority: 0.8 },
+  { path: servicePages.appointmentSetting, lastModified: "2026-09-02", changeFrequency: "monthly", priority: 0.8 },
+  { path: servicePages.smallMarkets, lastModified: "2026-09-02", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/privacy", lastModified: "2026-03-01", changeFrequency: "yearly", priority: 0.3 },
+  { path: "/terms", lastModified: "2026-03-01", changeFrequency: "yearly", priority: 0.3 },
 ];
-
-async function getLastModified(filePath: string) {
-  const stats = await fs.stat(path.join(process.cwd(), filePath));
-  return stats.mtime;
-}
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const blogPosts = await getBlogPosts();
-  const sitemapEntries = await Promise.all(
-    staticRoutes.map(async (route) => ({
-      url: route.url,
-      lastModified: await getLastModified(route.filePath),
-      changeFrequency: route.changeFrequency,
-      priority: route.priority,
-    })),
-  );
+
+  const entries: MetadataRoute.Sitemap = staticRoutes.map((route) => ({
+    url: route.path === "/" ? base : `${base}${route.path}`,
+    lastModified: new Date(`${route.lastModified}T12:00:00Z`),
+    changeFrequency: route.changeFrequency,
+    priority: route.priority,
+  }));
 
   blogPosts.forEach((post) => {
-    sitemapEntries.push({
+    entries.push({
       url: `${base}/blog/${post.slug}`,
       lastModified: post.updatedAt,
       changeFrequency: "monthly",
@@ -118,5 +49,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     });
   });
 
-  return sitemapEntries;
+  return entries;
 }

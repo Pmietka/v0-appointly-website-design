@@ -7,17 +7,27 @@ import { PHONE_DISPLAY, PHONE_HREF } from "@/components/site-nav";
 const companyLinks = [
   { href: "/about", label: "About" },
   { href: "/how-it-works", label: "How It Works" },
+  { href: "/pricing", label: "Pricing" },
   { href: "/blog", label: "Blog" },
   { href: "/faq", label: "FAQ" },
 ];
 
 const solutionLinks = [
-  { href: "/insulation-contractor-leads", label: "Floor Coating Leads" },
-  { href: "/exclusive-insulation-leads", label: "Exclusive Appointments" },
-  { href: "/pay-per-lead-insulation", label: "The Appointly Model" },
-  { href: "/insulation-marketing-agency", label: "Agency Alternative" },
-  { href: "/spray-foam-contractor-leads", label: "Epoxy & Concrete Coatings" },
-  { href: "/insulation-contractor-leads-small-markets", label: "Small Markets" },
+  { href: "/floor-coating-leads", label: "Floor Coating Leads" },
+  { href: "/epoxy-flooring-leads", label: "Epoxy Flooring Leads" },
+  { href: "/exclusive-floor-coating-leads", label: "Exclusive Leads" },
+  { href: "/appointment-setting-for-contractors", label: "Appointment Setting" },
+  { href: "/floor-coating-marketing-agency-alternative", label: "Agency Alternative" },
+  { href: "/floor-coating-leads-small-markets", label: "Small Markets" },
+];
+
+const guideLinks = [
+  { href: "/blog/floor-coating-pricing-and-margins", label: "Pricing and Margins" },
+  { href: "/blog/what-is-a-booked-floor-coating-estimate-worth", label: "What an Estimate Is Worth" },
+  { href: "/blog/garage-floor-coating-leads-cost-and-sources", label: "Where Leads Come From" },
+  { href: "/blog/how-to-close-more-floor-coating-estimates", label: "Closing Estimates" },
+  { href: "/blog/polyaspartic-vs-epoxy-garage-floors", label: "Polyaspartic vs Epoxy" },
+  { href: "/blog/speed-to-lead-wins-floor-coating-jobs", label: "Speed to Lead" },
 ];
 
 const legalLinks = [
@@ -41,8 +51,8 @@ export function Footer() {
               />
             </div>
             <p className="mt-5 text-sm leading-7 text-slate-600">
-              Booked estimates for home service contractors, built around the
-              Appointly Model — you just show up and close.
+              Booked floor coating estimates for contractors, built around the
+              Appointly Model. You just show up and close.
             </p>
             <a
               href={PHONE_HREF}
@@ -59,7 +69,7 @@ export function Footer() {
             </a>
           </div>
 
-          <div className="grid gap-8 sm:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
                 Company
@@ -83,6 +93,23 @@ export function Footer() {
               </p>
               <div className="mt-4 flex flex-col gap-3">
                 {solutionLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-sm text-slate-600 transition-colors hover:text-slate-950"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+                Guides
+              </p>
+              <div className="mt-4 flex flex-col gap-3">
+                {guideLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
