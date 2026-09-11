@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, CalendarDays, Clock3, RefreshCw } from "lucide-react";
+import { ArrowLeft, CalendarDays, Clock3, Database, RefreshCw } from "lucide-react";
 
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { BlogMarkdown } from "@/components/blog-markdown";
@@ -16,6 +16,7 @@ import {
   getBlogPost,
   getBlogPostSlugs,
   getBlogPosts,
+  getClusterLabel,
   getRelatedPosts,
 } from "@/lib/blog";
 import { getBlogCommercialResources } from "@/lib/seo-resources";
@@ -111,7 +112,32 @@ export default async function BlogPostPage({
         url: `${baseUrl}/images/appointly-logo-mark.png`,
       },
     },
+    ...(post.takeaways.length
+      ? {
+          speakable: {
+            "@type": "SpeakableSpecification",
+            cssSelector: ["[data-key-takeaways]"],
+          },
+        }
+      : {}),
   };
+
+  const faqSchema = post.faq.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": `${canonical}#faq`,
+        mainEntity: post.faq.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: { "@type": "Answer", text: item.answer },
+        })),
+      }
+    : null;
+
+  const tocHeadings = post.headings.filter(
+    (heading) => !/^key takeaways$/i.test(heading.text),
+  );
 
   return (
     <>
@@ -121,6 +147,12 @@ export default async function BlogPostPage({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
         />
+        {faqSchema && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+          />
+        )}
 
         <section className="relative pt-32 pb-20 md:pt-44 md:pb-28">
           <div className="absolute inset-0 -z-10">
@@ -137,6 +169,9 @@ export default async function BlogPostPage({
               className="mb-8"
             />
 
+            <p className="mb-6 inline-flex rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
+              {getClusterLabel(post.cluster)}
+            </p>
             <h1 className="font-display text-5xl font-bold tracking-tight leading-[1.05] text-balance text-foreground md:text-6xl">
               {post.title}
             </h1>
@@ -180,7 +215,7 @@ export default async function BlogPostPage({
 
         <section className="section-divider py-16 md:py-24">
           <div className="mx-auto grid max-w-6xl gap-8 px-6 lg:grid-cols-[minmax(0,1fr)_320px]">
-            <article className="rounded-3xl border border-slate-200 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.06)] md:p-10">
+            <article className="min-w-0 rounded-3xl border border-slate-200 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.06)] md:p-10">
               <BlogMarkdown content={post.body} />
 
               <div className="mt-14 flex gap-5 rounded-2xl border border-slate-200 bg-slate-50 p-6">
@@ -209,17 +244,46 @@ export default async function BlogPostPage({
               </div>
             </article>
 
-            <aside className="space-y-6">
-              <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
-                  Why it matters
+            <aside className="space-y-6 lg:sticky lg:top-28 lg:self-start">
+              {tocHeadings.length > 2 && (
+                <nav
+                  aria-label="On this page"
+                  className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm"
+                >
+                  <p className="text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
+                    On this page
+                  </p>
+                  <ol className="mt-4 space-y-2 text-sm">
+                    {tocHeadings.map((heading) => (
+                      <li key={heading.id}>
+                        <a
+                          href={`#${heading.id}`}
+                          className="block leading-6 text-slate-600 transition-colors hover:text-foreground"
+                        >
+                          {heading.text}
+                        </a>
+                      </li>
+                    ))}
+                  </ol>
+                </nav>
+              )}
+
+              <Link
+                href="/floor-coating-benchmarks"
+                className="group block rounded-3xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 p-6 text-white shadow-sm transition-transform hover:-translate-y-0.5"
+              >
+                <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-white/70">
+                  <Database className="h-3.5 w-3.5" />
+                  Benchmarks
                 </p>
-                <p className="mt-4 text-sm leading-7 text-slate-600">
-                  This article is part of the Appointly library for floor coating
-                  contractors: practical guides on pricing, closing, marketing, and
-                  keeping a crew booked without chasing leads.
+                <p className="mt-3 text-lg font-bold leading-snug text-white">
+                  Floor coating lead and sales benchmarks
                 </p>
-              </div>
+                <p className="mt-2 text-sm leading-6 text-white/75">
+                  Lead to appointment rate, answer rate, show rate, and price per square
+                  foot from live coating accounts.
+                </p>
+              </Link>
 
               <div className="rounded-3xl border border-primary/20 bg-primary/10 p-6 shadow-sm">
                 <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-600">

@@ -24,7 +24,114 @@ export type BlogPost = {
   authorId: string;
   cluster: string;
   image: string;
+  /** Parsed from the `## Key takeaways` bullet list. Empty when the post has none. */
+  takeaways: string[];
+  /** Parsed from `## Frequently asked questions` (`### Question?` + paragraph). */
+  faq: { question: string; answer: string }[];
+  /** H2 headings in body order, for the table of contents. */
+  headings: { id: string; text: string }[];
 };
+
+export const clusterLabels: Record<string, string> = {
+  economics: "Economics",
+  "marketing-channels": "Marketing",
+  sales: "Sales",
+  operations: "Operations",
+  general: "Guides",
+};
+
+export function getClusterLabel(cluster: string) {
+  return clusterLabels[cluster] ?? clusterLabels.general;
+}
+
+/** Stable anchor id for a heading. Shared with the markdown renderer. */
+export function slugifyHeading(text: string) {
+  return stripInlineMarkdown(text)
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, "")
+    .trim()
+    .replace(/[\s-]+/g, "-")
+    .slice(0, 80);
+}
+
+function stripInlineMarkdown(text: string) {
+  return text
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")
+    .replace(/[*_`]/g, "")
+    .trim();
+}
+
+const takeawaysHeading = /^##\s+key takeaways\s*$/i;
+const faqHeading = /^##\s+(frequently asked questions|faq)\s*$/i;
+
+function extractTakeaways(body: string) {
+  const lines = body.split("\n");
+  const start = lines.findIndex((line) => takeawaysHeading.test(line.trim()));
+  if (start === -1) return [];
+
+  const items: string[] = [];
+  for (let index = start + 1; index < lines.length; index += 1) {
+    const line = lines[index].trim();
+    if (/^#{2,}\s/.test(line)) break;
+    const match = line.match(/^[-*]\s+(.+)$/) ?? line.match(/^\d+\.\s+(.+)$/);
+    if (match) items.push(stripInlineMarkdown(match[1]));
+  }
+  return items;
+}
+
+function extractFaq(body: string) {
+  const lines = body.split("\n");
+  const start = lines.findIndex((line) => faqHeading.test(line.trim()));
+  if (start === -1) return [];
+
+  const items: { question: string; answer: string }[] = [];
+  let question: string | null = null;
+  let answer: string[] = [];
+
+  const flush = () => {
+    if (question && answer.length) {
+      items.push({ question, answer: stripInlineMarkdown(answer.join(" ")) });
+    }
+    question = null;
+    answer = [];
+  };
+
+  for (let index = start + 1; index < lines.length; index += 1) {
+    const line = lines[index].trim();
+    if (/^##\s/.test(line)) break;
+
+    const h3 = line.match(/^###\s+(.+)$/);
+    const legacy = line.match(/^\*\*Q:\s*(.+?)\*\*$/);
+    if (h3 || legacy) {
+      flush();
+      question = stripInlineMarkdown((h3 ?? legacy)![1]);
+      continue;
+    }
+
+    if (!question || !line) continue;
+    answer.push(line.replace(/^A:\s*/, ""));
+  }
+  flush();
+
+  return items;
+}
+
+function extractHeadings(body: string) {
+  const headings: { id: string; text: string }[] = [];
+  const seen = new Map<string, number>();
+
+  body.split("\n").forEach((line) => {
+    const match = line.trim().match(/^##\s+(.+)$/);
+    if (!match) return;
+    const text = stripInlineMarkdown(match[1]);
+    const base = slugifyHeading(text) || "section";
+    const count = seen.get(base) ?? 0;
+    seen.set(base, count + 1);
+    headings.push({ id: count ? `${base}-${count + 1}` : base, text });
+  });
+
+  return headings;
+}
 
 function slugFromFileName(fileName: string) {
   return fileName.replace(/^\d+-/, "").replace(/\.md$/i, "");
@@ -175,6 +282,9 @@ function parsePost(fileName: string, raw: string): BlogPost {
     authorId: data.author?.trim() || "patrick",
     cluster: data.cluster?.trim() || "general",
     image: data.image?.trim() || "/images/appointly-og.png",
+    takeaways: extractTakeaways(body),
+    faq: extractFaq(body),
+    headings: extractHeadings(body),
   };
 }
 

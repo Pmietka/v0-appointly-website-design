@@ -5,7 +5,7 @@ import { ArrowRight, CalendarDays, Clock3, Database, Search } from "lucide-react
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
-import { formatBlogDate, getBlogPath, getBlogPosts } from "@/lib/blog";
+import { clusterLabels, formatBlogDate, getBlogPath, getBlogPosts, getClusterLabel } from "@/lib/blog";
 import { servicePages } from "@/lib/seo-resources";
 
 export const metadata: Metadata = {
@@ -29,6 +29,14 @@ export default async function BlogIndexPage() {
   const posts = await getBlogPosts();
   const featured = posts.slice(0, 3);
   const rest = posts.slice(3);
+  const clusterOrder = ["economics", "marketing-channels", "sales", "operations", "general"];
+  const groups = clusterOrder
+    .map((cluster) => ({
+      cluster,
+      label: clusterLabels[cluster],
+      posts: rest.filter((post) => (clusterLabels[post.cluster] ? post.cluster : "general") === cluster),
+    }))
+    .filter((group) => group.posts.length > 0);
 
   return (
     <>
@@ -160,42 +168,61 @@ export default async function BlogIndexPage() {
                   All Posts
                 </p>
                 <h2 className="mt-3 font-display text-3xl font-bold text-foreground md:text-4xl">
-                  Browse the full library.
+                  Browse the full library by topic.
                 </h2>
               </div>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <div className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
                 <Search className="h-4 w-4" />
-                {posts.length} articles
+                <span className="mr-2">{posts.length} articles</span>
+                {groups.map((group) => (
+                  <a
+                    key={group.cluster}
+                    href={`#topic-${group.cluster}`}
+                    className="rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold text-slate-700 transition-colors hover:border-slate-400"
+                  >
+                    {group.label}
+                  </a>
+                ))}
               </div>
             </div>
 
-            <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-              {rest.map((post) => (
-                <Link
-                  key={post.slug}
-                  href={getBlogPath(post.slug)}
-                  className="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
-                >
-                  <div className="flex items-center justify-between gap-4">
-                    <span className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
-                      Blog
-                    </span>
-                    <span className="flex items-center gap-1 text-xs font-medium text-slate-500">
-                      <CalendarDays className="h-3.5 w-3.5" />
-                      {formatBlogDate(post.publishedAt)}
-                    </span>
+            <div className="space-y-16">
+              {groups.map((group) => (
+                <div key={group.cluster} id={`topic-${group.cluster}`} className="scroll-mt-32">
+                  <div className="mb-6 flex items-baseline gap-3">
+                    <h3 className="font-display text-2xl font-bold text-foreground">{group.label}</h3>
+                    <span className="text-sm text-muted-foreground">{group.posts.length} articles</span>
                   </div>
-                  <h3 className="mt-5 text-xl font-bold tracking-tight text-slate-950">
-                    {post.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-7 text-slate-600">
-                    {post.description}
-                  </p>
-                  <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-primary">
-                    <Clock3 className="h-4 w-4" />
-                    {post.readingTime} min read
+                  <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+                    {group.posts.map((post) => (
+                      <Link
+                        key={post.slug}
+                        href={getBlogPath(post.slug)}
+                        className="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
+                      >
+                        <div className="flex items-center justify-between gap-4">
+                          <span className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+                            {getClusterLabel(post.cluster)}
+                          </span>
+                          <span className="flex items-center gap-1 text-xs font-medium text-slate-500">
+                            <CalendarDays className="h-3.5 w-3.5" />
+                            {formatBlogDate(post.publishedAt)}
+                          </span>
+                        </div>
+                        <h4 className="mt-5 text-xl font-bold tracking-tight text-slate-950">
+                          {post.title}
+                        </h4>
+                        <p className="mt-3 text-sm leading-7 text-slate-600">
+                          {post.description}
+                        </p>
+                        <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-primary">
+                          <Clock3 className="h-4 w-4" />
+                          {post.readingTime} min read
+                        </div>
+                      </Link>
+                    ))}
                   </div>
-                </Link>
+                </div>
               ))}
             </div>
           </div>

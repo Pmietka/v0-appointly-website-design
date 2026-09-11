@@ -1,3 +1,5 @@
+import { slugifyHeading } from "@/lib/blog";
+
 function escapeHtml(value: string) {
   return value
     .replace(/&/g, "&amp;")
@@ -61,15 +63,38 @@ function renderParagraph(lines: string[]) {
   return `<p class="text-base leading-8 text-slate-600 md:text-lg">${renderInline(lines.join(" ").trim())}</p>`;
 }
 
-function renderHeading(level: number, text: string) {
+function renderHeading(level: number, text: string, id?: string) {
   const classes =
     level === 2
-      ? "mt-14 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl"
+      ? "mt-14 scroll-mt-32 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl"
       : level === 3
-        ? "mt-10 text-2xl font-bold tracking-tight text-slate-950 md:text-3xl"
-        : "mt-8 text-xl font-bold tracking-tight text-slate-950 md:text-2xl";
+        ? "mt-10 scroll-mt-32 text-2xl font-bold tracking-tight text-slate-950 md:text-3xl"
+        : "mt-8 scroll-mt-32 text-xl font-bold tracking-tight text-slate-950 md:text-2xl";
+  const idAttr = id ? ` id="${escapeHtml(id)}"` : "";
 
-  return `<h${level} class="${classes}">${renderInline(text)}</h${level}>`;
+  return `<h${level}${idAttr} class="${classes}">${renderInline(text)}</h${level}>`;
+}
+
+const takeawaysHeading = /^key takeaways$/i;
+const faqHeading = /^(frequently asked questions|faq)$/i;
+
+function renderTakeaways(items: string[], id: string) {
+  return `<aside id="${escapeHtml(id)}" data-key-takeaways class="mt-10 scroll-mt-32 rounded-2xl border border-slate-200 bg-slate-50 p-6 md:p-8">
+<p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Key takeaways</p>
+<ul class="mt-4 space-y-3">${items
+    .map(
+      (item) =>
+        `<li class="flex gap-3 text-base leading-7 text-slate-800 md:text-lg"><span aria-hidden="true" class="mt-[0.6em] h-2 w-2 shrink-0 rounded-full bg-slate-950"></span><span>${renderInline(item)}</span></li>`,
+    )
+    .join("")}</ul>
+</aside>`;
+}
+
+function renderFaqItem(question: string, answerHtml: string) {
+  return `<div class="py-6 first:pt-0 last:pb-0">
+<h3 class="text-lg font-semibold leading-snug text-slate-950 md:text-xl">${renderInline(question)}</h3>
+<div class="mt-3 space-y-4 [&>p]:text-base [&>p]:leading-7 [&>p]:text-slate-600">${answerHtml}</div>
+</div>`;
 }
 
 function renderList(items: string[], ordered = false) {
@@ -128,7 +153,46 @@ function renderCodeBlock(lines: string[]) {
 export function BlogMarkdown({ content }: { content: string }) {
   const lines = content.replace(/\r\n/g, "\n").split("\n");
   const blocks: string[] = [];
+  const seenIds = new Map<string, number>();
   let index = 0;
+  let faqMode = false;
+  let faqItems: string[] = [];
+  let faqQuestion: string | null = null;
+  let faqAnswer: string[] = [];
+
+  const headingId = (text: string) => {
+    const base = slugifyHeading(text) || "section";
+    const count = seenIds.get(base) ?? 0;
+    seenIds.set(base, count + 1);
+    return count ? `${base}-${count + 1}` : base;
+  };
+
+  const flushFaqItem = () => {
+    if (faqQuestion) {
+      faqItems.push(renderFaqItem(faqQuestion, faqAnswer.join("")));
+    }
+    faqQuestion = null;
+    faqAnswer = [];
+  };
+
+  const closeFaq = () => {
+    if (!faqMode) return;
+    flushFaqItem();
+    blocks.push(
+      `<div class="mt-6 divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white p-6 md:p-8">${faqItems.join("")}</div>`,
+    );
+    faqItems = [];
+    faqMode = false;
+  };
+
+  // In FAQ mode, paragraphs belong to the current question instead of the page.
+  const push = (html: string) => {
+    if (faqMode && faqQuestion) {
+      faqAnswer.push(html);
+    } else {
+      blocks.push(html);
+    }
+  };
 
   while (index < lines.length) {
     const line = lines[index];
@@ -175,13 +239,47 @@ export function BlogMarkdown({ content }: { content: string }) {
         index += 1;
       }
 
-      blocks.push(renderTable(tableRows));
+      push(renderTable(tableRows));
       continue;
     }
 
     const heading = trimmed.match(/^(#{2,4})\s+(.+)$/);
     if (heading) {
-      blocks.push(renderHeading(heading[1].length, heading[2]));
+      const level = heading[1].length;
+      const text = heading[2].trim();
+
+      if (level === 2) {
+        closeFaq();
+        const id = headingId(text);
+
+        if (takeawaysHeading.test(text)) {
+          const items: string[] = [];
+          index += 1;
+          while (index < lines.length && !/^#{2,4}\s+/.test(lines[index].trim())) {
+            const item = lines[index].trim().match(/^(?:[-*]|\d+\.)\s+(.+)$/);
+            if (item) items.push(item[1]);
+            index += 1;
+          }
+          blocks.push(renderTakeaways(items, id));
+          continue;
+        }
+
+        blocks.push(renderHeading(2, text, id));
+        if (faqHeading.test(text)) {
+          faqMode = true;
+        }
+        index += 1;
+        continue;
+      }
+
+      if (faqMode && level === 3) {
+        flushFaqItem();
+        faqQuestion = text;
+        index += 1;
+        continue;
+      }
+
+      blocks.push(renderHeading(level, text));
       index += 1;
       continue;
     }
@@ -193,7 +291,7 @@ export function BlogMarkdown({ content }: { content: string }) {
         index += 1;
       }
 
-      blocks.push(renderBlockquote(quoteLines));
+      push(renderBlockquote(quoteLines));
       continue;
     }
 
@@ -204,7 +302,7 @@ export function BlogMarkdown({ content }: { content: string }) {
         index += 1;
       }
 
-      blocks.push(renderList(items, false));
+      push(renderList(items, false));
       continue;
     }
 
@@ -215,7 +313,7 @@ export function BlogMarkdown({ content }: { content: string }) {
         index += 1;
       }
 
-      blocks.push(renderList(items, true));
+      push(renderList(items, true));
       continue;
     }
 
@@ -243,8 +341,10 @@ export function BlogMarkdown({ content }: { content: string }) {
       index += 1;
     }
 
-    blocks.push(renderParagraph(paragraphLines));
+    push(renderParagraph(paragraphLines));
   }
+
+  closeFaq();
 
   return (
     <div
