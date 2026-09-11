@@ -25,7 +25,7 @@ Hire a floor coating installer when your current crew has installed 14 or more f
 
 ## When should you hire a second floor coating installer?
 
-Hire from a full calendar, not from hope. Most coating contractors hire too late, train too little, and then wonder why the callbacks start the month the new crew launches. You are ready when all three of these are true:
+Hire from a full calendar, not from hope. You are ready when all three of these are true:
 
 - The current crew is installing 14 or more floors a month for three straight months.
 - Your booked estimates are scheduling out more than three weeks.
@@ -44,7 +44,7 @@ The best installers usually come from trades with the same habits, not from the 
 | Concrete finishers | Slabs, moisture, grinding | Finish quality needs coaching |
 | Detailers and auto body techs | Meticulous, used to a customer inspecting under bright light | No trade prep habits yet |
 
-You are hiring for attention to detail, physical stamina, and the ability to show up at 7 am on a homeowner's driveway looking like someone they want in their garage. Avoid hiring a "coating guy" from a competitor unless you have seen their floors. Bad habits in prep are harder to untrain than a blank slate.
+You are hiring for attention to detail, stamina, and the ability to show up at 7 am on a homeowner's driveway looking like someone they want in their garage. Avoid a "coating guy" from a competitor unless you have seen their floors. Bad prep habits are harder to untrain than a blank slate.
 
 ## What should you pay a floor coating crew?
 
@@ -54,7 +54,7 @@ Ranges vary by market, but for a residential coating crew in most of the US:
 - **Lead installer:** $25 to $35 per hour, or a per-floor rate
 - **Crew lead running jobs without the owner present:** $30 to $40 per hour plus a per-floor bonus
 
-Per-floor pay works well once an installer is trained. A two-person crew paid $600 to $900 combined for a one-day garage on a $3,500 job keeps labor at roughly 20 percent of revenue, which is the number behind the margins in our [pricing and margins guide](/blog/floor-coating-pricing-and-margins). Tie any bonus to zero callbacks in 60 days, not to speed. Speed bonuses produce peeling floors.
+Per-floor pay works well once an installer is trained. A two-person crew paid $600 to $900 combined for a one-day garage on a $3,500 job keeps labor at roughly 20 percent of revenue, the number behind our [pricing and margins guide](/blog/floor-coating-pricing-and-margins). Tie any bonus to zero callbacks in 60 days, not to speed. Speed bonuses produce peeling floors.
 
 ## What does a four-week floor coating training plan look like?
 
@@ -86,17 +86,17 @@ For the path forward, publish it. Helper to installer at 90 days if they pass in
 
 ## Why does a second crew need its own demand?
 
-The most common mistake is hiring the second crew and splitting the same 25 estimates a month between two teams. Both crews end up half-busy and the new one leaves. A second crew needs its own flow of estimates, which usually means widening the service area or adding a second [exclusive territory](/exclusive-floor-coating-leads). Plan the estimate volume before the first paycheck.
+The most common mistake is hiring the second crew and splitting the same 25 estimates a month between two teams. Both end up half-busy and the new one leaves. A second crew needs its own flow of estimates, which usually means widening the service area or adding a second [exclusive territory](/exclusive-floor-coating-leads). Plan that volume before the first paycheck.
 
 ## Frequently asked questions
 
 ### When should a floor coating contractor hire a second installer?
 
-Hire a second floor coating installer when the current crew has installed 14 or more floors a month for three months in a row, booked estimates are scheduling out past three weeks, and the owner is running estimates at night after installing all day. Hiring earlier means paying for a crew the calendar cannot feed.
+Hire a second floor coating installer when the current crew has installed 14 or more floors a month for three months in a row, booked estimates are scheduling out past three weeks, and the owner is running estimates at night after installing all day. Hiring earlier means paying a crew the calendar cannot feed.
 
 ### What trade background makes the best floor coating installer?
 
-Painters make the best first floor coating hire for most companies because they already understand cut-in, film build, and working clean in someone's home. Tile installers, concrete finishers, and auto detailers also transfer well. Installers from competing coating companies are the riskiest hire, because bad prep habits are harder to untrain than a blank slate.
+Painters make the best first floor coating hire for most companies because they already understand cut-in, film build, and working clean in someone's home. Tile installers, concrete finishers, and auto detailers also transfer well. Installers from competing coating companies are the riskiest hire, because bad prep habits are hard to untrain.
 
 ### How much should you pay a floor coating installer?
 
@@ -104,7 +104,7 @@ A helper on a residential floor coating crew earns $18 to $24 per hour in most U
 
 ### How long does it take to train a floor coating installer?
 
-Four weeks is enough to train a new floor coating installer to run a garage floor with a lead present, provided each week has one focus: prep only, then base coat and flake, then scrape and topcoat, then running a job under silent supervision. Leading a crew alone should wait until they pass five owner inspections.
+Four weeks is enough to train a new floor coating installer to run a garage floor with a lead present, provided each week has one focus: prep only, then base coat and flake, then scrape and topcoat, then running a job under silent supervision. Leading a crew alone waits until they pass five owner inspections.
 
 ## Build the crew, then keep it busy
 

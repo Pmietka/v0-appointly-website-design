@@ -13,19 +13,19 @@ cluster: marketing-channels
 
 ---
 
-A floor coating contractor website converts when it shows a real before-and-after above the fold, repeats one "Get a Free Estimate" button, uses a four-field form, displays Google reviews with names and towns, loads fast on a phone, gives a price range, sells your prep, and lists your towns. Then someone calls every form back within about a minute, because speed to lead decides whether the request becomes an estimate.
+A floor coating contractor website converts when it shows a real before-and-after above the fold, repeats one "Get a Free Estimate" button, uses a four-field form, shows Google reviews with names and towns, loads fast on a phone, gives a price range, sells your prep, and lists your towns. Then someone calls every form back within about a minute, because speed to lead decides whether the request becomes an estimate.
 
 ## Key takeaways
 
 - Put a real before-and-after from your own market above the fold, with one line stating what you do and where.
-- Use one call to action, "Get a Free Estimate", repeated at the top, after the gallery, after the reviews, and at the bottom, with a tappable phone number beside it.
+- Use one call to action, "Get a Free Estimate", repeated four times down the page with a tappable phone number beside it.
 - Keep the form to name, phone, town, and one optional project line, and call every submission back within about a minute.
 - Show Google reviews with first names and towns, and get to ten reviews before you spend on anything else.
-- Give a price range for a two-car garage instead of a price list, so DIY-kit shoppers filter themselves out and serious homeowners request the estimate.
+- Give a price range for a two-car garage instead of a price list, so DIY-kit shoppers filter themselves out.
 
 ## What is the one job of a floor coating contractor website?
 
-A floor coating contractor's website is not a brochure. It has one job: get a homeowner who is looking at their ugly garage floor to request an estimate. Everything on the page either moves them toward that request or gets in the way. We see this daily, because homeowners who click our clients' ads often check the company's site before they answer the phone, and the bad sites make them quietly decide to call someone else.
+A floor coating contractor's website is not a brochure. It has one job: get a homeowner who is looking at their ugly garage floor to request an estimate. Everything on the page either moves them toward that request or gets in the way. Homeowners who click our clients' ads often check the company's site before they answer the phone, and a bad site makes them quietly decide to call someone else.
 
 ## What are the eight things a floor coating website needs?
 
@@ -39,7 +39,7 @@ Under it, one line that says what you do and where: "Garage floor coatings in [M
 
 "Get a Free Estimate" should appear at the top, after the gallery, after the reviews, and at the bottom. Same words each time. A phone number that is tappable on mobile sits next to it.
 
-Pages that offer six different actions, from "learn more" to "download our brochure," produce fewer estimates than pages that offer one. Homeowners are not confused about what they want. They want someone to come look at the floor.
+Pages that offer six different actions, from "learn more" to "download our brochure," produce fewer estimates than pages that offer one. Homeowners want someone to come look at the floor.
 
 ### 3. A form that takes thirty seconds
 
@@ -55,7 +55,7 @@ If you have fewer than ten reviews, this is the highest-return fix on the list. 
 
 ### 5. A gallery that loads fast on a phone
 
-Most homeowners will see your site on a phone, often on a slow connection in their own garage. Twenty full-resolution photos that take eight seconds to load are twenty reasons to leave. Compress the images, show eight to twelve of your best floors, and label each one with the town and the system. Flake color samples belong here too, because homeowners love picking colors and a color picker keeps them on the page.
+Most homeowners will see your site on a phone, often on a slow connection in their own garage. Twenty full-resolution photos that take eight seconds to load are twenty reasons to leave. Compress the images, show eight to twelve of your best floors, and label each one with the town and the system. Flake color samples belong here too, because a color picker keeps homeowners on the page.
 
 ### 6. Pricing context without a price list
 
@@ -85,17 +85,11 @@ List the towns you serve. It helps Google match you to "garage floor coating [To
 - **Slow page speed.** Test it on your phone on cellular, not on your office wifi.
 - **No tracking.** If you cannot see which pages and which ads produced each form, you cannot fix anything. Install Google Analytics and the Meta pixel, and tag your ad links.
 
-## Should Meta ads send homeowners to your website or a lead form?
-
-Send paid traffic to a dedicated landing page, not the native Meta lead form. Our [benchmarks](/floor-coating-benchmarks) show a landing page beats the native form on lead quality, because the form auto-fills in two taps while a homeowner who reads the page and types in their details has decided they want a quote.
-
-The same benchmarks put speed to lead ahead of every other lever: about 90 percent of leads answer when called within one minute, and 60 to 70 percent should become booked estimates. If your [lead to appointment rate](/blog/floor-coating-lead-to-appointment-rate) sits well under that range, the follow-up is usually the problem, not the page.
-
 ## Where does the website fit with ads?
 
 A website does not create demand. Someone has to arrive, and for most coating contractors that means homeowners searching Google or homeowners who saw a before-and-after in a [Meta ad](/blog/meta-ads-for-floor-coating-contractors). Our comparison of [Google Ads and Meta ads for floor coating](/blog/google-ads-vs-meta-ads-floor-coating) covers which to fund first.
 
-Treat the site as the middle of a system: an ad or a search brings the homeowner, the site earns the estimate request, and a fast follow-up turns the request into a booked appointment. Miss any of the three and the other two are wasted.
+Send that paid traffic to a dedicated landing page, not the native Meta lead form. Our [benchmarks](/floor-coating-benchmarks) show a landing page beats the native form on lead quality, because the form auto-fills in two taps while a homeowner who reads the page and types in their details has decided they want a quote. The same benchmarks put speed to lead ahead of every other lever: about 90 percent of leads answer when called within one minute, and 60 to 70 percent should become booked estimates. If your [lead to appointment rate](/blog/floor-coating-lead-to-appointment-rate) sits well under that range, the follow-up is usually the problem, not the page.
 
 ## Frequently asked questions
 
@@ -105,7 +99,7 @@ The first screen of a floor coating contractor website should show a real before
 
 ### How many fields should a floor coating estimate form have?
 
-A floor coating estimate form needs four fields: name, phone, town, and one optional line about the project. Every extra field, from square footage to preferred color, removes a share of submissions, and you will collect those details on the call anyway. The short form only works if someone calls the homeowner back within minutes of the submission.
+A floor coating estimate form needs four fields: name, phone, town, and one optional line about the project. Every extra field, from square footage to preferred color, removes a share of submissions, and you will collect those details on the call anyway. The short form only works if someone calls the homeowner back within minutes.
 
 ### Should a floor coating contractor publish prices on their website?
 
@@ -117,6 +111,6 @@ Respond to a floor coating estimate request within about one minute. Around 90 p
 
 ## Make the site earn the estimate, then answer fast
 
-Fix the eight items in order, starting with the before-and-after, the single button, and the four-field form, then get to ten Google reviews and test the page on your phone on cellular. A site that does those things earns the estimate request. A one-minute callback turns it into a booked appointment.
+Fix the eight items in order, starting with the before-and-after, the single button, and the four-field form, then get to ten Google reviews and test the page on your phone on cellular. A site that does those things earns the estimate request, and a one-minute callback turns it into a booked appointment.
 
 If you would rather have the ads and the follow-up handled while your site does its part, that is what Appointly's [appointment setting for contractors](/appointment-setting-for-contractors) covers. [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will look at your site, your market, and your calendar together.
