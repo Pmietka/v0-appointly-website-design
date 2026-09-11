@@ -15,7 +15,8 @@ const staticRoutes: {
   priority: number;
 }[] = [
   { path: "/", lastModified: "2026-09-02", changeFrequency: "weekly", priority: 1 },
-  { path: "/blog", lastModified: "2026-09-02", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/blog", lastModified: "2026-09-11", changeFrequency: "weekly", priority: 0.8 },
+  { path: servicePages.benchmarks, lastModified: "2026-09-11", changeFrequency: "monthly", priority: 0.85 },
   { path: "/about", lastModified: "2026-09-02", changeFrequency: "monthly", priority: 0.8 },
   { path: "/how-it-works", lastModified: "2026-09-02", changeFrequency: "monthly", priority: 0.8 },
   { path: "/faq", lastModified: "2026-09-02", changeFrequency: "monthly", priority: 0.7 },

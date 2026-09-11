@@ -14,6 +14,7 @@ export const servicePages = {
   agencyAlternative: "/floor-coating-marketing-agency-alternative",
   appointmentSetting: "/appointment-setting-for-contractors",
   smallMarkets: "/floor-coating-leads-small-markets",
+  benchmarks: "/floor-coating-benchmarks",
 } as const;
 
 const blog = (slug: string) => `/blog/${slug}`;
@@ -52,6 +53,12 @@ export const commercialResources: Record<string, Resource[]> = {
       title: "Pricing",
       description:
         "See how paying per booked appointment compares to monthly-fee agencies.",
+    },
+    {
+      href: servicePages.benchmarks,
+      title: "Floor Coating Lead and Sales Benchmarks",
+      description:
+        "Lead to appointment rate, answer rate, show rate, and price per square foot from live coating accounts.",
     },
     {
       href: blog("what-is-a-booked-floor-coating-estimate-worth"),
@@ -168,6 +175,12 @@ export const commercialResources: Record<string, Resource[]> = {
       title: "Speed to Lead Wins the Job",
       description:
         "Why the first coating contractor to call back gets the estimate, with the numbers behind it.",
+    },
+    {
+      href: servicePages.benchmarks,
+      title: "Lead and Sales Benchmarks",
+      description:
+        "The answer rate, lead to appointment rate, and show rate a contractor should expect with instant follow up.",
     },
     {
       href: blog("how-to-close-more-floor-coating-estimates"),

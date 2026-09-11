@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CalendarDays, Clock3, Search } from "lucide-react";
+import { ArrowRight, CalendarDays, Clock3, Database, Search } from "lucide-react";
 
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { formatBlogDate, getBlogPath, getBlogPosts } from "@/lib/blog";
+import { servicePages } from "@/lib/seo-resources";
 
 export const metadata: Metadata = {
   title: "Floor Coating Contractor Marketing Blog | Appointly",
@@ -60,6 +61,46 @@ export default async function BlogIndexPage() {
 
         <section className="section-divider py-24 md:py-32">
           <div className="mx-auto max-w-6xl px-6">
+            <Link
+              href={servicePages.benchmarks}
+              className="group mb-16 flex flex-col gap-8 overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 p-8 text-white shadow-[0_20px_60px_rgba(15,23,42,0.12)] transition-transform hover:-translate-y-1 md:flex-row md:items-center md:justify-between md:p-10"
+            >
+              <div className="max-w-2xl">
+                <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-white/70">
+                  <Database className="h-3.5 w-3.5" />
+                  Industry Benchmarks
+                </p>
+                <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-white md:text-4xl">
+                  Floor Coating Lead and Sales Benchmarks
+                </h2>
+                <p className="mt-4 text-sm leading-7 text-white/75 md:text-base">
+                  Lead to appointment rate, phone answer rate, show rate, price per square
+                  foot, and seasonality from live garage floor coating accounts. Updated
+                  quarterly.
+                </p>
+                <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-white">
+                  See the numbers
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </span>
+              </div>
+              <dl className="flex shrink-0 flex-wrap gap-x-8 gap-y-5 md:gap-x-10">
+                {[
+                  { stat: "60 to 70%", label: "Lead to appointment" },
+                  { stat: "90%", label: "Answer rate" },
+                  { stat: "95%", label: "Show rate" },
+                ].map((item) => (
+                  <div key={item.label} className="flex flex-col">
+                    <dt className="order-2 whitespace-nowrap text-xs font-medium uppercase tracking-[0.15em] text-white/60">
+                      {item.label}
+                    </dt>
+                    <dd className="whitespace-nowrap font-display text-xl font-bold tracking-tight text-white sm:text-2xl md:text-3xl">
+                      {item.stat}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </Link>
+
             <div className="mb-10 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
