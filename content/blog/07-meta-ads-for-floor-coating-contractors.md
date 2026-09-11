@@ -1,227 +1,165 @@
 ---
-title: "Meta Ads for Floor Coating Contractors That Actually Book Estimates"
 seo_title: "Meta Ads for Floor Coating Contractors That Book Jobs"
-meta_description: "The right Meta ad strategy for floor coating contractors. Campaign structure, targeting, speed to lead, and how to turn ads into booked estimates."
+meta_description: "How floor coating contractors run Meta ads that book estimates: campaign structure, landing page vs lead form, budget, speed to lead, and the benchmarks to hit."
 date: 2025-12-30
-updated: 2026-09-02
+updated: 2026-09-11
 author: patrick
 cluster: marketing-channels
 ---
 # Meta Ads for Floor Coating Contractors That Actually Book Estimates
 
-Most contractor Meta ads fail. You're not alone if you've thrown money at Facebook and Instagram and watched it disappear. I see it all the time. Floor coating contractors run ads, get clicks, get zero [booked estimates](/floor-coating-leads). They blame Meta. They blame the platform. Usually, though, it's the ad, the setup, or the follow-up.
+**Meta Description:** How floor coating contractors run Meta ads that book estimates: campaign structure, landing page vs lead form, budget, speed to lead, and the benchmarks to hit.
 
-The truth is simple: Meta ads work great for floor coating contractors when they're set up the right way and followed up on fast. The problem is that 90% of contractors set them up wrong, then never call the leads quickly enough to book anything.
+---
 
-Here's what I'm going to show you. The exact campaign structure that works. How to target homeowners in your service area. When to use lead forms versus landing pages. What budget actually makes sense. And the single most important thing nobody talks about: [speed to lead](/blog/speed-to-lead-wins-floor-coating-jobs), the difference between a lead and a booked estimate.
+Meta ads book floor coating estimates when three things are in place: a before-and-after creative that only a homeowner would stop for, a landing page instead of the native lead form, and a call to every lead within one minute of the form submit. Get those right and 60 to 70% of leads should become booked estimates. Get them wrong and the budget disappears into clicks.
 
-If you spend the next 30 minutes reading this and the next 2 hours setting it up, you'll be getting leads within 7 to 14 days. I've seen it work for epoxy garage floor guys, [polyaspartic](/blog/polyaspartic-vs-epoxy-garage-floors) specialists, and basement and patio coating contractors.
+## Key takeaways
 
-## Why Most Contractor Meta Ads Fail
+- Run two campaigns only: a lead campaign that sends homeowners to a landing page, and a retargeting campaign for site visitors from the last 90 days.
+- On Meta the creative is the targeting. A glossy flake floor in a real garage filters for homeowners better than any interest stack.
+- Call every lead within one minute of the form submit. About 90% of leads answer at that speed, and the rate falls off fast after it.
+- With fast follow-up, 60 to 70% of leads should become booked estimates. Below that, the problem is speed or creative, not Meta.
+- Start at $15 to $30 per day, give the campaign 2 to 3 weeks to learn, and only scale once the follow-up holds.
 
-Before we build the right setup, let's talk about why the wrong setup destroys your budget.
+## Why do most contractor Meta ads fail?
 
-Most contractors do one of three things wrong:
+Most contractor Meta ads fail for one of three reasons: the audience is too broad, the offer is vague, or nobody calls the lead fast enough. The platform gets blamed. The setup and the follow-up are almost always the real problem.
 
-**Wrong #1: They target too broad.** They run ads to "homeowners in my state" or "people interested in home improvement." You're not selling to everyone. You're selling to homeowners who have an ugly, stained, or cracked floor they want fixed, and are ready to act. Broad targeting burns money on unqualified clicks.
+**Too broad.** Ads aimed at "homeowners in my state" or "people interested in home improvement" pay for clicks from renters, tire kickers, and people two hours outside your service area. You want homeowners with a stained, cracked, or dusty slab who are ready to act.
 
-**Wrong #2: They use the wrong ad and the wrong offer.** They run brand awareness ads or vague conversion ads with no clear offer. The ad says "Call us for floor coating quotes." That doesn't work. Nobody wakes up excited to get a quote. You have to lead with a benefit and a visual. "Transform your garage floor in one day" works, with a glossy before-and-after. "Call for quote" doesn't.
+**Wrong offer.** "Call us for floor coating quotes" does not stop a scroll. Nobody wakes up wanting a quote. Lead with the result and a visual: "Transform your garage floor in one day" next to a glossy before-and-after.
 
-**Wrong #3: They don't follow up fast.** This is the big one. They run ads, get leads, and never call them in time. A lead from Meta is warm but impatient. It's a homeowner who saw your before-and-after, thought "I want that," and filled out a form, then filled out two more on competitors' ads. If you don't contact them within minutes, someone else books the estimate. Most contractors get the lead and sit on it for a day. By then the floor is already promised to another coater.
+**Slow follow-up.** This is the big one. A Meta lead is warm but impatient. The homeowner who filled out your form likely filled out two more on competitors' ads. If you call the next day, the floor is already promised to another coater. [Speed to lead](/blog/speed-to-lead-wins-floor-coating-jobs) decides who books the estimate.
 
-Fix these three things and Meta ads become predictable booked estimates.
+Fix those three and Meta ads turn into a predictable stream of booked estimates. If a campaign that used to work has gone quiet, the same three causes are the first place to look, and we cover the diagnosis in [why floor coating ads stop working](/blog/floor-coating-ads-stopped-working).
 
-## Campaign Structure That Works for Floor Coating
+## What campaign structure works for floor coating?
 
-Here's the exact setup. Build this and you'll win.
+Two campaigns. Not one, not five. A lead campaign pulls in homeowners who want a new floor, and a retargeting campaign pushes the ones who looked but did not submit.
 
-You're going to run two campaigns. Not one. Not five. Two.
+| Setting | Lead campaign | Retargeting campaign |
+|---|---|---|
+| Objective | Leads (conversions on your landing page) | Leads or conversions |
+| Audience | Homeowners inside your service radius | Website visitors from the last 90 days |
+| Destination | Your landing page with a short form | Same landing page |
+| Creative | Your best before-and-after, or video of the flake broadcast | Single image or short video with one clear call to action |
+| Budget | $20 to $30 per day to start | $10 to $15 per day |
+| Runs | Continuously | Continuously |
 
-**Campaign One: Lead Generation Campaign**
+The lead campaign is the workhorse and generates leads around the clock. The retargeting campaign is cheap because the person already knows you exist. If you are weighing this against search, [Google Ads versus Meta ads for floor coating](/blog/google-ads-vs-meta-ads-floor-coating) covers when each one earns its budget.
 
-This campaign runs lead form ads to homeowners who are actively interested in upgrading their floors. The goal is to get qualified leads fast and cheap.
+## How should you target homeowners in your service area?
 
-Set it up in Meta Ads Manager:
+Draw a tight radius around the area you actually work, and let the creative do the rest. On Meta the creative is the targeting: a real garage floor with a fresh flake system gets stopped by homeowners and ignored by everyone else. With the right creative, 100% of leads can be homeowners.
 
-- Campaign objective: Leads
-- Audience: Homeowners, ages 35 to 65, in your service area, who have shown interest in home improvement, garages, home renovation, or real estate
-- Ad format: Lead form ads (not link clicks, not messages)
-- Creative: Your best before-and-after of a garage floor. Video of the flake broadcast works even better.
-- Budget: Start with $20 to $30 per day
-- Duration: Run it continuously
+**Location.** If you coat floors within 20 miles of the shop, target a 20-mile radius. Do not target the whole county or state.
 
-This campaign is your bread and butter. It generates leads around the clock.
+**Age.** Ages 35 to 65 is a reasonable guardrail. Younger people are more likely to rent. It is a guardrail, not a strategy, and it matters far less than the creative.
 
-**Campaign Two: Retargeting Campaign**
+**Interests.** Home improvement, garages and workshops, DIY and tools, and real estate are fine as a starting stack. Do not layer on a dozen interests and shrink the audience to nothing. Meta needs room to find the right people.
 
-This campaign shows ads to people who visited your website but didn't reach out. Retargeting ads are cheap and they work because the person already knows you exist.
+**Exclusions.** Exclude people who already submitted a form or visited your site recently from the lead campaign. They belong to the retargeting campaign.
 
-Set it up:
+## Should you use a Meta lead form or a landing page?
 
-- Campaign objective: Conversions or Leads
-- Audience: Website visitors from the last 90 days
-- Ad format: Single image or short video with a strong CTA
-- Budget: $10 to $15 per day
-- Duration: Continuous
+Use a landing page. The native Meta lead form gets more submissions at a lower cost, but a landing page beats it on lead quality, and lead quality is what your calling team and your calendar actually feel.
 
-These two campaigns together create a pull and a push. The lead gen campaign pulls in homeowners shopping for a new floor. The retargeting campaign pushes warm prospects to book.
+The native form pre-fills name and phone from the person's profile, so a tap while scrolling counts as a lead. Many of those people barely remember submitting. A landing page adds one click of friction, and that click filters for homeowners who actually want the floor. Fewer leads, more booked estimates.
 
-## Targeting Homeowners in Your Service Area
+Keep the landing page simple. One before-and-after gallery, a clear "free in-home estimate" offer, and a form that asks three things:
 
-This is where most contractors go wrong. They either target too broad or they don't geotarget at all.
-
-Here's the exact targeting setup:
-
-**Location:**
-Pick your service area geographically. If you coat floors within 20 miles of your shop, geotarget a 20-mile radius from your address. Don't target your entire county. Target only the areas you actually work in.
-
-**Age and Demographics:**
-Ages 35 to 65. This is your sweet spot. People under 35 are more likely to rent or not own a home yet. People over 65 are less likely to invest in a garage upgrade. 35 to 65 is where the money is.
-
-**Interests and Behaviors:**
-Include people who have shown interest in:
-- Home improvement
-- Home renovation
-- Garages and workshops
-- DIY and tools
-- Real estate
-- Home and garden
-
-Exclude people who have already engaged with you or visited your website recently (except for the retargeting campaign, which specifically targets these people).
-
-**Homeownership:**
-Use Meta's homeowner targeting where available. This filters for people who actually own the home they'd be coating.
-
-This targeting mix gives you high-intent prospects without burning money on unqualified audiences.
-
-## Lead Forms Versus Landing Pages
-
-Here's the question every contractor asks: Should I use Meta lead form ads or send people to a landing page?
-
-The answer for most is lead forms. Here's why.
-
-Lead form ads have a form that pops up right inside Facebook or Instagram. The prospect doesn't have to leave the app, click through, wait for a page to load, and fill out another form. They just fill out the form that's already there. Friction is gone. Conversion rate is way higher.
-
-Use landing pages only if:
-- You want to show a full gallery or video tour of your finished floors first
-- You want to build serious trust before capturing the lead
-- You're running a higher-ticket commercial or showroom floor offer
-
-For most residential floor coating contractors, lead forms are better. People don't need a sales essay. They saw the glossy before-and-after. They just need to raise their hand.
-
-The form should ask three things:
 1. Name
 2. Phone number
-3. Brief question: "What floor are you looking to coat?" (garage, basement, patio, showroom, etc.)
+3. What floor they want coated (garage, basement, patio, shop)
 
-That's it. The longer the form, the lower the conversion. Keep it short, then call fast.
+The longer the form, the lower the conversion. Keep it short, then call fast.
 
-## Speed to Lead: Where Estimates Are Won or Lost
+## Why does speed to lead decide whether the estimate gets booked?
 
-This is the part nobody wants to hear and everybody needs to.
+A floor coating lead is worth the most in the first minute after the form submit. Called within one minute, about 90% of leads answer. Called an hour later, you are talking to someone who already scheduled with a competitor, and by the next day the lead is close to dead. Those numbers, and the rest of what a healthy funnel looks like, are on our [floor coating benchmarks](/floor-coating-benchmarks) page.
 
-A floor coating lead is only valuable for a few minutes. The homeowner who filled out your form just filled out two or three others. Whoever calls first usually books the estimate. Whoever calls an hour later is talking to someone who already scheduled with a competitor.
+So before you run a single ad, answer this: who is calling these leads, and how fast? If the answer is "me, whenever I get off a job site," your booked estimate rate will be a fraction of what it could be.
 
-The data is brutal: contact a lead within 5 minutes and your odds of booking them are dramatically higher than waiting even 30 minutes. Wait a day and the lead is essentially dead.
+This is why so many floor coating contractors stop running their own ads and hand off the front end. Generating the lead is the easy part. Calling it within a minute, every time, day and night, and getting it on the calendar is where the money is.
 
-So before you run a single ad, answer this: who is calling these leads, and how fast? If the answer is "me, whenever I get off a job site," your booked-estimate rate is going to be a fraction of what it could be.
+## What ad copy gets clicks?
 
-This is exactly why so many floor coating contractors stop running their own ads and hand it off. Generating the lead is the easy part. Calling it within minutes, every time, day and night, and actually getting it on the calendar, that's the hard part, and it's where the money is.
+Good ad copy has three parts: a hook that stops the scroll, one clear benefit, and a single call to action. The visual does most of the work.
 
-## Ad Copy That Gets Clicks
+Example, paired with a glossy before-and-after image or a flake broadcast video:
 
-Your ad copy and creative make or break the campaign. Here's what works.
+> Homeowners in [City] are turning cracked, stained garage floors into showroom-quality coated floors in a single day.
+>
+> Full grind, full flake system, [polyaspartic](/blog/polyaspartic-vs-epoxy-garage-floors) topcoat. Drive on it in 24 hours. Lasts for years and wipes clean.
+>
+> Tap below to claim your free in-home estimate.
 
-**Good ad copy has three parts:**
+This works because the floor sells itself, the benefit is specific (one day, durable, easy to clean), the offer is free and in-home, and there is only one thing to do next. You do not need to be clever. You need a great photo and a clear message.
 
-1. A hook that stops the scroll
-2. A clear benefit
-3. A single call to action
+## How much should you budget for Meta ads?
 
-Example, paired with a glossy before-and-after image or a flake-broadcast video:
+Start small enough to prove the follow-up works, then scale.
 
-"Homeowners in [City] are turning cracked, stained garage floors into showroom-quality coated floors, in a single day.
+**To test:** $15 per day for 2 to 4 weeks, or $420 to $840 total. You will get a handful of leads in most markets and know quickly whether your calling process holds up.
 
-Full grind, full flake system, polyaspartic topcoat. Drive on it in 24 hours. Lasts for years and wipes clean.
+**To run steadily:** $30 to $50 per day. This is where most contractors should sit once they can call every lead within a minute.
 
-Tap below to claim your free in-home estimate."
+**To dominate a market:** $75 to $150 per day. You become the coater everyone in the area sees, and volume climbs with it.
 
-Why does this work?
+Do not start at scale. Prove you can book the leads you already get. Then turn the dial.
 
-- The visual stops the scroll (a beautiful floor sells itself)
-- It identifies the benefit (one-day transformation, durable, easy to clean)
-- It removes friction (free, in-home, no pressure)
-- It has a clear CTA (claim your estimate)
+## What good numbers look like
 
-You don't need to be clever. You need a great photo and a clear message.
+Judge a Meta campaign by what happens after the form submit, not by what a lead costs. These are the published [floor coating benchmarks](/floor-coating-benchmarks) we hold campaigns to:
 
-## Budget Recommendations
+| Metric | Benchmark |
+|---|---|
+| Lead to booked estimate | 60 to 70% of leads |
+| Phone answer rate | 90% when called within one minute |
+| Show rate with no reminders | About 80% |
+| Show rate with a confirmation, 24-hour and 1-hour reminders, and a person triaging | About 95% |
+| Homeowner share of leads | 100% with the right creative |
+| Close rate | No single benchmark. Depends on product and the estimator |
 
-Here's what actually works for floor coating budgets.
+Run the math on your own numbers. Say your average epoxy garage floor is $4,000. If 60% of leads become estimates, 95% of those show, and you close a reasonable share, ad spend ends up a small slice of the revenue it produces. If your lead to estimate rate is 30%, the ads are fine and the follow-up is the leak.
 
-**To test if Meta ads work for your business:**
-$15 per day, 2 to 4 weeks. This is your test budget. Spend $420 to $840 total. At this level, you'll get a handful of leads in most markets. You'll know fast if it works, assuming you call them quickly.
+Track three numbers every week: lead to estimate rate, show rate, and close rate. Every one of them moves with speed to lead.
 
-**To scale and get consistent leads:**
-$30 to $50 per day. This is where most contractors should be. You'll get a steady flow of leads per month depending on your market and competition.
+## What mistakes kill a floor coating campaign?
 
-**To dominate your market:**
-$75 to $150 per day. You're now the most visible floor coater in your area, all over local feeds with before-and-afters. The lead volume climbs accordingly.
+**No follow-up system.** Decide who calls, how fast, and with what script before the first ad runs. This matters more than the ad itself.
 
-Don't start at scale. Start at test. Prove it works and prove you can follow up fast. Then scale.
+**No tracking.** Install the Meta pixel on your landing page and track which leads became estimates and which estimates became jobs. Without that, you cannot tell a good campaign from a bad one.
 
-## What Good Numbers Look Like
+**No offer or visual.** "Get a free quote" next to a logo does nothing. A stunning before-and-after next to "one day install" does.
 
-What Meta charges to generate a lead varies by market, but the real number that matters is what it costs to get a booked estimate, and then a closed job.
+**Pausing too early.** Meta's algorithm learns for the first week or two, and early lead costs run high. Pausing at day five kills the campaign during learning. Give it 2 to 3 weeks.
 
-A raw lead is cheap. A booked estimate that actually shows up is what you're really paying for, and that depends entirely on speed to lead and follow-up.
+## Frequently asked questions
 
-Run the math with example job values. Say you generate leads at $30 each, and with fast follow-up you book and hold a good share of them as estimates. If your average epoxy garage floor is worth $4,000 and you close a reasonable fraction of the estimates you sit, your acquisition cost per job is a small slice of revenue. That's healthy.
+### How long until Meta ads produce floor coating leads?
 
-Track three numbers: what each Meta lead costs you, your booked-estimate rate (which lives or dies on speed to lead), and your average job value. That's your ROI math.
+First leads from a new floor coating campaign usually arrive within 3 to 7 days of launch. By day 21 the algorithm has settled and you have a clear picture of lead volume and, more importantly, how many of those leads became booked estimates. Judge the campaign on that booking rate, not on the first week's numbers.
 
-## Avoiding the Biggest Mistakes
+### Should floor coating ads use a photo or a video?
 
-**Mistake #1: Running ads with no follow-up system**
+Video wins for floor coating. A short clip of the grind and flake broadcast, or a slow pan across a glossy finished floor, stops the scroll better than a still image. If you only have photos, lead with your single best before-and-after of a real garage, shot in good light, with the old slab clearly visible in the first frame.
 
-Ad brings the homeowner in. They fill the form. Then what? If you don't call within minutes, they've already booked another coater. Set up your follow-up process before you run ads. Decide who calls, how fast, and with what script. This matters more than the ad itself.
+### What if Meta leads are not turning into estimates?
 
-**Mistake #2: Not tracking what converts**
+When Meta leads are not turning into booked floor coating estimates, the cause is almost always speed. The homeowner was called hours later and had already booked someone else. Tighten follow-up to one minute and the booking rate usually recovers. If leads are genuinely junk, switch from the native lead form to a landing page and put a real garage floor in the creative.
 
-If you don't know how many leads came from Meta and how many became booked estimates, you can't measure ROI. Use the Meta pixel on your website and track which leads actually turned into jobs.
+### Can floor coating contractors run Meta ads year round?
 
-**Mistake #3: Running ads with no compelling offer or visual**
+It depends on the market. Florida, the Gulf Coast, and the Carolinas book floor coating estimates year round, so ads can run continuously there. Everywhere else, demand is strong from spring through fall and drops in winter unless you can coat in cold conditions. In colder markets, keep a small budget running in winter and scale it back up in early spring.
 
-"Get a free quote" with a logo doesn't work. "Transform your garage floor in one day" with a stunning before-and-after does. Lead with benefit and a great image, not the ask.
+### How much should a floor coating contractor spend on Meta ads?
 
-**Mistake #4: Pausing ads too fast**
+Start a floor coating Meta campaign at $15 to $30 per day and run it for 2 to 4 weeks before judging it. That is enough to produce a handful of leads in most markets and test whether your follow-up holds. Once you are calling every lead within a minute and booking most of them, move to $30 to $50 per day and scale from there.
 
-Meta's algorithm learns. For the first week, your lead costs run high. By week three they improve. If you pause after one week because results aren't instant, you're killing it during the learning phase. Give campaigns at least 2 to 3 weeks to optimize.
+## Get booked estimates without running the ads yourself
 
-## FAQ
+Meta ads work for floor coating when the setup is right and the lead gets called within a minute. That second part is the hard part, and it is why most contractors eventually hand off the front end. We run the ads, call every lead inside a minute, and book the estimate straight onto your calendar. You pay one flat fee per [booked floor coating estimate](/floor-coating-leads) and nothing for leads that never book.
 
-**How long until I see results?**
-
-First leads typically come within 3 to 7 days. By day 21, you'll have a clear picture of what each lead costs and, more importantly, how many of those leads you're actually booking as estimates.
-
-**Should I use a single image or video?**
-
-For floor coating, video wins. A short clip of a grind and flake broadcast, or a slow pan across a glossy finished floor, stops the scroll cold. If you only have photos, lead with your best before-and-after.
-
-**What if I'm getting leads but they're not turning into estimates?**
-
-Nine times out of ten, it's speed to lead. You're calling too slow and the homeowner already booked someone else. Tighten your follow-up to minutes, not hours. If the leads themselves are junk, tighten your targeting and offer.
-
-**Can I run Meta ads year-round?**
-
-Yes. Floor coating isn't as seasonal as people think. Polyaspartic coatings cure fast even in cooler weather, and homeowners plan garage and basement projects year-round. Consistency beats sporadic campaigns.
-
-## Get Booked Estimates Without Running Ads Yourself
-
-Meta ads work, but the lead is only worth something if it gets called within minutes and booked onto your calendar. That's the hard part, and it's why most floor coating contractors hand it off.
-
-At Appointly, we run the whole thing. The model is simple: you pay one flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book. We build and run the Meta ads, we hit every lead with speed to lead before they can shop other coaters, and we book the estimate into a time that works for you. [One contractor per market](/exclusive-floor-coating-leads), exclusive. You just show up, quote the floor, and collect.
-
-Run your own ads if you want to learn the game. When you're ready to stop chasing leads and just close booked estimates, hand it to us.
-
-[Visit getappointly.co to talk about filling your calendar.](https://getappointly.co)
+Run your own ads if you want to learn the game. When you would rather just show up and quote floors, [book a strategy call](https://client.getappointly.co/strategy-calendar) and we will look at your market together.

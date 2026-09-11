@@ -2,7 +2,7 @@
 seo_title: "Floor Coating Lead Follow-Up Scripts: Calls and Texts"
 meta_description: "Word-for-word call and text scripts for floor coating leads: the first five minutes, the voicemail, the three-day follow-up, and how to book the estimate."
 date: 2026-09-02
-updated: 2026-09-02
+updated: 2026-09-11
 author: jacob
 cluster: sales
 ---
@@ -13,23 +13,30 @@ cluster: sales
 
 ---
 
-## Why Scripts Matter More Than Ad Budget
+Text the homeowner the moment the lead arrives, call within one minute, and spend that call booking a specific day and time instead of selling the floor. Then leave a fifteen-second voicemail and run three texts and three calls over the next three days. The scripts below are the exact words for each step, plus the confirmation texts that keep the estimate from no-showing.
 
-Our team makes hundreds of calls a week to homeowners who just asked for a floor coating estimate. The pattern is the same in every market: the words you use in the first two minutes decide whether you book the estimate or join the pile of contractors the homeowner "will get back to." Below are the exact scripts we use, adapted so you can run them yourself. They assume the homeowner submitted a form, on Facebook, Instagram, your website, or a marketplace, asking for a quote.
+## Key takeaways
 
-One rule before the scripts: [speed to lead](/blog/speed-to-lead-wins-floor-coating-jobs) comes first. A perfect script delivered an hour late loses to a clumsy call made in three minutes.
+- Send a text the second the lead arrives, then call within one minute, because about 90% of homeowners answer a call that fast.
+- Keep the first call under four minutes, offer two specific time slots, and never quote a firm price before you see the slab.
+- Leave a fifteen-second voicemail every time, then run three texts and three calls over three days before moving the lead to a monthly check-in.
+- A confirmation at booking plus reminders 24 hours and one hour out lifts show rate from about 80% to about 95%.
 
-## Minute Zero: The Instant Text
+## Why does the script matter more than the ad budget?
 
-Send this the moment the lead arrives, before you call. It buys you a warm phone call instead of a cold one.
+The words you use in the first two minutes decide whether you book the estimate or join the pile of contractors the homeowner "will get back to." The scripts assume the homeowner submitted a form on Facebook, Instagram, or your website asking for a quote.
+
+One rule first: [speed to lead](/blog/speed-to-lead-wins-floor-coating-jobs) beats everything. Our [benchmarks](/floor-coating-benchmarks) show a 90% answer rate when the lead is called within one minute of submitting the form. A perfect script delivered an hour late loses to a clumsy call made in three minutes.
+
+## Minute zero: what to text the instant the lead arrives
+
+Send this before you call. It turns a cold call into a warm one.
 
 > Hi [First name], this is [Your name] with [Company]. I just saw your request for a free garage floor coating estimate in [Town]. I'm going to give you a quick call in a minute to set up a time. If you'd rather text, what day works best for us to come take a look?
 
-Three things this text does: it names the estimate the homeowner requested, so it never reads as a sales call. It tells them a call is coming so they pick up. And it asks a question, so the homeowner has something to reply to.
+This text names the estimate they requested, warns them a call is coming so they pick up, and ends with a question they can answer. Avoid "Let us know if you have any questions." That closes the loop and gets no reply.
 
-Avoid "Let us know if you have any questions." That closes the loop and gets no reply.
-
-## Minutes One to Five: The First Call
+## Minutes one to five: how to run the first call
 
 The goal of the first call is not to sell a floor. It is to get a date and time on the calendar. Keep it under four minutes.
 
@@ -41,7 +48,7 @@ The goal of the first call is not to sell a floor. It is to get a date and time 
 
 > Perfect. Is this for your home in [Town]? Great. Is it the garage, or something else like a basement or patio? And roughly, is it a two-car or a three-car?
 
-You are confirming three things: they own the property, the project is one you do, and the size is worth a visit. That is enough. Do not quote a price on this call. Anyone who asks gets a range and a reason to meet:
+That confirms they own the property, the project is one you do, and the size is worth a visit. Do not quote a price. Anyone who asks gets a range and a reason to meet:
 
 > Most two-car garages we do land somewhere between [low] and [high] depending on the condition of the concrete and the system you pick. The estimate is free and takes about 30 minutes, and I'll give you an exact number on the spot.
 
@@ -49,25 +56,23 @@ You are confirming three things: they own the property, the project is one you d
 
 > I've got [Tuesday at 4] or [Thursday at 10]. Which is better for you?
 
-Offer two specific slots, never "when works for you." Two options get a decision. An open question gets "let me check and call you back," which you will never hear from again.
+Offer two specific slots, never "when works for you." Two options get a decision. An open question gets "let me check and call you back," and you never hear back.
 
 **Confirm and close**
 
-> Great, I've got you down for Tuesday at 4 at [Address]. I'll text you a confirmation now and a reminder the morning of. Anyone else who should be there for the decision, like a spouse? Perfect, see you Tuesday.
+> Great, I've got you down for Tuesday at 4 at [Address]. I'll text you a confirmation now and a reminder the day before. Anyone else who should be there for the decision, like a spouse? Perfect, see you Tuesday.
 
-Asking who else should be there is the single highest-leverage question on the call. An estimate with both decision-makers present closes at nearly twice the rate of one with a homeowner who "has to run it by" someone. That matters when you are trying to [close more floor coating estimates](/blog/how-to-close-more-floor-coating-estimates).
+Asking who else should be there is the highest-leverage question on the call. An estimate with both decision-makers present closes far more often, and it removes the most common stall you hear when you try to [close more floor coating estimates](/blog/how-to-close-more-floor-coating-estimates).
 
-## The Voicemail
+## What to say on the voicemail
 
-Most first calls go to voicemail. Leave one every time, and keep it to fifteen seconds.
+Leave a voicemail every time, and keep it to fifteen seconds.
 
 > Hi [First name], [Your name] with [Company]. You requested a free garage floor coating estimate a few minutes ago and I'm calling to set that up. I'll text you a couple of times that work. Talk soon.
 
-Then send the text below immediately.
+## The three-day follow-up text sequence
 
-## The Follow-Up Text Sequence
-
-Roughly half of floor coating leads do not answer the first call. Most of them are not cold. They are at work, driving, or watching kids. The sequence below recovers a large share of them. Send each message at a different time of day than the last.
+Leads who miss the first call are rarely cold. They are at work, driving, or watching kids. Send each message below at a different time of day than the last.
 
 **Text 2, same day, two hours later**
 
@@ -81,46 +86,70 @@ Roughly half of floor coating leads do not answer the first call. Most of them a
 
 > Hi [First name], last note from me on the garage floor. If timing's off right now, no problem at all. If you'd still like the free estimate, reply with a day that works and I'll get it on the calendar.
 
-Pair each text with one call attempt at a different hour: late morning, early evening, and Saturday midday. Five touches over three days is where our booking rate flattens out. Past that, move the lead to a monthly check-in and stop chasing.
+Pair each text with one call attempt at a different hour: late morning, early evening, and Saturday midday. Five touches over three days is enough. Past that, move the lead to a monthly check-in.
 
-## When They Say "Just Send Me a Price"
+## What to say when they ask you to just send a price
 
-You will hear this on a third of calls. Never refuse, and never quote a number without a visit.
+Never refuse, and never quote a firm number without a visit.
 
 > Happy to. The honest answer is that the price depends on what the concrete looks like. If there's moisture, old sealer, or cracks, the prep changes and so does the number. That's why we come out. It's free, it takes 30 minutes, and you'll have an exact price you can hold me to. Does [Tuesday at 4] work?
 
-If they still refuse, give the range, then ask for the estimate again. About one in three come around.
+If they still refuse, give the range, then ask for the estimate again. Many come around once they hear an honest range.
 
-## When They Already Have Quotes
+## What to say when they already have quotes
+
+Agree that comparing is smart, then make it the reason to visit.
 
 > That's smart, you should compare. Most of the quotes we see in [Town] are for two different systems, so it's worth making sure you're comparing apples to apples. Can I come out, look at the floor, and give you a number for the same system? If we're not the best fit, I'll tell you.
 
 Then use the visit to explain [polyaspartic versus epoxy](/blog/polyaspartic-vs-epoxy-garage-floors). Most competing quotes are for a cheaper system, and the homeowner does not know it.
 
-## The Confirmation and Reminder Texts
+## How confirmation and reminder texts lift show rate from 80% to 95%
 
-Booked estimates that are not confirmed no-show at 25 to 35 percent. Confirmed ones no-show at under 10 percent.
+Booked estimates with no reminders show at about 80%. Add a confirmation at booking, a reminder 24 hours out, a reminder one hour out, and a person who follows up with anyone who goes quiet, and show rate climbs to about 95%. That is a 20% no-show rate versus 5% in our [benchmarks](/floor-coating-benchmarks).
 
 **Right after booking**
 
 > Confirmed: free garage floor coating estimate on [Tuesday, June 3] at [4:00 pm], [Address]. I'll bring samples of the flake colors. Reply YES to confirm.
 
-**Morning of the appointment**
+**24 hours before the appointment**
 
-> Morning [First name], [Your name] here. Still good for 4 pm today for the garage floor estimate? I'll be in a [white van with the Company logo].
+> Hi [First name], [Your name] here. Still good for 4 pm tomorrow for the garage floor estimate? I'll be in a [white van with the Company logo].
 
-**Thirty minutes out**
+**One hour out**
 
 > On my way, see you at 4.
 
-## Track Three Numbers
+## Which three numbers should you track?
 
-- **Contact rate:** leads you actually spoke to, divided by leads received. Under 50 percent means you are calling too slowly.
-- **Booking rate:** estimates booked, divided by leads contacted. Good scripts push this past 60 percent.
-- **Show rate:** estimates that happen, divided by estimates booked. Confirmation texts push this past 85 percent.
+Track contact rate, booking rate, and show rate, and compare each against the published benchmark.
 
-Multiply the three and you get the fraction of leads that turn into a homeowner standing in a garage with you. For most contractors running their own follow-up it is under 20 percent. For a dedicated team using these scripts it is over 40 percent, which is the whole reason [appointment setting](/appointment-setting-for-contractors) exists as a service.
+- **Contact rate:** leads you spoke to, divided by leads received. Called within one minute, about 90% answer. Well under that means you are calling too slowly.
+- **Booking rate:** estimates booked, divided by leads received. The benchmark is 60 to 70%.
+- **Show rate:** estimates that happen, divided by estimates booked. About 80% with no reminders, about 95% with the sequence above.
 
-## Or Let Someone Else Make the Calls
+Multiply the three to get the share of leads that become an estimate. Say you reach 50% of leads, book 40% of those, and 80% show: 16 of every 100 leads become an estimate. Hit the benchmarks and the same 100 leads produce roughly 55 to 60. Only the follow-up changed.
 
-These scripts work. The problem is running them from a job site at 2 pm with a grinder going. If you would rather have a team hit every lead in minutes, work the sequence for three days, and drop confirmed estimates on your calendar, that is what Appointly does for [floor coating contractors](/floor-coating-leads). [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will show you the numbers from your market.
+## Frequently asked questions
+
+### How fast should you call a floor coating lead?
+
+Call a floor coating lead within one minute of the form submission. At that speed about 90% of homeowners pick up, because they are still holding the phone they used to submit the request. Every minute you wait lowers the answer rate, and a next-morning call usually finds a homeowner already talking to someone else.
+
+### Should you quote a price over the phone for a garage floor coating?
+
+Give a range on the phone, never a firm number. Say most two-car garages land between your low and high figures depending on the concrete and the system, then explain that the free 30-minute estimate produces an exact price. A firm phone quote invites shopping on price alone and skips the prep conversation that justifies your number.
+
+### How many times should you follow up with a floor coating lead?
+
+Follow up five times over three days: the instant text and first call, then three more texts paired with calls at different hours, including one on a Saturday. After the fifth touch, move the lead to a monthly check-in text. Most recoverable leads respond inside that window.
+
+### What should a confirmation text for a floor coating estimate say?
+
+A confirmation text should restate the day, time, and address, mention that you will bring flake samples, and ask the homeowner to reply YES. Send it right after booking, then a reminder 24 hours out and another one hour out. That sequence moves show rate from about 80% to about 95%.
+
+## Run the scripts yourself or hand off the calls
+
+These scripts work. The hard part is running them from a job site at 2 pm with a grinder going. Put the scripts in your CRM, automate the confirmation texts, and hold whoever answers the phone to the three numbers above.
+
+If you would rather have a team hit every lead in about a minute and drop confirmed estimates on your calendar, that is what Appointly does for [floor coating contractors](/floor-coating-leads). [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will show you your market's numbers.

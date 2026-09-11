@@ -178,6 +178,10 @@ export function BlogMarkdown({ content }: { content: string }) {
   const closeFaq = () => {
     if (!faqMode) return;
     flushFaqItem();
+    if (!faqItems.length) {
+      faqMode = false;
+      return;
+    }
     blocks.push(
       `<div class="mt-6 divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white p-6 md:p-8">${faqItems.join("")}</div>`,
     );

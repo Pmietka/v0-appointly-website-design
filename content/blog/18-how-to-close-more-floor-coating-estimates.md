@@ -2,114 +2,131 @@
 seo_title: "How to Close More Floor Coating Estimates"
 meta_description: "A simple, repeatable in-garage sales process for floor coating contractors: qualify the slab, present good/better/best, handle objections, and ask for the job."
 date: 2026-03-17
-updated: 2026-09-02
+updated: 2026-09-11
 author: jacob
 cluster: sales
 ---
+
 # How to Close More Floor Coating Estimates at the Kitchen Table
 
 **Meta Description:** A simple, repeatable in-garage sales process for floor coating contractors: qualify the slab, present good/better/best, handle objections, and ask for the job.
 
 ---
 
-## Closing Is a Process, Not a Personality
+Close more floor coating estimates by running the same seven-step process on every appointment: confirm the day before, show up with samples, inspect and qualify the slab, present good, better, best from the top down, ask for the job, handle the three objections that always come up, and give a reason to decide today. Consistency beats charisma, and coached estimators close meaningfully better than uncoached ones.
 
-The best closers in floor coating aren't smooth talkers. They run the same repeatable process on every estimate, so nothing gets skipped and the homeowner is guided to a yes. If your close rate swings wildly from week to week, it's not because some customers are "just lookers." It's because you don't have a process you run every single time.
+## Key takeaways
 
-Here's one that works. Steal it, tweak it for your market, and run it the same way on every estimate.
+- A confirmation at booking plus reminders 24 hours and 1 hour out lifts show rate from about 80 percent to about 95 percent.
+- Ask whether a partner will want to weigh in during the inspection, so the spouse is at the table before you present.
+- Present three options from the top down, starting with full polyaspartic, and hand over the numbers in person rather than emailing a quote.
+- Prepare answers for the three objections that repeat on every estimate: the one-day guys are cheaper, talking to a spouse, and just getting quotes.
+- After you present, ask which option fits and then stop talking until the homeowner answers.
 
-## Step 1: The Pre-Call Confirmation
+## Why is closing a process and not a personality?
 
-The estimate starts before you arrive. The day before, or the morning of, the appointment gets a confirmation: time, what to expect, and a quick ask to clear the garage so you can see the slab.
+The best closers in floor coating aren't smooth talkers. They run the same repeatable process on every estimate, so nothing gets skipped and the homeowner is guided to a yes. If your close rate swings from week to week, it isn't because some homeowners are "just lookers." It's because you don't run the same process every time.
 
-This does three things. It cuts no-shows, it gets the floor cleared so you're not climbing over bikes and bins, and it sets you up as organized and professional before you knock. A homeowner who's been confirmed and prepped is in a completely different headspace than one who half-forgot you were coming.
+There's no single close rate benchmark in this trade. In our [benchmarks](/floor-coating-benchmarks), close rate depends on the product you sell and the estimator's sales skill, and coached estimators close meaningfully better than uncoached ones. The process below is the coaching. Steal it, tweak it for your market, and run it the same way on every estimate.
 
-When we book the estimate for you, this confirmation is already handled. The homeowner knows your name, knows the window, and expects you to walk in and quote. That alone removes most of the friction that kills estimates.
+## What does the seven-step kitchen-table process look like?
 
-## Step 2: Show Up Prepared
+Seven steps, from the confirmation the day before to the reason to decide today.
+
+### Step 1: Confirm the appointment before you arrive
+
+The estimate starts before you knock. The day before, or the morning of, the homeowner gets a confirmation: the time, what to expect, and a quick ask to clear the garage so you can see the slab.
+
+This does three things. It cuts no-shows, it gets the floor cleared so you're not climbing over bikes and bins, and it sets you up as organized before you arrive. Show rate runs about 80 percent with no reminders and about 95 percent with a confirmation at booking, a reminder 24 hours out, a reminder 1 hour out, and a person following up with homeowners who go quiet. If [no-shows](/blog/floor-coating-estimate-no-shows) are eating your week, this step is the fix. When we book the estimate for you, this confirmation sequence is already handled.
+
+### Step 2: Show up prepared
 
 You get one shot at a first impression. Roll in with:
 
 - **Physical samples.** Flake chips in several colors, a gloss sample, ideally a small finished board. Something they can hold.
-- **A before/after book or phone gallery** of your actual jobs in their area.
+- **A before-and-after gallery** of your actual jobs in their area, on your phone or in a book.
 - **A clean truck and a clean shirt.** Homeowners are about to let you grind concrete in their house. Look like someone they'd trust to do it.
-- **Your pricing dialed in** so you can present numbers on the spot, not "I'll email you a quote." Quotes you email lose to quotes you hand over in person, every time.
+- **Your pricing dialed in** so you can present numbers on the spot. Quotes you email lose to quotes you hand over in person.
 
-The goal is to walk in looking like the obvious choice before you've said a word about price.
+The goal is to look like the obvious choice before you've said a word about price.
 
-## Step 3: Inspect and Qualify the Slab
+### Step 3: Inspect and qualify the slab
 
 Don't rush to numbers. Get on your knees and look at the floor. This is where you build authority and uncover what the job actually needs:
 
 - Check for cracks, spalling, oil staining, and pitting
 - Do a quick moisture check or note signs of moisture issues
-- Look at the existing coating if there is one, and whether it's failing
+- Look at any existing coating and whether it's failing
 - Note the square footage, the door threshold, and any drains or steps
 
-While you're down there, talk. Ask the qualifying questions that tell you how to sell:
+While you're down there, ask the qualifying questions that tell you how to sell:
 
 - "What are you using the garage for? Just parking, or is this a workshop or gym?"
 - "What's bothering you about the floor now?"
 - "Have you had a coating before? Did it peel or yellow?"
-- "Is this something you're looking to get done soon, or just gathering ideas?"
-- "Are you the decision maker, or is there a partner who'll want to weigh in?"
+- "Is this something you want done soon, or are you gathering ideas?"
+- "Is there a partner who'll want to weigh in on this?"
 
 That last one matters more than any other. If there's a spouse who needs to sign off, you want them at the table before you present, not used as an exit later.
 
-## Step 4: Present Good / Better / Best
+### Step 4: Present good, better, best
 
-Now you present, and you do it top down. Lay out three options and start with the premium one so everything else sounds like a step down:
+Present top down. Lay out three options and start with the premium one so everything else sounds like a step down:
 
-- **Best:** Full polyaspartic, one-day install, UV stable, the floor you'd put in your own garage.
-- **Better:** Epoxy base with polyaspartic topcoat. Tough and durable, still finishes fast.
-- **Good:** Standard epoxy. Looks great day one, budget-friendly, two-day install, and be honest that it can amber in the sun.
+| Option | System | What to say |
+|---|---|---|
+| Best | Full polyaspartic | One-day install, UV stable, the floor you'd put in your own garage |
+| Better | Epoxy base with polyaspartic topcoat | Tough and durable, still finishes fast |
+| Good | Standard epoxy | Looks great day one, budget-friendly, two-day install, and be honest that it can amber in the sun |
 
-Tie each option to what they told you in Step 3. If they said it's a gym, point at the abrasion resistance. If the door faces south, point at UV stability. You're not reading a menu. You're matching the floor to their life.
+Tie each option to what they told you in Step 3. If it's a gym, point at abrasion resistance. If the door faces south, point at UV stability. The [polyaspartic versus epoxy](/blog/polyaspartic-vs-epoxy-garage-floors) differences are your script here. Then give the number for each, plainly and without flinching, and hand them the sheet.
 
-Then give the number for each, plainly and without flinching. Hand them the sheet. Let them see all three and feel the premium option pulling them up.
+### Step 5: Ask for the job
 
-## Step 5: Ask for the Job
+This is where most contractors choke. They present, then trail off into "so, let me know what you think," and hand the homeowner a perfect exit.
 
-This is where most contractors choke. They present, then trail off into "so, uh, let me know what you think," and hand the customer a perfect exit.
+Don't. After you present, go quiet for a second, then ask directly: "Which of these feels like the right fit for you?" or "I've got an opening Thursday. Want me to get you on the schedule?" Then stop talking. Let the silence do the work. If they're ready, book it right there.
 
-Don't. After you present, go quiet for a second, then ask directly:
+### Step 6: Handle the three objections you'll always hear
 
-- "Which of these feels like the right fit for you?"
-- "I've got an opening Thursday. Want me to get you on the schedule?"
+Three objections repeat on nearly every floor coating estimate: "the one-day guys are cheaper," "I need to talk to my spouse," and "I'm just getting quotes." Prepare an answer for each before you ever knock. There's a full set of scripts in our guide to [floor coating sales objections](/blog/floor-coating-sales-objections); here's the short version.
 
-Then stop talking. Let the silence do the work. The person who speaks first usually concedes, and you've earned the right to ask. If they're ready, you book it right there.
+**"The one-day guys are cheaper."** Don't argue and don't badmouth anyone. Arm them to compare: "When you look at that quote, check how many coats, what topcoat they're using, whether it's UV stable, and what the warranty covers. A lot of cheaper quotes are a single thin coat that yellows and peels. Here's exactly what I'm putting down." You just became the contractor who knew the most.
 
-## Step 6: Handle the Two Objections You'll Always Hear
+**"I need to talk to my spouse."** This is why you asked in Step 3. If the partner isn't there, don't push for a decision. Offer to hop on a quick call together or set a specific follow-up time before you leave, and send the three-option sheet so they're looking at the same numbers.
 
-**"I need to think about it."**
+**"I'm just getting quotes."** This usually hides an unspoken concern, often price. Get curious: "Totally fair. Just so I understand, is it the investment, the timing, or something about the system you want to think through?" Now a vague stall is a real conversation you can address with the cost-per-year math.
 
-This almost always means there's an unspoken concern, usually price or a missing decision-maker. Don't argue. Get curious:
+### Step 7: Give a reason to decide today
 
-"Totally fair. Just so I understand, is it the investment, the timing, or something about the system itself you want to think through?"
+A gentle same-day incentive moves fence-sitters without pressure: "If we book today, I'll lock in this pricing and include the upgraded clear coat," or "I've got a crew finishing nearby Thursday, so I can fit you in if we set it now."
 
-Now you've turned a vague stall into a real conversation you can actually address. If it's price, walk them back through the value and the cost-per-year math. If it's the partner, that's why you asked in Step 3.
+Keep it real and keep it light. The point isn't to strong-arm anyone. It's to give a homeowner who's already 90 percent there a clean reason to say yes now instead of drifting off to compare three more quotes and going cold.
 
-**"I'm getting other quotes."**
+## Frequently asked questions
 
-Expected. Don't badmouth competitors. Instead, arm them to compare:
+### What is a good close rate for floor coating estimates?
 
-"Smart, you should. When you do, make sure you're comparing the same thing. Ask them how many coats, what topcoat they're using, whether it's UV stable, and whether it's a one-day or two-day job. A lot of cheaper quotes are a single thin coat that yellows and peels. Here's exactly what I'm putting down."
+There's no single close rate benchmark for floor coating estimates. It depends on the product you sell, the price point in your market, and the estimator's sales skill. Coached estimators who run the same process on every appointment close meaningfully better than uncoached ones. Track your own rate weekly, and if it swings widely from week to week, the fix is usually consistency rather than a new pitch.
 
-You're not trashing anyone. You're teaching them how to see that the cheap quote isn't the same product. Half the time the "other quotes" never get the chance, because you just became the contractor who knew the most.
+### Should I email the quote or present it in person?
 
-## Step 7: Give a Reason to Decide Today
+Present the floor coating quote in person, at the kitchen table, every time you can. Quotes you email lose to quotes you hand over face to face because the homeowner reads them alone, without your samples or your explanation of what each system does. Have your pricing dialed in before you arrive so you can present three options on the spot and ask for the job.
 
-A gentle same-day incentive moves fence-sitters without pressure:
+### How do I handle "the one-day guys are cheaper" on a floor coating estimate?
 
-- "If we book today, I'll lock in this pricing and throw in the upgraded clear coat."
-- "I've got a crew finishing nearby Thursday, so I can fit you in efficiently if we set it now."
+Don't argue and don't disparage the other contractor. Teach the homeowner how to compare quotes: how many coats, which topcoat, whether it's UV stable, and what the warranty covers. Many cheaper quotes are a single thin coat that yellows and peels within a couple of years. Then show exactly what you're putting down. The homeowner usually realizes the cheaper quote isn't the same product.
 
-Keep it real and keep it light. The point isn't to strong-arm anyone. It's to give a customer who's already 90 percent there a clean reason to say yes now instead of drifting off to compare three more quotes and going cold.
+### What should I do when the spouse isn't home for the estimate?
 
-## The Calendar Does Half the Work
+Ask during the inspection whether a partner will want to weigh in, before you present any numbers. If the spouse isn't home, run the full inspection and presentation anyway, but don't push for a same-day decision. Offer a quick call with both of them, set a specific follow-up time before you leave, and send the three-option sheet so everyone is looking at the same numbers.
 
-Here's what makes all of this dramatically easier: who you're standing in front of. When you're chasing cold leads you dug up yourself, every estimate feels like a fight, and you close scared. When the homeowner already raised their hand, already got contacted fast, and already booked a time expecting you, closing isn't chasing. It's just running your process.
+### How do I cut no-shows on floor coating estimates?
 
-That's the **Appointly Model**. you pay one flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book. We run the [Meta ads](/blog/meta-ads-for-floor-coating-contractors), contact every lead instantly before they shop other coaters, and book the estimate into a time that works for you. The homeowner already expects you, so all you have to do is show up, run the process above, do the job, and collect.
+Confirm at booking, send a reminder 24 hours out and another 1 hour out, and have a person follow up with anyone who goes quiet. Show rate on floor coating estimates runs about 80 percent with no reminders and about 95 percent with that sequence in place. Include a short ask to clear the garage in the confirmation so you can see the slab when you arrive.
 
-Get your kitchen-table process tight, then let us keep the calendar full so you have plenty of floors to run it on. See how it works at [getappointly.co](https://getappointly.co).
+## The calendar does half the work
+
+Who you're standing in front of makes all of this easier. When you're chasing cold leads you dug up yourself, every estimate feels like a fight and you close scared. When the homeowner already raised their hand, got a call within a minute, and booked a time expecting you, closing isn't chasing. It's just running your process.
+
+That's what we do at Appointly: we run the ads, call every lead within about a minute, and book the estimate on your calendar, and you pay one flat fee per booked appointment. See how [appointment setting for contractors](/appointment-setting-for-contractors) works, then [book a strategy call](https://client.getappointly.co/strategy-calendar) and we'll talk through your market.

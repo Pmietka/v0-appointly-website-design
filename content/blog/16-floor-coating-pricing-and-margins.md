@@ -1,119 +1,133 @@
 ---
 seo_title: "Floor Coating Pricing and Margins: What Crews Make"
-meta_description: "A straight-talk breakdown of floor coating pricing, material vs labor cost, day-rate math, and the gross margins a 2-person crew can actually hit."
+meta_description: "A straight-talk breakdown of floor coating pricing, material versus labor cost, day-rate math, and the gross margins a two-person crew can actually hit."
 date: 2026-03-03
-updated: 2026-09-02
+updated: 2026-09-11
 author: patrick
 cluster: economics
 ---
+
 # How Much Can You Make Coating Garage Floors? A Floor Coating Pricing and Margin Breakdown
 
-**Meta Description:** A straight-talk breakdown of floor coating pricing, material vs labor cost, day-rate math, and the gross margins a 2-person crew can actually hit.
+**Meta Description:** A straight-talk breakdown of floor coating pricing, material versus labor cost, day-rate math, and the gross margins a two-person crew can actually hit.
 
 ---
 
-## What a Garage Floor Coating Job Is Actually Worth
+A two-person crew coating garage floors can gross roughly $42,000 to $56,000 a month at 3 to 4 jobs a week and an average sale of $3,500. Most residential floor coating prices land between $5 and $8 per square foot, materials run about 15 to 25 percent of the sale, and a well-run job clears a gross margin in the 50 to 60 percent range.
 
-Let's skip the theory and talk numbers. The most common job in residential floor coating is the two-car garage. Call it 400 to 600 square feet of usable slab once you account for the door threshold and the dead space behind shelving.
+## Key takeaways
 
-Pricing on these jobs swings hard based on the system you install and the market you're in, but here are realistic ranges that hold up across most of the country:
+- Floor coating prices run $5 to $8 per square foot, closer to $5 in saturated Florida markets and closer to $8 in wealthier, less crowded metros.
+- Materials on a 500 square foot flake-and-polyaspartic garage cost about $450 to $900, or 15 to 25 percent of a $3,500 sale.
+- A trained two-person crew on a one-day polyaspartic system can complete 3 to 5 garages a week.
+- Discounting a $3,500 garage to $2,500 cuts gross profit roughly in half while the work stays exactly the same.
+- Present the premium system first and quote your real number, because a full calendar is what lets you hold price.
 
-- **Single-coat epoxy with a broadcast flake:** roughly $4 to $6 per square foot
-- **Full epoxy base with a polyaspartic topcoat:** roughly $6 to $9 per square foot
-- **Full polyaspartic system (base and top):** roughly $7 to $12 per square foot
+## What is a two-car garage floor coating job worth?
 
-Run that against a 500 sq ft two-car garage:
+The most common residential job is the two-car garage, roughly 400 to 600 square feet of usable slab once you account for the door threshold and the dead space behind shelving. Across the markets we book, price per square foot lands between [$5 and $8](/floor-coating-benchmarks). Saturated Florida markets sit closer to $5. Less saturated, wealthier metros sit closer to $8.
 
-- Budget epoxy job: 500 x $5 = **$2,500**
-- Mid-tier epoxy/polyaspartic hybrid: 500 x $7 = **$3,500**
-- Premium full polyaspartic: 500 x $10 = **$5,000**
+The system you install moves the number within and beyond that range. As illustrative ranges:
 
-So the same garage is a $2,500 job or a $5,000 job depending entirely on what you put down and how you sell it. That spread is the whole game. The contractor who only knows how to quote the $2,500 version is leaving real money on the table every single week.
+| System | Typical installed price per square foot | 500 square foot garage |
+|---|---|---|
+| Single-coat epoxy with broadcast flake | About $4 to $6 | $2,500 at $5 |
+| Epoxy base with polyaspartic topcoat | About $6 to $9 | $3,500 at $7 |
+| Full polyaspartic system (base and top) | About $7 to $12 | $5,000 at $10 |
 
-## Where the Money Goes: Material vs Labor
+So the same garage is a $2,500 job or a $5,000 job depending on what you put down and how you sell it. That spread is the whole game. The contractor who only knows how to quote the $2,500 version leaves real money on the table every week.
 
-A floor coating job has surprisingly low material cost relative to the price you charge. That's good news, and it's also why this trade attracts price-cutters who don't understand their own numbers.
+## What moves the price per square foot?
 
-For a 500 sq ft garage in a flake-and-polyaspartic system, your direct material cost typically lands somewhere around:
+Three things move it: market saturation, the wealth of the metro, and the system you sell. A saturated Florida market full of one-day franchises pushes everyone toward $5. A wealthier metro with fewer coaters supports $8. An epoxy base with a polyaspartic topcoat is generally cheaper to sell than full polyaspartic or polyurea, and full poly takes skill to install well, which is part of why it commands more.
+
+Where you sit in that range sets your average job size, and your average job size sets [what a booked estimate is worth](/blog/what-is-a-booked-floor-coating-estimate-worth) to your business.
+
+## Where does the money go: materials versus labor?
+
+Materials are a surprisingly small share of the price, usually 15 to 25 percent. That's good news, and it's also why this trade attracts price-cutters who don't understand their own numbers.
+
+For a 500 square foot garage in a flake-and-polyaspartic system, direct material cost typically lands around:
 
 - Grinding consumables (diamond tooling wear, dust): $30 to $60
 - Crack filler, patch, moisture mitigation if needed: $20 to $100
 - Base coat (epoxy or poly): $150 to $300
-- Flake / decorative media: $40 to $120
+- Flake or decorative media: $40 to $120
 - Topcoat (polyaspartic): $200 to $400
 
-Call your all-in material cost **$450 to $900** on a mid-tier job. On a $3,500 sale, that's roughly 15 to 25 percent of the price. Even on a budget $2,500 job, materials rarely exceed 25 to 30 percent.
+Call your all-in material cost $450 to $900 on a mid-tier job. On a $3,500 sale, that's roughly 15 to 25 percent of the price. Even on a budget $2,500 job, materials rarely exceed 25 to 30 percent. The rest is labor, overhead, and profit, which means the biggest lever on your margin is how fast and how well your crew works, not how cheaply you buy resin.
 
-The rest is labor, overhead, and profit. Which means **the single biggest lever on your margin is how fast and how well your crew works**, not how cheaply you buy resin.
+## How many jobs can a two-person crew produce in a week?
 
-## Day-Rate Math: How Much Can a 2-Person Crew Produce?
+A trained two-person crew on a one-day system can complete 3 to 5 two-car garages a week. Running a [polyaspartic](/blog/polyaspartic-vs-epoxy-garage-floors) system, the crew can grind, patch, base coat, broadcast flake, scrape, and topcoat a standard garage in a single day. That turnaround is the entire reason polyaspartic is worth selling.
 
-This is where contractors either build a profitable business or grind themselves into the ground.
+A pure epoxy job usually needs a multi-day cycle because the base coat cures overnight before you can topcoat. Same labor hours spread across two trips, which kills your scheduling density.
 
-A trained two-person crew running a [polyaspartic](/blog/polyaspartic-vs-epoxy-garage-floors) system can complete a standard two-car garage in **one day** start to finish: grind, patch, base coat, broadcast flake, scrape, topcoat. That one-day turnaround is the entire reason polyaspartic is worth selling, and we'll come back to it.
+Here's the weekly math at an average sale of $3,500:
 
-A pure epoxy job usually needs a **multi-day** cycle because the base coat has to cure overnight before you can topcoat. Same labor hours spread across two trips, which kills your scheduling density.
+| Pace | Jobs per week | Weekly revenue | Monthly revenue |
+|---|---|---|---|
+| Conservative (slow weeks, weather, callbacks) | 3 | $10,500 | About $42,000 |
+| Strong (tight routing, prepped slabs, no wasted drive time) | 4 | $14,000 | About $56,000 |
 
-Here's the weekly math on a one-day system with a two-person crew:
+That's one crew. The contractors clearing real money aren't charging more per foot than everyone else. They keep the calendar full and finish jobs in a single day so the crew produces five times a week instead of three.
 
-- **Conservative:** 3 jobs per week (build in slow weeks, weather, callbacks)
-- **Strong:** 4 to 5 jobs per week (tight routing, prepped slabs, no wasted drive time)
+## What do gross margins look like on a single job?
 
-At an average sale of $3,500 per job:
+A mid-tier $3,500 garage clears roughly $1,750 to $2,050 in gross profit, a margin in the 50 to 60 percent range before fixed overhead and marketing. Here's the breakdown:
 
-- 3 jobs/week = $10,500/week = roughly **$42,000/month** in revenue
-- 4 jobs/week = $14,000/week = roughly **$56,000/month**
+- Sale price: $3,500
+- Materials: $700
+- Crew labor (one day, two people): $600 to $900 fully loaded
+- Fuel, equipment wear, misc: $150
 
-That's one crew. The contractors clearing real money aren't charging more per foot than everyone else. They're keeping the calendar full and finishing jobs in a single day so the crew produces five times instead of three.
-
-## Gross Margin Examples
-
-Let's put it together on a single $3,500 mid-tier job:
-
-- **Sale price:** $3,500
-- **Materials:** $700
-- **Crew labor (one day, two people):** $600 to $900 fully loaded
-- **Fuel, equipment wear, misc:** $150
-
-Direct cost lands around **$1,450 to $1,750**, leaving a gross profit of roughly **$1,750 to $2,050 per job**, or a gross margin in the 50 to 60 percent range before your fixed overhead and marketing cost come out.
-
-Now look at what happens when you race to the bottom and quote the same garage at $2,500:
-
-- **Sale price:** $2,500
-- Same materials, labor, and fuel: roughly $1,400 to $1,700
-- Gross profit: **$800 to $1,100**
+Direct cost lands around $1,450 to $1,750. Now look at what happens when you race to the bottom and quote the same garage at $2,500. Materials, labor, and fuel stay at roughly $1,400 to $1,700, and gross profit drops to $800 to $1,100.
 
 You did the exact same work, ate the same prep time, and gave up nearly half your profit to "win" the job. The discount didn't come out of your material cost. It came straight out of your pocket.
 
-## Why Charging on Value Beats Charging the Lowest Price
+## Why does charging on value beat the lowest price?
 
-The trap in floor coating is that the work looks simple from the homeowner's side. They see a guy with a grinder and some buckets and assume it's a commodity. It isn't, and your job on the estimate is to make that obvious.
+Because the homeowner can't see the difference between a $2,500 floor and a $5,000 floor until you show them. They see a guy with a grinder and some buckets and assume it's a commodity. Your job on the estimate is to make the difference obvious.
 
 A polyaspartic garage floor is:
 
-- **Permanent.** It's not paint that peels in two years. Done right, it outlasts the homeowner's ownership of the house.
+- **Permanent.** Not paint that peels in two years. Done right, it outlasts the homeowner's time in the house.
 - **One day.** They park in their garage that weekend.
-- **Hot-tire resistant.** No lifting or hot-tire pickup like cheap roll-on kits.
-- **A finished room.** It turns a dusty slab into a showroom, gym, or workshop floor.
+- **Hot-tire resistant.** No lifting like the cheap roll-on kits.
+- **A finished room.** A dusty slab becomes a showroom, gym, or workshop floor.
 
-When you sell those outcomes, $3,500 is a bargain. When you sell "I'll coat your floor," you're a line item being compared to the cheapest bid in town. Same job, completely different conversation.
+When you sell those outcomes, $3,500 is a bargain. When you sell "I'll coat your floor," you're a line item compared against the cheapest bid in town. The contractors who win on value almost never have the lowest price. They have the clearest pitch, the best-looking samples, and the confidence to hold their number. Lowering your price trains your market to expect cheap work and attracts homeowners who fight over every dollar.
 
-The contractors who win on value almost never have the lowest price. They have the clearest pitch, the best-looking samples, and the confidence to hold their number. Lowering your price doesn't win more jobs. It just trains your market to expect cheap work and attracts customers who'll fight you over every dollar.
+## How does a full calendar protect your margin?
 
-## How Booked Estimates Protect Your Margin
+A full calendar lets you quote your real number. When you're scrambling for work, you discount. A homeowner says "the one-day guys are cheaper" and you fold because you need the job to make payroll. Empty calendars create desperate pricing. That's how good contractors end up running 35 percent margins on work that should clear 55.
 
-Here's the part most pricing conversations miss. Your margin doesn't just depend on what you charge. It depends on **who you're standing in front of and how you got there**.
+When the calendar is already full of estimates, the math flips. You present the premium system first, hold your number, and walk away from the homeowner who only wants the cheapest bid. That's why we book estimates rather than sell leads, at one flat fee per booked appointment: you show up to a homeowner who's expecting you and [close on value](/blog/how-to-close-more-floor-coating-estimates) instead of fear. A full calendar isn't just more revenue. It's what lets you keep the margin you built the business to earn.
 
-When you're scrambling for work, you discount. You quote scared. A homeowner says "the other guy was cheaper" and you fold because you need the job to make payroll. Empty calendars create desperate pricing. That's how good contractors end up running 35 percent margins on work that should clear 55.
+## Frequently asked questions
 
-When your calendar is already full of estimates, the math flips. You can quote your real number, present the premium system first, and walk away from the tire-kickers who only want the cheapest bid. Abundance is the best negotiating position there is.
+### How much does a garage floor coating cost per square foot?
 
-That's the entire logic behind the **Appointly Model**. you pay one flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book. We run the [Meta ads](/blog/meta-ads-for-floor-coating-contractors), contact every lead instantly before they shop three other coaters, and book the estimate into a time that works for you. You show up to a homeowner who's expecting you, quote on value instead of fear, do the job, and collect.
+Most residential garage floor coatings sell for $5 to $8 per square foot installed. Saturated markets like much of Florida sit near $5, and wealthier metros with fewer coaters sit near $8. The system matters too: a single-coat epoxy with flake is the budget option, an epoxy base with a polyaspartic topcoat sits in the middle, and a full polyaspartic system commands the highest price.
 
-A full calendar isn't just more revenue. It's the thing that lets you hold your price and protect the margin you actually built the business to earn.
+### What is the gross margin on a floor coating job?
 
-## Quote Your Worth, Not Your Fear
+A well-run floor coating job clears a gross margin in the 50 to 60 percent range before fixed overhead and marketing. On a $3,500 two-car garage, materials run about $700, a two-person crew costs $600 to $900 for the day, and fuel and equipment wear add around $150, leaving roughly $1,750 to $2,050 in gross profit. Discounting the sale erodes that margin fast because costs don't move.
 
-If you take one thing from this: stop selling square footage and start selling finished floors. Your material cost is the smallest part of the equation. Your real profit lives in keeping the crew producing and holding your price with confidence, and you can only do that when there's always another estimate on the books.
+### How much do materials cost for a garage floor coating?
 
-That's what we do. With the Appointly Model, you get booked estimates on your calendar from homeowners who already expect you, so you can quote on value and never again drop your price just to keep the lights on. See how it works at [getappointly.co](https://getappointly.co).
+Materials for a 500 square foot flake-and-polyaspartic garage typically total $450 to $900. That covers grinding consumables, crack filler and patch, a base coat, decorative flake, and a polyaspartic topcoat. On a $3,500 sale that's 15 to 25 percent of the price, and even on a $2,500 budget job materials rarely pass 30 percent. Labor speed, not resin cost, is the real margin lever.
+
+### How many garage floors can one crew coat in a week?
+
+A trained two-person crew running a one-day polyaspartic system can coat 3 to 5 two-car garages a week. Three is a conservative pace that allows for weather, slow weeks, and callbacks; four or five takes tight routing, prepped slabs, and no wasted drive time. A full epoxy system needs an overnight cure before the topcoat, which roughly halves how many jobs the same crew can finish.
+
+### Should a floor coating contractor lower prices to win more jobs?
+
+No. Lowering your price on a garage floor coating always costs margin, because materials, labor, and drive time stay the same on a $2,500 sale as on a $3,500 one. Dropping a $3,500 garage to $2,500 cuts gross profit roughly in half. Sell the finished floor, present the premium system first, and keep enough estimates on the calendar that you never have to quote scared.
+
+## Quote your worth, not your fear
+
+Stop selling square footage and start selling finished floors. Your material cost is the smallest part of the equation. Your real profit lives in keeping the crew producing every day and holding your price with confidence, and you can only do that when there's always another estimate on the books.
+
+If you want a calendar full of homeowners who already expect you, see how [booked floor coating estimates](/floor-coating-leads) work with one contractor per market. Then [book a strategy call](https://client.getappointly.co/strategy-calendar) and we'll talk through the volume your crew can handle.
