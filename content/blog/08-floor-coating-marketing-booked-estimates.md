@@ -1,214 +1,143 @@
 ---
-title: "Floor Coating Marketing That Delivers Booked Estimates, Not Empty Promises"
 seo_title: "Floor Coating Marketing That Books Estimates"
-meta_description: "Most marketing sells activity. You need booked estimates. How to measure floor coating marketing ROI and what appointment-focused marketing looks like."
+meta_description: "Most floor coating marketing sells activity. You need booked estimates. The metrics that matter, what appointment-focused marketing is, and how to switch."
 date: 2026-01-06
-updated: 2026-09-02
+updated: 2026-09-11
 author: patrick
 cluster: marketing-channels
 ---
 # Floor Coating Marketing That Delivers Booked Estimates, Not Empty Promises
 
-You've probably been pitched by a [marketing agency](/floor-coating-marketing-agency-alternative). "We'll get you in front of everyone searching for a garage floor. We'll make your name show up everywhere. Your phone will ring off the hook."
+**Meta Description:** Most floor coating marketing sells activity. You need booked estimates. The metrics that matter, what appointment-focused marketing is, and how to switch.
 
-Then you hire them. You pay a flat monthly fee every month for 6 months. By month three they're showing you charts and dashboards full of activity. By month six, your phone did not ring off the hook, and your calendar is just as empty as it was.
+---
 
-You're not alone. This happens to floor coating contractors constantly.
+Floor coating marketing delivers booked estimates when it is measured by estimates on the calendar instead of impressions on a dashboard. That means Meta ads showing a real coated garage, a short landing page form, and a call to every lead within one minute. Run that way, 60 to 70% of leads should become booked estimates. Activity reports never tell you that number.
 
-The problem isn't any one channel. The problem is that activity doesn't equal [booked estimates](/floor-coating-leads). Showing up in a few more places and actually standing in a homeowner's garage with a quote are two completely different things. One is a report. One is a job.
+## Key takeaways
 
-I'm going to show you the difference. More importantly, I'm going to show you how to build a marketing approach that actually delivers what you need — booked estimates on your calendar, not just the busywork agencies love to put on a slide.
+- Judge every marketing dollar by one number first: how many estimates landed on your calendar last month.
+- Visibility does not book jobs. A homeowner still needs something worth clicking, a short form, and a call within one minute of submitting it.
+- With fast follow-up, 60 to 70% of leads should become booked estimates, and about 90% of leads answer when called within a minute.
+- Track five numbers every week: booked estimates, cost per booked estimate, show rate, close rate, and cost per closed job.
+- Ask any agency how many estimates it booked for you last month. If it can't answer, it is selling activity.
 
-## Activity Versus Actually Getting Estimates Booked
+## Why doesn't marketing activity turn into booked estimates?
 
-Let me make this crystal clear.
+Activity doesn't turn into booked estimates because visibility is only the first of four steps, and the other three are where the calendar gets filled. When a [marketing agency](/floor-coating-marketing-agency-alternative) says it "increased your visibility," it is reporting impressions. Impressions are a number on a chart, not a homeowner standing in a garage waiting for a quote.
 
-When an agency tells you they "increased your visibility," they're winning a vanity game. There are more impressions on a chart. There's a bigger number than last month. Good for them.
+Even when more people see your name, you still need three things:
 
-But here's what that activity doesn't guarantee: clicks, leads, phone calls, or a single estimate on your calendar.
+1. Something worth clicking. If your photos and your message don't make a homeowner want a floor, a bigger audience just means more people scrolling past.
+2. A way to capture them. If there is no simple, obvious next step, the interested homeowner moves on. More eyeballs, zero estimates.
+3. Immediate follow-up. If a form comes in and nobody calls within minutes, the homeowner books a competitor. The opportunity existed and it was wasted.
 
-Why?
+Agencies report activity because it is easy to report. A dashboard trending up looks like delivery. Booked estimates are harder to produce and harder to fake, and they are the only marketing output that pays your crew.
 
-Because visibility is just one piece. Even when more people see your name, you still need:
+## Why do agencies sell activity when you need estimates?
 
-1. Something worth clicking. If your message and your photos don't make a homeowner want to reach out, a bigger audience just means more people scrolling past.
+Agencies sell activity because it is the part of the job they fully control, and the incentives push them there. Turning a click into a coated garage runs through your website, your follow-up speed, and your pitch in the driveway. The agency owns none of that, so it promises the piece it does own.
 
-2. A way to capture them. If someone is interested but there's no simple, obvious next step, they move on. More eyeballs booked zero estimates.
+There are three reasons the model sticks:
 
-3. Instant follow-up. If someone fills out a form or calls and you don't contact them within minutes, the homeowner books a competitor. The opportunity existed; you wasted it.
+1. It is hard to measure. A closed floor requires steps outside the agency's control, so it can't promise the outcome without risk.
+2. It is safer. "Exposure" is a fuzzy target nobody can hold them to. "Twelve booked estimates a month" is a promise they can miss.
+3. It keeps the invoice going. As long as the report shows movement, the monthly fee renews whether or not you stood in a garage with a quote.
 
-Agencies focus on activity because it's easy to report. They can show you a dashboard trending up and say, "Look, we delivered." They can't show you booked estimates because that's not what they're set up to produce. They generated the activity. Their job is done.
+None of this is necessarily malicious. It is a business model that is easy to sell, easy to report, and hard to dispute. You can't argue with a chart pointing up and to the right. You can argue with an empty calendar, and that argument is the one worth having. We covered the pattern in [why floor coating contractors leave marketing agencies](/blog/why-floor-coating-contractors-leave-marketing-agencies).
 
-Your job, though, is to make money. Activity doesn't make money. Booked estimates that you close do.
+## Which marketing metrics actually matter for a floor coating contractor?
 
-## Why Agencies Sell Activity While You Need Booked Estimates
+The metrics that matter are the ones that count estimates and revenue, not impressions. Measure these five and ignore the rest.
 
-Let's talk about business incentives for a second.
+| Metric | What it tells you | How to calculate it |
+|---|---|---|
+| Booked estimate volume | How many homeowners are scheduled into a time slot each month | Count the calendar, not the lead sheet |
+| Cost per booked estimate | What you pay to get one estimate on the calendar | Total marketing spend divided by booked estimates |
+| Show rate | Whether booked homeowners actually open the garage door | Estimates that happened divided by estimates booked |
+| Close rate | How many estimates you sit turn into coated floors | Jobs sold divided by estimates sat |
+| Cost per closed job | What a job costs you to land | Total marketing spend divided by jobs closed |
 
-A typical agency's job is to generate activity and report on it. That's their metric. From their perspective, their job ends when the dashboard looks busy. Whether that activity turns into leads, booked estimates, or revenue is not their responsibility. It's not even really their problem.
+Booked estimate volume comes first. Not clicks, not raw leads sitting in a spreadsheet. Homeowners scheduled into a time slot, waiting for you to show up and quote their floor. Most of the gap between leads and booked estimates comes down to [speed to lead](/blog/speed-to-lead-wins-floor-coating-jobs). The published [floor coating benchmarks](/floor-coating-benchmarks) put a healthy lead to appointment rate at 60 to 70%. If yours is 30%, the leak is follow-up, not the ads.
 
-Why? Because:
+Show rate tells you whether your booking process holds. About 80% of booked estimates show with no reminders. With a confirmation at booking, a reminder 24 hours out, a reminder an hour out, and a person chasing anyone who goes quiet, that climbs to about 95%.
 
-1. It's hard to measure. Turning marketing into a closed garage floor requires multiple steps outside their control. Your website. Your follow-up speed. Your pitch in the garage. The agency doesn't control these, so they can't promise the outcome.
+Close rate is on your sales game. If you sit 20 estimates and close 5, that is a 25% [close rate](/blog/how-to-close-more-floor-coating-estimates), driven by your samples, your pricing, and your pitch. There is no single benchmark here. Coached estimators close meaningfully better than uncoached ones.
 
-2. It's safer for them. If they promise booked estimates and you don't get them, that's their fault. If they promise "activity" and "exposure," that's a fuzzy target nobody can hold them to. It's way safer to promise the thing they fully control.
+Cost per closed job is the number that decides whether marketing is healthy. Say your average epoxy garage floor is $4,000. If your acquisition cost per job is a small fraction of that, keep going. If it is eating half the job, something is broken upstream. Factor in lifetime value too: some customers come back for the basement, the patio, and the shop floor, and some refer the whole street.
 
-3. It keeps you paying. As long as the report shows movement, the monthly fee renews — whether or not you ever stand in a garage with a quote.
+## What does appointment-focused marketing look like?
 
-This is not always malicious. It's just how the incentive structure works. They've found a business model that's easy to sell, easy to report, and hard for you to dispute. You can't argue with a chart that's pointing up and to the right.
+Appointment-focused marketing starts with the question "how do I get an estimate on my calendar?" and works backward from there. Here is the process, in order.
 
-But you can argue about an empty calendar. And that argument is harder for them to win.
+1. Put your work where homeowners already are. Your customers are scrolling Facebook and Instagram at home, and a glossy before-and-after stops them. [Meta ads](/blog/meta-ads-for-floor-coating-contractors) put your finished floors in front of them at the moment "someday I'll do the garage" turns into "I want a quote this week."
+2. Lead with an offer, not a request. "Call us for a quote" stops nobody. "Transform your garage floor in one day, claim your free in-home estimate" next to a real flake floor does. Free, visual, specific.
+3. Keep the form to three fields. Name, phone, and which floor they want coated. Every extra field lowers the conversion rate. Send the ad to a landing page rather than the native lead form. The landing page loses a few submissions and wins on lead quality.
+4. Call within one minute. The homeowner who filled out your form filled out two others. Called within a minute, about 90% of leads answer. Called the next day, the floor is already promised to someone else. This is the step where most contractors lose.
+5. Book a specific time, then close it. Don't "stay in touch." Get a slot on the calendar, confirm it, send reminders, then show up with a flake sample box and quote the floor. The booked estimate is the marketing win. The close is on you.
+6. Measure what worked. Track which channel produced which booked estimate, which estimates closed, and what each job cost to land. Repeat what works and cut what doesn't.
 
-## The Metrics That Actually Matter
+Activity-focused marketing says "we'll do a bunch of stuff and hope it turns into business." Appointment-focused marketing says "we want estimates on the calendar, what's the fastest way to get them, and is it working?"
 
-Stop measuring marketing success by activity and dashboards. Start measuring it by booked estimates and revenue.
+## What does slow, promise-based marketing really cost?
 
-Here are the metrics that matter:
+Slow marketing costs you the months you spend paying for reports while the calendar stays empty. Compare two paths over six months.
 
-**Booked Estimate Volume:** How many estimates are actually landing on your calendar each month? Not clicks. Not impressions. Not raw leads sitting in a spreadsheet. Homeowners scheduled into a time slot, waiting for you to show up and quote their floor.
+| | Activity-focused agency | Appointment-focused approach |
+|---|---|---|
+| Months 1 to 2 | "We're building." Zero booked estimates | Meta ads live, first estimates on the calendar in the first week or two |
+| Months 3 to 6 | Dashboards and a trickle of raw leads you chase yourself | A steady, predictable flow of booked estimates |
+| What you pay for | Impressions and reports | Estimates that hold |
+| Trust signal | Whatever your Google profile happens to look like | A complete, review-rich Google Business Profile that closes before you arrive |
 
-**Cost Per Booked Estimate:** How much are you spending to get each estimate onto your calendar?
+The second path only works if you follow up within minutes and close in the garage. More leads mean nothing if you sit on them. Fix speed to lead and your sales process first, then scale the spend.
 
-Cost per booked estimate = Total marketing spend / Number of booked estimates
+## How do you move from activity to appointments?
 
-A raw lead is cheap. A booked estimate that actually holds is what you're really paying for. Most of that comes down to [speed to lead](/blog/speed-to-lead-wins-floor-coating-jobs).
-
-**Show Rate:** What percentage of booked estimates actually happen? If homeowners book and then ghost, your booking process or your follow-up has a leak.
-
-**Close Rate:** What percentage of estimates you sit turn into coated floors?
-
-If you sit 20 estimates and close 5, that's a 25% [close rate](/blog/how-to-close-more-floor-coating-estimates). That's solid for floor coating, and it's driven by your samples, pricing, and pitch.
-
-**Customer Acquisition Cost:** How much did it cost you to land each job?
-
-Customer acquisition cost = Total marketing spend / Number of jobs closed
-
-If your average epoxy garage floor is $4,000 and your acquisition cost per job is a small fraction of that, your marketing is healthy. If it's eating half the job, something's broken.
-
-**Lifetime Value:** What's an average customer worth over time? Some are one-time garage jobs. Some come back for the basement, the patio, the shop floor. Some refer their whole neighborhood. Factor that in.
-
-These metrics tell you whether your marketing is working. A busy dashboard doesn't.
-
-## Appointment-Focused Marketing: What It Actually Looks Like
-
-Appointment-focused marketing is simple. It's marketing that starts with, "How do I get an estimate on my calendar?" and works backward.
-
-Here's the framework:
-
-**Step 1: Put your work where homeowners already are**
-
-Your floor coating customers are scrolling Facebook and Instagram at home, and a glossy before-and-after stops them cold. That's the moment a "someday I'll do my garage" homeowner turns into a "I want a quote this week" homeowner.
-
-Appointment-focused marketing starts by meeting your customer where their attention already is, and [Meta ads](/blog/meta-ads-for-floor-coating-contractors) put your finished floors right in front of them.
-
-**Step 2: Meet them with an offer they can't refuse**
-
-"Call us for a quote" is terrible. "Transform your garage floor in one day, claim your free in-home estimate" is great. Pair it with a stunning before-and-after.
-
-The offer has to be compelling, visual, and easy. Free. Valuable. Clear.
-
-**Step 3: Make the conversion friction as low as possible**
-
-If your offer is "free estimate," the next step should be one tap, one short form. Three pieces of information: name, phone, and what floor they want coated. That's it.
-
-Don't ask for 10 fields. Make it dead simple.
-
-**Step 4: Follow up immediately, this is the whole game**
-
-Get the lead. Contact them within minutes, not hours. Phone, text, whatever reaches them first. The homeowner who filled out your form filled out two others. Whoever calls first and books the time slot wins the estimate. This is speed to lead, and it's where most contractors lose.
-
-Most coaters follow up the next day. By then the floor is promised to someone else.
-
-**Step 5: Book the estimate, then close it**
-
-Don't just "stay in touch." Get them on the calendar, into a specific time that works for you. Then show up, drop a sample box of flake on the floor, quote it, and close. The booked estimate is the marketing win. The close is on your sales game.
-
-**Step 6: Measure what worked**
-
-Track which channels brought which booked estimates. Which estimates closed. Which customers are happiest. Repeat what works. Kill what doesn't.
-
-This is the opposite of activity-focused marketing. Activity-focused is "we'll do a bunch of stuff and hope it turns into business someday." Appointment-focused is "we want estimates on the calendar, what's the fastest way to get them, and is it working?"
-
-## The Real Cost of Slow, Promise-Based Marketing
-
-Let me show you the cost of paying for activity and waiting.
-
-Scenario A: You hire a typical agency.
-
-- You pay a flat monthly fee every month for 6 months
-- You get zero booked estimates for months 1 and 2 (just "we're building")
-- Months 3 to 6, you get dashboards and a trickle of raw leads you still have to chase yourself
-- After 6 months, you've spent a small fortune and booked very few estimates
-- Your cost per booked estimate is brutal
-
-That's expensive and slow.
-
-Scenario B: You run Meta ads, follow up fast, and keep your Google Business Profile sharp.
-
-- Meta ads with a strong before-and-after offer
-- Instant follow-up so leads actually become booked estimates
-- A complete, review-rich Google Business Profile that makes booked homeowners trust you before you arrive
-- In month 1, estimates start landing on your calendar
-- By month 6, you've got a steady, predictable flow of booked estimates
-
-Scenario B is faster and far cheaper per booked estimate.
-
-But here's the thing: Scenario B only works if you actually follow up within minutes and close in the garage. More leads means nothing if you sit on them. Fix your speed to lead and your sales process first, then scale the marketing.
-
-## How to Move From Activity-Focus to Appointment-Focus
-
-If you're already working with an agency that sells activity and promises, here's what to do.
-
-**Ask these questions:**
+Move by asking your current agency four questions, and by replacing it if the answers are vague.
 
 1. "How many estimates landed on my calendar from your work last month?"
 2. "What was my cost per booked estimate?"
-3. "What's my cost per closed job?"
-4. "How are we tracking everything all the way from a lead to a quoted floor?"
+3. "What was my cost per closed job?"
+4. "How are we tracking a lead all the way to a quoted floor?"
 
-If they can't answer these clearly, they're not appointment-focused. They're activity-focused.
+If they can't answer clearly, they are activity-focused. Ask whether they can shift to measuring success by booked estimates and revenue. If they can, good. If not, find someone who can.
 
-**Then ask:**
+Or do it yourself:
 
-"Can we shift to measuring success by booked estimates and revenue instead of dashboards? And if not, can we bring in someone who is more appointment-focused?"
+1. Get your Google Business Profile complete, with real before-and-after photos and fresh reviews, so booked homeowners trust you before you knock.
+2. Run Meta ads with a strong before-and-after offer to a three-field landing page.
+3. Call every lead within one minute, every time, including evenings.
+4. Track every booked estimate and where it came from.
+5. Review cost per booked estimate and close rate weekly.
+6. Cut the channels that don't book and scale the ones that do.
 
-If they can shift, great. If not, find someone who can.
+It is not complicated. It is just disciplined.
 
-Alternatively, do it yourself:
+## Frequently asked questions
 
-1. Get your Google Business Profile right so booked homeowners trust you (takes a few weeks, mostly free)
-2. Run Meta ads with a strong before-and-after offer (takes a week to set up)
-3. Follow up on every lead within minutes, not hours
-4. Track every booked estimate and where it came from
-5. Measure cost per booked estimate and close rate
-6. Kill channels that don't work, scale the ones that do
+### Is brand-building marketing still worth anything for a floor coating contractor?
 
-This is not sexy. It's not complicated. But it works.
+Brand-building has long-term value for a floor coating contractor, but it should not be the first move when you need jobs this month. Treat it as a complement to appointment-focused marketing that produces booked estimates now. Once the calendar is steady and there is budget left over, invest in reputation and reach. Until then, put the money where it books estimates.
 
-## FAQ
+### How many booked estimates mean my marketing is working?
 
-**Isn't brand-building marketing still worth something?**
+Marketing is working when a couple of solid estimates land on your calendar every week and most of them show. The exact number depends on your close rate and your average job value. If you are below that pace, one of three things needs attention: the ad spend is too low, the offer is weak, or leads are being called too slowly.
 
-Sure, over the long haul it has value. But it shouldn't be your only strategy and definitely shouldn't be your first move while you're hungry for jobs today. Use it as a complement to paid, appointment-focused marketing. When you have time and budget, invest in it. Don't make it your only play.
+### Can you do appointment-focused marketing with no ad budget?
 
-**How many booked estimates do I need before marketing counts as working?**
+Partly. Referrals and a strong Google Business Profile are free, but they are slow and you cannot control the volume. Even a modest daily Meta budget changes the pace because it puts your floors in front of homeowners who have never heard of you. If you truly have zero budget, work referrals and reviews. If you have any budget, run ads and call the leads fast.
 
-That depends on your close rate and job value. But generally, if you're getting a couple of solid booked estimates per week that actually show up, you have a working system. Below that, you need to increase spend, sharpen your offer, or fix your follow-up speed.
+### What is the fastest way to get booked floor coating estimates?
 
-**Can I do appointment-focused marketing with no ad budget?**
+The fastest way is a done-for-you service that runs the ads, calls every lead within a minute, and books the estimate onto your calendar. The whole machine is already built, so there is no learning curve and nobody has to sit by the phone. You pay per booked estimate, not per lead, and your only job is to show up and quote the floor.
 
-Partly. Word of mouth and referrals are free, but slow. Adding even a modest daily ad budget on Meta dramatically speeds things up. If you truly have zero budget, focus on referrals and your reputation. If you have any budget, add ads, and call the leads fast.
+### Why is speed to lead the metric that moves everything else?
 
-**What's the fastest way to get booked estimates starting today?**
+Speed to lead moves every other number because a floor coating lead is worth the most in the first minute after the form submit. About 90% of leads answer when called that fast, and the rate drops sharply within the hour. Faster calls raise the lead to appointment rate, which raises booked estimate volume, which lowers cost per booked estimate and cost per closed job.
 
-A done-for-you service like Appointly. We run the Meta ads, contact every lead instantly with speed to lead, and book the estimate onto your calendar. You don't manage ads, you don't chase leads, you just show up and close. It's the fastest path because the entire machine is already built and running.
+## Get booked estimates instead of reports
 
-## Get Booked Estimates, Not Empty Promises
+Dashboards are a vanity metric. Booked estimates are revenue. Stop measuring marketing by what an agency wants to report and start measuring it by homeowners on your calendar, ready to talk about their floor. If you'd rather not run the ads or chase the leads, we run the Meta ads, call every lead within a minute, and book the estimate straight onto your calendar. You pay one flat fee per [booked floor coating estimate](/floor-coating-leads) and nothing for leads that never book.
 
-Dashboards are a vanity metric. Booked estimates are profit.
-
-Stop measuring marketing by what agencies want to report. Start measuring it by what matters: real estimates with real homeowners on your calendar, ready to talk about coating their floor.
-
-If you need booked estimates fast without managing ads or waiting months on promises, here's how Appointly works: you pay one flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book. We run the Meta ads, hit speed to lead before homeowners can shop other coaters, and book the estimate into a time that works for you. One contractor per market, exclusive. You just show up, quote the floor, and collect the cash.
-
-[Visit getappointly.co and let's talk about filling your calendar.](https://getappointly.co)
+One contractor per market. When you want to see what that looks like in your area, [book a strategy call](https://client.getappointly.co/strategy-calendar) and we'll walk through the numbers together.
