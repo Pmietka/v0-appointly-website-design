@@ -25,9 +25,7 @@ A floor coating contractor website converts when it shows a real before-and-afte
 
 ## What is the one job of a floor coating contractor website?
 
-A floor coating contractor's website is not a brochure. It has one job: get a homeowner who is looking at their ugly garage floor to request an estimate. Everything on the page either moves them toward that request or gets in the way.
-
-We look at a lot of coating contractor websites because homeowners who click our clients' ads often check the company's site before they answer the phone. The good ones make our booking calls easier. The bad ones make a homeowner quietly decide to call someone else. Here is what separates them.
+A floor coating contractor's website is not a brochure. It has one job: get a homeowner who is looking at their ugly garage floor to request an estimate. Everything on the page either moves them toward that request or gets in the way. We see this daily, because homeowners who click our clients' ads often check the company's site before they answer the phone, and the bad sites make them quietly decide to call someone else.
 
 ## What are the eight things a floor coating website needs?
 
@@ -41,7 +39,7 @@ Under it, one line that says what you do and where: "Garage floor coatings in [M
 
 "Get a Free Estimate" should appear at the top, after the gallery, after the reviews, and at the bottom. Same words each time. A phone number that is tappable on mobile sits next to it.
 
-Pages that offer six different actions, from "learn more" to "download our brochure" to "see our process," produce fewer estimates than pages that offer one. Homeowners are not confused about what they want. They want someone to come look at the floor.
+Pages that offer six different actions, from "learn more" to "download our brochure," produce fewer estimates than pages that offer one. Homeowners are not confused about what they want. They want someone to come look at the floor.
 
 ### 3. A form that takes thirty seconds
 
@@ -57,13 +55,11 @@ If you have fewer than ten reviews, this is the highest-return fix on the list. 
 
 ### 5. A gallery that loads fast on a phone
 
-Most homeowners will see your site on a phone, often on a slow connection in their own garage. Twenty full-resolution photos that take eight seconds to load are twenty reasons to leave. Compress the images, show eight to twelve of your best floors, and label each one with the town and the system.
-
-Flake color samples belong here too. Homeowners love picking colors, and a color picker keeps them on the page longer.
+Most homeowners will see your site on a phone, often on a slow connection in their own garage. Twenty full-resolution photos that take eight seconds to load are twenty reasons to leave. Compress the images, show eight to twelve of your best floors, and label each one with the town and the system. Flake color samples belong here too, because homeowners love picking colors and a color picker keeps them on the page.
 
 ### 6. Pricing context without a price list
 
-Do not publish a price list. Do answer the question. A short section that says "Most two-car garages in [Metro] fall between $X and $Y depending on the condition of the concrete and the system you choose" filters out the DIY-kit shoppers and makes serious homeowners more comfortable requesting the estimate. It also sets up the value conversation from our [floor coating pricing guide](/blog/floor-coating-pricing-and-margins) before you ever arrive.
+Do not publish a price list. Do answer the question. A short section that says "Most two-car garages in [Metro] fall between $X and $Y depending on the condition of the concrete and the system you choose" filters out the DIY-kit shoppers and makes serious homeowners more comfortable requesting the estimate. It also sets up the value conversation from our [floor coating pricing guide](/blog/floor-coating-pricing-and-margins) before you arrive.
 
 ### 7. A why-us section that sells prep
 
@@ -75,7 +71,7 @@ Every competitor says "quality and customer service." Say something that means s
 - One-day install, park on it in 24 hours.
 - Ten-year adhesion warranty.
 
-Each of those is a reason your quote is higher than the guy with the roller and the hardware-store kit. They also help you explain [polyaspartic versus epoxy](/blog/polyaspartic-vs-epoxy-garage-floors) and present your [warranty](/blog/floor-coating-warranty-guide) at the estimate, because the homeowner has already read it.
+Each of those is a reason your quote is higher than the guy with the roller and the hardware-store kit. They also make it easier to explain [polyaspartic versus epoxy](/blog/polyaspartic-vs-epoxy-garage-floors) and present your [warranty](/blog/floor-coating-warranty-guide) at the estimate, because the homeowner has already read it.
 
 ### 8. Service area, spelled out
 
@@ -87,37 +83,33 @@ List the towns you serve. It helps Google match you to "garage floor coating [To
 - **Stock photography.** Homeowners can tell, and it makes every real photo look suspicious.
 - **Commercial work on the homepage.** If you sell garages, show garages. A warehouse floor confuses the homeowner about who you serve.
 - **Slow page speed.** Test it on your phone on cellular, not on your office wifi.
-- **No tracking.** If you cannot see which pages and which ads produced each form, you cannot fix anything. At minimum, install Google Analytics and the Meta pixel, and tag your ad links.
+- **No tracking.** If you cannot see which pages and which ads produced each form, you cannot fix anything. Install Google Analytics and the Meta pixel, and tag your ad links.
 
 ## Should Meta ads send homeowners to your website or a lead form?
 
-Send paid traffic to a dedicated landing page, not to the native Meta lead form. Our [benchmarks](/floor-coating-benchmarks) show a landing page beats the native lead form on lead quality: the form auto-fills in two taps and is easy to forget, while a homeowner who reads the page, sees the floors, and types in their details has decided they want a quote.
+Send paid traffic to a dedicated landing page, not the native Meta lead form. Our [benchmarks](/floor-coating-benchmarks) show a landing page beats the native form on lead quality, because the form auto-fills in two taps while a homeowner who reads the page and types in their details has decided they want a quote.
 
-The same benchmarks put speed to lead ahead of every other lever. About 90 percent of leads answer when called within one minute of the form, and 60 to 70 percent of leads should become booked estimates at that speed. A landing page with a great form and a slow callback still loses. If your [lead to appointment rate](/blog/floor-coating-lead-to-appointment-rate) is well under that range, the follow-up is usually the problem, not the page.
+The same benchmarks put speed to lead ahead of every other lever: about 90 percent of leads answer when called within one minute, and 60 to 70 percent should become booked estimates. If your [lead to appointment rate](/blog/floor-coating-lead-to-appointment-rate) sits well under that range, the follow-up is usually the problem, not the page.
 
 ## Where does the website fit with ads?
 
-A website does not create demand. Someone has to arrive. For most coating contractors, the traffic worth having comes from two places: homeowners searching Google for a coating company, and homeowners who saw a before-and-after in a [Meta ad](/blog/meta-ads-for-floor-coating-contractors). Our comparison of [Google Ads and Meta ads for floor coating](/blog/google-ads-vs-meta-ads-floor-coating) covers which one to fund first. The website's job is to not lose them.
+A website does not create demand. Someone has to arrive, and for most coating contractors that means homeowners searching Google or homeowners who saw a before-and-after in a [Meta ad](/blog/meta-ads-for-floor-coating-contractors). Our comparison of [Google Ads and Meta ads for floor coating](/blog/google-ads-vs-meta-ads-floor-coating) covers which to fund first.
 
-The contractors who get the most from their websites treat them as the middle of a system: an ad or a search brings the homeowner, the site earns the estimate request, and a fast follow-up turns the request into a booked appointment. Miss any of the three and the other two are wasted.
+Treat the site as the middle of a system: an ad or a search brings the homeowner, the site earns the estimate request, and a fast follow-up turns the request into a booked appointment. Miss any of the three and the other two are wasted.
 
 ## Frequently asked questions
 
 ### What should a floor coating contractor website show above the fold?
 
-The first screen of a floor coating contractor website should show a real before-and-after of a garage in your own market, one line stating what you do and where, and a "Get a Free Estimate" button with a tappable phone number beside it. Stock photos, logo animations, and paragraphs about your company history all push the transformation below the fold and cost you estimate requests.
+The first screen of a floor coating contractor website should show a real before-and-after of a garage in your own market, one line stating what you do and where, and a "Get a Free Estimate" button with a tappable phone number beside it. Stock photos, logo animations, and company history push the transformation below the fold and cost you estimate requests.
 
 ### How many fields should a floor coating estimate form have?
 
-A floor coating estimate form needs four fields: name, phone, town, and one optional line about the project. Every extra field, from square footage to preferred color to email, removes a share of submissions, and you will collect those details on the call anyway. The short form only works if someone calls the homeowner back within minutes of the submission.
+A floor coating estimate form needs four fields: name, phone, town, and one optional line about the project. Every extra field, from square footage to preferred color, removes a share of submissions, and you will collect those details on the call anyway. The short form only works if someone calls the homeowner back within minutes of the submission.
 
 ### Should a floor coating contractor publish prices on their website?
 
-A floor coating contractor should publish a price range, not a price list. A sentence like "most two-car garages in our area fall between $X and $Y depending on the concrete and the system" filters out DIY-kit shoppers, reassures serious homeowners, and sets up the value conversation before the estimate. Exact prices invite comparison shopping on numbers alone before anyone has seen the slab.
-
-### Do floor coating contractors need a separate landing page for Meta ads?
-
-Yes, a floor coating contractor running Meta ads should send clicks to a dedicated landing page rather than the native lead form or the homepage. A landing page with real floors, reviews, and a short form produces better lead quality than the auto-filled Meta form, and it removes the navigation and extra choices that a homepage adds between the click and the estimate request.
+A floor coating contractor should publish a price range, not a price list. A sentence like "most two-car garages in our area fall between $X and $Y depending on the concrete and the system" filters out DIY-kit shoppers, reassures serious homeowners, and sets up the value conversation before the estimate. Exact prices invite comparison on numbers alone before anyone has seen the slab.
 
 ### How fast should you respond to a website estimate request?
 

@@ -17,15 +17,15 @@ Hire a floor coating installer when your current crew has installed 14 or more f
 
 ## Key takeaways
 
-- Hire when your crew installs 14 or more floors a month for three straight months and booked estimates schedule out more than three weeks.
-- Painters are usually the best first hire because they already understand cut-in, film build, and working clean in someone's home.
-- Pay a lead installer $25 to $35 per hour or a per-floor rate, and tie any bonus to zero callbacks in 60 days rather than to speed.
+- Hire when your crew installs 14 or more floors a month for three straight months and estimates schedule out more than three weeks.
+- Painters are usually the best first hire because they already understand cut-in, film build, and working clean.
+- Pay a lead installer $25 to $35 per hour or a per-floor rate, and tie any bonus to zero callbacks in 60 days, not to speed.
 - Train for four weeks in order: prep only, base coat and flake, scrape and topcoat, then run a floor with the lead present but silent.
 - Plan the second crew's estimate volume before its first paycheck, because splitting one calendar between two crews leaves both half-busy.
 
 ## When should you hire a second floor coating installer?
 
-Hire from a full calendar, not from hope. Homeowners buy the floor your crew leaves behind, and most coating contractors hire too late, train too little, and then wonder why the callbacks start the month the new crew launches. You are ready when all three of these are true:
+Hire from a full calendar, not from hope. Most coating contractors hire too late, train too little, and then wonder why the callbacks start the month the new crew launches. You are ready when all three of these are true:
 
 - The current crew is installing 14 or more floors a month for three straight months.
 - Your booked estimates are scheduling out more than three weeks.
@@ -39,10 +39,10 @@ The best installers usually come from trades with the same habits, not from the 
 
 | Background | What they bring | Watch for |
 |---|---|---|
-| Painters | Cut-in, film build, and working clean. Best first hire for most coating companies | Little grinding experience |
-| Tile and flooring installers | Prep, layout, and eight hours on their knees | Speed over finish on the topcoat |
-| Concrete finishers | Slabs, moisture, and grinding | Finish quality needs coaching |
-| Detailers and auto body techs | Meticulous, and used to a customer inspecting under bright light | No trade prep habits yet |
+| Painters | Cut-in, film build, working clean. Best first hire for most coating companies | Little grinding experience |
+| Tile and flooring installers | Prep, layout, eight hours on their knees | Speed over finish on the topcoat |
+| Concrete finishers | Slabs, moisture, grinding | Finish quality needs coaching |
+| Detailers and auto body techs | Meticulous, used to a customer inspecting under bright light | No trade prep habits yet |
 
 You are hiring for attention to detail, physical stamina, and the ability to show up at 7 am on a homeowner's driveway looking like someone they want in their garage. Avoid hiring a "coating guy" from a competitor unless you have seen their floors. Bad habits in prep are harder to untrain than a blank slate.
 
@@ -60,7 +60,7 @@ Per-floor pay works well once an installer is trained. A two-person crew paid $6
 
 Four weeks, in this order, with a written checklist for every stage:
 
-1. **Week 1: prep only.** The new hire runs the grinder, chases cracks, and vacuums on every job. No coating. They learn to read a slab, spot old sealer, run a moisture test, and understand why the floor's life is decided before the first coat goes down. By Friday they should recite the prep checklist from memory.
+1. **Week 1: prep only.** The new hire runs the grinder, chases cracks, and vacuums on every job. No coating. They learn to read a slab, spot old sealer, run a moisture test, and understand why the floor's life is decided before the first coat goes down.
 2. **Week 2: base coat and flake.** They mix under supervision, back-roll behind the lead, and broadcast flake until ratios and pot life are second nature. They also learn the cut-in at walls and around the door track, which is where homeowners look first.
 3. **Week 3: scrape and topcoat.** Scraping flake flat and laying a [polyaspartic](/blog/polyaspartic-vs-epoxy-garage-floors) topcoat without roller marks separates a professional floor from a driveway special. Full polyaspartic takes skill to install well, as our [benchmarks](/floor-coating-benchmarks) note, so the lead watches every pass this week.
 4. **Week 4: run a floor.** The new installer runs a job with the lead present but silent, and the owner inspects under work lights before the homeowner does. Pass that inspection twice and they can be the second person on a crew. Pass it five times and they can lead one.
@@ -76,11 +76,9 @@ An installer who coats a perfect floor and tracks mud through the homeowner's ki
 - Protect the driveway, the door frames, and anything the homeowner could not move.
 - Do a final walkthrough, hand over the care sheet and the warranty, and ask for a [Google review](/blog/google-reviews-floor-coating-contractors) while the homeowner is standing on the new floor.
 
-The walkthrough and the review ask are part of the job, not something the owner handles later.
-
 ## How do you keep good installers from quitting?
 
-Coating crews quit for two reasons: no work in the slow months and no path forward. Fix both.
+Coating crews quit for two reasons: no work in the slow months and no path forward.
 
 For the slow months, plan the [seasonal calendar](/blog/best-time-of-year-for-floor-coating-jobs) in advance. Basements, commercial floors, and shop floors keep a crew busy in winter, and a [winter marketing plan](/blog/winter-marketing-plan-floor-coating-contractors) that starts in February is what fills the spring calendar.
 
@@ -102,7 +100,7 @@ Painters make the best first floor coating hire for most companies because they 
 
 ### How much should you pay a floor coating installer?
 
-A helper on a residential floor coating crew earns $18 to $24 per hour in most US markets, a lead installer earns $25 to $35 per hour or a per-floor rate, and a crew lead who runs jobs without the owner earns $30 to $40 per hour plus a per-floor bonus. Tie any bonus to zero callbacks in 60 days, never to speed.
+A helper on a residential floor coating crew earns $18 to $24 per hour in most US markets, a lead installer earns $25 to $35 per hour or a per-floor rate, and a crew lead who runs jobs without the owner earns $30 to $40 per hour plus a per-floor bonus tied to zero callbacks in 60 days.
 
 ### How long does it take to train a floor coating installer?
 
@@ -110,6 +108,6 @@ Four weeks is enough to train a new floor coating installer to run a garage floo
 
 ## Build the crew, then keep it busy
 
-Hire from a full calendar, pay for quality instead of speed, train for four weeks on a written checklist, and give people a reason to stay. Then make sure the calendar stays full enough to justify all of it.
+Hire from a full calendar, pay for quality instead of speed, train for four weeks on a written checklist, and give people a reason to stay. Then keep the calendar full enough to justify all of it.
 
 If keeping two crews booked is the part you would rather hand off, see how Appointly books [floor coating estimates](/floor-coating-leads) for one contractor per market, or [book a strategy call](https://client.getappointly.co/strategy-calendar) and we will size the appointment flow to your crews.
