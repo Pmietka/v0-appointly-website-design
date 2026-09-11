@@ -2,245 +2,142 @@
 seo_title: "Done-For-You Floor Coating Lead Generation"
 meta_description: "How floor coating contractors get booked estimates without managing ads. Compare monthly-fee agencies to a done-for-you model that fills your calendar."
 date: 2025-12-16
-updated: 2026-09-02
+updated: 2026-09-11
 author: patrick
 cluster: marketing-channels
 ---
-# Floor Coating Lead Generation Done For You: Pay a monthly fee Plus Per Booked Estimate
+
+# Floor Coating Lead Generation Done For You: One Flat Fee Per Booked Estimate
 
 **Meta Description:** How floor coating contractors get booked estimates without managing ads. Compare monthly-fee agencies to a done-for-you model that fills your calendar.
 
 ---
 
-## The Old Agency Model vs The Done-For-You Booked Estimate Model
+Done-for-you floor coating lead generation means a provider runs the Meta ads, calls every lead within a minute, qualifies the homeowner, and books the estimate on your calendar. You pay one flat fee per booked estimate and nothing for leads that never book. A monthly-fee agency does the opposite: it bills you regardless and hands you raw names to chase yourself.
 
-Your business is built on results. You quote a garage floor, you coat it, you get paid. Simple.
+## Key takeaways
 
-Yet when you hire a typical [marketing agency](/floor-coating-marketing-agency-alternative), they flip that model on its head. You pay a fat monthly fee first, and what you get back is a pile of raw "leads" you have to chase yourself.
+- A monthly-fee agency bills the same whether it hands you 2 names or 20, and none of the phone work is done for you.
+- Real done-for-you lead generation ends with a confirmed estimate on your calendar, not a spreadsheet of names.
+- Calling a lead within one minute gets about a 90% answer rate; a lead handed over 24 hours later is usually gone.
+- Expect 60 to 70% of leads to become booked estimates when someone is making the call fast.
+- Before signing, get the lead source, the callback speed, the exclusivity terms, and the fee structure in writing.
 
-Most agencies operate on a monthly fee alone. They charge a flat monthly fee whether they hand you 2 names or 20 names. Whether those names ever pick up the phone or not. Whether you ever stand in a single garage with a quote in hand. The money leaves your account every month like clockwork, and the work of turning a name into a [booked estimate](/floor-coating-leads) falls entirely on you.
+## How does a monthly-fee agency differ from done-for-you booking?
 
-This mismatch is why so many floor coating contractors hate working with agencies.
+A monthly-fee agency charges a flat amount every month and hands you raw leads to chase; a done-for-you booking service is paid per estimate it puts on your calendar. Your business is built on results. You quote a garage floor, you coat it, you get paid. A typical [marketing agency](/floor-coating-marketing-agency-alternative) flips that: the money leaves your account first, and the work of turning a name into a [booked estimate](/floor-coating-leads) falls entirely on you.
 
-**The monthly-fee agency Model:**
-- You pay a flat monthly fee upfront
-- Agency does vague "marketing work" (often unclear what)
-- You get raw leads, not booked appointments
-- You have to call, chase, and qualify them yourself
-- Most never answer because they already called three other coaters
-- You pay the same whether your calendar fills or stays empty
+| | Monthly-fee agency | Done-for-you booked estimates |
+|---|---|---|
+| What you pay for | A flat monthly fee, calendar full or empty | One flat fee per booked estimate, nothing for leads that never book |
+| What you receive | Raw leads, often a spreadsheet of names | Confirmed estimates on your calendar |
+| Who calls the lead | You | The provider's calling team, within a minute |
+| Speed to lead | Hours or days later | Immediately |
+| Exclusivity | Often shared with other coaters | One contractor per market |
+| Incentive | Keep you paying | Put estimates on your calendar |
 
-The agency's incentive is to keep collecting the monthly fee, not to put an estimate on your calendar. They make money whether you succeed or fail, and they never touch the phone.
+One model dumps the work on you and bills you regardless. The other does the entire job of filling your calendar and ties your cost to estimates that actually get booked.
 
-**The Done-For-You Booked Estimate Model (the Appointly Model):**
-- One flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book
-- We generate the lead through Meta ads, contact it instantly, and book it into a time that works for you
-- You don't buy raw leads. You get booked estimates on your calendar
-- You just show up, quote the epoxy job, and collect the cash
+## Why are floor coating contractors frustrated with agencies?
 
-One model dumps work on you and bills you regardless. One model does the entire job of filling your calendar and ties part of your cost directly to estimates that actually get booked.
+Contractors get frustrated because they pay for activity and get an empty calendar. The pattern repeats: six months of "building momentum", then a spreadsheet of names with wrong numbers and homeowners who barely remember filling out a form, then a shrug about your [close rate](/blog/how-to-close-more-floor-coating-estimates) when nobody shows. The frustration comes from a few specific things.
 
-## Why Floor Coating Contractors Are Frustrated With Agencies
+**Misaligned incentives.** The agency gets paid the same whether your calendar has 1 estimate or 10. It has no reason to obsess over whether anyone books.
 
-Every contractor has a story.
+**Raw leads instead of booked appointments.** You don't need a spreadsheet of cold names. You need someone in their garage ready to talk about a [polyaspartic](/blog/polyaspartic-vs-epoxy-garage-floors) floor. Agencies sell the spreadsheet. Nobody does the work of turning it into a scheduled estimate.
 
-"We hired an agency and paid them a hefty monthly fee for 6 months. In month 7, they said we were 'building momentum' and needed to stay committed. In month 12, we finally got some names, but they were tire-kickers who never showed. We burned a year learning that this wasn't the right fit."
+**No speed to lead.** A floor coating lead goes cold in minutes. Homeowners shopping a garage floor fill out three forms and book whoever calls first. Most agencies hand you the name hours or days later, dead on arrival. Our [benchmarks](/floor-coating-benchmarks) show about a 90% answer rate when the lead is called within one minute, and 60 to 70% of leads should become booked estimates at that speed. See [why speed to lead wins floor coating jobs](/blog/speed-to-lead-wins-floor-coating-jobs).
 
-Or this one:
+**Unclear return.** You're paying for "brand building" or "pipeline development" while your calendar sits empty. Measuring return on a flat monthly bill is nearly impossible because you're paying for activity, not booked estimates.
 
-"The agency charged us for 'strategy and lead generation.' Turns out they were running cheap Facebook ads and emailing us a spreadsheet of names. We had to call every one of them ourselves. By the time we reached anyone, they'd already booked another coater. When we asked why our [close rate](/blog/how-to-close-more-floor-coating-estimates) was so low, they said it was our sales skills, not their setup."
+The result is that contractors feel sold, not served. That pattern is a big part of [why floor coating contractors leave marketing agencies](/blog/why-floor-coating-contractors-leave-marketing-agencies).
 
-Or:
+## What does done-for-you booking look like in practice?
 
-"We got a list of 30 'leads' one month. We called all of them. Half had wrong numbers. The other half barely remembered filling out a form. Not one turned into a booked estimate without us doing all the chasing. We were paying a monthly fee to do our own follow-up."
+In practice, done-for-you booking means the estimate shows up on your calendar without you touching Ads Manager or a phone. Take a garage floor coating contractor in a mid-market city comparing two options.
 
-The frustration comes from several things.
+**Option A: monthly-fee agency.** A flat fee billed no matter what. They hand you raw leads, you do all the calling. No-answer and no-show rates run high because nobody calls leads fast. Whether you booked 2 estimates or 8, the bill is identical, and you did all the phone work.
 
-**Misaligned Incentives**
+**Option B: done-for-you booked estimates.** The provider runs the Meta ads, calls within a minute, and books the time slot. One contractor per market, so you're never competing with the provider's other clients. You pay one flat fee for each estimate that lands on your calendar and nothing for leads that never book.
 
-The agency gets paid the same whether your calendar has 1 estimate or 10. They have no reason to obsess over whether anyone actually books. They just need to keep you on the monthly fee.
+Run the math with an example. Say a typical epoxy garage floor is worth $4,000. If you get a handful of booked estimates a week and close even a fraction of them, the [per-appointment fee](/pricing) is small against the jobs you land. Your cost is tied to booked estimates, not to a bill that arrives whether you work or not.
 
-**Raw Leads Instead of Booked Appointments**
+## What are the red flags that a service isn't really done for you?
 
-You don't need a spreadsheet of cold names. You need someone sitting in your garage ready to talk about a [polyaspartic](/blog/polyaspartic-vs-epoxy-garage-floors) floor. Agencies sell the spreadsheet. Nobody does the work of turning it into a scheduled estimate.
+The term "done-for-you" gets misused. Some agencies say they book appointments and then quietly hand you a lead list to chase. Watch for these six signs.
 
-**No Speed to Lead**
+1. **They hand you raw leads, not booked estimates.** "Here are this month's leads, good luck." If you're the one calling, qualifying, and scheduling, you're doing the hardest part yourself.
+2. **No speed to lead.** "We deliver leads within 24 to 48 hours." In floor coating, 24 hours is a lifetime. The homeowner has already talked to two other coaters.
+3. **No exclusivity.** "We work with several coaters in your area." If they sell the same leads to your competitors, you're in a bidding war on every job.
+4. **Close-rate guarantees.** "We guarantee a 15% close rate." Nobody can guarantee your close rate. It depends on your pricing, your samples, and your pitch in the garage. The honest promise is booked estimates on your calendar.
+5. **They won't explain the lead source.** A legitimate provider can say it plainly: Meta ads to homeowners in your market, instant follow-up, booked into your calendar.
+6. **They bill you when the calendar is empty.** A flat monthly fee with nothing tied to booked estimates means they get paid whether you ever stand in a garage or not.
 
-A floor coating lead goes cold in minutes. Homeowners shopping a garage floor fill out three forms and book whoever calls first. If nobody contacts that lead immediately, the job goes to a competitor. Most agencies hand you the name hours or days later, dead on arrival.
+## What does done-for-you look like when it's done right?
 
-**Unclear ROI**
+Done right, the service is simple to describe and simple to check.
 
-You never know if you're getting your money's worth. The agency claims "brand building" or "pipeline development" when your calendar is empty. Measuring ROI on a monthly fee alone is nearly impossible because you're paying for activity, not booked estimates.
+- Clear structure: one flat fee for each booked estimate that lands on your calendar, nothing for leads that never book
+- Meta (Facebook and Instagram) ads built and run for you; you never touch Ads Manager
+- Every lead contacted within a minute, before the homeowner shops other coaters
+- Booked estimates, not raw names: the homeowner is scheduled into a time that works for you
+- One floor coating contractor per market
 
-**"Strategy" That Never Materializes**
+Your job stays simple too. Show up to the estimate, quote the garage or basement floor, do the work, and collect. Everything before that is handled.
 
-Agencies sell you a comprehensive plan involving content, ads, and "long-term growth." Then they execute whatever is cheapest for them and ignore the rest. Your actual calendar stays empty.
+## What should you ask before signing up?
 
-The result: contractors feel like they're being sold, not served.
+Before you commit any money, get plain answers to these questions.
 
-## What Done-For-You Booking Actually Looks Like in Practice
+**About lead generation**
 
-Here's a real comparison between a monthly-fee agency setup and the Appointly Model, where we run everything and book the estimate for you.
-
-**Scenario: A Garage Floor Coating Contractor in a Mid-Market City**
-
-They need their calendar full of estimates. They're comparing two options.
-
-**Option A: monthly-fee agency**
-- Flat monthly fee, billed no matter what
-- They hand you raw leads, you do all the calling
-- "Booked appointments? That's on you. We just generate the leads."
-- Average no-show and no-answer rate: high, because nobody calls leads fast
-- Your calendar: unpredictable, mostly empty
-
-Month after month, you pay the monthly fee, get a list of names, chase them yourself, and stand in maybe a handful of garages. The monthly fee never changes. Whether you booked 2 estimates or 8, the bill is identical, and you did all the phone work.
-
-**Option B: The Appointly Model (Done-For-You Booked Estimates)**
-- One flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book
-- We run the Meta ads, we hit speed to lead, we book the time slot
-- Exclusive: one floor coating contractor per market, so you're never competing with our other clients
-- Your calendar: filled with scheduled estimates you just show up to
-
-Here you're not paying for activity and hoping. You're paying one fee per estimate we actually put on your calendar. You spend your time quoting epoxy and polyaspartic jobs, not dialing dead numbers.
-
-Run the math with example floor coating job values. Say a typical epoxy garage floor is worth $4,000. If we book you a handful of estimates a week and you close even a fraction of them, the [per-appointment fee](/pricing) is a rounding error against the jobs you land. That's the point: your cost is tied to booked estimates, not a flat monthly fee that bills the same whether you work or not.
-
-This is why floor coating contractors are switching.
-
-## Red Flags That a "Done-For-You" Service Isn't Really Done For You
-
-The term "done-for-you" gets misused. Some agencies say they book appointments and then quietly hand you a lead list to chase.
-
-**Red Flag 1: They Hand You Raw Leads, Not Booked Estimates**
-
-"Here are this month's leads, good luck!"
-
-That's not done-for-you. If you're the one calling, qualifying, and scheduling, you're doing the hardest part yourself. The whole value is in booking the estimate onto your calendar.
-
-**Red Flag 2: No Speed to Lead**
-
-"We deliver leads within 24 to 48 hours."
-
-In floor coating, 24 hours is a lifetime. The homeowner has already talked to two other coaters. If nobody contacts the lead within minutes, the booking is lost. Real done-for-you means the lead gets contacted immediately, before they shop around.
-
-**Red Flag 3: No Exclusivity**
-
-"We work with several coaters in your area."
-
-If they're selling the same leads to your competitors, you're in a bidding war on every job. Real done-for-you means one contractor per market. The leads are yours, period.
-
-**Red Flag 4: Vague Close-Rate Guarantees**
-
-"We guarantee a 15% close rate."
-
-Nobody can guarantee your close rate. That depends on your pricing, your samples, your pitch in the garage. If they're guaranteeing your results, they're either lying or setting up a refund fight later. The real promise is simpler: booked estimates on your calendar.
-
-**Red Flag 5: You Don't Know How They Find People**
-
-"I can't tell you exactly how we generate leads, but they're good."
-
-A legitimate provider can explain it plainly: targeted Meta ads to homeowners in your market, instant follow-up, booked into your calendar. If they won't tell you, be cautious.
-
-**Red Flag 6: They Bill You Even When the Calendar Is Empty**
-
-A flat monthly fee with nothing tied to actual booked estimates means they get paid whether you ever stand in a garage or not. The Appointly Model is different: the only fee is the per-appointment fee, tied directly to estimates that actually land on your calendar.
-
-## What Done-For-You Looks Like When Done Right
-
-Here are the characteristics of a legitimate done-for-you booked appointment service.
-
-**Clear, Honest Structure**
-
-The pricing is explained plainly: one flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book. No mystery, no hidden games.
-
-**Meta Ads Run For You**
-
-You don't touch Ads Manager. We build and run the Meta (Facebook and Instagram) campaigns that put your floor coating offer in front of homeowners in your market.
-
-**Speed to Lead, Every Time**
-
-The moment a homeowner raises their hand, the lead gets contacted immediately, before they can shop other coaters. Speed to lead is the entire game, and it's done for you.
-
-**Booked Estimates, Not Raw Names**
-
-We don't hand you a spreadsheet. We book the homeowner into a time that works for you, on the spot or as soon as we reach them. You get a calendar full of estimates.
-
-**Exclusivity**
-
-One floor coating contractor per market. The leads and bookings are yours alone. You're never competing against another one of our clients.
-
-**You Just Show Up and Close**
-
-The contractor's job is simple: show up to the estimate, quote the garage or basement floor, do the work, and collect the cash. Everything before that is handled.
-
-## Questions to Ask Before Signing Up
-
-Before you commit any money, get answers to these questions.
-
-**About How Leads Are Generated**
-
-- How do you generate leads? (Should be a clear answer: Meta ads targeting homeowners in my market.)
+- How do you generate leads? (Should be a clear answer: Meta ads to homeowners in my market.)
 - Can you show me examples of the ads or offers that bring people in?
-- How fast does a new lead get contacted? (Should be: immediately, speed to lead.)
+- How fast does a new lead get contacted? (Should be: within a minute.)
 
-**About Booked Appointments**
+**About booked appointments**
 
-- Do you hand me raw leads or do you book the estimate onto my calendar?
+- Do you hand me raw leads or book the estimate onto my calendar?
 - Who does the calling and qualifying, you or me? (Should be: them.)
-- How do you fit appointments into my schedule and availability?
+- How do you fit appointments into my schedule?
 
-**About Exclusivity**
+**About exclusivity and pricing**
 
 - How many floor coating contractors do you work with in my market? (Should be: one.)
-- Are these leads exclusive to me, or shared with competitors?
+- What exactly do I pay for? (Should be: one flat fee per booked estimate, nothing for activity.)
+- What counts as a booked estimate, and what happens if one is clearly not a real prospect?
 
-**About Pricing Structure**
-
-- How does your pricing work? (Should be: one flat fee per booked estimate, nothing for activity.)
-- What exactly does the monthly fee cover?
-- Is the per-appointment fee tied to estimates that actually land on my calendar?
-
-**About Flexibility and Tracking**
+**About tracking**
 
 - Can I see the booked estimates and where they came from?
 - How do we review what's working month to month?
-- What happens if a booked appointment is clearly not a real prospect?
 
-**Get It All In Writing**
+Then get it in writing: the per-appointment fee and what counts as a booked estimate, the callback and booking process, exclusivity terms, and how appointments get reported to you. If they won't put it in writing, don't work with them.
 
-Before you hand over money, get a written agreement that spells out:
-- The monthly fee and what it covers
-- The per-appointment fee and what counts as a booked estimate
-- Speed-to-lead and booking process
-- Exclusivity terms
-- How appointments get reported to you
+## Frequently asked questions
 
-If they won't put it in writing, don't work with them.
+### If I go done-for-you, won't I lose the marketing strategy an agency provides?
 
-## FAQ
+Probably, and it rarely matters. Most monthly-fee agency "strategy" for a floor coating contractor is generic content and brand talk. If booked estimates are landing on your calendar every week, that is your lead generation strategy. You can handle branding and website details separately, with a freelancer or on your own, or skip them until the calendar is full.
 
-**Q: If I go done-for-you, won't I lose the marketing strategy an agency provides?**
+### Can I use an agency for leads and a done-for-you service for booked estimates at the same time?
 
-A: Probably, and it might not matter. Most monthly fee agencies' "strategy" is generic. If you're getting booked estimates on your calendar, that IS your lead generation strategy. You can handle branding and website details separately or not at all. Booked appointments beat strategy talks every time.
+You can, but there's little reason to. If the done-for-you model is filling your calendar with estimates, put your budget there. If you also want brand building, hire a freelancer for that separately from your appointment generation. Running two lead sources at once mostly means paying twice for the same homeowners in the same market.
 
-**Q: Can I do both? Use an agency for some leads and a done-for-you service for booked estimates?**
+### What if the booked floor coating estimates are lower quality than promised?
 
-A: You can, but why? If the done-for-you model is filling your calendar, just use that. If you want brand building too, hire a freelancer for that separately from your appointment generation.
+Test it with your own numbers. Run the system for a few weeks, track how many homeowners show, how many you close, and what those jobs are worth. A healthy show rate with confirmations and reminders is about 95%, so if far fewer are showing, the provider's booking process is the problem. Real data beats promises every time.
 
-**Q: What if the booked estimates are lower quality than promised?**
+### Is it unprofessional to skip long-term marketing and just run on booked estimates?
 
-A: Test it. Run the system, see how many homeowners actually show and how many you close, then judge by your own numbers. Real data beats promises every time.
+No. If your calendar is full and you're closing epoxy and polyaspartic jobs, nobody will call that unprofessional. Long-term marketing projects like search rankings and content can be added later, once cash flow is steady. Right now, execution beats perfection, and a booked estimate this week is worth more than a ranking next year.
 
-**Q: Is it unprofessional to skip the long-term marketing projects and just run on booked estimates?**
+### How many appointment-generation services should a floor coating contractor work with?
 
-A: No. If your calendar is full and you're closing epoxy jobs, it's not unprofessional. You can add brand building later. Right now, execution beats perfection.
+Start with one, especially since the best providers are exclusive to your market anyway, so a second one would be competing for the same homeowners. Once you see the quality of the booked estimates and your close rate on them, scale up with that provider. Switching every month resets the ad learning and costs you the momentum you paid for.
 
-**Q: How many appointment-generation services should I work with?**
+## Stop buying activity and start getting booked estimates
 
-A: Start with one, especially since the best ones are exclusive to your market anyway. Once you see the quality and your close rate, scale up with that one. Don't switch providers every month.
+If you'd rather quote floors than dial a spreadsheet, [booked floor coating estimates](/floor-coating-leads) put a scheduled homeowner in front of you and charge one flat fee per estimate that lands on your calendar, nothing for leads that never book. The ads, the calls, and the scheduling are done for you.
 
----
-
-## Stop Buying Activity. Start Getting Booked Estimates.
-
-With the Appointly Model, you pay one flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book. We generate the lead through Meta ads, contact it instantly with real speed to lead before they can shop other coaters, and book the estimate into a time that works for you. You just show up, quote the floor, do the job, and collect the cash. One contractor per market, exclusive. Start at [getappointly.co](https://getappointly.co) and see why floor coating contractors are leaving monthly-fee agencies behind.
+[Book a strategy call](https://client.getappointly.co/strategy-calendar) and we'll go through your market, how many estimates a week your crew can run, and whether your area is still open. One contractor per market.
