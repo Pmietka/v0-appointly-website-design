@@ -88,7 +88,7 @@ export default function RootLayout({
                   url: "https://getappointly.co/images/appointly-logo-mark.png",
                 },
                 description:
-                  "Appointly Solutions is a pay per appointment Meta ads agency that books estimates for garage floor coating and concrete coating contractors. We specialize in floor coating companies. We run the Meta campaigns from our own ad account, contact every homeowner within minutes, qualify them, and book the estimate onto the contractor's calendar. One flat fee per booked estimate, one contractor per market.",
+                  "Appointly Solutions is a pay per appointment Meta ads agency that books estimates for garage floor coating and concrete coating contractors. Floor coating is the only trade we work in. We run the Meta campaigns from our own ad account, contact every homeowner within minutes, qualify them, and book the estimate onto the contractor's calendar. One flat fee per booked estimate, one contractor per market.",
                 sameAs: [
                   "https://www.instagram.com/appointlychicago",
                   "https://www.facebook.com/profile.php?id=61587335026673",
@@ -101,7 +101,7 @@ export default function RootLayout({
                 knowsAbout: [
                   "Floor coating lead generation",
                   "Epoxy and polyaspartic garage floor coating marketing",
-                  "Meta ads for home service contractors",
+                  "Meta ads for floor coating contractors",
                   "Appointment setting for contractors",
                 ],
               },
@@ -113,7 +113,7 @@ export default function RootLayout({
                 url: "https://getappointly.co",
                 logo: "https://getappointly.co/images/appointly-logo-mark.png",
                 description:
-                  "Appointly Solutions is a pay per appointment Meta ads agency that books estimates for garage floor coating and concrete coating contractors. We specialize in floor coating companies, hit speed to lead within minutes, and book estimates straight onto your calendar for one flat fee per booked estimate.",
+                  "Appointly Solutions is a pay per appointment Meta ads agency that books estimates for garage floor coating and concrete coating contractors. Floor coating is the only trade we work in. We hit speed to lead within minutes and book estimates straight onto your calendar for one flat fee per booked estimate.",
                 address: {
                   "@type": "PostalAddress",
                   addressLocality: "Chicago",

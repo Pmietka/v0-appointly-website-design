@@ -101,11 +101,12 @@ export default function AboutPage() {
                 contractors.
               </p>
               <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                Floor coating is what we specialize in. Garage floors, epoxy,
+                Floor coating is the only trade we work in. Garage floors, epoxy,
                 polyaspartic, and concrete coatings are the only work our creative,
                 our qualifying questions, and our booking scripts are built around,
                 which is why we can tell a real coating job from a tire kicker in
-                the first 30 seconds of a call.
+                the first 30 seconds of a call. We do not split our attention
+                across five other trades.
               </p>
               <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
                 Founded by brothers Patrick and Jacob Mietka in Chicago, IL, Appointly
@@ -205,7 +206,7 @@ export default function AboutPage() {
                 Built around exclusivity, speed, and trust.
               </h2>
               <p className="mt-4 leading-relaxed text-muted-foreground">
-                Appointly Solutions is designed to give home service contractors a
+                Appointly Solutions is designed to give floor coating contractors a
                 reliable growth engine that feels accountable from day one.
               </p>
             </div>

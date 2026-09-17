@@ -20,7 +20,7 @@ const faqItems = [
   {
     question: "Do you only work with floor coating contractors?",
     answer:
-      "Floor coating is our specialty. Garage floor coating, epoxy, polyaspartic, and concrete coating contractors are who we build creative, qualifying criteria, and booking scripts around, and it is the trade where we know the benchmarks cold. We do book appointments for a small number of insulation contractors, but coatings is the focus of the business.",
+      "Yes. Garage floor coating, epoxy, polyaspartic, and concrete coating contractors are the only contractors we take on. Our creative, qualifying criteria, and booking scripts are built for coating work and nothing else, which is why we can tell a real coating job from a tire kicker in the first 30 seconds of a call.",
   },
   {
     question: "What counts as a booked appointment?",

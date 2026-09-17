@@ -135,14 +135,6 @@ html { scroll-behavior: smooth; }
 .dscroll .faqi dt{font-size:clamp(18px,2.7vw,23px);font-weight:600;letter-spacing:-.01em;line-height:1.25}
 .dscroll .faqi dd{font-size:clamp(15px,2.1vw,17px);color:var(--ink-3);line-height:1.6;margin-top:10px}
 
-/* secondary insulation section (clearly subordinate to the floor coating lead) */
-.dscroll .insul{background:var(--tint)}
-.dscroll .insul .ieyebrow{font-size:clamp(11px,2.4vw,13px);font-weight:700;text-transform:uppercase;letter-spacing:.2em;color:var(--ink-4);margin-bottom:14px}
-.dscroll .insul h3{font-size:clamp(22px,3.4vw,32px);font-weight:600;letter-spacing:-.02em;line-height:1.15}
-.dscroll .insul .sub{margin-top:14px}
-.dscroll .insul a.ilink{color:var(--ink);font-weight:600;text-decoration:underline;text-underline-offset:3px}
-.dscroll .insul a.ilink:hover{color:var(--ink-2)}
-
 /* bottom CTA */
 .dscroll .ctaband{text-align:center}
 .dscroll .ctaband .wrap{display:flex;flex-direction:column;align-items:center}

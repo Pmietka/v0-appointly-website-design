@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Floor Coating Contractor Marketing Blog | Appointly",
     description:
-      "Read practical marketing guidance for floor coating and home service contractors, including booked estimates, Meta ads, local visibility, and growth ideas.",
+      "Read practical marketing guidance for floor coating contractors, including booked estimates, Meta ads, local visibility, and growth ideas.",
     url: "https://getappointly.co/blog",
     siteName: "Appointly Solutions",
     type: "website",

@@ -24,11 +24,11 @@ export const viewport: Viewport = {
   themeColor: "#fafafa",
 };
 
-/* ── LEAD TRADE SWAP HOOK ───────────────────────────────────────────────────
-   Floor coating / epoxy is the current lead niche, so it is the hero headline
-   noun. To run the same page against a different trade per traffic source
-   (e.g. "Insulation Jobs"), change ONLY this value. Nothing else needs editing.
-   ─────────────────────────────────────────────────────────────────────────── */
+/* LEAD TRADE SWAP HOOK
+   Floor coating is the only trade Appointly works in and the hero headline
+   noun. The value stays swappable for wording tests ("Garage Floor Jobs",
+   "Epoxy Floor Jobs"); nothing else needs editing. Do not point it at a trade
+   the business does not serve. */
 const LEAD_TRADE = "Floor Coating Jobs";
 
 export const metadata: Metadata = {
@@ -69,11 +69,15 @@ export default function HomePage() {
       "@context": "https://schema.org",
       "@type": "Service",
       "@id": "https://getappointly.co/#service",
-      serviceType: "Appointment generation for home service contractors",
+      serviceType: "Pay per appointment Meta ads for floor coating contractors",
       name: "Booked floor coating jobs for contractors",
       provider: { "@id": "https://getappointly.co/#organization" },
       areaServed: ["US", "CA"],
-      audience: { "@type": "Audience", audienceType: "Home service contractors" },
+      audience: {
+        "@type": "Audience",
+        audienceType:
+          "Garage floor coating, epoxy, polyaspartic, and concrete coating contractors",
+      },
       offers: {
         "@type": "Offer",
         availability: "https://schema.org/InStock",
@@ -115,8 +119,7 @@ export default function HomePage() {
           <p className="sub">
             Appointly Solutions is a pay per appointment Meta ads agency that
             books estimates for garage floor coating and concrete coating
-            contractors. Floor coating is what we specialize in, not one trade on
-            a list of ten.
+            contractors. Floor coating is the only trade we work in.
           </p>
           <a className="btn" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
             Book a Call <span className="arr">&rarr;</span>
@@ -401,21 +404,6 @@ export default function HomePage() {
             <div className="step"><div className="sn">2</div><div className="st">We launch the ads and book your calendar.</div></div>
             <div className="step"><div className="sn">3</div><div className="st">You show up and close.</div></div>
           </div>
-        </div>
-      </section>
-
-      {/* Secondary: insulation contractors (clearly subordinate to the floor coating lead) */}
-      <section className="sec insul">
-        <div className="wrap">
-          <h3>Not floor coating? We book insulation appointments too.</h3>
-          <p className="sub">
-            Same model, same team. We run the ads, hit speed to lead, and put
-            booked estimates on your calendar.{" "}
-            <a className="ilink" href="/floor-coating-leads">
-              See how it works for insulation contractors
-            </a>
-            .
-          </p>
         </div>
       </section>
 
