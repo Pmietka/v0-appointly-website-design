@@ -107,7 +107,7 @@ A lead is a name and a phone number from someone who clicked an ad or filled out
 
 ### How does pay-per-appointment pricing work for floor coating contractors?
 
-Pay-per-appointment pricing means you pay one flat fee for each booked estimate that lands on your calendar and nothing for leads that never book. There is no retainer, no monthly fee, and no contract. The fee covers the Meta ads, the creative, the calling team, and the scheduling. You are buying scheduled estimates, not a list of names.
+Pay-per-appointment pricing means you pay one flat fee for each booked estimate that lands on your calendar and nothing for leads that never book. There is no retainer, no monthly fee, and no contract. The fee covers the calling team that reaches every lead within a minute, the qualifying, and the scheduling. You are buying scheduled estimates, not a list of names.
 
 ### What happens if a booked floor coating estimate doesn't close?
 

@@ -170,8 +170,10 @@ export default function PayPerLeadInsulationPage() {
               </h2>
               <p className="mt-5 text-sm leading-7 text-muted-foreground md:text-base">
                 The per-appointment fee covers everything we do to put the estimate on
-                your calendar: running your Meta ads, hitting every lead instantly, and
-                booking it. You are charged for each floor coating estimate we place on your calendar and for nothing else. It
+                your calendar: hitting every lead within a minute, qualifying the
+                homeowner on service area and project scope, and booking the estimate
+                into a slot that fits your route. You are charged for each floor coating
+                estimate we place on your calendar and for nothing else. It
                 is not about chasing the lowest cost. It is a system where what you pay
                 maps directly to appointments that show up.
               </p>

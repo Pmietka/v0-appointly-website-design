@@ -67,7 +67,7 @@ The biggest red flag is a provider that sells "leads" and calls them appointment
 
 You pay one flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book. No retainer, no monthly fee, no contract.
 
-That single fee covers the whole machine: building and running the Meta (Facebook and Instagram) ad campaigns, writing the creative, the calling team that reaches every lead within a minute, and the back-and-forth to book each estimate into a slot that fits your route. You are paying for a confirmed time with a homeowner who expects you to walk their garage or basement, not for a name on a list.
+That single fee covers the whole machine: the calling team that reaches every lead within a minute, qualifying the homeowner on service area and project scope, and the back-and-forth to book each estimate into a slot that fits your route. You are paying for a confirmed time with a homeowner who expects you to walk their garage or basement, not for a name on a list.
 
 Any provider you talk to should be able to explain their structure that cleanly in ten minutes. If they can't, that's your answer.
 
@@ -106,7 +106,7 @@ No. With a booked-appointment model, the provider generates the lead through Met
 
 ### How are exclusive booked floor coating estimates priced?
 
-You pay one flat fee for each booked estimate that lands on your calendar and nothing for leads that never book. There is no retainer, no monthly fee, and no contract. That fee covers the ads, the creative, the calling team, and the scheduling. You are paying for confirmed estimates with homeowners who expect you, not for a list of names.
+You pay one flat fee for each booked estimate that lands on your calendar and nothing for leads that never book. There is no retainer, no monthly fee, and no contract. That fee covers the calling team, the qualifying, and the scheduling. You are paying for confirmed estimates with homeowners who expect you, not for a list of names.
 
 ### What should I ask a floor coating lead provider before signing?
 

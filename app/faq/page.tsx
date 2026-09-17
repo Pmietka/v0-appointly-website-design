@@ -28,7 +28,7 @@ const faqItems = [
   {
     question: "What does the per-appointment fee cover?",
     answer:
-      "Everything we do to fill your calendar: building and running your Meta ads, contacting every lead instantly with speed-to-lead outreach, and booking the estimates onto your calendar.",
+      "Everything we do to fill your calendar: contacting every lead instantly with speed-to-lead outreach, qualifying each homeowner, and booking the estimate onto your calendar.",
   },
   {
     question: "Are my appointments exclusive?",
