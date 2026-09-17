@@ -70,7 +70,7 @@ By the time our client shows up, the homeowner already understands the product a
 
 Four for four is not luck. It is what happens when the person on the phone actually knows how to sell.
 
-A contractor closing raw leads usually closes 5 to 12% of shared marketplace leads and roughly 30 to 40% of the estimates they book themselves. A homeowner who has already been educated, qualified, and booked by someone who knows the product walks into the estimate warm. That is why our clients close a higher share of the estimates we book, and why the tickets tend to run larger. The homeowner is not asking whether to coat the floor. They are asking how soon.
+A contractor closing raw leads usually closes 5 to 12% of shared marketplace leads and roughly 40 to 50% of the estimates they book themselves. A homeowner who has already been educated, qualified, and booked by someone who knows the product walks into the estimate warm. That is why our clients close a higher share of the estimates we book, and why the tickets tend to run larger. The homeowner is not asking whether to coat the floor. They are asking how soon.
 
 If you want the sales side of that equation, read [how to close more floor coating estimates](/blog/how-to-close-more-floor-coating-estimates). If you are weighing whether to build this in house, [in house appointment setter vs outsourced](/blog/in-house-appointment-setter-vs-outsourced) lays out the math.
 
