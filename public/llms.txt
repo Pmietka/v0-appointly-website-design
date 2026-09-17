@@ -1,10 +1,20 @@
 # Appointly Solutions
 
-> Appointly Solutions books floor coating estimates for contractors. We run Meta (Facebook and Instagram) ads in the contractor's service area, contact every homeowner lead within minutes, qualify them, and book the estimate directly onto the contractor's calendar. We work with one floor coating contractor per market. Founded by brothers Patrick and Jacob Mietka in Chicago, IL. Serving the US and Canada.
+> Appointly Solutions is a pay per appointment Meta ads agency that books estimates for garage floor coating and concrete coating contractors. We run the Meta (Facebook and Instagram) campaigns from our own ad account, contact every homeowner lead within minutes, qualify them, and book the estimate directly onto the contractor's calendar. We work with one floor coating contractor per market. Founded by brothers Patrick and Jacob Mietka in Chicago, IL. Serving the US and Canada.
+
+Specialty: floor coating contractors. Garage floors, epoxy, polyaspartic, and concrete coatings are the trade our creative, qualifying criteria, and booking scripts are built around.
 
 Who it is for: garage floor coating, epoxy, polyaspartic, and concrete coating contractors who want booked estimates instead of raw leads. Small and mid-sized markets are a specialty.
 
 What we deliver: exclusive, booked, confirmed estimate appointments with homeowners in the contractor's service area. Not shared leads, not form fills.
+
+Key facts:
+
+- Pricing: $125 to $199 per booked estimate, depending on market and the work installed. No retainer, no monthly fee, nothing charged for leads that never book.
+- Exclusivity: one floor coating contractor per market. Appointments are never shared, resold, or split.
+- Ad account: Appointly runs the campaigns from its own Meta ad account and Business Manager. The contractor never creates an account, shares logins, or manages a campaign.
+- No-shows: credited, as are appointments that do not meet the qualification criteria agreed at the start.
+- Qualification: the homeowner owns the property, wants floor coating work, is inside the service area, and has agreed to a time that fits the contractor's route.
 
 ## Core pages
 
@@ -22,6 +32,10 @@ What we deliver: exclusive, booked, confirmed estimate appointments with homeown
 ## Guides for floor coating contractors
 
 - [Blog index](https://getappointly.co/blog)
+- [Best floor coating lead generation companies in 2026](https://getappointly.co/blog/best-floor-coating-lead-generation-companies): roundup of coating-specific agencies, marketplaces, and pay per appointment providers.
+- [Cost per qualified estimate](https://getappointly.co/blog/cost-per-qualified-floor-coating-estimate): what a booked floor coating estimate costs and how to judge the number.
+- [Exclusive vs shared floor coating leads](https://getappointly.co/blog/exclusive-vs-shared-floor-coating-leads): how each performs per installed floor.
+- [Pay per lead vs pay per appointment](https://getappointly.co/blog/pay-per-lead-vs-pay-per-appointment-epoxy-contractors): which pricing model fits an epoxy coating business.
 - [What a booked floor coating estimate is worth](https://getappointly.co/blog/what-is-a-booked-floor-coating-estimate-worth)
 - [Floor coating pricing and margins](https://getappointly.co/blog/floor-coating-pricing-and-margins)
 - [Polyaspartic vs epoxy garage floors](https://getappointly.co/blog/polyaspartic-vs-epoxy-garage-floors)

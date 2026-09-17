@@ -5,11 +5,13 @@ import { ArrowRight, BadgeCheck, Clock3, ShieldCheck, Zap } from "lucide-react";
 import Image from "next/image";
 
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { FaqBlock } from "@/components/faq-block";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { ProofSection } from "@/components/proof-section";
 import { SeoResourceLinks } from "@/components/seo-resource-links";
 import { authors, personSchema } from "@/lib/authors";
+import { coreFaqItems } from "@/lib/faq";
 import { getCommercialResources } from "@/lib/seo-resources";
 
 const bookingUrl = "https://client.getappointly.co/strategy-calendar";
@@ -44,7 +46,7 @@ const differentiators = [
 export const metadata: Metadata = {
   title: "About Appointly | Booked Floor Coating Estimates",
   description:
-    "Meet Patrick and Jacob Mietka, the Chicago brothers behind Appointly, and why they built a model that books floor coating estimates instead of selling leads.",
+    "Appointly Solutions is a pay per appointment Meta ads agency that books estimates for garage floor coating and concrete coating contractors.",
   keywords: [
     "Appointly Solutions",
     "appointment generation for contractors",
@@ -93,7 +95,19 @@ export default function AboutPage() {
               <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-balance md:text-6xl">
                 About <span className="gradient-text">Appointly Solutions</span>
               </h1>
-              <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
+              <p className="mt-6 max-w-2xl text-base leading-relaxed text-foreground md:text-lg">
+                Appointly Solutions is a pay per appointment Meta ads agency that
+                books estimates for garage floor coating and concrete coating
+                contractors.
+              </p>
+              <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
+                Floor coating is what we specialize in. Garage floors, epoxy,
+                polyaspartic, and concrete coatings are the only work our creative,
+                our qualifying questions, and our booking scripts are built around,
+                which is why we can tell a real coating job from a tire kicker in
+                the first 30 seconds of a call.
+              </p>
+              <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
                 Founded by brothers Patrick and Jacob Mietka in Chicago, IL, Appointly
                 Solutions was built out of frustration with agencies that charge big
                 monthly fees without delivering results. We created the Appointly Model so
@@ -261,6 +275,10 @@ export default function AboutPage() {
           </div>
         </section>
 
+        <FaqBlock
+          title="What contractors ask before they start."
+          items={coreFaqItems}
+        />
         <ProofSection />
         <SeoResourceLinks
           title="Supporting pages worth visiting next."

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Target, User, Shield, CreditCard, Clock, Lock, LineChart, CalendarCheck, Check, X } from "lucide-react";
 
 import { SiteNav, BOOKING_URL, PHONE_DISPLAY, PHONE_HREF } from "@/components/site-nav";
+import { coreFaqItems } from "@/lib/faq";
 import "./home.css";
 
 // Comparison data drives both the desktop table and the mobile stacked cards.
@@ -33,14 +34,14 @@ const LEAD_TRADE = "Floor Coating Jobs";
 export const metadata: Metadata = {
   title: "Booked Floor Coating Jobs for Contractors | Appointly",
   description:
-    "We book floor coating jobs for contractors. Pay per appointment: you only pay when a qualified homeowner is booked on your calendar.",
+    "Appointly Solutions is a pay per appointment Meta ads agency that books estimates for garage floor coating and concrete coating contractors.",
   alternates: {
     canonical: "https://getappointly.co/",
   },
   openGraph: {
     title: "Booked Floor Coating Jobs for Contractors | Appointly",
     description:
-      "We book floor coating jobs for contractors. Pay per appointment: you only pay when a qualified homeowner is booked on your calendar.",
+      "Appointly Solutions is a pay per appointment Meta ads agency that books estimates for garage floor coating and concrete coating contractors.",
     url: "https://getappointly.co/",
     siteName: "Appointly Solutions",
     type: "website",
@@ -57,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Booked Floor Coating Jobs for Contractors | Appointly",
     description:
-      "We book floor coating jobs for contractors. Pay per appointment: you only pay when a qualified homeowner is booked on your calendar.",
+      "Appointly Solutions is a pay per appointment Meta ads agency that books estimates for garage floor coating and concrete coating contractors.",
     images: ["https://getappointly.co/images/og-home.png"],
   },
 };
@@ -78,6 +79,16 @@ export default function HomePage() {
         availability: "https://schema.org/InStock",
         url: BOOKING_URL,
       },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://getappointly.co/#faq",
+      mainEntity: coreFaqItems.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: { "@type": "Answer", text: item.answer },
+      })),
     },
   ];
 
@@ -100,6 +111,12 @@ export default function HomePage() {
           <p className="lead">
             Pay per appointment. You pay only when a qualified homeowner is on
             your calendar.
+          </p>
+          <p className="sub">
+            Appointly Solutions is a pay per appointment Meta ads agency that
+            books estimates for garage floor coating and concrete coating
+            contractors. Floor coating is what we specialize in, not one trade on
+            a list of ten.
           </p>
           <a className="btn" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
             Book a Call <span className="arr">&rarr;</span>
@@ -348,6 +365,25 @@ export default function HomePage() {
               <li>Only booked homeowners ready for an estimate</li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      {/* Straight answers to the questions contractors ask first */}
+      <section className="sec" id="faq">
+        <div className="wrap">
+          <h2>Straight <span className="hl">answers.</span></h2>
+          <p className="sub">
+            The four questions every floor coating contractor asks us before
+            anything else.
+          </p>
+          <dl className="faqs">
+            {coreFaqItems.map((item) => (
+              <div className="faqi" key={item.question}>
+                <dt>{item.question}</dt>
+                <dd>{item.answer}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 

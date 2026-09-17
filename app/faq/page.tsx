@@ -11,14 +11,16 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { coreFaqItems } from "@/lib/faq";
 
 const bookingUrl = "https://client.getappointly.co/strategy-calendar";
 
 const faqItems = [
+  ...coreFaqItems,
   {
-    question: "How does the pricing work?",
+    question: "Do you only work with floor coating contractors?",
     answer:
-      "One part. You pay a flat fee for each booked estimate that lands on your calendar. No monthly fee, and nothing for leads that never book.",
+      "Floor coating is our specialty. Garage floor coating, epoxy, polyaspartic, and concrete coating contractors are who we build creative, qualifying criteria, and booking scripts around, and it is the trade where we know the benchmarks cold. We do book appointments for a small number of insulation contractors, but coatings is the focus of the business.",
   },
   {
     question: "What counts as a booked appointment?",
@@ -31,14 +33,9 @@ const faqItems = [
       "Everything we do to fill your calendar: contacting every lead instantly with speed-to-lead outreach, qualifying each homeowner, and booking the estimate onto your calendar.",
   },
   {
-    question: "Are my appointments exclusive?",
-    answer:
-      "Yes. We only work with one contractor per market. The estimates we book are never shared with a local competitor.",
-  },
-  {
     question: "What markets do you work in?",
     answer:
-      "We focus on small-to-mid-sized markets in the US and Canada where home service contractors have room to grow. Right now our main focus is floor coating and epoxy contractors.",
+      "We focus on small-to-mid-sized markets in the US and Canada where floor coating contractors have room to grow. One coating contractor per market, so availability depends on whether your area is already taken.",
   },
   {
     question: "How fast do appointments come in?",
@@ -65,7 +62,7 @@ const faqItems = [
 export const metadata: Metadata = {
   title: "FAQ | Booked Floor Coating Estimates | Appointly",
   description:
-    "Answers about how Appointly books floor coating estimates: pricing, what counts as an appointment, exclusivity, speed to lead, and how to get started.",
+    "What a booked floor coating estimate costs, whether appointments are exclusive or shared, who owns the Meta ad account, and what happens on a no-show.",
   keywords: [
     "appointment generation FAQ",
     "booked estimates FAQ",
