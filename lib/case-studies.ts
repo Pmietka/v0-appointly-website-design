@@ -141,7 +141,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     calendar: {
       title: "Phil's estimate calendar",
       range: "August 30 to September 19, 2026",
-      legend: "Every blue event is an appointment booked by Appointly. Struck through events are cancellations.",
+      legend: "Every blue event is an appointment booked by Appointly. Struck through events are cancellations. Homeowner names are blurred for privacy.",
       shots: [
         { src: "/images/case-studies/cfc-cal-week1.webp", width: 1447, height: 414, label: "Week of August 30 to September 5" },
         { src: "/images/case-studies/cfc-cal-week2.webp", width: 1410, height: 486, label: "Week of September 6 to 12" },
@@ -207,7 +207,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     calendar: {
       title: "Mark's estimate calendar",
       range: "June 2026",
-      legend: "Every blue event is an appointment booked by Appointly. Twenty appointments in the month.",
+      legend: "Every blue event is an appointment booked by Appointly. Twenty appointments in the month. Homeowner names are blurred for privacy.",
       shots: [
         { src: "/images/case-studies/afab-cal-june.webp", width: 1444, height: 708, label: "June 2026" },
       ],
@@ -276,7 +276,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     calendar: {
       title: "Eric's estimate calendar",
       range: "August 16 to September 12, 2026",
-      legend: "Every blue event is an appointment booked by Appointly. Struck through events are cancellations and are not counted.",
+      legend: "Every blue event is an appointment booked by Appointly. Struck through events are cancellations and are not counted. Homeowner names are blurred for privacy.",
       shots: [
         { src: "/images/case-studies/gf-cal-week1.webp", width: 1314, height: 476, label: "Week of August 16 to 22" },
         { src: "/images/case-studies/gf-cal-week2.webp", width: 1310, height: 426, label: "Week of August 23 to 29" },
