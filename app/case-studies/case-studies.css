@@ -1,0 +1,176 @@
+/* ============================================================================
+   /case-studies page styles. Builds on the shared .dscroll design system
+   (home.css) and the shared proof components (proof.css). Everything is
+   scoped under .dscroll.csp so it cannot leak anywhere else.
+   ============================================================================ */
+
+/* ── hero ─────────────────────────────────────────────────────────────────── */
+.dscroll.csp .cshero{padding:clamp(52px,10vw,104px) 0 clamp(48px,9vw,88px)}
+.dscroll.csp .cshero h1{max-width:16ch}
+.dscroll.csp .crumb{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink-4);margin-bottom:22px;font-weight:500}
+.dscroll.csp .crumb a{color:var(--ink-3);text-decoration:none}
+.dscroll.csp .crumb a:hover{color:var(--ink)}
+.dscroll.csp .crumb svg{width:14px;height:14px}
+.dscroll.csp .crumb span[aria-current]{color:var(--ink);font-weight:600}
+
+/* totals strip */
+.dscroll.csp .totals{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(10px,2vw,16px);margin-top:clamp(34px,6vw,52px)}
+@media(min-width:760px){.dscroll.csp .totals{grid-template-columns:repeat(4,1fr)}}
+.dscroll.csp .total{background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(18px,3vw,24px) clamp(16px,3vw,22px);
+  box-shadow:0 12px 30px -24px rgba(0,0,0,.22)}
+.dscroll.csp .total .tv{font-size:clamp(30px,5vw,44px);font-weight:700;letter-spacing:-.03em;line-height:1;color:var(--ink)}
+.dscroll.csp .total .tl{font-size:clamp(12px,1.8vw,14px);color:var(--ink-3);margin-top:8px;line-height:1.35;font-weight:500}
+
+/* jump chips: one per case study */
+.dscroll.csp .jump{display:flex;flex-wrap:wrap;gap:10px;margin-top:clamp(22px,4vw,30px);align-items:center}
+.dscroll.csp .jump .lbl{font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:var(--ink-4);font-weight:700;margin-right:4px}
+.dscroll.csp .chip{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);border-radius:999px;
+  padding:8px 16px 8px 10px;font-size:14px;font-weight:600;color:var(--ink-2);text-decoration:none;transition:border-color .15s,color .15s,transform .15s}
+.dscroll.csp .chip:hover{border-color:#d4d4d4;color:var(--ink);transform:translateY(-1px)}
+.dscroll.csp .chip .chipn{width:24px;height:24px;border-radius:999px;background:linear-gradient(135deg,#cfffae,#ace5ff);
+  display:grid;place-items:center;font-size:12px;font-weight:800;color:#0f3d2e}
+
+/* ── how we work ──────────────────────────────────────────────────────────── */
+.dscroll.csp .hww{display:grid;gap:clamp(20px,4vw,40px);grid-template-columns:1fr;margin-top:clamp(28px,5vw,44px);align-items:start}
+@media(min-width:900px){.dscroll.csp .hww{grid-template-columns:1.2fr .8fr}}
+.dscroll.csp .hww p{font-size:clamp(16px,2.2vw,18px);line-height:1.6;color:var(--ink-2);margin-top:14px}
+.dscroll.csp .hww p:first-child{margin-top:0}
+.dscroll.csp .hww p strong{color:var(--ink);font-weight:700}
+.dscroll.csp .readnote{background:#fff;border:1px solid var(--line);border-radius:20px;padding:clamp(22px,3.6vw,28px);
+  box-shadow:0 14px 36px -26px rgba(0,0,0,.24);position:relative;overflow:hidden}
+.dscroll.csp .readnote::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,#cfffae,#ace5ff)}
+.dscroll.csp .readnote h3{font-size:clamp(17px,2.4vw,20px);font-weight:700;letter-spacing:-.01em;line-height:1.25}
+.dscroll.csp .readnote p{font-size:clamp(14px,2vw,16px);line-height:1.55;color:var(--ink-3);margin-top:10px}
+.dscroll.csp .structure{display:grid;gap:clamp(12px,2vw,16px);grid-template-columns:1fr;margin-top:clamp(28px,5vw,44px)}
+@media(min-width:720px){.dscroll.csp .structure{grid-template-columns:repeat(3,1fr)}}
+.dscroll.csp .struct{background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(20px,3.2vw,24px);display:flex;gap:14px;align-items:flex-start}
+.dscroll.csp .struct .sicon{flex:none;width:44px;height:44px;border-radius:13px;background:linear-gradient(135deg,#cfffae,#ace5ff);
+  display:grid;place-items:center;color:#0f3d2e}
+.dscroll.csp .struct .sicon svg{width:21px;height:21px;stroke-width:2}
+.dscroll.csp .struct h3{font-size:17px;font-weight:700;letter-spacing:-.01em}
+.dscroll.csp .struct p{font-size:14px;line-height:1.5;color:var(--ink-3);margin-top:5px}
+
+/* ── case study sections ──────────────────────────────────────────────────── */
+.dscroll.csp .csx{padding:clamp(60px,12vw,120px) 0}
+.dscroll.csp .csx+.csx{border-top:1px solid var(--line)}
+
+/* dark header card */
+.dscroll.csp .cshd{display:grid;grid-template-columns:1fr;gap:clamp(20px,4vw,32px);align-items:center;
+  background:var(--ink);color:#fff;border-radius:26px;padding:clamp(26px,4.5vw,42px);position:relative;overflow:hidden;
+  box-shadow:0 30px 70px -36px rgba(0,0,0,.6)}
+@media(min-width:760px){.dscroll.csp .cshd{grid-template-columns:1fr auto}}
+.dscroll.csp .cshd::after{content:"";position:absolute;right:-12%;top:-60%;width:52%;aspect-ratio:1;border-radius:999px;filter:blur(70px);opacity:.28;pointer-events:none;
+  background:conic-gradient(from 210deg at 42% 38%,#ffc9e6,#f4fff6,#c9ffe2,#f6fbff,#cfe6ff,#fdf4ff,#ffd6ee,#ffc9e6)}
+.dscroll.csp .cshd>*{position:relative;z-index:1}
+.dscroll.csp .cseye{font-size:clamp(11px,2.2vw,12px);font-weight:700;text-transform:uppercase;letter-spacing:.22em;color:#a3e4c9;margin-bottom:12px}
+.dscroll.csp .cshd h2{color:#fff;font-size:clamp(28px,5vw,44px);letter-spacing:-.025em;line-height:1.1}
+.dscroll.csp .csmeta{display:grid;grid-template-columns:repeat(2,1fr);gap:16px 24px;margin-top:clamp(20px,3vw,26px)}
+@media(min-width:640px){.dscroll.csp .csmeta{grid-template-columns:repeat(4,auto);justify-content:start;gap:16px clamp(24px,4vw,44px)}}
+.dscroll.csp .csmeta dt{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:rgba(255,255,255,.5)}
+.dscroll.csp .csmeta dd{font-size:clamp(14px,2vw,15.5px);font-weight:600;color:#fff;margin-top:5px;line-height:1.35;max-width:200px}
+.dscroll.csp .cshd-logo{display:flex;align-items:center;justify-content:center;background:#fff;border-radius:18px;
+  padding:16px 22px;min-width:180px;box-shadow:0 14px 30px -18px rgba(0,0,0,.5)}
+.dscroll.csp .cshd-logo img{display:block;width:auto;height:clamp(52px,8vw,72px);max-width:220px;object-fit:contain}
+.dscroll.csp .cshd-logo.dark{background:transparent;padding:0;box-shadow:none}
+.dscroll.csp .cshd-logo.dark img{height:clamp(84px,12vw,120px);border-radius:16px;box-shadow:0 14px 30px -18px rgba(0,0,0,.6)}
+
+/* headline statement + callout */
+.dscroll.csp .cshl{font-size:clamp(24px,4.4vw,40px);font-weight:600;letter-spacing:-.025em;line-height:1.22;margin-top:clamp(30px,5vw,48px);
+  max-width:22ch;text-wrap:balance}
+.dscroll.csp .callout{margin-top:clamp(20px,3vw,26px);background:#fef9c3;border:1px solid #fde68a;border-radius:16px;padding:clamp(16px,2.8vw,22px) clamp(18px,3vw,24px);
+  font-size:clamp(16px,2.3vw,19px);font-weight:600;line-height:1.4;color:#713f12;letter-spacing:-.01em;max-width:820px}
+
+/* two column text + figure blocks */
+.dscroll.csp .csgrid{display:grid;grid-template-columns:1fr;gap:clamp(22px,4vw,44px);margin-top:clamp(36px,6vw,64px);align-items:start}
+@media(min-width:820px){.dscroll.csp .csgrid{grid-template-columns:minmax(0,1.35fr) minmax(0,.85fr)}}
+@media(min-width:820px){.dscroll.csp .csgrid.narrow{grid-template-columns:minmax(0,1.5fr) minmax(0,.7fr)}}
+.dscroll.csp .csgrid.single{grid-template-columns:1fr}
+.dscroll.csp .csgrid.single .cstext{max-width:820px}
+.dscroll.csp .cstext h3.mt{margin-top:clamp(28px,4vw,40px)}
+.dscroll.csp .csx .fquote{margin-top:clamp(36px,6vw,64px)}
+.dscroll.csp .cstext h3{font-size:clamp(20px,3vw,26px);font-weight:700;letter-spacing:-.02em;line-height:1.2;padding-bottom:12px;
+  border-bottom:1px solid var(--line);margin-bottom:6px}
+.dscroll.csp .cstext p{font-size:clamp(16px,2.2vw,18px);line-height:1.62;color:var(--ink-2);margin-top:14px;text-wrap:pretty}
+.dscroll.csp .csfig{margin:0;display:flex;flex-direction:column;gap:10px}
+.dscroll.csp .csfig .frame{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#fff;
+  box-shadow:0 24px 54px -30px rgba(15,23,42,.35)}
+.dscroll.csp .csfig .frame img{display:block;width:100%;height:auto}
+.dscroll.csp .csfig.portrait .frame img{aspect-ratio:4/5;object-fit:cover}
+.dscroll.csp .csfig.square .frame{max-width:320px;margin:0 auto}
+.dscroll.csp .csfig.square .frame img{aspect-ratio:1;object-fit:cover}
+.dscroll.csp .csfig.phone .frame{max-width:340px;margin:0 auto;border-radius:24px}
+.dscroll.csp .csfig figcaption{font-size:13px;color:var(--ink-4);line-height:1.45;text-align:center;font-weight:500}
+
+/* results */
+.dscroll.csp .results{margin-top:clamp(36px,6vw,64px)}
+.dscroll.csp .rlabel{display:flex;align-items:center;gap:12px;font-size:clamp(11px,2.2vw,12px);font-weight:700;text-transform:uppercase;letter-spacing:.2em;color:var(--ink-4)}
+.dscroll.csp .rlabel::after{content:"";flex:1;height:1px;background:var(--line)}
+/* 2 up on phones, 3 up from tablet. A five stat grid becomes a bento: three
+   tiles on the first row, two wider tiles on the second. */
+.dscroll.csp .rgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(10px,2vw,16px);margin-top:clamp(18px,3vw,24px)}
+@media(max-width:719px){.dscroll.csp .rgrid.five>*:nth-child(5){grid-column:span 2}}
+@media(min-width:720px){
+  .dscroll.csp .rgrid{grid-template-columns:repeat(6,1fr)}
+  .dscroll.csp .rgrid>*{grid-column:span 2}
+  .dscroll.csp .rgrid.five>*:nth-child(n+4){grid-column:span 3}
+}
+.dscroll.csp .rtile{background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(18px,3vw,24px) clamp(16px,2.6vw,20px);
+  display:flex;flex-direction:column;justify-content:flex-start;gap:8px;min-height:clamp(110px,16vw,140px);box-shadow:0 12px 30px -24px rgba(0,0,0,.22)}
+.dscroll.csp .rtile .rv{font-size:clamp(28px,4.6vw,40px);font-weight:700;letter-spacing:-.03em;line-height:1;color:var(--ink);overflow-wrap:anywhere}
+.dscroll.csp .rtile .rl{font-size:clamp(11px,1.7vw,12.5px);font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-4);line-height:1.3}
+.dscroll.csp .rtile.hero{background:var(--ink);border-color:var(--ink);position:relative;overflow:hidden}
+.dscroll.csp .rtile.hero::after{content:"";position:absolute;right:-30%;bottom:-60%;width:90%;aspect-ratio:1;border-radius:999px;filter:blur(30px);opacity:.35;
+  background:linear-gradient(135deg,#cfffae,#ace5ff)}
+.dscroll.csp .rtile.hero .rv{color:#fff;position:relative;z-index:1}
+.dscroll.csp .rtile.hero .rl{color:rgba(255,255,255,.7);position:relative;z-index:1}
+.dscroll.csp .rnote{font-size:13.5px;line-height:1.5;color:var(--ink-4);margin-top:14px;font-style:italic;max-width:860px}
+.dscroll.csp .rsince{margin-top:clamp(18px,3vw,22px);background:#ecfdf5;border:1px solid #d1fae5;color:#065f46;border-radius:16px;
+  padding:clamp(14px,2.6vw,18px) clamp(16px,3vw,22px);font-size:clamp(15px,2.1vw,17px);font-weight:600;line-height:1.45;max-width:860px}
+
+/* proof calendars */
+.dscroll.csp .csproof{margin-top:clamp(40px,7vw,72px)}
+.dscroll.csp .proofhd{display:flex;flex-direction:column;gap:8px;max-width:820px}
+.dscroll.csp .proofhd .eyebrow{margin-bottom:4px}
+.dscroll.csp .proofhd h3{font-size:clamp(22px,3.4vw,30px);font-weight:700;letter-spacing:-.02em;line-height:1.2}
+.dscroll.csp .proofhd .legend{display:flex;align-items:flex-start;gap:9px;font-size:clamp(13px,2vw,15px);color:var(--ink-3);line-height:1.45}
+.dscroll.csp .proofhd .legend .pip{flex:none;width:12px;height:12px;border-radius:4px;background:#1a9df0;margin-top:4px}
+.dscroll.csp .calshots{display:flex;flex-direction:column;gap:clamp(16px,3vw,24px);margin-top:clamp(20px,3.6vw,30px)}
+.dscroll.csp .calshot{margin:0;display:flex;flex-direction:column;gap:10px}
+.dscroll.csp .calshot .frame{border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#fff;
+  box-shadow:0 22px 50px -30px rgba(15,23,42,.35)}
+.dscroll.csp .calshot .frame img{display:block;width:100%;height:auto}
+.dscroll.csp .calshot figcaption{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--ink-3);letter-spacing:.02em;text-transform:uppercase}
+.dscroll.csp .calshot figcaption::before{content:"";width:18px;height:2px;background:var(--ink-4);border-radius:2px}
+
+/* ── at a glance table ────────────────────────────────────────────────────── */
+.dscroll.csp .glance{margin-top:clamp(28px,5vw,44px);background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;
+  box-shadow:0 16px 40px -22px rgba(0,0,0,.18)}
+.dscroll.csp .glance table{width:100%;border-collapse:collapse;text-align:left}
+.dscroll.csp .glance th{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-4);background:#fafafa;
+  padding:14px 18px;border-bottom:1px solid var(--line);white-space:nowrap}
+.dscroll.csp .glance td{padding:16px 18px;border-bottom:1px solid var(--line);font-size:15px;color:var(--ink-2);vertical-align:middle;line-height:1.35}
+.dscroll.csp .glance tr:last-child td{border-bottom:none}
+.dscroll.csp .glance td.client{font-weight:700;color:var(--ink)}
+.dscroll.csp .glance td.client a{color:inherit;text-decoration:none}
+.dscroll.csp .glance td.client a:hover{text-decoration:underline}
+.dscroll.csp .glance td.num{font-weight:700;color:var(--ink);font-size:17px;letter-spacing:-.01em}
+.dscroll.csp .glance td.rate{font-weight:700;color:#0f766e}
+.dscroll.csp .glance .glogo{display:block;width:auto;height:26px;max-width:110px;object-fit:contain;margin-bottom:8px}
+.dscroll.csp .glance .glogo.dark{height:34px;border-radius:6px}
+@media(max-width:760px){
+  .dscroll.csp .glance thead{display:none}
+  .dscroll.csp .glance table,.dscroll.csp .glance tbody,.dscroll.csp .glance tr,.dscroll.csp .glance td{display:block;width:100%}
+  .dscroll.csp .glance tr{border-bottom:8px solid var(--tint)}
+  .dscroll.csp .glance tr:last-child{border-bottom:none}
+  .dscroll.csp .glance td{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 18px;border-bottom:1px solid var(--line)}
+  .dscroll.csp .glance td::before{content:attr(data-label);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-4);flex:none}
+  .dscroll.csp .glance td.client{display:block;padding-top:18px}
+  .dscroll.csp .glance td.client::before{display:none}
+}
+.dscroll.csp .glancenote{margin-top:clamp(20px,3.6vw,28px);display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);
+  border-radius:18px;padding:clamp(18px,3vw,24px);max-width:820px}
+.dscroll.csp .glancenote .gicon{flex:none;width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#cfffae,#ace5ff);display:grid;place-items:center;color:#0f3d2e}
+.dscroll.csp .glancenote .gicon svg{width:19px;height:19px;stroke-width:2}
+.dscroll.csp .glancenote p{font-size:clamp(15px,2.1vw,17px);line-height:1.5;color:var(--ink-2)}
+.dscroll.csp .glancenote p strong{color:var(--ink);font-weight:700}
+

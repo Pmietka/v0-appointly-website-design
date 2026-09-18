@@ -3,9 +3,32 @@ import { Fragment } from "react";
 import Image from "next/image";
 import { Target, User, Shield, CreditCard, Clock, Lock, LineChart, CalendarCheck, Check, X } from "lucide-react";
 
+import Link from "next/link";
+
 import { SiteNav, BOOKING_URL, PHONE_DISPLAY, PHONE_HREF } from "@/components/site-nav";
+import { DscrollFooter } from "@/components/dscroll-footer";
+import {
+  CaseStudyCards,
+  ClientLogos,
+  ClientNote,
+  FeaturedQuote,
+  Stars,
+  TestimonialWall,
+  TrustRow,
+} from "@/components/proof";
 import { coreFaqItems } from "@/lib/faq";
+import { FEATURED_TESTIMONIALS, QUOTE_TESTIMONIALS } from "@/lib/testimonials";
 import "./home.css";
+
+// Quotes parked next to the claims they back up. Looked up by name so the
+// copy lives in one place (lib/testimonials.ts).
+const byName = (name: string) =>
+  [...FEATURED_TESTIMONIALS, ...QUOTE_TESTIMONIALS].find((t) => t.name === name);
+const QUOTE_MECHANISM = byName("Will");
+const QUOTE_LEADS = byName("Nate");
+const QUOTE_WHAT_YOU_GET = byName("Mark T.");
+const QUOTE_PRICING = byName("Carlos V.");
+const QUOTE_CTA = byName("Max");
 
 // Comparison data drives both the desktop table and the mobile stacked cards.
 const COMPARE_COLS = ["DIY", "Marketing Agency", "Shared Leads", "Appointly"];
@@ -124,14 +147,24 @@ export default function HomePage() {
           <a className="btn" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
             Book a Call <span className="arr">&rarr;</span>
           </a>
+          <TrustRow />
           <div className="pills">
             <span className="lbl">Clients in</span>
+            <span className="pill">Myrtle Beach</span>
             <span className="pill">Coastal Florida</span>
+            <span className="pill">Spokane</span>
             <span className="pill">Chicago</span>
             <span className="pill">Dallas Fort Worth</span>
             <span className="pill">Portland</span>
             <span className="pill">Grand Rapids</span>
           </div>
+        </div>
+      </section>
+
+      {/* Client logos. Always shown; add a client in lib/testimonials.ts. */}
+      <section className="logoband" aria-label="Clients">
+        <div className="wrap">
+          <ClientLogos />
         </div>
       </section>
 
@@ -169,57 +202,67 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Proof — only real, approved testimonials render. Empty slots render nothing. */}
-      <section className="sec tint" id="proof">
+      {/* Case studies: the numbers, one card per client, linking to the full write up */}
+      <section className="sec tint" id="case-studies">
         <div className="wrap">
-          <h2>It <span className="hl">works.</span></h2>
-          <div className="grid g3">
-            <div className="proof">
-              <Image className="photo" src="/images/proof/mark-afab.webp" alt="Mark T. of AFAB Services" width={1080} height={1350} sizes="(max-width: 768px) 90vw, 360px" loading="lazy" />
-              <div className="pin">
-                <div className="who">Mark T. &middot; AFAB Services</div>
-                <div className="where">Port St. Lucie, FL</div>
-                <div className="pstat">$6k job, closed on 2nd appointment</div>
-                <div className="quote">&ldquo;You&apos;ve already paved the ground. I just go in and sweep it up. You guys are doing a great job.&rdquo;</div>
-              </div>
-            </div>
-
-            <div className="proof">
-              <Image className="photo" src="/images/proof/andre.webp" alt="Andre S. of D&V maintenance, Appointly client in Chicago" width={1080} height={1350} sizes="(max-width: 768px) 90vw, 360px" loading="lazy" />
-              <div className="pin">
-                <div className="who">Andre S. &middot; D&V maintenance</div>
-                <div className="where">Chicago, IL</div>
-                <div className="pstat">8 new jobs in his second month</div>
-                <div className="quote">&ldquo;The appointments were already warmed up. I just showed up and closed.&rdquo;</div>
-              </div>
-            </div>
-
-            <div className="proof">
-              <Image className="photo" src="/images/proof/carlos-team.webp" alt="Carlos V. of Diamond Group and his crew in Portland" width={1080} height={1350} sizes="(max-width: 768px) 90vw, 360px" loading="lazy" />
-              <div className="pin">
-                <div className="who">Carlos V. &middot; Diamond Group</div>
-                <div className="where">Portland, OR</div>
-                <div className="pstat">1st appt closed, covered full onboarding cost</div>
-                <div className="quote">&ldquo;One job paid for everything. From there it just kept coming.&rdquo;</div>
-              </div>
-            </div>
-
-            {/*
-              REAL CLIENT TESTIMONIAL SLOTS — fill in with approved quotes only.
-              Render nothing until approved (no empty or fake cards). To enable a
-              slot, copy a .proof block above and drop in the real photo, name,
-              location, stat, and quote.
-
-              [ ] San Pro
-              [ ] Diamond Group
-              [ ] Advanced Insulation Technology
-            */}
+          <p className="eyebrow">Client case studies</p>
+          <h2>
+            Real numbers from <span className="hl">three markets.</span>
+          </h2>
+          <p className="sub">
+            One month snapshots from a competitive market, a fast growing market,
+            and a premium product. Every appointment was qualified over the phone
+            first. Close rates are immediate closes only.
+          </p>
+          <CaseStudyCards />
+          <div className="csmore">
+            <Link className="btn ghost" href="/case-studies">
+              Read the full case studies <span className="arr">&rarr;</span>
+            </Link>
           </div>
         </div>
       </section>
 
+      {/* Proof: only real, approved testimonials render. */}
+      <section className="sec" id="proof">
+        <div className="wrap">
+          <h2>It <span className="hl">works.</span></h2>
+          <p className="sub">
+            Straight from the contractors we book for, in their words.
+          </p>
+          <div className="grid g3">
+            {FEATURED_TESTIMONIALS.filter((t) => t.photo && t.who).map((t) => (
+              <div className="proof" key={t.name}>
+                <Image
+                  className="photo"
+                  src={t.photo as string}
+                  alt={`${t.name} of ${t.who}, Appointly client in ${t.where}`}
+                  width={1080}
+                  height={1350}
+                  sizes="(max-width: 768px) 90vw, 360px"
+                  loading="lazy"
+                />
+                <div className="pin">
+                  <Stars />
+                  <div className="who">{t.name} &middot; {t.who}</div>
+                  <div className="where">{t.where}</div>
+                  {t.stat && <div className="pstat">{t.stat}</div>}
+                  <div className="quote">&ldquo;{t.quote}&rdquo;</div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* The wall: every other approved quote we have */}
+          <TestimonialWall
+            columns={4}
+            items={[...FEATURED_TESTIMONIALS.filter((t) => !t.who), ...QUOTE_TESTIMONIALS]}
+          />
+        </div>
+      </section>
+
       {/* The mechanism */}
-      <section className="sec">
+      <section className="sec tint">
         <div className="wrap">
           <h2>From ad to <span className="hl">booked appointment.</span></h2>
           <div className="grid g4">
@@ -228,11 +271,12 @@ export default function HomePage() {
             <div className="step"><div className="sn">3</div><div className="st">Winners get scaled</div><div className="sd">We push the exact creatives and targeting that hit your appointment goals.</div></div>
             <div className="step"><div className="sn">4</div><div className="st">We improve with your data</div><div className="sd">Closed a job? Wasted trip? We feed it back. More of who converts, fewer who don&apos;t.</div></div>
           </div>
+          {QUOTE_MECHANISM && <FeaturedQuote t={QUOTE_MECHANISM} />}
         </div>
       </section>
 
       {/* Leads vs appointments */}
-      <section className="sec tint">
+      <section className="sec">
         <div className="wrap">
           <h2>Paying for leads is a <span className="hl">waste of money.</span></h2>
           <div className="cmp">
@@ -257,11 +301,12 @@ export default function HomePage() {
               </ul>
             </div>
           </div>
+          {QUOTE_LEADS && <FeaturedQuote t={QUOTE_LEADS} />}
         </div>
       </section>
 
       {/* What you get */}
-      <section className="sec" id="what-you-get">
+      <section className="sec tint" id="what-you-get">
         <div className="orb b" />
         <div className="wrap">
           <h2>A world-class acquisition team, for the <span className="hl">price of an appointment.</span></h2>
@@ -272,11 +317,12 @@ export default function HomePage() {
             <li><span className="vn">4</span>We book at your preferred times, handle all reschedules, and confirm day of.</li>
             <li><span className="vn">5</span>Your customer&apos;s first impression of your company is world-class, before you ever arrive.</li>
           </ul>
+          {QUOTE_WHAT_YOU_GET && <FeaturedQuote t={QUOTE_WHAT_YOU_GET} align="left" />}
         </div>
       </section>
 
       {/* Comparison */}
-      <section className="sec tint cmpsec">
+      <section className="sec cmpsec">
         <div className="wrap">
           <p className="cmpeyebrow">Compare the options</p>
           <h2>Not DIY. Not an agency. <span className="hl">A partner.</span></h2>
@@ -352,7 +398,7 @@ export default function HomePage() {
       </section>
 
       {/* Pricing */}
-      <section className="sec">
+      <section className="sec tint">
         <div className="wrap">
           <h2>Simple <span className="hl">pricing.</span></h2>
           <p className="sub">
@@ -368,6 +414,7 @@ export default function HomePage() {
               <li>Only booked homeowners ready for an estimate</li>
             </ul>
           </div>
+          {QUOTE_PRICING && <FeaturedQuote t={QUOTE_PRICING} align="left" />}
         </div>
       </section>
 
@@ -391,7 +438,7 @@ export default function HomePage() {
       </section>
 
       {/* How to get started */}
-      <section className="sec tint">
+      <section className="sec">
         <div className="wrap">
           <h2>How to <span className="hl">get started.</span></h2>
           {/* PLACEHOLDER {{REP_NAME}}: default "Jacob". Change the name below if needed. */}
@@ -408,7 +455,7 @@ export default function HomePage() {
       </section>
 
       {/* Who you're actually talking to (founders) */}
-      <section className="sec" id="founders">
+      <section className="sec tint" id="founders">
         <div className="wrap">
           <p className="eyebrow">Who you&apos;re actually talking to</p>
           <h2>
@@ -444,12 +491,19 @@ export default function HomePage() {
               </div>
             </article>
           </div>
+          <ClientNote
+            label="What homeowners told Phil"
+            text="Several homeowners told Phil that the conversation they had with Jacob on the phone was excellent, and that it helped them understand which option was right for their floor before anyone came out. By the time Phil arrives, they are already sold on the product."
+            who="Phil Adikes, Clean Floor Coatings, Myrtle Beach, SC. 13 closed jobs in the first 17 days."
+            avatar={{ src: "/images/case-studies/phil-adikes.webp", alt: "Phil Adikes, owner of Clean Floor Coatings" }}
+          />
         </div>
       </section>
 
       {/* Bottom CTA */}
       <section className="sec ctaband">
         <div className="wrap">
+          {QUOTE_CTA && <FeaturedQuote t={QUOTE_CTA} />}
           <h2>Ready to fill your calendar?</h2>
           <p className="sub">
             Book a quick call and we&apos;ll show you exactly how we put qualified,
@@ -461,53 +515,11 @@ export default function HomePage() {
           <p className="ctacall">
             Or call us now at <a href={PHONE_HREF}>{PHONE_DISPLAY}</a>
           </p>
+          <ClientLogos title={null} />
         </div>
       </section>
 
-      <footer>
-        <div className="wrap">
-          <p className="fn">Appointly Solutions</p>
-          <p className="fh">More booked jobs. <span className="hl">Less chasing leads.</span></p>
-          <p className="fcall">
-            Questions? Call us at{" "}
-            <a href={PHONE_HREF}>{PHONE_DISPLAY}</a>
-          </p>
-          <div className="flinks">
-            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">Book a Call</a>
-            <a href={PHONE_HREF}>Call {PHONE_DISPLAY}</a>
-            <a href="/how-it-works">How It Works</a>
-            <a href="/pricing">Pricing</a>
-            <a href="/about">About</a>
-            <a href="/faq">FAQ</a>
-            <a href="/blog">Blog</a>
-            <a href="/privacy">Privacy</a>
-            <a href="/terms">Terms</a>
-          </div>
-          <nav className="fexplore" aria-label="Floor coating contractor resources">
-            <p className="fexplore-title">For floor coating contractors</p>
-            <div className="fexplore-cols">
-              <div>
-                <p className="fexplore-h">Services</p>
-                <a href="/floor-coating-leads">Floor coating leads, booked as estimates</a>
-                <a href="/epoxy-flooring-leads">Epoxy flooring leads</a>
-                <a href="/exclusive-floor-coating-leads">Exclusive floor coating leads</a>
-                <a href="/appointment-setting-for-contractors">Appointment setting for contractors</a>
-                <a href="/floor-coating-marketing-agency-alternative">Marketing agency alternative</a>
-                <a href="/floor-coating-leads-small-markets">Small market coverage</a>
-              </div>
-              <div>
-                <p className="fexplore-h">Guides</p>
-                <a href="/blog/floor-coating-pricing-and-margins">Floor coating pricing and margins</a>
-                <a href="/blog/what-is-a-booked-floor-coating-estimate-worth">What a booked estimate is worth</a>
-                <a href="/blog/garage-floor-coating-leads-cost-and-sources">Garage floor coating leads: cost and sources</a>
-                <a href="/blog/how-to-close-more-floor-coating-estimates">How to close more estimates</a>
-                <a href="/blog/polyaspartic-vs-epoxy-garage-floors">Polyaspartic vs epoxy</a>
-                <a href="/blog/how-to-start-a-floor-coating-business">How to start a floor coating business</a>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </footer>
+      <DscrollFooter />
     </div>
   );
 }
