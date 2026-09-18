@@ -210,9 +210,9 @@ export default function HomePage() {
             Real numbers from <span className="hl">three markets.</span>
           </h2>
           <p className="sub">
-            One month snapshots from a competitive market, a fast growing market,
-            and a premium product. Every appointment was qualified over the phone
-            first. Close rates are immediate closes only.
+            Results so far from a competitive market, a fast growing market, and
+            a premium product, framed monthly. Every appointment was qualified
+            over the phone first. Close rates are immediate closes only.
           </p>
           <CaseStudyCards />
           <div className="csmore">
@@ -494,8 +494,8 @@ export default function HomePage() {
           <ClientNote
             label="What homeowners told Phil"
             text="Several homeowners told Phil that the conversation they had with Jacob on the phone was excellent, and that it helped them understand which option was right for their floor before anyone came out. By the time Phil arrives, they are already sold on the product."
-            who="Phil Adikes, Clean Floor Coatings, Myrtle Beach, SC. 13 closed jobs in the first 17 days."
-            avatar={{ src: "/images/case-studies/phil-adikes.webp", alt: "Phil Adikes, owner of Clean Floor Coatings" }}
+            who="Phil A., Clean Floor Coatings, Myrtle Beach, SC. About 7 in 10 shown appointments close."
+            avatar={{ src: "/images/case-studies/phil-adikes.webp", alt: "Phil A., owner of Clean Floor Coatings" }}
           />
         </div>
       </section>

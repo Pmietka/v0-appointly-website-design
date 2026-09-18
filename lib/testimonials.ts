@@ -124,7 +124,7 @@ export const CLIENT_LOGOS: ClientLogo[] = [
   },
   {
     name: "Garage Force of the Inland Northwest",
-    market: "Spokane and Coeur d'Alene",
+    market: "Spokane, WA",
     src: "/images/clients/garage-force.png",
     width: 1000,
     height: 181,

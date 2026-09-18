@@ -30,8 +30,13 @@ html { scroll-behavior: smooth; }
 .dscroll .lead{font-size:clamp(17px,2.6vw,23px);color:var(--ink-3);line-height:1.5;margin-top:22px;max-width:640px}
 .dscroll .sub{font-size:clamp(16px,2.3vw,21px);color:var(--ink-3);line-height:1.5;margin-top:18px;max-width:720px}
 
-/* holographic highlight (wrap-safe) */
+/* holographic highlight (wrap-safe). The highlight box is painted BEHIND the
+   surrounding text (negative z-index inside an isolated parent) so a wrapped
+   highlight on line two can never cover the descenders of "p" or "g" on the
+   line above it. */
+.dscroll :has(> .hl),.dscroll h1,.dscroll h2,.dscroll .answer,.dscroll footer .fh{position:relative;isolation:isolate}
 .dscroll .hl{
+  position:relative;z-index:-1;
   -webkit-box-decoration-break:clone;box-decoration-break:clone;
   padding:.04em .2em;border-radius:.16em;color:#171717;
   background:

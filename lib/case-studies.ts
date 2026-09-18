@@ -3,7 +3,12 @@
  * proof block on the homepage that quotes these numbers, so the two pages can
  * never drift apart.
  *
- * Every figure here comes from the September 2026 client case study document.
+ * House rules for these numbers:
+ *  - Ratios and percentages only. Never a raw count of appointments or closed
+ *    jobs, so nothing here goes stale as the campaigns keep running.
+ *  - Money figures are framed monthly (ad spend, average job size).
+ *  - No campaign dates or "first N days". Everything reads as results so far.
+ *  - Owners are first name plus last initial.
  * Close rates are immediate closes only; appointments that have not closed yet
  * are still in progress, not lost.
  */
@@ -28,6 +33,7 @@ export type CaseStudy = {
   company: string;
   /** Short display name for tight spaces (cards, tables). */
   shortName: string;
+  /** First name plus last initial. */
   owner: string;
   /** How the owner is referred to in running copy. */
   ownerFirst: string;
@@ -35,44 +41,39 @@ export type CaseStudy = {
   marketShort: string;
   /** Two or three words for the corner of a compact card. */
   marketTag: string;
-  state: string;
-  period: string;
-  periodShort: string;
+  /** What the client sells, for the header meta and the comparison table. */
+  product: string;
   logo: { src: string; width: number; height: number; dark?: boolean };
   /** One line that frames the whole study. */
   headline: string;
-  /** Eyebrow shown over the results grid. */
-  resultsLabel: string;
-  /** Optional callout shown right under the header. */
-  callout?: string;
   context: string[];
   stats: Stat[];
   statsNote: string;
-  /** Trailing note under the stats, e.g. lifetime totals. */
+  /** Trailing note under the stats. */
   sinceNote?: string;
   why: { title: string; body: string[] };
   /** Direct quote from the owner, if we have one. */
-  quote?: { text: string; attribution: string; stat?: string };
+  quote?: { text: string; stat?: string };
   /** Reported feedback when there is no verbatim quote. Never shown in quotation marks. */
   noticed?: { title: string; body: string[] };
   owner_photo?: { src: string; width: number; height: number; caption: string };
   media?: { src: string; width: number; height: number; caption: string; title: string; body: string[] };
   calendar: {
     title: string;
-    range: string;
     legend: string;
     shots: CalendarShot[];
   };
   /** Numbers used on the homepage cards and the at-a-glance table. */
   glance: {
-    appointments: string;
     closeRate: string;
-    closedJobs: string;
-    revenue?: string;
     /** The one number to lead with on a compact card. */
     lead: { value: string; label: string };
+    /** Three small figures under the lead number. */
+    cardStats: { value: string; label: string }[];
   };
 };
+
+const NAMES_NOTE = "Homeowner names are shortened to first name and last initial.";
 
 export const CASE_STUDIES: CaseStudy[] = [
   {
@@ -80,38 +81,31 @@ export const CASE_STUDIES: CaseStudy[] = [
     order: 1,
     company: "Clean Floor Coatings",
     shortName: "Clean Floor Coatings",
-    owner: "Phil Adikes",
+    owner: "Phil A.",
     ownerFirst: "Phil",
     market: "Myrtle Beach metro, South Carolina",
     marketShort: "Myrtle Beach, SC",
     marketTag: "Myrtle Beach, SC",
-    state: "SC",
-    period: "September 1 to 17, 2026",
-    periodShort: "Sep 1 to 17, 2026",
+    product: "Epoxy and polyaspartic coatings",
     logo: { src: "/images/clients/clean-floor-coatings.png", width: 800, height: 366 },
-    headline: "13 closed jobs in the first 17 days, in one of the most crowded coating markets in the Southeast.",
-    resultsLabel: "Results, September 1 to 17, 2026",
-    callout:
-      "Everything on this page happened in the first 17 days of the campaign. We launched Phil's ads on September 1, 2026.",
+    headline: "About seven in ten shown appointments turn into sold jobs, in one of the most crowded coating markets in the Southeast.",
     context: [
-      "Phil Adikes owns Clean Floor Coatings, along with PaverSpa, in the Myrtle Beach metro area of South Carolina. The Myrtle Beach coating space is extremely competitive, with both local operators and national franchises advertising heavily to the same homeowners.",
-      "It is also our most recent launch, which is why we lead with it. Every number below is from the first 17 days, so it reflects exactly what a fresh campaign looks like in a crowded market.",
+      "Phil A. owns Clean Floor Coatings, along with PaverSpa, in the Myrtle Beach metro area of South Carolina. The Myrtle Beach coating space is extremely competitive, with both local operators and national franchises advertising heavily to the same homeowners.",
+      "Phil came to us as a fresh launch in that crowded market, so his numbers show exactly what a new campaign looks like when the competition is already on every homeowner's feed.",
     ],
     stats: [
-      { value: "$1,500", label: "Ad spend" },
-      { value: "27", label: "Appointments booked" },
-      { value: "19", label: "Appointments shown so far" },
-      { value: "13", label: "Closed jobs so far", hero: true },
-      { value: "~70%", label: "Close rate on shown appointments" },
-      { value: "8", label: "Appointments still upcoming" },
+      { value: "~$2,600", label: "Monthly ad spend" },
+      { value: "~70%", label: "Close rate on shown appointments", hero: true },
+      { value: "Week 1", label: "First appointments booked the week the ads went live" },
+      { value: "Custom", label: "Landing page built for the campaign" },
     ],
     statsNote:
-      "Close rate is calculated on the 19 appointments that have taken place. Eight more are scheduled and not yet reflected in the closed job count.",
+      "Close rate is calculated on the appointments that have taken place so far. Appointments still on the calendar are not reflected yet.",
     why: {
-      title: "Why it worked",
+      title: "Why it works",
       body: [
         "Phil is in one of the more crowded coating markets in the Southeast, and two things set him apart. First, he and his team run a very good sales process. Second, he uses very good materials at a price that makes sense for homeowners.",
-        "Our job was to put the right homeowners in front of that process. The 70% close rate is the combination of qualified appointments on our end and a strong estimate on his.",
+        "Our job is to put the right homeowners in front of that process. The close rate is the combination of qualified appointments on our end and a strong estimate on his.",
       ],
     },
     noticed: {
@@ -125,7 +119,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       src: "/images/case-studies/phil-adikes.webp",
       width: 639,
       height: 640,
-      caption: "Phil Adikes, owner of Clean Floor Coatings",
+      caption: "Phil A., owner of Clean Floor Coatings",
     },
     media: {
       src: "/images/case-studies/cfc-landing-page.webp",
@@ -139,20 +133,22 @@ export const CASE_STUDIES: CaseStudy[] = [
       ],
     },
     calendar: {
-      title: "Phil's estimate calendar",
-      range: "August 30 to September 19, 2026",
-      legend: "Every blue event is an appointment booked by Appointly. Struck through events are cancellations. Homeowner names are blurred for privacy.",
+      title: "Three weeks of Phil's estimate calendar",
+      legend: `Every blue event is an appointment booked by Appointly. Struck through events are cancellations. ${NAMES_NOTE}`,
       shots: [
-        { src: "/images/case-studies/cfc-cal-week1.webp", width: 1447, height: 414, label: "Week of August 30 to September 5" },
-        { src: "/images/case-studies/cfc-cal-week2.webp", width: 1410, height: 486, label: "Week of September 6 to 12" },
-        { src: "/images/case-studies/cfc-cal-week3.webp", width: 1445, height: 548, label: "Week of September 13 to 19" },
+        { src: "/images/case-studies/cfc-cal-week1.webp", width: 1447, height: 414, label: "Week 1" },
+        { src: "/images/case-studies/cfc-cal-week2.webp", width: 1410, height: 486, label: "Week 2" },
+        { src: "/images/case-studies/cfc-cal-week3.webp", width: 1445, height: 548, label: "Week 3" },
       ],
     },
     glance: {
-      appointments: "27",
       closeRate: "~70%",
-      closedJobs: "13 so far, 8 upcoming",
-      lead: { value: "~70%", label: "close rate in the first 17 days" },
+      lead: { value: "~70%", label: "of shown appointments close" },
+      cardStats: [
+        { value: "~$2.6k", label: "Monthly ad spend" },
+        { value: "Week 1", label: "First appts booked" },
+        { value: "Custom", label: "Landing page" },
+      ],
     },
   },
   {
@@ -160,32 +156,28 @@ export const CASE_STUDIES: CaseStudy[] = [
     order: 2,
     company: "AFAB Services",
     shortName: "AFAB Services",
-    owner: "Mark Tardiff",
+    owner: "Mark T.",
     ownerFirst: "Mark",
     market: "Port St. Lucie metro, Florida",
     marketShort: "Port St. Lucie, FL",
     marketTag: "Port St. Lucie, FL",
-    state: "FL",
-    period: "June 2026",
-    periodShort: "June 2026",
+    product: "Floor coating, $3,500 average job",
     logo: { src: "/images/clients/afab-services.png", width: 364, height: 222, dark: true },
-    headline: "$35,000 in closed floor coating revenue in one month, in one of the fastest growing markets in the country.",
-    resultsLabel: "Results, June 2026",
+    headline: "One in two appointments closes, at a $3,500 average job, in one of the fastest growing markets in the country.",
     context: [
-      "Mark Tardiff owns AFAB Services in Port St. Lucie, Florida, and serves the metro area around it. He is our most consistent client. Port St. Lucie is one of the fastest growing markets in the country and, like most of Florida, one of the most competitive for floor coating. It has been a great market for him and for us.",
+      "Mark T. owns AFAB Services in Port St. Lucie, Florida, and serves the metro area around it. He is our most consistent client. Port St. Lucie is one of the fastest growing markets in the country and, like most of Florida, one of the most competitive for floor coating. It has been a great market for him and for us.",
       "When we started, Mark was running a busy home improvement company that never slows down. He had a profitable floor coating business sitting right there and no time to actually sell it. Since we began booking his calendar, he has shifted to doing mostly floor coating, because that is where he makes the most money and because the appointments keep coming.",
     ],
     stats: [
-      { value: "20", label: "Appointments booked" },
-      { value: "~50%", label: "Close rate" },
-      { value: "10", label: "Closed jobs", hero: true },
+      { value: "~50%", label: "Close rate", hero: true },
       { value: "$3,500", label: "Average job size" },
-      { value: "$35,000", label: "Closed revenue", hero: true },
+      { value: "$35k+", label: "Closed revenue in his best month so far", hero: true },
+      { value: "Mostly", label: "Floor coating now, after years as a general home improvement company" },
     ],
     statsNote:
-      "June is Mark's strongest month to date. Closed jobs reflect Mark's approximately 50% close rate on the appointments we book. Revenue is closed jobs multiplied by his average job size.",
+      "Closed revenue is closed jobs multiplied by Mark's average job size. His close rate on the appointments we book has held at roughly one in two.",
     sinceNote:
-      "Since mid May 2026: 75 appointments booked, 36 closed jobs, and roughly $126,000 in closed revenue from Appointly appointments, at a pace of about 19 appointments a month.",
+      "Mark has been with us the longest of any client in these case studies, and his close rate has held at about one in two the entire time.",
     why: {
       title: "What Mark says",
       body: [
@@ -195,29 +187,29 @@ export const CASE_STUDIES: CaseStudy[] = [
     },
     quote: {
       text: "You've already paved the ground. I just go in and sweep it up.",
-      attribution: "Mark Tardiff, AFAB Services, Port St. Lucie, FL",
       stat: "$6k job, closed on the 2nd appointment",
     },
     owner_photo: {
       src: "/images/proof/mark-afab.webp",
       width: 1080,
       height: 1350,
-      caption: "Mark Tardiff, owner of AFAB Services",
+      caption: "Mark T., owner of AFAB Services",
     },
     calendar: {
-      title: "Mark's estimate calendar",
-      range: "June 2026",
-      legend: "Every blue event is an appointment booked by Appointly. Twenty appointments in the month. Homeowner names are blurred for privacy.",
+      title: "A month of Mark's estimate calendar",
+      legend: `Every blue event is an appointment booked by Appointly. ${NAMES_NOTE}`,
       shots: [
-        { src: "/images/case-studies/afab-cal-june.webp", width: 1444, height: 708, label: "June 2026" },
+        { src: "/images/case-studies/afab-cal-june.webp", width: 1444, height: 708, label: "One full month" },
       ],
     },
     glance: {
-      appointments: "20",
       closeRate: "~50%",
-      closedJobs: "10",
-      revenue: "$35,000",
-      lead: { value: "$35k", label: "closed revenue in one month" },
+      lead: { value: "1 in 2", label: "appointments close, at a $3,500 average job" },
+      cardStats: [
+        { value: "~50%", label: "Close rate" },
+        { value: "$3,500", label: "Avg job size" },
+        { value: "$35k+", label: "Best month" },
+      ],
     },
   },
   {
@@ -225,31 +217,26 @@ export const CASE_STUDIES: CaseStudy[] = [
     order: 3,
     company: "Garage Force of the Inland Northwest",
     shortName: "Garage Force",
-    owner: "Eric and Shani Hoke",
+    owner: "Eric and Shani H.",
     ownerFirst: "Eric",
-    market: "Spokane and Coeur d'Alene, Inland Northwest",
-    marketShort: "Spokane and Coeur d'Alene",
-    marketTag: "Inland Northwest",
-    state: "WA and ID",
-    period: "August 17 to September 12, 2026",
-    periodShort: "Aug 17 to Sep 12, 2026",
+    market: "Spokane, WA",
+    marketShort: "Spokane, WA",
+    marketTag: "Spokane, WA",
+    product: "Full polyurea system, $5,000 average job",
     logo: { src: "/images/clients/garage-force.png", width: 1000, height: 181 },
-    headline: "$50,000 in closed revenue from 18 appointments, selling a premium polyurea system at a premium price.",
-    resultsLabel: "Results, August 17 to September 12, 2026",
+    headline: "More than half of the appointments we book close, on a premium polyurea system sold at a premium price.",
     context: [
-      "Eric and Shani own Garage Force of the Inland Northwest, a Garage Force franchise covering Spokane, eastern Washington, and northern Idaho, including Coeur d'Alene. They offer a more premium product than any of their local competitors, and than most of our clients: a full polyurea system, priced accordingly, and sold by the owners themselves, who meet every homeowner in person.",
+      "Eric and Shani own Garage Force of the Inland Northwest, a Garage Force franchise based in Spokane and covering eastern Washington and northern Idaho. They offer a more premium product than any of their local competitors, and than most of our clients: a full polyurea system, priced accordingly, and sold by the owners themselves, who meet every homeowner in person.",
       "That changes how we book for them. A premium price means we only send the highest quality appointments: the homeowners most likely to close and able to pay for the product. The result is fewer total appointments than a volume client would see, but a close rate that stays high and a lot of revenue per appointment. For a company selling a premium product, this is the model that protects the estimator's time.",
     ],
     stats: [
-      { value: "~$2,000", label: "Ad spend" },
-      { value: "18", label: "Appointments booked" },
-      { value: "~55%", label: "Close rate" },
-      { value: "10", label: "Closed jobs so far", hero: true },
+      { value: "~$2,000", label: "Monthly ad spend" },
+      { value: "~55%", label: "Close rate", hero: true },
       { value: "$5,000", label: "Average job size" },
-      { value: "$50,000", label: "Closed revenue", hero: true },
+      { value: "Premium", label: "Full polyurea system, priced above every local competitor", hero: true },
     ],
     statsNote:
-      "Four weeks of appointments at roughly $500 a week in ad spend. Ten of the 18 appointments have closed so far, with the remainder still in progress. Revenue is closed jobs multiplied by the average job size.",
+      "Roughly $500 a week in ad spend. Close rate is calculated on the appointments that have taken place so far, with the remainder still in progress.",
     why: {
       title: "Why it works for a premium product",
       body: [
@@ -261,7 +248,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       src: "/images/case-studies/eric-hoke.webp",
       width: 206,
       height: 206,
-      caption: "Eric Hoke, owner of Garage Force of the Inland Northwest",
+      caption: "Eric H., owner of Garage Force of the Inland Northwest",
     },
     media: {
       src: "/images/case-studies/garage-force-rig.webp",
@@ -274,33 +261,33 @@ export const CASE_STUDIES: CaseStudy[] = [
       ],
     },
     calendar: {
-      title: "Eric's estimate calendar",
-      range: "August 16 to September 12, 2026",
-      legend: "Every blue event is an appointment booked by Appointly. Struck through events are cancellations and are not counted. Homeowner names are blurred for privacy.",
+      title: "Four weeks of Eric's estimate calendar",
+      legend: `Every blue event is an appointment booked by Appointly. Struck through events are cancellations and are not counted. ${NAMES_NOTE}`,
       shots: [
-        { src: "/images/case-studies/gf-cal-week1.webp", width: 1314, height: 476, label: "Week of August 16 to 22" },
-        { src: "/images/case-studies/gf-cal-week2.webp", width: 1310, height: 426, label: "Week of August 23 to 29" },
-        { src: "/images/case-studies/gf-cal-week3.webp", width: 1301, height: 391, label: "Week of August 30 to September 5" },
-        { src: "/images/case-studies/gf-cal-week4.webp", width: 1313, height: 736, label: "Week of September 6 to 12" },
+        { src: "/images/case-studies/gf-cal-week1.webp", width: 1314, height: 476, label: "Week 1" },
+        { src: "/images/case-studies/gf-cal-week2.webp", width: 1310, height: 426, label: "Week 2" },
+        { src: "/images/case-studies/gf-cal-week3.webp", width: 1301, height: 391, label: "Week 3" },
+        { src: "/images/case-studies/gf-cal-week4.webp", width: 1313, height: 736, label: "Week 4" },
       ],
     },
     glance: {
-      appointments: "18",
       closeRate: "~55%",
-      closedJobs: "10 so far",
-      revenue: "$50,000",
-      lead: { value: "$50k", label: "closed revenue in four weeks" },
+      lead: { value: "~55%", label: "close rate on a premium $5,000 ticket" },
+      cardStats: [
+        { value: "~55%", label: "Close rate" },
+        { value: "$5,000", label: "Avg job size" },
+        { value: "~$2k", label: "Monthly ad spend" },
+      ],
     },
   },
 ];
 
-/** Straight sums across the three snapshots, for the page hero. */
+/** Page-level framing for the hero. Ratios and constants only. */
 export const CASE_STUDY_TOTALS = {
   markets: 3,
-  appointments: 65,
-  closedJobs: 33,
   closeRateRange: "50 to 70%",
-  closedRevenue: "$85k+",
+  qualified: "100%",
+  perMarket: 1,
 } as const;
 
 export function getCaseStudy(slug: string) {

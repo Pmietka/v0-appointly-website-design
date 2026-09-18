@@ -113,6 +113,11 @@
   .dscroll.csp .rgrid{grid-template-columns:repeat(6,1fr)}
   .dscroll.csp .rgrid>*{grid-column:span 2}
   .dscroll.csp .rgrid.five>*:nth-child(n+4){grid-column:span 3}
+  .dscroll.csp .rgrid.four>*{grid-column:span 3}
+}
+@media(min-width:1000px){
+  .dscroll.csp .rgrid.four{grid-template-columns:repeat(4,1fr)}
+  .dscroll.csp .rgrid.four>*{grid-column:auto}
 }
 .dscroll.csp .rtile{background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(18px,3vw,24px) clamp(16px,2.6vw,20px);
   display:flex;flex-direction:column;justify-content:flex-start;gap:8px;min-height:clamp(110px,16vw,140px);box-shadow:0 12px 30px -24px rgba(0,0,0,.22)}
@@ -154,7 +159,7 @@
 .dscroll.csp .glance td.client a{color:inherit;text-decoration:none}
 .dscroll.csp .glance td.client a:hover{text-decoration:underline}
 .dscroll.csp .glance td.num{font-weight:700;color:var(--ink);font-size:17px;letter-spacing:-.01em}
-.dscroll.csp .glance td.rate{font-weight:700;color:#0f766e}
+.dscroll.csp .glance td.rate{font-weight:700;color:#0f766e;font-size:20px;letter-spacing:-.01em}
 .dscroll.csp .glance .glogo{display:block;width:auto;height:26px;max-width:110px;object-fit:contain;margin-bottom:8px}
 .dscroll.csp .glance .glogo.dark{height:34px;border-radius:6px}
 @media(max-width:760px){

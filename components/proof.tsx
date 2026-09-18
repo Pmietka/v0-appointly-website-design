@@ -96,12 +96,11 @@ function CaseStudyCard({ c }: { c: CaseStudy }) {
         <div className="csleadl">{c.glance.lead.label}</div>
       </div>
       <div className="csrow">
-        <div className="csk"><b>{c.glance.appointments}</b><span>Appointments</span></div>
-        <div className="csk"><b>{c.glance.closeRate}</b><span>Close rate</span></div>
-        <div className="csk"><b>{c.glance.closedJobs.split(" ")[0]}</b><span>Closed jobs</span></div>
+        {c.glance.cardStats.map((s) => (
+          <div className="csk" key={s.label}><b>{s.value}</b><span>{s.label}</span></div>
+        ))}
       </div>
       <p className="cshead">{c.headline}</p>
-      <span className="csperiod">{c.periodShort}</span>
       <span className="cslink">Read the case study <span className="arr">&rarr;</span></span>
     </Link>
   );
@@ -202,7 +201,7 @@ export function ClientNote({
 export function TrustRow() {
   const faces = [
     ...FEATURED_TESTIMONIALS.filter((t) => t.photo).slice(0, 3).map((t) => ({ src: t.photo as string, alt: t.name })),
-    { src: "/images/case-studies/phil-adikes.webp", alt: "Phil Adikes" },
+    { src: "/images/case-studies/phil-adikes.webp", alt: "Phil A." },
   ];
   return (
     <div className="trust">

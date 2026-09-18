@@ -14,7 +14,7 @@ import "./case-studies.css";
 const PAGE_URL = "https://getappointly.co/case-studies";
 const TITLE = "Floor Coating Case Studies | Real Close Rates | Appointly";
 const DESCRIPTION =
-  "Three floor coating companies, three markets, one process. See the appointments Appointly booked, the close rates, the closed revenue, and the actual calendars behind the numbers.";
+  "Three floor coating companies, three markets, one process. See the close rates on the appointments Appointly books, the average job sizes, and the actual estimate calendars behind the numbers.";
 
 export const viewport: Viewport = {
   themeColor: "#fafafa",
@@ -48,10 +48,10 @@ export const metadata: Metadata = {
 };
 
 const TOTALS = [
-  { v: String(CASE_STUDY_TOTALS.markets), l: "markets, three price points" },
-  { v: String(CASE_STUDY_TOTALS.appointments), l: "appointments booked across the three snapshots" },
-  { v: String(CASE_STUDY_TOTALS.closedJobs), l: "closed jobs so far, with more still in progress" },
+  { v: String(CASE_STUDY_TOTALS.markets), l: "markets, three price points, one process" },
   { v: CASE_STUDY_TOTALS.closeRateRange, l: "close rates on the appointments we book" },
+  { v: CASE_STUDY_TOTALS.qualified, l: "of appointments qualified over the phone before booking" },
+  { v: String(CASE_STUDY_TOTALS.perMarket), l: "contractor per market. Never shared appointments" },
 ];
 
 function MediaFigure({ c }: { c: CaseStudy }) {
@@ -94,7 +94,7 @@ function OwnerFigure({ c, shape = "portrait" }: { c: CaseStudy; shape?: "portrai
 }
 
 function CaseStudySection({ c, index }: { c: CaseStudy; index: number }) {
-  const gridCols = c.stats.length === 6 ? "six" : c.stats.length === 5 ? "five" : "";
+  const gridCols = ({ 4: "four", 5: "five", 6: "six" } as Record<number, string>)[c.stats.length] ?? "";
   // The media figure pairs with the "noticed" block when there is one, and
   // otherwise sits next to "why it worked".
   const whyFigure = Boolean(c.media && !c.noticed);
@@ -112,8 +112,7 @@ function CaseStudySection({ c, index }: { c: CaseStudy; index: number }) {
             <dl className="csmeta">
               <div><dt>Owner</dt><dd>{c.owner}</dd></div>
               <div><dt>Market</dt><dd>{c.market}</dd></div>
-              <div><dt>Company</dt><dd>{c.company}</dd></div>
-              <div><dt>Period</dt><dd>{c.period}</dd></div>
+              <div><dt>Product</dt><dd>{c.product}</dd></div>
             </dl>
           </div>
           <div className={`cshd-logo${c.logo.dark ? " dark" : ""}`}>
@@ -129,7 +128,6 @@ function CaseStudySection({ c, index }: { c: CaseStudy; index: number }) {
         </header>
 
         <p className="cshl">{c.headline}</p>
-        {c.callout && <div className="callout">{c.callout}</div>}
 
         {/* Context, with the owner next to it */}
         <div className="csgrid">
@@ -144,7 +142,7 @@ function CaseStudySection({ c, index }: { c: CaseStudy; index: number }) {
 
         {/* Results */}
         <div className="results">
-          <h3 className="rlabel">{c.resultsLabel}</h3>
+          <h3 className="rlabel">Results so far</h3>
           <div className={`rgrid ${gridCols}`.trim()}>
             {c.stats.map((s) => (
               <div className={`rtile${s.hero ? " hero" : ""}`} key={s.label}>
@@ -208,7 +206,7 @@ function CaseStudySection({ c, index }: { c: CaseStudy; index: number }) {
         <div className="csproof">
           <div className="proofhd">
             <p className="eyebrow">Proof</p>
-            <h3>{c.calendar.title}, {c.calendar.range}</h3>
+            <h3>{c.calendar.title}</h3>
             <p className="legend"><span className="pip" aria-hidden />{c.calendar.legend}</p>
           </div>
           <div className="calshots">
@@ -217,7 +215,7 @@ function CaseStudySection({ c, index }: { c: CaseStudy; index: number }) {
                 <div className="frame">
                   <Image
                     src={s.src}
-                    alt={`${c.ownerFirst}'s estimate calendar, ${s.label.toLowerCase()}. Every blue event is an appointment booked by Appointly.`}
+                    alt={`${c.ownerFirst}'s estimate calendar, ${s.label.toLowerCase()}. Every blue event is an appointment booked by Appointly. Homeowner names shortened to first name and last initial.`}
                     width={s.width}
                     height={s.height}
                     sizes="(max-width: 1080px) 94vw, 1000px"
@@ -350,25 +348,26 @@ export default function CaseStudiesPage() {
                 appointments we book.</strong>
               </p>
               <p>
-                All three case studies are one month snapshots. We chose three
-                campaigns that are comparable to what a $2,000 trial period with us
-                would look like, so you can see what that budget produces in a
-                competitive market, in a fast growing market, and for a premium
-                product.
+                All three case studies are framed monthly, at an ad spend
+                comparable to what a first month with us looks like, so you can
+                see what that budget produces in a competitive market, in a fast
+                growing market, and for a premium product.
               </p>
             </div>
             <div className="readnote">
               <h3>How to read these numbers</h3>
               <p>
-                Each case study shows a one month snapshot: the appointments we
-                booked, how many the client met with, and how many turned into sold
-                jobs.
+                We show close rates, not appointment counts. A close rate is the
+                share of booked appointments that turned into a sold job, and it
+                is the number that actually tells you what an appointment is
+                worth.
               </p>
               <p>
                 The appointments that have not closed yet are not lost. Many
                 homeowners simply have a longer timeline, and a good share of them
                 come back and close in the following weeks or months. The close
-                rates shown here are immediate closes only.
+                rates shown here are immediate closes only, so they are the floor,
+                not the ceiling.
               </p>
             </div>
           </div>
@@ -385,14 +384,14 @@ export default function CaseStudiesPage() {
               <span className="sicon"><BarChart3 aria-hidden /></span>
               <div>
                 <h3>Results</h3>
-                <p>Appointments booked, close rate, sold jobs, and revenue from a one month snapshot.</p>
+                <p>Close rate on the appointments we book, average job size, and monthly ad spend, framed as results so far.</p>
               </div>
             </div>
             <div className="struct">
               <span className="sicon"><CalendarCheck aria-hidden /></span>
               <div>
                 <h3>Proof</h3>
-                <p>The client&apos;s actual calendar for that month, showing every appointment we booked.</p>
+                <p>The client&apos;s actual estimate calendar, showing the appointments we booked, week by week.</p>
               </div>
             </div>
           </div>
@@ -415,7 +414,8 @@ export default function CaseStudiesPage() {
             Three different companies, three different markets, and three different
             price points. The constant is the process: every homeowner is called,
             qualified, and educated before the appointment is booked, and the close
-            rates follow from that.
+            rates follow from that. Every number is a ratio, framed monthly, so it
+            holds up as the campaigns keep running.
           </p>
 
           <div className="glance">
@@ -424,10 +424,8 @@ export default function CaseStudiesPage() {
                 <tr>
                   <th scope="col">Client</th>
                   <th scope="col">Market</th>
-                  <th scope="col">Snapshot</th>
-                  <th scope="col">Appointments</th>
+                  <th scope="col">What they sell</th>
                   <th scope="col">Close rate</th>
-                  <th scope="col">Closed jobs</th>
                 </tr>
               </thead>
               <tbody>
@@ -447,10 +445,8 @@ export default function CaseStudiesPage() {
                       <a href={`#${c.slug}`}>{c.shortName}</a>
                     </td>
                     <td data-label="Market">{c.marketShort}</td>
-                    <td data-label="Snapshot">{c.periodShort}</td>
-                    <td className="num" data-label="Appointments">{c.glance.appointments}</td>
+                    <td data-label="What they sell">{c.product}</td>
                     <td className="rate" data-label="Close rate">{c.glance.closeRate}</td>
-                    <td className="num" data-label="Closed jobs">{c.glance.closedJobs}</td>
                   </tr>
                 ))}
               </tbody>
