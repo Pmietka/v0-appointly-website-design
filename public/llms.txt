@@ -19,6 +19,7 @@ Key facts:
 ## Core pages
 
 - [Floor coating leads, booked as estimates](https://getappointly.co/floor-coating-leads): the main service page.
+- [Case studies](https://getappointly.co/case-studies): three floor coating clients, framed as monthly results so far, with close rates, average job sizes, and the clients' actual estimate calendars. Clean Floor Coatings (Myrtle Beach, SC): about 70% of shown appointments close in a crowded market. AFAB Services (Port St. Lucie, FL): about 50% close rate at a $3,500 average job, roughly $35,000 closed in his best month. Garage Force of the Inland Northwest (Spokane, WA): about 55% close rate on a premium $5,000 polyurea system.
 - [Epoxy flooring leads](https://getappointly.co/epoxy-flooring-leads): the service for epoxy, polyaspartic, and concrete coating specialists.
 - [Exclusive floor coating leads](https://getappointly.co/exclusive-floor-coating-leads): one contractor per market.
 - [Pricing](https://getappointly.co/pricing): one flat fee per booked appointment, nothing for leads that never book.

@@ -11,6 +11,7 @@ import { BOOKING_URL, PHONE_DISPLAY, PHONE_HREF } from "@/components/site-nav";
 // whole site. These are page links (Blog, FAQ, etc. stay their own pages).
 const navLinks = [
   { href: "/how-it-works", label: "How It Works" },
+  { href: "/case-studies", label: "Case Studies" },
   { href: "/pricing", label: "Pricing" },
   { href: "/blog", label: "Blog" },
   { href: "/faq", label: "FAQ" },

@@ -12,11 +12,13 @@ export const BOOKING_URL = "https://client.getappointly.co/strategy-calendar";
 export const PHONE_DISPLAY = "651-299-3265";
 export const PHONE_HREF = "tel:+16512993265";
 
+// Links are root-relative so the nav works from any page built on the
+// homepage design (/, /case-studies), not only from the homepage itself.
 const links = [
-  { href: "#how-it-works", label: "How It Works" },
-  { href: "#is-this-for-you", label: "Is This For You" },
-  { href: "#proof", label: "Proof" },
-  { href: "#what-you-get", label: "What You Get" },
+  { href: "/#results", label: "Results" },
+  { href: "/case-studies", label: "Case Studies" },
+  { href: "/#how-it-works", label: "How It Works" },
+  { href: "/#pricing", label: "Pricing" },
 ];
 
 export function SiteNav() {
@@ -25,7 +27,7 @@ export function SiteNav() {
   return (
     <nav className="snav" aria-label="Primary">
       <div className="snav-in">
-        <a href="#top" className="snav-logo" aria-label="Appointly Solutions home">
+        <a href="/" className="snav-logo" aria-label="Appointly Solutions home">
           <Image src="/images/appointly-logo-lockup.png" alt="Appointly Solutions" width={129} height={45} priority />
         </a>
 

@@ -7,6 +7,7 @@ import { PHONE_DISPLAY, PHONE_HREF } from "@/components/site-nav";
 const companyLinks = [
   { href: "/about", label: "About" },
   { href: "/how-it-works", label: "How It Works" },
+  { href: "/case-studies", label: "Case Studies" },
   { href: "/pricing", label: "Pricing" },
   { href: "/blog", label: "Blog" },
   { href: "/faq", label: "FAQ" },
