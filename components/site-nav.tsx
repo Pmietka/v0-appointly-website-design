@@ -15,11 +15,10 @@ export const PHONE_HREF = "tel:+16512993265";
 // Links are root-relative so the nav works from any page built on the
 // homepage design (/, /case-studies), not only from the homepage itself.
 const links = [
-  { href: "/#how-it-works", label: "How It Works" },
-  { href: "/#is-this-for-you", label: "Is This For You" },
-  { href: "/#proof", label: "Proof" },
+  { href: "/#results", label: "Results" },
   { href: "/case-studies", label: "Case Studies" },
-  { href: "/#what-you-get", label: "What You Get" },
+  { href: "/#how-it-works", label: "How It Works" },
+  { href: "/#pricing", label: "Pricing" },
 ];
 
 export function SiteNav() {
