@@ -6,9 +6,9 @@ import type { FaqItem } from "@/components/faq-block";
  */
 export const coreFaqItems: FaqItem[] = [
   {
-    question: "What does a booked appointment cost?",
+    question: "How do the appointments reach my calendar?",
     answer:
-      "Between $125 and $199 per booked estimate, depending on your market and the work you install. You pay that flat fee only when a qualified homeowner is confirmed on your calendar, never for a raw lead or a form fill. Every appointment is vetted before it is booked: the homeowner owns the property, wants floor coating work, is inside your service area, and has agreed to a time that fits your route.",
+      "We call every homeowner ourselves, confirm the details, and book them straight onto your calendar around the jobs you already have. You see the appointment the moment it is set, with the homeowner's name, address, phone number, and what they want coated. Before the estimate we send reminders by text and call again to confirm, so the day you wake up to is the day you actually run.",
   },
   {
     question: "Are the appointments exclusive or shared?",
@@ -23,6 +23,6 @@ export const coreFaqItems: FaqItem[] = [
   {
     question: "What happens if a homeowner no-shows?",
     answer:
-      "You get credited. If a confirmed homeowner does not show up for the estimate, that appointment does not count against you, and the same applies to any appointment that turns out not to meet the qualification criteria we agreed on. The credit policy is deliberately generous, because the model only works if you are paying for estimates you can actually run.",
+      "You get credited. If a confirmed homeowner does not show up for the estimate, that appointment does not count against you, and the same applies to any appointment that turns out not to meet the qualification criteria we agreed on. The credit is not limited to no-shows either: if the homeowner shows up but the job turns out to be too small to be worth your time, that one is on us as well, free of charge. The policy is deliberately generous, because the model only works if you are paying for estimates you can actually run and actually sell.",
   },
 ];
