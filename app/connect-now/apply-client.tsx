@@ -131,14 +131,14 @@ function readTracking(): Tracking {
 }
 
 const ROLE_OPTIONS = ["Owner / CEO", "Marketing or Sales Leader", "Salesperson", "Other"];
-const REVENUE_OPTIONS = ["$0 - $500K Per Year", "$500K - $1M Per Year", "$1M - $5M Per Year", "$5M+ Per Year"];
-const REPS_OPTIONS = ["I run all the leads myself", "1-3 reps", "4-10 reps", "10+ reps"];
+const REVENUE_OPTIONS = ["Under $20K a month", "$20K to $40K a month", "$40K to $100K a month", "$100K+ a month"];
+const AD_BUDGET_OPTIONS = ["Under $1,000", "$1,000 to $2,000", "$2,000 to $5,000", "$5,000+"];
 
 function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () => void }) {
   const [step, setStep] = useState(1);
   const [role, setRole] = useState("");
   const [revenue, setRevenue] = useState("");
-  const [reps, setReps] = useState("");
+  const [adBudget, setAdBudget] = useState("");
   const [fullName, setFullName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
@@ -179,9 +179,14 @@ function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () =
     e.preventDefault();
     if (!fullName.trim() || !phone.trim() || !email.trim()) return;
 
-    // 1. Fire the Meta Pixel Lead event.
+    // 1. Fire the Meta Pixel Lead event, but only for qualified applicants.
     if (pixelReady && typeof (window as any).fbq === "function") {
-      (window as any).fbq("track", "Lead");
+      const qualified = ["Owner / CEO", "Marketing or Sales Leader"].includes(role) && adBudget !== "Under $1,000";
+      if (qualified) {
+        (window as any).fbq("track", "Lead");
+      } else {
+        (window as any).fbq("trackCustom", "UnqualifiedApplication");
+      }
     }
 
     // 2. Split the full name: first word is the first name, the rest is last.
@@ -192,7 +197,7 @@ function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () =
     // 3. POST to GHL, fire and forget. Never block the UI on the network.
     const payload = {
       first_name, last_name, phone, email,
-      role, revenue, reps,
+      role, revenue, ad_budget: adBudget,
       fbclid: tracking.fbclid, fbc: tracking.fbc, fbp: tracking.fbp,
       utm_source: tracking.utm_source, utm_medium: tracking.utm_medium,
       utm_campaign: tracking.utm_campaign, utm_term: tracking.utm_term,
@@ -277,12 +282,12 @@ function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () =
           ) : step === 3 ? (
             <div className="qstep">
               <p className="qlabel">Step 3 of 4</p>
-              <h2 className="qquestion">How many sales reps do you have?</h2>
-              <p className="qsubhead">Including yourself if you run the appointments.</p>
+              <h2 className="qquestion">How much can you put into advertising each month?</h2>
+              <p className="qsubhead">We never mark up ad spend. This just tells us what we can build for your market.</p>
               <div className="qoptions">
-                {REPS_OPTIONS.map((o) => (
-                  <button type="button" key={o} className={`qoption${reps === o ? " sel" : ""}`}
-                    onClick={() => { setReps(o); setStep(4); }}>{o}</button>
+                {AD_BUDGET_OPTIONS.map((o) => (
+                  <button type="button" key={o} className={`qoption${adBudget === o ? " sel" : ""}`}
+                    onClick={() => { setAdBudget(o); setStep(4); }}>{o}</button>
                 ))}
               </div>
               <button type="button" className="qback" onClick={() => setStep(2)}>
@@ -302,8 +307,11 @@ function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () =
                 value={email} onChange={(e) => setEmail(e.target.value)} required />
               <button type="submit" className="qsubmit">Submit</button>
               <p className="qconsent">
-                By submitting you agree to receive calls and texts from Appointly
-                about your inquiry.
+                By submitting, you agree to receive calls and texts from Appointly
+                Solutions about your inquiry, including automated messages. Message
+                frequency varies. Message and data rates may apply. Reply STOP to
+                opt out. See our <a href="/privacy">Privacy Policy</a> and{" "}
+                <a href="/terms">Terms</a>.
               </p>
               <button type="button" className="qback" onClick={() => setStep(3)}>
                 <ArrowLeft aria-hidden /> Go Back
@@ -321,12 +329,12 @@ function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () =
    ============================================================================ */
 
 // Trust badges under the hero CTA (mirrors the reference funnel's badge row).
-const TRUST_BADGES = ["No contracts", "Pay per show", "Exclusive leads"];
+const TRUST_BADGES = ["No contracts", "You fund the ads, zero markup", "Pay per show"];
 
 // Proof bar stats.
 // PLACEHOLDER NUMBERS: confirm these are real and defensible before sending.
 const STATS = [
-  { v: "$0", l: "Owed until an estimate is booked." },
+  { v: "$0", l: "management fees. Ever." },
   { v: "100%", l: "Exclusive. One contractor per market." },
   { v: "8 / mo", l: "Average jobs for newest clients, month two." },
 ];
