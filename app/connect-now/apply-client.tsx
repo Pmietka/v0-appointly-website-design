@@ -130,15 +130,13 @@ function readTracking(): Tracking {
   };
 }
 
-const ROLE_OPTIONS = ["Owner / CEO", "Marketing or Sales Leader", "Salesperson", "Other"];
-const REVENUE_OPTIONS = ["Under $20K a month", "$20K to $40K a month", "$40K to $100K a month", "$100K+ a month"];
-const AD_BUDGET_OPTIONS = ["Under $1,000", "$1,000 to $2,000", "$2,000 to $5,000", "$5,000+"];
+const REVENUE_OPTIONS = ["Under $50K, or just getting started", "$50K to $250K", "$250K to $500K", "$500K to $1M", "$1M+"];
+const CAPACITY_OPTIONS = ["Under 5", "5 to 10", "10 to 20", "20+"];
 
 function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () => void }) {
   const [step, setStep] = useState(1);
-  const [role, setRole] = useState("");
   const [revenue, setRevenue] = useState("");
-  const [adBudget, setAdBudget] = useState("");
+  const [capacity, setCapacity] = useState("");
   const [fullName, setFullName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
@@ -173,7 +171,7 @@ function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () =
   }, [submitted]);
 
   // Progress fills as they advance; full once the calendar shows.
-  const pct = submitted ? 100 : step * 25;
+  const pct = submitted ? 100 : step * (100 / 3);
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -181,7 +179,7 @@ function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () =
 
     // 1. Fire the Meta Pixel Lead event, but only for qualified applicants.
     if (pixelReady && typeof (window as any).fbq === "function") {
-      const qualified = ["Owner / CEO", "Marketing or Sales Leader"].includes(role) && adBudget !== "Under $1,000";
+      const qualified = revenue !== "Under $50K, or just getting started";
       if (qualified) {
         (window as any).fbq("track", "Lead");
       } else {
@@ -197,7 +195,7 @@ function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () =
     // 3. POST to GHL, fire and forget. Never block the UI on the network.
     const payload = {
       first_name, last_name, phone, email,
-      role, revenue, ad_budget: adBudget,
+      revenue, capacity,
       fbclid: tracking.fbclid, fbc: tracking.fbc, fbp: tracking.fbp,
       utm_source: tracking.utm_source, utm_medium: tracking.utm_medium,
       utm_campaign: tracking.utm_campaign, utm_term: tracking.utm_term,
@@ -254,49 +252,34 @@ function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () =
             />
           ) : step === 1 ? (
             <div className="qstep">
-              <p className="qlabel">Step 1 of 4</p>
-              <h2 className="qquestion">What is your role in the company?</h2>
-              <p className="qsubhead">We only partner directly with decision makers.</p>
+              <p className="qlabel">Step 1 of 3</p>
+              <h2 className="qquestion">Roughly, what did the business do in revenue over the last 12 months?</h2>
+              <p className="qsubhead">Ballpark is fine. This just tells us what to build for you.</p>
               <div className="qoptions">
-                {ROLE_OPTIONS.map((o) => (
-                  <button type="button" key={o} className={`qoption${role === o ? " sel" : ""}`}
-                    onClick={() => { setRole(o); setStep(2); }}>{o}</button>
+                {REVENUE_OPTIONS.map((o) => (
+                  <button type="button" key={o} className={`qoption${revenue === o ? " sel" : ""}`}
+                    onClick={() => { setRevenue(o); setStep(2); }}>{o}</button>
                 ))}
               </div>
             </div>
           ) : step === 2 ? (
             <div className="qstep">
-              <p className="qlabel">Step 2 of 4</p>
-              <h2 className="qquestion">What are you on track to do this year in revenue?</h2>
-              <p className="qsubhead">We only ask to see if we would be a good fit.</p>
+              <p className="qlabel">Step 2 of 3</p>
+              <h2 className="qquestion">If we booked them, how many in-home estimates could you run per week?</h2>
+              <p className="qsubhead">This tells us how big a campaign to build for you.</p>
               <div className="qoptions">
-                {REVENUE_OPTIONS.map((o) => (
-                  <button type="button" key={o} className={`qoption${revenue === o ? " sel" : ""}`}
-                    onClick={() => { setRevenue(o); setStep(3); }}>{o}</button>
+                {CAPACITY_OPTIONS.map((o) => (
+                  <button type="button" key={o} className={`qoption${capacity === o ? " sel" : ""}`}
+                    onClick={() => { setCapacity(o); setStep(3); }}>{o}</button>
                 ))}
               </div>
               <button type="button" className="qback" onClick={() => setStep(1)}>
                 <ArrowLeft aria-hidden /> Go Back
               </button>
             </div>
-          ) : step === 3 ? (
-            <div className="qstep">
-              <p className="qlabel">Step 3 of 4</p>
-              <h2 className="qquestion">How much can you put into advertising each month?</h2>
-              <p className="qsubhead">We never mark up ad spend. This just tells us what we can build for your market.</p>
-              <div className="qoptions">
-                {AD_BUDGET_OPTIONS.map((o) => (
-                  <button type="button" key={o} className={`qoption${adBudget === o ? " sel" : ""}`}
-                    onClick={() => { setAdBudget(o); setStep(4); }}>{o}</button>
-                ))}
-              </div>
-              <button type="button" className="qback" onClick={() => setStep(2)}>
-                <ArrowLeft aria-hidden /> Go Back
-              </button>
-            </div>
           ) : (
             <form className="qstep" onSubmit={handleSubmit}>
-              <p className="qlabel">Step 4 of 4</p>
+              <p className="qlabel">Step 3 of 3</p>
               <h2 className="qquestion">Fill out your details to book your call</h2>
               <p className="qsubhead">Enter your info below — on the next step you&apos;ll pick a time that works for you.</p>
               <input className="qinput" type="text" placeholder="Enter your full name" autoComplete="name"
@@ -313,7 +296,7 @@ function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () =
                 opt out. See our <a href="/privacy">Privacy Policy</a> and{" "}
                 <a href="/terms">Terms</a>.
               </p>
-              <button type="button" className="qback" onClick={() => setStep(3)}>
+              <button type="button" className="qback" onClick={() => setStep(2)}>
                 <ArrowLeft aria-hidden /> Go Back
               </button>
             </form>
