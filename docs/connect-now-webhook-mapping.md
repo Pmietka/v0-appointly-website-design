@@ -10,8 +10,8 @@ while sending the identical payload shape.
 | Code | `app/connect-now/apply-client.tsx` |
 | Webhook | `https://services.leadconnectorhq.com/hooks/bv8PsVl3lvidD0j8bBqP/webhook-trigger/69c59715-edb9-4231-bf64-1d2b255fa681` |
 | Method | `POST`, `Content-Type: application/json`, `keepalive: true` |
-| Fires when | The visitor submits step 4 of the qualification modal |
-| Also fires | Meta Pixel `Lead`, immediately before the POST |
+| Fires when | The visitor submits step 3 of the qualification modal |
+| Also fires | Meta Pixel `Lead` if `revenue` is not "Under $50K, or just getting started", else `UnqualifiedApplication`, both immediately before the POST |
 | Then | The modal swaps to the GHL booking widget, prefilled |
 
 The POST is fire and forget. A failed request is logged to the console as
@@ -31,9 +31,8 @@ being omitted, so the GHL field mapping stays stable across requests.
   "last_name": "Van Otten",
   "phone": "(616) 555-0142",
   "email": "dave@vanottencoatings.com",
-  "role": "Owner / CEO",
-  "revenue": "$500K - $1M Per Year",
-  "reps": "1-3 reps",
+  "revenue": "$250K to $500K",
+  "capacity": "5 to 10",
   "fbclid": "IwAR2xQ9abcdEFGhijkLMNop",
   "fbc": "fb.1.1758412800000.IwAR2xQ9abcdEFGhijkLMNop",
   "fbp": "fb.1.1758412800000.1234567890",
@@ -55,9 +54,8 @@ being omitted, so the GHL field mapping stays stable across requests.
 | `last_name` | Last Name | Standard | Everything after the first word. Empty if they typed one word |
 | `phone` | Phone | Standard | **As typed**, not normalized. See the gotcha below |
 | `email` | Email | Standard | Required by the form, so never empty |
-| `role` | Role | Custom, single line | One of four fixed values, listed below |
-| `revenue` | Annual Revenue | Custom, single line | One of four fixed values, listed below |
-| `reps` | Sales Reps | Custom, single line | One of four fixed values, listed below |
+| `revenue` | Trailing 12mo Revenue | Custom, single line | One of five fixed values, listed below |
+| `capacity` | Estimate Capacity | Custom, single line | One of four fixed values, listed below |
 | `fbclid` | Meta Click ID | Custom, single line | Empty unless the visitor arrived from a Meta ad |
 | `fbc` | Meta fbc Cookie | Custom, single line | Read from the `_fbc` cookie. Needed for CAPI matching |
 | `fbp` | Meta fbp Cookie | Custom, single line | Read from the `_fbp` cookie. Needed for CAPI matching |
@@ -79,9 +77,8 @@ character for character, otherwise keep them as single line text fields.
 
 | Field | Values |
 | --- | --- |
-| `role` | `Owner / CEO`, `Marketing or Sales Leader`, `Salesperson`, `Other` |
-| `revenue` | `$0 - $500K Per Year`, `$500K - $1M Per Year`, `$1M - $5M Per Year`, `$5M+ Per Year` |
-| `reps` | `I run all the leads myself`, `1-3 reps`, `4-10 reps`, `10+ reps` |
+| `revenue` | `Under $50K, or just getting started`, `$50K to $250K`, `$250K to $500K`, `$500K to $1M`, `$1M+` |
+| `capacity` | `Under 5`, `5 to 10`, `10 to 20`, `20+` |
 
 ### Phone format gotcha
 
