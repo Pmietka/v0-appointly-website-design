@@ -265,7 +265,7 @@ function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () =
           ) : step === 2 ? (
             <div className="qstep">
               <p className="qlabel">Step 2 of 3</p>
-              <h2 className="qquestion">How many additional in-home estimates could you or your team run per week?</h2>
+              <h2 className="qquestion">How many additional in-home estimates could you and your team run each week?</h2>
               <p className="qsubhead">This tells us how big a campaign to build for you.</p>
               <div className="qoptions">
                 {CAPACITY_OPTIONS.map((o) => (
