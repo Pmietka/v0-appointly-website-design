@@ -2,176 +2,260 @@
    /case-studies page styles. Builds on the shared .dscroll design system
    (home.css) and the shared proof components (proof.css). Everything is
    scoped under .dscroll.csp so it cannot leak anywhere else.
+
+   Layout: the Clean Floor Coatings flagship (video hero, stat bar, sticky
+   chapter nav, chapter blocks, calendar proof, transcript), then supporting
+   cards for the other case studies, the testimonial wall and the CTA.
    ============================================================================ */
 
+/* The sticky chapter nav needs an ancestor that does not clip scrolling.
+   `clip` still stops horizontal overflow without creating a scroll container. */
+.dscroll.csp{overflow-x:clip}
+.dscroll.csp .wrap.wide{max-width:1240px}
+.dscroll.csp .srx{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
 /* ── hero ─────────────────────────────────────────────────────────────────── */
-.dscroll.csp .cshero{padding:clamp(52px,10vw,104px) 0 clamp(48px,9vw,88px)}
-.dscroll.csp .cshero h1{max-width:16ch}
-.dscroll.csp .crumb{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink-4);margin-bottom:22px;font-weight:500}
-.dscroll.csp .crumb a{color:var(--ink-3);text-decoration:none}
-.dscroll.csp .crumb a:hover{color:var(--ink)}
+.dscroll.csp .cfhero{background:#0f0f10;color:#fff;padding:clamp(28px,5vw,48px) 0 clamp(96px,12vw,140px)}
+.dscroll.csp .cfhero .orb.a{opacity:.22;top:-20vw;right:-18vw}
+.dscroll.csp .crumb{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.5);margin-bottom:clamp(22px,4vw,36px);font-weight:500}
+.dscroll.csp .crumb a{color:rgba(255,255,255,.6);text-decoration:none}
+.dscroll.csp .crumb a:hover{color:#fff}
 .dscroll.csp .crumb svg{width:14px;height:14px}
-.dscroll.csp .crumb span[aria-current]{color:var(--ink);font-weight:600}
+.dscroll.csp .crumb span[aria-current]{color:#fff;font-weight:600}
 
-/* totals strip */
-.dscroll.csp .totals{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(10px,2vw,16px);margin-top:clamp(34px,6vw,52px)}
-@media(min-width:760px){.dscroll.csp .totals{grid-template-columns:repeat(4,1fr)}}
-.dscroll.csp .total{background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(18px,3vw,24px) clamp(16px,3vw,22px);
-  box-shadow:0 12px 30px -24px rgba(0,0,0,.22)}
-.dscroll.csp .total .tv{font-size:clamp(30px,5vw,44px);font-weight:700;letter-spacing:-.03em;line-height:1;color:var(--ink)}
-.dscroll.csp .total .tl{font-size:clamp(12px,1.8vw,14px);color:var(--ink-3);margin-top:8px;line-height:1.35;font-weight:500}
+.dscroll.csp .cfhero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(26px,4vw,48px);align-items:center;scroll-margin-top:98px}
+@media(min-width:980px){.dscroll.csp .cfhero-grid{grid-template-columns:minmax(0,5.4fr) minmax(0,7.6fr)}}
+.dscroll.csp .cfeye{font-size:clamp(11px,2.2vw,12px);font-weight:700;text-transform:uppercase;letter-spacing:.2em;color:#a3e4c9;margin-bottom:16px;line-height:1.6}
+.dscroll.csp .cfhero h1{color:#fff;font-size:clamp(34px,4.1vw,52px);line-height:1.14}
+.dscroll.csp .cfsub{font-size:clamp(16px,2.1vw,19px);line-height:1.55;color:rgba(255,255,255,.72);margin-top:20px;max-width:520px}
+.dscroll.csp .cfmeta{display:flex;flex-wrap:wrap;gap:14px clamp(22px,3vw,34px);margin-top:clamp(22px,3.4vw,30px)}
+.dscroll.csp .cfmeta dt{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:rgba(255,255,255,.45)}
+.dscroll.csp .cfmeta dd{font-size:14.5px;font-weight:600;color:#fff;margin-top:5px;line-height:1.35}
+@media(max-width:979px){.dscroll.csp .cfhero-video{margin:0 calc(-1 * clamp(20px,5vw,40px))}}
+@media(max-width:979px){.dscroll.csp .cfhero-video .vid.hero{border-radius:0;border-left:0;border-right:0}}
 
-/* jump chips: one per case study */
-.dscroll.csp .jump{display:flex;flex-wrap:wrap;gap:10px;margin-top:clamp(22px,4vw,30px);align-items:center}
-.dscroll.csp .jump .lbl{font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:var(--ink-4);font-weight:700;margin-right:4px}
-.dscroll.csp .chip{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);border-radius:999px;
-  padding:8px 16px 8px 10px;font-size:14px;font-weight:600;color:var(--ink-2);text-decoration:none;transition:border-color .15s,color .15s,transform .15s}
-.dscroll.csp .chip:hover{border-color:#d4d4d4;color:var(--ink);transform:translateY(-1px)}
-.dscroll.csp .chip .chipn{width:24px;height:24px;border-radius:999px;background:linear-gradient(135deg,#cfffae,#ace5ff);
-  display:grid;place-items:center;font-size:12px;font-weight:800;color:#0f3d2e}
+/* ── video (Mux facade, player, local video) ──────────────────────────────── */
+.dscroll.csp .vid{position:relative;aspect-ratio:16/9;border-radius:20px;overflow:hidden;background:#000;
+  box-shadow:0 30px 70px -34px rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.08)}
+.dscroll.csp .vid.hero{border-radius:24px;box-shadow:0 40px 90px -40px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.08)}
+.dscroll.csp .vid mux-player{display:block;width:100%;height:100%;--media-object-fit:contain}
+.dscroll.csp .vid video{display:block;width:100%;height:100%;object-fit:contain;background:#000}
+.dscroll.csp .vposter{all:unset;box-sizing:border-box;position:absolute;inset:0;cursor:pointer;display:block}
+.dscroll.csp .vposter img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.dscroll.csp .vposter:hover img{transform:scale(1.025)}
+.dscroll.csp .vposter:focus-visible{outline:3px solid #34d399;outline-offset:-3px}
+.dscroll.csp .vshade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,0) 30%,rgba(0,0,0,0) 55%,rgba(0,0,0,.55) 100%)}
+.dscroll.csp .vtag{position:absolute;top:14px;left:14px;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;
+  background:rgba(15,15,16,.62);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:6px 11px;border-radius:999px}
+.dscroll.csp .vcta{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:inline-flex;align-items:center;gap:12px;
+  background:#fff;color:#0f0f10;border-radius:999px;padding:8px 20px 8px 8px;font-weight:700;font-size:15px;white-space:nowrap;
+  box-shadow:0 18px 40px -12px rgba(0,0,0,.55);transition:transform .2s ease}
+.dscroll.csp .vposter:hover .vcta{transform:translate(-50%,-50%) scale(1.05)}
+.dscroll.csp .vplay{width:40px;height:40px;border-radius:999px;display:grid;place-items:center;background:linear-gradient(135deg,#cfffae,#ace5ff);color:#0f3d2e}
+.dscroll.csp .vplay svg{width:17px;height:17px;fill:currentColor;margin-left:2px}
+.dscroll.csp .vid.hero .vcta{font-size:clamp(15px,1.8vw,18px);padding:10px 26px 10px 10px}
+.dscroll.csp .vid.hero .vplay{width:clamp(44px,5vw,56px);height:clamp(44px,5vw,56px)}
+.dscroll.csp .vid.hero .vplay svg{width:22px;height:22px}
+.dscroll.csp .vid.card{aspect-ratio:4/3;border-radius:18px 18px 0 0;border:0;box-shadow:none}
+.dscroll.csp .vid.card .vposter img{object-position:50% 22%}
 
-/* ── how we work ──────────────────────────────────────────────────────────── */
-.dscroll.csp .hww{display:grid;gap:clamp(20px,4vw,40px);grid-template-columns:1fr;margin-top:clamp(28px,5vw,44px);align-items:start}
-@media(min-width:900px){.dscroll.csp .hww{grid-template-columns:1.2fr .8fr}}
-.dscroll.csp .hww p{font-size:clamp(16px,2.2vw,18px);line-height:1.6;color:var(--ink-2);margin-top:14px}
-.dscroll.csp .hww p:first-child{margin-top:0}
-.dscroll.csp .hww p strong{color:var(--ink);font-weight:700}
-.dscroll.csp .readnote{background:#fff;border:1px solid var(--line);border-radius:20px;padding:clamp(22px,3.6vw,28px);
-  box-shadow:0 14px 36px -26px rgba(0,0,0,.24);position:relative;overflow:hidden}
-.dscroll.csp .readnote::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,#cfffae,#ace5ff)}
-.dscroll.csp .readnote h3{font-size:clamp(17px,2.4vw,20px);font-weight:700;letter-spacing:-.01em;line-height:1.25}
-.dscroll.csp .readnote p{font-size:clamp(14px,2vw,16px);line-height:1.55;color:var(--ink-3);margin-top:10px}
-.dscroll.csp .structure{display:grid;gap:clamp(12px,2vw,16px);grid-template-columns:1fr;margin-top:clamp(28px,5vw,44px)}
-@media(min-width:720px){.dscroll.csp .structure{grid-template-columns:repeat(3,1fr)}}
-.dscroll.csp .struct{background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(20px,3.2vw,24px);display:flex;gap:14px;align-items:flex-start}
-.dscroll.csp .struct .sicon{flex:none;width:44px;height:44px;border-radius:13px;background:linear-gradient(135deg,#cfffae,#ace5ff);
-  display:grid;place-items:center;color:#0f3d2e}
-.dscroll.csp .struct .sicon svg{width:21px;height:21px;stroke-width:2}
-.dscroll.csp .struct h3{font-size:17px;font-weight:700;letter-spacing:-.01em}
-.dscroll.csp .struct p{font-size:14px;line-height:1.5;color:var(--ink-3);margin-top:5px}
-
-/* ── case study sections ──────────────────────────────────────────────────── */
-.dscroll.csp .csx{padding:clamp(60px,12vw,120px) 0}
-.dscroll.csp .csx+.csx{border-top:1px solid var(--line)}
-
-/* dark header card */
-.dscroll.csp .cshd{display:grid;grid-template-columns:1fr;gap:clamp(20px,4vw,32px);align-items:center;
-  background:var(--ink);color:#fff;border-radius:26px;padding:clamp(26px,4.5vw,42px);position:relative;overflow:hidden;
-  box-shadow:0 30px 70px -36px rgba(0,0,0,.6)}
-@media(min-width:760px){.dscroll.csp .cshd{grid-template-columns:1fr auto}}
-.dscroll.csp .cshd::after{content:"";position:absolute;right:-12%;top:-60%;width:52%;aspect-ratio:1;border-radius:999px;filter:blur(70px);opacity:.28;pointer-events:none;
-  background:conic-gradient(from 210deg at 42% 38%,#ffc9e6,#f4fff6,#c9ffe2,#f6fbff,#cfe6ff,#fdf4ff,#ffd6ee,#ffc9e6)}
-.dscroll.csp .cshd>*{position:relative;z-index:1}
-.dscroll.csp .cseye{font-size:clamp(11px,2.2vw,12px);font-weight:700;text-transform:uppercase;letter-spacing:.22em;color:#a3e4c9;margin-bottom:12px}
-.dscroll.csp .cshd h2{color:#fff;font-size:clamp(28px,5vw,44px);letter-spacing:-.025em;line-height:1.1}
-.dscroll.csp .csmeta{display:grid;grid-template-columns:repeat(2,1fr);gap:16px 24px;margin-top:clamp(20px,3vw,26px)}
-@media(min-width:640px){.dscroll.csp .csmeta{grid-template-columns:repeat(4,auto);justify-content:start;gap:16px clamp(24px,4vw,44px)}}
-.dscroll.csp .csmeta dt{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:rgba(255,255,255,.5)}
-.dscroll.csp .csmeta dd{font-size:clamp(14px,2vw,15.5px);font-weight:600;color:#fff;margin-top:5px;line-height:1.35;max-width:200px}
-.dscroll.csp .cshd-logo{display:flex;align-items:center;justify-content:center;background:#fff;border-radius:18px;
-  padding:16px 22px;min-width:180px;box-shadow:0 14px 30px -18px rgba(0,0,0,.5)}
-.dscroll.csp .cshd-logo img{display:block;width:auto;height:clamp(52px,8vw,72px);max-width:220px;object-fit:contain}
-.dscroll.csp .cshd-logo.dark{background:transparent;padding:0;box-shadow:none}
-.dscroll.csp .cshd-logo.dark img{height:clamp(84px,12vw,120px);border-radius:16px;box-shadow:0 14px 30px -18px rgba(0,0,0,.6)}
-
-/* headline statement + callout */
-.dscroll.csp .cshl{font-size:clamp(24px,4.4vw,40px);font-weight:600;letter-spacing:-.025em;line-height:1.22;margin-top:clamp(30px,5vw,48px);
-  max-width:22ch;text-wrap:balance}
-.dscroll.csp .callout{margin-top:clamp(20px,3vw,26px);background:#fef9c3;border:1px solid #fde68a;border-radius:16px;padding:clamp(16px,2.8vw,22px) clamp(18px,3vw,24px);
-  font-size:clamp(16px,2.3vw,19px);font-weight:600;line-height:1.4;color:#713f12;letter-spacing:-.01em;max-width:820px}
-
-/* two column text + figure blocks */
-.dscroll.csp .csgrid{display:grid;grid-template-columns:1fr;gap:clamp(22px,4vw,44px);margin-top:clamp(36px,6vw,64px);align-items:start}
-@media(min-width:820px){.dscroll.csp .csgrid{grid-template-columns:minmax(0,1.35fr) minmax(0,.85fr)}}
-@media(min-width:820px){.dscroll.csp .csgrid.narrow{grid-template-columns:minmax(0,1.5fr) minmax(0,.7fr)}}
-.dscroll.csp .csgrid.single{grid-template-columns:1fr}
-.dscroll.csp .csgrid.single .cstext{max-width:820px}
-.dscroll.csp .cstext h3.mt{margin-top:clamp(28px,4vw,40px)}
-.dscroll.csp .csx .fquote{margin-top:clamp(36px,6vw,64px)}
-.dscroll.csp .cstext h3{font-size:clamp(20px,3vw,26px);font-weight:700;letter-spacing:-.02em;line-height:1.2;padding-bottom:12px;
-  border-bottom:1px solid var(--line);margin-bottom:6px}
-.dscroll.csp .cstext p{font-size:clamp(16px,2.2vw,18px);line-height:1.62;color:var(--ink-2);margin-top:14px;text-wrap:pretty}
-.dscroll.csp .csfig{margin:0;display:flex;flex-direction:column;gap:10px}
-.dscroll.csp .csfig .frame{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#fff;
-  box-shadow:0 24px 54px -30px rgba(15,23,42,.35)}
-.dscroll.csp .csfig .frame img{display:block;width:100%;height:auto}
-.dscroll.csp .csfig.portrait .frame img{aspect-ratio:4/5;object-fit:cover}
-.dscroll.csp .csfig.square .frame{max-width:320px;margin:0 auto}
-.dscroll.csp .csfig.square .frame img{aspect-ratio:1;object-fit:cover}
-.dscroll.csp .csfig.phone .frame{max-width:340px;margin:0 auto;border-radius:24px}
-.dscroll.csp .csfig figcaption{font-size:13px;color:var(--ink-4);line-height:1.45;text-align:center;font-weight:500}
-
-/* results */
-.dscroll.csp .results{margin-top:clamp(36px,6vw,64px)}
-.dscroll.csp .rlabel{display:flex;align-items:center;gap:12px;font-size:clamp(11px,2.2vw,12px);font-weight:700;text-transform:uppercase;letter-spacing:.2em;color:var(--ink-4)}
-.dscroll.csp .rlabel::after{content:"";flex:1;height:1px;background:var(--line)}
-/* 2 up on phones, 3 up from tablet. A five stat grid becomes a bento: three
-   tiles on the first row, two wider tiles on the second. */
-.dscroll.csp .rgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(10px,2vw,16px);margin-top:clamp(18px,3vw,24px)}
-@media(max-width:719px){.dscroll.csp .rgrid.five>*:nth-child(5){grid-column:span 2}}
-@media(min-width:720px){
-  .dscroll.csp .rgrid{grid-template-columns:repeat(6,1fr)}
-  .dscroll.csp .rgrid>*{grid-column:span 2}
-  .dscroll.csp .rgrid.five>*:nth-child(n+4){grid-column:span 3}
-  .dscroll.csp .rgrid.four>*{grid-column:span 3}
+/* ── stat bar ─────────────────────────────────────────────────────────────── */
+.dscroll.csp .cfstats{margin-top:clamp(-72px,-8vw,-56px);padding-bottom:clamp(8px,2vw,16px);overflow:visible;z-index:2}
+.dscroll.csp .statbar{display:grid;grid-template-columns:repeat(2,1fr);background:#fff;border:1px solid var(--line);border-radius:22px;
+  box-shadow:0 30px 60px -36px rgba(0,0,0,.35);overflow:hidden}
+@media(min-width:820px){.dscroll.csp .statbar{grid-template-columns:repeat(4,1fr)}}
+.dscroll.csp .stat{padding:clamp(20px,3.4vw,30px) clamp(16px,2.6vw,26px);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.dscroll.csp .stat:nth-child(2n){border-right:0}
+@media(min-width:820px){
+  .dscroll.csp .stat{border-bottom:0;border-right:1px solid var(--line)}
+  .dscroll.csp .stat:nth-child(2n){border-right:1px solid var(--line)}
+  .dscroll.csp .stat:last-child{border-right:0}
 }
-@media(min-width:1000px){
-  .dscroll.csp .rgrid.four{grid-template-columns:repeat(4,1fr)}
-  .dscroll.csp .rgrid.four>*{grid-column:auto}
-}
-.dscroll.csp .rtile{background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(18px,3vw,24px) clamp(16px,2.6vw,20px);
-  display:flex;flex-direction:column;justify-content:flex-start;gap:8px;min-height:clamp(110px,16vw,140px);box-shadow:0 12px 30px -24px rgba(0,0,0,.22)}
-.dscroll.csp .rtile .rv{font-size:clamp(28px,4.6vw,40px);font-weight:700;letter-spacing:-.03em;line-height:1;color:var(--ink);overflow-wrap:anywhere}
-.dscroll.csp .rtile .rl{font-size:clamp(11px,1.7vw,12.5px);font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-4);line-height:1.3}
-.dscroll.csp .rtile.hero{background:var(--ink);border-color:var(--ink);position:relative;overflow:hidden}
-.dscroll.csp .rtile.hero::after{content:"";position:absolute;right:-30%;bottom:-60%;width:90%;aspect-ratio:1;border-radius:999px;filter:blur(30px);opacity:.35;
-  background:linear-gradient(135deg,#cfffae,#ace5ff)}
-.dscroll.csp .rtile.hero .rv{color:#fff;position:relative;z-index:1}
-.dscroll.csp .rtile.hero .rl{color:rgba(255,255,255,.7);position:relative;z-index:1}
-.dscroll.csp .rnote{font-size:13.5px;line-height:1.5;color:var(--ink-4);margin-top:14px;font-style:italic;max-width:860px}
-.dscroll.csp .rsince{margin-top:clamp(18px,3vw,22px);background:#ecfdf5;border:1px solid #d1fae5;color:#065f46;border-radius:16px;
-  padding:clamp(14px,2.6vw,18px) clamp(16px,3vw,22px);font-size:clamp(15px,2.1vw,17px);font-weight:600;line-height:1.45;max-width:860px}
+@media(max-width:819px){.dscroll.csp .stat:nth-child(n+3){border-bottom:0}}
+.dscroll.csp .stat .sv{font-size:clamp(32px,5.2vw,52px);font-weight:700;letter-spacing:-.035em;line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
+.dscroll.csp .stat:first-child .sv{background:linear-gradient(120deg,#0f766e,#0369a1);-webkit-background-clip:text;background-clip:text;color:transparent}
+.dscroll.csp .stat .sl{font-size:clamp(11px,1.6vw,12.5px);font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-4);margin-top:10px;line-height:1.35}
+.dscroll.csp .statnote{font-size:12.5px;line-height:1.5;color:var(--ink-4);margin-top:12px;max-width:880px}
 
-/* proof calendars */
-.dscroll.csp .csproof{margin-top:clamp(40px,7vw,72px)}
-.dscroll.csp .proofhd{display:flex;flex-direction:column;gap:8px;max-width:820px}
-.dscroll.csp .proofhd .eyebrow{margin-bottom:4px}
-.dscroll.csp .proofhd h3{font-size:clamp(22px,3.4vw,30px);font-weight:700;letter-spacing:-.02em;line-height:1.2}
-.dscroll.csp .proofhd .legend{display:flex;align-items:flex-start;gap:9px;font-size:clamp(13px,2vw,15px);color:var(--ink-3);line-height:1.45}
-.dscroll.csp .proofhd .legend .pip{flex:none;width:12px;height:12px;border-radius:4px;background:#1a9df0;margin-top:4px}
-.dscroll.csp .calshots{display:flex;flex-direction:column;gap:clamp(16px,3vw,24px);margin-top:clamp(20px,3.6vw,30px)}
-.dscroll.csp .calshot{margin:0;display:flex;flex-direction:column;gap:10px}
-.dscroll.csp .calshot .frame{border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#fff;
-  box-shadow:0 22px 50px -30px rgba(15,23,42,.35)}
-.dscroll.csp .calshot .frame img{display:block;width:100%;height:auto}
-.dscroll.csp .calshot figcaption{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--ink-3);letter-spacing:.02em;text-transform:uppercase}
-.dscroll.csp .calshot figcaption::before{content:"";width:18px;height:2px;background:var(--ink-4);border-radius:2px}
+/* ── story: sticky chapter nav + chapter blocks ───────────────────────────── */
+.dscroll.csp .story{padding:clamp(40px,7vw,80px) 0 clamp(60px,10vw,110px)}
+.dscroll.csp .story-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:0}
+@media(min-width:1024px){.dscroll.csp .story-grid{grid-template-columns:190px minmax(0,1fr);gap:clamp(32px,4vw,56px)}}
 
-/* ── at a glance table ────────────────────────────────────────────────────── */
-.dscroll.csp .glance{margin-top:clamp(28px,5vw,44px);background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;
-  box-shadow:0 16px 40px -22px rgba(0,0,0,.18)}
-.dscroll.csp .glance table{width:100%;border-collapse:collapse;text-align:left}
-.dscroll.csp .glance th{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-4);background:#fafafa;
-  padding:14px 18px;border-bottom:1px solid var(--line);white-space:nowrap}
-.dscroll.csp .glance td{padding:16px 18px;border-bottom:1px solid var(--line);font-size:15px;color:var(--ink-2);vertical-align:middle;line-height:1.35}
-.dscroll.csp .glance tr:last-child td{border-bottom:none}
-.dscroll.csp .glance td.client{font-weight:700;color:var(--ink)}
-.dscroll.csp .glance td.client a{color:inherit;text-decoration:none}
-.dscroll.csp .glance td.client a:hover{text-decoration:underline}
-.dscroll.csp .glance td.num{font-weight:700;color:var(--ink);font-size:17px;letter-spacing:-.01em}
-.dscroll.csp .glance td.rate{font-weight:700;color:#0f766e;font-size:20px;letter-spacing:-.01em}
-.dscroll.csp .glance .glogo{display:block;width:auto;height:26px;max-width:110px;object-fit:contain;margin-bottom:8px}
-.dscroll.csp .glance .glogo.dark{height:34px;border-radius:6px}
-@media(max-width:760px){
-  .dscroll.csp .glance thead{display:none}
-  .dscroll.csp .glance table,.dscroll.csp .glance tbody,.dscroll.csp .glance tr,.dscroll.csp .glance td{display:block;width:100%}
-  .dscroll.csp .glance tr{border-bottom:8px solid var(--tint)}
-  .dscroll.csp .glance tr:last-child{border-bottom:none}
-  .dscroll.csp .glance td{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 18px;border-bottom:1px solid var(--line)}
-  .dscroll.csp .glance td::before{content:attr(data-label);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-4);flex:none}
-  .dscroll.csp .glance td.client{display:block;padding-top:18px}
-  .dscroll.csp .glance td.client::before{display:none}
+.dscroll.csp .chnav{position:sticky;top:78px;z-index:20;align-self:start;min-width:0}
+.dscroll.csp .chnav-t{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.2em;color:var(--ink-4);margin-bottom:14px}
+.dscroll.csp .chnav ol{list-style:none;display:flex;flex-direction:column;gap:2px;border-left:2px solid var(--line)}
+.dscroll.csp .chnav a{display:flex;align-items:baseline;gap:10px;padding:9px 12px 9px 16px;margin-left:-2px;border-left:2px solid transparent;
+  font-size:14.5px;font-weight:600;color:var(--ink-3);text-decoration:none;line-height:1.3;transition:color .15s,border-color .15s,background .15s}
+.dscroll.csp .chnav a:hover{color:var(--ink)}
+.dscroll.csp .chnav a .chn{font-size:11px;font-weight:700;color:var(--ink-4);font-variant-numeric:tabular-nums}
+.dscroll.csp .chnav a.on{color:var(--ink);border-left-color:var(--ink);background:linear-gradient(90deg,rgba(207,255,174,.45),rgba(172,229,255,.08))}
+.dscroll.csp .chnav a.on .chn{color:#0f766e}
+@media(min-width:1024px){.dscroll.csp .chnav{top:110px;padding-top:4px}}
+/* phones and tablets: a horizontal strip of pills pinned under the site nav */
+@media(max-width:1023px){
+  .dscroll.csp .chnav{margin:0 calc(-1 * clamp(20px,5vw,40px));padding:10px 0;background:rgba(250,250,250,.9);
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .dscroll.csp .chnav-t{display:none}
+  .dscroll.csp .chnav ol{flex-direction:row;gap:8px;border-left:0;overflow-x:auto;scrollbar-width:none;padding:0 clamp(20px,5vw,40px);
+    scroll-padding:0 clamp(20px,5vw,40px)}
+  .dscroll.csp .chnav ol::-webkit-scrollbar{display:none}
+  .dscroll.csp .chnav li{flex:none}
+  .dscroll.csp .chnav a{margin:0;border:1px solid var(--line);border-radius:999px;background:#fff;padding:8px 14px;font-size:13.5px;white-space:nowrap;gap:7px}
+  .dscroll.csp .chnav a.on{background:var(--ink);border-color:var(--ink);color:#fff}
+  .dscroll.csp .chnav a.on .chn{color:#a3e4c9}
 }
+
+/* anchors land below the site nav, plus the pill strip on small screens */
+.dscroll.csp .chapter,.dscroll.csp .calproof{scroll-margin-top:100px}
+@media(max-width:1023px){.dscroll.csp .chapter,.dscroll.csp .calproof{scroll-margin-top:140px}}
+
+.dscroll.csp .chapters{min-width:0}
+.dscroll.csp .chapter{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(20px,3vw,26px);padding:clamp(40px,6vw,64px) 0;border-bottom:1px solid var(--line)}
+.dscroll.csp .chapter:first-child{padding-top:clamp(26px,4vw,8px)}
+@media(min-width:900px){
+  .dscroll.csp .chapter{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(28px,3.6vw,48px);align-items:start}
+  .dscroll.csp .chapter.flip .chmedia{order:2}
+  .dscroll.csp .chmedia{position:sticky;top:120px}
+}
+.dscroll.csp .chnum{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:#0f766e}
+.dscroll.csp .chhl{font-size:clamp(26px,3.4vw,36px);font-weight:700;letter-spacing:-.025em;line-height:1.15;margin-top:10px;text-wrap:balance}
+.dscroll.csp .chq{position:relative;margin-top:18px;padding:16px 18px 16px 50px;background:#fff;border:1px solid var(--line);border-radius:16px;
+  box-shadow:0 14px 34px -26px rgba(0,0,0,.28)}
+.dscroll.csp .chq svg{position:absolute;left:16px;top:17px;width:22px;height:22px;color:#0f766e;fill:rgba(15,118,110,.14)}
+.dscroll.csp .chq p{font-size:clamp(17px,2.1vw,19.5px);font-weight:600;line-height:1.4;letter-spacing:-.01em;color:var(--ink);text-wrap:pretty}
+.dscroll.csp .chq cite{display:block;margin-top:8px;font-style:normal;font-size:12.5px;font-weight:600;color:var(--ink-4)}
+.dscroll.csp .chcap{font-size:clamp(15px,1.9vw,16.5px);line-height:1.55;color:var(--ink-2);margin-top:14px;text-wrap:pretty}
+
+/* chapter supporting image */
+.dscroll.csp .chfig{margin:18px 0 0;display:flex;flex-direction:column;gap:9px}
+.dscroll.csp .chfig figcaption{font-size:12.5px;font-weight:500;color:var(--ink-4);line-height:1.45}
+.dscroll.csp .chphoto{border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 20px 44px -30px rgba(15,23,42,.4)}
+.dscroll.csp .chphoto img{display:block;width:100%;height:auto}
+.dscroll.csp .chphoto.crop img{height:100%;object-fit:cover}
+.dscroll.csp .chphoto.tall{max-width:340px}
+
+/* calendar pair: week 1 above week 3 */
+.dscroll.csp .calpair{display:flex;flex-direction:column;gap:10px}
+.dscroll.csp .cpshot{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 16px 36px -28px rgba(15,23,42,.4)}
+.dscroll.csp .cpshot img{display:block;width:100%;height:auto}
+.dscroll.csp .cplabel{position:absolute;right:10px;bottom:10px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  background:var(--ink);color:#fff;padding:5px 10px;border-radius:999px}
+
+/* then / now card */
+.dscroll.csp .thennow{display:grid;grid-template-columns:1fr;gap:10px}
+@media(min-width:520px){.dscroll.csp .thennow{grid-template-columns:1fr 1fr}}
+.dscroll.csp .tn{border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px;border:1px solid var(--line)}
+.dscroll.csp .tn.then{background:#f5f5f5}
+.dscroll.csp .tn.now{background:#fff;box-shadow:0 18px 40px -28px rgba(15,23,42,.4);border-color:#bfe9d6}
+.dscroll.csp .tnl{align-self:flex-start;font-size:10.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;padding:4px 9px;border-radius:999px;background:#e5e5e5;color:var(--ink-3)}
+.dscroll.csp .tn.now .tnl{background:linear-gradient(135deg,#cfffae,#ace5ff);color:#0f3d2e}
+.dscroll.csp .tnsrc{font-size:12px;font-weight:700;color:var(--ink-3)}
+.dscroll.csp .bubble{background:#fff;border:1px solid var(--line);border-radius:14px 14px 14px 4px;padding:10px 12px;font-size:14px;line-height:1.4;color:var(--ink-2)}
+.dscroll.csp .note{font-size:14px;line-height:1.5;color:var(--ink-2);border-left:3px solid #34d399;padding-left:10px}
+.dscroll.csp .tnmeta{display:flex;align-items:center;flex-wrap:wrap;gap:5px;font-size:12px;font-weight:600;color:var(--ink-3);margin-top:auto}
+.dscroll.csp .tnmeta svg{width:14px;height:14px}
+.dscroll.csp .tn.then .tnmeta{color:#b45309}
+.dscroll.csp .tn.now .tnmeta{color:#047857}
+
+/* funnel */
+.dscroll.csp .funnel{display:flex;flex-direction:column;align-items:center;gap:6px;padding:18px 12px;background:#fff;border:1px solid var(--line);border-radius:16px;
+  box-shadow:0 18px 40px -30px rgba(15,23,42,.4)}
+.dscroll.csp .ftier{display:flex;flex-direction:column;align-items:center;text-align:center;gap:3px;padding:12px 16px;border-radius:12px;width:100%}
+.dscroll.csp .ftier b{font-size:14.5px;font-weight:700;letter-spacing:-.01em}
+.dscroll.csp .ftier span{font-size:12.5px;line-height:1.35}
+.dscroll.csp .ftier.t1{background:#f3f4f6;color:var(--ink-3)}
+.dscroll.csp .ftier.t1 b{color:var(--ink-2)}
+.dscroll.csp .ftier.t2{width:78%;background:#e5e7eb;color:var(--ink-3)}
+.dscroll.csp .ftier.t2 b{color:var(--ink-2)}
+.dscroll.csp .ftier.t3{width:56%;background:var(--ink);color:rgba(255,255,255,.75);box-shadow:0 14px 30px -16px rgba(0,0,0,.5)}
+.dscroll.csp .ftier.t3 b{color:#fff}
+
+/* ── calendar proof ───────────────────────────────────────────────────────── */
+.dscroll.csp .calproof{padding:clamp(44px,6vw,64px) 0 clamp(20px,3vw,32px)}
+.dscroll.csp .legend{display:flex;align-items:flex-start;gap:9px;font-size:clamp(13.5px,1.9vw,15px);color:var(--ink-3);line-height:1.5;margin-top:12px;max-width:760px}
+.dscroll.csp .legend .pip{flex:none;width:12px;height:12px;border-radius:4px;background:#1a9df0;margin-top:5px}
+
+.dscroll.csp .gallery{display:grid;gap:clamp(12px,2vw,18px);margin-top:clamp(18px,3vw,26px);grid-template-columns:1fr}
+@media(min-width:700px){.dscroll.csp .gallery.grid{grid-template-columns:repeat(3,1fr)}}
+.dscroll.csp .gallery.strip{grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:8px;margin-top:10px}
+.dscroll.csp .gshot{margin:0;display:flex;flex-direction:column;gap:8px}
+.dscroll.csp .gshot button{all:unset;box-sizing:border-box;position:relative;display:block;cursor:zoom-in;border-radius:14px;overflow:hidden;
+  border:1px solid var(--line);background:#fff;box-shadow:0 18px 40px -28px rgba(15,23,42,.4);transition:transform .2s,box-shadow .2s}
+.dscroll.csp .gshot button:hover{transform:translateY(-2px);box-shadow:0 24px 50px -28px rgba(15,23,42,.5)}
+.dscroll.csp .gshot button:focus-visible{outline:3px solid #34d399;outline-offset:2px}
+.dscroll.csp .gshot img{display:block;width:100%;aspect-ratio:2/1;object-fit:cover;object-position:62% 0}
+.dscroll.csp .gallery.strip .gshot img{aspect-ratio:3/2}
+.dscroll.csp .gallery.strip .gshot button{border-radius:10px;box-shadow:none}
+.dscroll.csp .gzoom{position:absolute;right:10px;bottom:10px;width:32px;height:32px;border-radius:999px;background:rgba(15,15,16,.72);color:#fff;display:grid;place-items:center}
+.dscroll.csp .gzoom svg{width:15px;height:15px}
+.dscroll.csp .gallery.strip .gzoom{width:24px;height:24px;right:6px;bottom:6px}
+.dscroll.csp .gallery.strip .gzoom svg{width:12px;height:12px}
+.dscroll.csp .gshot figcaption{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;color:var(--ink-3);letter-spacing:.04em;text-transform:uppercase}
+.dscroll.csp .gshot figcaption::before{content:"";width:16px;height:2px;background:var(--ink-4);border-radius:2px}
+.dscroll.csp .gallery.strip .gshot figcaption{font-size:11px;gap:6px}
+.dscroll.csp .gallery.strip .gshot figcaption::before{width:10px}
+
+/* lightbox (native <dialog>) */
+.dscroll.csp .lightbox{margin:auto;padding:0;border:0;background:transparent;max-width:min(1400px,96vw);width:100%;max-height:94vh;overflow:visible}
+.dscroll.csp .lightbox::backdrop{background:rgba(10,10,11,.92);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.dscroll.csp .lbin{display:flex;flex-direction:column;gap:12px}
+.dscroll.csp .lbbar{display:flex;align-items:center;justify-content:space-between;gap:12px;color:#fff}
+.dscroll.csp .lbcount{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.dscroll.csp .lbcount span{color:rgba(255,255,255,.55)}
+.dscroll.csp .lbimg{border-radius:14px;overflow:auto;background:#fff;max-height:80vh}
+.dscroll.csp .lbimg img{display:block;width:100%;height:auto;min-width:720px}
+.dscroll.csp .lbnav{display:flex;justify-content:center;gap:12px}
+.dscroll.csp .lbbtn{all:unset;box-sizing:border-box;cursor:pointer;width:44px;height:44px;border-radius:999px;display:grid;place-items:center;
+  background:rgba(255,255,255,.12);color:#fff;transition:background .15s}
+.dscroll.csp .lbbtn:hover{background:rgba(255,255,255,.24)}
+.dscroll.csp .lbbtn:focus-visible{outline:3px solid #34d399;outline-offset:2px}
+.dscroll.csp .lbbtn svg{width:20px;height:20px}
+
+/* ── transcript accordion ─────────────────────────────────────────────────── */
+.dscroll.csp .transcript{margin-top:clamp(24px,4vw,40px);background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.dscroll.csp .transcript summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:clamp(18px,3vw,24px)}
+.dscroll.csp .transcript summary::-webkit-details-marker{display:none}
+.dscroll.csp .transcript summary b{display:block;font-size:clamp(17px,2.2vw,20px);font-weight:700;letter-spacing:-.01em}
+.dscroll.csp .transcript summary small{display:block;font-size:13.5px;color:var(--ink-4);margin-top:3px}
+.dscroll.csp .transcript summary>svg{flex:none;width:22px;height:22px;color:var(--ink-3);transition:transform .2s}
+.dscroll.csp .transcript[open] summary>svg{transform:rotate(180deg)}
+.dscroll.csp .transcript summary:focus-visible{outline:3px solid #34d399;outline-offset:-3px}
+.dscroll.csp .trbody{border-top:1px solid var(--line);padding:clamp(6px,1vw,10px) clamp(18px,3vw,24px) clamp(20px,3vw,28px);max-height:70vh;overflow-y:auto}
+.dscroll.csp .trbody section{padding:18px 0;border-bottom:1px solid var(--line);overflow:visible}
+.dscroll.csp .trbody section:last-child{border-bottom:0}
+.dscroll.csp .trbody h3{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 10px;font-size:15px;font-weight:700}
+.dscroll.csp .trbody h3 span{font-size:11.5px;color:#0f766e;font-variant-numeric:tabular-nums}
+.dscroll.csp .trbody h3 a{margin-left:auto;font-size:12.5px;font-weight:600;color:var(--ink-3)}
+.dscroll.csp .trbody p{font-size:15px;line-height:1.65;color:var(--ink-2);margin-top:10px}
+
+/* ── supporting case study cards ──────────────────────────────────────────── */
+.dscroll.csp .scards{display:grid;grid-template-columns:1fr;gap:clamp(16px,2.6vw,24px);margin-top:clamp(28px,5vw,44px)}
+@media(min-width:880px){.dscroll.csp .scards{grid-template-columns:1fr 1fr}}
+.dscroll.csp .scard{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;
+  box-shadow:0 20px 48px -34px rgba(0,0,0,.3);scroll-margin-top:98px}
+.dscroll.csp .scphoto{margin:0;aspect-ratio:4/3;overflow:hidden;background:#000}
+.dscroll.csp .scphoto img{width:100%;height:100%;object-fit:cover;display:block}
+.dscroll.csp .scbody{padding:clamp(18px,3vw,26px);display:flex;flex-direction:column;gap:14px;flex:1}
+.dscroll.csp .schead{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.dscroll.csp .sclogo{display:block;width:auto;height:34px;max-width:160px;object-fit:contain}
+.dscroll.csp .sclogo.dark{height:44px;border-radius:8px}
+.dscroll.csp .scmkt{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-4);text-align:right}
+.dscroll.csp .scard h3{font-size:clamp(20px,2.6vw,24px);font-weight:700;letter-spacing:-.02em;line-height:1.2}
+.dscroll.csp .sclead{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 12px}
+.dscroll.csp .sclead b{font-size:clamp(36px,5vw,46px);font-weight:700;letter-spacing:-.035em;line-height:1;color:#0f766e}
+.dscroll.csp .sclead span{font-size:14px;font-weight:600;color:var(--ink-3);line-height:1.35}
+.dscroll.csp .scstats{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.dscroll.csp .scstats div{padding:10px 12px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:3px}
+.dscroll.csp .scstats div:last-child{border-right:0}
+.dscroll.csp .scstats b{font-size:17px;font-weight:700;letter-spacing:-.01em}
+.dscroll.csp .scstats span{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-4);line-height:1.3}
+.dscroll.csp .sccap{font-size:15px;line-height:1.5;color:var(--ink-2);font-weight:500}
+.dscroll.csp .sccap span{display:block;margin-top:4px;font-size:12.5px;font-weight:600;color:var(--ink-4)}
+.dscroll.csp .sccal{margin-top:auto;padding-top:4px}
+.dscroll.csp .sccal-t{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--ink-4)}
+
+/* call-a-client note */
 .dscroll.csp .glancenote{margin-top:clamp(20px,3.6vw,28px);display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);
   border-radius:18px;padding:clamp(18px,3vw,24px);max-width:820px}
 .dscroll.csp .glancenote .gicon{flex:none;width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#cfffae,#ace5ff);display:grid;place-items:center;color:#0f3d2e}
@@ -179,3 +263,10 @@
 .dscroll.csp .glancenote p{font-size:clamp(15px,2.1vw,17px);line-height:1.5;color:var(--ink-2)}
 .dscroll.csp .glancenote p strong{color:var(--ink);font-weight:700}
 
+/* ── CTA ──────────────────────────────────────────────────────────────────── */
+.dscroll.csp .ctaq{font-size:clamp(17px,2.4vw,21px);font-weight:600;color:var(--ink-2);margin-bottom:16px;letter-spacing:-.01em}
+.dscroll.csp .ctaq span{display:block;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-4);margin-top:6px}
+
+@media(prefers-reduced-motion:reduce){
+  .dscroll.csp .vposter img,.dscroll.csp .vcta,.dscroll.csp .gshot button{transition:none}
+}

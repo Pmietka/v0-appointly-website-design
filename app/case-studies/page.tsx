@@ -1,23 +1,36 @@
 import type { Metadata, Viewport } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronRight, FileText, BarChart3, CalendarCheck, PhoneCall } from "lucide-react";
+import { Check, ChevronRight, ChevronDown, PhoneCall, PhoneOff, Quote } from "lucide-react";
 
 import { SiteNav, BOOKING_URL, PHONE_DISPLAY, PHONE_HREF } from "@/components/site-nav";
 import { DscrollFooter } from "@/components/dscroll-footer";
-import { ClientLogos, FeaturedQuote, TestimonialWall } from "@/components/proof";
-import { CASE_STUDIES, CASE_STUDY_TOTALS, type CaseStudy } from "@/lib/case-studies";
+import { ClientLogos, TestimonialWall } from "@/components/proof";
+import { CASE_STUDIES, type CaseStudy } from "@/lib/case-studies";
+import {
+  CFC_CALENDAR,
+  CFC_STATS,
+  CFC_STATS_NOTE,
+  CHAPTERS,
+  HERO_VIDEO,
+  muxPoster,
+  type Chapter,
+} from "@/lib/cfc-case-study";
 import { FEATURED_TESTIMONIALS, QUOTE_TESTIMONIALS } from "@/lib/testimonials";
+import { ChapterNav, Gallery, LocalVideo, MuxVideo, StatBar } from "./cfc-interactive";
 import "../home.css";
 import "./case-studies.css";
 
 const PAGE_URL = "https://getappointly.co/case-studies";
-const TITLE = "Floor Coating Case Studies | Real Close Rates | Appointly";
+const TITLE = "Floor Coating Case Studies | Clean Floor Coatings on Video | Appointly";
 const DESCRIPTION =
-  "Three floor coating companies, three markets, one process. See the close rates on the appointments Appointly books, the average job sizes, and the actual estimate calendars behind the numbers.";
+  "Watch Phil from Clean Floor Coatings explain how Appointly took him from two or three floors a week to booked five days a week in Myrtle Beach, with a ~70% close rate on shown appointments. Plus AFAB Services and Garage Force.";
+
+const CALENDAR_ID = "calendar-proof";
+const NAMES_NOTE = "Homeowner names shortened to first name and last initial.";
 
 export const viewport: Viewport = {
-  themeColor: "#fafafa",
+  themeColor: "#0f0f10",
 };
 
 export const metadata: Metadata = {
@@ -47,192 +60,194 @@ export const metadata: Metadata = {
   },
 };
 
-const TOTALS = [
-  { v: String(CASE_STUDY_TOTALS.markets), l: "markets, three price points, one process" },
-  { v: CASE_STUDY_TOTALS.closeRateRange, l: "close rates on the appointments we book" },
-  { v: CASE_STUDY_TOTALS.qualified, l: "of appointments qualified over the phone before booking" },
-  { v: String(CASE_STUDY_TOTALS.perMarket), l: "contractor per market. Never shared appointments" },
-];
+const pad = (n: number) => String(n).padStart(2, "0");
 
-function MediaFigure({ c }: { c: CaseStudy }) {
-  if (!c.media) return null;
-  const isPhone = c.media.width < c.media.height;
+/* ── Chapter visuals ─────────────────────────────────────────────────────────
+   The supporting image for each chapter. Screenshots and photos are real;
+   the two diagrams are drawn from Phil's own words in that chapter's clip and
+   say so in their caption. */
+function ThenNow() {
   return (
-    <figure className={`csfig${isPhone ? " phone" : ""}`}>
-      <div className="frame">
-        <Image
-          src={c.media.src}
-          alt={c.media.caption}
-          width={c.media.width}
-          height={c.media.height}
-          sizes={isPhone ? "340px" : "(max-width: 820px) 92vw, 440px"}
-          loading="lazy"
-        />
+    <div className="thennow" role="img" aria-label="Then: a Facebook lead with no phone number asking for the lowest price on 440 square feet. Now: a two paragraph booking note on a qualified homeowner.">
+      <div className="tn then">
+        <span className="tnl">Then</span>
+        <p className="tnsrc">Facebook lead form</p>
+        <p className="bubble">I got 440 square feet, what&apos;s your lowest price? Can you beat this other guy?</p>
+        <p className="tnmeta"><PhoneOff aria-hidden /> No phone number given</p>
       </div>
-      <figcaption>{c.media.caption}</figcaption>
-    </figure>
+      <div className="tn now">
+        <span className="tnl">Now</span>
+        <p className="tnsrc">Booking note from Appointly</p>
+        <p className="note">
+          Talked to this homeowner. He just moved into his house and has a lot of
+          stuff to move out first. Some damage, and the spalling will need repair.
+        </p>
+        <p className="tnmeta"><Check aria-hidden /> Qualified by phone <Check aria-hidden /> Ready to buy</p>
+      </div>
+    </div>
   );
 }
 
-function OwnerFigure({ c, shape = "portrait" }: { c: CaseStudy; shape?: "portrait" | "square" }) {
-  if (!c.owner_photo) return null;
+function Funnel() {
   return (
-    <figure className={`csfig ${shape}`}>
-      <div className="frame">
-        <Image
-          src={c.owner_photo.src}
-          alt={c.owner_photo.caption}
-          width={c.owner_photo.width}
-          height={c.owner_photo.height}
-          sizes="(max-width: 820px) 92vw, 440px"
-          loading="lazy"
-        />
+    <div className="funnel" role="img" aria-label="A funnel: Google and Facebook leads at the top are raw material, superfluous calls in the middle, and Appointly appointments at the bottom are ready to make a buying decision.">
+      <div className="ftier t1">
+        <b>Google and Facebook leads</b>
+        <span>Raw material you still have to convert into dollars</span>
       </div>
-      <figcaption>{c.owner_photo.caption}</figcaption>
-    </figure>
+      <div className="ftier t2">
+        <b>Superfluous calls</b>
+        <span>Price shoppers, extra trips, extra work</span>
+      </div>
+      <div className="ftier t3">
+        <b>Appointly appointments</b>
+        <span>Bottom of the funnel, ready to buy</span>
+      </div>
+    </div>
   );
 }
 
-function CaseStudySection({ c, index }: { c: CaseStudy; index: number }) {
-  const gridCols = ({ 4: "four", 5: "five", 6: "six" } as Record<number, string>)[c.stats.length] ?? "";
-  // The media figure pairs with the "noticed" block when there is one, and
-  // otherwise sits next to "why it worked".
-  const whyFigure = Boolean(c.media && !c.noticed);
-  // Low-res owner photos render as a square so they never get upscaled into
-  // a tall crop.
-  const ownerShape = c.owner_photo && c.owner_photo.width < 400 ? "square" : "portrait";
-
+function CalendarPair() {
+  const [w1, , w3] = CFC_CALENDAR;
   return (
-    <section className={`sec csx${index % 2 === 1 ? " tint" : ""}`} id={c.slug}>
-      <div className="wrap">
-        <header className="cshd">
-          <div>
-            <p className="cseye">Case study {c.order} of {CASE_STUDIES.length}</p>
-            <h2>{c.company}</h2>
-            <dl className="csmeta">
-              <div><dt>Owner</dt><dd>{c.owner}</dd></div>
-              <div><dt>Market</dt><dd>{c.market}</dd></div>
-              <div><dt>Product</dt><dd>{c.product}</dd></div>
-            </dl>
-          </div>
-          <div className={`cshd-logo${c.logo.dark ? " dark" : ""}`}>
-            <Image
-              src={c.logo.src}
-              alt={`${c.company} logo`}
-              width={c.logo.width}
-              height={c.logo.height}
-              sizes="220px"
-              loading={index === 0 ? "eager" : "lazy"}
-            />
-          </div>
-        </header>
-
-        <p className="cshl">{c.headline}</p>
-
-        {/* Context, with the owner next to it */}
-        <div className="csgrid">
-          <div className="cstext">
-            <h3>Context</h3>
-            {c.context.map((p) => (
-              <p key={p.slice(0, 40)}>{p}</p>
-            ))}
-          </div>
-          <OwnerFigure c={c} shape={ownerShape} />
-        </div>
-
-        {/* Results */}
-        <div className="results">
-          <h3 className="rlabel">Results so far</h3>
-          <div className={`rgrid ${gridCols}`.trim()}>
-            {c.stats.map((s) => (
-              <div className={`rtile${s.hero ? " hero" : ""}`} key={s.label}>
-                <div className="rv">{s.value}</div>
-                <div className="rl">{s.label}</div>
-              </div>
-            ))}
-          </div>
-          <p className="rnote">{c.statsNote}</p>
-          {c.sinceNote && <p className="rsince">{c.sinceNote}</p>}
-        </div>
-
-        {/* Verbatim quote from the owner */}
-        {c.quote && (
-          <FeaturedQuote
-            t={{
-              name: c.owner,
-              who: c.company,
-              where: c.marketShort,
-              quote: c.quote.text,
-              stat: c.quote.stat,
-              avatar: c.owner_photo?.src,
-            }}
-            align="left"
+    <div className="calpair">
+      {[w1, w3].map((s) => (
+        <div className="cpshot" key={s.src}>
+          <span className="cplabel">{s.label}</span>
+          <Image
+            src={s.src}
+            alt={`Phil's estimate calendar, ${s.label.toLowerCase()}. Every blue block is an appointment booked by Appointly. ${NAMES_NOTE}`}
+            width={s.width}
+            height={s.height}
+            sizes="(max-width: 900px) 92vw, 420px"
+            loading="lazy"
           />
-        )}
-
-        {/* Why it worked, with the media figure when nothing else claims it */}
-        <div className={`csgrid${whyFigure ? "" : " single"}`}>
-          <div className="cstext">
-            <h3>{c.why.title}</h3>
-            {c.why.body.map((p) => (
-              <p key={p.slice(0, 40)}>{p}</p>
-            ))}
-          </div>
-          {whyFigure && <MediaFigure c={c} />}
         </div>
-
-        {/* Reported feedback, with the media it relates to */}
-        {c.noticed && (
-          <div className="csgrid">
-            <div className="cstext">
-              <h3>{c.noticed.title}</h3>
-              {c.noticed.body.map((p) => (
-                <p key={p.slice(0, 40)}>{p}</p>
-              ))}
-              {c.media && (
-                <>
-                  <h3 className="mt">{c.media.title}</h3>
-                  {c.media.body.map((p) => (
-                    <p key={p.slice(0, 40)}>{p}</p>
-                  ))}
-                </>
-              )}
-            </div>
-            <MediaFigure c={c} />
-          </div>
-        )}
-
-        {/* Proof: the calendar */}
-        <div className="csproof">
-          <div className="proofhd">
-            <p className="eyebrow">Proof</p>
-            <h3>{c.calendar.title}</h3>
-            <p className="legend"><span className="pip" aria-hidden />{c.calendar.legend}</p>
-          </div>
-          <div className="calshots">
-            {c.calendar.shots.map((s) => (
-              <figure className="calshot" key={s.src}>
-                <div className="frame">
-                  <Image
-                    src={s.src}
-                    alt={`${c.ownerFirst}'s estimate calendar, ${s.label.toLowerCase()}. Every blue event is an appointment booked by Appointly. Homeowner names shortened to first name and last initial.`}
-                    width={s.width}
-                    height={s.height}
-                    sizes="(max-width: 1080px) 94vw, 1000px"
-                    loading="lazy"
-                  />
-                </div>
-                <figcaption>{s.label}</figcaption>
-              </figure>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
+      ))}
+    </div>
   );
 }
+
+function ChapterVisual({ c }: { c: Chapter }) {
+  const img = c.image;
+  let body: React.ReactNode;
+  if (img.kind === "then-now") body = <ThenNow />;
+  else if (img.kind === "funnel") body = <Funnel />;
+  else if (img.kind === "calendar-pair") body = <CalendarPair />;
+  else {
+    body = (
+      <div
+        className={`chphoto${img.crop ? " crop" : ""}${img.height > img.width ? " tall" : ""}`}
+        style={img.crop ? { aspectRatio: img.crop.aspect } : undefined}
+      >
+        <Image
+          src={img.src}
+          alt={img.alt}
+          width={img.width}
+          height={img.height}
+          sizes="(max-width: 900px) 92vw, 420px"
+          loading="lazy"
+          style={img.crop ? { objectPosition: img.crop.position } : undefined}
+        />
+      </div>
+    );
+  }
+  return (
+    <figure className="chfig">
+      {body}
+      <figcaption>{img.caption}</figcaption>
+    </figure>
+  );
+}
+
+function ChapterBlock({ c, i }: { c: Chapter; i: number }) {
+  return (
+    <article className={`chapter${i % 2 === 1 ? " flip" : ""}`} id={c.id} aria-labelledby={`${c.id}-h`}>
+      <div className="chmedia">
+        <MuxVideo clip={c.clip} label={`Watch, ${c.clip.length || "clip"}`} tag={`${pad(i + 1)} · ${c.nav}`} />
+      </div>
+      <div className="chbody">
+        <p className="chnum">Chapter {pad(i + 1)} · {c.nav}</p>
+        <h2 className="chhl" id={`${c.id}-h`}>{c.headline}</h2>
+        <blockquote className="chq">
+          <Quote aria-hidden />
+          <p>{c.quote}</p>
+          <cite>Phil A., in the clip</cite>
+        </blockquote>
+        <ChapterVisual c={c} />
+        <p className="chcap">{c.caption}</p>
+      </div>
+    </article>
+  );
+}
+
+/* ── Supporting case studies: AFAB and Garage Force ─────────────────────────── */
+const SUPPORT_MEDIA: Record<string, React.ReactNode> = {
+  "afab-services": (
+    <LocalVideo src="/videos/mark-afab.mp4" poster="/images/proof/mark-afab.webp" title="Watch Mark" />
+  ),
+};
+
+function SupportCard({ c }: { c: CaseStudy }) {
+  const media = SUPPORT_MEDIA[c.slug] ?? (c.media && (
+    <figure className="scphoto">
+      <Image src={c.media.src} alt={c.media.caption} width={c.media.width} height={c.media.height} sizes="(max-width: 900px) 92vw, 520px" loading="lazy" />
+    </figure>
+  ));
+  return (
+    <article className="scard" id={c.slug} aria-labelledby={`${c.slug}-h`}>
+      <div className="scmedia">{media}</div>
+      <div className="scbody">
+        <div className="schead">
+          <Image
+            className={`sclogo${c.logo.dark ? " dark" : ""}`}
+            src={c.logo.src}
+            alt={`${c.company} logo`}
+            width={c.logo.width}
+            height={c.logo.height}
+            sizes="160px"
+            loading="lazy"
+          />
+          <span className="scmkt">{c.marketShort}</span>
+        </div>
+        <h3 id={`${c.slug}-h`}>{c.company}</h3>
+        <div className="sclead">
+          <b>{c.glance.lead.value}</b>
+          <span>{c.glance.lead.label}</span>
+        </div>
+        <div className="scstats">
+          {c.glance.cardStats.map((s) => (
+            <div key={s.label}><b>{s.value}</b><span>{s.label}</span></div>
+          ))}
+        </div>
+        <p className="sccap">
+          {c.quote ? <>&ldquo;{c.quote.text}&rdquo; <span>{c.owner}</span></> : c.headline}
+        </p>
+        <div className="sccal">
+          <p className="sccal-t">{c.calendar.title}</p>
+          <Gallery
+            variant="strip"
+            shots={c.calendar.shots.map((s) => ({
+              ...s,
+              alt: `${c.ownerFirst}'s estimate calendar, ${s.label.toLowerCase()}. Every blue event is an appointment booked by Appointly. ${NAMES_NOTE}`,
+            }))}
+          />
+        </div>
+      </div>
+    </article>
+  );
+}
+
+const isoDuration = (len: string) => {
+  const [m, s] = len.split(":").map(Number);
+  return `PT${m}M${s}S`;
+};
 
 export default function CaseStudiesPage() {
+  const cfc = CASE_STUDIES[0];
+  const supporting = CASE_STUDIES.filter((c) => c.slug !== cfc.slug);
+  const navItems = [...CHAPTERS.map((c) => ({ id: c.id, nav: c.nav })), { id: CALENDAR_ID, nav: "Calendar proof" }];
+
   const schema = [
     {
       "@context": "https://schema.org",
@@ -253,6 +268,17 @@ export default function CaseStudiesPage() {
           description: c.headline,
         })),
       },
+      video: CHAPTERS.filter((c) => c.clip.length).map((c) => ({
+        "@type": "VideoObject",
+        name: c.clip.title,
+        description: c.quote,
+        thumbnailUrl: muxPoster(c.clip.playbackId, c.clip.posterTime),
+        uploadDate: "2026-09-24",
+        duration: isoDuration(c.clip.length),
+        embedUrl: `https://player.mux.com/${c.clip.playbackId}`,
+        contentUrl: `https://stream.mux.com/${c.clip.playbackId}.m3u8`,
+        url: `${PAGE_URL}#${c.id}`,
+      })),
     },
     {
       "@context": "https://schema.org",
@@ -272,200 +298,135 @@ export default function CaseStudiesPage() {
       />
       <SiteNav />
 
-      {/* Hero */}
-      <section className="sec hero cshero" id="top">
+      {/* 1 · Hero: the interview, with the headline beside it */}
+      <section className="cfhero" id="top">
         <div className="orb a" />
-        <div className="wrap">
+        <div className="wrap wide">
           <nav className="crumb" aria-label="Breadcrumb">
             <Link href="/">Home</Link>
             <ChevronRight aria-hidden />
             <span aria-current="page">Case Studies</span>
           </nav>
-          <p className="eyebrow">Client case studies</p>
-          <h1>
-            Qualified appointments. <span className="hl">Real close rates.</span>
-          </h1>
-          <p className="lead">
-            Three floor coating companies. Three markets. Three price points. One process.
-          </p>
-          <p className="sub">
-            Every appointment we book is qualified over the phone before it reaches
-            the calendar. So the number we lead with is not leads or clicks. It is
-            the close rate on the appointments we book, and the calendars that
-            prove it.
-          </p>
+          <div className="cfhero-grid" id={cfc.slug}>
+            <div className="cfhero-copy">
+              <p className="cfeye">Case study · {cfc.company}</p>
+              <h1>
+                From two or three floors a week to <span className="hl">booked five days a week.</span>
+              </h1>
+              <p className="cfsub">
+                Phil runs Clean Floor Coatings in Myrtle Beach, one of the most
+                crowded coating markets in the Southeast. Here&apos;s what changed
+                when we started booking his calendar, told by Phil himself.
+              </p>
+              <dl className="cfmeta">
+                <div><dt>Owner</dt><dd>{cfc.owner}</dd></div>
+                <div><dt>Market</dt><dd>{cfc.marketShort}</dd></div>
+                <div><dt>Product</dt><dd>{cfc.product}</dd></div>
+              </dl>
+            </div>
+            <div className="cfhero-video">
+              <MuxVideo
+                variant="hero"
+                clip={HERO_VIDEO.clip}
+                label={HERO_VIDEO.label}
+                chapters={HERO_VIDEO.chapters}
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-          <div className="totals">
-            {TOTALS.map((t) => (
-              <div className="total" key={t.l}>
-                <div className="tv">{t.v}</div>
-                <div className="tl">{t.l}</div>
-              </div>
+      {/* 2 · Stat bar */}
+      <section className="cfstats" aria-label="Clean Floor Coatings results">
+        <div className="wrap wide">
+          <StatBar stats={CFC_STATS} />
+          <p className="statnote">{CFC_STATS_NOTE}</p>
+        </div>
+      </section>
+
+      {/* 3 + 4 · Sticky chapter nav beside the chapter blocks */}
+      <div className="story">
+        <div className="wrap wide story-grid">
+          <ChapterNav items={navItems} />
+          <div className="chapters">
+            {CHAPTERS.map((c, i) => (
+              <ChapterBlock c={c} i={i} key={c.id} />
             ))}
-          </div>
 
-          <div className="jump">
-            <span className="lbl">Jump to</span>
-            {CASE_STUDIES.map((c) => (
-              <a className="chip" href={`#${c.slug}`} key={c.slug}>
-                <span className="chipn" aria-hidden>{c.order}</span>
-                {c.shortName}
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Logos */}
-      <section className="logoband">
-        <div className="wrap">
-          <ClientLogos title="The companies in these case studies" showMore={false} />
-        </div>
-      </section>
-
-      {/* How we work */}
-      <section className="sec tint" id="how-we-work">
-        <div className="wrap">
-          <p className="eyebrow">How we work</p>
-          <h2>
-            Every appointment is qualified over the phone{" "}
-            <span className="hl">before it reaches your calendar.</span>
-          </h2>
-          <div className="hww">
-            <div>
-              <p>
-                Appointly Solutions specializes in one thing: booking extremely
-                qualified estimate appointments for floor coating companies. Before
-                anyone lands on a client&apos;s calendar, a member of our team speaks
-                with the homeowner over the phone. We confirm the project, the
-                timeline, the budget, and the service area.
+            {/* 5 · Calendar proof */}
+            <section className="calproof" id={CALENDAR_ID} aria-labelledby="calproof-h">
+              <p className="chnum">Chapter {pad(CHAPTERS.length + 1)} · Calendar proof</p>
+              <h2 className="chhl" id="calproof-h">Three weeks of Phil&apos;s estimate calendar</h2>
+              <p className="legend">
+                <span className="pip" aria-hidden />
+                Every blue block is a homeowner we qualified by phone and booked.
+                Struck through events are cancellations. {NAMES_NOTE} Tap any week to open it full size.
               </p>
-              <p>
-                If an appointment is on your calendar, it is because we believe,
-                based on that conversation, that the homeowner is ready to move
-                forward with your exact service. <strong>That is why the number we
-                lead with is not leads or clicks. It is the close rate on the
-                appointments we book.</strong>
-              </p>
-              <p>
-                All three case studies are framed monthly, at an ad spend
-                comparable to what a first month with us looks like, so you can
-                see what that budget produces in a competitive market, in a fast
-                growing market, and for a premium product.
-              </p>
-            </div>
-            <div className="readnote">
-              <h3>How to read these numbers</h3>
-              <p>
-                We show close rates, not appointment counts. A close rate is the
-                share of booked appointments that turned into a sold job, and it
-                is the number that actually tells you what an appointment is
-                worth.
-              </p>
-              <p>
-                The appointments that have not closed yet are not lost. Many
-                homeowners simply have a longer timeline, and a good share of them
-                come back and close in the following weeks or months. The close
-                rates shown here are immediate closes only, so they are the floor,
-                not the ceiling.
-              </p>
-            </div>
-          </div>
+              <Gallery
+                shots={CFC_CALENDAR.map((s) => ({
+                  ...s,
+                  alt: `Phil's estimate calendar, ${s.label.toLowerCase()}. Every blue event is an appointment booked by Appointly. ${NAMES_NOTE}`,
+                }))}
+              />
+            </section>
 
-          <div className="structure">
-            <div className="struct">
-              <span className="sicon"><FileText aria-hidden /></span>
-              <div>
-                <h3>Context</h3>
-                <p>Who the client is, what market they are in, and what makes their situation comparable to yours.</p>
-              </div>
-            </div>
-            <div className="struct">
-              <span className="sicon"><BarChart3 aria-hidden /></span>
-              <div>
-                <h3>Results</h3>
-                <p>Close rate on the appointments we book, average job size, and monthly ad spend, framed as results so far.</p>
-              </div>
-            </div>
-            <div className="struct">
-              <span className="sicon"><CalendarCheck aria-hidden /></span>
-              <div>
-                <h3>Proof</h3>
-                <p>The client&apos;s actual estimate calendar, showing the appointments we booked, week by week.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* The three case studies */}
-      {CASE_STUDIES.map((c, i) => (
-        <CaseStudySection c={c} index={i} key={c.slug} />
-      ))}
-
-      {/* At a glance */}
-      <section className="sec tint" id="at-a-glance">
-        <div className="wrap">
-          <p className="eyebrow">At a glance</p>
-          <h2>
-            Three markets, <span className="hl">one process.</span>
-          </h2>
-          <p className="sub">
-            Three different companies, three different markets, and three different
-            price points. The constant is the process: every homeowner is called,
-            qualified, and educated before the appointment is booked, and the close
-            rates follow from that. Every number is a ratio, framed monthly, so it
-            holds up as the campaigns keep running.
-          </p>
-
-          <div className="glance">
-            <table>
-              <thead>
-                <tr>
-                  <th scope="col">Client</th>
-                  <th scope="col">Market</th>
-                  <th scope="col">What they sell</th>
-                  <th scope="col">Close rate</th>
-                </tr>
-              </thead>
-              <tbody>
-                {CASE_STUDIES.map((c) => (
-                  <tr key={c.slug}>
-                    <td className="client" data-label="Client">
-                      <Image
-                        className={`glogo${c.logo.dark ? " dark" : ""}`}
-                        src={c.logo.src}
-                        alt=""
-                        aria-hidden
-                        width={c.logo.width}
-                        height={c.logo.height}
-                        sizes="110px"
-                        loading="lazy"
-                      />
-                      <a href={`#${c.slug}`}>{c.shortName}</a>
-                    </td>
-                    <td data-label="Market">{c.marketShort}</td>
-                    <td data-label="What they sell">{c.product}</td>
-                    <td className="rate" data-label="Close rate">{c.glance.closeRate}</td>
-                  </tr>
+            {/* 6 · Transcript */}
+            <details className="transcript">
+              <summary>
+                <span>
+                  <b>Read the transcript</b>
+                  <small>Every word from the clips above, in chapter order</small>
+                </span>
+                <ChevronDown aria-hidden />
+              </summary>
+              <div className="trbody">
+                {CHAPTERS.map((c, i) => (
+                  <section key={c.id} aria-labelledby={`${c.id}-tr`}>
+                    <h3 id={`${c.id}-tr`}>
+                      <span>{pad(i + 1)}</span> {c.nav}
+                      <a href={`#${c.id}`}>Watch this part</a>
+                    </h3>
+                    {c.transcript.map((p) => (
+                      <p key={p.slice(0, 48)}>{p}</p>
+                    ))}
+                  </section>
                 ))}
-              </tbody>
-            </table>
+              </div>
+            </details>
           </div>
+        </div>
+      </div>
 
+      {/* 7 · Supporting case studies */}
+      <section className="sec tint" id="more-case-studies">
+        <div className="wrap">
+          <p className="eyebrow">More case studies</p>
+          <h2>
+            Two more markets. <span className="hl">Same process.</span>
+          </h2>
+          <p className="sub">
+            A fast growing Florida market and a premium polyurea system in the
+            Inland Northwest. Every homeowner is called and qualified before the
+            appointment is booked, and the close rates follow from that.
+          </p>
+          <div className="scards">
+            {supporting.map((c) => (
+              <SupportCard c={c} key={c.slug} />
+            ))}
+          </div>
           <div className="glancenote">
             <span className="gicon"><PhoneCall aria-hidden /></span>
             <p>
-              <strong>Each of these owners has agreed to take a call about their
-              experience.</strong> Ask on your strategy call and Jacob will share
-              their contact details once you let him know you would like to speak
-              with them.
+              <strong>Phil, Mark and Eric have each agreed to take a call about
+              their experience.</strong> Ask on your strategy call and Jacob will
+              share their contact details.
             </p>
           </div>
         </div>
       </section>
 
-      {/* More clients */}
+      {/* Testimonial wall */}
       <section className="sec" id="more-clients">
         <div className="wrap">
           <p className="eyebrow">More from the calendar</p>
@@ -484,7 +445,8 @@ export default function CaseStudiesPage() {
       {/* Bottom CTA */}
       <section className="sec tint ctaband">
         <div className="wrap">
-          <h2>Want numbers like these on your calendar?</h2>
+          <p className="ctaq">&ldquo;Buy yourself 30 days and give it a try.&rdquo; <span>Phil A.</span></p>
+          <h2>Want Phil&apos;s calendar in your market?</h2>
           <p className="sub">
             Book a quick call. We&apos;ll look at your market, your capacity, and
             your average ticket, and tell you honestly what a first month would
