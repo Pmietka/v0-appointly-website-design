@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Check, ChevronRight, ChevronDown, PhoneCall, PhoneOff, Quote } from "lucide-react";
+import { Check, ChevronRight, ChevronDown, PhoneCall, PhoneOff, Play, Quote } from "lucide-react";
 
 import { SiteNav, BOOKING_URL, PHONE_DISPLAY, PHONE_HREF } from "@/components/site-nav";
 import { DscrollFooter } from "@/components/dscroll-footer";
@@ -13,11 +13,13 @@ import {
   CFC_STATS_NOTE,
   CHAPTERS,
   HERO_VIDEO,
+  formatTime,
   muxPoster,
   type Chapter,
 } from "@/lib/cfc-case-study";
 import { FEATURED_TESTIMONIALS, QUOTE_TESTIMONIALS } from "@/lib/testimonials";
-import { ChapterNav, Gallery, LocalVideo, MuxVideo, StatBar } from "./cfc-interactive";
+import { INTERVIEW_TRANSCRIPT } from "@/lib/cfc-interview-transcript";
+import { ChapterNav, Gallery, LocalVideo, MuxVideo, SeekButton, StatBar } from "./cfc-interactive";
 import "../home.css";
 import "./case-studies.css";
 
@@ -176,6 +178,9 @@ function ChapterBlock({ c, i }: { c: Chapter; i: number }) {
         </blockquote>
         <ChapterVisual c={c} />
         <p className="chcap">{c.caption}</p>
+        <SeekButton t={c.fullAt} className="chfull">
+          <Play aria-hidden /> Hear it in the full interview at {formatTime(c.fullAt)}
+        </SeekButton>
       </div>
     </article>
   );
@@ -268,7 +273,20 @@ export default function CaseStudiesPage() {
           description: c.headline,
         })),
       },
-      video: CHAPTERS.filter((c) => c.clip.length).map((c) => ({
+      video: [
+        {
+          "@type": "VideoObject",
+          name: HERO_VIDEO.clip.title,
+          description: DESCRIPTION,
+          thumbnailUrl: HERO_VIDEO.poster,
+          uploadDate: "2026-09-24",
+          duration: isoDuration(HERO_VIDEO.clip.length),
+          embedUrl: `https://player.mux.com/${HERO_VIDEO.clip.playbackId}`,
+          contentUrl: `https://stream.mux.com/${HERO_VIDEO.clip.playbackId}.m3u8`,
+          url: `${PAGE_URL}#top`,
+          transcript: INTERVIEW_TRANSCRIPT.map((t) => `${t.speaker}: ${t.text}`).join("\n"),
+        },
+        ...CHAPTERS.map((c) => ({
         "@type": "VideoObject",
         name: c.clip.title,
         description: c.quote,
@@ -278,7 +296,8 @@ export default function CaseStudiesPage() {
         embedUrl: `https://player.mux.com/${c.clip.playbackId}`,
         contentUrl: `https://stream.mux.com/${c.clip.playbackId}.m3u8`,
         url: `${PAGE_URL}#${c.id}`,
-      })),
+        })),
+      ],
     },
     {
       "@context": "https://schema.org",
@@ -324,12 +343,14 @@ export default function CaseStudiesPage() {
                 <div><dt>Product</dt><dd>{cfc.product}</dd></div>
               </dl>
             </div>
-            <div className="cfhero-video">
+            <div className="cfhero-video" id="watch">
               <MuxVideo
                 variant="hero"
                 clip={HERO_VIDEO.clip}
                 label={HERO_VIDEO.label}
                 chapters={HERO_VIDEO.chapters}
+                poster={HERO_VIDEO.poster}
+                captions={HERO_VIDEO.captions}
                 priority
               />
             </div>
@@ -375,22 +396,20 @@ export default function CaseStudiesPage() {
             <details className="transcript">
               <summary>
                 <span>
-                  <b>Read the transcript</b>
-                  <small>Every word from the clips above, in chapter order</small>
+                  <b>Read the full transcript</b>
+                  <small>Jacob and Phil, all {HERO_VIDEO.clip.length}. Tap a timestamp to play from there.</small>
                 </span>
                 <ChevronDown aria-hidden />
               </summary>
               <div className="trbody">
-                {CHAPTERS.map((c, i) => (
-                  <section key={c.id} aria-labelledby={`${c.id}-tr`}>
-                    <h3 id={`${c.id}-tr`}>
-                      <span>{pad(i + 1)}</span> {c.nav}
-                      <a href={`#${c.id}`}>Watch this part</a>
-                    </h3>
-                    {c.transcript.map((p) => (
-                      <p key={p.slice(0, 48)}>{p}</p>
-                    ))}
-                  </section>
+                {INTERVIEW_TRANSCRIPT.map((t) => (
+                  <div className={`turn ${t.speaker.toLowerCase()}`} key={t.t}>
+                    <div className="turnhd">
+                      <b>{t.speaker === "Phil" ? "Phil A." : "Jacob, Appointly"}</b>
+                      <SeekButton t={t.t} className="tstamp">{formatTime(t.t)}</SeekButton>
+                    </div>
+                    <p>{t.text}</p>
+                  </div>
                 ))}
               </div>
             </details>

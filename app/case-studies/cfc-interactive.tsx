@@ -14,29 +14,41 @@ const MuxPlayer = dynamic(() => import("@mux/mux-player-react"), { ssr: false })
 /* Only one video plays at a time: starting one pauses the rest. */
 const PLAY_EVENT = "csp:video-play";
 
+/* Anything on the page can jump the hero player to a moment in the full
+   interview (transcript timestamps, "hear it in the full interview" links). */
+const SEEK_EVENT = "csp:seek";
+
 /* ── Click to play Mux video with a custom poster ──────────────────────────── */
 export function MuxVideo({
   clip,
   label,
   tag,
+  poster: posterSrc,
+  captions,
   chapters = [],
   variant = "chapter",
   priority = false,
 }: {
   clip: MuxClip;
-  /** Button label on the poster, e.g. "Watch Phil, 9 min". */
+  /** Button label on the poster, e.g. "Watch Phil, 15 min". */
   label: string;
   /** Small chapter tag in the poster's top corner. */
   tag?: string;
+  /** Custom poster URL. Defaults to a Mux thumbnail at clip.posterTime. */
+  poster?: string;
+  /** WebVTT captions, shown by default. */
+  captions?: string;
   /** Chapter markers in seconds, added to the player's chapter menu. */
   chapters?: { title: string; start: number }[];
+  /** The hero also answers seek requests from the rest of the page. */
   variant?: "hero" | "chapter";
   priority?: boolean;
 }) {
   const [active, setActive] = useState(false);
+  const [startTime, setStartTime] = useState<number | undefined>(undefined);
   const player = useRef<MuxPlayerElement | null>(null);
   const id = clip.playbackId;
-  const poster = muxPoster(id, clip.posterTime, variant === "hero" ? 1600 : 1120);
+  const poster = posterSrc ?? muxPoster(id, clip.posterTime, variant === "hero" ? 1600 : 1120);
 
   useEffect(() => {
     const onOtherPlay = (e: Event) => {
@@ -45,6 +57,23 @@ export function MuxVideo({
     window.addEventListener(PLAY_EVENT, onOtherPlay);
     return () => window.removeEventListener(PLAY_EVENT, onOtherPlay);
   }, [id]);
+
+  useEffect(() => {
+    if (variant !== "hero") return;
+    const onSeek = (e: Event) => {
+      const t = (e as CustomEvent<number>).detail;
+      const el = player.current;
+      if (el) {
+        el.currentTime = t;
+        void el.play();
+      } else {
+        setStartTime(t);
+        setActive(true);
+      }
+    };
+    window.addEventListener(SEEK_EVENT, onSeek);
+    return () => window.removeEventListener(SEEK_EVENT, onSeek);
+  }, [variant]);
 
   const addChapters = useCallback(() => {
     const el = player.current;
@@ -67,7 +96,9 @@ export function MuxVideo({
           playbackId={id}
           streamType="on-demand"
           poster={poster}
+          startTime={startTime}
           autoPlay
+          crossOrigin="anonymous"
           accentColor="#34d399"
           primaryColor="#ffffff"
           videoTitle={clip.title}
@@ -75,7 +106,9 @@ export function MuxVideo({
           metadataVideoId={id}
           onLoadedMetadata={addChapters}
           onPlay={() => window.dispatchEvent(new CustomEvent(PLAY_EVENT, { detail: id }))}
-        />
+        >
+          {captions && <track kind="captions" src={captions} srcLang="en" label="English" default />}
+        </MuxPlayer>
       ) : (
         <button type="button" className="vposter" onClick={() => setActive(true)} aria-label={`Play video: ${clip.title}`}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -97,6 +130,22 @@ export function MuxVideo({
         </button>
       )}
     </div>
+  );
+}
+
+/* ── Jump the hero player to a moment in the full interview ─────────────────── */
+export function SeekButton({ t, className, children }: { t: number; className?: string; children: React.ReactNode }) {
+  return (
+    <button
+      type="button"
+      className={className}
+      onClick={() => {
+        document.getElementById("watch")?.scrollIntoView({ behavior: "smooth", block: "center" });
+        window.dispatchEvent(new CustomEvent(SEEK_EVENT, { detail: t }));
+      }}
+    >
+      {children}
+    </button>
   );
 }
 
