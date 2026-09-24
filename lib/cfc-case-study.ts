@@ -31,14 +31,22 @@ export type ChapterImage =
       /** Crop the photo to a focal point instead of showing it whole. */
       crop?: { aspect: string; position: string };
     }
+  | {
+      kind: "person";
+      src: string;
+      width: number;
+      height: number;
+      alt: string;
+      name: string;
+      role: string;
+      caption: string;
+    }
   | { kind: "calendar-pair"; caption: string }
   | { kind: "then-now"; caption: string }
   | { kind: "funnel"; caption: string };
 
 export type Chapter = {
   id: string;
-  /** Seconds into the full interview where this part of the story starts. */
-  fullAt: number;
   nav: string;
   headline: string;
   clip: MuxClip;
@@ -83,6 +91,12 @@ const CLIPS = {
     length: "1:05",
     title: "Phil A.: why other agencies don't work",
   },
+  closer: {
+    playbackId: "601bDBXsEPE6zLloFZpoa2KWlLyyheYEzfRBQRClfpT00",
+    posterTime: 11,
+    length: "0:44",
+    title: "Phil A.: I don't even look at the creative",
+  },
   standBehindIt: {
     playbackId: "IGPPJAy5wrjhk5yyRXOsFpARWVeFOMhCud5AB5CcEZ8",
     posterTime: 23.5,
@@ -91,34 +105,19 @@ const CLIPS = {
   },
 } satisfies Record<string, MuxClip>;
 
-/* ── The full interview (the hero) ───────────────────────────────────────────
-   Jacob's call with Phil, cut to 14:54. The recording has no caption track on
-   Mux, so captions come from public/captions/phil-interview.vtt, generated
-   from the same audio. The poster is a frame from the "booked five days" clip,
-   which reads better than the video call layout. Chapter times are seconds
-   into this cut. */
+/* ── Hero ────────────────────────────────────────────────────────────────────
+   The "booked five days a week" clip, which says the hero headline in Phil's
+   own words. The clips have captions burned in, so no caption track. */
 export const HERO_VIDEO = {
-  clip: {
-    playbackId: "Af5b1ibLi55oW4BiBlrGghZl7ZM6vKjHreBwiEroLuM",
-    posterTime: 0,
-    length: "14:54",
-    title: "Phil A., Clean Floor Coatings: full interview",
-  } satisfies MuxClip,
-  poster: muxPoster(CLIPS.businessGrowth.playbackId, 43.5, 1600),
-  captions: "/captions/phil-interview.vtt",
-  label: "Watch Phil, 15 min",
-  chapters: [
-    { title: "37 shown appointments", start: 0 },
-    { title: "The first week", start: 31 },
-    { title: "What changed", start: 81 },
-    { title: "Buyers, not leads", start: 195 },
-    { title: "Before: leads vs. appointments", start: 317 },
-    { title: "Screening", start: 430 },
-    { title: "Conveying integrity", start: 538 },
-    { title: "We stand behind it", start: 581 },
-    { title: "Why Phil stays", start: 693 },
-    { title: "I don't even look at the creative", start: 842 },
-  ],
+  clip: { ...CLIPS.businessGrowth, posterTime: 43.5 } satisfies MuxClip,
+  label: "Watch Phil, 59 sec",
+};
+
+/* The full 14:54 interview is not embedded on the page. The transcript links
+   out to Mux's hosted player for anyone who wants the whole conversation. */
+export const FULL_INTERVIEW = {
+  url: "https://player.mux.com/Af5b1ibLi55oW4BiBlrGghZl7ZM6vKjHreBwiEroLuM",
+  length: "14:54",
 };
 
 const CAL = {
@@ -132,7 +131,6 @@ export const CFC_CALENDAR = [CAL.week1, CAL.week2, CAL.week3];
 export const CHAPTERS: Chapter[] = [
   {
     id: "before",
-    fullAt: 331,
     nav: "Before",
     headline: "Leads that wouldn't give a phone number",
     clip: CLIPS.appointmentQuality,
@@ -147,13 +145,13 @@ export const CHAPTERS: Chapter[] = [
   },
   {
     id: "what-changed",
-    fullAt: 81,
     nav: "What changed",
-    headline: "A full calendar changed the business model",
-    clip: CLIPS.businessGrowth,
-    quote: "I'm now booked up for five days for the next three weeks in a row.",
+    headline: "He wakes up to two to six new appointments",
+    clip: CLIPS.closer,
+    quote:
+      "I'd say anywhere between two and six appointments will be booked for me between now and noon tomorrow.",
     caption:
-      "A full calendar changed how Phil runs the company. He staffs crews for the whole week and buys inventory ahead, and one appointment often turns into two or three jobs in the same neighborhood.",
+      "Phil doesn't run the ads or even look at the creative. He wakes up to homeowners who expect a fair price for a really good product, not the cheapest guy.",
     image: {
       kind: "calendar-pair",
       caption: "Week 1 and week 3 of Phil's estimate calendar. Every blue block is a homeowner we qualified by phone.",
@@ -161,7 +159,6 @@ export const CHAPTERS: Chapter[] = [
   },
   {
     id: "buyers-not-leads",
-    fullAt: 195,
     nav: "Buyers not leads",
     headline: "He isn't buying leads. He's buying buyers.",
     clip: CLIPS.leadIsntALead,
@@ -176,7 +173,6 @@ export const CHAPTERS: Chapter[] = [
   },
   {
     id: "screening",
-    fullAt: 430,
     nav: "Screening",
     headline: "The appointments we don't book",
     clip: CLIPS.screening,
@@ -191,11 +187,11 @@ export const CHAPTERS: Chapter[] = [
       height: 800,
       alt: "The Clean Floor Coatings landing page Appointly built: a three step form asking what the homeowner wants coated before they can submit their details.",
       caption: "Screening starts before the call: every ad lands on this three step page we built for Phil.",
+      crop: { aspect: "4 / 3", position: "50% 0" },
     },
   },
   {
     id: "stand-behind-it",
-    fullAt: 613,
     nav: "We stand behind it",
     headline: "When an appointment misses, we don't charge for it",
     clip: CLIPS.standBehindIt,
@@ -211,7 +207,6 @@ export const CHAPTERS: Chapter[] = [
   },
   {
     id: "why-phil-stays",
-    fullAt: 705,
     nav: "Why Phil stays",
     headline: "Built for 52 weeks a year, not one good month",
     clip: CLIPS.otherAgencies,
@@ -219,12 +214,14 @@ export const CHAPTERS: Chapter[] = [
     caption:
       "Other agencies signed Phil up, then handed him off to be churned. We talk almost every day about one goal: taking Phil from one truck to three.",
     image: {
-      kind: "photo",
+      kind: "person",
       src: "/images/team/jacob.jpg",
       width: 737,
       height: 581,
       alt: "Jacob Mietka, co-founder of Appointly Solutions.",
-      caption: "Jacob, co-founder of Appointly. Phil's homeowners greet him with “Jacob told me you'd be like this.”",
+      name: "Jacob Mietka",
+      role: "Co-founder, Appointly",
+      caption: "The person Phil says he talks to almost every day.",
     },
   },
 ];

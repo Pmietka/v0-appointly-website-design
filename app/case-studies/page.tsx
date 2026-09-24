@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Check, ChevronRight, ChevronDown, PhoneCall, PhoneOff, Play, Quote } from "lucide-react";
+import { ArrowUpRight, Check, ChevronRight, ChevronDown, PhoneCall, PhoneOff, Quote } from "lucide-react";
 
 import { SiteNav, BOOKING_URL, PHONE_DISPLAY, PHONE_HREF } from "@/components/site-nav";
 import { DscrollFooter } from "@/components/dscroll-footer";
@@ -12,6 +12,7 @@ import {
   CFC_STATS,
   CFC_STATS_NOTE,
   CHAPTERS,
+  FULL_INTERVIEW,
   HERO_VIDEO,
   formatTime,
   muxPoster,
@@ -19,7 +20,7 @@ import {
 } from "@/lib/cfc-case-study";
 import { FEATURED_TESTIMONIALS, QUOTE_TESTIMONIALS } from "@/lib/testimonials";
 import { INTERVIEW_TRANSCRIPT } from "@/lib/cfc-interview-transcript";
-import { ChapterNav, Gallery, LocalVideo, MuxVideo, SeekButton, StatBar } from "./cfc-interactive";
+import { ChapterNav, Gallery, LocalVideo, MuxVideo, StatBar } from "./cfc-interactive";
 import "../home.css";
 import "./case-studies.css";
 
@@ -136,10 +137,21 @@ function ChapterVisual({ c }: { c: Chapter }) {
   if (img.kind === "then-now") body = <ThenNow />;
   else if (img.kind === "funnel") body = <Funnel />;
   else if (img.kind === "calendar-pair") body = <CalendarPair />;
+  else if (img.kind === "person") {
+    body = (
+      <div className="person">
+        <Image src={img.src} alt={img.alt} width={img.width} height={img.height} sizes="96px" loading="lazy" />
+        <div>
+          <b>{img.name}</b>
+          <span>{img.role}</span>
+        </div>
+      </div>
+    );
+  }
   else {
     body = (
       <div
-        className={`chphoto${img.crop ? " crop" : ""}${img.height > img.width ? " tall" : ""}`}
+        className={`chphoto${img.crop ? " crop" : ""}${!img.crop && img.height > img.width ? " tall" : ""}`}
         style={img.crop ? { aspectRatio: img.crop.aspect } : undefined}
       >
         <Image
@@ -176,11 +188,10 @@ function ChapterBlock({ c, i }: { c: Chapter; i: number }) {
           <p>{c.quote}</p>
           <cite>Phil A., in the clip</cite>
         </blockquote>
-        <ChapterVisual c={c} />
         <p className="chcap">{c.caption}</p>
-        <SeekButton t={c.fullAt} className="chfull">
-          <Play aria-hidden /> Hear it in the full interview at {formatTime(c.fullAt)}
-        </SeekButton>
+      </div>
+      <div className="chproof">
+        <ChapterVisual c={c} />
       </div>
     </article>
   );
@@ -277,14 +288,13 @@ export default function CaseStudiesPage() {
         {
           "@type": "VideoObject",
           name: HERO_VIDEO.clip.title,
-          description: DESCRIPTION,
-          thumbnailUrl: HERO_VIDEO.poster,
+          description: "Phil A. of Clean Floor Coatings on going from two or three floors a week to booked five days a week.",
+          thumbnailUrl: muxPoster(HERO_VIDEO.clip.playbackId, HERO_VIDEO.clip.posterTime),
           uploadDate: "2026-09-24",
           duration: isoDuration(HERO_VIDEO.clip.length),
           embedUrl: `https://player.mux.com/${HERO_VIDEO.clip.playbackId}`,
           contentUrl: `https://stream.mux.com/${HERO_VIDEO.clip.playbackId}.m3u8`,
           url: `${PAGE_URL}#top`,
-          transcript: INTERVIEW_TRANSCRIPT.map((t) => `${t.speaker}: ${t.text}`).join("\n"),
         },
         ...CHAPTERS.map((c) => ({
         "@type": "VideoObject",
@@ -348,9 +358,6 @@ export default function CaseStudiesPage() {
                 variant="hero"
                 clip={HERO_VIDEO.clip}
                 label={HERO_VIDEO.label}
-                chapters={HERO_VIDEO.chapters}
-                poster={HERO_VIDEO.poster}
-                captions={HERO_VIDEO.captions}
                 priority
               />
             </div>
@@ -392,12 +399,12 @@ export default function CaseStudiesPage() {
               />
             </section>
 
-            {/* 6 · Transcript */}
+            {/* 6 · Transcript, plus the only link to the full interview */}
             <details className="transcript">
               <summary>
                 <span>
-                  <b>Read the full transcript</b>
-                  <small>Jacob and Phil, all {HERO_VIDEO.clip.length}. Tap a timestamp to play from there.</small>
+                  <b>Read the full interview transcript</b>
+                  <small>Jacob and Phil, {FULL_INTERVIEW.length}, word for word</small>
                 </span>
                 <ChevronDown aria-hidden />
               </summary>
@@ -406,20 +413,23 @@ export default function CaseStudiesPage() {
                   <div className={`turn ${t.speaker.toLowerCase()}`} key={t.t}>
                     <div className="turnhd">
                       <b>{t.speaker === "Phil" ? "Phil A." : "Jacob, Appointly"}</b>
-                      <SeekButton t={t.t} className="tstamp">{formatTime(t.t)}</SeekButton>
+                      <span className="tstamp">{formatTime(t.t)}</span>
                     </div>
                     <p>{t.text}</p>
                   </div>
                 ))}
               </div>
             </details>
+            <a className="fulllink" href={FULL_INTERVIEW.url} target="_blank" rel="noopener noreferrer">
+              Watch the full {FULL_INTERVIEW.length} interview <ArrowUpRight aria-hidden />
+            </a>
           </div>
         </div>
       </div>
 
       {/* 7 · Supporting case studies */}
       <section className="sec tint" id="more-case-studies">
-        <div className="wrap">
+        <div className="wrap wide">
           <p className="eyebrow">More case studies</p>
           <h2>
             Two more markets. <span className="hl">Same process.</span>
@@ -447,7 +457,7 @@ export default function CaseStudiesPage() {
 
       {/* Testimonial wall */}
       <section className="sec" id="more-clients">
-        <div className="wrap">
+        <div className="wrap wide">
           <p className="eyebrow">More from the calendar</p>
           <h2>
             What other clients <span className="hl">tell us.</span>

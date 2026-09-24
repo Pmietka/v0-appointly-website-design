@@ -3,114 +3,70 @@
 import dynamic from "next/dynamic";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, Expand, Play, X } from "lucide-react";
-import type { MuxPlayerRefAttributes as MuxPlayerElement } from "@mux/mux-player-react";
 
 import { muxPoster, type MuxClip } from "@/lib/cfc-case-study";
 
-/* Mux Player only loads once someone clicks play, so a page with seven videos
+/* Mux Player only loads once someone clicks play, so a page with eight videos
    costs one poster image per video until then. */
 const MuxPlayer = dynamic(() => import("@mux/mux-player-react"), { ssr: false });
 
-/* Only one video plays at a time: starting one pauses the rest. */
-const PLAY_EVENT = "csp:video-play";
+/* One video at a time. Starting any video, or clicking a poster to start one,
+   pauses every other video on the page right away. */
+function pauseOthers(keep: HTMLElement | null) {
+  document.querySelectorAll<HTMLElement & { paused?: boolean; pause?: () => void }>("mux-player, video").forEach((m) => {
+    if (keep?.contains(m)) return;
+    if (m.paused === false) m.pause?.();
+  });
+}
 
-/* Anything on the page can jump the hero player to a moment in the full
-   interview (transcript timestamps, "hear it in the full interview" links). */
-const SEEK_EVENT = "csp:seek";
+/* Modifier classes are prefixed (v-hero, v-chapter, v-card) so they can never
+   collide with page level classes like .chapter or .hero. */
 
 /* ── Click to play Mux video with a custom poster ──────────────────────────── */
 export function MuxVideo({
   clip,
   label,
   tag,
-  poster: posterSrc,
-  captions,
-  chapters = [],
   variant = "chapter",
   priority = false,
 }: {
   clip: MuxClip;
-  /** Button label on the poster, e.g. "Watch Phil, 15 min". */
+  /** Button label on the poster, e.g. "Watch Phil, 59 sec". */
   label: string;
   /** Small chapter tag in the poster's top corner. */
   tag?: string;
-  /** Custom poster URL. Defaults to a Mux thumbnail at clip.posterTime. */
-  poster?: string;
-  /** WebVTT captions, shown by default. */
-  captions?: string;
-  /** Chapter markers in seconds, added to the player's chapter menu. */
-  chapters?: { title: string; start: number }[];
-  /** The hero also answers seek requests from the rest of the page. */
   variant?: "hero" | "chapter";
   priority?: boolean;
 }) {
   const [active, setActive] = useState(false);
-  const [startTime, setStartTime] = useState<number | undefined>(undefined);
-  const player = useRef<MuxPlayerElement | null>(null);
-  const id = clip.playbackId;
-  const poster = posterSrc ?? muxPoster(id, clip.posterTime, variant === "hero" ? 1600 : 1120);
-
-  useEffect(() => {
-    const onOtherPlay = (e: Event) => {
-      if ((e as CustomEvent<string>).detail !== id) player.current?.pause();
-    };
-    window.addEventListener(PLAY_EVENT, onOtherPlay);
-    return () => window.removeEventListener(PLAY_EVENT, onOtherPlay);
-  }, [id]);
-
-  useEffect(() => {
-    if (variant !== "hero") return;
-    const onSeek = (e: Event) => {
-      const t = (e as CustomEvent<number>).detail;
-      const el = player.current;
-      if (el) {
-        el.currentTime = t;
-        void el.play();
-      } else {
-        setStartTime(t);
-        setActive(true);
-      }
-    };
-    window.addEventListener(SEEK_EVENT, onSeek);
-    return () => window.removeEventListener(SEEK_EVENT, onSeek);
-  }, [variant]);
-
-  const addChapters = useCallback(() => {
-    const el = player.current;
-    if (!el || !chapters.length) return;
-    const sorted = [...chapters].sort((a, b) => a.start - b.start);
-    el.addChapters(
-      sorted.map((c, i) => ({
-        startTime: c.start,
-        endTime: sorted[i + 1]?.start ?? el.duration,
-        value: c.title,
-      })),
-    );
-  }, [chapters]);
+  const box = useRef<HTMLDivElement>(null);
+  const poster = muxPoster(clip.playbackId, clip.posterTime, variant === "hero" ? 1600 : 1120);
 
   return (
-    <div className={`vid ${variant}${active ? " on" : ""}`}>
+    <div className={`vid v-${variant}${active ? " on" : ""}`} ref={box}>
       {active ? (
         <MuxPlayer
-          ref={player}
-          playbackId={id}
+          playbackId={clip.playbackId}
           streamType="on-demand"
           poster={poster}
-          startTime={startTime}
           autoPlay
-          crossOrigin="anonymous"
           accentColor="#34d399"
           primaryColor="#ffffff"
           videoTitle={clip.title}
           metadataVideoTitle={clip.title}
-          metadataVideoId={id}
-          onLoadedMetadata={addChapters}
-          onPlay={() => window.dispatchEvent(new CustomEvent(PLAY_EVENT, { detail: id }))}
-        >
-          {captions && <track kind="captions" src={captions} srcLang="en" label="English" default />}
-        </MuxPlayer>
+          metadataVideoId={clip.playbackId}
+          onPlay={() => pauseOthers(box.current)}
+        />
       ) : (
-        <button type="button" className="vposter" onClick={() => setActive(true)} aria-label={`Play video: ${clip.title}`}>
+        <button
+          type="button"
+          className="vposter"
+          onClick={() => {
+            pauseOthers(box.current);
+            setActive(true);
+          }}
+          aria-label={`Play video: ${clip.title}`}
+        >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={poster}
@@ -130,22 +86,6 @@ export function MuxVideo({
         </button>
       )}
     </div>
-  );
-}
-
-/* ── Jump the hero player to a moment in the full interview ─────────────────── */
-export function SeekButton({ t, className, children }: { t: number; className?: string; children: React.ReactNode }) {
-  return (
-    <button
-      type="button"
-      className={className}
-      onClick={() => {
-        document.getElementById("watch")?.scrollIntoView({ behavior: "smooth", block: "center" });
-        window.dispatchEvent(new CustomEvent(SEEK_EVENT, { detail: t }));
-      }}
-    >
-      {children}
-    </button>
   );
 }
 
@@ -191,8 +131,8 @@ export function StatBar({ stats }: { stats: CountStat[] }) {
   return (
     <div className="statbar" ref={ref}>
       {stats.map((s) => (
-        <div className="stat" key={s.label}>
-          <div className="sv">
+        <div className="cstat" key={s.label}>
+          <div className="csv">
             <span className="srx">{`${s.prefix}${fmt(s.to)}${s.suffix}`}</span>
             <span aria-hidden>
               {s.prefix}
@@ -200,7 +140,7 @@ export function StatBar({ stats }: { stats: CountStat[] }) {
               {s.suffix}
             </span>
           </div>
-          <div className="sl">{s.label}</div>
+          <div className="csl">{s.label}</div>
         </div>
       ))}
     </div>
@@ -212,20 +152,31 @@ export function ChapterNav({ items }: { items: { id: string; nav: string }[] }) 
   const [active, setActive] = useState(items[0]?.id);
   const list = useRef<HTMLOListElement>(null);
 
+  // The active chapter is the last one whose top has crossed a line a third of
+  // the way down the screen. Above the first chapter, the first one is active.
   useEffect(() => {
     const sections = items
       .map((i) => document.getElementById(i.id))
       .filter((el): el is HTMLElement => Boolean(el));
-    // A chapter is active while it crosses a line just under the sticky bars.
-    const io = new IntersectionObserver(
-      (entries) => {
-        const hit = entries.filter((e) => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
-        if (hit) setActive(hit.target.id);
-      },
-      { rootMargin: "-30% 0px -60% 0px" },
-    );
-    sections.forEach((s) => io.observe(s));
-    return () => io.disconnect();
+    let raf = 0;
+    const update = () => {
+      raf = 0;
+      const line = window.innerHeight * 0.35;
+      let cur = sections[0]?.id;
+      for (const sec of sections) if (sec.getBoundingClientRect().top <= line) cur = sec.id;
+      setActive(cur);
+    };
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      cancelAnimationFrame(raf);
+    };
   }, [items]);
 
   // Keep the active pill visible in the horizontal strip on phones without
@@ -346,30 +297,22 @@ export function Gallery({ shots, variant = "grid" }: { shots: Shot[]; variant?: 
 /* ── Local video (AFAB card) with a poster facade ───────────────────────────── */
 export function LocalVideo({ src, poster, title }: { src: string; poster: string; title: string }) {
   const [active, setActive] = useState(false);
-  const ref = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const onOtherPlay = (e: Event) => {
-      if ((e as CustomEvent<string>).detail !== src) ref.current?.pause();
-    };
-    window.addEventListener(PLAY_EVENT, onOtherPlay);
-    return () => window.removeEventListener(PLAY_EVENT, onOtherPlay);
-  }, [src]);
+  const box = useRef<HTMLDivElement>(null);
 
   return (
-    <div className={`vid card${active ? " on" : ""}`}>
+    <div className={`vid v-card${active ? " on" : ""}`} ref={box}>
       {active ? (
-        <video
-          ref={ref}
-          src={src}
-          poster={poster}
-          controls
-          autoPlay
-          playsInline
-          onPlay={() => window.dispatchEvent(new CustomEvent(PLAY_EVENT, { detail: src }))}
-        />
+        <video src={src} poster={poster} controls autoPlay playsInline onPlay={() => pauseOthers(box.current)} />
       ) : (
-        <button type="button" className="vposter" onClick={() => setActive(true)} aria-label={`Play video: ${title}`}>
+        <button
+          type="button"
+          className="vposter"
+          onClick={() => {
+            pauseOthers(box.current);
+            setActive(true);
+          }}
+          aria-label={`Play video: ${title}`}
+        >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={poster} alt="" loading="lazy" decoding="async" />
           <span className="vshade" aria-hidden />

@@ -1,9 +1,8 @@
 /**
  * Transcript of the full Clean Floor Coatings interview on Mux (the 14:54 cut),
- * split into speaker turns. `t` is seconds into that video, so the transcript
- * can seek the hero player. Generated from the audio with speech recognition,
- * with filler words removed and misheard words corrected by hand. The same
- * text drives the captions in public/captions/phil-interview.vtt.
+ * split into speaker turns. `t` is seconds into that video. Generated from the
+ * audio with speech recognition, with filler words removed and misheard words
+ * corrected by hand.
  */
 export type TranscriptTurn = { t: number; speaker: "Jacob" | "Phil"; text: string };
 

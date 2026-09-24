@@ -32,12 +32,12 @@
 .dscroll.csp .cfmeta dt{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:rgba(255,255,255,.45)}
 .dscroll.csp .cfmeta dd{font-size:14.5px;font-weight:600;color:#fff;margin-top:5px;line-height:1.35}
 @media(max-width:979px){.dscroll.csp .cfhero-video{margin:0 calc(-1 * clamp(20px,5vw,40px))}}
-@media(max-width:979px){.dscroll.csp .cfhero-video .vid.hero{border-radius:0;border-left:0;border-right:0}}
+@media(max-width:979px){.dscroll.csp .cfhero-video .vid.v-hero{border-radius:0;border-left:0;border-right:0}}
 
 /* ── video (Mux facade, player, local video) ──────────────────────────────── */
 .dscroll.csp .vid{position:relative;aspect-ratio:16/9;border-radius:20px;overflow:hidden;background:#000;
   box-shadow:0 30px 70px -34px rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.08)}
-.dscroll.csp .vid.hero{border-radius:24px;box-shadow:0 40px 90px -40px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.08)}
+.dscroll.csp .vid.v-hero{border-radius:24px;box-shadow:0 40px 90px -40px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.08)}
 .dscroll.csp .vid mux-player{display:block;width:100%;height:100%;--media-object-fit:contain}
 .dscroll.csp .vid video{display:block;width:100%;height:100%;object-fit:contain;background:#000}
 .dscroll.csp .vposter{all:unset;box-sizing:border-box;position:absolute;inset:0;cursor:pointer;display:block}
@@ -53,28 +53,28 @@
 .dscroll.csp .vposter:hover .vcta{transform:translate(-50%,-50%) scale(1.05)}
 .dscroll.csp .vplay{width:40px;height:40px;border-radius:999px;display:grid;place-items:center;background:linear-gradient(135deg,#cfffae,#ace5ff);color:#0f3d2e}
 .dscroll.csp .vplay svg{width:17px;height:17px;fill:currentColor;margin-left:2px}
-.dscroll.csp .vid.hero .vcta{font-size:clamp(15px,1.8vw,18px);padding:10px 26px 10px 10px}
-.dscroll.csp .vid.hero .vplay{width:clamp(44px,5vw,56px);height:clamp(44px,5vw,56px)}
-.dscroll.csp .vid.hero .vplay svg{width:22px;height:22px}
-.dscroll.csp .vid.card{aspect-ratio:4/3;border-radius:18px 18px 0 0;border:0;box-shadow:none}
-.dscroll.csp .vid.card .vposter img{object-position:50% 22%}
+.dscroll.csp .vid.v-hero .vcta{font-size:clamp(15px,1.8vw,18px);padding:10px 26px 10px 10px}
+.dscroll.csp .vid.v-hero .vplay{width:clamp(44px,5vw,56px);height:clamp(44px,5vw,56px)}
+.dscroll.csp .vid.v-hero .vplay svg{width:22px;height:22px}
+.dscroll.csp .vid.v-card{aspect-ratio:4/3;border-radius:18px 18px 0 0;border:0;box-shadow:none}
+.dscroll.csp .vid.v-card .vposter img{object-position:50% 22%}
 
 /* ── stat bar ─────────────────────────────────────────────────────────────── */
 .dscroll.csp .cfstats{margin-top:clamp(-72px,-8vw,-56px);padding-bottom:clamp(8px,2vw,16px);overflow:visible;z-index:2}
 .dscroll.csp .statbar{display:grid;grid-template-columns:repeat(2,1fr);background:#fff;border:1px solid var(--line);border-radius:22px;
   box-shadow:0 30px 60px -36px rgba(0,0,0,.35);overflow:hidden}
 @media(min-width:820px){.dscroll.csp .statbar{grid-template-columns:repeat(4,1fr)}}
-.dscroll.csp .stat{padding:clamp(20px,3.4vw,30px) clamp(16px,2.6vw,26px);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
-.dscroll.csp .stat:nth-child(2n){border-right:0}
+.dscroll.csp .cstat{padding:clamp(20px,3.4vw,30px) clamp(16px,2.6vw,26px);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.dscroll.csp .cstat:nth-child(2n){border-right:0}
 @media(min-width:820px){
-  .dscroll.csp .stat{border-bottom:0;border-right:1px solid var(--line)}
-  .dscroll.csp .stat:nth-child(2n){border-right:1px solid var(--line)}
-  .dscroll.csp .stat:last-child{border-right:0}
+  .dscroll.csp .cstat{border-bottom:0;border-right:1px solid var(--line)}
+  .dscroll.csp .cstat:nth-child(2n){border-right:1px solid var(--line)}
+  .dscroll.csp .cstat:last-child{border-right:0}
 }
-@media(max-width:819px){.dscroll.csp .stat:nth-child(n+3){border-bottom:0}}
-.dscroll.csp .stat .sv{font-size:clamp(32px,5.2vw,52px);font-weight:700;letter-spacing:-.035em;line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
-.dscroll.csp .stat:first-child .sv{background:linear-gradient(120deg,#0f766e,#0369a1);-webkit-background-clip:text;background-clip:text;color:transparent}
-.dscroll.csp .stat .sl{font-size:clamp(11px,1.6vw,12.5px);font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-4);margin-top:10px;line-height:1.35}
+@media(max-width:819px){.dscroll.csp .cstat:nth-child(n+3){border-bottom:0}}
+.dscroll.csp .cstat .csv{font-size:clamp(32px,5.2vw,52px);font-weight:700;letter-spacing:-.035em;line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
+.dscroll.csp .cstat:first-child .csv{background:linear-gradient(120deg,#0f766e,#0369a1);-webkit-background-clip:text;background-clip:text;color:transparent}
+.dscroll.csp .cstat .csl{font-size:clamp(11px,1.6vw,12.5px);font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-4);margin-top:10px;line-height:1.35}
 .dscroll.csp .statnote{font-size:12.5px;line-height:1.5;color:var(--ink-4);margin-top:12px;max-width:880px}
 
 /* ── story: sticky chapter nav + chapter blocks ───────────────────────────── */
@@ -93,6 +93,8 @@
 .dscroll.csp .chnav a.on .chn{color:#0f766e}
 @media(min-width:1024px){.dscroll.csp .chnav{top:110px;padding-top:4px}}
 /* phones and tablets: a horizontal strip of pills pinned under the site nav */
+/* the site nav is 68px tall on phones */
+@media(max-width:760px){.dscroll.csp .chnav{top:68px}}
 @media(max-width:1023px){
   .dscroll.csp .chnav{margin:0 calc(-1 * clamp(20px,5vw,40px));padding:10px 0;background:rgba(250,250,250,.9);
     backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
@@ -108,15 +110,23 @@
 
 /* anchors land below the site nav, plus the pill strip on small screens */
 .dscroll.csp .chapter,.dscroll.csp .calproof{scroll-margin-top:100px}
-@media(max-width:1023px){.dscroll.csp .chapter,.dscroll.csp .calproof{scroll-margin-top:140px}}
+@media(max-width:1023px){.dscroll.csp .chapter,.dscroll.csp .calproof{scroll-margin-top:146px}}
+@media(max-width:760px){.dscroll.csp .chapter,.dscroll.csp .calproof{scroll-margin-top:136px}}
 
 .dscroll.csp .chapters{min-width:0}
-.dscroll.csp .chapter{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(20px,3vw,26px);padding:clamp(40px,6vw,64px) 0;border-bottom:1px solid var(--line)}
+/* Each chapter stacks its proof (clip, then supporting image) in one column
+   and the words in the other, alternating sides. Phones: clip, words, image. */
+.dscroll.csp .chapter{display:grid;grid-template-columns:minmax(0,1fr);grid-template-areas:"media" "body" "proof";
+  gap:clamp(20px,3vw,26px);padding:clamp(40px,6vw,64px) 0;border-bottom:1px solid var(--line)}
 .dscroll.csp .chapter:first-child{padding-top:clamp(26px,4vw,8px)}
+.dscroll.csp .chmedia{grid-area:media}
+.dscroll.csp .chbody{grid-area:body}
+.dscroll.csp .chproof{grid-area:proof}
 @media(min-width:900px){
-  .dscroll.csp .chapter{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(28px,3.6vw,48px);align-items:start}
-  .dscroll.csp .chapter.flip .chmedia{order:2}
-  .dscroll.csp .chmedia{position:sticky;top:120px}
+  .dscroll.csp .chapter{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);grid-template-areas:"media body" "proof body";
+    grid-template-rows:auto 1fr;column-gap:clamp(28px,3.6vw,48px);row-gap:18px}
+  .dscroll.csp .chapter.flip{grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);grid-template-areas:"body media" "body proof"}
+  .dscroll.csp .chbody{align-self:center}
 }
 .dscroll.csp .chnum{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:#0f766e}
 .dscroll.csp .chhl{font-size:clamp(26px,3.4vw,36px);font-weight:700;letter-spacing:-.025em;line-height:1.15;margin-top:10px;text-wrap:balance}
@@ -125,20 +135,22 @@
 .dscroll.csp .chq svg{position:absolute;left:16px;top:17px;width:22px;height:22px;color:#0f766e;fill:rgba(15,118,110,.14)}
 .dscroll.csp .chq p{font-size:clamp(17px,2.1vw,19.5px);font-weight:600;line-height:1.4;letter-spacing:-.01em;color:var(--ink);text-wrap:pretty}
 .dscroll.csp .chq cite{display:block;margin-top:8px;font-style:normal;font-size:12.5px;font-weight:600;color:var(--ink-4)}
-.dscroll.csp .chfull{all:unset;box-sizing:border-box;cursor:pointer;display:inline-flex;align-items:center;gap:8px;margin-top:14px;
-  font-size:13.5px;font-weight:700;color:var(--ink);border-bottom:1.5px solid #34d399;padding-bottom:2px}
-.dscroll.csp .chfull svg{width:13px;height:13px;fill:currentColor}
-.dscroll.csp .chfull:hover{color:#0f766e}
-.dscroll.csp .chfull:focus-visible{outline:3px solid #34d399;outline-offset:3px;border-radius:4px}
 .dscroll.csp .chcap{font-size:clamp(15px,1.9vw,16.5px);line-height:1.55;color:var(--ink-2);margin-top:14px;text-wrap:pretty}
 
 /* chapter supporting image */
-.dscroll.csp .chfig{margin:18px 0 0;display:flex;flex-direction:column;gap:9px}
+.dscroll.csp .chfig{margin:0;display:flex;flex-direction:column;gap:9px}
 .dscroll.csp .chfig figcaption{font-size:12.5px;font-weight:500;color:var(--ink-4);line-height:1.45}
 .dscroll.csp .chphoto{border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 20px 44px -30px rgba(15,23,42,.4)}
 .dscroll.csp .chphoto img{display:block;width:100%;height:auto}
 .dscroll.csp .chphoto.crop img{height:100%;object-fit:cover}
 .dscroll.csp .chphoto.tall{max-width:340px}
+
+/* person card */
+.dscroll.csp .person{display:flex;align-items:center;gap:16px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px;
+  box-shadow:0 18px 40px -30px rgba(15,23,42,.4)}
+.dscroll.csp .person img{flex:none;width:84px;height:84px;border-radius:14px;object-fit:cover;object-position:50% 30%}
+.dscroll.csp .person b{display:block;font-size:17px;font-weight:700;letter-spacing:-.01em}
+.dscroll.csp .person span{display:block;font-size:13.5px;color:var(--ink-3);margin-top:3px}
 
 /* calendar pair: week 1 above week 3 */
 .dscroll.csp .calpair{display:flex;flex-direction:column;gap:10px}
@@ -148,7 +160,7 @@
   background:var(--ink);color:#fff;padding:5px 10px;border-radius:999px}
 
 /* then / now card */
-.dscroll.csp .thennow{display:grid;grid-template-columns:1fr;gap:10px}
+.dscroll.csp .thennow{display:grid;grid-template-columns:1fr;gap:10px;align-items:start}
 @media(min-width:520px){.dscroll.csp .thennow{grid-template-columns:1fr 1fr}}
 .dscroll.csp .tn{border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px;border:1px solid var(--line)}
 .dscroll.csp .tn.then{background:#f5f5f5}
@@ -158,7 +170,7 @@
 .dscroll.csp .tnsrc{font-size:12px;font-weight:700;color:var(--ink-3)}
 .dscroll.csp .bubble{background:#fff;border:1px solid var(--line);border-radius:14px 14px 14px 4px;padding:10px 12px;font-size:14px;line-height:1.4;color:var(--ink-2)}
 .dscroll.csp .note{font-size:14px;line-height:1.5;color:var(--ink-2);border-left:3px solid #34d399;padding-left:10px}
-.dscroll.csp .tnmeta{display:flex;align-items:center;flex-wrap:wrap;gap:5px;font-size:12px;font-weight:600;color:var(--ink-3);margin-top:auto}
+.dscroll.csp .tnmeta{display:flex;align-items:center;flex-wrap:wrap;gap:5px;font-size:12px;font-weight:600;color:var(--ink-3)}
 .dscroll.csp .tnmeta svg{width:14px;height:14px}
 .dscroll.csp .tn.then .tnmeta{color:#b45309}
 .dscroll.csp .tn.now .tnmeta{color:#047857}
@@ -183,7 +195,8 @@
 
 .dscroll.csp .gallery{display:grid;gap:clamp(12px,2vw,18px);margin-top:clamp(18px,3vw,26px);grid-template-columns:1fr}
 @media(min-width:700px){.dscroll.csp .gallery.grid{grid-template-columns:repeat(3,1fr)}}
-.dscroll.csp .gallery.strip{grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:8px;margin-top:10px}
+.dscroll.csp .gallery.strip{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.dscroll.csp .gallery.strip .gshot{flex:1 1 118px;max-width:220px}
 .dscroll.csp .gshot{margin:0;display:flex;flex-direction:column;gap:8px}
 .dscroll.csp .gshot button{all:unset;box-sizing:border-box;position:relative;display:block;cursor:zoom-in;border-radius:14px;overflow:hidden;
   border:1px solid var(--line);background:#fff;box-shadow:0 18px 40px -28px rgba(15,23,42,.4);transition:transform .2s,box-shadow .2s}
@@ -233,21 +246,27 @@
 .dscroll.csp .turnhd b{font-size:13px;font-weight:700;letter-spacing:.02em}
 .dscroll.csp .turn.phil .turnhd b{color:#0f766e}
 .dscroll.csp .turn.jacob .turnhd b{color:var(--ink-3)}
-.dscroll.csp .tstamp{all:unset;box-sizing:border-box;cursor:pointer;font-size:12px;font-weight:700;font-variant-numeric:tabular-nums;
-  color:var(--ink-3);background:var(--tint);border-radius:999px;padding:3px 9px;transition:background .15s,color .15s}
-.dscroll.csp .tstamp:hover{background:var(--ink);color:#fff}
-.dscroll.csp .tstamp:focus-visible{outline:3px solid #34d399;outline-offset:2px}
+.dscroll.csp .tstamp{font-size:12px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--ink-4)}
+.dscroll.csp .fulllink{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:14px;font-weight:700;color:var(--ink);
+  text-decoration:none;border-bottom:1.5px solid #34d399;padding-bottom:2px}
+.dscroll.csp .fulllink svg{width:15px;height:15px}
+.dscroll.csp .fulllink:hover{color:#0f766e}
 .dscroll.csp .trbody p{font-size:15px;line-height:1.65;color:var(--ink-2);margin-top:8px}
 .dscroll.csp .turn.jacob p{color:var(--ink-3)}
 
 /* ── supporting case study cards ──────────────────────────────────────────── */
 .dscroll.csp .scards{display:grid;grid-template-columns:1fr;gap:clamp(16px,2.6vw,24px);margin-top:clamp(28px,5vw,44px)}
-@media(min-width:880px){.dscroll.csp .scards{grid-template-columns:1fr 1fr}}
 .dscroll.csp .scard{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;
   box-shadow:0 20px 48px -34px rgba(0,0,0,.3);scroll-margin-top:98px}
 .dscroll.csp .scphoto{margin:0;aspect-ratio:4/3;overflow:hidden;background:#000}
 .dscroll.csp .scphoto img{width:100%;height:100%;object-fit:cover;display:block}
-.dscroll.csp .scbody{padding:clamp(18px,3vw,26px);display:flex;flex-direction:column;gap:14px;flex:1}
+/* desktop: compact horizontal cards, media on the left */
+@media(min-width:880px){
+  .dscroll.csp .scard{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr)}
+  .dscroll.csp .scmedia{position:relative;min-height:340px}
+  .dscroll.csp .scmedia .vid.v-card,.dscroll.csp .scmedia .scphoto{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;border-radius:0}
+}
+.dscroll.csp .scbody{padding:clamp(18px,3vw,30px);display:flex;flex-direction:column;gap:14px;flex:1}
 .dscroll.csp .schead{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .dscroll.csp .sclogo{display:block;width:auto;height:34px;max-width:160px;object-fit:contain}
 .dscroll.csp .sclogo.dark{height:44px;border-radius:8px}
