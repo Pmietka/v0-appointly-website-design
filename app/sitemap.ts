@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 
 import { getBlogPosts } from "@/lib/blog";
+import { getGuides } from "@/lib/guides";
 import { servicePages } from "@/lib/seo-resources";
 
 const base = "https://getappointly.co";
@@ -17,6 +18,7 @@ const staticRoutes: {
   { path: "/", lastModified: "2026-09-18", changeFrequency: "weekly", priority: 1 },
   { path: "/case-studies", lastModified: "2026-09-24", changeFrequency: "monthly", priority: 0.9 },
   { path: "/blog", lastModified: "2026-09-17", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/guides", lastModified: "2026-10-07", changeFrequency: "weekly", priority: 0.85 },
   { path: servicePages.benchmarks, lastModified: "2026-09-11", changeFrequency: "monthly", priority: 0.85 },
   { path: "/about", lastModified: "2026-09-17", changeFrequency: "monthly", priority: 0.8 },
   { path: "/how-it-works", lastModified: "2026-09-02", changeFrequency: "monthly", priority: 0.8 },
@@ -33,7 +35,7 @@ const staticRoutes: {
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const blogPosts = await getBlogPosts();
+  const [blogPosts, guides] = await Promise.all([getBlogPosts(), getGuides()]);
 
   const entries: MetadataRoute.Sitemap = staticRoutes.map((route) => ({
     url: route.path === "/" ? base : `${base}${route.path}`,
@@ -48,6 +50,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: post.updatedAt,
       changeFrequency: "monthly",
       priority: 0.7,
+    });
+  });
+
+  guides.forEach((guide) => {
+    entries.push({
+      url: `${base}/guides/${guide.slug}`,
+      lastModified: guide.updatedAt,
+      changeFrequency: "monthly",
+      priority: 0.8,
     });
   });
 

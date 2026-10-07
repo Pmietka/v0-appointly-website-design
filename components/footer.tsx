@@ -10,6 +10,7 @@ const companyLinks = [
   { href: "/case-studies", label: "Case Studies" },
   { href: "/pricing", label: "Pricing" },
   { href: "/blog", label: "Blog" },
+  { href: "/guides", label: "Owner Guides" },
   { href: "/faq", label: "FAQ" },
 ];
 

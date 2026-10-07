@@ -106,7 +106,19 @@ function renderList(items: string[], ordered = false) {
     .join("")}</${tag}>`;
 }
 
+const fieldNoteLabel = /^\*\*From the field:?\*\*:?\s*/i;
+
+// `> **From the field:** ...` renders as a labeled callout for an anonymized
+// pattern from client accounts. Any other blockquote renders as a quote.
 function renderBlockquote(lines: string[]) {
+  if (fieldNoteLabel.test(lines[0] ?? "")) {
+    const text = [lines[0].replace(fieldNoteLabel, ""), ...lines.slice(1)].filter(Boolean);
+    return `<aside data-field-note class="rounded-2xl border border-amber-200 bg-amber-50 px-6 py-6 md:px-8">
+<p class="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-amber-800"><span aria-hidden="true" class="h-2 w-2 rounded-full bg-amber-500"></span>From the field</p>
+<p class="mt-3 text-base leading-8 text-slate-800 md:text-lg">${renderInline(text.join(" ").trim())}</p>
+</aside>`;
+  }
+
   return `<blockquote class="border-l-4 border-[hsl(var(--primary))] bg-[hsl(var(--primary))]/[0.08] px-6 py-5 text-slate-700">${renderParagraph(lines)}</blockquote>`;
 }
 

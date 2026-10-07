@@ -144,7 +144,7 @@ function titleCase(value: string) {
     .join(" ");
 }
 
-function parseFrontmatter(raw: string) {
+export function parseFrontmatter(raw: string) {
   const lines = raw.replace(/\r\n/g, "\n").split("\n");
 
   if (lines[0]?.trim() !== "---") {
@@ -247,7 +247,7 @@ function getScheduledPublishDate(order: number, latestOrder: number) {
   return publishDate;
 }
 
-function parsePost(fileName: string, raw: string): BlogPost {
+export function parsePost(fileName: string, raw: string): BlogPost {
   const slug = slugFromFileName(fileName);
   const orderMatch = fileName.match(/^(\d+)-/);
   const order = orderMatch ? Number(orderMatch[1]) : 0;

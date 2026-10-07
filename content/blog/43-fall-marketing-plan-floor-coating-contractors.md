@@ -108,7 +108,7 @@ Three rules keep it clean:
 - **Running summer creative into October.** The ad no longer matches what the homeowner is thinking about.
 - **Fake scarcity.** "Only 2 spots left" every week for two months gets noticed, and it costs you trust at the estimate.
 - **Discounting to fill the last days.** A small value add like stem walls or a free second color protects the price. A percentage off does not.
-- **Letting fall leads die in the inbox.** The leads that do not book for fall are your first spring estimates. Keep them on a list and message them when your spring schedule opens.
+- **Letting fall leads die in the inbox.** The leads that do not book for fall are your first spring estimates. Our guide to [following up on floor coating estimates that did not close](/blog/follow-up-unsold-floor-coating-estimates) covers how to keep them.
 
 ## Frequently asked questions
 
