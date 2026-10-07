@@ -11,7 +11,7 @@ question: "How do I handle the spring rush without losing floor coating leads?"
 related_posts: spring-marketing-plan-floor-coating-contractors, floor-coating-estimate-no-shows, speed-to-lead-wins-floor-coating-jobs, follow-up-unsold-floor-coating-estimates
 ---
 
-# How do I handle the spring rush without losing floor coating leads?
+# How Do I Handle the Spring Rush Without Losing Floor Coating Leads?
 
 **Meta Description:** Handle the floor coating spring rush by calling leads inside a minute, capping how far out estimates book, and reminding every one. About 95% show with reminders.
 

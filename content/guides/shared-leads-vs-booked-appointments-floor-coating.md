@@ -1,6 +1,6 @@
 ---
 seo_title: "Shared Leads vs Booked Appointments for Floor Coating"
-meta_description: "Shared leads close at 5 to 12%, so one floor takes 8 to 20 leads. A booked estimate at $125 to $199 closing 40 to 50% costs about $250 to $500 per installed floor."
+meta_description: "Shared leads close at 5 to 12%, so one floor takes 8 to 20 leads. In example math, a booked estimate at $125 to $199 works out to $250 to $500 per floor."
 date: 2026-10-07
 updated: 2026-10-07
 author: patrick
@@ -13,7 +13,7 @@ related_posts: exclusive-vs-shared-floor-coating-leads, pay-per-lead-vs-pay-per-
 
 # Are Shared Leads or Booked Appointments Better for a Floor Coating Company?
 
-**Meta Description:** Shared leads close at 5 to 12%, so one floor takes 8 to 20 leads. A booked estimate at $125 to $199 closing 40 to 50% costs about $250 to $500 per installed floor.
+**Meta Description:** Shared leads close at 5 to 12%, so one floor takes 8 to 20 leads. In example math, a booked estimate at $125 to $199 works out to $250 to $500 per floor.
 
 ---
 

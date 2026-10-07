@@ -11,7 +11,7 @@ question: "What should I ask before hiring another marketing agency for my floor
 related_posts: why-floor-coating-contractors-leave-marketing-agencies, best-floor-coating-lead-generation-companies, pay-per-lead-vs-pay-per-appointment-epoxy-contractors, speed-to-lead-wins-floor-coating-jobs
 ---
 
-# What should you ask before hiring another floor coating marketing agency?
+# What Should You Ask Before Hiring Another Floor Coating Marketing Agency?
 
 **Meta Description:** Burned by an agency before? Ask these 15 questions before you hire another floor coating marketing agency, from who calls your leads to who owns the ad account.
 

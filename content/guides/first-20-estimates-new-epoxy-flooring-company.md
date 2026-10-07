@@ -11,7 +11,7 @@ question: "How do new epoxy flooring companies get their first 20 estimates?"
 related_posts: how-to-start-a-floor-coating-business, meta-ads-for-floor-coating-contractors, speed-to-lead-wins-floor-coating-jobs, google-reviews-floor-coating-contractors, floor-coating-lead-to-appointment-rate
 ---
 
-# How do new epoxy flooring companies get their first 20 estimates?
+# How Do New Epoxy Flooring Companies Get Their First 20 Estimates?
 
 **Meta Description:** New epoxy flooring companies get their first 20 estimates by building local proof, then running Meta ads at $50 to $100 a day with every lead called in a minute.
 
@@ -80,7 +80,7 @@ Run one ad set and one offer, and send every click to your landing page. Test ph
 
 This is where new companies lose the most estimates. You will be on a job when the lead comes in. If nobody calls for four hours, that lead is a different lead. Our [benchmarks](/floor-coating-benchmarks) put the answer rate at about 90% inside one minute, and 60 to 70% of leads should become a booked estimate when the ads are high intent, refreshed often, sent to a landing page, and called fast.
 
-> **From the field:** Across client accounts, the biggest gap between a lead and an estimate is the first call, not the ad. A newer client closed all 4 estimates we booked in a single day, every one above his average ticket, and 2 of the 4 homeowners said they would not have moved forward without that first phone call. The call that educates the homeowner on the product is where a new company earns trust it does not have yet.
+> **From the field:** The new accounts that book fastest are the ones running real photos of floors the contractor installed nearby. On Meta the creative is the targeting, so a stock showroom floor pulls clicks from people who are not about to coat a garage, while a real local before and after pulls homeowners who are. Your first ad is only as good as the first three floors you photographed.
 
 ## How do you get leads to book when nobody has heard of you?
 

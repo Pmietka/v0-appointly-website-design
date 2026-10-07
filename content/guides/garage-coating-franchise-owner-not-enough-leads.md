@@ -11,7 +11,7 @@ question: "I own a garage floor coating franchise and corporate isn't sending en
 related_posts: garage-coating-franchise-vs-independent, speed-to-lead-wins-floor-coating-jobs, floor-coating-lead-to-appointment-rate, floor-coating-estimate-no-shows, meta-ads-for-floor-coating-contractors
 ---
 
-# My garage coating franchise isn't getting enough leads. What should I do?
+# My Garage Coating Franchise Isn't Getting Enough Leads. What Should I Do?
 
 **Meta Description:** If your garage coating franchise isn't getting enough leads, first check if it is volume, speed, or booking. About 90% of homeowners answer a call within a minute.
 

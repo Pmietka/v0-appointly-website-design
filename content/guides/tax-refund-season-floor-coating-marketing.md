@@ -11,7 +11,7 @@ question: "Should garage floor coating companies market during tax refund season
 related_posts: spring-marketing-plan-floor-coating-contractors, best-time-of-year-for-floor-coating-jobs, meta-ads-for-floor-coating-contractors, polyaspartic-vs-epoxy-garage-floors
 ---
 
-# Should garage floor coating companies market during tax refund season?
+# Should Garage Floor Coating Companies Market During Tax Refund Season?
 
 **Meta Description:** Yes, market garage floor coating in tax refund season. Filing opens in late January and most e-filed refunds arrive within 21 days, right as spring planning starts.
 
@@ -89,8 +89,6 @@ In cold markets, the refund often arrives before the slab is warm enough for epo
 **Warm markets** book year round, so refund season is extra demand on a calendar that is already running. The risk is overbooking. Keep the one minute callback, keep reminders tight, and raise your price before you let estimates sit weeks out. Our [spring rush playbook](/guides/floor-coating-spring-rush-playbook) covers the signals.
 
 **Cold markets** have the opposite problem. Demand and money show up before the weather does. The winning move is to book estimates in February and March, sell a real install date, and take a deposit to hold it. If you spend the winter on indoor work, our guide to [keeping a coating crew busy in winter](/guides/keep-floor-coating-crew-busy-in-winter) covers that side.
-
-> **From the field:** On one newer client's best day, all 4 estimates Appointly booked closed, every one above his average ticket, and 2 of the 4 homeowners said they would not have moved forward without the first phone call. Homeowners planning a project in this window respond to the same thing: someone who explains the product before anyone talks price.
 
 ## How much should I spend during refund season?
 
