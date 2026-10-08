@@ -27,10 +27,10 @@ export const metadata: Metadata = {
   },
 };
 
-// Numbers that are true for every situation. Kept in sync with /pricing,
-// /case-studies, and /floor-coating-benchmarks.
+// Numbers that are true for every situation. Kept in sync with /case-studies
+// and /floor-coating-benchmarks. No pricing on guide pages.
 const keyNumbers = [
-  { stat: "$125 to $199", label: "per booked estimate, nothing for leads that never book" },
+  { stat: "1", label: "floor coating contractor per market, never shared" },
   { stat: "100+", label: "jobs closed by clients from estimates we booked" },
   { stat: "~$3,500", label: "average ticket across client jobs" },
   { stat: "60 to 70%", label: "of leads should become booked estimates when called fast" },

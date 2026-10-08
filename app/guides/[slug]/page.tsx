@@ -8,6 +8,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { BlogMarkdown } from "@/components/blog-markdown";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
+import { StrategyCallCta } from "@/components/strategy-call-cta";
 import { getAuthor, personSchema } from "@/lib/authors";
 import { formatBlogDate, getBlogPath, getBlogPosts } from "@/lib/blog";
 import { getGuide, getGuidePath, getGuides, getRelatedGuides, getSituationLabel } from "@/lib/guides";
@@ -218,6 +219,22 @@ export default async function GuidePage({
                 {guide.readingTime} min read
               </span>
             </div>
+
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <a
+                href={bookingUrl}
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+              >
+                Book a strategy call
+                <ArrowRight className="h-4 w-4" />
+              </a>
+              <a
+                href="#key-takeaways"
+                className="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition-colors hover:border-slate-400"
+              >
+                Read the short answer
+              </a>
+            </div>
           </div>
         </section>
 
@@ -289,10 +306,10 @@ export default async function GuidePage({
 
               <div className="rounded-3xl border border-primary/20 bg-primary/10 p-6 shadow-sm">
                 <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-600">
-                  Pay per booked estimate
+                  Booked estimates
                 </p>
                 <h2 className="mt-4 text-2xl font-bold leading-tight text-slate-950">
-                  $125 to $199 per confirmed estimate. Nothing for leads that never book.
+                  Show up and run the estimate. We handle the rest.
                 </h2>
                 <p className="mt-4 text-sm leading-7 text-slate-700">
                   We run the Meta ads, call every homeowner within minutes, and book the
@@ -302,12 +319,14 @@ export default async function GuidePage({
                   href={bookingUrl}
                   className="mt-6 inline-flex items-center justify-center rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
                 >
-                  Book a Call
+                  Book a strategy call
                 </a>
               </div>
             </aside>
           </div>
         </section>
+
+        <StrategyCallCta />
 
         {(relatedPosts.length > 0 || relatedGuides.length > 0) && (
           <section className="section-divider bg-[hsl(var(--surface-subtle))] py-20 md:py-28">

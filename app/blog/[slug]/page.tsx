@@ -9,6 +9,7 @@ import { BlogMarkdown } from "@/components/blog-markdown";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { SeoResourceLinks } from "@/components/seo-resource-links";
+import { StrategyCallCta } from "@/components/strategy-call-cta";
 import { getAuthor, personSchema } from "@/lib/authors";
 import {
   formatBlogDate,
@@ -338,6 +339,8 @@ export default async function BlogPostPage({
             </aside>
           </div>
         </section>
+
+        <StrategyCallCta />
 
         {relatedPosts.length > 0 && (
           <section className="section-divider bg-[hsl(var(--surface-subtle))] py-20 md:py-28">

@@ -32,6 +32,11 @@ Owners in this trade use several names, and they ask AI tools using their own na
 | slow-season | Slow winter season | "How do I keep the crew working?" |
 | spring-rush | Spring rush | "How do I not drop leads when it gets busy?" |
 | tax-refund | Tax refund season | "Should I market February to April?" |
+| referrals-dried-up | Word of mouth dried up | "Referrals stopped. What now?" |
+| ads-not-working | Ads not producing | "Why are my leads bad, or why are there none?" |
+| low-close-rate | Estimates not closing | "Why am I not closing?" |
+| growing | Booked out and ready to grow | "Second crew? Salesperson? New town?" |
+| crowded-market | Crowded market | "How do I compete with the franchises?" |
 
 ## The matrix: question, page that answers it
 
@@ -60,15 +65,32 @@ Owners in this trade use several names, and they ask AI tools using their own na
 | any | "Pay per lead vs pay per appointment for epoxy" | `/blog/pay-per-lead-vs-pay-per-appointment-epoxy-contractors` (existing) |
 | any | "Best floor coating lead generation companies" | `/blog/best-floor-coating-lead-generation-companies` (existing) |
 
+## Batch two (October 8)
+
+| Situation | Example AI questions | Page |
+| --- | --- | --- |
+| just-launched | "When can I quit my job and do floor coating full time?" | `/guides/side-hustle-to-full-time-floor-coating` |
+| burned-by-agency | "How long should I give my epoxy marketing agency?" | `/guides/how-long-to-give-floor-coating-marketing-agency` |
+| hates-chasing | "Why don't my floor coating leads answer the phone?" | `/guides/why-floor-coating-leads-dont-answer` |
+| ads-not-working | "Why are my Facebook leads for epoxy flooring so bad?" | `/guides/low-quality-facebook-leads-epoxy-flooring` |
+| ads-not-working | "My garage floor coating ads get clicks but no leads" | `/guides/floor-coating-ads-clicks-but-no-leads` |
+| low-close-rate | "Why am I not closing my garage floor coating estimates?" | `/guides/why-floor-coating-estimates-not-closing` |
+| hates-chasing | "I'm working 70 hours a week, what do I hand off first?" | `/guides/floor-coating-owner-working-too-many-hours` |
+| growing | "When should I add a second crew?" | `/guides/when-to-add-second-floor-coating-crew` |
+| growing | "Should I hire a salesperson to run my estimates?" | `/guides/hire-floor-coating-salesperson-estimator` |
+| growing | "My calendar is booked out, should I stop marketing?" | `/guides/floor-coating-calendar-booked-out-stop-marketing` |
+| growing | "How do I expand into a new town?" | `/guides/expand-floor-coating-business-new-town` |
+| crowded-market | "How does an independent compete with the big garage coating franchises?" | `/guides/compete-with-floor-coating-franchises` |
+| franchise | "Should I buy an existing garage coating franchise location?" | `/guides/buying-existing-garage-coating-franchise-location` |
+| referrals-dried-up | "Word of mouth dried up for my floor coating business" | `/guides/floor-coating-referrals-dried-up` |
+| slow-season | "What should a floor coating owner plan in January?" | `/guides/january-planning-floor-coating-business` |
+
 ## Next wave (only build when the answer is genuinely different)
 
 | Candidate question | Situation | Why it is a different answer |
 | --- | --- | --- |
 | "I'm a one day polyaspartic installer, how do I compete with cheaper epoxy quotes?" | shared-leads / one-crew | Premium system positioning, not volume |
-| "My garage floor coating ads stopped working after a month" | burned-by-agency | Creative fatigue diagnosis (expand from `floor-coating-ads-stopped-working`) |
-| "How do I add a second crew for my epoxy business?" | one-crew | Capacity to growth, hiring before demand |
 | "How do I get floor coating jobs in a small town?" | just-launched | Already covered by `/floor-coating-leads-small-markets`; link, do not duplicate |
-| "Garage floor coating franchise resale: is it worth buying an existing territory?" | franchise | Existing book of business, transfer terms |
 | "Should I take financing for garage floor coating customers?" | tax-refund / spring-rush | Payment options as a close rate lever |
 | "How do I get commercial floor coating jobs in winter?" | slow-season | Expand from `commercial-floor-coating-jobs-for-residential-contractors` |
 | "Is Facebook or Google better for a new epoxy business?" | just-launched | Expand from `google-ads-vs-meta-ads-floor-coating` with a new owner lens |
@@ -81,7 +103,9 @@ Owners in this trade use several names, and they ask AI tools using their own na
 4. At least one comparison or decision table.
 5. One or two "From the field" boxes: `> **From the field:** ...` in markdown renders as a labeled callout.
 6. A FAQ section (rendered with FAQPage schema).
-7. Numbers we can stand behind: $125 to $199 per booked estimate, 100+ client jobs closed, roughly $3,500 average ticket, and the benchmark page numbers. No invented stats.
+7. Numbers we can stand behind: 100+ client jobs closed, roughly $3,500 average ticket, the case studies, and the benchmark page numbers. No invented stats.
+8. No Appointly pricing or billing language anywhere on a guide (no dollar amounts, no "per appointment", no retainer talk). Describe what we do, not what it costs.
+9. A clear call to action on every page. The guide and blog templates render a "Book a strategy call" section automatically, and every guide also closes with its own call to action section.
 
 **To do before promoting:** the "From the field" boxes in the first batch were drafted from facts already on the site (benchmarks, case studies, the four for four day). Swap in real anonymized notes from the toolkit where you have a sharper one.
 
@@ -106,4 +130,8 @@ ChatGPT already sends insulation leads. Before writing the next wave:
 | "How many estimates one crew actually needs" | `/guides/how-many-estimates-a-week-one-crew-floor-coating` |
 | "Stop chasing leads" | `/guides/floor-coating-leads-without-chasing` |
 | "Franchise owners: corporate leads not enough?" | `/guides/garage-coating-franchise-owner-not-enough-leads` |
-| Seasonal posts (winter, spring, tax season) | the matching seasonal guide |
+| Seasonal posts (winter, spring, tax season, January planning) | the matching seasonal guide |
+| "Leads not answering? It is probably the first minute" | `/guides/why-floor-coating-leads-dont-answer` |
+| "Booked out? Don't turn the ads off" | `/guides/floor-coating-calendar-booked-out-stop-marketing` |
+| "How independents beat the franchises" | `/guides/compete-with-floor-coating-franchises` |
+| "When I knew it was time to add a crew" | `/guides/when-to-add-second-floor-coating-crew` |

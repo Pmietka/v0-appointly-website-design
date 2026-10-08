@@ -147,6 +147,6 @@ Yes. Homeowners who come from shared marketplaces are often shopping for the low
 
 ## Get homeowners who already understand the product
 
-Appointly Solutions books estimates for floor coating contractors. We run the Meta ads, call every lead ourselves, educate the homeowner on the product, qualify them, and put a confirmed estimate on your calendar. You pay per booked appointment, not per lead.
+Appointly Solutions books estimates for floor coating contractors. We run the Meta ads, call every lead ourselves, educate the homeowner on the product, qualify them, and put a confirmed estimate on your calendar. You show up and run the estimate. We work with one floor coating contractor per market.
 
 [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, what a booked estimate costs in your area, and how many estimates a week make sense for your crew. One contractor per market.

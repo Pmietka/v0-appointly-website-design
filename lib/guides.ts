@@ -12,10 +12,15 @@ const guidesDirectory = path.join(process.cwd(), "content", "guides");
  */
 export const situations = [
   { key: "just-launched", label: "Just launched, no leads yet" },
+  { key: "referrals-dried-up", label: "Word of mouth dried up" },
   { key: "burned-by-agency", label: "Burned by a past agency" },
+  { key: "ads-not-working", label: "Ads not producing" },
   { key: "shared-leads", label: "Done with shared Angi and HomeAdvisor leads" },
-  { key: "one-crew", label: "One crew trying to fill the calendar" },
   { key: "hates-chasing", label: "Tired of chasing leads" },
+  { key: "low-close-rate", label: "Estimates not closing" },
+  { key: "one-crew", label: "One crew trying to fill the calendar" },
+  { key: "growing", label: "Booked out and ready to grow" },
+  { key: "crowded-market", label: "Crowded market" },
   { key: "franchise", label: "Garage coating franchise owners" },
   { key: "slow-season", label: "Slow winter season" },
   { key: "spring-rush", label: "Spring rush" },

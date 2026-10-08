@@ -134,6 +134,6 @@ Avoid percentage discounts. They train homeowners to wait and cut into the margi
 
 ## Fill the fall calendar without chasing leads
 
-Appointly Solutions runs the Meta ads, calls every homeowner within minutes, and books confirmed floor coating estimates onto your calendar. You pay per booked appointment, not per lead, and we work with one contractor per market.
+Appointly Solutions runs the Meta ads, calls every homeowner within minutes, and books confirmed floor coating estimates onto your calendar. We work with one contractor per market.
 
 [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, what a booked estimate costs in your area, and how many fall install days you have left to fill.

@@ -141,6 +141,6 @@ It depends on your state. Some states require a specialty contractor license for
 
 ## Launch with estimates already on the calendar
 
-Appointly Solutions books estimates for floor coating contractors. We run the Meta ads, call every homeowner within minutes, qualify them, and put a confirmed estimate on your calendar. You pay per booked appointment, not per lead, and we work with one contractor per market.
+Appointly Solutions books estimates for floor coating contractors. We run the Meta ads, call every homeowner within minutes, qualify them, and put a confirmed estimate on your calendar. We work with one contractor per market.
 
 [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, what a booked estimate costs in your area, and how many estimates a week make sense while you are getting started.
