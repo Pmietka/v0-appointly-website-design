@@ -1,6 +1,6 @@
 ---
 seo_title: "Shared Leads vs Booked Appointments for Floor Coating"
-meta_description: "Shared leads close at 5 to 12%, so one floor takes 8 to 20 leads. In example math, a booked estimate at $125 to $199 works out to $250 to $500 per floor."
+meta_description: "Shared leads close at 5 to 12%, so one floor takes 8 to 20 leads. Booked estimates closing at 40 to 50% take 2 to 2.5. Example math on units and owner hours."
 date: 2026-10-07
 updated: 2026-10-07
 author: patrick
@@ -13,50 +13,56 @@ related_posts: exclusive-vs-shared-floor-coating-leads, pay-per-lead-vs-pay-per-
 
 # Are Shared Leads or Booked Appointments Better for a Floor Coating Company?
 
-**Meta Description:** Shared leads close at 5 to 12%, so one floor takes 8 to 20 leads. In example math, a booked estimate at $125 to $199 works out to $250 to $500 per floor.
+**Meta Description:** Shared leads close at 5 to 12%, so one floor takes 8 to 20 leads. Booked estimates closing at 40 to 50% take 2 to 2.5. Example math on units and owner hours.
 
 ---
 
-For most floor coating companies, booked appointments are cheaper per installed floor and take far less of the owner's time than shared marketplace leads. Shared leads typically close at 5 to 12%, so one floor takes about 8 to 20 leads, while a booked estimate at $125 to $199 that closes at 40 to 50% works out to roughly $250 to $500 per floor. Shared leads only win when they are very cheap and you have someone calling every one within a minute.
+For most floor coating companies, booked appointments take far fewer units and far less of the owner's time per installed floor than shared marketplace leads. Shared leads typically close at 5 to 12%, so one floor takes about 8 to 20 leads, while booked estimates that close at 40 to 50% take about 2 to 2.5 estimates per floor. To compare cost, use one formula: cost per installed floor = price per unit x units per floor. Shared leads only win when they are very cheap and you have someone calling every one within a minute.
 
 ## Key takeaways
 
 - Compare lead sources on cost per installed floor, not cost per lead or cost per appointment.
 - At a 5 to 12% close rate, a floor coating contractor needs about 8 to 20 shared leads to install one floor.
-- A booked estimate at $125 to $199 that closes at 40 to 50% costs about $250 to $500 per installed floor in our example math.
-- Shared leads beat that only if they cost under about $12.50 to $60 each, depending on your close rate and the appointment price you compare against.
-- The bigger difference is owner time: shared leads mean chasing every lead before you ever run an estimate.
+- At a 40 to 50% close rate, booked estimates take about 2 to 2.5 estimates per installed floor in our example math.
+- Cost per installed floor = price per unit x units per floor. Plug in the prices you actually pay or are quoted.
+- The bigger difference is owner time: in example math, about 6.5 to 10.5 hours per floor with shared leads versus about 3 to 3.75 hours with booked estimates.
 - Shared leads still make sense for shops with a dedicated setter, or as fill in when your calendar has gaps.
 
 ## What is the actual difference?
 
 A shared lead is a homeowner's contact info, sold to you and to other contractors at the same time. You pay when the lead arrives. Then you race to call, reach, qualify, and book them.
 
-A booked appointment is a confirmed estimate on your calendar. Someone else ran the ads, made the call, qualified the homeowner, and picked a time. You pay when the estimate is booked, and with some providers you are credited if the homeowner does not show.
+A booked appointment is a confirmed estimate on your calendar. Someone else ran the ads, made the call, qualified the homeowner, and picked a time. You show up and run the estimate.
 
-So the question is not which is cheaper per unit. A lead will always cost less than an appointment. The question is what it costs to get a floor installed. If you want the comparison between exclusive and shared leads, read [exclusive vs shared floor coating leads](/blog/exclusive-vs-shared-floor-coating-leads). For the billing models side by side, read [pay per lead vs pay per appointment](/blog/pay-per-lead-vs-pay-per-appointment-epoxy-contractors). This page puts shared marketplace leads directly against booked appointments.
+So the question is not which is cheaper per unit. A lead will always cost less than an appointment. The question is what it costs to get a floor installed. If you want the comparison between exclusive and shared leads, read [exclusive vs shared floor coating leads](/blog/exclusive-vs-shared-floor-coating-leads). This page puts shared marketplace leads directly against booked appointments.
 
-## What does each option cost per installed floor?
+## How many units does each option take per installed floor?
 
-These are example numbers, not a client's results. They use the close rates already published on this site: shared marketplace leads typically close at 5 to 12%, and estimates contractors book themselves close roughly 40 to 50%, a range we apply to booked appointments here. The appointment price uses the $125 to $199 range. We did not use the higher close rates from our case studies, to keep the example conservative.
+These are example numbers, not a client's results. They use the close rates already published on this site: shared marketplace leads typically close at 5 to 12%, and estimates contractors book themselves close roughly 40 to 50%, a range we apply to booked appointments here. We left prices out on purpose, because lead and appointment prices vary by provider and market. We did not use the higher close rates from our case studies, to keep the example conservative.
 
 | Source | Close rate (example) | Units per installed floor | Cost per installed floor |
 | --- | --- | --- | --- |
 | Shared leads, low end | 5% of leads | 20 leads | 20 times your lead price |
 | Shared leads, high end | 12% of leads | About 8.3 leads | About 8.3 times your lead price |
-| Booked estimate at $199 | 40% of estimates | 2.5 estimates | About $498 |
-| Booked estimate at $125 | 50% of estimates | 2 estimates | $250 |
+| Booked estimates, low end | 40% of estimates | 2.5 estimates | 2.5 times your appointment price |
+| Booked estimates, high end | 50% of estimates | 2 estimates | 2 times your appointment price |
 
-Now turn it around. At what shared lead price do the two come out even?
+The formula behind the last column is the one to keep:
 
-| Your shared lead close rate | Break even vs $250 per floor | Break even vs about $498 per floor |
+**Cost per installed floor = price per unit x units per floor.**
+
+A unit is whatever you pay for: a lead or a booked estimate. Units per floor is 1 divided by your close rate on that unit. A 5% close rate means 20 units per floor; a 40% close rate means 2.5.
+
+Now turn it around. How many shared leads does one booked estimate replace? Divide shared leads per floor by booked estimates per floor.
+
+| Your shared lead close rate | Vs booked estimates at 40% (2.5 per floor) | Vs booked estimates at 50% (2 per floor) |
 | --- | --- | --- |
-| 5% | $12.50 per lead | About $25 per lead |
-| 12% | $30 per lead | About $60 per lead |
+| 5% (20 leads per floor) | 1 booked estimate does the work of 8 leads | 1 booked estimate does the work of 10 leads |
+| 12% (about 8.3 leads per floor) | 1 booked estimate does the work of about 3.3 leads | 1 booked estimate does the work of about 4.2 leads |
 
-Pull your last few marketplace invoices and look at what you actually paid per lead. If your price is above the break even for your close rate, booked appointments are cheaper per floor before you count a single hour of your time.
+That ratio is your break even. At a 5% shared lead close rate and a 40% estimate close rate, shared leads are cheaper per floor only if one lead costs less than one eighth of one booked estimate. Pull your last few marketplace invoices for your real lead price, put it next to any appointment price you are quoted, and run both through the formula. If your lead price is above the break even for your close rates, booked appointments are cheaper per floor before you count a single hour of your time.
 
-For context, the average ticket across Appointly client jobs is roughly $3,500. At that ticket, $250 to $498 per installed floor is about 7 to 14% of the job. Our post on [what a booked floor coating estimate is worth](/blog/what-is-a-booked-floor-coating-estimate-worth) goes deeper on the value side.
+For context, the average ticket across Appointly client jobs is roughly $3,500. Whatever your cost per installed floor comes out to, divide it by your own average ticket to see what share of each job goes to getting it. Our post on [what a booked floor coating estimate is worth](/blog/what-is-a-booked-floor-coating-estimate-worth) goes deeper on the value side.
 
 ## How much owner time does each one take?
 
@@ -81,7 +87,7 @@ There is also a hidden cost the table does not show. Shared leads are a race. Wh
 
 They change the math on both sides. About 80% of booked estimates show with no reminders, and about 95% show when the estimate is confirmed at booking and reminded 24 hours and 1 hour out. If you book shared leads yourself and skip reminders, plan on more empty driveways.
 
-With a booked appointment service, ask what happens when the homeowner does not show. Some providers credit no-shows, and some do not. That one answer can move your cost per floor more than the appointment price does.
+With any booked appointment service, ask how no-shows are handled and whether every estimate is confirmed and reminded. Every empty driveway raises your units per installed floor, so the show rate can move your cost per floor as much as the close rate does.
 
 ## Who should still use shared leads?
 
@@ -104,15 +110,15 @@ If you are leaning toward moving off the marketplace, the step by step plan is i
 
 ### Are booked appointments worth more than shared leads for floor coating?
 
-For most floor coating contractors, yes. Shared leads typically close at 5 to 12%, so you buy 8 to 20 leads per installed floor and chase every one. A booked estimate at $125 to $199 that closes at 40 to 50% works out to about $250 to $500 per floor in example math, with no chasing.
+For most floor coating contractors, yes. Shared leads typically close at 5 to 12%, so you buy 8 to 20 leads per installed floor and chase every one. Booked estimates that close at 40 to 50% take about 2 to 2.5 estimates per floor in example math, with no chasing, and owner time per floor drops from about 6.5 to 10.5 hours to about 3 to 3.75 hours.
 
 ### How do I calculate my cost per installed floor from shared leads?
 
-Add up what you paid for shared leads over a month and divide by the epoxy or garage floor coating jobs you installed from those leads. Then add the hours you spent calling and running estimates. Compare that to a booked appointment price divided by your estimate close rate.
+Add up what you paid for shared leads over a month and divide by the epoxy or garage floor coating jobs you installed from those leads. Then add the hours you spent calling and running estimates. Compare that to the same formula for booked estimates: the price you are quoted for a booked estimate times the estimates you need per floor, which is 1 divided by your estimate close rate.
 
 ### When are shared leads cheaper than booked appointments?
 
-When the price per lead is low enough for your close rate. In our example math, a shared lead has to cost less than about $12.50 to $25 at a 5% close rate, or less than about $30 to $60 at a 12% close rate, to beat a booked estimate on cost per floor.
+When the lead price is low enough for your close rates. Use cost per installed floor = price per unit x units per floor. In our example math, at a 5% shared lead close rate a lead has to cost less than about one eighth to one tenth of a booked estimate's price to win. At 12%, it has to cost less than about a quarter to a third.
 
 ### Do booked appointments close better than shared leads?
 
@@ -122,8 +128,10 @@ Usually, because the homeowner has already been called, qualified, and booked, a
 
 Yes. Many owners use booked appointments as the main source and keep a small shared lead budget for fill in. Track both on cost per installed floor and owner hours, and move budget toward whichever wins.
 
-## See what a booked estimate costs in your market
+## See how your shared leads stack up
 
-The fair comparison is cost per installed floor plus your hours. Run your own invoices through the tables above before you decide.
+The fair comparison is cost per installed floor plus your hours. Run your own invoices through the formula and tables above before you decide.
 
-Appointly books floor coating estimates for $125 to $199 each, depending on market and the work you install. No retainer, no monthly fee, and no-shows are credited. One contractor per market, and appointments are never shared or resold. See [pricing](/pricing) for how it works. [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, what a booked estimate costs in your area, and how your current shared lead cost per floor compares.
+Appointly runs Meta ads from its own ad account, calls every homeowner within minutes, educates and qualifies them, and books confirmed floor coating estimates on your calendar. One contractor per market, and appointments are never shared or resold.
+
+[Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, how many estimates a week your crew can run, and how many shared leads you are buying today for each floor you install.

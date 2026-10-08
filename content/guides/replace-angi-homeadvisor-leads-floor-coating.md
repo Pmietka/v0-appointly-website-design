@@ -63,7 +63,7 @@ Pick one main replacement, not four. Each channel needs time and attention to wo
 | Meta ads with a landing page | $50 to $100 a day to start for a new contractor | Weeks, once creative is working | Local before and after photos, a landing page, someone calling fast |
 | Google Ads | Clicks commonly $8 to $25; 8 to 15 clicks per form fill or call | Weeks, depends on search volume | A landing page, call tracking, budget for the click cost |
 | Google Business Profile and reviews | Your time | Slow, builds over months | Photos and a review ask after every job |
-| Booked appointment service | Per booked estimate | Weeks | Open estimate slots on your calendar |
+| Booked appointment service | Varies by provider | Weeks | Open estimate slots on your calendar |
 
 For most epoxy and garage floor coating owners, Meta is the main replacement, because a strong before and after creates demand that did not exist yet. On Meta, the creative is the targeting, and a landing page produces better leads than the native lead form. Both are in our [benchmarks](/floor-coating-benchmarks). The setup is covered in [Meta ads for floor coating contractors](/blog/meta-ads-for-floor-coating-contractors).
 
@@ -99,7 +99,7 @@ Read your own marketplace account terms before you cancel anything. Do not assum
 ## What usually goes wrong in the switch?
 
 - **Cutting before the new channel books.** The calendar drops, panic sets in, and the marketplace budget goes right back up.
-- **Judging Meta on cost per lead.** A Meta lead can look cheap or expensive. What matters is cost per booked estimate and per installed floor.
+- **Judging Meta on cost per lead.** A Meta lead can look cheap or expensive. What matters is how many leads turn into booked estimates and what each installed floor costs you.
 - **Sending ads to a native lead form.** It is easy to set up, but a landing page produces better leads.
 - **Calling Meta leads at the end of the day.** The homeowner already moved on.
 - **Testing one ad.** Run several local before and afters and keep the ones that book.
@@ -124,10 +124,12 @@ Compare cost per installed floor and owner hours per floor between the marketpla
 
 ### Can I go straight to booked appointments instead of building my own ads?
 
-Yes. A booked appointment service runs the ads and the calls, and you pay per estimate on your calendar. It is the fastest way to replace marketplace leads if you do not want to manage campaigns. The head to head numbers are in [shared leads vs booked appointments](/guides/shared-leads-vs-booked-appointments-floor-coating).
+Yes. A booked appointment service runs the ads and the calls and puts confirmed estimates on your calendar. It is the fastest way to replace marketplace leads if you do not want to manage campaigns. The head to head numbers are in [shared leads vs booked appointments](/guides/shared-leads-vs-booked-appointments-floor-coating).
 
 ## Want a replacement that books the estimate for you?
 
 Getting off Angi and HomeAdvisor is a 60 to 90 day project: track, build, taper. The hardest part is building the new channel while you are still on the trucks.
 
-Appointly runs Meta ads from its own ad account, calls every homeowner within minutes, and books confirmed floor coating estimates for $125 to $199 each. Appointments are [exclusive to one contractor per market](/exclusive-floor-coating-leads) and are never shared or resold. If your market is already taken, or you want to run your own ads, we will say so. [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, what a booked estimate costs in your area, and how to time your marketplace taper so the calendar stays full.
+Appointly runs Meta ads from its own ad account, calls every homeowner within minutes, educates and qualifies them, and books confirmed floor coating estimates on your calendar. Appointments are [exclusive to one contractor per market](/exclusive-floor-coating-leads) and are never shared or resold. If your market is already taken, or you want to run your own ads, we will say so.
+
+[Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, how many estimates a week your crew can run, and how to time your marketplace taper so the calendar stays full.

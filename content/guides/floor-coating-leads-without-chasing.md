@@ -65,11 +65,11 @@ The hard parts are coverage and product knowledge. Homeowners fill out forms at 
 
 ### 3. Buy booked appointments
 
-Pay a service to run the ads, call every lead fast, qualify, and put a confirmed estimate on your calendar. You pay per booked estimate, not per lead, so the leads that never book are the service's cost, not yours. You show up and run the estimate.
+Pay a service to run the ads, call every lead fast, qualify, and put a confirmed estimate on your calendar. The service works the leads that never book, so you only see homeowners who agreed to an estimate. You show up and run the estimate.
 
-The tradeoff is control and cost per appointment. You do not run the ads. You pay a set price for every booked estimate, so your close rate decides whether the math works. And if the service only works with one contractor per market, your market may already be taken.
+The tradeoff is control. You do not run the ads or hear every first call, so your close rate on the estimates you run decides whether it pays off. And if the service only works with one contractor per market, your market may already be taken.
 
-**Fits:** owners who want to spend their day installing and selling, not dialing, and who close well enough to make a per appointment price pay off.
+**Fits:** owners who want to spend their day installing and selling, not dialing, and who close well enough to turn booked estimates into installed floors.
 
 ## How do the three options compare?
 
@@ -79,10 +79,10 @@ Your hours depend on your lead volume. Track your own for two weeks before you d
 | --- | --- | --- | --- |
 | Who makes the first call | You | Your setter | The service |
 | Owner hours per week on leads | Most: every call, text, and follow up | Some: managing, training, and reviewing the setter | Least: running estimates and closing |
-| Cost structure | Ad spend plus your time | Ad spend plus payroll | A set fee per booked estimate |
-| Who pays for leads that never book | You | You | The service |
+| Cost structure | Ad spend plus your time | Ad spend plus payroll | Varies by provider; ask what you pay for |
+| Who works the leads that never book | You | Your setter | The service |
 | Coverage on nights and weekends | Only if you answer | Only if you staff it | Built in, if the service does it |
-| Biggest risk | Missing the one minute window on install days | A setter who confirms times but cannot sell the product | A close rate too low for the per appointment price |
+| Biggest risk | Missing the one minute window on install days | A setter who confirms times but cannot sell the product | A close rate too low to turn booked estimates into floors |
 
 If you are weighing what you get for each dollar, [booked estimates vs leads](/blog/booked-floor-coating-estimates-vs-leads) breaks down the difference, and our guide to [shared leads vs booked appointments](/guides/shared-leads-vs-booked-appointments-floor-coating) runs a cost per installed floor example.
 
@@ -112,7 +112,7 @@ Yes, if you can call every lead within a minute and your source is good. Send Me
 
 ### Is buying booked appointments better than hiring a setter?
 
-It depends on volume and your close rate. A setter makes sense when you have steady garage floor coating leads and time to manage someone. Booked appointments make sense when you would rather not run ads or manage a caller and you close well enough to make a per appointment price pay off. In both cases, someone has to call within a minute.
+It depends on volume and your close rate. A setter makes sense when you have steady garage floor coating leads and time to manage someone. Booked appointments make sense when you would rather not run ads or manage a caller and you close well enough to turn booked estimates into installed floors. In both cases, someone has to call within a minute.
 
 ### How many estimates do I need if I stop chasing?
 
@@ -122,4 +122,6 @@ That depends on your crew's capacity and close rate, not on how many leads you c
 
 If you want to keep running your own ads, fix the source and the speed first. That alone ends most chasing. If you are past that and still dialing from the slab, move the first call to someone else.
 
-Appointly runs the Meta ads from its own account, calls every homeowner within minutes, and books confirmed estimates on your calendar for $125 to $199 per booked estimate. No retainer, no monthly fee, and nothing charged for leads that never book. It is not the right fit if you would rather own every call, or if your close rate is too low to make a per appointment price work. [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, where your leads are going cold today, and what a booked estimate would cost in your area.
+Appointly runs the Meta ads from its own account, calls every homeowner within minutes, educates and qualifies them, and books confirmed estimates on your calendar. It is not the right fit if you would rather own every call, or if your close rate is too low to turn booked estimates into installed floors.
+
+[Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, where your leads are going cold today, and how many estimates a week your crew can run.

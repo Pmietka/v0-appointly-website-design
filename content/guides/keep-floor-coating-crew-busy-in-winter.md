@@ -124,4 +124,6 @@ Florida, the Gulf Coast, and the Carolinas book year round, so the cold market w
 
 A busy winter comes from indoor floors, honest use of cold rated systems, spring deposits, and cash set aside in season. None of that requires an agency.
 
-When you want the spring calendar filled with qualified homeowners, Appointly runs the Meta ads, calls every lead within minutes, and books confirmed estimates for one floor coating contractor per market, at $125 to $199 per booked estimate. [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, how many spring estimates your crew can take, and when to start booking them.
+When you want the spring calendar filled with qualified homeowners, Appointly runs the Meta ads, calls every lead within minutes, and educates and qualifies them, and books confirmed estimates for one floor coating contractor per market.
+
+[Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, how many spring estimates your crew can take, and when to start booking them.

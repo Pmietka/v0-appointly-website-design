@@ -52,7 +52,7 @@ Creative matters even more. Our [benchmarks](/floor-coating-benchmarks) say it p
 
 It depends on how the agency set it up, and both setups are normal.
 
-Some agencies build the ad account inside your Business Manager. In that case it is yours and you remove their access when you leave. Others run campaigns from their own ad account and charge you for the result. In that case the account, pixel, and campaign history may stay with them, and that is fair if that is what you signed. What you should still be able to get is your lead list, your creative, and a summary of what worked.
+Some agencies build the ad account inside your Business Manager. In that case it is yours and you remove their access when you leave. Others run campaigns from their own ad account and deliver a result, such as leads or booked estimates. In that case the account, pixel, and campaign history may stay with them, and that is fair if that is what you signed. What you should still be able to get is your lead list, your creative, and a summary of what worked.
 
 ## What should I check in my contract before giving notice?
 
@@ -61,8 +61,8 @@ Every agency writes these terms differently, so read yours instead of trusting w
 - **Notice period.** How many days of written notice, and does the clock start when you email or when they confirm?
 - **Auto renewal.** Some agreements renew for another term unless you cancel inside a window. Check the date.
 - **Ownership.** Who owns the landing pages, ad copy, photos, and videos?
-- **Final billing.** Is there a final month of fees, a setup fee you still owe, or ad spend that bills after you leave?
-- **Transfer or exit fees.** Any charge for handing over files or pages.
+- **Final fees.** Is there a final month of fees, a setup fee you still owe, or ad spend that posts after you leave?
+- **Transfer or exit fees.** Any fee for handing over files or pages.
 
 If the notice period is 30 days, you have 30 days of paid campaigns to use as your overlap. Use them.
 
@@ -114,10 +114,12 @@ Your reviews live on your Google Business Profile, not with the agency. The risk
 
 ### What if my next lead source runs from its own ad account?
 
-Then there is no ad account to hand over. Some pay per appointment services for floor coating contractors work this way, Appointly included: the contractor never creates an account, shares logins, or manages a campaign. In that setup the assets you need to own are your Google Business Profile, reviews, phone number, and lead history.
+Then there is no ad account to hand over. Some booked appointment services for floor coating contractors work this way, Appointly included: the contractor never creates an account, shares logins, or manages a campaign. In that setup the assets you need to own are your Google Business Profile, reviews, phone number, and lead history.
 
 ## Ready for the next source to book estimates?
 
 Switching agencies is mostly paperwork and timing. Get your assets, read your contract, overlap the sources, and work your old leads.
 
-If you want booked estimates instead of another monthly retainer, Appointly runs the Meta ads, calls every lead within minutes, and books confirmed floor coating estimates for $125 to $199 each, with no retainer and no monthly fee. It is not the right fit if you want to own and manage your own ad account. See the [agency alternative](/floor-coating-marketing-agency-alternative) for how it differs. [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, what a booked estimate costs in your area, and how to time the switch so your calendar does not go empty.
+If you want booked estimates on your calendar instead of another agency report, Appointly runs the Meta ads from its own ad account, calls every lead within minutes, educates and qualifies the homeowner, and books confirmed floor coating estimates. It is not the right fit if you want to own and manage your own ad account. See the [agency alternative](/floor-coating-marketing-agency-alternative) for how it differs.
+
+[Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, how many estimates a week your crew can run, and how to time the switch so your calendar does not go empty.

@@ -53,7 +53,7 @@ Here is what each channel realistically gives a brand new epoxy or floor coating
 | Meta ads to a landing page | $50 to $100 a day to start | Your most reliable early volume, if leads are called fast | The main engine for estimates 5 to 20 |
 | Google Ads | $8 to $25 per click, 8 to 15 clicks per form fill or call | Higher intent, but each lead costs more | Add later, once Meta is working |
 | Shared marketplace leads | Per lead, sold to several contractors | Closes at 5 to 12% | Mostly skip in month one |
-| Booked appointment service | $125 to $199 per booked estimate (Appointly's range) | Confirmed estimates without you dialing | When you would rather install than call |
+| Booked appointment service | Varies by provider; ask how they price it | Confirmed estimates without you dialing | When you would rather install than call |
 
 The Google math is worth doing yourself. At $8 to $25 a click and 8 to 15 clicks per form fill, a single Google lead can cost anywhere from about $64 to $375. That is fine for an established shop. For a company that needs 30 leads on a startup budget, Meta is usually the better first channel. The [Google Ads vs Meta Ads](/blog/google-ads-vs-meta-ads-floor-coating) breakdown goes deeper.
 
@@ -118,6 +118,8 @@ Yes, as long as you can install and run an estimate well. A booked appointment s
 
 ## Want your first 20 estimates booked for you?
 
-If you like running your own ads and phones, the plan above works. If you would rather be grinding than dialing, Appointly runs the Meta ads from its own ad account, calls every lead within minutes, and books confirmed estimates on your calendar for $125 to $199 per booked estimate, with no retainer and no monthly fee. See [how it works](/how-it-works).
+If you like running your own ads and phones, the plan above works. If you would rather be grinding than dialing, Appointly runs the Meta ads from its own ad account, calls every lead within minutes, educates and qualifies the homeowner, and books confirmed estimates on your calendar. See [how it works](/how-it-works).
 
-We work with one floor coating contractor per market, so the first question is whether yours is open. [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check your market, your service area, and how many estimates a week your crew can actually run.
+We work with one floor coating contractor per market, so the first question is whether yours is open.
+
+[Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check your market, your service area, and how many estimates a week your crew can actually run.

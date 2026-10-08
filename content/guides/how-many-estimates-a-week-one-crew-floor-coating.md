@@ -119,4 +119,6 @@ Yes. Without reminders, about 80% of booked estimates show. With a confirmation 
 
 Once you know your weekly number, the job is filling the blocks with homeowners who show up ready to buy: fast calls, reminders, and honest qualification.
 
-Appointly runs the Meta ads, calls every lead within minutes, and books confirmed floor coating estimates into the blocks you set, for $125 to $199 per booked estimate with no retainer. If your close rate is low or your crew is already full, fix that first, because more estimates will not help. [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, your weekly estimate number, and which estimate blocks fit your install schedule.
+Appointly runs the Meta ads, calls every lead within minutes, and educates and qualifies the homeowner, and books confirmed floor coating estimates into the blocks you set. If your close rate is low or your crew is already full, fix that first, because more estimates will not help.
+
+[Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, your weekly estimate number, and which estimate blocks fit your install schedule.

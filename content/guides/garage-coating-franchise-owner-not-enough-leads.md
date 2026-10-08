@@ -116,6 +116,8 @@ Not inherently. A franchise lead and an independent epoxy or concrete coating co
 
 ## Want booked estimates on top of the brand fund?
 
-Appointly books confirmed estimates for floor coating contractors, including franchise owners whose agreements allow outside lead sources. We run Meta ads from our own ad account, call every lead within minutes, and book estimates that fit your route. You pay $125 to $199 per booked estimate, with no retainer and no monthly fee. We work with one floor coating contractor per market, and appointments are never shared or resold.
+Appointly books confirmed estimates for floor coating contractors, including franchise owners whose agreements allow outside lead sources. We run Meta ads from our own ad account, call every lead within minutes, educate and qualify the homeowner, and book estimates that fit your route. We work with one floor coating contractor per market, and appointments are never shared or resold.
 
-We are not the right fit if your agreement does not allow outside vendors or locally branded ads, so check that first. Then [book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your territory is open, how many estimates a week your crew can run, and whether your current leads have a volume, speed, or booking problem.
+We are not the right fit if your agreement does not allow outside vendors or locally branded ads, so check that first.
+
+[Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your territory is open, how many estimates a week your crew can run, and whether your current leads have a volume, speed, or booking problem.
