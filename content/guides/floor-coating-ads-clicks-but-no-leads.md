@@ -1,6 +1,6 @@
 ---
 seo_title: "Floor Coating Ads Getting Clicks but No Leads? Fix This"
-meta_description: "Clicks but no leads means the break is after the click: a slow page, a page that doesn't match the ad, a broken form, or broken tracking. Test it on your phone first."
+meta_description: "Clicks but no leads means the break is after the click: a slow page, a page that doesn't match the ad, a broken form, or broken tracking. Test on your phone first."
 date: 2026-10-08
 updated: 2026-10-08
 author: jacob
@@ -13,7 +13,7 @@ related_posts: floor-coating-contractor-website-that-converts, meta-ads-for-floo
 
 # My Garage Floor Coating Ads Get Clicks but No Leads. What's Wrong?
 
-**Meta Description:** Clicks but no leads means the break is after the click: a slow page, a page that doesn't match the ad, a broken form, or broken tracking. Test it on your phone first.
+**Meta Description:** Clicks but no leads means the break is after the click: a slow page, a page that doesn't match the ad, a broken form, or broken tracking. Test on your phone first.
 
 ---
 
