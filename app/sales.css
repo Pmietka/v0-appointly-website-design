@@ -221,3 +221,17 @@
 .dscroll .pwreveal{margin-top:clamp(26px,4vw,40px)}
 /* the phone team block stands alone here, without the divider above it */
 .dscroll .phonesec .phoneteam{margin-top:0;padding-top:0;border-top:0}
+
+/* transition from the three case study cards into Phil's full story */
+.dscroll .pwbridge{max-width:640px;margin:clamp(56px,8vw,88px) auto 0;text-align:center;display:flex;flex-direction:column;align-items:center}
+.dscroll .pwbridge .eyebrow{margin-bottom:12px}
+.dscroll .pwbridge h3{font-size:clamp(25px,3.6vw,36px);font-weight:600;letter-spacing:-.025em;line-height:1.2;text-wrap:balance}
+.dscroll .pwbridge p:not(.eyebrow){font-size:clamp(16px,2.1vw,19px);line-height:1.55;color:var(--ink-3);margin-top:14px;text-wrap:pretty}
+.dscroll .pwbridge-arrow{margin-top:26px;width:46px;height:46px;border-radius:999px;display:grid;place-items:center;
+  background:var(--ink);color:#fff;box-shadow:0 14px 30px -14px rgba(15,23,42,.6);animation:pwbob 2.2s ease-in-out infinite}
+.dscroll .pwbridge-arrow svg{width:22px;height:22px}
+.dscroll .pwbridge-arrow:hover{background:#000}
+@keyframes pwbob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+@media(prefers-reduced-motion:reduce){.dscroll .pwbridge-arrow{animation:none}}
+/* keep the arrow close to the story it points at */
+.dscroll .pwsec:has(.pwbridge){padding-bottom:clamp(40px,6vw,64px)}

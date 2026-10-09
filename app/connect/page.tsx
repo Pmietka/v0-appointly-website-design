@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 
+import { ChevronDown } from "lucide-react";
+
 import ApplyClient from "./apply-client";
 import { ApplyButton } from "./apply-button";
 import { FounderCards, PhoneTeam, WhatWeAre } from "@/components/sales/founders";
@@ -58,6 +60,20 @@ export default function ConnectPage() {
             title={<>Don&apos;t take our word for it. <span className="hl">Take theirs.</span></>}
             sub="Our clients on camera, in their own messages, and on their own calendars. Brand new clients and some of our very first. Click anything."
           />
+
+          {/* Bridge from the three cards into Phil's full story below */}
+          <div className="pwbridge">
+            <p className="eyebrow">Go deeper</p>
+            <h3>Let&apos;s dive a bit deeper into one of their experiences.</h3>
+            <p>
+              Here&apos;s what working with us actually looked like for Phil at Clean
+              Floor Coatings, start to finish, in his own words. Every clip is
+              straight from his interview.
+            </p>
+            <a className="pwbridge-arrow" href="#cfc-story" aria-label="Jump to Phil's story">
+              <ChevronDown aria-hidden />
+            </a>
+          </div>
         </div>
       </section>
 
