@@ -20,9 +20,9 @@ import {
 import "../home.css";
 import "./case-studies.css";
 
-const TITLE = "Floor Coating Case Studies | Clean Floor Coatings and AFAB Services on Video | Appointly";
+const TITLE = "Floor Coating Case Studies | Clean Floor Coatings, AFAB Services and Garage Force on Video | Appointly";
 const DESCRIPTION =
-  "Watch Phil from Clean Floor Coatings and Mark from AFAB Services explain, in their own words, what changed when Appointly started booking their calendars. Close rates from ~50% to ~70%, plus Garage Force in Spokane.";
+  "Watch Phil from Clean Floor Coatings, Mark from AFAB Services, and Eric and Shani from Garage Force of the Inland Northwest explain, in their own words, what changed when Appointly started booking their calendars. Close rates from ~50% to ~70%.";
 
 export const viewport: Viewport = {
   themeColor: "#0f0f10",
@@ -120,23 +120,26 @@ export default function CaseStudiesPage() {
         </div>
       ))}
 
-      {/* Case studies without a video story */}
+      {/* Case studies without a video story, if any, plus the reference offer */}
       <section className="sec tint" id="more-case-studies">
         <div className="wrap wide">
-          <p className="eyebrow">More case studies</p>
-          <h2>
-            One more market. <span className="hl">Same process.</span>
-          </h2>
-          <p className="sub">
-            A premium polyurea system in the Inland Northwest. Every homeowner is
-            called and qualified before the appointment is booked, and the close
-            rate follows from that.
-          </p>
-          <div className="scards">
-            {supporting.map((c) => (
-              <SupportCard c={c} key={c.slug} />
-            ))}
-          </div>
+          {supporting.length > 0 && (
+            <>
+              <p className="eyebrow">More case studies</p>
+              <h2>
+                More markets. <span className="hl">Same process.</span>
+              </h2>
+              <p className="sub">
+                Every homeowner is called and qualified before the appointment is
+                booked, and the close rates follow from that.
+              </p>
+              <div className="scards">
+                {supporting.map((c) => (
+                  <SupportCard c={c} key={c.slug} />
+                ))}
+              </div>
+            </>
+          )}
           <div className="glancenote">
             <span className="gicon"><PhoneCall aria-hidden /></span>
             <p>

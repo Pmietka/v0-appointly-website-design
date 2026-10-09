@@ -266,7 +266,7 @@ export function StoryChapters({
         <ChapterNav items={navItems} />
         <div className="chapters">
           {chapters.map((c, i) => (
-            <ChapterBlock c={c} i={i} cite={story.cite} ownerFirst={story.ownerFirst} level={level} key={c.id} />
+            <ChapterBlock c={c} i={i} cite={c.cite ?? story.cite} ownerFirst={story.ownerFirst} level={level} key={c.id} />
           ))}
 
           <section className="calproof" id={calendar.id} aria-labelledby={calHeading}>
@@ -290,7 +290,10 @@ export function StoryChapters({
             <summary>
               <span>
                 <b>Read the full interview transcript</b>
-                <small>Jacob and {story.ownerFirst}, {interview.length}, word for word</small>
+                <small>
+                  {interview.names ? `Jacob, ${Object.keys(interview.names).join(" and ")}` : `Jacob and ${story.ownerFirst}`},{" "}
+                  {interview.length}, word for word
+                </small>
               </span>
               <ChevronDown aria-hidden />
             </summary>
@@ -298,7 +301,7 @@ export function StoryChapters({
               {interview.transcript.map((t) => (
                 <div className={`turn ${t.speaker === "Jacob" ? "jacob" : "owner"}`} key={t.t}>
                   <div className="turnhd">
-                    <b>{t.speaker === "Jacob" ? "Jacob, Appointly" : cs.owner}</b>
+                    <b>{t.speaker === "Jacob" ? "Jacob, Appointly" : (interview.names?.[t.speaker] ?? cs.owner)}</b>
                     <span className="tstamp">{formatTime(t.t)}</span>
                   </div>
                   <p>{t.text}</p>

@@ -1,6 +1,6 @@
 /**
  * Shared shape for the video case studies (Clean Floor Coatings, AFAB
- * Services). Each one renders as a full story on /case-studies and on its own
+ * Services, Garage Force of the Inland Northwest). Each one renders as a full story on /case-studies and on its own
  * page at /case-studies/<slug>.
  *
  * Every chapter is built around one of the owner's interview clips on Mux.
@@ -69,6 +69,8 @@ export type Chapter = {
   headline: string;
   clip: MuxClip;
   quote: string;
+  /** Who says the quote, when it isn't the story's usual `cite` (a co-owner). */
+  cite?: string;
   caption: string;
   image: ChapterImage;
 };
@@ -115,6 +117,9 @@ export type VideoCaseStudy = {
     url: string;
     length: string;
     transcript: TranscriptTurn[];
+    /** Display name per transcript speaker, when there is more than one owner.
+        Without it, every non-Jacob turn is labelled with the case study's owner. */
+    names?: Record<string, string>;
   };
   /** Pull quote above the booking CTA on the company's own page. */
   ctaQuote: string;
