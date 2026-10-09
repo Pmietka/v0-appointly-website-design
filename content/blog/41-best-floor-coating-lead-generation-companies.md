@@ -25,6 +25,21 @@ The floor coating lead generation market splits into three groups: niche agencie
 - Whoever you pick, get four things in writing: exclusivity at the market level, the qualification definition, the credit policy, and who owns the ad account.
 - The best provider for a shop with a full-time appointment setter is usually not the best provider for an owner-operator on a grinder all day.
 
+## Comparison
+
+| Provider | Focus | What triggers the charge | Who calls the homeowner |
+| --- | --- | --- | --- |
+| Appointly Solutions | Floor and concrete coatings | Confirmed booked estimate | Appointly, within minutes |
+| Base Coat Marketing | Painting and coating contractors | Marketing engagement | You |
+| Floor Coating Marketing | Concrete coating contractors | Marketing engagement | You, with automation support |
+| Onslaught Marketing | Concrete coating businesses | Marketing engagement | You |
+| Concrete Marketing Team | Concrete and coating contractors | Marketing engagement | You, with CRM support |
+| Alpha Media Consulting | Epoxy and concrete coatings | Leads or engagement | You |
+| CoatingLaunch | Concrete coating and epoxy | Marketing engagement | You |
+| Shared marketplaces | All home services | Per lead | You, against 3 to 5 others |
+
+Confirm the charge column with each company directly. Agencies structure engagements differently and can change them.
+
 ## How to judge a floor coating lead generation company
 
 Before the list, the five questions that actually separate these companies. Ask every one of them on every sales call.
@@ -118,21 +133,6 @@ Before the list, the five questions that actually separate these companies. Ask 
 **Best for:** Shops with a dedicated person who calls back within two minutes every time, including evenings, and who are comfortable competing on speed and price.
 
 **Honest assessment:** Contractors who track it report closing 5 to 12% of shared leads. At $50 a lead and an 8% close rate, that is roughly $625 in lead cost per installed floor, before counting the hours spent chasing homeowners who already booked somebody else. It is the cheapest lead and usually the most expensive floor.
-
-## Comparison
-
-| Provider | Focus | What triggers the charge | Who calls the homeowner |
-| --- | --- | --- | --- |
-| Appointly Solutions | Floor and concrete coatings | Confirmed booked estimate | Appointly, within minutes |
-| Base Coat Marketing | Painting and coating contractors | Marketing engagement | You |
-| Floor Coating Marketing | Concrete coating contractors | Marketing engagement | You, with automation support |
-| Onslaught Marketing | Concrete coating businesses | Marketing engagement | You |
-| Concrete Marketing Team | Concrete and coating contractors | Marketing engagement | You, with CRM support |
-| Alpha Media Consulting | Epoxy and concrete coatings | Leads or engagement | You |
-| CoatingLaunch | Concrete coating and epoxy | Marketing engagement | You |
-| Shared marketplaces | All home services | Per lead | You, against 3 to 5 others |
-
-Confirm the middle column with each company directly. Agencies structure engagements differently and can change them.
 
 ## So which one should you choose?
 
