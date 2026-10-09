@@ -16,7 +16,9 @@ const staticRoutes: {
   priority: number;
 }[] = [
   { path: "/", lastModified: "2026-09-18", changeFrequency: "weekly", priority: 1 },
-  { path: "/case-studies", lastModified: "2026-09-24", changeFrequency: "monthly", priority: 0.9 },
+  { path: "/case-studies", lastModified: "2026-10-08", changeFrequency: "monthly", priority: 0.9 },
+  { path: "/case-studies/clean-floor-coatings", lastModified: "2026-10-08", changeFrequency: "monthly", priority: 0.85 },
+  { path: "/case-studies/afab-services", lastModified: "2026-10-08", changeFrequency: "monthly", priority: 0.85 },
   { path: "/blog", lastModified: "2026-09-17", changeFrequency: "weekly", priority: 0.8 },
   { path: "/guides", lastModified: "2026-10-07", changeFrequency: "weekly", priority: 0.85 },
   { path: servicePages.benchmarks, lastModified: "2026-09-11", changeFrequency: "monthly", priority: 0.85 },

@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, Expand, Play, X } from "lucide-react";
 
-import { muxPoster, type MuxClip } from "@/lib/cfc-case-study";
+import { muxPoster, type CountStat, type MuxClip } from "@/lib/video-case-study";
 
 /* Mux Player only loads once someone clicks play, so a page with eight videos
    costs one poster image per video until then. */
@@ -35,7 +35,7 @@ export function MuxVideo({
   label: string;
   /** Small chapter tag in the poster's top corner. */
   tag?: string;
-  variant?: "hero" | "chapter";
+  variant?: "hero" | "chapter" | "card";
   priority?: boolean;
 }) {
   const [active, setActive] = useState(false);
@@ -90,8 +90,6 @@ export function MuxVideo({
 }
 
 /* ── Stat bar: values count up the first time they scroll into view ─────────── */
-type CountStat = { prefix: string; to: number; suffix: string; label: string };
-
 const fmt = (n: number) => Math.round(n).toLocaleString("en-US");
 
 export function StatBar({ stats }: { stats: CountStat[] }) {
@@ -214,7 +212,7 @@ export function ChapterNav({ items }: { items: { id: string; nav: string }[] }) 
 /* ── Screenshot grid with a lightbox ────────────────────────────────────────── */
 type Shot = { src: string; width: number; height: number; label: string; alt: string };
 
-export function Gallery({ shots, variant = "grid" }: { shots: Shot[]; variant?: "grid" | "strip" }) {
+export function Gallery({ shots, variant = "grid" }: { shots: Shot[]; variant?: "grid" | "strip" | "single" }) {
   const [open, setOpen] = useState<number | null>(null);
   const dialog = useRef<HTMLDialogElement>(null);
 
@@ -291,37 +289,5 @@ export function Gallery({ shots, variant = "grid" }: { shots: Shot[]; variant?: 
         )}
       </dialog>
     </>
-  );
-}
-
-/* ── Local video (AFAB card) with a poster facade ───────────────────────────── */
-export function LocalVideo({ src, poster, title }: { src: string; poster: string; title: string }) {
-  const [active, setActive] = useState(false);
-  const box = useRef<HTMLDivElement>(null);
-
-  return (
-    <div className={`vid v-card${active ? " on" : ""}`} ref={box}>
-      {active ? (
-        <video src={src} poster={poster} controls autoPlay playsInline onPlay={() => pauseOthers(box.current)} />
-      ) : (
-        <button
-          type="button"
-          className="vposter"
-          onClick={() => {
-            pauseOthers(box.current);
-            setActive(true);
-          }}
-          aria-label={`Play video: ${title}`}
-        >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={poster} alt="" loading="lazy" decoding="async" />
-          <span className="vshade" aria-hidden />
-          <span className="vcta">
-            <span className="vplay" aria-hidden><Play /></span>
-            <span className="vlabel">{title}</span>
-          </span>
-        </button>
-      )}
-    </div>
   );
 }

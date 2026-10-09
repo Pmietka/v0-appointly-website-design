@@ -1,64 +1,12 @@
 /**
- * Clean Floor Coatings flagship case study on /case-studies.
- *
- * Every chapter is built around one of Phil's interview clips on Mux. The
- * headline, pull quote and caption for a chapter only ever say what Phil says
- * in that clip, so the video is always the proof and the text is the caption.
- * Pull quotes are verbatim from the clip transcripts.
- *
- * The rest of the site (homepage cards, the at a glance numbers) still reads
- * the Clean Floor Coatings entry in lib/case-studies.ts.
+ * Clean Floor Coatings video case study: Phil's interview clips on Mux, the
+ * chapter copy around them, and the stat bar. Rendered on /case-studies and
+ * /case-studies/clean-floor-coatings. See lib/video-case-study.ts for the rules
+ * the chapter copy follows.
  */
 
-export type MuxClip = {
-  playbackId: string;
-  /** Seconds into the clip for the poster frame. */
-  posterTime: number;
-  /** Display length, e.g. "0:39". */
-  length: string;
-  /** Title Mux Data reports for this video. */
-  title: string;
-};
-
-export type ChapterImage =
-  | {
-      kind: "photo";
-      src: string;
-      width: number;
-      height: number;
-      alt: string;
-      caption: string;
-      /** Crop the photo to a focal point instead of showing it whole. */
-      crop?: { aspect: string; position: string };
-    }
-  | {
-      kind: "person";
-      src: string;
-      width: number;
-      height: number;
-      alt: string;
-      name: string;
-      role: string;
-      caption: string;
-    }
-  | { kind: "calendar-pair"; caption: string }
-  | { kind: "then-now"; caption: string }
-  | { kind: "funnel"; caption: string };
-
-export type Chapter = {
-  id: string;
-  nav: string;
-  headline: string;
-  clip: MuxClip;
-  quote: string;
-  caption: string;
-  image: ChapterImage;
-};
-
-export const muxPoster = (playbackId: string, time: number, width = 1280) =>
-  `https://image.mux.com/${playbackId}/thumbnail.webp?time=${time}&width=${width}`;
-
-export const formatTime = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
+import { INTERVIEW_TRANSCRIPT } from "@/lib/cfc-interview-transcript";
+import type { Chapter, CountStat, MuxClip, VideoCaseStudy } from "@/lib/video-case-study";
 
 const CLIPS = {
   leadIsntALead: {
@@ -105,30 +53,13 @@ const CLIPS = {
   },
 } satisfies Record<string, MuxClip>;
 
-/* ── Hero ────────────────────────────────────────────────────────────────────
-   The "booked five days a week" clip, which says the hero headline in Phil's
-   own words. The clips have captions burned in, so no caption track. */
-export const HERO_VIDEO = {
-  clip: { ...CLIPS.businessGrowth, posterTime: 43.5 } satisfies MuxClip,
-  label: "Watch Phil, 59 sec",
-};
-
-/* The full 14:54 interview is not embedded on the page. The transcript links
-   out to Mux's hosted player for anyone who wants the whole conversation. */
-export const FULL_INTERVIEW = {
-  url: "https://player.mux.com/Af5b1ibLi55oW4BiBlrGghZl7ZM6vKjHreBwiEroLuM",
-  length: "14:54",
-};
-
 const CAL = {
   week1: { src: "/images/case-studies/cfc-cal-week1.webp", width: 1447, height: 414, label: "Week 1" },
   week2: { src: "/images/case-studies/cfc-cal-week2.webp", width: 1410, height: 486, label: "Week 2" },
   week3: { src: "/images/case-studies/cfc-cal-week3.webp", width: 1445, height: 548, label: "Week 3" },
 };
 
-export const CFC_CALENDAR = [CAL.week1, CAL.week2, CAL.week3];
-
-export const CHAPTERS: Chapter[] = [
+const CHAPTERS: Chapter[] = [
   {
     id: "before",
     nav: "Before",
@@ -140,6 +71,21 @@ export const CHAPTERS: Chapter[] = [
       "Phil's old leads were Facebook forms and price shoppers. Now every appointment arrives with two paragraphs on the homeowner, and the objection he expected about a young company with few reviews never comes up.",
     image: {
       kind: "then-now",
+      label:
+        "Then: a Facebook lead with no phone number asking for the lowest price on 440 square feet. Now: a two paragraph booking note on a qualified homeowner.",
+      then: {
+        source: "Facebook lead form",
+        text: "I got 440 square feet, what's your lowest price? Can you beat this other guy?",
+        style: "bubble",
+        meta: ["No phone number given"],
+        icon: "phone-off",
+      },
+      now: {
+        source: "Booking note from Appointly",
+        text: "Talked to this homeowner. He just moved into his house and has a lot of stuff to move out first. Some damage, and the spalling will need repair.",
+        style: "note",
+        meta: ["Qualified by phone", "Ready to buy"],
+      },
       caption: "Built from Phil's own description in this clip.",
     },
   },
@@ -154,6 +100,7 @@ export const CHAPTERS: Chapter[] = [
       "Phil doesn't run the ads or even look at the creative. He wakes up to homeowners who expect a fair price for a really good product, not the cheapest guy.",
     image: {
       kind: "calendar-pair",
+      shots: [CAL.week1, CAL.week3],
       caption: "Week 1 and week 3 of Phil's estimate calendar. Every blue block is a homeowner we qualified by phone.",
     },
   },
@@ -168,6 +115,13 @@ export const CHAPTERS: Chapter[] = [
       "Google and Facebook leads are raw material Phil has to work. Our appointments are ready to close: some homeowners get a quote on Thursday and pay for the finished floor on Monday.",
     image: {
       kind: "funnel",
+      label:
+        "A funnel: Google and Facebook leads at the top are raw material, superfluous calls in the middle, and Appointly appointments at the bottom are ready to make a buying decision.",
+      tiers: [
+        { title: "Google and Facebook leads", text: "Raw material you still have to convert into dollars" },
+        { title: "Superfluous calls", text: "Price shoppers, extra trips, extra work" },
+        { title: "Appointly appointments", text: "Bottom of the funnel, ready to buy" },
+      ],
       caption: "The funnel, the way Phil draws it in this clip.",
     },
   },
@@ -226,13 +180,52 @@ export const CHAPTERS: Chapter[] = [
   },
 ];
 
-/** Stat bar under the hero. `to` is what the number counts up to. */
-export const CFC_STATS = [
+const STATS: CountStat[] = [
   { prefix: "~", to: 70, suffix: "%", label: "Close rate on shown appointments" },
   { prefix: "", to: 37, suffix: "", label: "Shown appointments in month one" },
   { prefix: "", to: 5, suffix: " days", label: "A week, booked" },
   { prefix: "~$", to: 2600, suffix: "", label: "Monthly ad spend" },
 ];
 
-export const CFC_STATS_NOTE =
-  "Close rate counts immediate closes only, on appointments that have already taken place. Homeowners who sign later are not included, and Phil says one appointment often turns into two or three jobs in the same neighborhood.";
+const NAMES_NOTE = "Homeowner names shortened to first name and last initial.";
+
+export const CFC_STORY: VideoCaseStudy = {
+  slug: "clean-floor-coatings",
+  seo: {
+    title: "Clean Floor Coatings Case Study | Phil on Video | Appointly",
+    description:
+      "Watch Phil from Clean Floor Coatings explain how Appointly took him from two or three floors a week to booked five days a week in Myrtle Beach, with a ~70% close rate on shown appointments.",
+  },
+  ownerFirst: "Phil",
+  cite: "Phil A., in the clip",
+  hero: {
+    lead: "From two or three floors a week to",
+    highlight: "booked five days a week.",
+    sub: "Phil runs Clean Floor Coatings in Myrtle Beach, one of the most crowded coating markets in the Southeast. Here's what changed when we started booking his calendar, told by Phil himself.",
+    /* The "booked five days a week" clip, which says the hero headline in
+       Phil's own words. The clips have captions burned in, so no caption track. */
+    clip: { ...CLIPS.businessGrowth, posterTime: 43.5 } satisfies MuxClip,
+    label: "Watch Phil, 59 sec",
+    description:
+      "Phil A. of Clean Floor Coatings on going from two or three floors a week to booked five days a week.",
+  },
+  stats: STATS,
+  statsNote:
+    "Close rate counts immediate closes only, on appointments that have already taken place. Homeowners who sign later are not included, and Phil says one appointment often turns into two or three jobs in the same neighborhood.",
+  chapters: CHAPTERS,
+  calendar: {
+    id: "calendar-proof",
+    title: "Three weeks of Phil's estimate calendar",
+    legend: `Every blue block is a homeowner we qualified by phone and booked. Struck through events are cancellations. ${NAMES_NOTE} Tap any week to open it full size.`,
+    shots: [CAL.week1, CAL.week2, CAL.week3],
+  },
+  /* The full interview is not embedded on the page. The transcript links out
+     to Mux's hosted player for anyone who wants the whole conversation. */
+  interview: {
+    url: "https://player.mux.com/Af5b1ibLi55oW4BiBlrGghZl7ZM6vKjHreBwiEroLuM",
+    length: "14:54",
+    transcript: INTERVIEW_TRANSCRIPT,
+  },
+  ctaQuote: "Buy yourself 30 days and give it a try.",
+  uploadDate: "2026-09-24",
+};

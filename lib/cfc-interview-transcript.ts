@@ -4,7 +4,7 @@
  * audio with speech recognition, with filler words removed and misheard words
  * corrected by hand.
  */
-export type TranscriptTurn = { t: number; speaker: "Jacob" | "Phil"; text: string };
+import type { TranscriptTurn } from "@/lib/video-case-study";
 
 export const INTERVIEW_TRANSCRIPT: TranscriptTurn[] = [
   { t: 0, speaker: "Jacob", text: "I'm here with Mr. Phil right here, he's owner of Clean Floor Coatings. We've gotten 37 showed appointments so far. Does that sound right?" },
