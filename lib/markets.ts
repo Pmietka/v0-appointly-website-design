@@ -14,58 +14,15 @@ export type ClaimedMarket = {
   name: string;
   /** Two-letter state or province codes the market covers. */
   states: string[];
-  /** Cities and towns inside the market, as a homeowner would write them. */
+  /** Cities inside the market, as a contractor would write them. */
   cities: string[];
 };
 
 export const CLAIMED_MARKETS: ClaimedMarket[] = [
-  {
-    name: "Myrtle Beach metro, SC",
-    states: ["SC"],
-    cities: [
-      "Myrtle Beach",
-      "North Myrtle Beach",
-      "Conway",
-      "Surfside Beach",
-      "Garden City",
-      "Murrells Inlet",
-      "Little River",
-      "Carolina Forest",
-      "Socastee",
-    ],
-  },
-  {
-    name: "Port St. Lucie metro, FL",
-    states: ["FL"],
-    cities: [
-      "Port St. Lucie",
-      "Fort Pierce",
-      "Stuart",
-      "Jensen Beach",
-      "Palm City",
-      "Tradition",
-      "St. Lucie West",
-      "Hobe Sound",
-    ],
-  },
-  {
-    name: "Spokane, eastern Washington, and northern Idaho",
-    states: ["WA", "ID"],
-    cities: [
-      "Spokane",
-      "Spokane Valley",
-      "Liberty Lake",
-      "Cheney",
-      "Airway Heights",
-      "Mead",
-      "Deer Park",
-      "Coeur d'Alene",
-      "Post Falls",
-      "Hayden",
-      "Rathdrum",
-      "Sandpoint",
-    ],
-  },
+  { name: "Spokane, WA", states: ["WA"], cities: ["Spokane"] },
+  { name: "Port St. Lucie, FL", states: ["FL"], cities: ["Port St. Lucie"] },
+  { name: "Fort Wayne, IN", states: ["IN"], cities: ["Fort Wayne"] },
+  { name: "Myrtle Beach, SC", states: ["SC"], cities: ["Myrtle Beach"] },
 ];
 
 const STATE_CODES: Record<string, string> = {
