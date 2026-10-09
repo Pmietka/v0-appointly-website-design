@@ -140,13 +140,14 @@ export const CLIENT_LOGOS: ClientLogo[] = [
   },
   {
     name: "TreadStrong Solutions",
+    market: "Fort Wayne, IN",
     src: "/images/clients/treadstrong-solutions.webp",
     width: 720,
     height: 411,
   },
   {
     name: "Diamond Epoxy Finishes",
-    market: "Florida",
+    market: "Yalaha, FL",
     src: "/images/clients/diamond-epoxy-finishes.webp",
     width: 600,
     height: 378,
