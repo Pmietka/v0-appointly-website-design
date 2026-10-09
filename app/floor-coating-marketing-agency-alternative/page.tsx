@@ -215,8 +215,8 @@ export default function InsulationMarketingAgencyPage() {
         <FaqBlock items={faqItems} />
         <ProofSection />
         <SeoResourceLinks
-          title="Resources for contractors comparing agencies and performance models."
-          description="These pages and articles add more depth around the Appointly Model, booked appointments, and how speed to lead fills your calendar."
+          title="Still comparing agencies?"
+          description="Pricing, why contractors leave agencies, and how to fill the calendar without waiting months."
           resources={getCommercialResources("floor-coating-marketing-agency-alternative")}
         />
       </main>

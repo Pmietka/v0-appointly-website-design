@@ -781,8 +781,8 @@ export default function FloorCoatingBenchmarksPage() {
 
         <SeoResourceLinks
           eyebrow="Next Step"
-          title="Service pages for contractors ready to act on the numbers."
-          description="Each benchmark on this page comes from the system described on these pages."
+          title="Ready to act on the numbers?"
+          description="Every benchmark on this page comes from the system described below."
           resources={commercialResources}
         />
       </main>

@@ -215,7 +215,7 @@ export default function SmallMarketInsulationLeadsPage() {
         <ProofSection />
         <SeoResourceLinks
           title="Related pages for contractors serving smaller service areas."
-          description="These resources support local market positioning with more detail on exclusivity, booked estimates, and seasonal planning."
+          description="Reviews, seasonality, crew capacity, and what market exclusivity means in a smaller town."
           resources={getCommercialResources("floor-coating-leads-small-markets")}
         />
       </main>

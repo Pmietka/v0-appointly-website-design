@@ -215,7 +215,7 @@ export default function PayPerLeadInsulationPage() {
         <FaqBlock items={faqItems} />
         <SeoResourceLinks
           title="Keep exploring the pages contractors read next."
-          description="Supporting service pages and guides that go deeper on the topics covered above."
+          description="Pages and guides that go deeper on the topics covered above."
           resources={getCommercialResources("pricing")}
         />
       </main>

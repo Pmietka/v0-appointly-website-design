@@ -282,8 +282,8 @@ export default function AboutPage() {
         />
         <ProofSection />
         <SeoResourceLinks
-          title="Supporting pages worth visiting next."
-          description="These pages reinforce the about story with clearer commercial intent, pricing context, and proof-led comparisons."
+          title="Worth reading next."
+          description="Pricing, why contractors leave agencies, and how to fill the calendar without waiting months."
           resources={getCommercialResources("floor-coating-marketing-agency-alternative")}
         />
 
