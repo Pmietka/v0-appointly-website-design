@@ -381,8 +381,8 @@ export default function ApplyClient({ children }: { children?: React.ReactNode }
             </div>
             <div className="heroform" id="apply">
               <p className="formkicker">
-                <strong>Our clients get 40 to 60 appointments a month.</strong>{" "}
-                Unqualified estimate, you don&apos;t pay. No contracts. No BS.
+                <strong>Our clients get <span className="fknum">40 to 60</span> appointments a month.</strong>{" "}
+                <span className="fksub">Unqualified estimate, you don&apos;t pay. No contracts. No BS.</span>
               </p>
               <button type="button" className="ctabtn" onClick={() => setOpen(true)}>
                 <span className="ctabtn-top">Check Availability</span>
