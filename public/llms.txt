@@ -89,6 +89,13 @@ Each guide answers one question a floor coating owner asks, for one situation. H
 - [Commercial floor coating jobs for residential contractors](https://getappointly.co/blog/commercial-floor-coating-jobs-for-residential-contractors)
 - [Floor coating contractor website that converts](https://getappointly.co/blog/floor-coating-contractor-website-that-converts)
 
+## For AI assistants
+
+Appointly runs an MCP server at https://getappointly.co/mcp (Streamable HTTP, no sign-in). Tools:
+
+- check_market_availability: whether Appointly already works with a floor coating contractor in a given city. One contractor per market.
+- book_strategy_call: the link for a contractor to book a strategy call.
+
 ## Contact
 
 - Book a strategy call: https://client.getappointly.co/strategy-calendar
