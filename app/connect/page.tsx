@@ -31,8 +31,8 @@ export const metadata: Metadata = {
 };
 
 /* The page tells one story, top to bottom:
-     1. Who are these guys?      (founders, the phone team, what we are not)
-     2. A wall of proof          (every interview clip, message and number)
+     1. A wall of proof          (every interview clip, message and number)
+     2. Who are these guys?      (founders, the phone team, what we are not)
      3. How the whole thing works (process, the model, results, the comparison)
    The hero, survey modal and closing CTA live in ApplyClient. */
 export default function ConnectPage() {
@@ -58,8 +58,20 @@ export default function ConnectPage() {
         </div>
       </section>
 
-      {/* 1 · Who are these guys? */}
-      <section className="sec" id="who">
+      {/* 1 · The wall of proof, right under the fold */}
+      <ProofSection
+        eyebrow="Proof"
+        title={<>Don&apos;t take our word for it. <span className="hl">Take theirs.</span></>}
+        sub="Our clients on camera, in their own messages, and on their own calendars. Brand new clients and some of our very first. Click anything."
+      >
+        <div className="midcta">
+          <p>We take one floor coating contractor per market. Find out if yours is still open.</p>
+          <ApplyButton main="Claim Your Market" />
+        </div>
+      </ProofSection>
+
+      {/* 2 · Who are these guys? */}
+      <section className="sec tint" id="who">
         <div className="orb a" />
         <div className="wrap">
           <p className="eyebrow">Who are these guys?</p>
@@ -78,19 +90,6 @@ export default function ConnectPage() {
           <PhoneTeam />
         </div>
       </section>
-
-      {/* 2 · The wall of proof */}
-      <ProofSection
-        tint
-        eyebrow="Proof"
-        title={<>Don&apos;t take our word for it. <span className="hl">Take theirs.</span></>}
-        sub="Our clients on camera, in their own messages, and on their own calendars. Brand new clients and some of our very first. Click anything."
-      >
-        <div className="midcta">
-          <p>We take one floor coating contractor per market. Find out if yours is still open.</p>
-          <ApplyButton main="Claim Your Market" />
-        </div>
-      </ProofSection>
 
       {/* 3 · How it works, start to finish */}
       <section className="sec" id="how-it-works">

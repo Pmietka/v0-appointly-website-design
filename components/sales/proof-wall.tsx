@@ -5,13 +5,12 @@ import Image from "next/image";
 import { Play } from "lucide-react";
 
 import { MuxVideo } from "@/app/case-studies/cfc-interactive";
-import type { Wall, WallTile } from "@/lib/proof-wall";
+import type { WallTile } from "@/lib/proof-wall";
 
 /* ============================================================================
-   The wall of proof, organized: the numbers, then every interview clip
-   grouped by client, then what clients have told us, then their calendars.
-   Everything shows by default; the chips narrow it to one kind. Data comes
-   from lib/proof-wall.ts. Styles in app/sales.css (.pw*).
+   The wall of proof: interview clips, client messages, numbers and real
+   calendars in one masonry wall. Tiles come from lib/proof-wall.ts. Styles in
+   app/sales.css (.pw*).
    ============================================================================ */
 
 const FILTERS = [
@@ -21,6 +20,15 @@ const FILTERS = [
   { key: "results", label: "Numbers & calendars" },
 ] as const;
 type FilterKey = (typeof FILTERS)[number]["key"];
+
+const GROUP: Record<WallTile["kind"], Exclude<FilterKey, "all">> = {
+  clip: "video",
+  video: "video",
+  message: "message",
+  shot: "message",
+  stat: "results",
+  calendar: "results",
+};
 
 function initials(name: string) {
   return name
@@ -60,13 +68,13 @@ function LocalVideo({ src, poster, label }: { src: string; poster: string; label
   );
 }
 
-function Tile({ t }: { t: WallTile }) {
-  const cls = (c: string) => `pwtile ${c}`;
+function Tile({ t, mx }: { t: WallTile; mx: boolean }) {
+  const cls = (c: string) => `pwtile ${c}${mx ? " mx" : ""}`;
   switch (t.kind) {
     case "clip":
       return (
         <figure className={cls("pwclip")}>
-          <MuxVideo variant="card" clip={t.clip} label={`Watch, ${t.clip.length}`} tag={t.tag} />
+          <MuxVideo variant="card" clip={t.clip} label={`Watch, ${t.clip.length}`} tag={t.company} />
           <figcaption>
             <p className="pwq">&ldquo;{t.quote}&rdquo;</p>
             <span className="pwname">{t.name}</span>
@@ -138,34 +146,28 @@ function Tile({ t }: { t: WallTile }) {
   }
 }
 
-function Block({ title, count, unit, children }: { title: string; count: number; unit: string; children: React.ReactNode }) {
-  return (
-    <div className="pwblock">
-      <div className="pwblock-hd">
-        <h3>{title}</h3>
-        <span>{count} {unit}</span>
-      </div>
-      {children}
-    </div>
-  );
-}
-
-export function ProofWall({ wall }: { wall: Wall }) {
+export function ProofWall({
+  tiles,
+  initial = 16,
+  initialMobile = 8,
+}: {
+  tiles: WallTile[];
+  /** Tiles shown before "Show the whole wall". */
+  initial?: number;
+  /** The same, on phones, where the wall is a single column. */
+  initialMobile?: number;
+}) {
   const [filter, setFilter] = useState<FilterKey>("all");
-  const show = (k: FilterKey) => filter === "all" || filter === k;
+  const [expanded, setExpanded] = useState(false);
 
-  const clipCount = wall.videos.reduce((n, g) => n + g.tiles.length, 0);
-  const counts: Record<FilterKey, number> = {
-    video: clipCount,
-    message: wall.messages.length,
-    results: wall.stats.length + wall.calendars.length,
-    all: 0,
-  };
-  counts.all = counts.video + counts.message + counts.results;
+  const shown = filter === "all" ? tiles : tiles.filter((t) => GROUP[t.kind] === filter);
+  const collapsed = filter === "all" && !expanded && shown.length > initial;
+  const visible = collapsed ? shown.slice(0, initial) : shown;
+  const count = (k: FilterKey) => (k === "all" ? tiles.length : tiles.filter((t) => GROUP[t.kind] === k).length);
 
   return (
     <div className="pw">
-      <div className="pwfilters" role="group" aria-label="Filter the proof">
+      <div className="pwfilters" role="group" aria-label="Filter the wall">
         {FILTERS.map((f) => (
           <button
             type="button"
@@ -174,50 +176,23 @@ export function ProofWall({ wall }: { wall: Wall }) {
             aria-pressed={filter === f.key}
             onClick={() => setFilter(f.key)}
           >
-            {f.label} <span>{counts[f.key]}</span>
+            {f.label} <span>{count(f.key)}</span>
           </button>
         ))}
       </div>
 
-      {show("results") && (
-        <Block title="By the numbers" count={wall.stats.length} unit="results">
-          <div className="pwstats">
-            {wall.stats.map((t) => <Tile t={t} key={t.id} />)}
-          </div>
-        </Block>
-      )}
+      <div className={`pwgrid${collapsed ? " clipped" : ""}`}>
+        {visible.map((t, i) => (
+          <Tile t={t} key={t.id} mx={collapsed && i >= initialMobile} />
+        ))}
+      </div>
 
-      {show("video") && (
-        <Block title="On camera" count={clipCount} unit="clips">
-          {wall.videos.map((g) => (
-            <div className="pwgroup" key={g.id}>
-              <div className="pwgroup-hd">
-                <b>{g.title}</b>
-                <span>{g.sub}</span>
-                <em>{g.tiles.length} {g.tiles.length === 1 ? "clip" : "clips"}</em>
-              </div>
-              <div className="pwrow">
-                {g.tiles.map((t) => <Tile t={t} key={t.id} />)}
-              </div>
-            </div>
-          ))}
-        </Block>
-      )}
-
-      {show("message") && (
-        <Block title="In their words" count={wall.messages.length} unit="clients">
-          <div className="pwmsgs">
-            {wall.messages.map((t) => <Tile t={t} key={t.id} />)}
-          </div>
-        </Block>
-      )}
-
-      {show("results") && (
-        <Block title="On their calendars" count={wall.calendars.length} unit="calendars">
-          <div className="pwcals">
-            {wall.calendars.map((t) => <Tile t={t} key={t.id} />)}
-          </div>
-        </Block>
+      {collapsed && (
+        <div className="pwmore">
+          <button type="button" className="pwmore-btn" onClick={() => setExpanded(true)}>
+            Show the whole wall ({shown.length})
+          </button>
+        </div>
       )}
     </div>
   );

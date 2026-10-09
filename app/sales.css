@@ -54,7 +54,7 @@
 .dscroll .pwfeat-link:hover svg{transform:translate(2px,-2px)}
 
 /* ── the wall ──────────────────────────────────────────────────────────────── */
-.dscroll .pw{--g:clamp(12px,1.8vw,16px);margin-top:clamp(34px,5vw,54px)}
+.dscroll .pw{margin-top:clamp(34px,5vw,54px)}
 .dscroll .pwfilters{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
 .dscroll .pwchip{font-family:inherit;font-size:14px;font-weight:600;color:var(--ink-2);background:#fff;border:1px solid var(--line);
   border-radius:999px;padding:8px 15px;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
@@ -63,49 +63,20 @@
 .dscroll .pwchip.on{background:var(--ink);border-color:var(--ink);color:#fff}
 .dscroll .pwchip.on span{color:rgba(255,255,255,.6)}
 
-/* one block per kind of proof, each with a ruled header */
-.dscroll .pwblock{margin-top:clamp(40px,6vw,64px)}
-.dscroll .pwblock-hd{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-bottom:12px;
-  border-bottom:1px solid #d9d9d9;margin-bottom:clamp(16px,2.4vw,22px)}
-.dscroll .pwblock-hd h3{font-size:clamp(21px,2.8vw,27px);font-weight:700;letter-spacing:-.02em}
-.dscroll .pwblock-hd span{font-size:13px;font-weight:600;color:var(--ink-4);white-space:nowrap}
-
-.dscroll .pwtile{margin:0;display:flex;flex-direction:column;border-radius:18px;overflow:hidden;background:#fff;
+.dscroll .pwgrid{--g:clamp(12px,1.8vw,16px);columns:1;column-gap:var(--g);margin-top:clamp(20px,3vw,28px);position:relative}
+@media(min-width:640px){.dscroll .pwgrid{columns:2}}
+@media(min-width:980px){.dscroll .pwgrid{columns:3}}
+@media(min-width:1180px){.dscroll .pwgrid{columns:4}}
+.dscroll .pwgrid.clipped::after{content:"";position:absolute;left:0;right:0;bottom:0;height:180px;pointer-events:none;
+  background:linear-gradient(180deg,rgba(243,244,246,0),var(--pwfade,var(--tint)) 85%)}
+.dscroll .pwsec:not(.tint) .pwgrid.clipped::after{--pwfade:var(--bg)}
+.dscroll .pwtile{break-inside:avoid;margin:0 0 var(--g);display:block;border-radius:18px;overflow:hidden;background:#fff;
   border:1px solid var(--line);box-shadow:0 14px 34px -28px rgba(0,0,0,.4)}
 
-/* numbers: an even grid of dark tiles */
-.dscroll .pwstats{display:grid;grid-template-columns:1fr 1fr;gap:var(--g)}
-@media(min-width:900px){.dscroll .pwstats{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:479px){.dscroll .pwstats{grid-template-columns:1fr}}
+/* collapsed on phones: a shorter first screen of the wall */
+@media(max-width:639px){.dscroll .pwgrid.clipped .pwtile.mx{display:none}}
 
-/* clips: one row per client. A grid on desktop, a swipeable row on phones */
-.dscroll .pwgroup+.pwgroup{margin-top:clamp(24px,3.4vw,34px)}
-.dscroll .pwgroup-hd{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;margin-bottom:12px}
-.dscroll .pwgroup-hd b{font-size:16px;font-weight:700}
-.dscroll .pwgroup-hd span{font-size:14px;color:var(--ink-3)}
-.dscroll .pwgroup-hd em{font-style:normal;font-size:12px;font-weight:700;color:var(--ink-3);background:#fff;border:1px solid var(--line);border-radius:999px;padding:3px 9px}
-.dscroll .pwrow{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--g);align-items:stretch}
-@media(max-width:899px){.dscroll .pwrow{grid-template-columns:1fr 1fr}}
-@media(max-width:639px){
-  .dscroll .pwrow{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:82%;overflow-x:auto;
-    scroll-snap-type:x mandatory;margin:0 calc(-1 * clamp(20px,5vw,40px));padding:2px clamp(20px,5vw,40px) 10px;scroll-padding:0 clamp(20px,5vw,40px);scrollbar-width:none}
-  .dscroll .pwrow::-webkit-scrollbar{display:none}
-  .dscroll .pwrow>.pwtile{scroll-snap-align:start}
-}
-
-/* quotes: three tidy columns of message cards */
-.dscroll .pwmsgs{columns:1;column-gap:var(--g)}
-@media(min-width:640px){.dscroll .pwmsgs{columns:2}}
-@media(min-width:980px){.dscroll .pwmsgs{columns:3}}
-.dscroll .pwmsgs>.pwtile{break-inside:avoid;margin-bottom:var(--g)}
-
-/* calendars: an even row of screenshots */
-.dscroll .pwcals{display:grid;grid-template-columns:1fr;gap:var(--g);align-items:start}
-@media(min-width:760px){.dscroll .pwcals{grid-template-columns:repeat(3,1fr)}}
-
-/* captions sit flush at the bottom so every card in a row lines up */
-.dscroll .pwclip figcaption{padding:14px 16px 16px;flex:1;display:flex;flex-direction:column}
-.dscroll .pwclip .pwname{margin-top:auto;padding-top:8px}
+.dscroll .pwclip figcaption{padding:14px 16px 16px}
 .dscroll .pwq{font-size:15px;line-height:1.45;font-weight:600;color:var(--ink);letter-spacing:-.005em}
 .dscroll .pwname{display:block;font-size:12.5px;font-weight:600;color:var(--ink-4);margin-top:8px}
 
@@ -118,7 +89,7 @@
 .dscroll .pwmsg-who span{font-size:12px;color:var(--ink-4);line-height:1.3}
 .dscroll .pwbubble{position:relative;margin-top:12px;background:#e9e9eb;color:#111;border-radius:18px 18px 18px 6px;padding:11px 14px;
   font-size:15px;line-height:1.45}
-.dscroll .pwpill{align-self:flex-start;display:inline-block;margin-top:12px;font-size:12.5px;font-weight:700;color:#0f766e;background:#ecfdf5;border-radius:8px;padding:6px 10px}
+.dscroll .pwpill{display:inline-block;margin-top:12px;font-size:12.5px;font-weight:700;color:#0f766e;background:#ecfdf5;border-radius:8px;padding:6px 10px}
 
 .dscroll .pwshot img{display:block;width:100%;height:auto}
 .dscroll .pwshot .pwname{padding:0 14px 12px}
@@ -127,7 +98,7 @@
 .dscroll .pwstat::before{content:"";position:absolute;inset:0 0 auto;height:4px;background:linear-gradient(90deg,#cfffae,#ace5ff,#ffc9e6)}
 .dscroll .pwstat-v{display:block;font-size:clamp(40px,5vw,52px);font-weight:800;letter-spacing:-.035em;line-height:1}
 .dscroll .pwstat-l{display:block;font-size:15px;color:rgba(255,255,255,.78);line-height:1.4;margin-top:10px}
-.dscroll .pwstat-n{font-size:12.5px;font-weight:600;color:#9be7c4;margin-top:auto;padding-top:14px}
+.dscroll .pwstat-n{font-size:12.5px;font-weight:600;color:#9be7c4;margin-top:14px}
 
 .dscroll .pwcal a{display:block;background:#fff}
 .dscroll .pwcal img{display:block;width:100%;height:auto}
@@ -136,6 +107,10 @@
 .dscroll .pwpip{width:10px;height:10px;border-radius:3px;background:#3b82f6;flex:none}
 .dscroll .pwcal .pwname{margin-top:4px}
 
+.dscroll .pwmore{display:flex;justify-content:center;margin-top:6px}
+.dscroll .pwmore-btn{font-family:inherit;font-size:15px;font-weight:700;color:#fff;background:var(--ink);border:none;border-radius:12px;
+  padding:14px 24px;cursor:pointer;box-shadow:0 16px 36px -18px rgba(15,23,42,.6);transition:background .15s,transform .15s}
+.dscroll .pwmore-btn:hover{background:#000;transform:translateY(-1px)}
 
 /* ── what we are / are not ─────────────────────────────────────────────────── */
 .dscroll .isnot{display:grid;grid-template-columns:1fr;gap:clamp(12px,2vw,16px);margin-top:clamp(26px,4vw,40px)}
@@ -255,5 +230,5 @@
 }
 
 @media(prefers-reduced-motion:reduce){
-  .dscroll .pwsec .vposter img,.dscroll .pwsec .vcta,.dscroll .pwfeat-link svg{transition:none}
+  .dscroll .pwsec .vposter img,.dscroll .pwsec .vcta,.dscroll .pwmore-btn,.dscroll .pwfeat-link svg{transition:none}
 }

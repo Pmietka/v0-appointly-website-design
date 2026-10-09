@@ -2,13 +2,13 @@ import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
 import { MuxVideo } from "@/app/case-studies/cfc-interactive";
-import { buildWall, featuredStories } from "@/lib/proof-wall";
+import { buildWallTiles, featuredStories } from "@/lib/proof-wall";
 import { ProofWall } from "./proof-wall";
 
 /* ============================================================================
    The proof block shared by /connect and /lander: the three full video case
-   studies up top, then the full wall underneath: numbers, every clip
-   grouped by client, client quotes and calendars. Styles in app/sales.css.
+   studies up top, then the mixed wall of clips, messages, numbers and
+   calendars underneath. Styles in app/sales.css.
    ============================================================================ */
 
 export function FeaturedStories() {
@@ -55,6 +55,7 @@ export function ProofSection({
   eyebrow,
   title,
   sub,
+  initial,
   tint = false,
   children,
 }: {
@@ -62,12 +63,14 @@ export function ProofSection({
   eyebrow: string;
   title: React.ReactNode;
   sub?: React.ReactNode;
+  /** Tiles shown before "Show the whole wall". */
+  initial?: number;
   tint?: boolean;
   /** Rendered under the wall, e.g. a call to action. */
   children?: React.ReactNode;
 }) {
-  const wall = buildWall();
-  const clips = wall.videos.reduce((n, g) => n + g.tiles.length, 0) + featuredStories().length;
+  const tiles = buildWallTiles();
+  const clips = tiles.filter((t) => t.kind === "clip" || t.kind === "video").length + featuredStories().length;
   return (
     <section className={`sec pwsec${tint ? " tint" : ""}`} id={id}>
       <div className="wrap pwwide">
@@ -77,12 +80,12 @@ export function ProofSection({
           {sub && <p className="sub">{sub}</p>}
           <p className="pwcount">
             <span><b>{clips}</b> interview clips</span>
-            <span><b>{wall.messages.length}</b> client quotes</span>
+            <span><b>{tiles.filter((t) => t.kind === "message" || t.kind === "shot").length}</b> client quotes</span>
             <span><b>3</b> full case studies</span>
           </p>
         </div>
         <FeaturedStories />
-        <ProofWall wall={wall} />
+        <ProofWall tiles={tiles} initial={initial} />
         {children}
       </div>
     </section>

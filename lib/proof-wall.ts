@@ -20,7 +20,7 @@ import { VIDEO_STORIES } from "@/lib/video-case-studies";
 import type { MuxClip } from "@/lib/video-case-study";
 
 export type WallTile =
-  | { kind: "clip"; id: string; clip: MuxClip; quote: string; name: string; /** Chapter topic, shown on the poster. */ tag: string }
+  | { kind: "clip"; id: string; clip: MuxClip; quote: string; name: string; company: string }
   | { kind: "video"; id: string; src: string; poster: string; name: string; caption: string }
   | { kind: "message"; id: string; name: string; who?: string; stat?: string; quote: string; photo?: string }
   | { kind: "stat"; id: string; value: string; label: string; name: string }
@@ -65,24 +65,23 @@ export function featuredStories(): FeaturedStory[] {
   });
 }
 
-/** One row per owner: their chapter clips, in story order. */
-function clipGroups(): WallGroup[] {
-  return VIDEO_STORIES.map((s) => {
+/** Every chapter clip, round robin across owners so no two neighbours match. */
+function chapterClips(): WallTile[] {
+  const perStory = VIDEO_STORIES.map((s) => {
     const cs = CASE_STUDIES.find((c) => c.slug === s.slug)!;
-    return {
-      id: s.slug,
-      title: cs.owner,
-      sub: `${cs.company} · ${cs.marketShort}`,
-      tiles: s.chapters.map<WallTile>((ch) => ({
-        kind: "clip",
-        id: `${s.slug}-${ch.id}`,
-        clip: ch.clip,
-        quote: ch.quote,
-        name: stripCite(ch.cite ?? s.cite),
-        tag: ch.nav,
-      })),
-    };
+    return s.chapters.map<WallTile>((ch) => ({
+      kind: "clip",
+      id: `${s.slug}-${ch.id}`,
+      clip: ch.clip,
+      quote: ch.quote,
+      name: stripCite(ch.cite ?? s.cite),
+      company: cs.shortName,
+    }));
   });
+  const out: WallTile[] = [];
+  const longest = Math.max(...perStory.map((l) => l.length));
+  for (let i = 0; i < longest; i++) perStory.forEach((l) => l[i] && out.push(l[i]));
+  return out;
 }
 
 const toMessage = (t: Testimonial, i: number): WallTile => ({
@@ -131,43 +130,36 @@ function calendarTiles(): WallTile[] {
   });
 }
 
-export type WallGroup = { id: string; title: string; sub: string; tiles: WallTile[] };
-
-export type Wall = {
-  stats: WallTile[];
-  /** Interview clips, one group per client. */
-  videos: WallGroup[];
-  messages: WallTile[];
-  calendars: WallTile[];
-};
-
 /**
- * The full wall, organized by kind: the numbers first, then every clip
- * grouped by client, then what clients have told us, then their calendars.
+ * The full wall, mixed so the eye keeps catching something new: a clip, a
+ * message, a number, a calendar. Leftovers from any list run on at the end.
  */
-export function buildWall(): Wall {
-  const adrian: WallGroup = {
+export function buildWallTiles(): WallTile[] {
+  const clips = chapterClips();
+  // Adrian is one of our earliest clients; his clip sits near the top.
+  clips.splice(2, 0, {
+    kind: "video",
     id: "adrian",
-    title: "Adrian",
-    sub: "One of our first clients",
-    tiles: [
-      {
-        kind: "video",
-        id: "adrian",
-        src: "/videos/adrian.mp4",
-        poster: "/images/proof/adrian-poster.jpg",
-        name: "Adrian",
-        caption: "One of our first clients",
-      },
-    ],
+    src: "/videos/adrian.mp4",
+    poster: "/images/proof/adrian-poster.jpg",
+    name: "Adrian",
+    caption: "One of our first clients",
+  });
+  const messages = [...FEATURED_TESTIMONIALS, ...QUOTE_TESTIMONIALS].map(toMessage);
+  const shots = TEXT_SHOTS.map<WallTile>((s, i) => ({ kind: "shot", id: `shot-${i}`, ...s }));
+  const queues: Record<string, WallTile[]> = {
+    v: clips,
+    m: [...shots, ...messages],
+    s: statTiles(),
+    c: calendarTiles(),
   };
-  return {
-    stats: statTiles(),
-    videos: [...clipGroups(), adrian],
-    messages: [
-      ...TEXT_SHOTS.map<WallTile>((s, i) => ({ kind: "shot", id: `shot-${i}`, ...s })),
-      ...[...FEATURED_TESTIMONIALS, ...QUOTE_TESTIMONIALS].map(toMessage),
-    ],
-    calendars: calendarTiles(),
-  };
+  const pattern = ["v", "m", "s", "v", "m", "v", "c", "m", "v", "s", "m", "v"];
+  const out: WallTile[] = [];
+  while (Object.values(queues).some((q) => q.length)) {
+    for (const k of pattern) {
+      const next = queues[k].shift();
+      if (next) out.push(next);
+    }
+  }
+  return out;
 }
