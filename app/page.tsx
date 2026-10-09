@@ -9,11 +9,11 @@ import { SiteNav, BOOKING_URL, PHONE_DISPLAY, PHONE_HREF } from "@/components/si
 import { DscrollFooter } from "@/components/dscroll-footer";
 import {
   CaseStudyCards,
-  ClientLogos,
   Stars,
   TestimonialWall,
   TrustRow,
 } from "@/components/proof";
+import { LogoMarquee } from "@/components/sales/logo-marquee";
 import { coreFaqItems } from "@/lib/faq";
 import { FEATURED_TESTIMONIALS, QUOTE_TESTIMONIALS } from "@/lib/testimonials";
 import "./home.css";
@@ -146,7 +146,7 @@ export default function HomePage() {
       {/* 2. Who trusts us. The only logo strip on the page. */}
       <section className="logoband" aria-label="Clients">
         <div className="wrap">
-          <ClientLogos />
+          <LogoMarquee moreHref="/case-studies" />
         </div>
       </section>
 

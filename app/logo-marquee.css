@@ -1,0 +1,31 @@
+/* ============================================================================
+   Client logo marquee (components/sales/logo-marquee.tsx), used on the
+   homepage and /connect. Scoped under the .dscroll design system in home.css.
+   ============================================================================ */
+.dscroll .lmq{display:flex;flex-direction:column;align-items:center;gap:clamp(18px,3vw,26px)}
+.dscroll .lmq-view{width:100%;overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.dscroll .lmq-track{list-style:none;display:flex;width:max-content;animation:lmq-scroll 60s linear infinite}
+.dscroll .lmq-view:hover .lmq-track{animation-play-state:paused}
+.dscroll .lmq-item{flex:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;
+  width:clamp(170px,22vw,220px);height:clamp(118px,15vw,140px);margin-right:clamp(12px,2vw,18px);
+  background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px 18px;box-shadow:0 10px 28px -22px rgba(0,0,0,.2)}
+.dscroll .lmq-item.dark{background:#000;border-color:#000}
+.dscroll .lmq-img{display:block;width:auto;max-width:100%;height:clamp(52px,7vw,68px);object-fit:contain}
+.dscroll .lmq-cap{font-size:12px;font-weight:600;color:var(--ink-4);text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.dscroll .lmq-item.dark .lmq-cap{color:rgba(255,255,255,.6)}
+@keyframes lmq-scroll{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){
+  .dscroll .lmq-track{animation:none;flex-wrap:wrap;justify-content:center;width:auto;row-gap:14px}
+  .dscroll .lmq-view{-webkit-mask-image:none;mask-image:none}
+  .dscroll .lmq-item.dupe{display:none}
+}
+
+/* title and "see their results" link, so the strip needs no other stylesheet */
+.dscroll .lmq .logos-title{font-size:clamp(11px,2.2vw,13px);font-weight:700;text-transform:uppercase;letter-spacing:.2em;
+  color:var(--ink-4);text-align:center}
+.dscroll .lmq .logos-more{font-size:14px;font-weight:600;color:var(--ink-2);text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.dscroll .lmq .logos-more:hover{color:var(--ink)}
+.dscroll .lmq .logos-more .arr{transition:transform .15s}
+.dscroll .lmq .logos-more:hover .arr{transform:translateX(3px)}

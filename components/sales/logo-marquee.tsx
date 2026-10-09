@@ -1,15 +1,24 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { CLIENT_LOGOS } from "@/lib/testimonials";
+import "@/app/logo-marquee.css";
 
 /* ============================================================================
    Client logos as an endless scrolling strip. CSS only: the logo set is laid
    out four times and the track slides left by half its width, so the loop is
    seamless at any screen width. Pauses on hover; with reduced motion it is a
-   plain wrapped row. Add a client in lib/testimonials.ts. Styles: app/sales.css.
+   plain wrapped row. Add a client in lib/testimonials.ts. Styles: app/logo-marquee.css.
    ============================================================================ */
 
-export function LogoMarquee({ title = "Trusted by floor coating companies across the country" }: { title?: string }) {
+export function LogoMarquee({
+  title = "Trusted by floor coating companies across the country",
+  moreHref,
+}: {
+  title?: string;
+  /** Adds a "See their results" link under the strip. */
+  moreHref?: string;
+}) {
   const loop = [...CLIENT_LOGOS, ...CLIENT_LOGOS, ...CLIENT_LOGOS, ...CLIENT_LOGOS];
   return (
     <div className="lmq">
@@ -36,6 +45,11 @@ export function LogoMarquee({ title = "Trusted by floor coating companies across
           ))}
         </ul>
       </div>
+      {moreHref && (
+        <Link href={moreHref} className="logos-more">
+          See their results <span className="arr">&rarr;</span>
+        </Link>
+      )}
     </div>
   );
 }
