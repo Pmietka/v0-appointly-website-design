@@ -368,8 +368,8 @@ export default function ApplyClient({ children }: { children?: React.ReactNode }
           <h1>
             Keep Every Crew <span className="hl">Booked Weeks In Advance.</span>
           </h1>
-          <p className="lead">
-            Only Pay When You&apos;re Face to Face With a Qualified Homeowner.
+          <p className="lead heropromise">
+            <span className="hpmark">Only Pay</span> When You&apos;re Face to Face With a Qualified Homeowner.
           </p>
 
           <div className="herorow">
