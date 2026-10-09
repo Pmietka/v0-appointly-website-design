@@ -383,9 +383,10 @@ export default function ApplyClient({ children }: { children?: React.ReactNode }
             </div>
             <div className="heroform" id="apply">
               <p className="formkicker">
-                <strong>Apply for your market.</strong> We take one floor coating
-                contractor per market. Answer a few quick questions, then pick a
-                time. We will confirm on the call whether your area is open.
+                <strong>See how many jobs are waiting in your market.</strong>{" "}
+                We&apos;ll show you the demand in your area, how many jobs we can
+                book you, and the closing rate it takes to make it profitable. One
+                contractor per market, so if your area&apos;s open, they&apos;re all yours.
               </p>
               <button type="button" className="ctabtn" onClick={() => setOpen(true)}>
                 <span className="ctabtn-top">Check Availability</span>
