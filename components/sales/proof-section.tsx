@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 
 import { MuxVideo } from "@/app/case-studies/cfc-interactive";
 import { buildWallTiles, featuredStories } from "@/lib/proof-wall";
+import { MoreProof } from "./more-proof";
 import { ProofWall } from "./proof-wall";
 
 /* ============================================================================
@@ -89,5 +90,44 @@ export function ProofSection({
         {children}
       </div>
     </section>
+  );
+}
+
+/* /connect splits the proof in two: the header and the three case study
+   cards up top, and the full wall further down, hidden until clicked. */
+export function ProofHeader({
+  eyebrow,
+  title,
+  sub,
+}: {
+  eyebrow: string;
+  title: React.ReactNode;
+  sub?: React.ReactNode;
+}) {
+  const tiles = buildWallTiles();
+  const clips = tiles.filter((t) => t.kind === "clip" || t.kind === "video").length + featuredStories().length;
+  return (
+    <>
+      <div className="pwhead">
+        <p className="eyebrow">{eyebrow}</p>
+        <h2>{title}</h2>
+        {sub && <p className="sub">{sub}</p>}
+        <p className="pwcount">
+          <span><b>{clips}</b> interview clips</span>
+          <span><b>{tiles.filter((t) => t.kind === "message" || t.kind === "shot").length}</b> client quotes</span>
+          <span><b>3</b> full case studies</span>
+        </p>
+      </div>
+      <FeaturedStories />
+    </>
+  );
+}
+
+export function HiddenWall() {
+  const tiles = buildWallTiles();
+  return (
+    <MoreProof label={`Show me more proof (${tiles.length})`}>
+      <ProofWall tiles={tiles} initial={tiles.length} />
+    </MoreProof>
   );
 }

@@ -211,3 +211,13 @@
 @media(prefers-reduced-motion:reduce){
   .dscroll .pwsec .vposter img,.dscroll .pwsec .vcta,.dscroll .pwmore-btn,.dscroll .pwfeat-link svg{transition:none}
 }
+
+/* ── /connect layout tweaks ────────────────────────────────────────────────── */
+/* clip instead of hidden, so the embedded case study's sticky chapter nav
+   still sticks to the viewport */
+.dscroll.cnx{overflow-x:clip}
+/* the embedded case study sits flush between the proof header and the wall */
+.dscroll .cfcstory{background:transparent}
+.dscroll .pwreveal{margin-top:clamp(26px,4vw,40px)}
+/* the phone team block stands alone here, without the divider above it */
+.dscroll .phonesec .phoneteam{margin-top:0;padding-top:0;border-top:0}

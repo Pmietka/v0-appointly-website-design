@@ -338,7 +338,7 @@ export default function ApplyClient({ children }: { children?: React.ReactNode }
   }, []);
 
   return (
-    <div className="dscroll">
+    <div className="dscroll cnx">
       <MetaPixel />
       {open && <QualifyModal tracking={tracking} onClose={() => setOpen(false)} />}
 
@@ -366,12 +366,12 @@ export default function ApplyClient({ children }: { children?: React.ReactNode }
         <div className="wrap">
           <p className="eyebrow">For floor coating contractors</p>
           <h1>
-            Only pay when a homeowner{" "}
-            <span className="hl">sits down for your estimate.</span>
+            Keep Every Crew Booked Weeks Ahead.{" "}
+            <span className="hl">Only Pay When You&apos;re Face to Face With a Qualified Homeowner.</span>
           </h1>
           <p className="lead">
-            We run the ads and book prequalified, exclusive
-            estimates straight onto your calendar. No contracts. No BS.
+            Our clients get 40 to 60 appointments a month. Unqualified
+            estimate, you don&apos;t pay. No contracts. No BS.
           </p>
 
           <div className="herorow">
@@ -405,7 +405,7 @@ export default function ApplyClient({ children }: { children?: React.ReactNode }
       {children}
 
       {/* Closing CTA. Links to the booking calendar. */}
-      <section className="sec" id="book">
+      <section className="sec tint" id="book">
         <div className="wrap wallhead">
           <h2>Ready to <span className="hl">fill your calendar?</span></h2>
           <p className="wallsub">

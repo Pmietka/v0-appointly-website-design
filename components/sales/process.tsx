@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import {
   BadgeCheck, CalendarCheck, Check, CircleDollarSign, Clock, CreditCard, LineChart,
-  Lock, Megaphone, PhoneCall, Rocket, ShieldCheck, Target, User, Wrench, X, Handshake, Shield,
+  Lock, Megaphone, PhoneCall, Plus, Rocket, ShieldCheck, Target, User, Wrench, X, Handshake, Shield,
 } from "lucide-react";
 
 import { CASE_STUDIES } from "@/lib/case-studies";
@@ -129,6 +129,23 @@ export function ModelCards() {
           </div>
         );
       })}
+    </div>
+  );
+}
+
+/* The same answers as click-to-open questions, for /connect. */
+export function ModelFaq() {
+  return (
+    <div className="faqlist">
+      {MODEL.map((m) => (
+        <details className="faqitem" key={m.t}>
+          <summary>
+            {m.t}
+            <span className="fqi" aria-hidden><Plus className="h-4 w-4" /></span>
+          </summary>
+          <div className="faqa">{m.d}</div>
+        </details>
+      ))}
     </div>
   );
 }

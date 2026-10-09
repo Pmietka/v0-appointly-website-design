@@ -3,13 +3,15 @@ import type { Metadata, Viewport } from "next";
 import ApplyClient from "./apply-client";
 import { ApplyButton } from "./apply-button";
 import { FounderCards, PhoneTeam, WhatWeAre } from "@/components/sales/founders";
-import { ProofSection } from "@/components/sales/proof-section";
-import {
-  CompareTable, ModelCards, ProcessTimeline, ResultsToExpect,
-} from "@/components/sales/process";
+import { HiddenWall, ProofHeader } from "@/components/sales/proof-section";
+import { CompareTable, ModelFaq, ProcessTimeline } from "@/components/sales/process";
 import { LogoMarquee } from "@/components/sales/logo-marquee";
+import { StoryChapters, StoryHero, StoryStats } from "@/app/case-studies/story";
+import { getCaseStudy } from "@/lib/case-studies";
+import { CFC_STORY } from "@/lib/cfc-case-study";
 import "../home.css";
 import "../lander/lander.css";
+import "../case-studies/case-studies.css";
 import "./apply.css";
 import "../sales.css";
 
@@ -29,12 +31,16 @@ export const metadata: Metadata = {
   },
 };
 
-/* The page tells one story, top to bottom:
-     1. A wall of proof          (every interview clip, message and number)
-     2. Who are these guys?      (founders, the phone team, what we are not)
-     3. How the whole thing works (process, the model, results, the comparison)
+/* The page, top to bottom:
+     1. Proof: the three video case studies, then Phil's (Clean Floor
+        Coatings) full story from /case-studies, chapter by chapter, then the
+        rest of the wall behind a "show me more" button
+     2. How it works, the comparison table, and who's on the phone
+     3. The model as click-to-open questions
+     4. Who are these guys
    The hero, survey modal and closing CTA live in ApplyClient. */
 export default function ConnectPage() {
+  const cfc = getCaseStudy(CFC_STORY.slug)!;
   return (
     <ApplyClient>
       {/* Client logos, right under the hero */}
@@ -44,40 +50,47 @@ export default function ConnectPage() {
         </div>
       </section>
 
-      {/* 1 · The wall of proof, right under the fold */}
-      <ProofSection
-        eyebrow="Proof"
-        title={<>Don&apos;t take our word for it. <span className="hl">Take theirs.</span></>}
-        sub="Our clients on camera, in their own messages, and on their own calendars. Brand new clients and some of our very first. Click anything."
-      >
-        <div className="midcta">
-          <p>We take one floor coating contractor per market. Find out if yours is still open.</p>
-          <ApplyButton main="Claim Your Market" />
-        </div>
-      </ProofSection>
-
-      {/* 2 · Who are these guys? */}
-      <section className="sec tint" id="who">
-        <div className="orb a" />
-        <div className="wrap">
-          <p className="eyebrow">Who are these guys?</p>
-          <h2>
-            Two brothers from Chicago who{" "}
-            <span className="hl">book estimates for a living.</span>
-          </h2>
-          <p className="sub">
-            We&apos;re Jacob and Patrick Mietka. Appointly does one thing: we run
-            Meta ads for floor coating contractors, call every homeowner who
-            responds, and book the good ones onto your calendar. You only pay
-            when one is booked.
-          </p>
-          <FounderCards />
-          <WhatWeAre />
-          <PhoneTeam />
+      {/* 1 · Proof: the three clients and their testimonials */}
+      <section className="sec pwsec" id="proof">
+        <div className="wrap pwwide">
+          <ProofHeader
+            eyebrow="Proof"
+            title={<>Don&apos;t take our word for it. <span className="hl">Take theirs.</span></>}
+            sub="Our clients on camera, in their own messages, and on their own calendars. Brand new clients and some of our very first. Click anything."
+          />
         </div>
       </section>
 
-      {/* 3 · How it works, start to finish */}
+      {/* Phil's full story, exactly as on /case-studies/clean-floor-coatings:
+          video hero, stat bar, chapter by chapter clips, calendar proof and
+          the transcript. Wrapped in .csp so the case study styles apply. */}
+      <div className="dscroll csp cfcstory">
+        <StoryHero story={CFC_STORY} cs={cfc} eyebrow={`Case study · ${cfc.company}`} sectionId="cfc-story" />
+        <StoryStats story={CFC_STORY} cs={cfc} />
+        <StoryChapters story={CFC_STORY} cs={cfc} level="h3" />
+      </div>
+
+      {/* The rest of the wall, only when asked for */}
+      <section className="sec pwsec tint" id="more-proof">
+        <div className="wrap pwwide">
+          <div className="pwhead">
+            <p className="eyebrow">Want more?</p>
+            <h2>There&apos;s a <span className="hl">whole wall</span> of it.</h2>
+            <p className="sub">
+              Every interview clip, client message, number and calendar we have, in one place.
+            </p>
+          </div>
+          <div className="pwreveal">
+            <HiddenWall />
+          </div>
+          <div className="midcta">
+            <p>We take one floor coating contractor per market. Find out if yours is still open.</p>
+            <ApplyButton main="Claim Your Market" />
+          </div>
+        </div>
+      </section>
+
+      {/* 2 · How it works, start to finish */}
       <section className="sec" id="how-it-works">
         <div className="orb b" />
         <div className="wrap">
@@ -87,21 +100,9 @@ export default function ConnectPage() {
           </h2>
           <p className="sub">
             No surprises on the call. Here&apos;s the whole thing: what we do,
-            what you do, how you pay, and what to expect.
+            what you do, and what happens at every step.
           </p>
           <ProcessTimeline />
-
-          <div className="subhd" id="model">
-            <p className="eyebrow">The model</p>
-            <h3>How you pay, and everything that comes with it.</h3>
-          </div>
-          <ModelCards />
-
-          <div className="subhd" id="results">
-            <p className="eyebrow">Results</p>
-            <h3>What results to expect.</h3>
-          </div>
-          <ResultsToExpect />
         </div>
       </section>
 
@@ -119,6 +120,43 @@ export default function ConnectPage() {
         </div>
       </section>
 
+      {/* The person on the phone */}
+      <section className="sec phonesec" id="phone-team">
+        <div className="wrap">
+          <PhoneTeam />
+        </div>
+      </section>
+
+      {/* 3 · The model, as click-to-open questions */}
+      <section className="sec tint" id="model">
+        <div className="wrap wallhead">
+          <p className="eyebrow">The model</p>
+          <h2>How you pay, and <span className="hl">everything that comes with it.</span></h2>
+        </div>
+        <div className="wrap">
+          <ModelFaq />
+        </div>
+      </section>
+
+      {/* 4 · Who are these guys? */}
+      <section className="sec" id="who">
+        <div className="orb a" />
+        <div className="wrap">
+          <p className="eyebrow">Who are these guys?</p>
+          <h2>
+            Two brothers from Chicago who{" "}
+            <span className="hl">book estimates for a living.</span>
+          </h2>
+          <p className="sub">
+            We&apos;re Jacob and Patrick Mietka. Appointly does one thing: we run
+            Meta ads for floor coating contractors, call every homeowner who
+            responds, and book the good ones onto your calendar. You only pay
+            when one is booked.
+          </p>
+          <FounderCards />
+          <WhatWeAre />
+        </div>
+      </section>
     </ApplyClient>
   );
 }
