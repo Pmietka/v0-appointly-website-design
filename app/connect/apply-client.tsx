@@ -366,12 +366,10 @@ export default function ApplyClient({ children }: { children?: React.ReactNode }
         <div className="wrap">
           <p className="eyebrow">For floor coating contractors</p>
           <h1>
-            Keep Every Crew Booked Weeks In Advance.{" "}
-            <span className="hl">Only Pay When You&apos;re Face to Face With a Qualified Homeowner.</span>
+            Keep Every Crew <span className="hl">Booked Weeks In Advance.</span>
           </h1>
           <p className="lead">
-            Our clients get 40 to 60 appointments a month. Unqualified
-            estimate, you don&apos;t pay. No contracts. No BS.
+            Only Pay When You&apos;re Face to Face With a Qualified Homeowner.
           </p>
 
           <div className="herorow">
@@ -383,10 +381,8 @@ export default function ApplyClient({ children }: { children?: React.ReactNode }
             </div>
             <div className="heroform" id="apply">
               <p className="formkicker">
-                <strong>See how many jobs are waiting in your market.</strong>{" "}
-                We&apos;ll show you the demand in your area, how many jobs we can
-                book you, and the closing rate it takes to make it profitable. One
-                contractor per market, so if your area&apos;s open, they&apos;re all yours.
+                <strong>Our clients get 40 to 60 appointments a month.</strong>{" "}
+                Unqualified estimate, you don&apos;t pay. No contracts. No BS.
               </p>
               <button type="button" className="ctabtn" onClick={() => setOpen(true)}>
                 <span className="ctabtn-top">Check Availability</span>
