@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, Expand, Play, X } from "lucide-react";
 
@@ -18,6 +19,15 @@ function pauseOthers(keep: HTMLElement | null) {
     if (m.paused === false) m.pause?.();
   });
 }
+
+/* Rendered poster width per variant, from case-studies.css: the hero spans the
+   screen until the two column hero kicks in at 980px, chapter videos until the
+   story grid at 1024px, and support cards until their two column layout. */
+const POSTER_SIZES = {
+  hero: "(min-width: 980px) 640px, 100vw",
+  chapter: "(min-width: 1024px) 480px, 100vw",
+  card: "(min-width: 880px) 480px, 100vw",
+} as const;
 
 /* Modifier classes are prefixed (v-hero, v-chapter, v-card) so they can never
    collide with page level classes like .chapter or .hero. */
@@ -67,15 +77,19 @@ export function MuxVideo({
           }}
           aria-label={`Play video: ${clip.title}`}
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          {/* Served through next/image so the poster comes from our own origin,
+              sized to the screen, instead of opening a second connection to
+              image.mux.com. The hero poster is the page's largest paint, so it
+              is preloaded from <head>. */}
+          <Image
             src={poster}
             alt=""
             width={1600}
             height={900}
+            sizes={POSTER_SIZES[variant]}
+            preload={priority}
             loading={priority ? "eager" : "lazy"}
             fetchPriority={priority ? "high" : "auto"}
-            decoding="async"
           />
           <span className="vshade" aria-hidden />
           {tag && <span className="vtag">{tag}</span>}

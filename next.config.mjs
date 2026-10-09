@@ -31,6 +31,11 @@ const legacyBlogRedirects = [
 ]
 
 const nextConfig = {
+  images: {
+    // Video case study posters are Mux thumbnails, resized and served from our
+    // own origin by next/image.
+    remotePatterns: [{ protocol: "https", hostname: "image.mux.com", pathname: "/**" }],
+  },
   async rewrites() {
     return [
       // Serve the self-contained pitch deck (public/deck/index.html) at the

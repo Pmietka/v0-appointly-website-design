@@ -236,7 +236,7 @@ const TESTIMONIALS: Testimonial[] = [
 
 function Stars() {
   return (
-    <div className="stars" aria-label="5 out of 5 stars">
+    <div className="stars" role="img" aria-label="5 out of 5 stars">
       {Array.from({ length: 5 }).map((_, i) => (
         <Star key={i} className="ci" aria-hidden />
       ))}

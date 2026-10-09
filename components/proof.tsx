@@ -9,7 +9,7 @@ import "@/app/proof.css";
 /* ── Stars ─────────────────────────────────────────────────────────────────── */
 export function Stars({ className = "" }: { className?: string }) {
   return (
-    <div className={`stars ${className}`.trim()} aria-label="5 out of 5 stars">
+    <div className={`stars ${className}`.trim()} role="img" aria-label="5 out of 5 stars">
       {Array.from({ length: 5 }).map((_, i) => (
         <Star key={i} className="ci" aria-hidden />
       ))}
@@ -54,7 +54,7 @@ export function ClientLogos({
             </>
           );
           return linkTiles && l.href ? (
-            <Link key={l.name} href={l.href} className={cls} aria-label={`${l.name} case study`}>
+            <Link key={l.name} href={l.href} className={cls} aria-label={`${l.name} case study, ${l.market}`}>
               {inner}
             </Link>
           ) : (
