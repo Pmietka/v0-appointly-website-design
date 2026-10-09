@@ -548,7 +548,6 @@ export function LanderContent({ pixel }: { pixel?: React.ReactNode }) {
         eyebrow="Proof"
         title={<>Still want proof? <span className="hl">We&apos;ve got more than you&apos;ll watch.</span></>}
         sub="Our clients on camera, in their own words, and on their own calendars. Brand new clients and some of our very first. Watch as many as you want before the call."
-        initial={12}
       />
 
       {/* 11 · Why us over a lead company */}

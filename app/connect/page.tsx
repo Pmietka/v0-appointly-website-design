@@ -8,7 +8,7 @@ import { ProofSection } from "@/components/sales/proof-section";
 import {
   CompareTable, ModelCards, PROOF_FACES, PROOF_STATS, ProcessTimeline, ResultsToExpect,
 } from "@/components/sales/process";
-import { ClientLogos } from "@/components/proof";
+import { LogoMarquee } from "@/components/sales/logo-marquee";
 import "../home.css";
 import "../lander/lander.css";
 import "./apply.css";
@@ -137,7 +137,7 @@ export default function ConnectPage() {
       {/* Client logos, right before the closing call to action */}
       <section className="sec" id="clients">
         <div className="wrap">
-          <ClientLogos showMore={false} linkTiles={false} />
+          <LogoMarquee />
         </div>
       </section>
     </ApplyClient>

@@ -95,7 +95,8 @@ export const ALL_TESTIMONIALS: Testimonial[] = [...FEATURED_TESTIMONIALS, ...QUO
 /** Client logos we have permission to show. Order matters: most recent first. */
 export type ClientLogo = {
   name: string;
-  market: string;
+  /** Shown under the logo. Leave out when we haven't confirmed the market. */
+  market?: string;
   src: string;
   width: number;
   height: number;
@@ -129,5 +130,26 @@ export const CLIENT_LOGOS: ClientLogo[] = [
     width: 1000,
     height: 181,
     href: "/case-studies#garage-force-inland-northwest",
+  },
+  {
+    name: "Diamond Group",
+    market: "Portland, OR",
+    src: "/images/clients/diamond-group.webp",
+    width: 480,
+    height: 447,
+  },
+  {
+    name: "TreadStrong Solutions",
+    src: "/images/clients/treadstrong-solutions.webp",
+    width: 720,
+    height: 411,
+  },
+  {
+    name: "Diamond Epoxy Finishes",
+    market: "Florida",
+    src: "/images/clients/diamond-epoxy-finishes.webp",
+    width: 600,
+    height: 378,
+    dark: true,
   },
 ];

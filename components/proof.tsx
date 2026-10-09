@@ -50,7 +50,7 @@ export function ClientLogos({
                 sizes="(max-width: 640px) 60vw, 240px"
                 loading="lazy"
               />
-              <span className="logo-cap">{l.market}</span>
+              {l.market && <span className="logo-cap">{l.market}</span>}
             </>
           );
           return linkTiles && l.href ? (
