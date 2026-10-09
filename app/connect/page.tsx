@@ -1,12 +1,11 @@
 import type { Metadata, Viewport } from "next";
-import Image from "next/image";
 
 import ApplyClient from "./apply-client";
 import { ApplyButton } from "./apply-button";
 import { FounderCards, PhoneTeam, WhatWeAre } from "@/components/sales/founders";
 import { ProofSection } from "@/components/sales/proof-section";
 import {
-  CompareTable, ModelCards, PROOF_FACES, PROOF_STATS, ProcessTimeline, ResultsToExpect,
+  CompareTable, ModelCards, ProcessTimeline, ResultsToExpect,
 } from "@/components/sales/process";
 import { LogoMarquee } from "@/components/sales/logo-marquee";
 import "../home.css";
@@ -38,23 +37,10 @@ export const metadata: Metadata = {
 export default function ConnectPage() {
   return (
     <ApplyClient>
-      {/* Proof bar: real numbers from the case studies */}
-      <section className="sec proofbar" id="stats">
+      {/* Client logos, right under the hero */}
+      <section className="lmqband" id="clients" aria-label="Clients">
         <div className="wrap">
-          <div className="pbnums">
-            {PROOF_STATS.map((s) => (
-              <div className="pbnum" key={s.l}>
-                <span className="pbv">{s.v}</span>
-                <span className="pbl">{s.l}</span>
-              </div>
-            ))}
-          </div>
-          <div className="pbfaces" aria-hidden>
-            {PROOF_FACES.map((f) => (
-              <Image className="pbface" key={f.src} src={f.src} alt="" width={54} height={54} sizes="54px" loading="lazy" />
-            ))}
-          </div>
-          <p className="pbcap">Real floor coating contractors, real booked estimates.</p>
+          <LogoMarquee />
         </div>
       </section>
 
@@ -133,12 +119,6 @@ export default function ConnectPage() {
         </div>
       </section>
 
-      {/* Client logos, right before the closing call to action */}
-      <section className="sec" id="clients">
-        <div className="wrap">
-          <LogoMarquee />
-        </div>
-      </section>
     </ApplyClient>
   );
 }

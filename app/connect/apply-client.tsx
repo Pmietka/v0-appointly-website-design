@@ -405,7 +405,7 @@ export default function ApplyClient({ children }: { children?: React.ReactNode }
       {children}
 
       {/* Closing CTA. Links to the booking calendar. */}
-      <section className="sec tint" id="book">
+      <section className="sec" id="book">
         <div className="wrap wallhead">
           <h2>Ready to <span className="hl">fill your calendar?</span></h2>
           <p className="wallsub">
