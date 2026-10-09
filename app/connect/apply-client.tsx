@@ -366,7 +366,7 @@ export default function ApplyClient({ children }: { children?: React.ReactNode }
         <div className="wrap">
           <p className="eyebrow">For floor coating contractors</p>
           <h1>
-            Keep Every Crew Booked Weeks Ahead.{" "}
+            Keep Every Crew Booked Weeks In Advance.{" "}
             <span className="hl">Only Pay When You&apos;re Face to Face With a Qualified Homeowner.</span>
           </h1>
           <p className="lead">
