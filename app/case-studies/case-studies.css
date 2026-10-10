@@ -54,7 +54,7 @@
 .dscroll.csp .vposter:hover img{transform:scale(1.025)}
 .dscroll.csp .vposter:focus-visible{outline:3px solid #34d399;outline-offset:-3px}
 .dscroll.csp .vshade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,0) 30%,rgba(0,0,0,0) 55%,rgba(0,0,0,.55) 100%)}
-.dscroll.csp .vtag{position:absolute;top:14px;left:14px;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;
+.dscroll.csp .vtag{position:absolute;top:14px;left:14px;font-size:13px;font-weight:700;letter-spacing:.01em;color:#fff;
   background:rgba(15,15,16,.62);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:6px 11px;border-radius:999px}
 .dscroll.csp .vcta{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:inline-flex;align-items:center;gap:12px;
   background:#fff;color:#0f0f10;border-radius:999px;padding:8px 20px 8px 8px;font-weight:700;font-size:15px;white-space:nowrap;
@@ -137,7 +137,9 @@
   .dscroll.csp .chapter.flip{grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);grid-template-areas:"body media" "body proof"}
   .dscroll.csp .chbody{align-self:center}
 }
-.dscroll.csp .chnum{display:flex;align-items:center;flex-wrap:wrap;gap:8px 12px;font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--ink-4)}
+.dscroll.csp .chnum{display:flex;align-items:center;flex-wrap:wrap;gap:8px 12px}
+/* "Chapter 2 · What changed": readable at a glance, not fine print */
+.dscroll.csp .chlbl{font-size:clamp(15px,1.7vw,17px);font-weight:700;letter-spacing:-.005em;color:var(--ink-2)}
 /* Before / with Appointly tag: big enough that nobody reads a "before" chapter
    as a description of Appointly */
 .dscroll.csp .chphase{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:800;letter-spacing:.08em;

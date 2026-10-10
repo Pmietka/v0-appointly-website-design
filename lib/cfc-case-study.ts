@@ -93,7 +93,7 @@ const CHAPTERS: Chapter[] = [
   {
     id: "what-changed",
     nav: "What changed",
-    headline: "He wakes up to two to six new appointments",
+    headline: "Every morning, 2 to 6 new appointments are waiting on his calendar",
     clip: CLIPS.closer,
     quote:
       "I'd say anywhere between two and six appointments will be booked for me between now and noon tomorrow.",

@@ -19,7 +19,6 @@ import { ChapterNav, Gallery, MuxVideo, StatBar } from "./cfc-interactive";
 export const CASE_STUDIES_URL = "https://getappointly.co/case-studies";
 export const NAMES_NOTE = "Homeowner names shortened to first name and last initial.";
 
-const pad = (n: number) => String(n).padStart(2, "0");
 
 export const storyPath = (slug: string) => `/case-studies/${slug}`;
 
@@ -149,14 +148,16 @@ function ChapterBlock({ c, i, cite, ownerFirst, level, compact = false }: { c: C
   return (
     <article className={`chapter${i % 2 === 1 ? " flip" : ""}${compact ? " compact" : ""}`} id={c.id} aria-labelledby={`${c.id}-h`}>
       <div className="chmedia">
-        <MuxVideo clip={c.clip} label={`Watch, ${c.clip.length || "clip"}`} tag={`${pad(i + 1)} · ${c.nav}`} />
+        <MuxVideo clip={c.clip} label={`Watch, ${c.clip.length || "clip"}`} tag={`Chapter ${i + 1} · ${c.nav}`} />
       </div>
       <div className="chbody">
         <p className="chnum">
           <span className={`chphase${c.phase === "before" ? " before" : ""}`}>
             {c.phase === "before" ? "Before Appointly" : "With Appointly"}
           </span>
-          Chapter {pad(i + 1)}
+          <span className="chlbl">
+            Chapter {i + 1}{c.phase === "before" ? "" : <> · {c.nav}</>}
+          </span>
         </p>
         <H className="chhl" id={`${c.id}-h`}>{c.headline}</H>
         <blockquote className="chq">
@@ -287,7 +288,7 @@ export function StoryChapters({
           ))}
 
           <section className="calproof" id={calendar.id} aria-labelledby={calHeading}>
-            <p className="chnum">Chapter {pad(chapters.length + 1)} · Calendar proof</p>
+            <p className="chnum"><span className="chlbl">Chapter {chapters.length + 1} · Calendar proof</span></p>
             <H className="chhl" id={calHeading}>{calendar.title}</H>
             {!compact && (
               <p className="legend">

@@ -137,7 +137,7 @@ const CHAPTERS: Chapter[] = [
   {
     id: "gf-hands-on",
     nav: "Hands on",
-    headline: "Not an eight to five company, and neither are they",
+    headline: "Not an 8 to 5 company, and neither are they",
     clip: CLIPS.handsOn,
     quote: "You're kind of like us, and you're not a business that has eight to five hours.",
     caption:

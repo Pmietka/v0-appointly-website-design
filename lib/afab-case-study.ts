@@ -55,7 +55,7 @@ const CHAPTERS: Chapter[] = [
     id: "mark-before",
     phase: "before",
     nav: "Before Appointly",
-    headline: "Before Appointly, thirty leads a week and maybe two were real",
+    headline: "Before Appointly, 30 leads a week and maybe 2 were real",
     clip: CLIPS.before,
     quote: "I would have 30 different things a week, but maybe two of them were legit.",
     caption:
@@ -102,7 +102,7 @@ const CHAPTERS: Chapter[] = [
   {
     id: "mark-first-close",
     nav: "First close",
-    headline: "One appointment, and the remodel work came with it",
+    headline: "1 appointment, and the remodel work came with it",
     clip: CLIPS.firstClose,
     quote:
       "So with not only getting your lead for the epoxy, I'm also going to get more work out of it on the remodeling end.",
@@ -122,7 +122,7 @@ const CHAPTERS: Chapter[] = [
   {
     id: "mark-pay-per-lead",
     nav: "Pay per lead",
-    headline: "Five clicks, maybe one real lead. He pays for the real one.",
+    headline: "5 clicks, maybe 1 real lead. He pays for the real one.",
     clip: CLIPS.payPerLead,
     quote: "Out of those five clicks, maybe one is a solid lead for me.",
     caption:
