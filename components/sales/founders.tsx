@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Award, CalendarSync, Check, Megaphone, MessageCircle, Phone, X } from "lucide-react";
+import { Award, CalendarSync, Check, CircleCheck, Megaphone, MessageCircle, Phone, X } from "lucide-react";
 
 /* ============================================================================
    "Who are these guys?" The two founders, then the phone team that actually
@@ -40,9 +40,9 @@ export function FounderCards() {
           <div className="fname">Jacob Mietka</div>
           <div className="frole">Co-founder</div>
           <p className="fbio">
-            Leads the speed to lead and booking side. Sales manager.
-            He&apos;ll talk to you about your business and market.
-            Responsible for scaling 20+ home service businesses.
+            Runs our booking team and speed to lead. Jacob has scaled 20+
+            home service businesses, and he&apos;s the one you&apos;ll talk to on
+            your strategy call.
           </p>
         </div>
       </article>
@@ -52,8 +52,8 @@ export function FounderCards() {
           <div className="fname">Patrick Mietka</div>
           <div className="frole">Co-founder</div>
           <p className="fbio">
-            Runs the campaigns and the numbers. The person making sure the ad
-            spend turns into estimates on your calendar.
+            Runs the ad campaigns and the numbers. Patrick builds and tunes the
+            Meta ads behind $1M+ in revenue for our floor coating clients.
           </p>
         </div>
       </article>
@@ -143,5 +143,56 @@ export function WhatWeAre() {
         </div>
       ))}
     </div>
+  );
+}
+
+/* ── About us, bragging edition (/connect) ────────────────────────────────────
+   Left: who we are and the headline number. Right: what we're experts at.
+   Then the founder cards. Pass a call to action (e.g. the survey button). */
+const EXPERT_AT = [
+  "Built for floor coating and epoxy contractors, nothing else",
+  "Meta ads that bring in homeowners ready to buy",
+  "Every lead called within 60 seconds, before they cool off",
+  "Qualified on area, project and budget, so you only meet buyers",
+  "Estimates booked straight onto your calendar",
+  "Your close data fed back in, so every month gets sharper",
+];
+
+export function AboutUs({ cta }: { cta?: React.ReactNode }) {
+  return (
+    <>
+      <div className="about">
+        <div className="aboutcopy">
+          <span className="aboutpill">Co-founders · Chicago</span>
+          <h2 className="abouth">
+            Meet <span className="hl">Jacob &amp; Patrick</span>
+          </h2>
+          <p className="aboutsub">The floor coating appointment experts</p>
+          <div className="aboutstat">
+            <b>$1M+</b>
+            <span>in revenue collected for our floor coating clients</span>
+          </div>
+          <p className="aboutp">
+            Two brothers from Chicago who do one thing better than anyone: fill
+            floor coating calendars with homeowners who are ready to buy. One
+            contractor per market, one market at a time.
+          </p>
+          <p className="aboutp">
+            While you run estimates and lay floors, we run the ads, the phones
+            and the calendar. You only pay when a qualified homeowner is booked.
+          </p>
+          {cta && <div className="aboutcta">{cta}</div>}
+        </div>
+        <div className="aboutbox">
+          <p className="aboutbox-t">What we&apos;re experts at</p>
+          <ul>
+            {EXPERT_AT.map((x) => (
+              <li key={x}><CircleCheck aria-hidden />{x}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <FounderCards />
+    </>
   );
 }

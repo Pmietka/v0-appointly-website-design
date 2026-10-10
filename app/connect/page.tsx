@@ -4,7 +4,7 @@ import { ChevronDown } from "lucide-react";
 
 import ApplyClient from "./apply-client";
 import { ApplyButton } from "./apply-button";
-import { FounderCards, PhoneTeam, WhatWeAre } from "@/components/sales/founders";
+import { AboutUs, PhoneTeam } from "@/components/sales/founders";
 import { HiddenWall, ProofHeader } from "@/components/sales/proof-section";
 import { CompareTable, ModelFaq, ProcessTimeline } from "@/components/sales/process";
 import { LogoMarquee } from "@/components/sales/logo-marquee";
@@ -151,19 +151,7 @@ export default function ConnectPage() {
       <section className="sec" id="who">
         <div className="orb a" />
         <div className="wrap">
-          <p className="eyebrow">Who are these guys?</p>
-          <h2>
-            Two brothers from Chicago who{" "}
-            <span className="hl">book estimates for a living.</span>
-          </h2>
-          <p className="sub">
-            We&apos;re Jacob and Patrick Mietka. Appointly does one thing: we run
-            Meta ads for floor coating contractors, call every homeowner who
-            responds, and book the good ones onto your calendar. You only pay
-            when one is booked.
-          </p>
-          <FounderCards />
-          <WhatWeAre />
+          <AboutUs cta={<ApplyButton top="Check Availability" main="Book Your Free Strategy Call" />} />
         </div>
       </section>
     </ApplyClient>
