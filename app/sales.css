@@ -32,22 +32,29 @@
 .dscroll .pwcount b{color:var(--ink);font-weight:800}
 
 /* featured: the three full video case studies */
-.dscroll .pwfeats{display:grid;grid-template-columns:1fr;gap:clamp(14px,2.4vw,20px);margin-top:clamp(30px,5vw,48px)}
+.dscroll .pwfeats{display:grid;grid-template-columns:1fr;gap:clamp(16px,2.6vw,24px);margin-top:clamp(40px,6vw,64px)}
 @media(min-width:900px){.dscroll .pwfeats{grid-template-columns:repeat(3,1fr)}}
 .dscroll .pwfeat{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;
   box-shadow:0 22px 50px -34px rgba(0,0,0,.35)}
 .dscroll .pwfeat .vid{aspect-ratio:16/10}
-.dscroll .pwfeat-body{display:flex;flex-direction:column;gap:14px;padding:clamp(18px,2.6vw,22px);flex:1}
+.dscroll .pwfeat-body{display:flex;flex-direction:column;gap:18px;padding:clamp(22px,2.8vw,28px);flex:1}
 .dscroll .pwfeat-hd{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .dscroll .pwfeat-hd span{font-size:12px;font-weight:600;color:var(--ink-4)}
 .dscroll .pwfeat-logo{display:block;width:auto;height:30px;max-width:150px;object-fit:contain}
 .dscroll .pwfeat-logo.dark{height:38px;border-radius:7px}
 .dscroll .pwfeat-lead b{display:block;font-size:clamp(30px,4vw,38px);font-weight:800;letter-spacing:-.03em;line-height:1}
 .dscroll .pwfeat-lead span{display:block;font-size:14px;color:var(--ink-3);margin-top:6px;line-height:1.4}
-.dscroll .pwfeat-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.dscroll .pwfeat-stats div{background:var(--tint);border-radius:11px;padding:9px 10px}
-.dscroll .pwfeat-stats b{display:block;font-size:15px;font-weight:800;letter-spacing:-.01em}
-.dscroll .pwfeat-stats span{display:block;font-size:11px;color:var(--ink-3);line-height:1.3;margin-top:2px}
+/* the two numbers under the lead stat: one split panel with a brand accent */
+.dscroll .pwfeat-stats{position:relative;display:grid;grid-auto-flow:column;grid-auto-columns:1fr;
+  border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  background:linear-gradient(180deg,#fbfffa 0%,#f7fbff 100%)}
+.dscroll .pwfeat-stats::before{content:"";position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,#cfffae,#ace5ff,#ffc9e6)}
+.dscroll .pwfeat-stats div{padding:16px 16px 14px;display:flex;flex-direction:column;gap:6px}
+.dscroll .pwfeat-stats div+div{border-left:1px solid var(--line)}
+.dscroll .pwfeat-stats b{display:block;font-size:clamp(22px,2.2vw,26px);font-weight:800;letter-spacing:-.03em;line-height:1;
+  font-variant-numeric:tabular-nums;color:var(--ink)}
+.dscroll .pwfeat-stats span{display:block;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;
+  color:var(--ink-4);line-height:1.35}
 .dscroll .pwfeat-owner{font-size:13px;font-weight:600;color:var(--ink-2);margin-top:auto}
 .dscroll .pwfeat-link{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:var(--ink);text-decoration:none}
 .dscroll .pwfeat-link svg{width:16px;height:16px;transition:transform .15s}
@@ -140,6 +147,12 @@
 .dscroll .tlwhen{font-size:12.5px;font-weight:600;color:var(--ink-4);margin-top:16px}
 .dscroll .tlt{font-size:clamp(18px,2.2vw,21px);font-weight:700;letter-spacing:-.015em;line-height:1.25;margin-top:4px}
 .dscroll .tld{font-size:15px;line-height:1.55;color:var(--ink-3);margin-top:8px}
+.dscroll .tlpts{list-style:none;display:flex;flex-direction:column;gap:9px;margin-top:14px}
+.dscroll .tlpts li{display:flex;align-items:flex-start;gap:10px;font-size:15px;line-height:1.4;color:var(--ink-2)}
+.dscroll .tlck{flex:none;width:20px;height:20px;border-radius:6px;display:grid;place-items:center;margin-top:1px;
+  background:var(--tint);color:#0f766e}
+.dscroll .tlck svg{width:13px;height:13px;stroke-width:3}
+.dscroll .tlstep.you .tlck{background:#ecfdf5}
 
 /* sub-heading inside a section */
 .dscroll .subhd{margin-top:clamp(56px,9vw,96px)}
@@ -223,11 +236,11 @@
 .dscroll .phonesec .phoneteam{margin-top:0;padding-top:0;border-top:0}
 
 /* transition from the three case study cards into Phil's full story */
-.dscroll .pwbridge{max-width:640px;margin:clamp(56px,8vw,88px) auto 0;text-align:center;display:flex;flex-direction:column;align-items:center}
+.dscroll .pwbridge{max-width:640px;margin:clamp(64px,9vw,104px) auto 0;text-align:center;display:flex;flex-direction:column;align-items:center}
 .dscroll .pwbridge .eyebrow{margin-bottom:12px}
 .dscroll .pwbridge h3{font-size:clamp(25px,3.6vw,36px);font-weight:600;letter-spacing:-.025em;line-height:1.2;text-wrap:balance}
 .dscroll .pwbridge p:not(.eyebrow){font-size:clamp(16px,2.1vw,19px);line-height:1.55;color:var(--ink-3);margin-top:14px;text-wrap:pretty}
-.dscroll .pwbridge-arrow{margin-top:26px;width:46px;height:46px;border-radius:999px;display:grid;place-items:center;
+.dscroll .pwbridge-arrow{margin-top:22px;width:46px;height:46px;border-radius:999px;display:grid;place-items:center;
   background:var(--ink);color:#fff;box-shadow:0 14px 30px -14px rgba(15,23,42,.6);animation:pwbob 2.2s ease-in-out infinite}
 .dscroll .pwbridge-arrow svg{width:22px;height:22px}
 .dscroll .pwbridge-arrow:hover{background:#000}

@@ -100,7 +100,7 @@ export function ProofHeader({
   title,
   sub,
 }: {
-  eyebrow: string;
+  eyebrow?: string;
   title: React.ReactNode;
   sub?: React.ReactNode;
 }) {
@@ -109,7 +109,7 @@ export function ProofHeader({
   return (
     <>
       <div className="pwhead">
-        <p className="eyebrow">{eyebrow}</p>
+        {eyebrow && <p className="eyebrow">{eyebrow}</p>}
         <h2>{title}</h2>
         {sub && <p className="sub">{sub}</p>}
         <p className="pwcount">

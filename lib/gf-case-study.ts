@@ -187,7 +187,7 @@ const CHAPTERS: Chapter[] = [
 ];
 
 const STATS: CountStat[] = [
-  { prefix: "~", to: 55, suffix: "%", label: "Close rate" },
+  { prefix: "", to: 50, suffix: "%", label: "Close rate" },
   { prefix: "$", to: 5000, suffix: "", label: "Average job size" },
   { prefix: "~$", to: 2000, suffix: "", label: "Monthly ad spend" },
   { prefix: "", to: 100, suffix: "%", label: "Homeowners qualified by phone before the bid" },
@@ -198,7 +198,7 @@ export const GF_STORY: VideoCaseStudy = {
   seo: {
     title: "Garage Force of the Inland Northwest Case Study | Eric and Shani on Video | Appointly",
     description:
-      "Watch Eric and Shani from Garage Force of the Inland Northwest in Spokane, WA explain what changed when Appointly started qualifying and booking their estimates: a ~55% close rate on a premium $5,000 polyurea system.",
+      "Watch Eric and Shani from Garage Force of the Inland Northwest in Spokane, WA explain what changed when Appointly started qualifying and booking their estimates: a 50% close rate on a premium $5,000 polyurea system.",
   },
   ownerFirst: "Eric",
   cite: "Eric H., in the clip",

@@ -21,42 +21,66 @@ const TIMELINE = [
     who: "You + Jacob",
     when: "About 20 minutes",
     t: "Strategy call",
-    d: "We check that your market is still open, look at your ticket size, close rate and capacity, and tell you honestly what a first month looks like. If it fits, you can start right there.",
+    pts: [
+      "Confirm your market is still open",
+      "Review your ticket size, close rate and capacity",
+      "An honest look at your first month",
+    ],
   },
   {
     Icon: Wrench,
     who: "Us",
     when: "Setup",
     t: "We build your campaign",
-    d: "Ad creatives already proven in floor coating, customized with your local footage and market, plus a landing page that asks qualifying questions before anyone submits. You give us the times you can run estimates.",
+    pts: [
+      "Proven floor coating ads, with your local footage",
+      "A landing page that pre-qualifies homeowners",
+      "You pick the times you can run estimates",
+    ],
   },
   {
     Icon: Rocket,
     who: "Us",
     when: "Launch",
     t: "Ads go live",
-    d: "We run everything from our own Meta ad account. No logins to hand over and no ad manager for you to learn. Phil's first appointments were booked the same week his ads went live.",
+    pts: [
+      "Run from our own Meta ad account",
+      "No logins or ad manager for you",
+      "Phil's first appointments landed week one",
+    ],
   },
   {
     Icon: PhoneCall,
     who: "Us",
     when: "Every lead",
     t: "We call, qualify and book",
-    d: "Our phone team calls every lead within about 60 seconds, qualifies them on service area, project and budget, and only books the ones you'd book yourself. Reminders, day-of confirmations and reschedules are on us.",
+    pts: [
+      "Every lead called within about 60 seconds",
+      "Qualified on area, project and budget",
+      "Reminders, confirmations and reschedules handled",
+    ],
   },
   {
     Icon: CalendarCheck,
     who: "You",
     when: "The estimate",
     t: "You show up and close",
-    d: "The appointment lands on your calendar with the homeowner's name, address, phone and what they want coated. You run the estimate, quote it, and close it.",
+    pts: [
+      "Lands on your calendar with name, address and phone",
+      "You know what they want coated before you arrive",
+      "You run the estimate and close it",
+    ],
   },
   {
     Icon: LineChart,
     who: "Us",
     when: "Every week",
     t: "We keep making it better",
-    d: "We track the campaign daily. Every 2 to 3 days the ads that aren't working get cut and replaced, the winners get scaled, and your close and no-show feedback shapes who we book next.",
+    pts: [
+      "Campaign tracked daily",
+      "Weak ads replaced every 2 to 3 days",
+      "Your feedback shapes who we book next",
+    ],
   },
 ];
 
@@ -74,7 +98,11 @@ export function ProcessTimeline() {
             </div>
             <p className="tlwhen">{s.when}</p>
             <h3 className="tlt">{s.t}</h3>
-            <p className="tld">{s.d}</p>
+            <ul className="tlpts">
+              {s.pts.map((p) => (
+                <li key={p}><span className="tlck" aria-hidden><Check /></span>{p}</li>
+              ))}
+            </ul>
           </li>
         );
       })}

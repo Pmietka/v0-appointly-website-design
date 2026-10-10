@@ -100,7 +100,7 @@ function statTiles(): WallTile[] {
   const afab = cs("afab-services");
   const gf = cs("garage-force-inland-northwest");
   return [
-    { kind: "stat", id: "stat-cfc", value: cfc.glance.closeRate, label: "of shown appointments close, in one of the most crowded coating markets in the Southeast", name: `${cfc.owner} · ${cfc.shortName}` },
+    { kind: "stat", id: "stat-cfc", value: cfc.glance.closeRate, label: "closing rate, in one of the most crowded coating markets in the Southeast", name: `${cfc.owner} · ${cfc.shortName}` },
     { kind: "stat", id: "stat-afab", value: "$35k+", label: "closed in his best month, at a $3,500 average job", name: `${afab.owner} · ${afab.shortName}` },
     { kind: "stat", id: "stat-gf", value: gf.glance.closeRate, label: "close rate on a premium $5,000 polyurea system", name: `${gf.owner} · ${gf.shortName}` },
     { kind: "stat", id: "stat-andre", value: "8 jobs", label: "closed in his second month", name: "Andre S. · D&V maintenance" },
