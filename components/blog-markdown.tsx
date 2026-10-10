@@ -63,6 +63,70 @@ function renderParagraph(lines: string[]) {
   return `<p class="text-base leading-8 text-slate-600 md:text-lg">${renderInline(lines.join(" ").trim())}</p>`;
 }
 
+// The first paragraph is the answer-first summary, so it reads a size up.
+function renderLeadParagraph(lines: string[]) {
+  return `<p class="text-lg leading-8 text-slate-800 md:text-xl md:leading-9">${renderInline(lines.join(" ").trim())}</p>`;
+}
+
+// A paragraph that opens with a bold label, like `**Best for:** ...` or
+// `**If you run your own ads,** ...`.
+const labeledParagraph = /^\*\*([^*]+?[:,])\*\*\s*(\S[\s\S]*)$/;
+const noteLabel = /^(disclosure|note):$/i;
+const cautionLabel = /pin down|limitation|catch|assessment|breaks|watch out/i;
+const highlightLabel = /^best for:$/i;
+const maxFactLabelLength = 28;
+
+function renderNote(label: string, text: string) {
+  return `<aside class="rounded-2xl border border-slate-200 bg-slate-50 px-5 py-4 md:px-6">
+<p class="text-sm leading-7 text-slate-600"><strong class="font-semibold text-slate-900">${renderInline(label)}</strong> ${renderInline(text)}</p>
+</aside>`;
+}
+
+// Short labels render as rows of one card. Long labels, which read as
+// sentences, render as a grid of option cards that keep the bold lead inline.
+function renderLabeledGroup(paragraphs: string[]) {
+  const items = paragraphs.map((text) => {
+    const match = text.match(labeledParagraph)!;
+    return { label: match[1], text: match[2] };
+  });
+
+  if (items.length === 1) {
+    const [{ label, text }] = items;
+    return noteLabel.test(label) ? renderNote(label, text) : renderParagraph([paragraphs[0]]);
+  }
+
+  const isFactCard = items.every(
+    ({ label }) => label.endsWith(":") && label.length <= maxFactLabelLength,
+  );
+
+  if (!isFactCard) {
+    return `<div class="grid gap-4 md:grid-cols-2">${paragraphs
+      .map(
+        (text) =>
+          `<div class="rounded-2xl border border-slate-200 bg-slate-50 p-5 md:p-6"><p class="text-base leading-7 text-slate-600">${renderInline(text)}</p></div>`,
+      )
+      .join("")}</div>`;
+  }
+
+  return `<dl class="overflow-hidden rounded-2xl border border-slate-200 divide-y divide-slate-200">${items
+    .map(({ label, text }) => {
+      const name = label.replace(/:$/, "");
+      const caution = cautionLabel.test(name);
+      const highlight = highlightLabel.test(label);
+      const rowClass = caution ? "bg-amber-50" : highlight ? "bg-emerald-50" : "bg-white";
+      const labelClass = caution
+        ? "text-amber-800"
+        : highlight
+          ? "text-emerald-800"
+          : "text-slate-500";
+      return `<div class="grid gap-1.5 px-5 py-4 md:grid-cols-[170px_minmax(0,1fr)] md:gap-6 md:px-6 md:py-5 ${rowClass}">
+<dt class="text-xs font-semibold uppercase tracking-[0.16em] md:pt-1.5 ${labelClass}">${renderInline(name)}</dt>
+<dd class="text-base leading-7 text-slate-700">${renderInline(text)}</dd>
+</div>`;
+    })
+    .join("")}</dl>`;
+}
+
 function renderHeading(level: number, text: string, id?: string) {
   const classes =
     level === 2
@@ -98,12 +162,41 @@ function renderFaqItem(question: string, answerHtml: string) {
 }
 
 function renderList(items: string[], ordered = false) {
-  const tag = ordered ? "ol" : "ul";
-  const listClass = ordered ? "list-decimal" : "list-disc";
+  if (ordered) return renderOrderedList(items);
 
-  return `<${tag} class="space-y-3 ${listClass} pl-6 text-base leading-8 text-slate-600 md:text-lg">${items
+  return `<ul class="space-y-3 list-disc pl-6 text-base leading-8 text-slate-600 md:text-lg">${items
     .map((item) => `<li class="pl-1">${renderInline(item)}</li>`)
-    .join("")}</${tag}>`;
+    .join("")}</ul>`;
+}
+
+const boldLead = /^\*\*([^*]+)\*\*\s*(\S[\s\S]*)$/;
+
+function numberBadge(number: number) {
+  return `<span aria-hidden="true" class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-slate-950 text-sm font-bold text-white">${number}</span>`;
+}
+
+// Numbered steps. When every item opens with a bold lead, each step becomes a
+// card with the lead as its title.
+function renderOrderedList(items: string[]) {
+  const leads = items.map((item) => item.match(boldLead));
+
+  if (leads.every(Boolean)) {
+    return `<ol class="space-y-4">${leads
+      .map(
+        (match, index) => `<li class="flex gap-4 rounded-2xl border border-slate-200 bg-white p-5 md:p-6">${numberBadge(index + 1)}<div class="min-w-0">
+<p class="text-lg font-semibold leading-7 text-slate-950">${renderInline(match![1])}</p>
+<p class="mt-2 text-base leading-7 text-slate-600">${renderInline(match![2])}</p>
+</div></li>`,
+      )
+      .join("")}</ol>`;
+  }
+
+  return `<ol class="space-y-4">${items
+    .map(
+      (item, index) =>
+        `<li class="flex gap-4">${numberBadge(index + 1)}<span class="min-w-0 text-base leading-8 text-slate-600 md:text-lg">${renderInline(item)}</span></li>`,
+    )
+    .join("")}</ol>`;
 }
 
 const fieldNoteLabel = /^\*\*From the field:?\*\*:?\s*/i;
@@ -137,25 +230,26 @@ function isTableSeparator(line: string) {
 
 function renderTable(rows: string[]) {
   const [header, ...body] = rows.map(splitTableRow);
-  const head = `<thead><tr>${header
+  const head = `<thead class="bg-slate-50"><tr>${header
     .map(
       (cell) =>
-        `<th scope="col" class="border-b border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">${renderInline(cell)}</th>`,
+        `<th scope="col" class="border-b border-slate-200 px-4 py-3 text-left text-xs font-semibold uppercase tracking-[0.12em] text-slate-600">${renderInline(cell)}</th>`,
     )
     .join("")}</tr></thead>`;
   const rowsHtml = body
     .map(
       (cells) =>
-        `<tr>${cells
-          .map(
-            (cell) =>
-              `<td class="border-b border-slate-100 px-4 py-3 align-top text-sm leading-7 text-slate-600 md:text-base">${renderInline(cell)}</td>`,
+        `<tr class="even:bg-slate-50/60">${cells
+          .map((cell, index) =>
+            index === 0
+              ? `<th scope="row" class="border-b border-slate-100 px-4 py-3 text-left align-top text-sm font-semibold leading-6 text-slate-950 md:text-base">${renderInline(cell)}</th>`
+              : `<td class="border-b border-slate-100 px-4 py-3 align-top text-sm leading-6 text-slate-600 md:text-base">${renderInline(cell)}</td>`,
           )
           .join("")}</tr>`,
     )
     .join("");
 
-  return `<div class="overflow-x-auto rounded-2xl border border-slate-200"><table class="w-full border-collapse">${head}<tbody>${rowsHtml}</tbody></table></div>`;
+  return `<div class="overflow-x-auto rounded-2xl border border-slate-200"><table class="w-full min-w-[640px] border-collapse">${head}<tbody class="[&>tr:last-child>*]:border-b-0">${rowsHtml}</tbody></table></div>`;
 }
 
 function renderCodeBlock(lines: string[]) {
@@ -171,6 +265,7 @@ export function BlogMarkdown({ content }: { content: string }) {
   let faqItems: string[] = [];
   let faqQuestion: string | null = null;
   let faqAnswer: string[] = [];
+  let labeledGroup: string[] = [];
 
   const headingId = (text: string) => {
     const base = slugifyHeading(text) || "section";
@@ -210,6 +305,12 @@ export function BlogMarkdown({ content }: { content: string }) {
     }
   };
 
+  const flushLabeledGroup = () => {
+    if (!labeledGroup.length) return;
+    push(renderLabeledGroup(labeledGroup));
+    labeledGroup = [];
+  };
+
   while (index < lines.length) {
     const line = lines[index];
     const trimmed = line.trim();
@@ -217,6 +318,10 @@ export function BlogMarkdown({ content }: { content: string }) {
     if (!trimmed) {
       index += 1;
       continue;
+    }
+
+    if (!labeledParagraph.test(trimmed)) {
+      flushLabeledGroup();
     }
 
     if (trimmed === "---") {
@@ -357,9 +462,17 @@ export function BlogMarkdown({ content }: { content: string }) {
       index += 1;
     }
 
-    push(renderParagraph(paragraphLines));
+    const paragraph = paragraphLines.join(" ").trim();
+    if (labeledParagraph.test(paragraph)) {
+      labeledGroup.push(paragraph);
+    } else if (!blocks.length && !faqMode) {
+      blocks.push(renderLeadParagraph(paragraphLines));
+    } else {
+      push(renderParagraph(paragraphLines));
+    }
   }
 
+  flushLabeledGroup();
   closeFaq();
 
   return (

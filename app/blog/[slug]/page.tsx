@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, CalendarDays, Clock3, Database, RefreshCw } from "lucide-react";
+import { ArrowLeft, CalendarDays, ChevronDown, Clock3, Database, RefreshCw } from "lucide-react";
 
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { BlogMarkdown } from "@/components/blog-markdown";
@@ -242,6 +242,27 @@ export default async function BlogPostPage({
         <section className="section-divider py-16 md:py-24">
           <div className="mx-auto grid max-w-6xl gap-8 px-6 lg:grid-cols-[minmax(0,1fr)_320px]">
             <article className="min-w-0 rounded-3xl border border-slate-200 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.06)] md:p-10">
+              {tocHeadings.length > 2 && (
+                <details className="group mb-10 rounded-2xl border border-slate-200 bg-slate-50 lg:hidden">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground [&::-webkit-details-marker]:hidden">
+                    On this page
+                    <ChevronDown className="h-4 w-4 transition-transform group-open:rotate-180" />
+                  </summary>
+                  <ol className="space-y-2 border-t border-slate-200 px-5 py-4 text-sm">
+                    {tocHeadings.map((heading) => (
+                      <li key={heading.id}>
+                        <a
+                          href={`#${heading.id}`}
+                          className="block leading-6 text-slate-600 transition-colors hover:text-foreground"
+                        >
+                          {heading.text}
+                        </a>
+                      </li>
+                    ))}
+                  </ol>
+                </details>
+              )}
+
               <BlogMarkdown content={post.body} />
 
               <div className="mt-14 flex gap-5 rounded-2xl border border-slate-200 bg-slate-50 p-6">
