@@ -70,10 +70,9 @@
 .dscroll .pwchip.on{background:var(--ink);border-color:var(--ink);color:#fff}
 .dscroll .pwchip.on span{color:rgba(255,255,255,.6)}
 
-.dscroll .pwgrid{--g:clamp(12px,1.8vw,16px);columns:1;column-gap:var(--g);margin-top:clamp(20px,3vw,28px);position:relative}
+.dscroll .pwgrid{--g:clamp(16px,2.2vw,24px);columns:1;column-gap:var(--g);margin-top:clamp(20px,3vw,28px);position:relative}
 @media(min-width:640px){.dscroll .pwgrid{columns:2}}
 @media(min-width:980px){.dscroll .pwgrid{columns:3}}
-@media(min-width:1180px){.dscroll .pwgrid{columns:4}}
 .dscroll .pwgrid.clipped::after{content:"";position:absolute;left:0;right:0;bottom:0;height:180px;pointer-events:none;
   background:linear-gradient(180deg,rgba(243,244,246,0),var(--pwfade,var(--tint)) 85%)}
 .dscroll .pwsec:not(.tint) .pwgrid.clipped::after{--pwfade:var(--bg)}

@@ -131,10 +131,10 @@ function calendarTiles(): WallTile[] {
 }
 
 /**
- * The full wall, mixed so the eye keeps catching something new: a clip, a
- * message, a number, a calendar. Leftovers from any list run on at the end.
+ * Everything we have, mixed so the eye keeps catching something new: a clip,
+ * a message, a number, a calendar. Used for the counts in the proof header.
  */
-export function buildWallTiles(): WallTile[] {
+export function allWallTiles(): WallTile[] {
   const clips = chapterClips();
   // Adrian is one of our earliest clients; his clip sits near the top.
   clips.splice(2, 0, {
@@ -162,4 +162,37 @@ export function buildWallTiles(): WallTile[] {
     }
   }
   return out;
+}
+
+/* The wall people actually see: only the strongest proof, hand ordered so a
+   clip, a number, a quote and a calendar keep alternating. Phil's clips are
+   left out because his full story sits right above the wall on /connect.
+   To feature something new, add its id here (text screenshots: "shot-0"...). */
+const WALL_PICKS = [
+  "afab-services-mark-before",
+  "stat-afab",
+  "msg:Carlos V.",
+  "garage-force-inland-northwest-gf-dream-customer",
+  "stat-andre",
+  "msg:Jose",
+  "adrian",
+  "cal-afab-services",
+  "msg:Nate",
+  "afab-services-mark-for-the-skeptics",
+  "stat-viktor",
+  "msg:Max",
+  "garage-force-inland-northwest-gf-who-closes",
+  "cal-garage-force-inland-northwest",
+  "afab-services-mark-first-close",
+];
+
+export function buildWallTiles(): WallTile[] {
+  const all = allWallTiles();
+  const shots = all.filter((t) => t.kind === "shot");
+  const find = (key: string) =>
+    key.startsWith("msg:")
+      ? all.find((t) => t.kind === "message" && t.name === key.slice(4))
+      : all.find((t) => t.id === key);
+  // Any text screenshots added to TEXT_SHOTS lead the wall.
+  return [...shots, ...WALL_PICKS.map(find).filter((t): t is WallTile => Boolean(t))];
 }

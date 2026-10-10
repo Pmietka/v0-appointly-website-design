@@ -2,7 +2,7 @@ import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
 import { MuxVideo } from "@/app/case-studies/cfc-interactive";
-import { buildWallTiles, featuredStories } from "@/lib/proof-wall";
+import { allWallTiles, buildWallTiles, featuredStories } from "@/lib/proof-wall";
 import { MoreProof } from "./more-proof";
 import { ProofWall } from "./proof-wall";
 
@@ -71,7 +71,8 @@ export function ProofSection({
   children?: React.ReactNode;
 }) {
   const tiles = buildWallTiles();
-  const clips = tiles.filter((t) => t.kind === "clip" || t.kind === "video").length + featuredStories().length;
+  const library = allWallTiles();
+  const clips = library.filter((t) => t.kind === "clip" || t.kind === "video").length + featuredStories().length;
   return (
     <section className={`sec pwsec${tint ? " tint" : ""}`} id={id}>
       <div className="wrap pwwide">
@@ -81,7 +82,7 @@ export function ProofSection({
           {sub && <p className="sub">{sub}</p>}
           <p className="pwcount">
             <span><b>{clips}</b> interview clips</span>
-            <span><b>{tiles.filter((t) => t.kind === "message" || t.kind === "shot").length}</b> client quotes</span>
+            <span><b>{library.filter((t) => t.kind === "message" || t.kind === "shot").length}</b> client quotes</span>
             <span><b>3</b> full case studies</span>
           </p>
         </div>
@@ -104,7 +105,7 @@ export function ProofHeader({
   title: React.ReactNode;
   sub?: React.ReactNode;
 }) {
-  const tiles = buildWallTiles();
+  const tiles = allWallTiles();
   const clips = tiles.filter((t) => t.kind === "clip" || t.kind === "video").length + featuredStories().length;
   return (
     <>
@@ -126,7 +127,7 @@ export function ProofHeader({
 export function HiddenWall() {
   const tiles = buildWallTiles();
   return (
-    <MoreProof label={`Show me more proof (${tiles.length})`}>
+    <MoreProof label="Show me more proof">
       <ProofWall tiles={tiles} initial={tiles.length} />
     </MoreProof>
   );

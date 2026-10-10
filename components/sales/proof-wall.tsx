@@ -150,8 +150,11 @@ export function ProofWall({
   tiles,
   initial = 16,
   initialMobile = 8,
+  filters = false,
 }: {
   tiles: WallTile[];
+  /** Show the Videos / Quotes / Numbers chips (useful on a long wall). */
+  filters?: boolean;
   /** Tiles shown before "Show the whole wall". */
   initial?: number;
   /** The same, on phones, where the wall is a single column. */
@@ -167,7 +170,7 @@ export function ProofWall({
 
   return (
     <div className="pw">
-      <div className="pwfilters" role="group" aria-label="Filter the wall">
+      {filters && <div className="pwfilters" role="group" aria-label="Filter the wall">
         {FILTERS.map((f) => (
           <button
             type="button"
@@ -179,7 +182,7 @@ export function ProofWall({
             {f.label} <span>{count(f.key)}</span>
           </button>
         ))}
-      </div>
+      </div>}
 
       <div className={`pwgrid${collapsed ? " clipped" : ""}`}>
         {visible.map((t, i) => (
