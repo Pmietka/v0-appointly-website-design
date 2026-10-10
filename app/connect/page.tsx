@@ -74,9 +74,9 @@ export default function ConnectPage() {
           video hero, stat bar, chapter by chapter clips, calendar proof and
           the transcript. Wrapped in .csp so the case study styles apply. */}
       <div className="dscroll csp cfcstory">
-        <StoryHero story={CFC_STORY} cs={cfc} eyebrow={`Case study · ${cfc.company}`} sectionId="cfc-story" />
-        <StoryStats story={CFC_STORY} cs={cfc} />
-        <StoryChapters story={CFC_STORY} cs={cfc} level="h3" />
+        <StoryHero story={CFC_STORY} cs={cfc} eyebrow={`Case study · ${cfc.company}`} sectionId="cfc-story" compact />
+        <StoryStats story={CFC_STORY} cs={cfc} compact />
+        <StoryChapters story={CFC_STORY} cs={cfc} level="h3" compact />
       </div>
 
       {/* The rest of the wall, only when asked for */}

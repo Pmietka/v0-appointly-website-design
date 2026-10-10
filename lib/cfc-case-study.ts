@@ -184,7 +184,6 @@ const STATS: CountStat[] = [
   { prefix: "~", to: 70, suffix: "%", label: "Close rate on shown appointments" },
   { prefix: "", to: 37, suffix: "", label: "Shown appointments in month one" },
   { prefix: "", to: 5, suffix: " days", label: "A week, booked" },
-  { prefix: "~$", to: 2600, suffix: "", label: "Monthly ad spend" },
 ];
 
 const NAMES_NOTE = "Homeowner names shortened to first name and last initial.";

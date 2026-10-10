@@ -144,10 +144,10 @@ function ChapterVisual({ c, ownerFirst }: { c: Chapter; ownerFirst: string }) {
 
 type Level = "h2" | "h3";
 
-function ChapterBlock({ c, i, cite, ownerFirst, level }: { c: Chapter; i: number; cite: string; ownerFirst: string; level: Level }) {
+function ChapterBlock({ c, i, cite, ownerFirst, level, compact = false }: { c: Chapter; i: number; cite: string; ownerFirst: string; level: Level; compact?: boolean }) {
   const H = level;
   return (
-    <article className={`chapter${i % 2 === 1 ? " flip" : ""}`} id={c.id} aria-labelledby={`${c.id}-h`}>
+    <article className={`chapter${i % 2 === 1 ? " flip" : ""}${compact ? " compact" : ""}`} id={c.id} aria-labelledby={`${c.id}-h`}>
       <div className="chmedia">
         <MuxVideo clip={c.clip} label={`Watch, ${c.clip.length || "clip"}`} tag={`${pad(i + 1)} · ${c.nav}`} />
       </div>
@@ -159,11 +159,13 @@ function ChapterBlock({ c, i, cite, ownerFirst, level }: { c: Chapter; i: number
           <p>{c.quote}</p>
           <cite>{cite}</cite>
         </blockquote>
-        <p className="chcap">{c.caption}</p>
+        {!compact && <p className="chcap">{c.caption}</p>}
       </div>
-      <div className="chproof">
-        <ChapterVisual c={c} ownerFirst={ownerFirst} />
-      </div>
+      {!compact && (
+        <div className="chproof">
+          <ChapterVisual c={c} ownerFirst={ownerFirst} />
+        </div>
+      )}
     </article>
   );
 }
@@ -178,6 +180,7 @@ export function StoryHero({
   sectionId,
   pageLink = false,
   priority = false,
+  compact = false,
 }: {
   story: VideoCaseStudy;
   cs: CaseStudy;
@@ -189,6 +192,8 @@ export function StoryHero({
   /** Link through to the company's own page (used on /case-studies). */
   pageLink?: boolean;
   priority?: boolean;
+  /** Headline and video only (used where the story is embedded, e.g. /connect). */
+  compact?: boolean;
 }) {
   const H = heading;
   return (
@@ -211,12 +216,16 @@ export function StoryHero({
             <H className="cfh">
               {story.hero.lead} <span className="hl">{story.hero.highlight}</span>
             </H>
-            <p className="cfsub">{story.hero.sub}</p>
-            <dl className="cfmeta">
-              <div><dt>Owner</dt><dd>{cs.owner}</dd></div>
-              <div><dt>Market</dt><dd>{cs.marketShort}</dd></div>
-              <div><dt>Product</dt><dd>{cs.product}</dd></div>
-            </dl>
+            {!compact && (
+              <>
+                <p className="cfsub">{story.hero.sub}</p>
+                <dl className="cfmeta">
+                  <div><dt>Owner</dt><dd>{cs.owner}</dd></div>
+                  <div><dt>Market</dt><dd>{cs.marketShort}</dd></div>
+                  <div><dt>Product</dt><dd>{cs.product}</dd></div>
+                </dl>
+              </>
+            )}
             {pageLink && (
               <Link className="cfpage" href={storyPath(story.slug)}>
                 Open {story.ownerFirst}&apos;s case study on its own page <ArrowRight aria-hidden />
@@ -233,12 +242,12 @@ export function StoryHero({
 }
 
 /* ── 2 · Stat bar ─────────────────────────────────────────────────────────── */
-export function StoryStats({ story, cs }: { story: VideoCaseStudy; cs: CaseStudy }) {
+export function StoryStats({ story, cs, compact = false }: { story: VideoCaseStudy; cs: CaseStudy; compact?: boolean }) {
   return (
     <section className="cfstats" aria-label={`${cs.company} results`}>
       <div className="wrap wide">
         <StatBar stats={story.stats} />
-        <p className="statnote">{story.statsNote}</p>
+        {!compact && <p className="statnote">{story.statsNote}</p>}
       </div>
     </section>
   );
@@ -249,11 +258,14 @@ export function StoryChapters({
   story,
   cs,
   level = "h2",
+  compact = false,
 }: {
   story: VideoCaseStudy;
   cs: CaseStudy;
   /** Heading level for chapter headlines: one below the story's hero heading. */
   level?: Level;
+  /** Clip, headline and quote only: no captions, diagrams, legend or transcript. */
+  compact?: boolean;
 }) {
   const { chapters, calendar, interview } = story;
   const H = level;
@@ -266,16 +278,18 @@ export function StoryChapters({
         <ChapterNav items={navItems} />
         <div className="chapters">
           {chapters.map((c, i) => (
-            <ChapterBlock c={c} i={i} cite={c.cite ?? story.cite} ownerFirst={story.ownerFirst} level={level} key={c.id} />
+            <ChapterBlock c={c} i={i} cite={c.cite ?? story.cite} ownerFirst={story.ownerFirst} level={level} compact={compact} key={c.id} />
           ))}
 
           <section className="calproof" id={calendar.id} aria-labelledby={calHeading}>
             <p className="chnum">Chapter {pad(chapters.length + 1)} · Calendar proof</p>
             <H className="chhl" id={calHeading}>{calendar.title}</H>
-            <p className="legend">
-              <span className="pip" aria-hidden />
-              {calendar.legend}
-            </p>
+            {!compact && (
+              <p className="legend">
+                <span className="pip" aria-hidden />
+                {calendar.legend}
+              </p>
+            )}
             <Gallery
               variant={calendar.shots.length > 1 ? "grid" : "single"}
               shots={calendar.shots.map((s) => ({
@@ -286,7 +300,7 @@ export function StoryChapters({
           </section>
 
           {/* The transcript, plus the only link to the full interview */}
-          <details className="transcript">
+          {!compact && <details className="transcript">
             <summary>
               <span>
                 <b>Read the full interview transcript</b>
@@ -308,7 +322,7 @@ export function StoryChapters({
                 </div>
               ))}
             </div>
-          </details>
+          </details>}
           <a className="fulllink" href={interview.url} target="_blank" rel="noopener noreferrer">
             Watch the full {interview.length} interview <ArrowUpRight aria-hidden />
           </a>

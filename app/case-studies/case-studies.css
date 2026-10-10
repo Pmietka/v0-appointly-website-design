@@ -72,7 +72,7 @@
 .dscroll.csp .cfstats{margin-top:clamp(-72px,-8vw,-56px);padding-bottom:clamp(8px,2vw,16px);overflow:visible;z-index:2}
 .dscroll.csp .statbar{display:grid;grid-template-columns:repeat(2,1fr);background:#fff;border:1px solid var(--line);border-radius:22px;
   box-shadow:0 30px 60px -36px rgba(0,0,0,.35);overflow:hidden}
-@media(min-width:820px){.dscroll.csp .statbar{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:820px){.dscroll.csp .statbar{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:1fr}}
 .dscroll.csp .cstat{padding:clamp(20px,3.4vw,30px) clamp(16px,2.6vw,26px);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
 .dscroll.csp .cstat:nth-child(2n){border-right:0}
 @media(min-width:820px){
@@ -323,4 +323,19 @@
 
 @media(prefers-reduced-motion:reduce){
   .dscroll.csp .vposter img,.dscroll.csp .vcta,.dscroll.csp .gshot button,.dscroll.csp .cfpage svg,.dscroll.csp .sclink svg{transition:none}
+}
+
+/* Three stats (e.g. Phil's) sit on one row on phones too */
+.dscroll.csp .statbar:has(> .cstat:nth-child(3):last-child){grid-template-columns:repeat(3,1fr)}
+.dscroll.csp .statbar:has(> .cstat:nth-child(3):last-child) .cstat{border-bottom:0;border-right:1px solid var(--line)}
+.dscroll.csp .statbar:has(> .cstat:nth-child(3):last-child) .cstat:last-child{border-right:0}
+@media(max-width:819px){
+  .dscroll.csp .statbar:has(> .cstat:nth-child(3):last-child) .cstat{padding:18px 12px}
+  .dscroll.csp .statbar:has(> .cstat:nth-child(3):last-child) .csv{font-size:clamp(22px,6.4vw,30px);white-space:nowrap}
+}
+
+/* Compact chapters (embedded story): clip and words side by side, nothing else */
+@media(min-width:900px){
+  .dscroll.csp .chapter.compact{grid-template-areas:"media body";grid-template-rows:auto}
+  .dscroll.csp .chapter.compact.flip{grid-template-areas:"body media"}
 }
