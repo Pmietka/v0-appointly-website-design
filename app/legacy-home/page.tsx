@@ -47,7 +47,7 @@ export default async function LegacyHomePage() {
         <SeoResourceLinks
           eyebrow="More Detail"
           title="More specific answers for more specific questions."
-          description="These pages go deeper on exclusivity, how the Appointly Model works, epoxy and concrete coating appointments, and what working with a smaller market looks like."
+          description="Booked floor coating estimates, epoxy flooring leads, and appointments for smaller markets."
           resources={homepageResources}
         />
         <section className="section-divider bg-[hsl(var(--surface-subtle))] py-24 md:py-28">

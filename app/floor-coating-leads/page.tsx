@@ -229,8 +229,8 @@ export default function InsulationContractorLeadsPage() {
         <FaqBlock items={faqItems} />
         <ProofSection />
         <SeoResourceLinks
-          title="Keep exploring the highest-intent pages."
-          description="These links reinforce the main service page with supporting pages around exclusive appointments, the Appointly Model, and how floor coating contractors fill their calendars."
+          title="Keep exploring."
+          description="Pricing, benchmarks, what leads cost, and what a booked estimate is actually worth."
           resources={getCommercialResources("floor-coating-leads")}
         />
       </main>

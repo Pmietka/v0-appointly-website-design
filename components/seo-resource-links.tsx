@@ -51,7 +51,7 @@ export function SeoResourceLinks({
                 {resource.description}
               </p>
               <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-gray-900 transition-colors group-hover:text-gray-600">
-                Visit page
+                Read more <span aria-hidden="true">&rarr;</span>
               </span>
             </Link>
           ))}

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, CalendarDays, ChevronDown, Clock3, Database, RefreshCw } from "lucide-react";
+import { ArrowLeft, ArrowRight, CalendarDays, ChevronDown, Clock3, Database, RefreshCw } from "lucide-react";
 
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { BlogMarkdown } from "@/components/blog-markdown";
@@ -20,7 +20,7 @@ import {
   getClusterLabel,
   getRelatedPosts,
 } from "@/lib/blog";
-import { getGuidePath, getGuides, getGuidesForPost, getSituationLabel } from "@/lib/guides";
+import { getGuidePath, getGuides, getGuidesForPost, getSituationPrompt } from "@/lib/guides";
 import { getBlogCommercialResources } from "@/lib/seo-resources";
 
 const baseUrl = "https://getappointly.co";
@@ -183,26 +183,25 @@ export default async function BlogPostPage({
             </p>
 
             {situationGuides.length > 0 && (
-              <div className="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-5 md:p-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-800">
-                  Start here if this is you
-                </p>
-                <ul className="mt-3 space-y-3">
-                  {situationGuides.map((guide) => (
-                    <li key={guide.slug}>
+              <ul className="mt-8 divide-y divide-amber-200 rounded-2xl border border-amber-200 bg-amber-50">
+                {situationGuides.map((guide) => (
+                  <li key={guide.slug} className="p-5 md:p-6">
+                    <p className="text-lg font-bold leading-snug text-slate-950">
+                      {getSituationPrompt(guide.situation)}
+                    </p>
+                    <p className="mt-2 text-sm text-slate-600 md:text-base">
+                      Start with this guide:{" "}
                       <Link
                         href={getGuidePath(guide.slug)}
-                        className="group block text-base font-semibold leading-snug text-slate-950 underline decoration-amber-400 underline-offset-4 hover:decoration-slate-950"
+                        className="group font-semibold text-slate-950 underline decoration-amber-400 underline-offset-4 hover:decoration-slate-950"
                       >
                         {guide.title}
+                        <ArrowRight className="ml-1 inline h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                       </Link>
-                      <span className="mt-1 block text-sm text-slate-600">
-                        {getSituationLabel(guide.situation)}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                    </p>
+                  </li>
+                ))}
+              </ul>
             )}
 
             <div className="mt-8 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
@@ -400,8 +399,8 @@ export default async function BlogPostPage({
 
         <SeoResourceLinks
           eyebrow="Next Step"
-          title="Related service pages for contractors ready to act."
-          description="Each article supports a commercial page so readers can move from research into the page that best matches their situation."
+          title="Ready to put this into practice?"
+          description="See how Appointly books floor coating estimates for contractors like you."
           resources={commercialResources}
         />
 
@@ -411,7 +410,7 @@ export default async function BlogPostPage({
             className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:opacity-80"
           >
             <ArrowLeft className="h-4 w-4" />
-            Back to all guides
+            Back to the blog
           </Link>
         </div>
       </main>

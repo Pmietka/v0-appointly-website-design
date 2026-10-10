@@ -214,8 +214,8 @@ export default function AppointmentSettingForContractorsPage() {
         <FaqBlock items={faqItems} />
         <ProofSection />
         <SeoResourceLinks
-          title="Pages that support the booked-estimate story."
-          description="These related pages connect appointment setting with booked floor coating estimates, Meta ad traffic, and the Appointly Model."
+          title="More on how booked estimates work."
+          description="Where the leads come from, why speed to lead matters, and how to close the estimates once they are booked."
           resources={getCommercialResources("appointment-setting-for-contractors")}
         />
       </main>

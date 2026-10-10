@@ -217,8 +217,8 @@ export default function SprayFoamContractorLeadsPage() {
         <FaqBlock items={faqItems} />
         <ProofSection />
         <SeoResourceLinks
-          title="Resources supporting epoxy and concrete coating appointments."
-          description="These pages and articles strengthen the coating topic cluster with more detail on booked estimates, seasonality, and the Appointly Model."
+          title="More on epoxy and concrete coating appointments."
+          description="Epoxy lead generation, polyaspartic vs epoxy, getting jobs fast, and pricing."
           resources={getCommercialResources("epoxy-flooring-leads")}
         />
       </main>
