@@ -53,8 +53,9 @@ const CLIPS = {
 const CHAPTERS: Chapter[] = [
   {
     id: "mark-before",
-    nav: "Before",
-    headline: "Thirty leads a week, and maybe two were real",
+    phase: "before",
+    nav: "Before Appointly",
+    headline: "Before Appointly, thirty leads a week and maybe two were real",
     clip: CLIPS.before,
     quote: "I would have 30 different things a week, but maybe two of them were legit.",
     caption:

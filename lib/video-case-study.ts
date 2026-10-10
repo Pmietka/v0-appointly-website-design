@@ -65,6 +65,9 @@ export type FunnelTier = { title: string; text: string };
 
 export type Chapter = {
   id: string;
+  /** "before": the owner's situation before Appointly. Gets a bold "Before
+      Appointly" tag; every other chapter is tagged "With Appointly". */
+  phase?: "before";
   nav: string;
   headline: string;
   clip: MuxClip;

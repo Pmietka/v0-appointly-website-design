@@ -62,8 +62,9 @@ const CAL = {
 const CHAPTERS: Chapter[] = [
   {
     id: "before",
-    nav: "Before",
-    headline: "Leads that wouldn't give a phone number",
+    phase: "before",
+    nav: "Before Appointly",
+    headline: "Before Appointly, his leads wouldn't even give a phone number",
     clip: CLIPS.appointmentQuality,
     quote:
       "They would text me a square footage and say, I got 440 square feet, what's your lowest price?",

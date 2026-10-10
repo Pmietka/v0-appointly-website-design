@@ -67,8 +67,9 @@ const CAL = {
 const CHAPTERS: Chapter[] = [
   {
     id: "gf-before",
-    nav: "Before",
-    headline: "Trade shows, postcards, and price shoppers",
+    phase: "before",
+    nav: "Before Appointly",
+    headline: "Before Appointly, it was trade shows, postcards and price shoppers",
     clip: CLIPS.before,
     quote: "We were getting smaller jobs in less than desirable areas.",
     caption:

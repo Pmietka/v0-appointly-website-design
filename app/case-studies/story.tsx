@@ -152,7 +152,12 @@ function ChapterBlock({ c, i, cite, ownerFirst, level, compact = false }: { c: C
         <MuxVideo clip={c.clip} label={`Watch, ${c.clip.length || "clip"}`} tag={`${pad(i + 1)} · ${c.nav}`} />
       </div>
       <div className="chbody">
-        <p className="chnum">Chapter {pad(i + 1)} · {c.nav}</p>
+        <p className="chnum">
+          <span className={`chphase${c.phase === "before" ? " before" : ""}`}>
+            {c.phase === "before" ? "Before Appointly" : "With Appointly"}
+          </span>
+          Chapter {pad(i + 1)}
+        </p>
         <H className="chhl" id={`${c.id}-h`}>{c.headline}</H>
         <blockquote className="chq">
           <Quote aria-hidden />
