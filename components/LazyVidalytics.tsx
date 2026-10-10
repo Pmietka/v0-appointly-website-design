@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 /* ============================================================================
    LazyVidalytics
@@ -32,6 +33,12 @@ type LazyVidalyticsProps = {
   poster?: string;
   /** Vidalytics account id. Same for every embed on this site. */
   accountId?: string;
+  /** When the heavy player loads:
+   *  - "load" (default): right after first paint, so muted autoplay starts on its own.
+   *  - "interaction": on the visitor's first tap, scroll or key press (or a tap on
+   *    the poster). Keeps the player's ~3s of main-thread work out of page load,
+   *    which matters most on mobile ad traffic. */
+  startOn?: "load" | "interaction";
 };
 
 // Self-contained 16:9 box, identical for the placeholder and the mounted player
@@ -46,6 +53,7 @@ export function LazyVidalytics({
   embedId,
   poster,
   accountId = "FeX1NGyU",
+  startOn = "load",
 }: LazyVidalyticsProps) {
   const [activated, setActivated] = useState(false);
   const wrapRef = useRef<HTMLDivElement>(null);
@@ -65,6 +73,14 @@ export function LazyVidalytics({
         setActivated(true);
       }
     };
+
+    // Interaction mode: wait for the first sign of a real visitor.
+    if (startOn === "interaction") {
+      const events = ["pointerdown", "touchstart", "keydown", "scroll"] as const;
+      const onFirst = () => go();
+      events.forEach((e) => window.addEventListener(e, onFirst, { once: true, passive: true }));
+      return () => events.forEach((e) => window.removeEventListener(e, onFirst));
+    }
 
     // Near-viewport trigger (fires immediately for an above-the-fold hero, and
     // pre-loads a below-the-fold video as it is scrolled toward).
@@ -98,7 +114,7 @@ export function LazyVidalytics({
         window.cancelIdleCallback(idleId);
       }
     };
-  }, [activated]);
+  }, [activated, startOn]);
 
   // Inject the Vidalytics loader once the target div is in the DOM. This is the
   // verbatim dashboard loader; React strips inline <script> from JSX, so it goes
@@ -133,6 +149,36 @@ export function LazyVidalytics({
   // Poster placeholder (no play button): looks like the muted video's first frame
   // so the swap to the autoplaying player is seamless and shift-free. When no
   // poster URL is provided, fall back to a neutral dark box of the same size.
+  if (startOn === "interaction") {
+    // A real button over the poster, so a tap visibly starts the video.
+    return (
+      <button
+        type="button"
+        onClick={() => setActivated(true)}
+        aria-label="Play video"
+        style={{ ...BOX_STYLE, display: "block", border: 0, padding: "56.25% 0 0", margin: 0, cursor: "pointer", background: "#0b0f16" }}
+      >
+        {poster ? (
+          // Served through next/image from our own origin and preloaded, so the
+          // hero's largest image doesn't wait on a second connection.
+          <Image src={poster} alt="" fill priority sizes="(min-width: 960px) 560px, 100vw" style={{ objectFit: "cover" }} />
+        ) : null}
+        <span
+          aria-hidden="true"
+          style={{
+            position: "absolute", left: "50%", top: "50%", transform: "translate(-50%,-50%)", zIndex: 1,
+            width: 76, height: 76, borderRadius: 999, background: "rgba(255,255,255,.95)",
+            boxShadow: "0 18px 40px -12px rgba(0,0,0,.6)", display: "grid", placeItems: "center",
+          }}
+        >
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="#0f3d2e" style={{ marginLeft: 4 }}>
+            <path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5Z" />
+          </svg>
+        </span>
+      </button>
+    );
+  }
+
   return (
     <div
       ref={wrapRef}

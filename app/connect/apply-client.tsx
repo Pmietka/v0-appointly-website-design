@@ -14,6 +14,10 @@ import { OPEN_APPLY_EVENT } from "./apply-button";
 // so LazyVidalytics fills the 16:9 box with a neutral placeholder until the
 // player mounts (which happens automatically just after first paint).
 const VSL_EMBED_ID = "yab2hhU03er3If8m";
+// The VSL's own Vidalytics thumbnail, shown (and painted first) until the
+// player loads, so the hero has a real image from the first frame.
+const VSL_POSTER =
+  "https://fast.vidalytics.com/video/FeX1NGyU/w07vxcipJjjJGRr0/280912/257697__FFMPEG/thumb/thumbnail-5_0.jpg";
 
 /* ============================================================================
    CONFIGURABLE CONSTANTS. Edit these, nothing else, to wire the page up.
@@ -375,7 +379,7 @@ export default function ApplyClient({ children }: { children?: React.ReactNode }
           <div className="herorow">
             <div className="herovsl">
               <div className="vslvid">
-                <LazyVidalytics embedId={VSL_EMBED_ID} />
+                <LazyVidalytics embedId={VSL_EMBED_ID} poster={VSL_POSTER} startOn="interaction" />
               </div>
               <p className="vslnote">Watch how it works, then apply.</p>
             </div>

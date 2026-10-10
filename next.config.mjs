@@ -34,7 +34,11 @@ const nextConfig = {
   images: {
     // Video case study posters are Mux thumbnails, resized and served from our
     // own origin by next/image.
-    remotePatterns: [{ protocol: "https", hostname: "image.mux.com", pathname: "/**" }],
+    remotePatterns: [
+      { protocol: "https", hostname: "image.mux.com", pathname: "/**" },
+      // VSL poster thumbnails, served from our origin so the hero image loads fast.
+      { protocol: "https", hostname: "fast.vidalytics.com", pathname: "/video/**" },
+    ],
   },
   async rewrites() {
     return [
