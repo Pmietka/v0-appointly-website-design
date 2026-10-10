@@ -44,10 +44,17 @@
 .dscroll .pwfeat-logo.dark{height:38px;border-radius:7px}
 .dscroll .pwfeat-lead b{display:block;font-size:clamp(30px,4vw,38px);font-weight:800;letter-spacing:-.03em;line-height:1}
 .dscroll .pwfeat-lead span{display:block;font-size:14px;color:var(--ink-3);margin-top:6px;line-height:1.4}
-.dscroll .pwfeat-stats{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:10px}
-.dscroll .pwfeat-stats div{background:var(--tint);border-radius:12px;padding:12px 14px}
-.dscroll .pwfeat-stats b{display:block;font-size:19px;font-weight:800;letter-spacing:-.015em}
-.dscroll .pwfeat-stats span{display:block;font-size:12px;color:var(--ink-3);line-height:1.35;margin-top:3px}
+/* the two numbers under the lead stat: one split panel with a brand accent */
+.dscroll .pwfeat-stats{position:relative;display:grid;grid-auto-flow:column;grid-auto-columns:1fr;
+  border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  background:linear-gradient(180deg,#fbfffa 0%,#f7fbff 100%)}
+.dscroll .pwfeat-stats::before{content:"";position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,#cfffae,#ace5ff,#ffc9e6)}
+.dscroll .pwfeat-stats div{padding:16px 16px 14px;display:flex;flex-direction:column;gap:6px}
+.dscroll .pwfeat-stats div+div{border-left:1px solid var(--line)}
+.dscroll .pwfeat-stats b{display:block;font-size:clamp(22px,2.2vw,26px);font-weight:800;letter-spacing:-.03em;line-height:1;
+  font-variant-numeric:tabular-nums;color:var(--ink)}
+.dscroll .pwfeat-stats span{display:block;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;
+  color:var(--ink-4);line-height:1.35}
 .dscroll .pwfeat-owner{font-size:13px;font-weight:600;color:var(--ink-2);margin-top:auto}
 .dscroll .pwfeat-link{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:var(--ink);text-decoration:none}
 .dscroll .pwfeat-link svg{width:16px;height:16px;transition:transform .15s}

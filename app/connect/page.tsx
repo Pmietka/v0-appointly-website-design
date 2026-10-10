@@ -62,7 +62,7 @@ export default function ConnectPage() {
 
           {/* Bridge from the three cards into Phil's full story below */}
           <div className="pwbridge">
-            <h3>Here&apos;s Phil&apos;s story, up close.</h3>
+            <h3>Hear from Phil himself</h3>
             <a className="pwbridge-arrow" href="#cfc-story" aria-label="Jump to Phil's story">
               <ChevronDown aria-hidden />
             </a>
