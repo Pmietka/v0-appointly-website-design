@@ -161,7 +161,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     marketShort: "Port St. Lucie, FL",
     marketTag: "Port St. Lucie, FL",
     product: "Floor coating, $3,500 average job",
-    logo: { src: "/images/clients/afab-services.png", width: 364, height: 222, dark: true },
+    logo: { src: "/images/clients/afab-services-light.png", width: 364, height: 222 },
     headline: "57% of appointments close, at a $3,500 average job, in one of the fastest growing markets in the country.",
     context: [
       "Mark T. owns AFAB Services in Port St. Lucie, Florida, and serves the metro area around it. He is our most consistent client. Port St. Lucie is one of the fastest growing markets in the country and, like most of Florida, one of the most competitive for floor coating. It has been a great market for him and for us.",

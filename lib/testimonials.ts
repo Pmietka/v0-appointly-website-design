@@ -117,10 +117,9 @@ export const CLIENT_LOGOS: ClientLogo[] = [
   {
     name: "AFAB Services",
     market: "Port St. Lucie, FL",
-    src: "/images/clients/afab-services.png",
+    src: "/images/clients/afab-services-light.png",
     width: 364,
     height: 222,
-    dark: true,
     href: "/case-studies#afab-services",
   },
   {
@@ -148,9 +147,8 @@ export const CLIENT_LOGOS: ClientLogo[] = [
   {
     name: "Diamond Epoxy Finishes",
     market: "Yalaha, FL",
-    src: "/images/clients/diamond-epoxy-finishes.webp",
-    width: 600,
-    height: 378,
-    dark: true,
+    src: "/images/clients/diamond-epoxy-finishes-light.webp",
+    width: 516,
+    height: 336,
   },
 ];
