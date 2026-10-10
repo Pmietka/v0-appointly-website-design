@@ -160,7 +160,7 @@ const CHAPTERS: Chapter[] = [
 ];
 
 const STATS: CountStat[] = [
-  { prefix: "~", to: 50, suffix: "%", label: "Close rate" },
+  { prefix: "", to: 57, suffix: "%", label: "Close rate" },
   { prefix: "$", to: 3500, suffix: "", label: "Average job size" },
   { prefix: "$", to: 35, suffix: "k+", label: "Closed revenue in his best month" },
   { prefix: "$", to: 6, suffix: "k", label: "Job closed on his 2nd appointment" },
@@ -171,12 +171,12 @@ export const AFAB_STORY: VideoCaseStudy = {
   seo: {
     title: "AFAB Services Case Study | Mark on Video | Appointly",
     description:
-      "Watch Mark from AFAB Services in Port St. Lucie, FL explain what changed when Appointly started vetting and booking his floor coating appointments: about one in two closes, at a $3,500 average job.",
+      "Watch Mark from AFAB Services in Port St. Lucie, FL explain what changed when Appointly started vetting and booking his floor coating appointments: 57% close, at a $3,500 average job.",
   },
   ownerFirst: "Mark",
   cite: "Mark T., in the clip",
   hero: {
-    lead: "One in two appointments closes,",
+    lead: "57% of appointments close,",
     highlight: "at a $3,500 average job.",
     sub: "Mark runs AFAB Services in Port St. Lucie, Florida, alongside a busy remodeling business, and wanted to sell more floor coating without chasing leads himself. Here's how it's going, told by Mark himself.",
     clip: { ...CLIPS.hook } satisfies MuxClip,

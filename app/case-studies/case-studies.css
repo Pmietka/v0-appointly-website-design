@@ -294,7 +294,7 @@
 .dscroll.csp .sclead{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 12px}
 .dscroll.csp .sclead b{font-size:clamp(36px,5vw,46px);font-weight:700;letter-spacing:-.035em;line-height:1;color:#0f766e}
 .dscroll.csp .sclead span{font-size:14px;font-weight:600;color:var(--ink-3);line-height:1.35}
-.dscroll.csp .scstats{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.dscroll.csp .scstats{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;border:1px solid var(--line);border-radius:14px;overflow:hidden}
 .dscroll.csp .scstats div{padding:10px 12px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:3px}
 .dscroll.csp .scstats div:last-child{border-right:0}
 .dscroll.csp .scstats b{font-size:17px;font-weight:700;letter-spacing:-.01em}

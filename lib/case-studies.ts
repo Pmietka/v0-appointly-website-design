@@ -4,8 +4,8 @@
  * never drift apart.
  *
  * House rules for these numbers:
- *  - Ratios and percentages only. Never a raw count of appointments or closed
- *    jobs, so nothing here goes stale as the campaigns keep running.
+ *  - Mostly ratios and percentages. The compact card numbers (glance) may use
+ *    counts the owner has signed off on, e.g. jobs in the first month.
  *  - Money figures are framed monthly (ad spend, average job size).
  *  - No campaign dates or "first N days". Everything reads as results so far.
  *  - Owners are first name plus last initial.
@@ -143,11 +143,10 @@ export const CASE_STUDIES: CaseStudy[] = [
     },
     glance: {
       closeRate: "~70%",
-      lead: { value: "~70%", label: "of shown appointments close" },
+      lead: { value: "~70%", label: "closing rate" },
       cardStats: [
-        { value: "~$2.6k", label: "Monthly ad spend" },
-        { value: "Week 1", label: "First appts booked" },
-        { value: "Custom", label: "Landing page" },
+        { value: "37", label: "Appointments booked monthly" },
+        { value: "26", label: "Appointments closed" },
       ],
     },
   },
@@ -163,21 +162,21 @@ export const CASE_STUDIES: CaseStudy[] = [
     marketTag: "Port St. Lucie, FL",
     product: "Floor coating, $3,500 average job",
     logo: { src: "/images/clients/afab-services.png", width: 364, height: 222, dark: true },
-    headline: "One in two appointments closes, at a $3,500 average job, in one of the fastest growing markets in the country.",
+    headline: "57% of appointments close, at a $3,500 average job, in one of the fastest growing markets in the country.",
     context: [
       "Mark T. owns AFAB Services in Port St. Lucie, Florida, and serves the metro area around it. He is our most consistent client. Port St. Lucie is one of the fastest growing markets in the country and, like most of Florida, one of the most competitive for floor coating. It has been a great market for him and for us.",
       "When we started, Mark was running a busy home improvement company that never slows down. He had a profitable floor coating business sitting right there and no time to actually sell it. Since we began booking his calendar, he has shifted to doing mostly floor coating, because that is where he makes the most money and because the appointments keep coming.",
     ],
     stats: [
-      { value: "~50%", label: "Close rate", hero: true },
+      { value: "57%", label: "Close rate", hero: true },
       { value: "$3,500", label: "Average job size" },
       { value: "$35k+", label: "Closed revenue in his best month so far", hero: true },
       { value: "Mostly", label: "Floor coating now, after years as a general home improvement company" },
     ],
     statsNote:
-      "Closed revenue is closed jobs multiplied by Mark's average job size. His close rate on the appointments we book has held at roughly one in two.",
+      "Closed revenue is closed jobs multiplied by Mark's average job size. His close rate on the appointments we book is 57%.",
     sinceNote:
-      "Mark has been with us the longest of any client in these case studies, and his close rate has held at about one in two the entire time.",
+      "Mark has been with us the longest of any client in these case studies, and his close rate has held above one in two the entire time.",
     why: {
       title: "What Mark says",
       body: [
@@ -203,12 +202,11 @@ export const CASE_STUDIES: CaseStudy[] = [
       ],
     },
     glance: {
-      closeRate: "~50%",
-      lead: { value: "1 in 2", label: "appointments close, at a $3,500 average job" },
+      closeRate: "57%",
+      lead: { value: "57%", label: "closing rate" },
       cardStats: [
-        { value: "~50%", label: "Close rate" },
+        { value: "18", label: "Jobs first month" },
         { value: "$3,500", label: "Avg job size" },
-        { value: "$35k+", label: "Best month" },
       ],
     },
   },
@@ -224,14 +222,14 @@ export const CASE_STUDIES: CaseStudy[] = [
     marketTag: "Spokane, WA",
     product: "Full polyurea system, $5,000 average job",
     logo: { src: "/images/clients/garage-force.png", width: 1000, height: 181 },
-    headline: "More than half of the appointments we book close, on a premium polyurea system sold at a premium price.",
+    headline: "Half of the appointments we book close, on a premium polyurea system sold at a premium price.",
     context: [
       "Eric and Shani own Garage Force of the Inland Northwest, a Garage Force franchise based in Spokane and covering eastern Washington and northern Idaho. They offer a more premium product than any of their local competitors, and than most of our clients: a full polyurea system, priced accordingly, and sold by the owners themselves, who meet every homeowner in person.",
       "That changes how we book for them. A premium price means we only send the highest quality appointments: the homeowners most likely to close and able to pay for the product. The result is fewer total appointments than a volume client would see, but a close rate that stays high and a lot of revenue per appointment. For a company selling a premium product, this is the model that protects the estimator's time.",
     ],
     stats: [
       { value: "~$2,000", label: "Monthly ad spend" },
-      { value: "~55%", label: "Close rate", hero: true },
+      { value: "50%", label: "Close rate", hero: true },
       { value: "$5,000", label: "Average job size" },
       { value: "Premium", label: "Full polyurea system, priced above every local competitor", hero: true },
     ],
@@ -271,12 +269,11 @@ export const CASE_STUDIES: CaseStudy[] = [
       ],
     },
     glance: {
-      closeRate: "~55%",
-      lead: { value: "~55%", label: "close rate on a premium $5,000 ticket" },
+      closeRate: "50%",
+      lead: { value: "50%", label: "closing rate" },
       cardStats: [
-        { value: "~55%", label: "Close rate" },
-        { value: "$5,000", label: "Avg job size" },
-        { value: "~$2k", label: "Monthly ad spend" },
+        { value: "$5k", label: "Avg job size" },
+        { value: "90%", label: "Prequalified appointment rate" },
       ],
     },
   },
