@@ -12,15 +12,14 @@ import "./record.css";
    index. For the next hiring round, update ROLE.
    ============================================================================ */
 
-const ROLE = "Inside Sales Representative";
+const ROLE = "Appointment Setter";
 
 // The SpeakPipe inline widget for this page.
 const SPEAKPIPE_WIDGET = "https://www.speakpipe.com/widget/inline/cobnkhbv2sa38qt03kknihwg0a9iq97r";
 
 const PROMPTS = [
-  "Your full name and a 15 second intro about your sales experience.",
-  "How would you open a call with someone who filled out a form online asking for more information about a service?",
-  "How would you respond if they said “I'm busy right now, can you just call me back later?”",
+  "Your full name and a quick introduction about yourself.",
+  "The first few seconds of calling an American homeowner who requested a quote from a U.S. home services company.",
 ];
 
 export const viewport: Viewport = {
@@ -55,7 +54,7 @@ export default function RecordPage() {
             ))}
           </ol>
 
-          <p className="recrules"><b>Time limit:</b> 90 seconds max total</p>
+          <p className="recrules"><b>Time limit:</b> 30 seconds max total</p>
 
           <div className="recwidget">
             <iframe
