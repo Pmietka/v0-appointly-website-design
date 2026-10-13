@@ -120,11 +120,11 @@ export function PhoneTeam() {
 const IS_NOT = [
   {
     t: "Not a lead seller.",
-    d: "We never sell you a name and a phone number. You get a booked estimate with a qualified homeowner, or you pay nothing.",
+    d: "We never sell you a name and a phone number. You pay the appointment fee only when a qualified homeowner is booked on your calendar.",
   },
   {
     t: "Not a monthly fee agency.",
-    d: "No management fee and no paying for effort or promises. One flat fee for each estimate we book onto your calendar.",
+    d: "No setup fee, no retainer, and no monthly management fee. One flat fee for each estimate we book onto your calendar.",
   },
   {
     t: "A booking partner.",
@@ -179,7 +179,7 @@ export function AboutUs({ cta }: { cta?: React.ReactNode }) {
           </p>
           <p className="aboutp">
             While you run estimates and lay floors, we run the ads, the phones
-            and the calendar. You only pay when a qualified homeowner is booked.
+            and the calendar. You pay the appointment fee only when a qualified homeowner is booked.
           </p>
           {cta && <div className="aboutcta">{cta}</div>}
         </div>

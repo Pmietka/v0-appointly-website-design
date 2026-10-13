@@ -2,7 +2,7 @@
 seo_title: "Garage Coating Franchise vs Going Independent"
 meta_description: "Thinking about a garage floor coating franchise? What a franchise actually gives you, what it costs over time, which FDD items to read, and when going independent makes more sense."
 date: 2026-09-30
-updated: 2026-09-30
+updated: 2026-10-13
 author: patrick
 cluster: economics
 ---
@@ -123,7 +123,7 @@ Going independent tends to make sense when:
 - You already know how to grind, prep, and install, or you can learn from a manufacturer or an experienced installer.
 - You want to choose your own system and change it as the market changes.
 - You would rather put the royalty money into marketing that you control.
-- You are comfortable building the lead flow yourself or paying a partner only for results.
+- You are comfortable building the lead flow yourself or paying a partner per booked estimate.
 
 If you are leaning independent, our guide to [starting a concrete coating business](/blog/how-to-start-a-concrete-coating-business) covers how to pick a niche and a model before you buy equipment.
 

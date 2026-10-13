@@ -2,7 +2,7 @@
 seo_title: "Garage Floor Coating Leads: Cost and Where to Get Them"
 meta_description: "What garage floor coating leads cost from marketplaces, Google, Meta ads, and booked-appointment services, and which source actually turns into installed floors."
 date: 2026-09-02
-updated: 2026-09-11
+updated: 2026-10-13
 author: patrick
 cluster: economics
 ---
@@ -20,7 +20,7 @@ Garage floor coating leads cost roughly $30 to $120 each from shared marketplace
 - Shared marketplace leads go to three to five contractors at once, and contractors who track it honestly close 5 to 12 percent of them.
 - Meta ads are the most scalable source, and with a call inside one minute, 60 to 70 percent of leads should become booked estimates.
 - Compare sources on cost per installed floor, not cost per lead; a $50 shared lead at an 8 percent close costs about $625 per job.
-- A booked-appointment service charges per confirmed estimate and nothing for leads that never book, which changes the denominator from phone numbers to appointments.
+- A booked-appointment service charges its fee per confirmed estimate, not per lead, which changes the denominator from phone numbers to appointments.
 
 ## What are you actually buying when you buy a lead?
 
@@ -66,7 +66,7 @@ Coating contractors running their own Meta ads with good creative and a short fo
 
 A booked-appointment service charges per confirmed estimate, not per lead. This is the model Appointly runs. The provider builds and manages the Meta ads, calls every lead within about a minute, qualifies the homeowner, and puts a confirmed estimate on your calendar. You do not receive a lead. You receive an appointment.
 
-**What it costs:** One flat fee per booked estimate and nothing for leads that never book. No retainer, no monthly fee, no contract. The fee depends on your market, and we walk through it on a call.
+**What it costs:** $125 to $199 per booked estimate, set per market. No setup fee, no retainer, no monthly fee, no long term contract. We walk through the price for your market on a call.
 
 **What you actually get:** A homeowner who owns the property, wants coating work, lives inside your service area, and picked a time. Exclusive, because we work with [one contractor per market](/exclusive-floor-coating-leads).
 
@@ -112,7 +112,7 @@ About 60 to 70 percent of floor coating leads should become booked estimates whe
 
 ### Is it cheaper to run my own Meta ads or buy booked appointments?
 
-Running your own Meta ads is usually cheaper per lead, but only cheaper per installed floor if you can call every lead within a minute and follow up for days. Most owner-operators cannot do that from a jobsite, so 10 to 20 percent of leads become floors. A booked-appointment service charges per confirmed estimate, which removes the phone work and the leads that never book.
+Running your own Meta ads is usually cheaper per lead, but only cheaper per installed floor if you can call every lead within a minute and follow up for days. Most owner-operators cannot do that from a jobsite, so 10 to 20 percent of leads become floors. A booked-appointment service charges per confirmed estimate and takes the phone work off your plate.
 
 ## Stop buying leads and start buying estimates
 

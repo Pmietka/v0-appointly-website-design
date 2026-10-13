@@ -1,8 +1,8 @@
 ---
-seo_title: "Booked Floor Coating Estimates vs Leads | Appointly"
+seo_title: "Booked Floor Coating Estimates vs Leads | Appointly Solutions"
 meta_description: "Booked epoxy and floor coating estimates dropped straight on your calendar. How the pay-per-appointment model works and why contractors switch from raw leads."
 date: 2025-11-18
-updated: 2026-09-11
+updated: 2026-10-13
 author: patrick
 cluster: economics
 ---
@@ -19,7 +19,7 @@ A booked estimate is a confirmed appointment on your calendar with a homeowner w
 
 - A lead is a name and a number; a booked estimate is a confirmed time slot with a homeowner expecting you.
 - Calling a lead within one minute of the form submission gets about a 90% answer rate, and 60 to 70% of leads should become booked estimates.
-- With a pay-per-appointment model you pay one flat fee per booked estimate and nothing for leads that never book.
+- With a pay-per-appointment model you pay one flat fee per booked estimate and no fee for leads that never book.
 - If your average garage floor is $4,000 and you close one in three estimates, every booked appointment is worth running.
 - Judge any provider on who makes the call, how fast, and whether the demand in your market is exclusive.
 
@@ -33,24 +33,24 @@ A booked appointment skips that. Someone else generates the demand, hits the pho
 
 ## How does the pay-per-appointment model compare to a monthly-fee agency?
 
-A monthly-fee agency bills you whether the calendar fills or not, and its job ends when a form gets submitted. A pay-per-appointment provider only gets paid when a real estimate lands on your calendar.
+A monthly-fee agency bills you whether the calendar fills or not, and its job ends when a form gets submitted. A pay-per-appointment provider earns its fee only when a real estimate lands on your calendar.
 
 Most traditional [marketing agencies](/floor-coating-marketing-agency-alternative) keep part of your budget every month and ask for 3 to 6 months to "build momentum." When leads do come in, the chasing, dialing, and no-shows land on you.
 
 | | Monthly-fee agency | Pay per appointment |
 |---|---|---|
-| What you pay for | A flat monthly fee, calendar full or empty | One flat fee per booked estimate, nothing for leads that never book |
+| What you pay for | A flat monthly fee, calendar full or empty | One flat fee per booked estimate |
 | What you receive | Leads handed off after the form fill | Confirmed estimates on your calendar |
 | Who calls the lead | You | The provider's calling team |
-| Contract | Usually a long lock-in | No retainer, no monthly fee, no contract |
+| Contract | Usually a long lock-in | No retainer, no monthly fee, no long term contract |
 | Exclusivity | Often shared demand | One contractor per market |
-| Slow months | Still cost full price | Cost nothing |
+| Slow months | Still cost full price | Fewer booked estimates, fewer fees |
 
 Say your average epoxy garage floor runs $4,000 and you close roughly one in three estimates you run. Every booked appointment on your calendar is worth chasing. The question stops being "how many leads did I buy" and becomes "how many estimates am I standing in front of this week." For a deeper look at that math, see [what a booked floor coating estimate is worth](/blog/what-is-a-booked-floor-coating-estimate-worth).
 
 ## What does the per-appointment fee cover?
 
-The [per-appointment fee](/pricing) covers everything it takes to put one confirmed estimate on your calendar: the Meta ad campaign, the creative, the calling team, and the back-and-forth to lock in a time that fits your route. You pay it once per booked estimate. There is no separate retainer or monthly fee.
+The [per-appointment fee](/pricing) is $125 to $199 per booked estimate, set per market. It pays for the work of putting one confirmed estimate on your calendar: the calling team, the qualifying, and the back-and-forth to lock in a time that fits your route. You pay it once per booked estimate. There is no setup fee, no retainer, and no monthly fee.
 
 What you're buying is not a list of names or a "qualified contact." It's a scheduled estimate with a homeowner who expects you to show up and quote their floor. A contractor doing $2,500 basement floors will weigh the fee differently than one doing $9,000 showroom installs, but the structure is the same.
 
@@ -83,7 +83,7 @@ Judge a provider on who makes the call, how fast, whether the demand is exclusiv
 
 - They run the full job: generate the lead, contact it within a minute, and book the estimate
 - Clear lead source (Meta ads, meaning Facebook and Instagram, to homeowners in your area)
-- One flat fee per booked estimate and nothing for leads that never book
+- One flat fee per booked estimate, with no setup fee or retainer
 - One floor coating contractor per market
 - References from contractors doing your kind of work
 - Confirmed estimates on your calendar, not raw inquiries on a list
@@ -107,7 +107,7 @@ A lead is a name and a phone number from someone who clicked an ad or filled out
 
 ### How does pay-per-appointment pricing work for floor coating contractors?
 
-Pay-per-appointment pricing means you pay one flat fee for each booked estimate that lands on your calendar and nothing for leads that never book. There is no retainer, no monthly fee, and no contract. The fee covers the calling team that reaches every lead within a minute, the qualifying, and the scheduling. You are buying scheduled estimates, not a list of names.
+Pay-per-appointment pricing means you pay one flat fee for each booked estimate that lands on your calendar, with no fee for leads that never book. There is no retainer, no monthly fee, and no long term contract. The fee covers the calling team that reaches every lead within a minute, the qualifying, and the scheduling. You are buying scheduled estimates, not a list of names.
 
 ### What happens if a booked floor coating estimate doesn't close?
 
@@ -115,7 +115,7 @@ Closing is on you: your pricing, your pitch, and the way you walk the floor. A b
 
 ### Can I scale booked floor coating estimates up or down?
 
-Yes. A booked-appointment system is built to match the volume of estimates your crew can actually handle. If you want more estimates on the books, the provider turns up ad spend in your market. If your calendar is full, they pace it. The goal is to keep you quoting every week, not to bury you in appointments you can't run.
+Yes. A booked-appointment system is built to match the volume of estimates your crew can actually handle. If you want more estimates on the books, the provider scales up the campaigns in your market. If your calendar is full, they pace it. The goal is to keep you quoting every week, not to bury you in appointments you can't run.
 
 ### How fast should a floor coating lead be contacted?
 
@@ -123,6 +123,6 @@ Within one minute of the form submission. At that speed the phone answer rate ru
 
 ## Ready to fill your calendar with booked estimates?
 
-Stop chasing leads and start running estimates. If your average job is worth real money and you can show up and quote, [booked floor coating estimates](/floor-coating-leads) put you in front of homeowners who are expecting you, with one flat fee per appointment and nothing for leads that never book.
+Stop chasing leads and start running estimates. If your average job is worth real money and you can show up and quote, [booked floor coating estimates](/floor-coating-leads) put you in front of homeowners who are expecting you, with one flat fee per appointment and no setup fee or retainer.
 
 [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we'll walk through your market, your calendar, and how many estimates a week make sense. One contractor per market, so if your area is open, it's yours.

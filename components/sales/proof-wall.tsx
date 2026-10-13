@@ -130,7 +130,7 @@ function Tile({ t, mx }: { t: WallTile; mx: boolean }) {
           <a href={t.src} target="_blank" rel="noopener noreferrer" aria-label={`Open full size: ${t.label}`}>
             <Image
               src={t.src}
-              alt={`${t.label}. Every blue event is an estimate booked by Appointly. Homeowner names shortened to first name and last initial.`}
+              alt={`${t.label}. Every blue event is an estimate booked by Appointly Solutions. Homeowner names shortened to first name and last initial.`}
               width={t.width}
               height={t.height}
               sizes="(max-width: 640px) 92vw, 340px"

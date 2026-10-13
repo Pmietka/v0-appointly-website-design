@@ -3,7 +3,7 @@ title: "How Reviews and Your Google Profile Help You Close More Floor Coating Es
 seo_title: "Google Reviews for Floor Coating Contractors"
 meta_description: "Your reviews and job photos close the floor coating estimates you already booked. A contractor's guide to building proof on Google that wins more jobs."
 date: 2025-12-23
-updated: 2026-09-11
+updated: 2026-10-13
 author: jacob
 cluster: sales
 ---
@@ -139,6 +139,6 @@ If you can spend 30 minutes a week on it, do it yourself, because nobody knows t
 
 ## Build the proof, then fill the calendar
 
-A strong reputation helps you close the estimates you've got, but it doesn't put estimates on the calendar in the first place. [Booked floor coating estimates](/floor-coating-leads) do that: Meta ads bring in the homeowner, a calling team reaches them within a minute, and the estimate lands on your calendar for one flat fee, with nothing owed for leads that never book.
+A strong reputation helps you close the estimates you've got, but it doesn't put estimates on the calendar in the first place. [Booked floor coating estimates](/floor-coating-leads) do that: Meta ads bring in the homeowner, a calling team reaches them within a minute, and the estimate lands on your calendar for one flat fee, with no setup fee or retainer.
 
 Get your profile and reviews in shape this week, then [book a strategy call](https://client.getappointly.co/strategy-calendar) to see if your market is open. One contractor per market, and every estimate we book walks in having already read your reviews.

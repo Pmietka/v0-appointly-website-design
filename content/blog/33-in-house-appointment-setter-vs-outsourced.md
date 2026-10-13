@@ -2,7 +2,7 @@
 seo_title: "In-House Appointment Setter vs Outsourced for Contractors"
 meta_description: "Owner calling, in-house setter, or outsourced booking team? An honest cost and coverage comparison for floor coating contractors, with a decision table."
 date: 2026-09-11
-updated: 2026-09-11
+updated: 2026-10-13
 author: jacob
 cluster: operations
 ---
@@ -68,7 +68,7 @@ A good outsourced appointment setting team should do four things: call within a 
 1. **They call within a minute.** Not within an hour, not "same day." Ask them for their average time from form fill to first dial and how they cover evenings and weekends.
 2. **They book on your calendar.** The appointment should land as a real time slot with your availability rules, not as a note in their system that you have to convert later.
 3. **They confirm and remind.** Our [show rate benchmark](/floor-coating-benchmarks) is about 80% with no reminders and about 95% with a confirmation at booking, a reminder 24 hours out, a reminder 1 hour out, and a person triaging homeowners who go quiet. The team should own that sequence.
-4. **You pay per booked appointment.** Per-hour billing pays for dials. Per-appointment billing pays for results, and it means the team eats the cost of leads that never book.
+4. **You pay per booked appointment.** Per-hour billing pays for dials. Per-appointment billing pays for booked estimates, and it means the team earns its fee only when the calling works.
 
 Ask two more questions. Do they work only with floor coating contractors, or is your account one of thirty trades? And do they record calls you can listen to? A team that says no to either is asking you to trust the calendar without checking it.
 
@@ -111,8 +111,8 @@ An outsourced appointment setting service for a contractor should include a call
 
 The owner should call leads directly only when the business is very small and the owner can genuinely stop and dial within a minute of every form. As soon as the owner is on a slab or in an estimate during the day, the first call needs to belong to someone else. The owner is still the right person for the quote follow-up and the close.
 
-## Where Appointly fits
+## Where Appointly Solutions fits
 
 If you are under roughly 150 leads a month, or your volume swings with the seasons, an outsourced team that calls within a minute and charges per booked appointment is usually the cheaper and faster option. If you are well above that with steady volume, run the illustrative math above with your own wage and lead numbers, and be honest about the evening and weekend gap.
 
-Appointly is the outsourced option for floor coating contractors: our calling team contacts every lead within about a minute, books the estimate on your calendar, confirms and reminds, and you pay one flat fee per booked appointment and nothing for leads that never book. Read how [appointment setting for contractors](/appointment-setting-for-contractors) works, or [book a strategy call](https://client.getappointly.co/strategy-calendar) to compare it against a hire for your volume.
+Appointly is the outsourced option for floor coating contractors: our calling team contacts every lead within about a minute, books the estimate on your calendar, confirms and reminds, and you pay one flat fee per booked appointment, with no setup fee or retainer. Read how [appointment setting for contractors](/appointment-setting-for-contractors) works, or [book a strategy call](https://client.getappointly.co/strategy-calendar) to compare it against a hire for your volume.

@@ -36,7 +36,7 @@ const steps = [
     icon: CreditCard,
     title: "Simple, results-based pricing",
     description:
-      "You pay one flat fee for each booked estimate that lands on your calendar. Nothing for leads that never book.",
+      "You pay one flat fee for each booked estimate that lands on your calendar. No setup fee, no retainer, and no long term contract.",
   },
 ];
 
@@ -49,7 +49,7 @@ export function Solution() {
             Our System
           </p>
           <h2 className="font-display text-3xl font-bold leading-tight text-balance text-gray-900 md:text-4xl lg:text-5xl">
-            How the <span className="marker-highlight">Appointly Model</span> works
+            How <span className="marker-highlight">Appointly Solutions</span> works
           </h2>
           <p className="mt-4 leading-relaxed text-gray-600">
             We do the complete job of filling your calendar with booked estimates. All

@@ -2,7 +2,7 @@
 seo_title: "How to Start a Floor Coating Business in 2026"
 meta_description: "A practical guide to starting a garage floor coating business: startup costs, equipment, pricing, licensing, insurance, and how to book your first 20 estimates."
 date: 2026-09-02
-updated: 2026-09-11
+updated: 2026-10-13
 author: patrick
 cluster: operations
 ---
@@ -106,7 +106,7 @@ A one-crew floor coating business running two to three garage floors a week at $
 
 ### How do new floor coating contractors get their first customers?
 
-New floor coating contractors get their first customers by coating three garages at cost for photos and reviews, setting up a Google Business Profile, and posting the finished floors in local Facebook groups. Meta ads with a real local before-and-after create demand fastest, as long as every lead is called within a minute. A booked-appointment service handles the ads and calls for a per-appointment fee.
+New floor coating contractors get their first customers by coating three garages at cost for photos and reviews, setting up a Google Business Profile, and posting the finished floors in local Facebook groups. Meta ads with a real local before-and-after create demand fastest, as long as every lead is called within a minute. A booked-appointment service handles the ads and calls and charges a per-appointment fee.
 
 ## Get the first 20 estimates on the calendar
 

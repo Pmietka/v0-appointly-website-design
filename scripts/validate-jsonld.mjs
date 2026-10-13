@@ -53,7 +53,7 @@ const visibleText = (html) =>
       .replace(/<script[\s\S]*?<\/script>/g, " ")
       .replace(/<style[\s\S]*?<\/style>/g, " ")
       .replace(/<[^>]+>/g, " "),
-  ).replace(/\s+/g, " ");
+  ).replace(/\s+/g, "");
 
 const errors = [];
 let blocks = 0;
@@ -104,7 +104,9 @@ for (const file of htmlFiles(root)) {
     for (const faq of faqs) {
       for (const q of faq.mainEntity ?? []) {
         const answer = q.acceptedAnswer?.text ?? "";
-        if (!text.includes(answer.replace(/\s+/g, " ").trim())) {
+        // Compared without whitespace, since inline tags like links leave
+        // stray spaces in the stripped page text.
+        if (!text.includes(answer.replace(/\s+/g, ""))) {
           errors.push(`${rel} FAQ answer is not visible on the page: "${q.name}"`);
         }
       }

@@ -2,7 +2,7 @@
 seo_title: "Floor Coating Contractor Marketing Budget Guide"
 meta_description: "A marketing budget guide for floor coating contractors: where to spend first, what to skip, and how speed to lead turns a small budget into booked estimates."
 date: 2026-02-10
-updated: 2026-09-11
+updated: 2026-10-13
 author: patrick
 cluster: marketing-channels
 ---
@@ -67,7 +67,7 @@ The catch with running it yourself is follow-up. A lead that clicks an ad is wor
 
 ### 3. A pay-per-appointment booking system
 
-Don't pay a generalist agency for activity you can't measure. Pay for the outcome instead: an estimate booked on your calendar. That's how we work at Appointly. We run the Meta ads, our team calls every lead within about a minute because [speed to lead](/blog/speed-to-lead-wins-floor-coating-jobs) is the biggest lever in this business, and we book the estimate directly on your calendar. You pay one flat fee per booked appointment and nothing for leads that never book.
+Don't pay a generalist agency for activity you can't measure. Pay for the outcome instead: an estimate booked on your calendar. That's how we work at Appointly. We run the Meta ads, our team calls every lead within about a minute because [speed to lead](/blog/speed-to-lead-wins-floor-coating-jobs) is the biggest lever in this business, and we book the estimate directly on your calendar. You pay one flat fee per booked appointment, with no setup fee or retainer.
 
 That structure matters because the bottleneck for most contractors isn't clicks. It's the gap between a homeowner raising their hand and someone getting them on the calendar. A lead that sits for two hours is usually gone. A lead that gets a call in two minutes is yours.
 
@@ -136,7 +136,7 @@ Give any floor coating marketing channel a full test window and enough booked es
 
 ### Is a big marketing agency or a specialist partner better for a floor coating contractor?
 
-For a small floor coating contractor, a specialist that is paid only when an estimate lands on your calendar beats a big agency that bills for activity. The specialist knows the trade, the creative that pulls homeowners, and the follow-up that books them. The agency has to learn your business on your dime. Pick whoever is accountable for booked estimates, not reports.
+For a small floor coating contractor, a specialist whose fee is tied to estimates landing on your calendar beats a big agency that bills for activity. The specialist knows the trade, the creative that pulls homeowners, and the follow-up that books them. The agency has to learn your business on your dime. Pick whoever is accountable for booked estimates, not reports.
 
 ### What should I do if my marketing budget already isn't working?
 

@@ -2,7 +2,7 @@
 seo_title: "Exclusive Floor Coating Estimates: What to Look For"
 meta_description: "Exclusive, booked floor coating estimates with one contractor per market. Why exclusivity wins, how speed to lead works, and red flags in lead gen contracts."
 date: 2025-11-25
-updated: 2026-09-11
+updated: 2026-10-13
 author: patrick
 cluster: economics
 ---
@@ -61,13 +61,13 @@ The biggest red flag is a provider that sells "leads" and calls them appointment
 
 **Red flag 5: No speed to lead.** Ask how fast a new lead gets contacted. If the answer is "we deliver it within 24 hours and you take it from there," that lead is already cold. Our [benchmarks](/floor-coating-benchmarks) show a 90% phone answer rate when the lead is called within one minute of the form, and 60 to 70% of leads should become booked estimates at that speed. If [speed to lead](/blog/speed-to-lead-wins-floor-coating-jobs) isn't part of the offer, the calendar won't fill.
 
-**Red flag 6: Hidden fees.** Get the structure in writing. One fee per booked estimate and nothing for leads that never book. If "platform fees," "verification fees," and surprise add-ons creep in, walk.
+**Red flag 6: Hidden fees.** Get the structure in writing. One fee per booked estimate, with no setup fee or retainer on top. If "platform fees," "verification fees," and surprise add-ons creep in, walk.
 
 ## How does pricing for exclusive booked estimates work?
 
-You pay one flat fee for each booked estimate that lands on your calendar, and nothing for leads that never book. No retainer, no monthly fee, no contract.
+You pay $125 to $199 per booked estimate, set per market, billed when the estimate lands on your calendar. No setup fee, no retainer, no monthly fee, no long term contract.
 
-That single fee covers the whole machine: the calling team that reaches every lead within a minute, qualifying the homeowner on service area and project scope, and the back-and-forth to book each estimate into a slot that fits your route. You are paying for a confirmed time with a homeowner who expects you to walk their garage or basement, not for a name on a list.
+That fee covers the booking work: the calling team that reaches every lead within a minute, qualifying the homeowner on service area and project scope, and the back-and-forth to book each estimate into a slot that fits your route. You are paying for a confirmed time with a homeowner who expects you to walk their garage or basement, not for a name on a list.
 
 Any provider you talk to should be able to explain their structure that cleanly in ten minutes. If they can't, that's your answer.
 
@@ -80,7 +80,7 @@ A real provider can name its lead source, contacts leads in minutes, books the e
 3. **They book the estimate for you.** You shouldn't be dialing anybody. You open your calendar and the estimate is already there.
 4. **They guarantee exclusivity.** One floor coating contractor per market. Make them say it plainly and put it in writing.
 5. **They have contractor references.** Call them. Ask how many estimates actually show up and whether they'd do it again.
-6. **The agreement is simple.** One flat fee per booked estimate, exclusivity in your market, no early termination penalties.
+6. **The agreement is simple.** One flat fee per booked estimate, exclusivity in your market, no long term contract.
 
 ## What calculation actually matters?
 
@@ -106,7 +106,7 @@ No. With a booked-appointment model, the provider generates the lead through Met
 
 ### How are exclusive booked floor coating estimates priced?
 
-You pay one flat fee for each booked estimate that lands on your calendar and nothing for leads that never book. There is no retainer, no monthly fee, and no contract. That fee covers the calling team, the qualifying, and the scheduling. You are paying for confirmed estimates with homeowners who expect you, not for a list of names.
+You pay $125 to $199 per booked estimate, set per market, billed when the estimate lands on your calendar. There is no setup fee, no retainer, no monthly fee, and no long term contract. That fee covers the calling team, the qualifying, and the scheduling. You are paying for confirmed estimates with homeowners who expect you, not for a list of names.
 
 ### What should I ask a floor coating lead provider before signing?
 

@@ -1,15 +1,15 @@
 ---
-seo_title: "Why Appointly Calls Every Floor Coating Lead Itself"
-meta_description: "A client closed four out of four floor coating estimates in one day. Two homeowners said the first phone call sold them. Here is why Appointly calls every lead."
+seo_title: "Why Appointly Solutions Calls Every Floor Coating Lead Itself"
+meta_description: "A client closed four out of four floor coating estimates in one day. Two homeowners said the first phone call sold them. Here is why Appointly Solutions calls every lead."
 date: 2026-09-17
-updated: 2026-09-17
+updated: 2026-10-13
 author: patrick
 cluster: sales
 ---
 
 # Why We Call Every Floor Coating Lead Ourselves
 
-**Meta Description:** A client closed four out of four floor coating estimates in one day. Two homeowners said the first phone call sold them. Here is why Appointly calls every lead.
+**Meta Description:** A client closed four out of four floor coating estimates in one day. Two homeowners said the first phone call sold them. Here is why Appointly Solutions calls every lead.
 
 ---
 
@@ -22,9 +22,9 @@ Appointly Solutions calls every floor coating lead ourselves because a homeowner
 - Appointly calls every lead ourselves, with setters who know floor coating and can talk to a homeowner about the product.
 - One of our newer clients closed all four estimates we booked him in a single day, every one above his average ticket.
 - Two of those homeowners said directly that they would not have moved forward without the person who spoke to them on the phone first.
-- Contractors pay per booked appointment, not per lead, so the cost of leads that never book is ours.
+- Contractors pay per booked appointment, not per lead, and the appointment fee is billed only when a qualified homeowner is booked.
 
-## What makes Appointly different from other agencies?
+## What makes Appointly Solutions different from other agencies?
 
 Yesterday I was thinking about how Appointly Solutions differentiates from other agencies.
 
@@ -76,7 +76,7 @@ If you want the sales side of that equation, read [how to close more floor coati
 
 ## Frequently asked questions
 
-### Why does Appointly call every floor coating lead instead of sending leads to the contractor?
+### Why does Appointly Solutions call every floor coating lead instead of sending leads to the contractor?
 
 Because a homeowner decides who they trust in the first conversation, not at the estimate. A busy contractor returning a voicemail hours later loses the lead to whoever called first. An Appointly setter who knows floor coating answers within minutes, educates the homeowner on the product, qualifies them, and books the estimate, so the contractor shows up to a homeowner who is already sold on the product.
 
@@ -88,9 +88,9 @@ One of Appointly's newer floor coating clients ran four estimates in a single da
 
 Yes. A generic call center can confirm a time. A setter who knows floor coating can explain epoxy versus polyaspartic, prep, cure time, and cost ranges, which gets the homeowner excited before the estimate. That product knowledge is what turns a booked appointment into a closed job.
 
-### How does Appointly charge floor coating contractors?
+### How does Appointly Solutions charge floor coating contractors?
 
-Appointly charges per booked appointment, not per lead. Contractors pay $125 to $199 per booked estimate depending on market and the work they install. There is no retainer, no monthly fee, and nothing charged for leads that never book. No-shows and appointments that miss the agreed criteria are credited.
+Appointly charges per booked appointment, not per lead. Contractors pay $125 to $199 per booked estimate, set per market. There is no setup fee, no retainer, no monthly fee, and no long term contract. A no-show earns a credit toward the next appointment, and an appointment that misses the agreed criteria is graded in the Appointly Solutions app and the contractor pays nothing for it.
 
 ### Who is Appointly Solutions for?
 

@@ -2,7 +2,7 @@
 seo_title: "Speed to Lead Wins Floor Coating Jobs"
 meta_description: "Homeowners book whoever calls back first. What slow follow-up costs floor coating contractors, and how instant contact wins the jobs you paid to generate."
 date: 2026-03-31
-updated: 2026-09-11
+updated: 2026-10-13
 author: jacob
 cluster: sales
 ---
@@ -116,6 +116,6 @@ Yes, because that's when homeowners fill out forms. A Saturday afternoon or 8 p.
 
 ## Win the jobs you're already paying to generate
 
-Speed to lead is what we built Appointly around. We run the Meta ads that generate the homeowner, call within about a minute, and book the estimate into a slot on your calendar. You pay one flat fee per booked estimate and nothing for leads that never book. You stay heads-down on the floor you're coating today while we lock in the one you'll coat next week. See how [appointment setting for contractors](/appointment-setting-for-contractors) works.
+Speed to lead is what we built Appointly around. We run the Meta ads that generate the homeowner, call within about a minute, and book the estimate into a slot on your calendar. You pay one flat fee per booked estimate, with no setup fee or retainer. You stay heads-down on the floor you're coating today while we lock in the one you'll coat next week. See how [appointment setting for contractors](/appointment-setting-for-contractors) works.
 
 Then [book a strategy call](https://client.getappointly.co/strategy-calendar). We'll check whether your market is open and walk through what a coating contractor there should expect. Stop being the second contractor to call.

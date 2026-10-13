@@ -2,7 +2,7 @@
 seo_title: "What Is a Booked Floor Coating Estimate Worth?"
 meta_description: "What a booked floor coating estimate is worth, how to calculate it from job size and close rate, and how to budget for appointment generation around your crew."
 date: 2026-02-17
-updated: 2026-09-11
+updated: 2026-10-13
 author: patrick
 cluster: economics
 ---
@@ -21,7 +21,7 @@ A booked floor coating estimate is worth your average gross profit per job multi
 - Twenty cold leads closing at 5 percent produce one job, while five booked estimates closing at 40 percent produce two.
 - Work backward from capacity: a crew that can coat 8 floors a month at a 40 percent close rate needs about 20 booked estimates.
 - Judge every option for filling the calendar by cost per coated floor, not cost per lead.
-- Shared leads get called by several contractors at once, so pay only for exclusive, booked appointments.
+- Shared leads get called by several contractors at once, so pay for exclusive, booked appointments instead.
 
 ## Why should you budget per booked estimate instead of per lead?
 
@@ -107,7 +107,7 @@ Expect booked, exclusive estimates in your zip codes, not a list of names. Speci
 - Exclusivity: one contractor per market, so you're not racing four other shops for the same garage.
 - Incentives that match yours: the partner gets paid when an estimate lands on your calendar, not when a report gets emailed.
 
-That's how we structure it at Appointly. You pay one flat fee per booked appointment and nothing for leads that never book. You're not buying raw leads. You're buying floors on the calendar.
+That's how we structure it at Appointly. You pay one flat fee per booked appointment, with no setup fee or retainer. You're not buying raw leads. You're buying floors on the calendar.
 
 ## What are the hidden costs of chasing raw leads?
 

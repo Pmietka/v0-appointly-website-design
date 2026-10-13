@@ -115,7 +115,7 @@ const MODEL = [
   {
     Icon: CircleDollarSign,
     t: "How you pay",
-    d: "One flat fee for each booked estimate that lands on your calendar. No monthly management fee, and nothing for leads that never book. Your per-appointment price is set on the strategy call, based on your market and job size.",
+    d: "$125 to $199 per booked estimate, set per market, billed when the estimate is booked on your calendar. No setup fee, no retainer, and no monthly management fee. We confirm the price for your market on the strategy call.",
   },
   {
     Icon: BadgeCheck,
@@ -125,7 +125,7 @@ const MODEL = [
   {
     Icon: ShieldCheck,
     t: "No-shows and bad fits",
-    d: "If a confirmed homeowner doesn't show, or turns out not to meet the bar we agreed on, it doesn't count against you. A job too small to be worth your time is on us too.",
+    d: "If a confirmed homeowner doesn't show, it earns a credit toward your next appointment. If an appointment turns out unqualified or unbiddable, like a service you don't offer, you grade it in the Appointly Solutions app with notes and pay nothing for it.",
   },
   {
     Icon: CalendarCheck,
@@ -140,7 +140,7 @@ const MODEL = [
   {
     Icon: Lock,
     t: "Exclusivity and commitment",
-    d: "One floor coating contractor per market, so we never book the same homeowner for the company down the road. No long term contract. Cancel anytime with a short notice period.",
+    d: "One floor coating contractor per market, so we never book the same homeowner for the company down the road. No long term contract.",
   },
 ];
 
@@ -231,12 +231,12 @@ export function ResultsToExpect() {
 
 /* ── Misconceptions (used on /lander, before the call) ─────────────────────── */
 const MYTHS = [
-  { m: "“So you sell leads.”", f: "We don't sell leads. You pay for a booked estimate with a qualified homeowner, never for a name and a phone number." },
-  { m: "“I'll pay every month whether it works or not.”", f: "There's no monthly management fee. One flat fee per booked estimate, and no-shows don't count." },
+  { m: "“So you sell leads.”", f: "We don't sell leads. Our fee is for a booked estimate with a qualified homeowner, not a name and a phone number." },
+  { m: "“I'll pay every month whether it works or not.”", f: "There's no setup fee, no retainer, and no monthly management fee. You pay per booked estimate, and a no-show earns a credit toward your next appointment." },
   { m: "“My homeowners get shared with the guy down the road.”", f: "One floor coating contractor per market. Every estimate we book is yours alone." },
-  { m: "“I'll get locked into a long contract.”", f: "No long term contract. You can cancel anytime with a short notice period." },
+  { m: "“I'll get locked into a long contract.”", f: "No long term contract." },
   { m: "“I'll have to manage ads and chase people.”", f: "We run the ads from our own account and call every lead. You show up and run the estimate." },
-  { m: "“Every appointment is a guaranteed sale.”", f: "Nobody can honestly promise that. We stand behind the appointment meeting the bar we agree on. Closing it is your part, and our clients close roughly 50 to 70%." },
+  { m: "“Every appointment is a guaranteed sale.”", f: "Nobody can honestly promise that. An appointment that misses the bar we agree on is graded in the app, and you pay nothing for it. Closing is your part, and our clients close roughly 50 to 70%." },
 ];
 
 export function Misconceptions() {
@@ -257,11 +257,11 @@ const COMPARE_COLS = ["DIY", "Marketing Agency", "Shared Leads", "Appointly"];
 const COMPARE_ROWS = [
   { label: "Outcome", Icon: Target, kind: "text", out: true, vals: ["All on you. Hard to keep up while you work.", "Promises and meetings. Slow to show results.", "Cold leads sold to many. You do the chasing.", "Qualified appointments booked on your calendar."] },
   { label: "Who runs it", Icon: User, kind: "text", out: false, vals: ["You", "You manage them", "You chase leads", "We run everything"] },
-  { label: "Upfront risk", Icon: Shield, kind: "text", out: false, vals: ["On you", "On you", "On you", "None. Pay per appointment"] },
+  { label: "Risk on bad appointments", Icon: Shield, kind: "text", out: false, vals: ["On you", "On you", "On you", "None. Bad fits are not billed"] },
   { label: "What you pay for", Icon: CreditCard, kind: "text", out: false, vals: ["Your time", "Monthly fees", "Leads that flake", "Booked appointments"] },
   { label: "Works while you're on the job", Icon: Clock, kind: "bin", out: false, vals: [false, false, false, true] },
   { label: "Exclusive to you", Icon: Lock, kind: "bin", out: false, vals: [false, false, false, true] },
-  { label: "You only pay for results", Icon: LineChart, kind: "bin", out: false, vals: [false, false, false, true] },
+  { label: "Bad appointments not billed", Icon: LineChart, kind: "bin", out: false, vals: [false, false, false, true] },
 ] as const;
 
 export function CompareTable() {
@@ -328,7 +328,7 @@ export function CompareTable() {
 /* Real numbers for the dark proof bar under each hero. */
 export const PROOF_STATS = [
   { v: "50 to 70%", l: "Close rates on the estimates we book, across our case studies." },
-  { v: "$0", l: "Owed until an estimate is booked on your calendar." },
+  { v: "$0", l: "Setup fee. You pay per booked estimate." },
   { v: "1", l: "Floor coating contractor per market. Exclusive." },
 ];
 

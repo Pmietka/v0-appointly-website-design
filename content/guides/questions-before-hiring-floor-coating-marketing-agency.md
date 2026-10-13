@@ -2,7 +2,7 @@
 seo_title: "Questions Before Hiring a Floor Coating Marketing Agency"
 meta_description: "Burned by an agency before? Ask these 15 questions before you hire another floor coating marketing agency, from who calls your leads to who owns the ad account."
 date: 2026-10-07
-updated: 2026-10-07
+updated: 2026-10-13
 author: patrick
 cluster: marketing-channels
 situation: burned-by-agency
@@ -22,7 +22,7 @@ Before you hire another floor coating marketing agency, ask what you pay for if 
 ## Key takeaways
 
 - The most important question is what you pay for when nothing books, because that tells you who carries the risk.
-- If you pay the ad spend, the ads should run in an account you own or can fully access.
+- Ask whose ad account the campaigns run in, what you can see, and what you keep if you leave.
 - Ask who calls the lead and how fast: about 90% of homeowners answer when called within one minute, and answer rates fall fast after that.
 - Get the definition of a qualified lead or estimate in writing before you sign, not after the first invoice.
 - Ask how many other floor coating contractors the agency serves in your market. "A few" means you are competing with yourself.
@@ -53,8 +53,8 @@ The broader story is in [why floor coating contractors leave marketing agencies]
 ## What should you ask about the ad account and your assets?
 
 **4. Whose ad account and Business Manager do the ads run in?**
-- A good answer sounds like: If you pay the ad spend, "Yours, and you are an admin." If the provider pays the spend itself (common with booked appointment services), running from their own account is normal, because the money at risk is theirs.
-- A red flag sounds like: Your money spent in their account with no access for you.
+- A good answer sounds like: A straight answer either way. Some providers build inside your Business Manager and make you an admin. Others, common with booked appointment services, run campaigns from their own account. Either can work when they tell you plainly what you can see, what you keep, and what happens to the campaigns if you leave.
+- A red flag sounds like: Vague answers about whose account it is, what you can see, or what you keep if you leave.
 
 **5. Who owns the landing pages, domain, pixel or dataset, and creative files?**
 - A good answer sounds like: A written list of what is yours, what is theirs, and what transfers if you leave.
@@ -126,7 +126,7 @@ Score each area 0 (red flag), 1 (vague), or 2 (good answer in writing).
 | --- | --- | --- | --- | --- |
 | What you pay for | 1, 3 | Tied to a countable result | "Marketing takes time" | |
 | Contract exit | 2 | Short notice, no penalty | Long lock in, termination fee | |
-| Ad account | 4 | You own it, or they pay the spend | Your money, their account, no access | |
+| Ad account | 4 | Clear answer on whose account, what you see, what you keep | Vague about the account or what you keep | |
 | Your assets and data | 5, 6 | Written list, exports on request | "We will figure it out" | |
 | Speed to lead | 7 | Calls within minutes, recordings | Leads dumped in your CRM | |
 | Lead quality | 8, 9 | Landing page, your real floors | Native form, template ads | |
@@ -145,7 +145,7 @@ Ask what you pay for if no estimates book. That answer tells you whether the age
 
 ### Should I own the Meta ad account if I hire an epoxy flooring agency?
 
-If you pay the ad spend, yes, or at minimum you should have full admin access. If the provider pays the ad spend itself, as many booked appointment services do, running from their own account is normal because their money is at risk.
+Not necessarily. Some agencies build in your account and make you an admin, while many booked appointment services run campaigns from their own account. Either can work. What matters is a clear, written answer on what you can see, what you keep, and what happens to the campaigns if you leave.
 
 ### What is a red flag in a garage floor coating marketing contract?
 

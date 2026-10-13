@@ -2,7 +2,7 @@
 seo_title: "Epoxy Floor Coating Lead Generation That Books Jobs"
 meta_description: "Epoxy floor coating lead generation that lands booked estimates on your calendar. How Meta ads, speed to lead, and seasonal timing fill your schedule."
 date: 2025-12-02
-updated: 2026-09-11
+updated: 2026-10-13
 author: patrick
 cluster: marketing-channels
 ---
@@ -111,6 +111,6 @@ A landing page. Our benchmark data shows a landing page beats the native Meta le
 
 ## Get booked epoxy floor coating estimates, not raw leads
 
-Stop dialing cold leads and start running estimates. [Booked epoxy flooring estimates](/epoxy-flooring-leads) put homeowners on your calendar who are expecting you, with one flat fee per appointment and nothing for leads that never book.
+Stop dialing cold leads and start running estimates. [Booked epoxy flooring estimates](/epoxy-flooring-leads) put homeowners on your calendar who are expecting you, with one flat fee per appointment and no setup fee or retainer.
 
 [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we'll look at your market, your season, and how many estimates a week your crew can run. One contractor per market.

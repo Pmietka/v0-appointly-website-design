@@ -24,7 +24,7 @@ const problems = [
   {
     icon: AlertTriangle,
     title: "You pay for leads that never book",
-    text: "Ad clicks and raw leads cost money whether or not anything lands on the calendar. You want the spend tied to actual booked estimates.",
+    text: "Ad clicks and raw leads cost money whether or not anything lands on the calendar. You want a fee tied to actual booked estimates.",
   },
 ];
 

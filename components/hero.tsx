@@ -44,7 +44,7 @@ export function Hero() {
             </div>
             <span className="font-display text-3xl font-bold text-gray-900">100%</span>
             <span className="text-center text-sm text-gray-500">
-              Exclusive coverage — one contractor per market
+              Exclusive coverage: one contractor per market
             </span>
           </div>
 
