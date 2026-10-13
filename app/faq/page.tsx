@@ -3,39 +3,66 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import type { FaqItem } from "@/components/faq-block";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { coreFaqItems } from "@/lib/faq";
+import { pageMetadata } from "@/lib/seo";
 
 const bookingUrl = "https://client.getappointly.co/strategy-calendar";
 
-const faqItems = [
-  ...coreFaqItems,
+const core = (question: string) => coreFaqItems.find((item) => item.question === question)!;
+
+// Answers render as plain text in the initial HTML (no accordion) so AI search
+// tools and Google can read every answer, and the FAQPage JSON-LD below matches
+// the visible copy word for word.
+const faqItems: FaqItem[] = [
+  {
+    question: "What counts as a payable appointment?",
+    answer:
+      "A homeowner in your service area who wants floor coating work and has confirmed an estimate time on your calendar. Billing happens when the appointment is booked. If an appointment turns out to be unqualified or a job you cannot bid, such as a service you do not offer, you grade it in the Appointly Solutions app with notes and pay nothing for it. If a homeowner does not show up, you earn a credit toward your next appointment.",
+  },
+  {
+    question: "How much does Appointly Solutions cost?",
+    answer:
+      "Appointly Solutions charges $125 to $199 per booked estimate. The exact price is set per market, based on your city and the work you install, and we confirm it with you on the strategy call. There is no setup fee and no retainer.",
+  },
+  {
+    question: "Who runs the ad account, and who owns the leads and data?",
+    answer:
+      "Appointly Solutions runs the Meta campaigns from our own ad account and Business Manager, so you never create an account, hand over logins, or manage a campaign. The appointments we book are yours alone, and if you ever leave, you keep everything.",
+  },
+  {
+    question: "Is there a long term contract?",
+    answer:
+      "No. Appointly Solutions does not lock you into a long term contract. Contractors stay because the booked estimates keep turning into jobs, not because a contract says they have to.",
+  },
+  {
+    question: "Is my territory exclusive?",
+    answer:
+      "Yes. Appointly Solutions works with one floor coating contractor per city, so we never book estimates for a competitor in your territory. Availability depends on whether your city is already taken, which we check on the strategy call.",
+  },
+  {
+    question: "Can I talk to current clients?",
+    answer:
+      "Yes. References are available on request before you sign, so you can ask a current Appointly Solutions client about appointment quality and how the process works. You can also hear three clients describe their results in their own words on our case studies page.",
+  },
+  {
+    question: "Who is Appointly Solutions not a fit for?",
+    answer:
+      "Contractors who are not willing to invest in growing their business, or who do not want a steady, sustainable flow of appointments. The model works for owners who want a predictable calendar and will show up, run the estimate, and close the work.",
+  },
+  core("How do the appointments reach my calendar?"),
+  core("Are the appointments exclusive or shared?"),
   {
     question: "Do you only work with floor coating contractors?",
     answer:
       "Yes. Garage floor coating, epoxy, polyaspartic, and concrete coating contractors are the only contractors we take on. Our creative, qualifying criteria, and booking scripts are built for coating work and nothing else, which is why we can tell a real coating job from a tire kicker in the first 30 seconds of a call.",
   },
   {
-    question: "What counts as a booked appointment?",
-    answer:
-      "A verified homeowner in your service area who wants floor coating work and has agreed to an estimate time that fits your calendar. Not a raw lead or a form fill - an actual booked estimate.",
-  },
-  {
-    question: "What does the per-appointment fee cover?",
-    answer:
-      "Everything we do to fill your calendar: contacting every lead instantly with speed-to-lead outreach, qualifying each homeowner, and booking the estimate onto your calendar.",
-  },
-  {
     question: "What markets do you work in?",
     answer:
-      "We focus on small-to-mid-sized markets in the US and Canada where floor coating contractors have room to grow. One coating contractor per market, so availability depends on whether your area is already taken.",
+      "We focus on small to mid sized markets in the US and Canada where floor coating contractors have room to grow. We work with one coating contractor per city, so availability depends on whether your city is already taken.",
   },
   {
     question: "How fast do appointments come in?",
@@ -43,43 +70,29 @@ const faqItems = [
       "Most contractors see their first booked estimates within 24 to 48 hours of campaign launch.",
   },
   {
-    question: "What if I want to pause or stop?",
-    answer:
-      "You can cancel anytime. There is no long-term contract. We just ask for a short notice period so campaigns can be wound down cleanly.",
-  },
-  {
     question: "Do I need to run my own ads or chase leads?",
     answer:
-      "No. We run the Meta ads, handle the speed-to-lead outreach, and book the appointments. Your team just shows up, runs the estimate, and closes the work.",
+      "No. We run the Meta ads, handle the speed to lead outreach, and book the appointments. Your team just shows up, runs the estimate, and closes the work.",
   },
   {
     question: "How do I get started?",
     answer:
-      "Book a strategy call. We review your market, service area, and goals, then tell you whether Appointly is a fit for your business.",
+      "Book a strategy call. We review your market, service area, and goals, then tell you whether Appointly Solutions is a fit for your business.",
   },
 ];
 
-export const metadata: Metadata = {
-  title: "FAQ | Booked Floor Coating Estimates | Appointly",
+export const metadata: Metadata = pageMetadata({
+  title: "FAQ | Appointly Solutions",
   description:
-    "What a booked floor coating estimate costs, whether appointments are exclusive or shared, who owns the Meta ad account, and what happens on a no-show.",
+    "Appointly Solutions charges $125 to $199 per booked floor coating estimate, with no setup fee and no long term contract. Answers on billing, no shows, territory and fit.",
+  path: "/faq",
+  ogTitle: "Appointly Solutions FAQ: Pricing, Billing, Territory and Fit",
   keywords: [
-    "appointment generation FAQ",
-    "booked estimates FAQ",
-    "exclusive appointments questions",
+    "Appointly Solutions FAQ",
+    "booked floor coating estimates pricing",
+    "pay per appointment floor coating",
   ],
-  alternates: {
-    canonical: "https://getappointly.co/faq",
-  },
-  openGraph: {
-    title: "FAQ | Booked Floor Coating Estimates | Appointly",
-    description:
-      "Explore common questions about Appointly Solutions and how we fill your calendar with booked estimates.",
-    url: "https://getappointly.co/faq",
-    siteName: "Appointly Solutions",
-    type: "website",
-  },
-};
+});
 
 export default function FaqPage() {
   const faqJsonLd = {
@@ -120,9 +133,9 @@ export default function FaqPage() {
                 FAQ for <span className="gradient-text">Appointly Solutions</span>
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                This page answers the questions contractors usually ask about how the
-                Appointly Model works - pricing, exclusivity, speed to lead, service
-                areas, and getting started.
+                Straight answers to the questions contractors ask before they work
+                with us: what a booked estimate costs, what you pay for, how
+                territory works, and who we are not a fit for.
               </p>
             </div>
           </div>
@@ -131,22 +144,14 @@ export default function FaqPage() {
         <section className="section-divider py-24 md:py-32">
           <div className="mx-auto grid max-w-6xl gap-8 px-6 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="glass-card rounded-3xl p-4 md:p-6">
-              <Accordion type="single" collapsible className="w-full">
-                {faqItems.map((item, index) => (
-                  <AccordionItem
-                    key={item.question}
-                    value={`item-${index}`}
-                    className="border-white/[0.07] px-4"
-                  >
-                    <AccordionTrigger className="py-6 text-left font-display text-lg text-foreground hover:no-underline">
-                      {item.question}
-                    </AccordionTrigger>
-                    <AccordionContent className="pb-6 text-sm leading-7 text-muted-foreground">
-                      {item.answer}
-                    </AccordionContent>
-                  </AccordionItem>
+              <dl className="divide-y divide-white/[0.07]">
+                {faqItems.map((item) => (
+                  <div key={item.question} className="px-4 py-6">
+                    <dt className="font-display text-lg text-foreground">{item.question}</dt>
+                    <dd className="mt-3 text-sm leading-7 text-muted-foreground">{item.answer}</dd>
+                  </div>
                 ))}
-              </Accordion>
+              </dl>
             </div>
 
             <aside className="space-y-6">
@@ -166,7 +171,11 @@ export default function FaqPage() {
                   <Link href="/about" className="text-primary transition-colors hover:opacity-80">
                     About page
                   </Link>{" "}
-                  explains why Appointly Solutions is built around the Appointly Model.
+                  explains who runs Appointly Solutions. For client numbers, see{" "}
+                  <Link href="/results" className="text-primary transition-colors hover:opacity-80">
+                    Results
+                  </Link>
+                  .
                   For the main service page, visit{" "}
                   <Link
                     href="/floor-coating-leads"

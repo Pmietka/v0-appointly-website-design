@@ -16,13 +16,13 @@ export const coreFaqItems: FaqItem[] = [
       "Exclusive. Every booked estimate belongs to you alone and is never sold, resold, or split with another contractor. We work with one floor coating contractor per market, so we are never booking the same homeowner for the company down the road.",
   },
   {
-    question: "Who owns the Meta ad account?",
+    question: "Who runs the Meta ad account?",
     answer:
-      "We do. Appointly runs the campaigns from our own Meta ad account and Business Manager, so you never have to create an account, hand over logins, or manage a campaign. You keep your brand, your calendar, and your customer relationships while we run the advertising and the booking.",
+      "We do. Appointly Solutions runs the campaigns from our own Meta ad account and Business Manager, so you never have to create an account, hand over logins, or manage a campaign. You keep your brand, your calendar, and your customer relationships while we run the advertising and the booking.",
   },
   {
-    question: "What happens if a homeowner no-shows?",
+    question: "What happens if a homeowner does not show up?",
     answer:
-      "You get credited. If a confirmed homeowner does not show up for the estimate, that appointment does not count against you, and the same applies to any appointment that turns out not to meet the qualification criteria we agreed on. The credit is not limited to no-shows either: if the homeowner shows up but the job turns out to be too small to be worth your time, that one is on us as well, free of charge. The policy is deliberately generous, because the model only works if you are paying for estimates you can actually run and actually sell.",
+      "If a confirmed homeowner does not show up for the estimate, you earn a credit toward your next appointment. If an appointment turns out to be unqualified or a job you cannot bid, such as a service you do not offer, you grade it in the Appointly Solutions app with notes and pay nothing for it.",
   },
 ];
