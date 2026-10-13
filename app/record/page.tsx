@@ -18,8 +18,8 @@ const ROLE = "Appointment Setter";
 const SPEAKPIPE_WIDGET = "https://www.speakpipe.com/widget/inline/cobnkhbv2sa38qt03kknihwg0a9iq97r";
 
 const PROMPTS = [
-  "Your full name and a quick introduction about yourself.",
-  "The first few seconds of calling an American homeowner who requested a quote from a U.S. home services company.",
+  "Introduce yourself, then give the first few seconds of calling a homeowner who requested a quote.",
+  "Answer this question: What industry and role did you perform in your appointment setting experience?",
 ];
 
 export const viewport: Viewport = {
