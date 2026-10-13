@@ -35,7 +35,7 @@ const agencyProblems = [
     icon: ShieldCheck,
     title: "A more accountable alternative",
     description:
-      "Appointly Solutions charges per booked appointment and nothing else, so every dollar is tied to an estimate on your calendar, backed by instant speed to lead and Meta ad delivery.",
+      "Appointly Solutions charges $125 to $199 per booked appointment with no setup fee and no retainer, so the fee is tied to an estimate on your calendar, backed by instant speed to lead and Meta ad delivery.",
   },
 ];
 

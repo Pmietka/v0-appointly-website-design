@@ -7,6 +7,7 @@ import { FaqBlock } from "@/components/faq-block";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { SeoResourceLinks } from "@/components/seo-resource-links";
+import { pageMetadata } from "@/lib/seo";
 import { getCommercialResources } from "@/lib/seo-resources";
 
 const bookingUrl = "https://client.getappointly.co/strategy-calendar";
@@ -14,9 +15,9 @@ const bookingUrl = "https://client.getappointly.co/strategy-calendar";
 const reasons = [
   {
     icon: CircleDollarSign,
-    title: "Spend tied to booked appointments",
+    title: "Billed per booked appointment",
     description:
-      "You pay one flat fee for each booked floor coating estimate that lands on your calendar, and nothing for leads that never book. Your spend tracks real appointments, not guesswork.",
+      "You pay $125 to $199 for each booked floor coating estimate that lands on your calendar, and nothing for leads that never book. Appointments that turn out unqualified are graded in the Appointly Solutions app and cost you nothing.",
   },
   {
     icon: ShieldCheck,
@@ -34,56 +35,50 @@ const reasons = [
     icon: LineChart,
     title: "Easier planning",
     description:
-      "When you know exactly what each booked estimate costs, forecasting growth and planning crew capacity becomes far more practical.",
+      "When the fee for each booked estimate is set up front, forecasting growth and planning crew capacity becomes far more practical.",
   },
 ];
 
 const faqItems = [
   {
+    question: "How much does Appointly Solutions cost?",
+    answer:
+      "$125 to $199 per booked estimate. The exact price is set per market, based on your city and the work you install, and we confirm it with you on the strategy call. There is no setup fee and no retainer.",
+  },
+  {
     question: "What does the per-appointment fee cover?",
     answer:
-      "Everything it takes to put the estimate on your calendar: building and managing the Meta ads, contacting every lead within minutes, following up with the ones who do not answer, and booking the appointment. There is no separate monthly fee.",
+      "The work it takes to put the estimate on your calendar: building and managing the Meta campaigns, contacting every lead within minutes, following up with the ones who do not answer, and booking the appointment. There is no setup fee and no monthly management fee.",
   },
   {
     question: "What counts as a billable appointment?",
     answer:
-      "A homeowner in your service area who owns the property, wants floor coating work, and confirmed a specific estimate time. If the appointment does not meet that bar, tell us and it is not billed.",
+      "A homeowner in your service area who owns the property, wants floor coating work, and confirmed a specific estimate time. Billing happens when the appointment is booked. If it turns out to be unqualified or a job you cannot bid, you grade it in the Appointly Solutions app with notes and pay nothing for it, and a no show earns a credit toward your next appointment.",
   },
   {
     question: "Is there a long-term contract?",
     answer:
-      "No. You can cancel anytime with a short notice period so the campaigns can be wound down cleanly.",
+      "No. Appointly Solutions does not lock you into a long term contract.",
   },
   {
     question: "How does this compare to buying floor coating leads?",
     answer:
-      "Lead sellers charge per contact whether or not the homeowner answers. Appointly charges per booked estimate, so your spend is tied to a confirmed appointment on your calendar rather than a phone number.",
+      "Lead sellers charge per contact whether or not the homeowner answers. Appointly Solutions charges $125 to $199 per booked estimate, so the fee is tied to a confirmed appointment on your calendar rather than a phone number.",
   },
 ];
 
-export const metadata: Metadata = {
-  title: "Appointly Pricing | Pay Per Booked Appointment",
+export const metadata: Metadata = pageMetadata({
+  title: "Pricing: $125 to $199 per Booked Estimate | Appointly Solutions",
   description:
-    "How Appointly pricing works: one flat fee for each booked floor coating estimate placed on your calendar, and nothing for leads that never book.",
+    "Appointly Solutions charges $125 to $199 per booked floor coating estimate, set per market. No setup fee, no retainer, no long term contract.",
+  path: "/pricing",
   keywords: [
-    "the appointly model",
+    "Appointly Solutions pricing",
     "floor coating appointment pricing",
     "pay per appointment",
-    "booked floor coating estimates",
-    "Appointly Solutions",
+    "cost per booked estimate",
   ],
-  alternates: {
-    canonical: "https://getappointly.co/pricing",
-  },
-  openGraph: {
-    title: "Appointly Pricing | Pay Per Booked Appointment",
-    description:
-      "Learn how the Appointly Model charges one flat fee per booked appointment to fill floor coating contractors' calendars with estimates.",
-    url: "https://getappointly.co/pricing",
-    siteName: "Appointly Solutions",
-    type: "website",
-  },
-};
+});
 
 export default function PayPerLeadInsulationPage() {
   return (
@@ -103,13 +98,14 @@ export default function PayPerLeadInsulationPage() {
                 The Appointly Model
               </p>
               <h1 className="font-display text-5xl md:text-6xl font-bold tracking-tight leading-[1.05] text-balance">
-                The Appointly Model: Pricing Built Around Booked{" "}
-                <span className="gradient-text">Appointments</span>
+                Appointly Solutions Pricing: $125 to $199 per Booked{" "}
+                <span className="gradient-text">Estimate</span>
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                The Appointly Model has one moving part. You pay a flat fee for each
-                booked floor coating estimate that lands on your calendar, and nothing
-                for leads that never book. This page explains exactly how that works.
+                Appointly Solutions charges $125 to $199 for each booked floor coating
+                estimate that lands on your calendar, set per market. There is no
+                setup fee, no retainer, and no long term contract. This page explains
+                exactly how billing works.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
@@ -166,16 +162,18 @@ export default function PayPerLeadInsulationPage() {
                 How The Appointly Model Works
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
-                One flat fee per booked estimate. Nothing else.
+                $125 to $199 per booked estimate, set per market.
               </h2>
               <p className="mt-5 text-sm leading-7 text-muted-foreground md:text-base">
-                The per-appointment fee covers everything we do to put the estimate on
-                your calendar: hitting every lead within a minute, qualifying the
-                homeowner on service area and project scope, and booking the estimate
-                into a slot that fits your route. You are charged for each floor coating
-                estimate we place on your calendar and for nothing else. It
-                is not about chasing the lowest cost. It is a system where what you pay
-                maps directly to appointments that show up.
+                Your price is set per market, based on your city and the work you
+                install, and we confirm it on the strategy call. The appointment fee
+                covers the work of putting the estimate on your calendar: hitting every
+                lead within a minute, qualifying the homeowner on service area and
+                project scope, and booking the estimate into a slot that fits your
+                route. You are billed when an estimate is booked. If an appointment
+                turns out to be unqualified or a job you cannot bid, you grade it in
+                the Appointly Solutions app with notes and pay nothing for it, and a
+                no show earns a credit toward your next appointment.
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
                 For the broader process, visit{" "}

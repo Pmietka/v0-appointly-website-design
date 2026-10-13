@@ -122,19 +122,19 @@ const CHAPTERS: Chapter[] = [
   {
     id: "mark-pay-per-lead",
     nav: "Pay per lead",
-    headline: "5 clicks, maybe 1 real lead. He pays for the real one.",
+    headline: "5 clicks, maybe 1 real lead. We book the real one.",
     clip: CLIPS.payPerLead,
     quote: "Out of those five clicks, maybe one is a solid lead for me.",
     caption:
-      "Mark doesn't pay for clicks on his ads. He pays for homeowners we've vetted, who are qualified and ready to pull the trigger on their project.",
+      "Mark doesn't get handed the clicks. We call them, vet them, and book only the homeowners who are qualified and ready to pull the trigger on their project.",
     image: {
       kind: "funnel",
       label:
-        "A funnel: five clicks on a Facebook ad at the top, a phone call from Appointly in the middle, and one solid lead at the bottom, which is what Mark pays for.",
+        "A funnel: five clicks on a Facebook ad at the top, a phone call from Appointly in the middle, and one solid lead at the bottom, which is what lands on Mark's calendar.",
       tiers: [
         { title: "Clicks on a Facebook ad", text: "Five clicks, most of them going nowhere" },
         { title: "A call from Appointly", text: "Vetted, qualified, ready to pull the trigger" },
-        { title: "One solid lead", text: "The one Mark pays for" },
+        { title: "One solid lead", text: "The one that lands on his calendar" },
       ],
       caption: "The math, the way Mark puts it in this clip.",
     },

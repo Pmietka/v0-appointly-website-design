@@ -33,13 +33,13 @@ const differentiators = [
     icon: Clock3,
     title: "We run the whole system",
     description:
-      "Meta ads, instant speed-to-lead outreach, and appointment booking are all handled for you - not sold as add-ons.",
+      "Meta ads, instant speed to lead outreach, and appointment booking are all run by our team, not sold as add-ons.",
   },
   {
     icon: Zap,
-    title: "Spend tied to booked estimates",
+    title: "Billed per booked estimate",
     description:
-      "You pay one flat fee per booked estimate. Every dollar you spend is tied to a real appointment on your calendar.",
+      "You pay $125 to $199 per booked estimate, set per market, with no setup fee and no long term contract. Unqualified appointments are graded out and cost nothing.",
   },
 ];
 
@@ -112,8 +112,8 @@ export default function AboutPage() {
                 Founded by brothers Patrick and Jacob Mietka in Chicago, IL, Appointly
                 Solutions was built out of frustration with agencies that charge big
                 monthly fees without delivering results. We created the Appointly Model so
-                contractors get accountability: one flat fee per booked estimate we
-                actually put on your calendar, and nothing for activity.
+                contractors get accountability: a flat fee per booked estimate we
+                actually put on your calendar, not a retainer for activity.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a

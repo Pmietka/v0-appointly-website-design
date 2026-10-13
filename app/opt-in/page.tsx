@@ -53,7 +53,7 @@ export default function OptInPage() {
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
               We run the ads, qualify every homeowner, and book the estimate for
-              you. You only pay per booked appointment. Send us a message using
+              you. You pay per booked appointment, with no setup fee. Send us a message using
               the chat in the corner and we will tell you whether your market is
               open.
             </p>

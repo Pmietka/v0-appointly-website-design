@@ -27,11 +27,11 @@ const COMPARE_COLS = ["DIY", "Marketing Agency", "Shared Leads", "Appointly"];
 const COMPARE_ROWS = [
   { label: "Outcome", Icon: Target, kind: "text", out: true, vals: ["All on you. Hard to keep up while you work.", "Promises and meetings. Slow to show results.", "Cold leads sold to many. You do the chasing.", "Qualified appointments booked on your calendar."] },
   { label: "Who runs it", Icon: User, kind: "text", out: false, vals: ["You", "You manage them", "You chase leads", "We run everything"] },
-  { label: "Upfront risk", Icon: Shield, kind: "text", out: false, vals: ["On you", "On you", "On you", "None. Pay per appointment"] },
+  { label: "Risk on bad appointments", Icon: Shield, kind: "text", out: false, vals: ["On you", "On you", "On you", "None. Bad fits are not billed"] },
   { label: "What you pay for", Icon: CreditCard, kind: "text", out: false, vals: ["Your time", "Monthly fees", "Leads that flake", "Booked appointments"] },
   { label: "Works while you're on the job", Icon: Clock, kind: "bin", out: false, vals: [false, false, false, true] },
   { label: "Exclusive to you", Icon: Lock, kind: "bin", out: false, vals: [false, false, false, true] },
-  { label: "You only pay for results", Icon: LineChart, kind: "bin", out: false, vals: [false, false, false, true] },
+  { label: "Bad appointments not billed", Icon: LineChart, kind: "bin", out: false, vals: [false, false, false, true] },
 ] as const;
 
 // Keep the deck-scroll theme color (viewport meta is added by Next by default).
@@ -128,8 +128,8 @@ export default function HomePage() {
             <span className="hl">You just show up.</span>
           </h1>
           <p className="lead">
-            Pay per appointment. You pay only when a qualified homeowner is on
-            your calendar.
+            Pay per booked appointment. No setup fee, no retainer, no long term
+            contract.
           </p>
           <p className="sub">
             Appointly Solutions is a pay per appointment Meta ads agency that
@@ -227,8 +227,8 @@ export default function HomePage() {
         <div className="wrap">
           <h2>From ad to <span className="hl">booked appointment.</span></h2>
           <p className="sub">
-            We run the ads and the phones. You pay only once a qualified
-            appointment is booked onto your calendar.
+            We run the ads and the phones, and book qualified homeowners straight
+            onto your calendar.
           </p>
           <div className="grid g4">
             <div className="step"><div className="sn">1</div><div className="st">We launch proven ads</div><div className="sd">Creatives already proven to convert, customized with your local footage and market. Underperformers get cut and replaced every 2 to 3 days.</div></div>
@@ -305,7 +305,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          <p className="payoff">You&apos;re not paying for effort or promises. <strong>You&apos;re paying for booked appointments.</strong></p>
+          <p className="payoff">You&apos;re not paying a retainer for effort or promises. <strong>You&apos;re paying per booked appointment.</strong></p>
           <p className="cmpcaption">Comparison based on contractor conversations and campaign results. Outcomes depend on market, pricing, and close rate.</p>
         </div>
       </section>
@@ -315,17 +315,16 @@ export default function HomePage() {
         <div className="wrap">
           <h2>Simple <span className="hl">pricing.</span></h2>
           <p className="sub">
-            You pay one flat rate for every qualified appointment we book onto your
-            calendar. You never pay for a raw lead, only for a
-            booked homeowner who shows up ready for an estimate.
+            You pay $125 to $199 for every qualified appointment we book onto your
+            calendar, set per market. No setup fee and no retainer.
           </p>
           <div className="priceblock">
             <div className="ptag">How pricing works</div>
-            <div className="pclaim">One flat rate for every booked appointment.</div>
+            <div className="pclaim">$125 to $199 per booked appointment.</div>
             <ul>
-              <li>You never pay for a raw lead</li>
-              <li>Only booked homeowners ready for an estimate</li>
-              <li>No shows are credited. No long term contract.</li>
+              <li>Billed when a qualified estimate is booked</li>
+              <li>Unqualified appointments are graded out and cost nothing</li>
+              <li>No shows earn a credit toward your next appointment. No long term contract.</li>
             </ul>
           </div>
         </div>

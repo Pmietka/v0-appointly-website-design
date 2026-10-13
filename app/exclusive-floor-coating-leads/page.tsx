@@ -171,8 +171,8 @@ export default function ExclusiveInsulationLeadsPage() {
               </h2>
               <p className="mt-5 text-sm leading-7 text-muted-foreground md:text-base">
                 Appointly Solutions works best for crews that want fewer wasted
-                conversations, a calendar of booked estimates, and a system that ties
-                spend to appointments that actually show up.
+                conversations, a calendar of booked estimates, and a fee that is tied
+                to appointments that are actually booked.
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
                 To see how exclusive appointments fit into the bigger delivery system, visit{" "}
