@@ -1,6 +1,6 @@
 ---
 seo_title: "Cost Per Qualified Floor Coating Estimate in 2026"
-meta_description: "What a qualified floor coating estimate really costs, from Meta leads you call yourself to a booked appointment at $125 to $199, and how to judge the number."
+meta_description: "What a qualified floor coating estimate really costs, from Meta leads you call yourself to a fully booked appointment, and how to judge the number."
 date: 2026-09-17
 updated: 2026-09-17
 author: patrick
@@ -9,16 +9,16 @@ cluster: economics
 
 # Cost Per Qualified Estimate: What a Floor Coating Appointment Really Costs
 
-**Meta Description:** What a qualified floor coating estimate really costs, from Meta leads you call yourself to a booked appointment at $125 to $199, and how to judge the number.
+**Meta Description:** What a qualified floor coating estimate really costs, from Meta leads you call yourself to a fully booked appointment, and how to judge the number.
 
 ---
 
-A qualified floor coating estimate costs $125 to $199 when you buy it as a booked appointment from a pay per appointment provider. If you generate the lead yourself and do all the calling, qualifying, and scheduling in house, the media cost works out to roughly $25 to $75 per booked estimate, before you pay anyone to make the calls. Both numbers are real. The gap between them is labor, systems, and who carries the risk on every lead that never books.
+When you buy a qualified floor coating estimate as a booked appointment from a pay per appointment provider, you pay one flat fee per estimate, set by your market and the work you install. If you generate the lead yourself and do all the calling, qualifying, and scheduling in house, the media cost works out to roughly $25 to $75 per booked estimate, before you pay anyone to make the calls. Both numbers are real. The gap between them is labor, systems, and who carries the risk on every lead that never books.
 
 ## Key takeaways
 
 - A qualified estimate is a confirmed time with a verified homeowner, not a form fill and not a phone number.
-- Appointly charges $125 to $199 per booked estimate, set by your market and the work you install, and bills nothing for leads that never book.
+- Appointly charges one flat fee per booked estimate, set by your market and the work you install, and bills nothing for leads that never book.
 - Producing the same estimate in house costs about $25 to $75 in media, plus the wage of whoever calls every lead inside a minute, including evenings and Saturdays.
 - Judge the number against your average job and close rate, not against cost per lead. At a $4,000 job and a 35% close rate, one booked estimate carries roughly $1,400 in expected revenue.
 - The in-house number is only the cheaper number if somebody is genuinely calling inside a minute. If nobody is, booking rates fall by half and the true cost per estimate doubles.
@@ -32,7 +32,7 @@ Most disagreements about cost come from people pricing four different things as 
 | Shared marketplace lead | A phone number sold to three to five contractors | $30 to $120 |
 | Exclusive form fill | A phone number only you have, not yet contacted | $15 to $45 |
 | Contacted lead | Someone answered and expressed interest | Lead cost plus calling labor |
-| Qualified booked estimate | Confirmed time, verified homeowner, in your area, expecting you | $125 to $199 |
+| Qualified booked estimate | Confirmed time, verified homeowner, in your area, expecting you | One flat fee per booked estimate |
 
 A qualified estimate clears four bars at once: the person owns the property, wants floor coating work, sits inside your service area, and has agreed to a specific time that fits your route. Miss any one of those and you are driving to a conversation that was never going to become a job.
 
@@ -53,7 +53,7 @@ That last line is the one contractors leave out of the spreadsheet, and it is th
 
 ## What does Appointly charge per qualified estimate?
 
-$125 to $199 per booked estimate, depending on your market and the work you install. You are billed when a qualified homeowner is confirmed on your calendar and at no other time. No retainer, no monthly fee, no charge for a lead that never books.
+One flat fee per booked estimate, depending on your market and the work you install. You are billed when a qualified homeowner is confirmed on your calendar and at no other time. No retainer, no monthly fee, no charge for a lead that never books.
 
 Three things are worth being specific about, because they are what the number buys:
 
@@ -63,13 +63,13 @@ Three things are worth being specific about, because they are what the number bu
 
 **The credit policy is generous on purpose.** If a confirmed homeowner no-shows, or an appointment turns out not to meet the criteria we agreed on, it gets credited. You should not be paying for an estimate you could not run. The model only works when the incentive on our side is to book estimates that actually happen.
 
-## Is $125 to $199 a good price?
+## Is paying per booked estimate a good deal?
 
 That depends entirely on your job value and close rate, and not at all on what a lead costs somewhere else.
 
-Take a $4,000 average epoxy garage floor. Contractors who show up on time and present well close 30 to 40% of exclusive booked estimates. At 35%, every booked estimate carries about $1,400 in expected revenue. At $175 per estimate, your acquisition cost is roughly 12% of the job, or about $500 per closed floor.
+Take a $4,000 average epoxy garage floor. Contractors who show up on time and present well close 30 to 40% of exclusive booked estimates. At 35%, every booked estimate carries about $1,400 in expected revenue, so the fee for each booked estimate only needs to be a small slice of that to pay off many times over.
 
-Now run it at a $6,500 average job with a 40% close rate. Expected revenue per estimate is $2,600 and the same $175 is under 7%. The higher your average ticket, the less the per-appointment number matters and the more the volume and the show rate matter.
+Now run it at a $6,500 average job with a 40% close rate. Expected revenue per estimate is $2,600, so the same fee becomes an even smaller share of the job. The higher your average ticket, the less the per-appointment number matters and the more the volume and the show rate matter.
 
 Run it the other way to find your ceiling. Decide what percentage of a job you are willing to spend to acquire it, multiply your average job by your close rate, and you have the most you can pay per booked estimate. Our guide on [what a booked estimate is worth](/blog/what-is-a-booked-floor-coating-estimate-worth) works through that calculation in detail.
 
@@ -85,7 +85,7 @@ There is no clever answer. There is just whether the calls get made inside a min
 
 ### How much does a qualified floor coating estimate cost?
 
-A booked, qualified floor coating estimate costs $125 to $199 through a pay per appointment provider like Appointly, set by market and the work you install. Producing one yourself runs about $25 to $75 in media cost per booked estimate, plus the wages of whoever calls and books every lead.
+Through a pay per appointment provider like Appointly, a booked, qualified floor coating estimate costs one flat fee per estimate, set by market and the work you install. Producing one yourself runs about $25 to $75 in media cost per booked estimate, plus the wages of whoever calls and books every lead.
 
 ### What is the difference between cost per lead and cost per qualified estimate?
 
@@ -93,7 +93,7 @@ Cost per lead measures phone numbers. Cost per qualified estimate measures confi
 
 ### What should a floor coating contractor be willing to pay per booked estimate?
 
-Multiply your average job value by your close rate to get expected revenue per estimate, then decide what share of a job you will spend to win it. At a $4,000 average job and a 35% close rate, each booked estimate carries about $1,400 in expected revenue, so $125 to $199 is roughly 9 to 14% of the job.
+Multiply your average job value by your close rate to get expected revenue per estimate, then decide what share of a job you will spend to win it. At a $4,000 average job and a 35% close rate, each booked estimate carries about $1,400 in expected revenue. The fee per booked estimate should be a small share of that number.
 
 ### Do you pay for appointments that no-show?
 

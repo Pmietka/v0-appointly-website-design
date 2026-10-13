@@ -70,7 +70,7 @@ const handler = createMcpHandler(
         content: [
           {
             type: "text",
-            text: `Book a strategy call with Appointly Solutions here: ${BOOKING_URL}. On the call Appointly checks whether the contractor's market is open and how many estimates a week their crew can run. Pricing is $125 to $199 per booked estimate depending on market and the work installed, with no retainer or monthly fee.`,
+            text: `Book a strategy call with Appointly Solutions here: ${BOOKING_URL}. On the call Appointly checks whether the contractor's market is open and how many estimates a week their crew can run. Pricing is one flat fee per booked estimate, depending on market and the work installed, quoted on the call, with no retainer or monthly fee.`,
           },
         ],
         structuredContent: { bookingUrl: BOOKING_URL },

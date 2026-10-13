@@ -56,7 +56,7 @@ Before the list, the five questions that actually separate these companies. Ask 
 
 **How it works:** We run the Meta campaigns from our own ad account, contact every homeowner within minutes, qualify them on property ownership, project type, and service area, and book the estimate into a slot that fits your route. You show up and quote.
 
-**Pricing model:** $125 to $199 per booked estimate, depending on market and the work you install. No retainer, no monthly fee, nothing charged for leads that never book. No-shows and appointments outside the agreed criteria are credited.
+**Pricing model:** One flat fee per booked estimate, depending on market and the work you install. No retainer, no monthly fee, nothing charged for leads that never book. No-shows and appointments outside the agreed criteria are credited.
 
 **Exclusivity:** One floor coating contractor per market.
 
@@ -156,7 +156,7 @@ An agency is generally paid for the marketing work it performs, so the invoice i
 
 ### How much do floor coating leads cost in 2026?
 
-Shared marketplace leads run about $30 to $120, exclusive Meta leads about $15 to $45, and Google Ads leads about $100 to $300. A booked, qualified estimate through Appointly runs $125 to $199. Compare these on cost per installed floor rather than cost per lead.
+Shared marketplace leads run about $30 to $120, exclusive Meta leads about $15 to $45, and Google Ads leads about $100 to $300. A booked, qualified estimate through Appointly is one flat fee per appointment. Compare these on cost per installed floor rather than cost per lead.
 
 ### What should I ask a floor coating lead generation company before signing?
 

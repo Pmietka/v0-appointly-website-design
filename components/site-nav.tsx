@@ -18,7 +18,6 @@ const links = [
   { href: "/#results", label: "Results" },
   { href: "/case-studies", label: "Case Studies" },
   { href: "/#how-it-works", label: "How It Works" },
-  { href: "/#pricing", label: "Pricing" },
 ];
 
 export function SiteNav() {

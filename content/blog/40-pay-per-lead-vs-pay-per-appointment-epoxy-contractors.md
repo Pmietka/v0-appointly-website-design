@@ -37,7 +37,7 @@ The model is simple and it is a perfectly good deal under one specific condition
 
 You agree a price per booked estimate. The provider runs the campaigns, calls every lead, qualifies the homeowner, and books a time onto your calendar. You are invoiced per appointment, and only per appointment.
 
-Appointly prices this at $125 to $199 per booked estimate depending on market and the work you install. Every appointment is vetted before it reaches you: the homeowner owns the property, wants coating work, sits inside your service area, and has agreed to a time that fits your route. No-shows and appointments that miss those criteria get credited.
+Appointly prices this as one flat fee per booked estimate, depending on market and the work you install. Every appointment is vetted before it reaches you: the homeowner owns the property, wants coating work, sits inside your service area, and has agreed to a time that fits your route. No-shows and appointments that miss those criteria get credited.
 
 **What you own under pay per appointment:** showing up on time and closing the job. That is the whole list.
 
@@ -48,7 +48,7 @@ Appointly prices this at $125 to $199 per booked estimate depending on market an
 | | Pay per lead | Pay per appointment |
 | --- | --- | --- |
 | Billed when | A form is submitted | A qualified estimate is confirmed |
-| Typical price | $15 to $45 exclusive, $30 to $120 shared | $125 to $199 per booked estimate |
+| Typical price | $15 to $45 exclusive, $30 to $120 shared | One flat fee per booked estimate |
 | Who calls the homeowner | You | The provider |
 | Who pays for leads that never book | You | Nobody bills you for them |
 | Speed to lead depends on | Your availability | The provider's team |
@@ -61,7 +61,7 @@ The per-unit prices are not comparable and quoting them against each other is ho
 
 Three things about coating work change the math compared to a lower-ticket trade.
 
-**Ticket values are high.** A garage floor runs $3,500 to $8,000 depending on system and size. When expected revenue per booked estimate sits north of $1,200, the difference between a $45 lead and a $175 appointment is a rounding error against one extra floor a month. What actually moves your year is how many qualified estimates you get in front of, and whether they show.
+**Ticket values are high.** A garage floor runs $3,500 to $8,000 depending on system and size. When expected revenue per booked estimate sits north of $1,200, the difference between a $45 lead and a booked appointment is a rounding error against one extra floor a month. What actually moves your year is how many qualified estimates you get in front of, and whether they show.
 
 **The install window is unforgiving.** Most coating crews install during the exact hours homeowners submit forms. There is no version of this where the owner grinding a floor also answers inside 60 seconds. Either you employ somebody to do it or you buy the outcome. Our [in-house setter comparison](/blog/in-house-appointment-setter-vs-outsourced) puts real numbers on that choice.
 
@@ -90,7 +90,7 @@ Pay per lead bills you every time a homeowner submits a form, whether or not the
 
 ### Is pay per appointment more expensive than pay per lead?
 
-Per unit, yes. A booked estimate runs $125 to $199 against $15 to $45 for an exclusive lead. On a like-for-like basis the gap narrows sharply, because only 60 to 70% of well-worked leads become estimates and somebody has to be paid to do that calling, following up, and scheduling.
+Per unit, yes. A booked estimate costs more than the $15 to $45 an exclusive lead runs. On a like-for-like basis the gap narrows sharply, because only 60 to 70% of well-worked leads become estimates and somebody has to be paid to do that calling, following up, and scheduling.
 
 ### Which model is better for an epoxy garage floor contractor?
 

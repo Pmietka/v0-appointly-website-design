@@ -60,7 +60,7 @@ Lead exclusivity without market exclusivity still leaves you competing with a co
 | | Shared leads | Exclusive leads | Exclusive booked estimates |
 | --- | --- | --- | --- |
 | Who else gets it | 3 to 5 contractors | Only you | Only you |
-| Typical unit cost | $30 to $120 per lead | $15 to $45 per Meta lead | $125 to $199 per appointment |
+| Typical unit cost | $30 to $120 per lead | $15 to $45 per Meta lead | One flat fee per booked appointment |
 | Who calls and books | You, fast, or you lose | You | The provider |
 | What you pay for duds | Full price | Full price | Nothing |
 | Pricing pressure | Bidding war | You set the frame | You set the frame |
@@ -72,7 +72,7 @@ Cost per lead is the wrong column to read. Read the last row against the second 
 
 An exclusive booked estimate is the same exclusivity argument taken one step further. Instead of buying a name nobody else has, you buy a confirmed time with a verified homeowner who is expecting you.
 
-Appointly works this way, and we work with one floor coating contractor per market. We run the Meta campaigns from our own ad account, contact every homeowner within minutes, qualify them on ownership, project, and service area, and book the estimate into a slot that fits your route. You are billed $125 to $199 per booked estimate and nothing for the leads that never book, and no-shows get credited.
+Appointly works this way, and we work with one floor coating contractor per market. We run the Meta campaigns from our own ad account, contact every homeowner within minutes, qualify them on ownership, project, and service area, and book the estimate into a slot that fits your route. You are billed one flat fee per booked estimate and nothing for the leads that never book, and no-shows get credited.
 
 That last point is where exclusivity stops being a marketing word and turns into a number on your invoice. When leads that never book cost you nothing, the provider carries the risk of a slow week instead of you.
 
