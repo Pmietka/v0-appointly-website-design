@@ -19,8 +19,8 @@ const SPEAKPIPE_WIDGET = "https://www.speakpipe.com/widget/inline/cobnkhbv2sa38q
 
 const PROMPTS = [
   "Your full name and a 15 second intro about your sales experience.",
-  "How you would open a call with an American homeowner who requested a quote for a garage floor coating.",
-  "How you'd respond if they said “I'm just looking for a price right now.”",
+  "How would you open a call with someone who filled out a form online asking for more information about a service?",
+  "How would you respond if they said “I'm busy right now, can you just call me back later?”",
 ];
 
 export const viewport: Viewport = {
