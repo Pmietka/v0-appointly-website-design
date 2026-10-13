@@ -54,7 +54,7 @@ export default function RecordPage() {
             ))}
           </ol>
 
-          <p className="recrules"><b>Time limit:</b> 30 seconds max total</p>
+          <p className="recrules"><b>Time limit:</b> 90 seconds max total</p>
 
           <div className="recwidget">
             <iframe
