@@ -1,0 +1,19 @@
+/* /record: a single branded card holding the SpeakPipe recorder.
+   Builds on the .dscroll system in home.css. */
+.dscroll.recpage{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
+.dscroll .rechead{display:flex;justify-content:center;padding:clamp(18px,3vw,26px) 20px;border-bottom:1px solid var(--line);background:#fff}
+.dscroll .rechead img{display:block;height:auto}
+.dscroll .recmain{position:relative;overflow:hidden;flex:1;display:flex;align-items:center;justify-content:center;
+  padding:clamp(32px,7vw,72px) 16px}
+.dscroll .reccard{position:relative;z-index:1;width:100%;max-width:640px;background:#fff;border:1px solid var(--line);border-radius:24px;
+  padding:clamp(26px,4.4vw,44px) clamp(20px,4vw,40px);text-align:center;box-shadow:0 30px 70px -40px rgba(15,23,42,.35)}
+.dscroll .reccard .eyebrow{margin-bottom:14px}
+.dscroll .reccard h1{font-size:clamp(32px,6vw,50px)}
+.dscroll .recsub{font-size:clamp(16px,2.2vw,19px);line-height:1.55;color:var(--ink-3);margin:16px auto 0;max-width:460px}
+.dscroll .recwidget{margin-top:clamp(24px,4vw,32px);border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
+.dscroll .recwidget iframe{display:block;width:100%;height:200px;border:0}
+.dscroll .recnote{font-size:13px;color:var(--ink-4);margin-top:14px}
+.dscroll .recfoot{text-align:center;padding:24px 16px 32px;font-size:15px;color:var(--ink-3)}
+.dscroll .recfoot a{color:var(--ink);font-weight:700}
+.dscroll .recfine{font-size:12.5px;color:var(--ink-4);margin-top:8px}
+.dscroll .recfine a{color:var(--ink-3);font-weight:500}
