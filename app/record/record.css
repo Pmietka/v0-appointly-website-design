@@ -17,3 +17,18 @@
 .dscroll .recfoot a{color:var(--ink);font-weight:700}
 .dscroll .recfine{font-size:12.5px;color:var(--ink-4);margin-top:8px}
 .dscroll .recfine a{color:var(--ink-3);font-weight:500}
+
+/* interview prompts, deadline and sign-off */
+.dscroll .recsub strong{color:var(--ink);font-weight:700}
+.dscroll .recsteps{list-style:none;display:flex;flex-direction:column;gap:12px;margin-top:clamp(22px,3.6vw,30px);text-align:left}
+.dscroll .recsteps li{display:flex;align-items:flex-start;gap:14px;background:var(--tint);border-radius:16px;padding:16px 18px}
+.dscroll .recn{flex:none;width:32px;height:32px;border-radius:10px;display:grid;place-items:center;background:var(--ink);color:#fff;
+  font-weight:800;font-size:15px}
+.dscroll .rectx{display:flex;flex-direction:column;gap:3px}
+.dscroll .rectx b{font-size:16px;font-weight:700;color:var(--ink)}
+.dscroll .rectx span{font-size:15px;line-height:1.5;color:var(--ink-2)}
+.dscroll .recdue{margin-top:16px;text-align:left;border:1px solid #fecdd3;background:#fff1f2;border-radius:16px;padding:14px 18px;
+  display:flex;flex-direction:column;gap:4px}
+.dscroll .recdue b{font-size:15.5px;color:#be123c}
+.dscroll .recdue span{font-size:14.5px;line-height:1.5;color:var(--ink-2)}
+.dscroll .recsig{display:block;font-weight:700;color:var(--ink);margin-top:4px}
