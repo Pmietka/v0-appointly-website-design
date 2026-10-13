@@ -59,7 +59,7 @@ export function personSchema(author: Author) {
     image: author.image,
     url: author.url,
     sameAs: author.sameAs,
-    worksFor: { "@type": "Organization", "@id": `${siteUrl}/#organization`, name: "Appointly Solutions" },
+    worksFor: { "@id": `${siteUrl}/#organization`, name: "Appointly Solutions" },
     homeLocation: { "@type": "Place", name: "Chicago, IL" },
   };
 }

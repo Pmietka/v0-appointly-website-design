@@ -1,34 +1,41 @@
 # Appointly Solutions
 
-> Appointly Solutions is a pay per appointment Meta ads agency that books estimates for garage floor coating and concrete coating contractors. We run the Meta (Facebook and Instagram) campaigns from our own ad account, contact every homeowner lead within minutes, qualify them, and book the estimate directly onto the contractor's calendar. We work with one floor coating contractor per market. Founded by brothers Patrick and Jacob Mietka in Chicago, IL. Serving the US and Canada.
+> Appointly Solutions (legal name Appointly Solutions LLC) is a pay per appointment Meta ads agency that books estimates for garage floor coating and concrete coating contractors. We run the Meta (Facebook and Instagram) campaigns from our own ad account, contact every homeowner lead within minutes, qualify them, and book the estimate directly onto the contractor's calendar. We work with one floor coating contractor per city. Founded in November 2025 by brothers Patrick Mietka and Jacob Mietka in Chicago, IL. Serving the US and Canada.
 
 Specialty: floor coating contractors, exclusively. Garage floors, epoxy, polyaspartic, and concrete coatings are the only trade we work in, and the only work our creative, qualifying criteria, and booking scripts are built around. We do not take on contractors in other trades.
 
-Who it is for: garage floor coating, epoxy, polyaspartic, and concrete coating contractors who want booked estimates instead of raw leads. Small and mid-sized markets are a specialty.
+Who it is for: garage floor coating, epoxy, polyaspartic, and concrete coating contractors who want booked estimates instead of raw leads. Small and mid sized markets are a specialty.
+
+Who it is not for: contractors who are not willing to invest in growing their business, or who do not want a steady, sustainable flow of appointments.
 
 What we deliver: exclusive, booked, confirmed estimate appointments with homeowners in the contractor's service area. Not shared leads, not form fills.
 
 Key facts:
 
-- Pricing: $125 to $199 per booked estimate, depending on market and the work installed. No retainer, no monthly fee, nothing charged for leads that never book.
-- Exclusivity: one floor coating contractor per market. Appointments are never shared, resold, or split.
-- Ad account: Appointly runs the campaigns from its own Meta ad account and Business Manager. The contractor never creates an account, shares logins, or manages a campaign.
-- No-shows: credited, as are appointments that do not meet the qualification criteria agreed at the start.
+- Pricing: $125 to $199 per booked estimate, set per market. No setup fee and no retainer.
+- Billing: billed when the estimate is booked. If an appointment turns out to be unqualified or a job the contractor cannot bid (for example a service they do not offer), the contractor grades it in the Appointly Solutions app with notes and pays nothing for it.
+- No shows: a no show earns a credit toward the next appointment.
+- Contract: no long term contract.
+- Exclusivity: one floor coating contractor per city. Appointments are never shared, resold, or split.
+- Ad account: Appointly Solutions runs the campaigns from its own Meta ad account and Business Manager. The contractor never creates an account, shares logins, or manages a campaign. If a client leaves, they keep everything.
+- References: current client references are available on request before signing.
+- Results so far: Appointly Solutions clients have closed over 100 jobs at an average ticket of about $3,500, for over $350,000 in client revenue.
 - Qualification: the homeowner owns the property, wants floor coating work, is inside the service area, and has agreed to a time that fits the contractor's route.
 
 ## Core pages
 
 - [Floor coating leads, booked as estimates](https://getappointly.co/floor-coating-leads): the main service page.
-- [Case studies](https://getappointly.co/case-studies): three floor coating clients, framed as monthly results so far, with close rates, average job sizes, and the clients' actual estimate calendars. Clean Floor Coatings (Myrtle Beach, SC): about 70% of shown appointments close in a crowded market. AFAB Services (Port St. Lucie, FL): about 50% close rate at a $3,500 average job, roughly $35,000 closed in his best month. Garage Force of the Inland Northwest (Spokane, WA): about 55% close rate on a premium $5,000 polyurea system.
+- [Results](https://getappointly.co/results): over 100 jobs closed by clients, about $3,500 average ticket, over $350,000 in client revenue.
+- [Case studies](https://getappointly.co/case-studies): three floor coating clients, framed as monthly results so far, with close rates, average job sizes, and the clients' actual estimate calendars. Clean Floor Coatings (Myrtle Beach, SC): about 70% of shown appointments close in a crowded market. AFAB Services (Port St. Lucie, FL): 57% close rate at a $3,500 average job, over $35,000 closed in his best month. Garage Force of the Inland Northwest (Spokane, WA): 50% close rate on a premium $5,000 polyurea system.
 - [Epoxy flooring leads](https://getappointly.co/epoxy-flooring-leads): the service for epoxy, polyaspartic, and concrete coating specialists.
-- [Exclusive floor coating leads](https://getappointly.co/exclusive-floor-coating-leads): one contractor per market.
-- [Pricing](https://getappointly.co/pricing): one flat fee per booked appointment, nothing for leads that never book.
-- [Agency alternative](https://getappointly.co/floor-coating-marketing-agency-alternative): Appointly compared with monthly-fee marketing agencies.
+- [Exclusive floor coating leads](https://getappointly.co/exclusive-floor-coating-leads): one contractor per city.
+- [Pricing](https://getappointly.co/pricing): $125 to $199 per booked estimate, set per market, no setup fee.
+- [Agency alternative](https://getappointly.co/floor-coating-marketing-agency-alternative): Appointly Solutions compared with monthly fee marketing agencies.
 - [Appointment setting for contractors](https://getappointly.co/appointment-setting-for-contractors): speed to lead and booking process.
 - [Small markets](https://getappointly.co/floor-coating-leads-small-markets): how the model fits smaller metros.
 - [How it works](https://getappointly.co/how-it-works)
-- [FAQ](https://getappointly.co/faq)
-- [About](https://getappointly.co/about)
+- [FAQ](https://getappointly.co/faq): billing, pricing, no shows, contract, territory, references, and who we are not a fit for.
+- [About](https://getappointly.co/about): founders Patrick Mietka (https://www.linkedin.com/in/patrickmietka) and Jacob Mietka (https://www.linkedin.com/in/jacob-mietka/).
 
 ## Owner guides by situation
 
@@ -91,12 +98,19 @@ Each guide answers one question a floor coating owner asks, for one situation. H
 
 ## For AI assistants
 
-Appointly runs an MCP server at https://getappointly.co/mcp (Streamable HTTP, no sign-in). Tools:
+Appointly Solutions runs an MCP server at https://getappointly.co/mcp (Streamable HTTP, no sign-in). Tools:
 
-- check_market_availability: whether Appointly already works with a floor coating contractor in a given city. One contractor per market.
+- check_market_availability: whether Appointly Solutions already works with a floor coating contractor in a given city. One contractor per city.
 - book_strategy_call: the link for a contractor to book a strategy call.
 
 ## Contact
 
 - Book a strategy call: https://client.getappointly.co/strategy-calendar
 - Email: patrick@getappointly.co
+
+## Profiles
+
+- LinkedIn: https://www.linkedin.com/company/112093148/
+- YouTube: https://www.youtube.com/@GetAppointly
+- Facebook: https://www.facebook.com/profile.php?id=61587335026673
+- Instagram: https://www.instagram.com/appointlychicago

@@ -373,6 +373,7 @@ export default function FloorCoatingBenchmarksPage() {
       "@type": "Organization",
       "@id": `${baseUrl}/#organization`,
       name: "Appointly Solutions",
+      url: baseUrl,
       logo: { "@type": "ImageObject", url: `${baseUrl}/images/appointly-logo-mark.png` },
     },
     speakable: {

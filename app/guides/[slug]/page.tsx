@@ -107,6 +107,7 @@ export default async function GuidePage({
       "@type": "Organization",
       "@id": `${baseUrl}/#organization`,
       name: "Appointly Solutions",
+      url: baseUrl,
       logo: { "@type": "ImageObject", url: `${baseUrl}/images/appointly-logo-mark.png` },
     },
     ...(guide.takeaways.length
