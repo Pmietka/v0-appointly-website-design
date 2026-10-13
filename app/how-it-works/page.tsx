@@ -6,30 +6,23 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { servicePages } from "@/lib/seo-resources";
+import { pageMetadata } from "@/lib/seo";
 
 const bookingUrl = "https://client.getappointly.co/strategy-calendar";
 
-export const metadata: Metadata = {
-  title: "How It Works | Booked Floor Coating Estimates | Appointly",
+export const metadata: Metadata = pageMetadata({
+  title: "How It Works | Appointly Solutions",
   description:
-    "How Appointly fills a floor coating contractor's calendar: Meta ads in your service area, a call to every lead in minutes, and estimates booked for you.",
+    "How Appointly Solutions fills a floor coating contractor's calendar: Meta ads in your service area, a call to every lead in minutes, and estimates booked for you.",
+  path: "/how-it-works",
+  ogDescription:
+    "See the full Appointly Solutions process, from Meta ad campaigns and speed-to-lead to booked estimates on your calendar.",
   keywords: [
     "how appointment setting works",
     "booked estimates for contractors",
     "floor coating appointment generation",
   ],
-  alternates: {
-    canonical: "https://getappointly.co/how-it-works",
-  },
-  openGraph: {
-    title: "How It Works | Booked Floor Coating Estimates | Appointly",
-    description:
-      "See the full Appointly process, from Meta ad campaigns and speed-to-lead to booked estimates on your calendar.",
-    url: "https://getappointly.co/how-it-works",
-    siteName: "Appointly Solutions",
-    type: "website",
-  },
-};
+});
 
 const steps = [
   {

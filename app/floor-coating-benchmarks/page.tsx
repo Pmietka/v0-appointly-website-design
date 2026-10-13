@@ -29,7 +29,7 @@ const updatedAt = new Date("2026-09-11T12:00:00Z");
 const updatedLabel = "September 2026";
 
 const pageTitle = "Floor Coating Lead and Sales Benchmarks";
-const seoTitle = "Floor Coating Lead and Sales Benchmarks (2026) | Appointly";
+const seoTitle = "Floor Coating Lead and Sales Benchmarks (2026) | Appointly Solutions";
 const description =
   "Lead to appointment rate, phone answer rate, show rate, price per square foot, and seasonality benchmarks for garage floor coating contractors, from live Appointly accounts. Updated September 2026.";
 

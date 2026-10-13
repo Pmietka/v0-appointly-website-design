@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Script from "next/script";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Get Started | Appointly Solutions",
   description:
-    "Start a conversation with Appointly Solutions. We book qualified floor coating estimates onto your calendar. Pay per appointment.",
-  alternates: {
-    canonical: "https://getappointly.co/opt-in",
-  },
-};
+    "Start a conversation with Appointly Solutions. We book qualified floor coating estimates onto your calendar, billed per booked appointment.",
+  path: "/opt-in",
+});
 
 /* Business details for the SMS / carrier brand compliance footer. These must
    match the details used to verify the brand. */

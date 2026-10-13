@@ -9,6 +9,7 @@ import { Navbar } from "@/components/navbar";
 import { ProofSection } from "@/components/proof-section";
 import { SeoResourceLinks } from "@/components/seo-resource-links";
 import { getCommercialResources } from "@/lib/seo-resources";
+import { pageMetadata } from "@/lib/seo";
 
 const bookingUrl = "https://client.getappointly.co/strategy-calendar";
 
@@ -62,10 +63,13 @@ const faqItems = [
   },
 ];
 
-export const metadata: Metadata = {
-  title: "Floor Coating Marketing Agency Alternative | Appointly",
+export const metadata: Metadata = pageMetadata({
+  title: "Floor Coating Marketing Agency Alternative | Appointly Solutions",
   description:
-    "Compare monthly-fee marketing agencies with the Appointly Model, where you pay per booked floor coating estimate and nothing for activity.",
+    "Compare monthly fee marketing agencies with Appointly Solutions, which charges $125 to $199 per booked floor coating estimate with no setup fee and no retainer.",
+  path: "/floor-coating-marketing-agency-alternative",
+  ogDescription:
+    "See why coating contractors prefer paying per booked appointment over a monthly-fee marketing agency.",
   keywords: [
     "floor coating marketing agency alternative",
     "the appointly model",
@@ -73,18 +77,7 @@ export const metadata: Metadata = {
     "epoxy contractor marketing",
     "Appointly Solutions",
   ],
-  alternates: {
-    canonical: "https://getappointly.co/floor-coating-marketing-agency-alternative",
-  },
-  openGraph: {
-    title: "Floor Coating Marketing Agency Alternative | Appointly",
-    description:
-      "See why coating contractors prefer paying per booked appointment over a monthly-fee marketing agency.",
-    url: "https://getappointly.co/floor-coating-marketing-agency-alternative",
-    siteName: "Appointly Solutions",
-    type: "website",
-  },
-};
+});
 
 export default function InsulationMarketingAgencyPage() {
   return (

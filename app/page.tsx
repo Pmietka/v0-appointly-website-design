@@ -47,14 +47,14 @@ export const viewport: Viewport = {
 const LEAD_TRADE = "Floor Coating Jobs";
 
 export const metadata: Metadata = {
-  title: "Booked Floor Coating Jobs for Contractors | Appointly",
+  title: "Booked Floor Coating Jobs for Contractors | Appointly Solutions",
   description:
     "Appointly Solutions is a pay per appointment Meta ads agency that books estimates for garage floor coating and concrete coating contractors.",
   alternates: {
     canonical: "https://getappointly.co/",
   },
   openGraph: {
-    title: "Booked Floor Coating Jobs for Contractors | Appointly",
+    title: "Booked Floor Coating Jobs for Contractors | Appointly Solutions",
     description:
       "Appointly Solutions is a pay per appointment Meta ads agency that books estimates for garage floor coating and concrete coating contractors.",
     url: "https://getappointly.co/",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Booked Floor Coating Jobs for Contractors | Appointly",
+    title: "Booked Floor Coating Jobs for Contractors | Appointly Solutions",
     description:
       "Appointly Solutions is a pay per appointment Meta ads agency that books estimates for garage floor coating and concrete coating contractors.",
     images: ["https://getappointly.co/images/og-home.png"],
@@ -184,7 +184,7 @@ export default function HomePage() {
                 <Image
                   className="photo"
                   src={t.photo as string}
-                  alt={`${t.name} of ${t.who}, Appointly client in ${t.where}`}
+                  alt={`${t.name} of ${t.who}, Appointly Solutions client in ${t.where}`}
                   width={1080}
                   height={1350}
                   sizes="(max-width: 768px) 90vw, 360px"

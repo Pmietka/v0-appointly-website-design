@@ -20,7 +20,7 @@ import {
 import "../home.css";
 import "./case-studies.css";
 
-const TITLE = "Floor Coating Case Studies | Clean Floor Coatings, AFAB Services and Garage Force on Video | Appointly";
+const TITLE = "Floor Coating Case Studies | Clean Floor Coatings, AFAB Services and Garage Force on Video | Appointly Solutions";
 const DESCRIPTION =
   "Watch Phil from Clean Floor Coatings, Mark from AFAB Services, and Eric and Shani from Garage Force of the Inland Northwest explain, in their own words, what changed when Appointly started booking their calendars. Close rates from ~50% to ~70%.";
 

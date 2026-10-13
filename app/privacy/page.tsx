@@ -3,29 +3,22 @@ import Link from "next/link";
 
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
+import { pageMetadata } from "@/lib/seo";
 
 const lastUpdated = "March 27, 2026";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Privacy Policy | Appointly Solutions",
   description:
     "Read the Appointly Solutions privacy policy covering data collection, Google Analytics usage, cookies, retention, security, and privacy rights.",
+  path: "/privacy",
+  ogDescription:
+    "Review how Appointly Solutions collects, uses, stores, and protects personal information.",
   robots: {
     index: true,
     follow: true,
   },
-  alternates: {
-    canonical: "https://getappointly.co/privacy",
-  },
-  openGraph: {
-    title: "Privacy Policy | Appointly Solutions",
-    description:
-      "Review how Appointly Solutions collects, uses, stores, and protects personal information.",
-    url: "https://getappointly.co/privacy",
-    siteName: "Appointly Solutions",
-    type: "website",
-  },
-};
+});
 
 const sections = [
   {

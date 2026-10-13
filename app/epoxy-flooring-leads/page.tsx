@@ -9,6 +9,7 @@ import { Navbar } from "@/components/navbar";
 import { ProofSection } from "@/components/proof-section";
 import { SeoResourceLinks } from "@/components/seo-resource-links";
 import { getCommercialResources } from "@/lib/seo-resources";
+import { pageMetadata } from "@/lib/seo";
 
 const bookingUrl = "https://client.getappointly.co/strategy-calendar";
 
@@ -62,10 +63,13 @@ const faqItems = [
   },
 ];
 
-export const metadata: Metadata = {
-  title: "Epoxy Flooring Leads for Coating Contractors | Appointly",
+export const metadata: Metadata = pageMetadata({
+  title: "Epoxy Flooring Leads for Coating Contractors | Appointly Solutions",
   description:
     "Exclusive epoxy, polyaspartic, and concrete coating leads, qualified and booked as estimates on your calendar. Built for garage floor coating specialists.",
+  path: "/epoxy-flooring-leads",
+  ogDescription:
+    "Exclusive epoxy and concrete coating estimates booked onto your calendar through Meta ads and instant speed to lead.",
   keywords: [
     "epoxy contractor appointments",
     "concrete coating leads",
@@ -73,18 +77,7 @@ export const metadata: Metadata = {
     "garage floor coating appointments",
     "exclusive coating appointments",
   ],
-  alternates: {
-    canonical: "https://getappointly.co/epoxy-flooring-leads",
-  },
-  openGraph: {
-    title: "Epoxy Flooring Leads for Coating Contractors | Appointly",
-    description:
-      "Exclusive epoxy and concrete coating estimates booked onto your calendar through Meta ads and instant speed to lead.",
-    url: "https://getappointly.co/epoxy-flooring-leads",
-    siteName: "Appointly Solutions",
-    type: "website",
-  },
-};
+});
 
 export default function SprayFoamContractorLeadsPage() {
   return (

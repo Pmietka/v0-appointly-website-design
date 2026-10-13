@@ -3,25 +3,18 @@ import Link from "next/link";
 
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
+import { pageMetadata } from "@/lib/seo";
 
 const lastUpdated = "March 27, 2026";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Terms of Service | Appointly Solutions",
   description:
     "Read the Appointly Solutions Terms of Service covering service scope, eligibility, appointment delivery, payment, liability, termination, and governing law.",
-  alternates: {
-    canonical: "https://getappointly.co/terms",
-  },
-  openGraph: {
-    title: "Terms of Service | Appointly Solutions",
-    description:
-      "Review the terms that govern Appointly Solutions appointment generation services.",
-    url: "https://getappointly.co/terms",
-    siteName: "Appointly Solutions",
-    type: "website",
-  },
-};
+  path: "/terms",
+  ogDescription:
+    "Review the terms that govern Appointly Solutions appointment generation services.",
+});
 
 const sections = [
   {

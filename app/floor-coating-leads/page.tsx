@@ -16,6 +16,7 @@ import { Navbar } from "@/components/navbar";
 import { ProofSection } from "@/components/proof-section";
 import { SeoResourceLinks } from "@/components/seo-resource-links";
 import { getCommercialResources } from "@/lib/seo-resources";
+import { pageMetadata } from "@/lib/seo";
 
 const bookingUrl = "https://client.getappointly.co/strategy-calendar";
 
@@ -69,10 +70,13 @@ const faqItems = [
   },
 ];
 
-export const metadata: Metadata = {
-  title: "Floor Coating Leads Booked as Estimates | Appointly",
+export const metadata: Metadata = pageMetadata({
+  title: "Floor Coating Leads Booked as Estimates | Appointly Solutions",
   description:
-    "We book floor coating estimates onto your calendar with Meta ads and a call to every lead within minutes. Exclusive to one contractor per market.",
+    "We book floor coating estimates onto your calendar with Meta ads and a call to every lead within minutes. Exclusive to one contractor per city.",
+  path: "/floor-coating-leads",
+  ogDescription:
+    "See how Appointly Solutions fills floor coating contractors' calendars with booked estimates using Meta ads and instant speed to lead.",
   keywords: [
     "floor coating appointments",
     "epoxy flooring leads",
@@ -80,18 +84,7 @@ export const metadata: Metadata = {
     "garage floor coating contractors",
     "Appointly Solutions",
   ],
-  alternates: {
-    canonical: "https://getappointly.co/floor-coating-leads",
-  },
-  openGraph: {
-    title: "Floor Coating Leads Booked as Estimates | Appointly",
-    description:
-      "See how Appointly fills floor coating contractors' calendars with booked estimates using Meta ads and instant speed to lead.",
-    url: "https://getappointly.co/floor-coating-leads",
-    siteName: "Appointly Solutions",
-    type: "website",
-  },
-};
+});
 
 export default function InsulationContractorLeadsPage() {
   return (

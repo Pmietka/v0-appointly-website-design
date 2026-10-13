@@ -9,7 +9,7 @@ import { getGuidePath, getGuides, situations } from "@/lib/guides";
 
 const baseUrl = "https://getappointly.co";
 const canonical = `${baseUrl}/guides`;
-const title = "Floor Coating Owner Guides by Situation | Appointly";
+const title = "Floor Coating Owner Guides by Situation | Appointly Solutions";
 const description =
   "Straight answers for garage floor coating, epoxy flooring, and concrete coating owners: first estimates, agencies, shared leads, one crew calendars, winter, spring, and tax season.";
 
@@ -24,6 +24,12 @@ export const metadata: Metadata = {
     siteName: "Appointly Solutions",
     type: "website",
     images: [{ url: `${baseUrl}/images/appointly-og.png`, width: 1200, height: 630, alt: title }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: [`${baseUrl}/images/appointly-og.png`],
   },
 };
 

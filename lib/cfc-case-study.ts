@@ -64,7 +64,7 @@ const CHAPTERS: Chapter[] = [
     id: "before",
     phase: "before",
     nav: "Before Appointly",
-    headline: "Before Appointly, his leads wouldn't even give a phone number",
+    headline: "Before Appointly Solutions, his leads wouldn't even give a phone number",
     clip: CLIPS.appointmentQuality,
     quote:
       "They would text me a square footage and say, I got 440 square feet, what's your lowest price?",
@@ -140,7 +140,7 @@ const CHAPTERS: Chapter[] = [
       src: "/images/case-studies/cfc-landing-page.webp",
       width: 600,
       height: 800,
-      alt: "The Clean Floor Coatings landing page Appointly built: a three step form asking what the homeowner wants coated before they can submit their details.",
+      alt: "The Clean Floor Coatings landing page Appointly Solutions built: a three step form asking what the homeowner wants coated before they can submit their details.",
       caption: "Screening starts before the call: every ad lands on this three step page we built for Phil.",
       crop: { aspect: "4 / 3", position: "50% 0" },
     },
@@ -156,7 +156,7 @@ const CHAPTERS: Chapter[] = [
     image: {
       kind: "photo",
       ...CAL.week2,
-      alt: "Week 2 of Phil's estimate calendar, with eight appointments booked by Appointly.",
+      alt: "Week 2 of Phil's estimate calendar, with eight appointments booked by Appointly Solutions.",
       caption: "Every appointment on this calendar is one we stand behind.",
     },
   },
@@ -192,7 +192,7 @@ const NAMES_NOTE = "Homeowner names shortened to first name and last initial.";
 export const CFC_STORY: VideoCaseStudy = {
   slug: "clean-floor-coatings",
   seo: {
-    title: "Clean Floor Coatings Case Study | Phil on Video | Appointly",
+    title: "Clean Floor Coatings Case Study | Phil on Video | Appointly Solutions",
     description:
       "Watch Phil from Clean Floor Coatings explain how Appointly took him from two or three floors a week to booked five days a week in Myrtle Beach, with a ~70% close rate on shown appointments.",
   },

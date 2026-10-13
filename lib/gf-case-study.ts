@@ -69,7 +69,7 @@ const CHAPTERS: Chapter[] = [
     id: "gf-before",
     phase: "before",
     nav: "Before Appointly",
-    headline: "Before Appointly, it was trade shows, postcards and price shoppers",
+    headline: "Before Appointly Solutions, it was trade shows, postcards and price shoppers",
     clip: CLIPS.before,
     quote: "We were getting smaller jobs in less than desirable areas.",
     caption:
@@ -197,7 +197,7 @@ const STATS: CountStat[] = [
 export const GF_STORY: VideoCaseStudy = {
   slug: "garage-force-inland-northwest",
   seo: {
-    title: "Garage Force of the Inland Northwest Case Study | Eric and Shani on Video | Appointly",
+    title: "Garage Force of the Inland Northwest Case Study | Eric and Shani on Video | Appointly Solutions",
     description:
       "Watch Eric and Shani from Garage Force of the Inland Northwest in Spokane, WA explain what changed when Appointly started qualifying and booking their estimates: a 50% close rate on a premium $5,000 polyurea system.",
   },

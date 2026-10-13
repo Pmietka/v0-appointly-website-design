@@ -4,6 +4,8 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
 
 import { LazyExternalScript } from "@/components/deferred-loader";
+import { authors, personSchema } from "@/lib/authors";
+import { GOOGLE_BUSINESS_PROFILE, ORGANIZATION_SAME_AS } from "@/lib/seo";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -82,22 +84,27 @@ export default function RootLayout({
                 "@type": "Organization",
                 "@id": "https://getappointly.co/#organization",
                 name: "Appointly Solutions",
+                legalName: "Appointly Solutions LLC",
                 url: "https://getappointly.co",
                 logo: {
                   "@type": "ImageObject",
-                  url: "https://getappointly.co/images/appointly-logo-mark.png",
+                  url: "https://getappointly.co/images/appointly-logo.png",
+                  width: 1024,
+                  height: 1024,
                 },
+                image: "https://getappointly.co/images/appointly-og.png",
                 description:
-                  "Appointly Solutions is a pay per appointment Meta ads agency that books estimates for garage floor coating and concrete coating contractors. Floor coating is the only trade we work in. We run the Meta campaigns from our own ad account, contact every homeowner within minutes, qualify them, and book the estimate onto the contractor's calendar. One flat fee per booked estimate, one contractor per market.",
-                sameAs: [
-                  "https://www.instagram.com/appointlychicago",
-                  "https://www.facebook.com/profile.php?id=61587335026673",
-                  "https://www.linkedin.com/company/appointlysolutions",
-                ],
-                founder: [
-                  { "@id": "https://getappointly.co/about#patrick-mietka" },
-                  { "@id": "https://getappointly.co/about#jacob-mietka" },
-                ],
+                  "Appointly Solutions is a pay per appointment Meta ads agency that books estimates for garage floor coating and concrete coating contractors. Floor coating is the only trade we work in. We run the Meta campaigns, contact every homeowner within minutes, qualify them, and book the estimate onto the contractor's calendar for $125 to $199 per booked estimate, with no setup fee and one contractor per city.",
+                foundingDate: "2025-11",
+                founder: [personSchema(authors.patrick), personSchema(authors.jacob)],
+                address: {
+                  "@type": "PostalAddress",
+                  addressLocality: "Chicago",
+                  addressRegion: "IL",
+                  addressCountry: "US",
+                },
+                email: "patrick@getappointly.co",
+                sameAs: ORGANIZATION_SAME_AS,
                 knowsAbout: [
                   "Floor coating lead generation",
                   "Epoxy and polyaspartic garage floor coating marketing",
@@ -113,13 +120,15 @@ export default function RootLayout({
                 url: "https://getappointly.co",
                 logo: "https://getappointly.co/images/appointly-logo-mark.png",
                 description:
-                  "Appointly Solutions is a pay per appointment Meta ads agency that books estimates for garage floor coating and concrete coating contractors. Floor coating is the only trade we work in. We hit speed to lead within minutes and book estimates straight onto your calendar for one flat fee per booked estimate.",
+                  "Appointly Solutions is a pay per appointment Meta ads agency that books estimates for garage floor coating and concrete coating contractors. Floor coating is the only trade we work in. We hit speed to lead within minutes and book estimates straight onto your calendar for $125 to $199 per booked estimate.",
+                parentOrganization: { "@id": "https://getappointly.co/#organization" },
                 address: {
                   "@type": "PostalAddress",
                   addressLocality: "Chicago",
                   addressRegion: "IL",
                   addressCountry: "US",
                 },
+                sameAs: [GOOGLE_BUSINESS_PROFILE],
                 areaServed: ["US", "CA"],
                 priceRange: "$$",
               },

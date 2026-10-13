@@ -7,23 +7,16 @@ import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { clusterLabels, formatBlogDate, getBlogPath, getBlogPosts, getClusterLabel } from "@/lib/blog";
 import { servicePages } from "@/lib/seo-resources";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Floor Coating Contractor Marketing Blog | Appointly",
+export const metadata: Metadata = pageMetadata({
+  title: "Floor Coating Contractor Marketing Blog | Appointly Solutions",
   description:
     "Guides for floor coating contractors on pricing, closing estimates, Meta ads, reviews, seasonality, and getting booked jobs instead of chasing leads.",
-  alternates: {
-    canonical: "https://getappointly.co/blog",
-  },
-  openGraph: {
-    title: "Floor Coating Contractor Marketing Blog | Appointly",
-    description:
-      "Read practical marketing guidance for floor coating contractors, including booked estimates, Meta ads, local visibility, and growth ideas.",
-    url: "https://getappointly.co/blog",
-    siteName: "Appointly Solutions",
-    type: "website",
-  },
-};
+  path: "/blog",
+  ogDescription:
+    "Read practical marketing guidance for floor coating contractors, including booked estimates, Meta ads, local visibility, and growth ideas.",
+});
 
 export default async function BlogIndexPage() {
   const posts = await getBlogPosts();

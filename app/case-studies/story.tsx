@@ -86,7 +86,7 @@ function CalendarPair({ img, ownerFirst }: { img: Extract<Chapter["image"], { ki
           <span className="cplabel">{s.label}</span>
           <Image
             src={s.src}
-            alt={`${ownerFirst}'s estimate calendar, ${s.label.toLowerCase()}. Every blue block is an appointment booked by Appointly. ${NAMES_NOTE}`}
+            alt={`${ownerFirst}'s estimate calendar, ${s.label.toLowerCase()}. Every blue block is an appointment booked by Appointly Solutions. ${NAMES_NOTE}`}
             width={s.width}
             height={s.height}
             sizes="(max-width: 900px) 92vw, 420px"
@@ -300,7 +300,7 @@ export function StoryChapters({
               variant={calendar.shots.length > 1 ? "grid" : "single"}
               shots={calendar.shots.map((s) => ({
                 ...s,
-                alt: `${story.ownerFirst}'s estimate calendar, ${s.label.toLowerCase()}. Every blue event is an appointment booked by Appointly. ${NAMES_NOTE}`,
+                alt: `${story.ownerFirst}'s estimate calendar, ${s.label.toLowerCase()}. Every blue event is an appointment booked by Appointly Solutions. ${NAMES_NOTE}`,
               }))}
             />
           </section>
@@ -390,7 +390,7 @@ export function SupportCard({ c }: { c: CaseStudy }) {
               variant="strip"
               shots={c.calendar.shots.map((s) => ({
                 ...s,
-                alt: `${c.ownerFirst}'s estimate calendar, ${s.label.toLowerCase()}. Every blue event is an appointment booked by Appointly. ${NAMES_NOTE}`,
+                alt: `${c.ownerFirst}'s estimate calendar, ${s.label.toLowerCase()}. Every blue event is an appointment booked by Appointly Solutions. ${NAMES_NOTE}`,
               }))}
             />
           </div>

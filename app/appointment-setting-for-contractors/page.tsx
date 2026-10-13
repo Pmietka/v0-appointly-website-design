@@ -9,6 +9,7 @@ import { Navbar } from "@/components/navbar";
 import { ProofSection } from "@/components/proof-section";
 import { SeoResourceLinks } from "@/components/seo-resource-links";
 import { getCommercialResources } from "@/lib/seo-resources";
+import { pageMetadata } from "@/lib/seo";
 
 const bookingUrl = "https://client.getappointly.co/strategy-calendar";
 
@@ -62,10 +63,13 @@ const faqItems = [
   },
 ];
 
-export const metadata: Metadata = {
-  title: "Appointment Setting for Floor Coating Contractors",
+export const metadata: Metadata = pageMetadata({
+  title: "Appointment Setting for Floor Coating Contractors | Appointly Solutions",
   description:
-    "Appointly contacts every floor coating lead within minutes, follows up until they answer, and books the estimate onto your calendar. You just show up and quote.",
+    "Appointly Solutions contacts every floor coating lead within minutes, follows up until they answer, and books the estimate onto your calendar. You just show up and quote.",
+  path: "/appointment-setting-for-contractors",
+  ogDescription:
+    "Learn how Appointly Solutions contacts every floor coating lead instantly and books the estimate onto your calendar so you just show up and quote.",
   keywords: [
     "appointment setting for contractors",
     "floor coating appointment setting",
@@ -73,18 +77,7 @@ export const metadata: Metadata = {
     "speed to lead",
     "Appointly Solutions",
   ],
-  alternates: {
-    canonical: "https://getappointly.co/appointment-setting-for-contractors",
-  },
-  openGraph: {
-    title: "Appointment Setting for Floor Coating Contractors",
-    description:
-      "Learn how Appointly contacts every floor coating lead instantly and books the estimate onto your calendar so you just show up and quote.",
-    url: "https://getappointly.co/appointment-setting-for-contractors",
-    siteName: "Appointly Solutions",
-    type: "website",
-  },
-};
+});
 
 export default function AppointmentSettingForContractorsPage() {
   return (
@@ -105,7 +98,7 @@ export default function AppointmentSettingForContractorsPage() {
               </p>
               <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-balance md:text-6xl">
                 Booked Estimates Are the <span className="gradient-text">Result</span>{" "}
-                of the Appointly Model
+                of Appointly Solutions Appointment Setting
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
                 We do the complete job of filling your calendar. We run the Meta ads,
@@ -198,7 +191,7 @@ export default function AppointmentSettingForContractorsPage() {
               <p className="mt-4 text-sm leading-7 text-slate-700 md:text-base">
                 A strategy call with Appointly Solutions can help identify whether your
                 main bottleneck is ad volume, speed to lead, follow up, or the booking
-                handoff itself - and how the Appointly Model fixes it.
+                handoff itself, and how the Appointly Model fixes it.
               </p>
               <a
                 href={bookingUrl}

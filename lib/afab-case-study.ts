@@ -55,7 +55,7 @@ const CHAPTERS: Chapter[] = [
     id: "mark-before",
     phase: "before",
     nav: "Before Appointly",
-    headline: "Before Appointly, 30 leads a week and maybe 2 were real",
+    headline: "Before Appointly Solutions, 30 leads a week and maybe 2 were real",
     clip: CLIPS.before,
     quote: "I would have 30 different things a week, but maybe two of them were legit.",
     caption:
@@ -130,7 +130,7 @@ const CHAPTERS: Chapter[] = [
     image: {
       kind: "funnel",
       label:
-        "A funnel: five clicks on a Facebook ad at the top, a phone call from Appointly in the middle, and one solid lead at the bottom, which is what lands on Mark's calendar.",
+        "A funnel: five clicks on a Facebook ad at the top, a phone call from Appointly Solutions in the middle, and one solid lead at the bottom, which is what lands on Mark's calendar.",
       tiers: [
         { title: "Clicks on a Facebook ad", text: "Five clicks, most of them going nowhere" },
         { title: "A call from Appointly", text: "Vetted, qualified, ready to pull the trigger" },
@@ -170,7 +170,7 @@ const STATS: CountStat[] = [
 export const AFAB_STORY: VideoCaseStudy = {
   slug: "afab-services",
   seo: {
-    title: "AFAB Services Case Study | Mark on Video | Appointly",
+    title: "AFAB Services Case Study | Mark on Video | Appointly Solutions",
     description:
       "Watch Mark from AFAB Services in Port St. Lucie, FL explain what changed when Appointly started vetting and booking his floor coating appointments: 57% close, at a $3,500 average job.",
   },

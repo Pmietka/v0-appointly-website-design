@@ -8,6 +8,7 @@ import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { SeoResourceLinks } from "@/components/seo-resource-links";
 import { getCommercialResources } from "@/lib/seo-resources";
+import { pageMetadata } from "@/lib/seo";
 
 const bookingUrl = "https://client.getappointly.co/strategy-calendar";
 
@@ -61,10 +62,13 @@ const faqItems = [
   },
 ];
 
-export const metadata: Metadata = {
-  title: "Exclusive Floor Coating Leads | One Contractor Per Market",
+export const metadata: Metadata = pageMetadata({
+  title: "Exclusive Floor Coating Leads, One Contractor per City | Appointly Solutions",
   description:
-    "Appointly books exclusive floor coating estimates onto your calendar. One contractor per market, no shared leads, and every appointment booked for you.",
+    "Appointly Solutions books exclusive floor coating estimates onto your calendar. One contractor per city, no shared leads, and every appointment booked for you.",
+  path: "/exclusive-floor-coating-leads",
+  ogDescription:
+    "See why exclusive booked floor coating appointments beat shared lead systems for coating contractors.",
   keywords: [
     "exclusive floor coating appointments",
     "one contractor per market",
@@ -72,18 +76,7 @@ export const metadata: Metadata = {
     "floor coating estimates",
     "Appointly Solutions",
   ],
-  alternates: {
-    canonical: "https://getappointly.co/exclusive-floor-coating-leads",
-  },
-  openGraph: {
-    title: "Exclusive Floor Coating Leads | One Contractor Per Market",
-    description:
-      "See why exclusive booked floor coating appointments beat shared lead systems for coating contractors.",
-    url: "https://getappointly.co/exclusive-floor-coating-leads",
-    siteName: "Appointly Solutions",
-    type: "website",
-  },
-};
+});
 
 export default function ExclusiveInsulationLeadsPage() {
   return (

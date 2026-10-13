@@ -13,6 +13,7 @@ import { SeoResourceLinks } from "@/components/seo-resource-links";
 import { authors, personSchema } from "@/lib/authors";
 import { coreFaqItems } from "@/lib/faq";
 import { getCommercialResources } from "@/lib/seo-resources";
+import { pageMetadata } from "@/lib/seo";
 
 const bookingUrl = "https://client.getappointly.co/strategy-calendar";
 
@@ -43,28 +44,20 @@ const differentiators = [
   },
 ];
 
-export const metadata: Metadata = {
-  title: "About Appointly | Booked Floor Coating Estimates",
+export const metadata: Metadata = pageMetadata({
+  title: "About Appointly Solutions | Patrick and Jacob Mietka",
   description:
-    "Appointly Solutions is a pay per appointment Meta ads agency that books estimates for garage floor coating and concrete coating contractors.",
+    "Appointly Solutions is a Chicago based pay per appointment Meta ads agency for floor coating contractors, founded in November 2025 by brothers Patrick and Jacob Mietka.",
+  path: "/about",
+  ogDescription:
+    "See the mission, approach, and values behind Appointly Solutions and how we fill contractors' calendars with booked estimates.",
   keywords: [
     "Appointly Solutions",
     "appointment generation for contractors",
     "about us",
     "contractor marketing",
   ],
-  alternates: {
-    canonical: "https://getappointly.co/about",
-  },
-  openGraph: {
-    title: "About Appointly | Booked Floor Coating Estimates",
-    description:
-      "See the mission, approach, and values behind Appointly Solutions and how we fill contractors' calendars with booked estimates.",
-    url: "https://getappointly.co/about",
-    siteName: "Appointly Solutions",
-    type: "website",
-  },
-};
+});
 
 export default function AboutPage() {
   return (
@@ -269,6 +262,14 @@ export default function AboutPage() {
                     </h3>
                     <p className="mt-1 text-sm font-medium text-primary">{person.role}</p>
                     <p className="mt-3 text-sm leading-7 text-muted-foreground">{person.bio}</p>
+                    <a
+                      href={person.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 inline-block text-sm font-semibold text-primary transition-opacity hover:opacity-80"
+                    >
+                      {person.name} on LinkedIn
+                    </a>
                   </div>
                 </article>
               ))}

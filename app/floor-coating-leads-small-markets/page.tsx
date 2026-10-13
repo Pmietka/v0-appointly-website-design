@@ -9,6 +9,7 @@ import { Navbar } from "@/components/navbar";
 import { ProofSection } from "@/components/proof-section";
 import { SeoResourceLinks } from "@/components/seo-resource-links";
 import { getCommercialResources } from "@/lib/seo-resources";
+import { pageMetadata } from "@/lib/seo";
 
 const bookingUrl = "https://client.getappointly.co/strategy-calendar";
 
@@ -62,28 +63,20 @@ const faqItems = [
   },
 ];
 
-export const metadata: Metadata = {
-  title: "Floor Coating Leads for Small Markets | Appointly",
+export const metadata: Metadata = pageMetadata({
+  title: "Floor Coating Leads for Small Markets | Appointly Solutions",
   description:
     "Exclusive floor coating estimates booked for contractors in smaller metros and regional service areas, using Meta ads and instant speed to lead.",
+  path: "/floor-coating-leads-small-markets",
+  ogDescription:
+    "Explore how Appointly Solutions books floor coating estimates for contractors serving smaller metros and regional service areas.",
   keywords: [
     "floor coating appointments small markets",
     "small market coating estimates",
     "booked floor coating estimates",
     "exclusive coating appointments",
   ],
-  alternates: {
-    canonical: "https://getappointly.co/floor-coating-leads-small-markets",
-  },
-  openGraph: {
-    title: "Floor Coating Leads for Small Markets | Appointly",
-    description:
-      "Explore how Appointly books floor coating estimates for contractors serving smaller metros and regional service areas.",
-    url: "https://getappointly.co/floor-coating-leads-small-markets",
-    siteName: "Appointly Solutions",
-    type: "website",
-  },
-};
+});
 
 export default function SmallMarketInsulationLeadsPage() {
   return (

@@ -3,6 +3,22 @@ import type { Metadata } from "next";
 export const SITE_URL = "https://getappointly.co";
 export const SITE_NAME = "Appointly Solutions";
 
+/** Google Business Profile, by its Knowledge Graph id. */
+export const GOOGLE_BUSINESS_PROFILE = "https://www.google.com/search?kgmid=/g/11yyhrz9hv";
+
+/**
+ * Official profiles for Organization.sameAs. TODO: add the BBB profile URL
+ * once the listing exists; none was found when this was written.
+ */
+export const ORGANIZATION_SAME_AS = [
+  "https://www.linkedin.com/company/112093148/",
+  "https://www.linkedin.com/company/appointlysolutions",
+  "https://www.facebook.com/profile.php?id=61587335026673",
+  "https://www.instagram.com/appointlychicago",
+  "https://www.youtube.com/@GetAppointly",
+  GOOGLE_BUSINESS_PROFILE,
+];
+
 export type OgImage = { url: string; width: number; height: number; alt: string };
 
 /** Branded 1200x630 card used wherever a page has no image of its own. */
