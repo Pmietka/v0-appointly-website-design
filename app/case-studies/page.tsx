@@ -1,12 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { PhoneCall } from "lucide-react";
+import { ChevronDown, PhoneCall } from "lucide-react";
 
 import { SiteNav } from "@/components/site-nav";
 import { DscrollFooter } from "@/components/dscroll-footer";
-import { TestimonialWall } from "@/components/proof";
+import { LogoMarquee } from "@/components/sales/logo-marquee";
+import { HiddenWall, ProofHeader } from "@/components/sales/proof-section";
 import { CASE_STUDIES } from "@/lib/case-studies";
 import { CFC_STORY } from "@/lib/cfc-case-study";
-import { FEATURED_TESTIMONIALS, QUOTE_TESTIMONIALS } from "@/lib/testimonials";
 import { VIDEO_STORIES } from "@/lib/video-case-studies";
 import {
   CASE_STUDIES_URL as PAGE_URL,
@@ -19,6 +19,7 @@ import {
 } from "./story";
 import "../home.css";
 import "./case-studies.css";
+import "../sales.css";
 
 const TITLE = "Floor Coating Case Studies | Clean Floor Coatings, AFAB Services and Garage Force on Video | Appointly Solutions";
 const DESCRIPTION =
@@ -53,6 +54,14 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     images: ["https://getappointly.co/images/og-home.png"],
   },
+};
+
+// The line that walks the reader from the cards (or the previous story) into
+// each owner's story, in the same voice as the bridge into Phil's on /connect.
+const BRIDGES: Record<string, string> = {
+  "clean-floor-coatings": "Hear from Phil himself",
+  "afab-services": "Now hear from Mark himself",
+  "garage-force-inland-northwest": "Now hear from Eric and Shani themselves",
 };
 
 export default function CaseStudiesPage() {
@@ -100,46 +109,84 @@ export default function CaseStudiesPage() {
       />
       <SiteNav />
 
-      {/* Every video case study in full, one after another: hero, stat bar,
-          chapters, calendar proof and transcript. The first one carries the
-          page's h1 and breadcrumb. */}
+      {/* Same flow as the proof on /connect: client logos, the three result
+          cards, then each owner's story in the compact /connect format (clip,
+          headline and quote per chapter). The full transcripts live on each
+          company's own page. */}
+      <section className="lmqband" id="clients" aria-label="Clients">
+        <div className="wrap">
+          <LogoMarquee />
+        </div>
+      </section>
+
+      <section className="sec pwsec" id="top">
+        <div className="wrap pwwide">
+          <ProofHeader
+            heading="h1"
+            eyebrow="Appointly Solutions case studies"
+            title={<>Don&apos;t take our word for it. <span className="hl">Take theirs.</span></>}
+            sub="Three floor coating contractors on camera, in their own words, with their real estimate calendars. Watch the short clip on each card, or the full story below."
+            linkMode="anchor"
+          />
+          <Bridge slug={stories[0].story.slug} />
+        </div>
+      </section>
+
       {stories.map(({ story, cs }, i) => (
-        <div className="cstory" key={story.slug}>
+        <div className="cstory cfcstory" key={story.slug}>
+          {i > 0 && (
+            <div className="wrap pwwide">
+              <Bridge slug={story.slug} />
+            </div>
+          )}
           <StoryHero
             story={story}
             cs={cs}
-            heading={i === 0 ? "h1" : "h2"}
             eyebrow={`Case study ${String(i + 1).padStart(2, "0")} · ${cs.company}`}
-            crumbs={i === 0 ? [{ label: "Home", href: "/" }, { label: "Case Studies" }] : undefined}
-            sectionId={i === 0 ? "top" : undefined}
+            sectionId={`${story.slug}-story`}
             pageLink
             priority={i === 0}
+            compact
           />
-          <StoryStats story={story} cs={cs} />
-          <StoryChapters story={story} cs={cs} level={i === 0 ? "h2" : "h3"} />
+          <StoryStats story={story} cs={cs} compact />
+          <StoryChapters story={story} cs={cs} level="h3" compact />
         </div>
       ))}
 
-      {/* Case studies without a video story, if any, plus the reference offer */}
-      <section className="sec tint" id="more-case-studies">
-        <div className="wrap wide">
-          {supporting.length > 0 && (
-            <>
-              <p className="eyebrow">More case studies</p>
-              <h2>
-                More markets. <span className="hl">Same process.</span>
-              </h2>
-              <p className="sub">
-                Every homeowner is called and qualified before the appointment is
-                booked, and the close rates follow from that.
-              </p>
-              <div className="scards">
-                {supporting.map((c) => (
-                  <SupportCard c={c} key={c.slug} />
-                ))}
-              </div>
-            </>
-          )}
+      {/* Case studies without a video story, if any */}
+      {supporting.length > 0 && (
+        <section className="sec" id="more-case-studies">
+          <div className="wrap wide">
+            <p className="eyebrow">More case studies</p>
+            <h2>
+              More markets. <span className="hl">Same process.</span>
+            </h2>
+            <p className="sub">
+              Every homeowner is called and qualified before the appointment is
+              booked, and the close rates follow from that.
+            </p>
+            <div className="scards">
+              {supporting.map((c) => (
+                <SupportCard c={c} key={c.slug} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* The rest of the wall, only when asked for, as on /connect */}
+      <section className="sec pwsec tint" id="more-proof">
+        <div className="wrap pwwide">
+          <div className="pwhead">
+            <p className="eyebrow">Want more?</p>
+            <h2>There&apos;s a <span className="hl">whole wall</span> of it.</h2>
+            <p className="sub">
+              Every interview clip, client message, number and calendar we have, in one place.
+            </p>
+          </div>
+          <div className="pwreveal">
+            <HiddenWall />
+          </div>
           <div className="glancenote">
             <span className="gicon"><PhoneCall aria-hidden /></span>
             <p>
@@ -151,25 +198,20 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
-      {/* Testimonial wall */}
-      <section className="sec" id="more-clients">
-        <div className="wrap wide">
-          <p className="eyebrow">More from the calendar</p>
-          <h2>
-            What other clients <span className="hl">tell us.</span>
-          </h2>
-          <p className="sub">
-            Straight from the contractors we book for, in their words.
-          </p>
-          <TestimonialWall
-            items={[...FEATURED_TESTIMONIALS.slice(1), ...QUOTE_TESTIMONIALS]}
-          />
-        </div>
-      </section>
-
       <CtaBand quote={CFC_STORY.ctaQuote} cite="Phil A." ownerFirst={CFC_STORY.ownerFirst} />
 
       <DscrollFooter />
+    </div>
+  );
+}
+
+function Bridge({ slug }: { slug: string }) {
+  return (
+    <div className="pwbridge">
+      <h3>{BRIDGES[slug]}</h3>
+      <a className="pwbridge-arrow" href={`#${slug}-story`} aria-label={`Jump to ${BRIDGES[slug].replace(/^Now /, "").toLowerCase()}`}>
+        <ChevronDown aria-hidden />
+      </a>
     </div>
   );
 }

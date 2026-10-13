@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowDown, ArrowUpRight } from "lucide-react";
 
 import { MuxVideo } from "@/app/case-studies/cfc-interactive";
 import { allWallTiles, buildWallTiles, featuredStories } from "@/lib/proof-wall";
@@ -12,10 +12,19 @@ import { ProofWall } from "./proof-wall";
    calendars underneath. Styles in app/sales.css.
    ============================================================================ */
 
-export function FeaturedStories() {
+export function FeaturedStories({
+  linkMode = "page",
+  exclude,
+}: {
+  /** "page" opens the company's case study in a new tab; "anchor" jumps to
+      the same story further down the page (used on /case-studies). */
+  linkMode?: "page" | "anchor";
+  /** Slug to leave out, e.g. the company whose page this is. */
+  exclude?: string;
+} = {}) {
   return (
-    <div className="pwfeats">
-      {featuredStories().map((s) => (
+    <div className={`pwfeats${exclude ? " two" : ""}`}>
+      {featuredStories().filter((s) => s.slug !== exclude).map((s) => (
         <article className="pwfeat" key={s.slug}>
           <MuxVideo variant="card" clip={s.clip} label={s.label} />
           <div className="pwfeat-body">
@@ -41,9 +50,15 @@ export function FeaturedStories() {
               ))}
             </div>
             <p className="pwfeat-owner">{s.owner}, {s.company}</p>
-            <a className="pwfeat-link" href={`/case-studies/${s.slug}`} target="_blank" rel="noopener noreferrer">
-              Watch the full case study <ArrowUpRight aria-hidden />
-            </a>
+            {linkMode === "anchor" ? (
+              <a className="pwfeat-link" href={`#${s.slug}-story`}>
+                Watch the full case study <ArrowDown aria-hidden />
+              </a>
+            ) : (
+              <a className="pwfeat-link" href={`/case-studies/${s.slug}`} target="_blank" rel="noopener noreferrer">
+                Watch the full case study <ArrowUpRight aria-hidden />
+              </a>
+            )}
           </div>
         </article>
       ))}
@@ -100,18 +115,23 @@ export function ProofHeader({
   eyebrow,
   title,
   sub,
+  heading = "h2",
+  linkMode,
 }: {
   eyebrow?: string;
   title: React.ReactNode;
   sub?: React.ReactNode;
+  heading?: "h1" | "h2";
+  linkMode?: "page" | "anchor";
 }) {
+  const H = heading;
   const tiles = allWallTiles();
   const clips = tiles.filter((t) => t.kind === "clip" || t.kind === "video").length + featuredStories().length;
   return (
     <>
       <div className="pwhead">
         {eyebrow && <p className="eyebrow">{eyebrow}</p>}
-        <h2>{title}</h2>
+        <H>{title}</H>
         {sub && <p className="sub">{sub}</p>}
         <p className="pwcount">
           <span><b>{clips}</b> interview clips</span>
@@ -119,7 +139,7 @@ export function ProofHeader({
           <span><b>3</b> full case studies</span>
         </p>
       </div>
-      <FeaturedStories />
+      <FeaturedStories linkMode={linkMode} />
     </>
   );
 }

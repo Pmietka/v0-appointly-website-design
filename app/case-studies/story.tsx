@@ -265,13 +265,16 @@ export function StoryChapters({
   cs,
   level = "h2",
   compact = false,
+  transcript = !compact,
 }: {
   story: VideoCaseStudy;
   cs: CaseStudy;
   /** Heading level for chapter headlines: one below the story's hero heading. */
   level?: Level;
-  /** Clip, headline and quote only: no captions, diagrams, legend or transcript. */
+  /** Clip, headline and quote only: no captions, diagrams or legend. */
   compact?: boolean;
+  /** The collapsed interview transcript. Off by default in compact mode. */
+  transcript?: boolean;
 }) {
   const { chapters, calendar, interview } = story;
   const H = level;
@@ -306,7 +309,7 @@ export function StoryChapters({
           </section>
 
           {/* The transcript, plus the only link to the full interview */}
-          {!compact && <details className="transcript">
+          {transcript && <details className="transcript">
             <summary>
               <span>
                 <b>Read the full interview transcript</b>

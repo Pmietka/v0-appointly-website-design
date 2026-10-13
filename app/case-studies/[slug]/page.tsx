@@ -4,7 +4,8 @@ import { PhoneCall } from "lucide-react";
 
 import { SiteNav } from "@/components/site-nav";
 import { DscrollFooter } from "@/components/dscroll-footer";
-import { CASE_STUDIES, getCaseStudy } from "@/lib/case-studies";
+import { FeaturedStories } from "@/components/sales/proof-section";
+import { getCaseStudy } from "@/lib/case-studies";
 import { VIDEO_STORIES, getVideoStory } from "@/lib/video-case-studies";
 import {
   CASE_STUDIES_URL,
@@ -12,14 +13,16 @@ import {
   StoryChapters,
   StoryHero,
   StoryStats,
-  SupportCard,
   storyVideoSchema,
 } from "../story";
 import "../../home.css";
 import "../case-studies.css";
+import "../../sales.css";
 
 /* One company's video case study on its own page, for sharing a single
-   story. The same story also runs in full on /case-studies. */
+   story. Same compact format as /connect and /case-studies (clip, headline
+   and quote per chapter), plus the interview transcript, which only these
+   pages carry. */
 
 export const dynamicParams = false;
 
@@ -65,7 +68,6 @@ export default async function CompanyCaseStudyPage({ params }: { params: Promise
   if (!story || !cs) notFound();
 
   const url = `${CASE_STUDIES_URL}/${slug}`;
-  const others = CASE_STUDIES.filter((c) => c.slug !== slug);
 
   const schema = [
     {
@@ -106,25 +108,25 @@ export default async function CompanyCaseStudyPage({ params }: { params: Promise
         crumbs={[{ label: "Home", href: "/" }, { label: "Case Studies", href: "/case-studies" }, { label: cs.company }]}
         sectionId="top"
         priority
+        compact
       />
-      <StoryStats story={story} cs={cs} />
-      <StoryChapters story={story} cs={cs} />
+      <StoryStats story={story} cs={cs} compact />
+      <StoryChapters story={story} cs={cs} compact transcript />
 
-      <section className="sec tint" id="more-case-studies">
-        <div className="wrap wide">
-          <p className="eyebrow">More case studies</p>
-          <h2>
-            Other markets. <span className="hl">Same process.</span>
-          </h2>
-          <p className="sub">
-            Every homeowner is called and qualified before the appointment is
-            booked, and the close rates follow from that.
-          </p>
-          <div className="scards">
-            {others.map((c) => (
-              <SupportCard c={c} key={c.slug} />
-            ))}
+      {/* The other clients, as the same cards /connect and /case-studies use */}
+      <section className="sec pwsec tint" id="more-case-studies">
+        <div className="wrap pwwide">
+          <div className="pwhead">
+            <p className="eyebrow">More case studies</p>
+            <h2>
+              Other markets. <span className="hl">Same process.</span>
+            </h2>
+            <p className="sub">
+              Every homeowner is called and qualified before the appointment is
+              booked, and the close rates follow from that.
+            </p>
           </div>
+          <FeaturedStories exclude={slug} />
           <div className="glancenote">
             <span className="gicon"><PhoneCall aria-hidden /></span>
             <p>

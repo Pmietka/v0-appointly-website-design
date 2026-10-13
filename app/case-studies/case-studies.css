@@ -347,3 +347,10 @@
   .dscroll.csp .chapter.compact{grid-template-areas:"media body";grid-template-rows:auto}
   .dscroll.csp .chapter.compact.flip{grid-template-areas:"body media"}
 }
+
+/* ── /case-studies index in the /connect proof format ────────────────────── */
+/* the page h1 is the proof header, sized like the h2 it replaces on /connect */
+.dscroll.csp .pwhead h1{font-size:clamp(31px,6.2vw,58px)}
+/* each bridge sits on the light page, between the stories' dark heroes */
+.dscroll.csp .cstory .pwbridge{margin-bottom:clamp(40px,6vw,64px)}
+.dscroll.csp .cstory+.cstory .cfhero{padding-top:clamp(28px,5vw,48px)}
