@@ -66,7 +66,7 @@ Coating contractors running their own Meta ads with good creative and a short fo
 
 A booked-appointment service charges per confirmed estimate, not per lead. This is the model Appointly runs. The provider builds and manages the Meta ads, calls every lead within about a minute, qualifies the homeowner, and puts a confirmed estimate on your calendar. You do not receive a lead. You receive an appointment.
 
-**What it costs:** $125 to $199 per booked estimate, set per market. No setup fee, no retainer, no monthly fee, no long term contract. We walk through the price for your market on a call.
+**What it costs:** One flat fee per booked estimate, set per market. No setup fee, no retainer, no monthly fee, no long term contract. We walk through the price for your market on a call.
 
 **What you actually get:** A homeowner who owns the property, wants coating work, lives inside your service area, and picked a time. Exclusive, because we work with [one contractor per market](/exclusive-floor-coating-leads).
 

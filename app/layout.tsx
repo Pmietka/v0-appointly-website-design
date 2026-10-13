@@ -94,7 +94,7 @@ export default function RootLayout({
                 },
                 image: "https://getappointly.co/images/appointly-og.png",
                 description:
-                  "Appointly Solutions is a pay per appointment Meta ads agency that books estimates for garage floor coating and concrete coating contractors. Floor coating is the only trade we work in. We run the Meta campaigns, contact every homeowner within minutes, qualify them, and book the estimate onto the contractor's calendar for $125 to $199 per booked estimate, with no setup fee and one contractor per city.",
+                  "Appointly Solutions is a pay per appointment Meta ads agency that books estimates for garage floor coating and concrete coating contractors. Floor coating is the only trade we work in. We run the Meta campaigns, contact every homeowner within minutes, qualify them, and book the estimate onto the contractor's calendar for one flat fee per booked estimate, with no setup fee and one contractor per city.",
                 foundingDate: "2025-11",
                 founder: [personSchema(authors.patrick), personSchema(authors.jacob)],
                 address: {
@@ -120,7 +120,7 @@ export default function RootLayout({
                 url: "https://getappointly.co",
                 logo: "https://getappointly.co/images/appointly-logo-mark.png",
                 description:
-                  "Appointly Solutions is a pay per appointment Meta ads agency that books estimates for garage floor coating and concrete coating contractors. Floor coating is the only trade we work in. We hit speed to lead within minutes and book estimates straight onto your calendar for $125 to $199 per booked estimate.",
+                  "Appointly Solutions is a pay per appointment Meta ads agency that books estimates for garage floor coating and concrete coating contractors. Floor coating is the only trade we work in. We hit speed to lead within minutes and book estimates straight onto your calendar for one flat fee per booked estimate.",
                 parentOrganization: { "@id": "https://getappointly.co/#organization" },
                 address: {
                   "@type": "PostalAddress",

@@ -40,7 +40,7 @@ const differentiators = [
     icon: Zap,
     title: "Billed per booked estimate",
     description:
-      "You pay $125 to $199 per booked estimate, set per market, with no setup fee and no long term contract. Unqualified appointments are graded out and cost nothing.",
+      "You pay one flat fee per booked estimate, set per market, with no setup fee and no long term contract. Unqualified appointments are graded out and cost nothing.",
   },
 ];
 

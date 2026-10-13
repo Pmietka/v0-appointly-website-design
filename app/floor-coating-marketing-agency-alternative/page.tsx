@@ -36,7 +36,7 @@ const agencyProblems = [
     icon: ShieldCheck,
     title: "A more accountable alternative",
     description:
-      "Appointly Solutions charges $125 to $199 per booked appointment with no setup fee and no retainer, so the fee is tied to an estimate on your calendar, backed by instant speed to lead and Meta ad delivery.",
+      "Appointly Solutions charges one flat fee per booked appointment with no setup fee and no retainer, so the fee is tied to an estimate on your calendar, backed by instant speed to lead and Meta ad delivery.",
   },
 ];
 
@@ -66,7 +66,7 @@ const faqItems = [
 export const metadata: Metadata = pageMetadata({
   title: "Floor Coating Marketing Agency Alternative | Appointly Solutions",
   description:
-    "Compare monthly fee marketing agencies with Appointly Solutions, which charges $125 to $199 per booked floor coating estimate with no setup fee and no retainer.",
+    "Compare monthly fee marketing agencies with Appointly Solutions, which charges one flat fee per booked floor coating estimate with no setup fee and no retainer.",
   path: "/floor-coating-marketing-agency-alternative",
   ogDescription:
     "See why coating contractors prefer paying per booked appointment over a monthly-fee marketing agency.",

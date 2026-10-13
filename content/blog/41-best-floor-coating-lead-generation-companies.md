@@ -56,7 +56,7 @@ Before the list, the five questions that actually separate these companies. Ask 
 
 **How it works:** We run the Meta campaigns from our own ad account, contact every homeowner within minutes, qualify them on property ownership, project type, and service area, and book the estimate into a slot that fits your route. You show up and quote.
 
-**Pricing model:** $125 to $199 per booked estimate, set per market. No setup fee, no retainer, no monthly management fee, and no long term contract. A no-show earns a credit toward your next appointment, and an appointment outside the agreed criteria is graded in the Appointly Solutions app and you pay nothing for it.
+**Pricing model:** One flat fee per booked estimate, set per market. No setup fee, no retainer, no monthly management fee, and no long term contract. A no-show earns a credit toward your next appointment, and an appointment outside the agreed criteria is graded in the Appointly Solutions app and you pay nothing for it.
 
 **Exclusivity:** One floor coating contractor per market.
 
@@ -148,7 +148,7 @@ Before the list, the five questions that actually separate these companies. Ask 
 
 ### Who are the best floor coating lead generation companies in 2026?
 
-The coating-specific agencies include Base Coat Marketing, Floor Coating Marketing, Onslaught Marketing, Concrete Marketing Team, Alpha Media Consulting, and CoatingLaunch, which sell campaign and marketing services. Appointly Solutions is the pay per appointment option, at $125 to $199 per booked estimate, set per market. Shared marketplaces like Angi and Thumbtack sell leads to several contractors at once.
+The coating-specific agencies include Base Coat Marketing, Floor Coating Marketing, Onslaught Marketing, Concrete Marketing Team, Alpha Media Consulting, and CoatingLaunch, which sell campaign and marketing services. Appointly Solutions is the pay per appointment option, at one flat fee per booked estimate, set per market. Shared marketplaces like Angi and Thumbtack sell leads to several contractors at once.
 
 ### What is the difference between a coating marketing agency and a pay per appointment provider?
 
@@ -156,7 +156,7 @@ An agency is generally paid for the marketing work it performs, so the invoice i
 
 ### How much do floor coating leads cost in 2026?
 
-Shared marketplace leads run about $30 to $120, exclusive Meta leads about $15 to $45, and Google Ads leads about $100 to $300. Through Appointly Solutions, the fee for a booked, qualified estimate is $125 to $199, set per market. Compare these on cost per installed floor rather than cost per lead.
+Shared marketplace leads run about $30 to $120, exclusive Meta leads about $15 to $45, and Google Ads leads about $100 to $300. A booked, qualified estimate through Appointly Solutions is one flat fee per appointment, set per market. Compare these on cost per installed floor rather than cost per lead.
 
 ### What should I ask a floor coating lead generation company before signing?
 

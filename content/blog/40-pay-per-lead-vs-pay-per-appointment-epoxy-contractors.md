@@ -37,7 +37,7 @@ The model is simple and it is a perfectly good deal under one specific condition
 
 You agree a price per booked estimate. The provider runs the campaigns, calls every lead, qualifies the homeowner, and books a time onto your calendar. You are invoiced the appointment fee when an estimate is booked.
 
-Appointly prices this at $125 to $199 per booked estimate, set per market. Every appointment is vetted before it reaches you: the homeowner owns the property, wants coating work, sits inside your service area, and has agreed to a time that fits your route. A no-show earns a credit toward your next appointment, and an appointment that misses those criteria is graded in the Appointly Solutions app and you pay nothing for it.
+Appointly prices this as one flat fee per booked estimate, set per market. Every appointment is vetted before it reaches you: the homeowner owns the property, wants coating work, sits inside your service area, and has agreed to a time that fits your route. A no-show earns a credit toward your next appointment, and an appointment that misses those criteria is graded in the Appointly Solutions app and you pay nothing for it.
 
 **What you own under pay per appointment:** showing up on time and closing the job. That is the whole list.
 
@@ -48,7 +48,7 @@ Appointly prices this at $125 to $199 per booked estimate, set per market. Every
 | | Pay per lead | Pay per appointment |
 | --- | --- | --- |
 | Billed when | A form is submitted | A qualified estimate is confirmed |
-| Typical price | $15 to $45 exclusive, $30 to $120 shared | $125 to $199 per booked estimate, set per market |
+| Typical price | $15 to $45 exclusive, $30 to $120 shared | One flat fee per booked estimate |
 | Who calls the homeowner | You | The provider |
 | Fee for leads that never book | The full lead price | No appointment fee |
 | Speed to lead depends on | Your availability | The provider's team |
@@ -90,7 +90,7 @@ Pay per lead bills you every time a homeowner submits a form, whether or not the
 
 ### Is pay per appointment more expensive than pay per lead?
 
-Per unit, yes. A booked estimate runs $125 to $199, set per market, against $15 to $45 for an exclusive lead. On a like-for-like basis the gap narrows sharply, because only 60 to 70% of well-worked leads become estimates and somebody has to be paid to do that calling, following up, and scheduling.
+Per unit, yes. A booked estimate costs more than the $15 to $45 an exclusive lead runs. On a like-for-like basis the gap narrows sharply, because only 60 to 70% of well-worked leads become estimates and somebody has to be paid to do that calling, following up, and scheduling.
 
 ### Which model is better for an epoxy garage floor contractor?
 

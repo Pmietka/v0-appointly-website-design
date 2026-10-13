@@ -25,7 +25,7 @@ const faqItems: FaqItem[] = [
   {
     question: "How much does Appointly Solutions cost?",
     answer:
-      "Appointly Solutions charges $125 to $199 per booked estimate. The exact price is set per market, based on your city and the work you install, and we confirm it with you on the strategy call. There is no setup fee and no retainer.",
+      "Appointly Solutions charges one flat fee per booked estimate. The price is set per market, based on your city and the work you install, and we quote it on the strategy call. There is no setup fee and no retainer.",
   },
   {
     question: "Who runs the ad account, and who owns the leads and data?",
@@ -84,7 +84,7 @@ const faqItems: FaqItem[] = [
 export const metadata: Metadata = pageMetadata({
   title: "FAQ | Appointly Solutions",
   description:
-    "Appointly Solutions charges $125 to $199 per booked floor coating estimate, with no setup fee and no long term contract. Answers on billing, no shows, territory and fit.",
+    "Appointly Solutions charges one flat fee per booked floor coating estimate, with no setup fee and no long term contract. Answers on billing, no shows, territory and fit.",
   path: "/faq",
   ogTitle: "Appointly Solutions FAQ: Pricing, Billing, Territory and Fit",
   keywords: [

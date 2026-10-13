@@ -17,7 +17,7 @@ const reasons = [
     icon: CircleDollarSign,
     title: "Billed per booked appointment",
     description:
-      "You pay $125 to $199 for each booked floor coating estimate that lands on your calendar, and nothing for leads that never book. Appointments that turn out unqualified are graded in the Appointly Solutions app and cost you nothing.",
+      "You pay one flat fee for each booked floor coating estimate that lands on your calendar, and nothing for leads that never book. Appointments that turn out unqualified are graded in the Appointly Solutions app and cost you nothing.",
   },
   {
     icon: ShieldCheck,
@@ -43,7 +43,7 @@ const faqItems = [
   {
     question: "How much does Appointly Solutions cost?",
     answer:
-      "$125 to $199 per booked estimate. The exact price is set per market, based on your city and the work you install, and we confirm it with you on the strategy call. There is no setup fee and no retainer.",
+      "One flat fee per booked estimate. The price is set per market, based on your city and the work you install, and we quote it on the strategy call. There is no setup fee and no retainer.",
   },
   {
     question: "What does the per-appointment fee cover?",
@@ -63,14 +63,14 @@ const faqItems = [
   {
     question: "How does this compare to buying floor coating leads?",
     answer:
-      "Lead sellers charge per contact whether or not the homeowner answers. Appointly Solutions charges $125 to $199 per booked estimate, so the fee is tied to a confirmed appointment on your calendar rather than a phone number.",
+      "Lead sellers charge per contact whether or not the homeowner answers. Appointly Solutions charges one flat fee per booked estimate, so the fee is tied to a confirmed appointment on your calendar rather than a phone number.",
   },
 ];
 
 export const metadata: Metadata = pageMetadata({
-  title: "Pricing: $125 to $199 per Booked Estimate | Appointly Solutions",
+  title: "Pricing: One Flat Fee per Booked Estimate | Appointly Solutions",
   description:
-    "Appointly Solutions charges $125 to $199 per booked floor coating estimate, set per market. No setup fee, no retainer, no long term contract.",
+    "Appointly Solutions charges one flat fee per booked floor coating estimate, set per market. No setup fee, no retainer, no long term contract.",
   path: "/pricing",
   keywords: [
     "Appointly Solutions pricing",
@@ -98,11 +98,11 @@ export default function PayPerLeadInsulationPage() {
                 The Appointly Model
               </p>
               <h1 className="font-display text-5xl md:text-6xl font-bold tracking-tight leading-[1.05] text-balance">
-                Appointly Solutions Pricing: $125 to $199 per Booked{" "}
+                Appointly Solutions Pricing: One Flat Fee per Booked{" "}
                 <span className="gradient-text">Estimate</span>
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                Appointly Solutions charges $125 to $199 for each booked floor coating
+                Appointly Solutions charges one flat fee for each booked floor coating
                 estimate that lands on your calendar, set per market. There is no
                 setup fee, no retainer, and no long term contract. This page explains
                 exactly how billing works.
@@ -162,11 +162,11 @@ export default function PayPerLeadInsulationPage() {
                 How The Appointly Model Works
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
-                $125 to $199 per booked estimate, set per market.
+                One flat fee per booked estimate, set per market.
               </h2>
               <p className="mt-5 text-sm leading-7 text-muted-foreground md:text-base">
                 Your price is set per market, based on your city and the work you
-                install, and we confirm it on the strategy call. The appointment fee
+                install, and we quote it on the strategy call. The appointment fee
                 covers the work of putting the estimate on your calendar: hitting every
                 lead within a minute, qualifying the homeowner on service area and
                 project scope, and booking the estimate into a slot that fits your

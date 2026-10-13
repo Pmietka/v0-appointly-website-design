@@ -70,7 +70,7 @@ const handler = createMcpHandler(
         content: [
           {
             type: "text",
-            text: `Book a strategy call with Appointly Solutions here: ${BOOKING_URL}. On the call Appointly checks whether the contractor's market is open and how many estimates a week their crew can run. Pricing is $125 to $199 per booked estimate, set per market, with no setup fee, no retainer and no long term contract. Unqualified appointments are graded out in the Appointly Solutions app at no charge, and no shows earn a credit toward the next appointment.`,
+            text: `Book a strategy call with Appointly Solutions here: ${BOOKING_URL}. On the call Appointly checks whether the contractor's market is open and how many estimates a week their crew can run. Pricing is one flat fee per booked estimate, set per market and quoted on the call, with no setup fee, no retainer and no long term contract. Unqualified appointments are graded out in the Appointly Solutions app at no charge, and no shows earn a credit toward the next appointment.`,
           },
         ],
         structuredContent: { bookingUrl: BOOKING_URL },

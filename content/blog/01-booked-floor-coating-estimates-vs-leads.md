@@ -50,7 +50,7 @@ Say your average epoxy garage floor runs $4,000 and you close roughly one in thr
 
 ## What does the per-appointment fee cover?
 
-The [per-appointment fee](/pricing) is $125 to $199 per booked estimate, set per market. It pays for the work of putting one confirmed estimate on your calendar: the calling team, the qualifying, and the back-and-forth to lock in a time that fits your route. You pay it once per booked estimate. There is no setup fee, no retainer, and no monthly fee.
+The [per-appointment fee](/pricing) is one flat fee per booked estimate, set per market. It pays for the work of putting one confirmed estimate on your calendar: the calling team, the qualifying, and the back-and-forth to lock in a time that fits your route. You pay it once per booked estimate. There is no setup fee, no retainer, and no monthly fee.
 
 What you're buying is not a list of names or a "qualified contact." It's a scheduled estimate with a homeowner who expects you to show up and quote their floor. A contractor doing $2,500 basement floors will weigh the fee differently than one doing $9,000 showroom installs, but the structure is the same.
 

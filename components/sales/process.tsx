@@ -115,7 +115,7 @@ const MODEL = [
   {
     Icon: CircleDollarSign,
     t: "How you pay",
-    d: "$125 to $199 per booked estimate, set per market, billed when the estimate is booked on your calendar. No setup fee, no retainer, and no monthly management fee. We confirm the price for your market on the strategy call.",
+    d: "One flat fee per booked estimate, set per market, billed when the estimate is booked on your calendar. No setup fee, no retainer, and no monthly management fee. We confirm the price for your market on the strategy call.",
   },
   {
     Icon: BadgeCheck,

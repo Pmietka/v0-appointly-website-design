@@ -315,12 +315,12 @@ export default function HomePage() {
         <div className="wrap">
           <h2>Simple <span className="hl">pricing.</span></h2>
           <p className="sub">
-            You pay $125 to $199 for every qualified appointment we book onto your
+            You pay one flat fee for every qualified appointment we book onto your
             calendar, set per market. No setup fee and no retainer.
           </p>
           <div className="priceblock">
             <div className="ptag">How pricing works</div>
-            <div className="pclaim">$125 to $199 per booked appointment.</div>
+            <div className="pclaim">One flat fee per booked appointment.</div>
             <ul>
               <li>Billed when a qualified estimate is booked</li>
               <li>Unqualified appointments are graded out and cost nothing</li>

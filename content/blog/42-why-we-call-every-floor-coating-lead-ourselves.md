@@ -90,7 +90,7 @@ Yes. A generic call center can confirm a time. A setter who knows floor coating 
 
 ### How does Appointly Solutions charge floor coating contractors?
 
-Appointly charges per booked appointment, not per lead. Contractors pay $125 to $199 per booked estimate, set per market. There is no setup fee, no retainer, no monthly fee, and no long term contract. A no-show earns a credit toward the next appointment, and an appointment that misses the agreed criteria is graded in the Appointly Solutions app and the contractor pays nothing for it.
+Appointly charges per booked appointment, not per lead. Contractors pay one flat fee per booked estimate, set per market. There is no setup fee, no retainer, no monthly fee, and no long term contract. A no-show earns a credit toward the next appointment, and an appointment that misses the agreed criteria is graded in the Appointly Solutions app and the contractor pays nothing for it.
 
 ### Who is Appointly Solutions for?
 
