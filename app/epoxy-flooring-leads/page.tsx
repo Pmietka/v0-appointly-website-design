@@ -18,7 +18,7 @@ const sprayFoamPoints = [
     icon: Layers,
     title: "Built for specialized jobs",
     description:
-      "Epoxy and polyaspartic estimates need tighter targeting because the homeowner is usually searching for a specific finish - a garage floor, showroom, or warehouse coating - not general education.",
+      "Epoxy and polyaspartic estimates need tighter targeting because the homeowner is usually searching for a specific finish, like a garage floor, showroom, or warehouse coating, not general education.",
   },
   {
     icon: CalendarCheck2,
@@ -30,13 +30,13 @@ const sprayFoamPoints = [
     icon: ShieldCheck,
     title: "Exclusive market protection",
     description:
-      "Smaller pools of qualified coating crews make exclusivity more valuable when each local job - garage, basement, patio, or showroom floor - carries real margin.",
+      "Smaller pools of qualified coating crews make exclusivity more valuable when each local job (garage, basement, patio, or showroom floor) carries real margin.",
   },
   {
     icon: TimerReset,
     title: "Faster response window",
     description:
-      "Homeowners pricing an epoxy garage floor or concrete coating move quickly, so we contact them instantly - speed to lead - before they call another crew.",
+      "Homeowners pricing an epoxy garage floor or concrete coating move quickly, so we contact them instantly, before they call another crew. That is speed to lead.",
   },
 ];
 
@@ -104,7 +104,7 @@ export default function SprayFoamContractorLeadsPage() {
                 Epoxy and polyaspartic specialists need narrower targeting and faster
                 response than broad home service campaigns provide. Appointly Solutions
                 runs the Meta ads, contacts each homeowner instantly, and books the
-                coating estimate onto your calendar - garage floors, showrooms,
+                coating estimate onto your calendar for garage floors, showrooms,
                 warehouses, patios, and basements.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">

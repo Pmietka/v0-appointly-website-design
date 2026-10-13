@@ -103,7 +103,7 @@ export default function AppointmentSettingForContractorsPage() {
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
                 We do the complete job of filling your calendar. We run the Meta ads,
                 contact every floor coating lead the moment it lands, and book the
-                homeowner into a time that works for you - so you walk into real
+                homeowner into a time that works for you, so you walk into real
                 estimates, not cold inquiries you have to chase.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">

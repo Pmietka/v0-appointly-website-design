@@ -135,7 +135,7 @@ export default async function BlogIndexPage() {
               </div>
               <p className="max-w-xl text-sm leading-7 text-muted-foreground md:text-base">
                 Straight, practical advice on pricing, selling, and booking more floor
-                coating jobs - written for contractors, not marketers.
+                coating jobs, written for contractors, not marketers.
               </p>
             </div>
 
