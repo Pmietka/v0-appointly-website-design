@@ -15,6 +15,8 @@ cluster: operations
 
 The best CRM for a floor coating contractor is the one that texts every new lead within a minute, books the estimate straight onto your calendar, sends the quote and follows up on it without you remembering to, and asks for a review when the floor is done. For most one and two crew shops, that means either an all-in-one marketing CRM such as GoHighLevel or a field service platform such as Jobber or Housecall Pro. Larger multi-crew operations look at heavier platforms like ServiceTitan, and project-style shops sometimes fit JobNimbus.
 
+**Disclosure:** Appointly Solutions uses GoHighLevel in its own operations. Every tool here is described by what its own website says, so confirm features and pricing with each vendor.
+
 **How we wrote this:** every feature listed for a named tool comes from that company's own website as of October 2026. Software changes quickly, plans get renamed, and features move between tiers, so confirm anything that matters to you directly with the vendor before you sign up.
 
 ## Key takeaways

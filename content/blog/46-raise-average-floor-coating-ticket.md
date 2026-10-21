@@ -110,7 +110,7 @@ A homeowner who shows up to the estimate already understanding the product picks
 
 That is the part of the ticket that gets decided before the estimator ever arrives. When the first call explains the difference between a basic coating and a full system, why stem walls matter, and why a professional install outlasts a hardware store kit, the homeowner is not hearing it for the first time at the kitchen table. They are confirming what they already decided they want.
 
-We see it across our clients. AFAB Services in Port St. Lucie averages about $3,500 a job. Garage Force of the Inland Northwest sells a premium polyurea system at around $5,000 and still closes about 55% of shown estimates. The details are on our [case studies](/case-studies) page. And in [why we call every floor coating lead ourselves](/blog/why-we-call-every-floor-coating-lead-ourselves), one client closed four out of four estimates in a single day, every one of them above his average ticket.
+We see it across our clients. AFAB Services in Port St. Lucie averages about $3,500 a job. Garage Force of the Inland Northwest sells a premium polyurea system at around $5,000 and still closes about 50% of shown estimates. The details are on our [case studies](/case-studies) page. And in [why we call every floor coating lead ourselves](/blog/why-we-call-every-floor-coating-lead-ourselves), one client closed four out of four estimates in a single day, every one of them above his average ticket.
 
 ## Which numbers should you track?
 
