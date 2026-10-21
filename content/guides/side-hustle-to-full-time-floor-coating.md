@@ -93,7 +93,7 @@ Then there is the estimate itself. Homeowners want weekday afternoons and early 
 
 So the part timer gets stuck in a loop. You cannot build steady lead flow until you have time to call and run estimates. You cannot quit until you have steady lead flow. The way out is to prove the channel while you still have a paycheck: run a small ad budget, use a landing page, and get someone to call every lead within minutes, even if that is a spouse or a hired setter. A starting Meta budget for a new contractor is $50 to $100 a day. If that channel books estimates every week for a couple of months, the first row of the readiness table flips to "ready."
 
-> **From the field:** AFAB Services in Port St. Lucie closed roughly $35,000 in his best month, at about a 50% close rate and a $3,500 average job. That works out to about 10 floors from about 20 shown estimates. That is what steady estimate flow looks like once it exists, and none of it depends on referrals. The [case studies](/case-studies) have the details.
+> **From the field:** AFAB Services in Port St. Lucie closed roughly $35,000 in his best month, at a 57% close rate and a $3,500 average job. That works out to about 10 floors from about 18 shown estimates. That is what steady estimate flow looks like once it exists, and none of it depends on referrals. The [case studies](/case-studies) have the details.
 
 ## What should you have in place before you give notice?
 
