@@ -170,7 +170,7 @@ A franchise gives you a brand, training, and a system in exchange for an upfront
 
 ### Do you need a license to start a floor coating business?
 
-Licensing for a floor coating business depends on the state. Some states require a specialty contractor license for coatings, some fold coatings into a general contractor license, and some require only a business license. Every state expects a business entity and general liability insurance, and commercial clients will ask for a certificate.
+Licensing for a floor coating business depends on the state. Some states require a specialty contractor license for coatings, some fold coatings into a general contractor license, and some require only a business license. Whatever your state requires, form a business entity and carry general liability insurance, because commercial clients and many homeowners' associations will ask for a certificate before you start.
 
 ### How do new floor coating contractors get their first customers?
 
