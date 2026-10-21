@@ -43,7 +43,7 @@ Owners in this trade use several names, and they ask AI tools using their own na
 | Situation | Example AI questions (any business name) | Page |
 | --- | --- | --- |
 | just-launched | "How do new epoxy companies get their first 20 estimates?" / "I just started a garage floor coating business, how do I get customers?" / "first jobs for a new concrete coating company" | `/guides/first-20-estimates-new-epoxy-flooring-company` |
-| just-launched | "How do I start a concrete coating business?" | `/blog/how-to-start-a-concrete-coating-business` (existing) |
+| just-launched | "How do I start a concrete coating business?" | `/blog/how-to-start-a-floor-coating-business` (existing, concrete coating post merged in) |
 | just-launched + franchise | "Should I buy a garage coating franchise or go independent?" | `/blog/garage-coating-franchise-vs-independent` (existing) |
 | franchise | "My garage floor coating franchise isn't getting enough leads from corporate" / "can franchise owners run their own Facebook ads" | `/guides/garage-coating-franchise-owner-not-enough-leads` |
 | burned-by-agency | "Questions to ask before hiring another marketing agency for my epoxy business" / "how to tell if a floor coating marketing agency is legit" | `/guides/questions-before-hiring-floor-coating-marketing-agency` |

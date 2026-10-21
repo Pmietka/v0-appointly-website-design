@@ -125,7 +125,7 @@ Going independent tends to make sense when:
 - You would rather put the royalty money into marketing that you control.
 - You are comfortable building the lead flow yourself or paying a partner per booked estimate.
 
-If you are leaning independent, our guide to [starting a concrete coating business](/blog/how-to-start-a-concrete-coating-business) covers how to pick a niche and a model before you buy equipment.
+If you are leaning independent, our guide to [starting a floor coating business](/blog/how-to-start-a-floor-coating-business) covers how to pick a niche and a model before you buy equipment.
 
 ## Frequently asked questions
 

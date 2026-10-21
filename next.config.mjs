@@ -28,6 +28,8 @@ const legacyBlogRedirects = [
   ["insulation-contractor-digital-marketing-budget", "floor-coating-contractor-marketing-budget"],
   ["how-much-should-insulation-contractors-pay-per-lead", "what-is-a-booked-floor-coating-estimate-worth"],
   ["spring-marketing-plan-insulation-contractors", "spring-marketing-plan-floor-coating-contractors"],
+  // Merged into the floor coating startup guide so one page ranks for both.
+  ["how-to-start-a-concrete-coating-business", "how-to-start-a-floor-coating-business"],
 ]
 
 const nextConfig = {

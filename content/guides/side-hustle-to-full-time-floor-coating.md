@@ -8,7 +8,7 @@ cluster: operations
 situation: just-launched
 audience: "Part time floor coating installers"
 question: "When can I quit my job and do floor coating full time?"
-related_posts: how-to-start-a-floor-coating-business, how-to-start-a-concrete-coating-business, floor-coating-pricing-and-margins, speed-to-lead-wins-floor-coating-jobs
+related_posts: how-to-start-a-floor-coating-business, floor-coating-equipment-list, floor-coating-pricing-and-margins, speed-to-lead-wins-floor-coating-jobs
 ---
 
 # When Can I Quit My Job and Do Floor Coating Full Time?
@@ -100,7 +100,7 @@ So the part timer gets stuck in a loop. You cannot build steady lead flow until 
 Do the boring parts while the paycheck still covers them.
 
 - **Paperwork.** LLC, business bank account, general liability insurance, and a written contract and warranty.
-- **One system, one checklist.** The [concrete coating startup guide](/blog/how-to-start-a-concrete-coating-business) explains why one system beats a menu.
+- **One system, one checklist.** The [floor coating startup guide](/blog/how-to-start-a-floor-coating-business) explains why one system beats a menu.
 - **A season plan.** Florida, the Gulf Coast, and the Carolinas book year round. Most of the country is strong spring through fall and drops in winter. Quitting in October in a cold market means your first full time months are your slowest.
 
 ## Frequently asked questions
