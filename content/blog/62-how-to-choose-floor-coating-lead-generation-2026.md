@@ -5,6 +5,7 @@ date: 2026-10-23
 updated: 2026-10-23
 author: patrick
 cluster: marketing-channels
+related: new-build-garage-floor-coating-customers-2026
 cta_label: "Apply to work with Appointly"
 cta_url: "https://getappointly.co/connect-now"
 ---

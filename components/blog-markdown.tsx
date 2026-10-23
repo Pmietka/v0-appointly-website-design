@@ -171,9 +171,10 @@ function renderList(items: string[], ordered = false) {
 
 const boldLead = /^\*\*([^*]+)\*\*\s*(\S[\s\S]*)$/;
 
-function numberBadge(number: number) {
-  return `<span aria-hidden="true" class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-slate-950 text-sm font-bold text-white">${number}</span>`;
-}
+// The badge draws its number from a CSS counter rather than holding it as
+// text. The <ol> already numbers its items, so a text digit would be read
+// twice ("1. 1A call") by crawlers, reader modes, and copy and paste.
+const numberBadge = `<span aria-hidden="true" class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-slate-950 text-sm font-bold text-white before:content-[counter(step)]"></span>`;
 
 // Numbered steps. When every item opens with a bold lead, each step becomes a
 // card with the lead as its title.
@@ -181,9 +182,9 @@ function renderOrderedList(items: string[]) {
   const leads = items.map((item) => item.match(boldLead));
 
   if (leads.every(Boolean)) {
-    return `<ol class="space-y-4">${leads
+    return `<ol class="space-y-4 [counter-reset:step]">${leads
       .map(
-        (match, index) => `<li class="flex gap-4 rounded-2xl border border-slate-200 bg-white p-5 md:p-6">${numberBadge(index + 1)}<div class="min-w-0">
+        (match) => `<li class="flex gap-4 rounded-2xl border border-slate-200 bg-white p-5 md:p-6 [counter-increment:step]">${numberBadge}<div class="min-w-0">
 <p class="text-lg font-semibold leading-7 text-slate-950">${renderInline(match![1])}</p>
 <p class="mt-2 text-base leading-7 text-slate-600">${renderInline(match![2])}</p>
 </div></li>`,
@@ -191,10 +192,10 @@ function renderOrderedList(items: string[]) {
       .join("")}</ol>`;
   }
 
-  return `<ol class="space-y-4">${items
+  return `<ol class="space-y-4 [counter-reset:step]">${items
     .map(
-      (item, index) =>
-        `<li class="flex gap-4">${numberBadge(index + 1)}<span class="min-w-0 text-base leading-8 text-slate-600 md:text-lg">${renderInline(item)}</span></li>`,
+      (item) =>
+        `<li class="flex gap-4 [counter-increment:step]">${numberBadge}<span class="min-w-0 text-base leading-8 text-slate-600 md:text-lg">${renderInline(item)}</span></li>`,
     )
     .join("")}</ol>`;
 }

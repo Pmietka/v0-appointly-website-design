@@ -25,6 +25,13 @@ import { getBlogCommercialResources } from "@/lib/seo-resources";
 
 const baseUrl = "https://getappointly.co";
 
+// Blog copy uses no hyphens as punctuation, so the author box, alt text, and
+// schema jobTitle spell the role "Cofounder".
+function blogAuthor(id: string) {
+  const author = getAuthor(id);
+  return { ...author, role: author.role.replace("Co-founder", "Cofounder") };
+}
+
 export async function generateStaticParams() {
   const slugs = await getBlogPostSlugs();
   return slugs.map((slug) => ({ slug }));
@@ -43,7 +50,7 @@ export async function generateMetadata({
   }
 
   const canonical = `${baseUrl}${getBlogPath(post.slug)}`;
-  const author = getAuthor(post.authorId);
+  const author = blogAuthor(post.authorId);
   const image = `${baseUrl}${post.image}`;
 
   return {
@@ -89,7 +96,7 @@ export default async function BlogPostPage({
   const situationGuides = getGuidesForPost(post.slug, allGuides).slice(0, 2);
   const relatedPosts = getRelatedPosts(post, allPosts, 3);
   const commercialResources = getBlogCommercialResources(post.cluster);
-  const author = getAuthor(post.authorId);
+  const author = blogAuthor(post.authorId);
   const canonical = `${baseUrl}${getBlogPath(post.slug)}`;
   const wasUpdated = post.updatedAt.getTime() - post.publishedAt.getTime() > 24 * 60 * 60 * 1000;
 

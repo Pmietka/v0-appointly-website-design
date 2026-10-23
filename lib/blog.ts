@@ -32,6 +32,8 @@ export type BlogPost = {
   headings: { id: string; text: string }[];
   /** Optional button at the end of the article, from `cta_label` + `cta_url`. */
   cta: { label: string; href: string } | null;
+  /** Slugs from `related:` (comma separated), listed first in related articles. */
+  related: string[];
 };
 
 export const clusterLabels: Record<string, string> = {
@@ -291,6 +293,10 @@ export function parsePost(fileName: string, raw: string): BlogPost {
       data.cta_label?.trim() && data.cta_url?.trim()
         ? { label: data.cta_label.trim(), href: data.cta_url.trim() }
         : null,
+    related: (data.related ?? "")
+      .split(",")
+      .map((item) => item.trim())
+      .filter(Boolean),
   };
 }
 
@@ -323,14 +329,19 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
 }
 
 /**
- * Topical related posts: same cluster first, then everything else, newest
- * first. Never includes the post itself.
+ * Topical related posts: posts pinned with `related:` first, then same
+ * cluster, then everything else, newest first. Never includes the post itself.
  */
 export function getRelatedPosts(post: BlogPost, allPosts: BlogPost[], limit = 3) {
-  const others = allPosts.filter((item) => item.slug !== post.slug);
+  const pinned = post.related
+    .map((slug) => allPosts.find((item) => item.slug === slug))
+    .filter((item): item is BlogPost => Boolean(item) && item!.slug !== post.slug);
+  const others = allPosts.filter(
+    (item) => item.slug !== post.slug && !pinned.includes(item),
+  );
   const sameCluster = others.filter((item) => item.cluster === post.cluster);
   const rest = others.filter((item) => item.cluster !== post.cluster);
-  return [...sameCluster, ...rest].slice(0, limit);
+  return [...pinned, ...sameCluster, ...rest].slice(0, limit);
 }
 
 export async function getBlogPost(slug: string) {
