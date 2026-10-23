@@ -265,6 +265,18 @@ export default async function BlogPostPage({
 
               <BlogMarkdown content={post.body} />
 
+              {post.cta && (
+                <div className="mt-12">
+                  <a
+                    href={post.cta.href}
+                    className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+                  >
+                    {post.cta.label}
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
+                </div>
+              )}
+
               <div className="mt-14 flex gap-5 rounded-2xl border border-slate-200 bg-slate-50 p-6">
                 <Image
                   src={author.image.replace(baseUrl, "")}

@@ -30,6 +30,8 @@ export type BlogPost = {
   faq: { question: string; answer: string }[];
   /** H2 headings in body order, for the table of contents. */
   headings: { id: string; text: string }[];
+  /** Optional button at the end of the article, from `cta_label` + `cta_url`. */
+  cta: { label: string; href: string } | null;
 };
 
 export const clusterLabels: Record<string, string> = {
@@ -285,6 +287,10 @@ export function parsePost(fileName: string, raw: string): BlogPost {
     takeaways: extractTakeaways(body),
     faq: extractFaq(body),
     headings: extractHeadings(body),
+    cta:
+      data.cta_label?.trim() && data.cta_url?.trim()
+        ? { label: data.cta_label.trim(), href: data.cta_url.trim() }
+        : null,
   };
 }
 
