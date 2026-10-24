@@ -22,25 +22,25 @@ const differentiators = [
     icon: ShieldCheck,
     title: "One contractor per market",
     description:
-      "We only work with one contractor per service area. The appointments we book are never shared with a competitor.",
+      "We only work with one floor coating contractor per market, and your exclusivity is written into your service agreement. The appointments we book are never shared with a competitor.",
   },
   {
     icon: BadgeCheck,
     title: "We book the appointment for you",
     description:
-      "We hit every lead the second they raise their hand and book the estimate onto your calendar. You just show up and quote.",
+      "Every lead gets a text and a call from Jacob within one minute. He qualifies the homeowner on intent and books the estimate onto your calendar. You just show up and quote.",
   },
   {
     icon: Clock3,
     title: "We run the whole system",
     description:
-      "Meta ads, instant speed to lead outreach, and appointment booking are all run by our team, not sold as add-ons.",
+      "Meta ads, speed to lead, and appointment booking are all run by the two of us, not sold as add-ons. You own everything we build for you.",
   },
   {
     icon: Zap,
-    title: "Billed per booked estimate",
+    title: "Ad spend at cost, plus a fee per booked appointment",
     description:
-      "You pay one flat fee per booked estimate, set per market, with no setup fee and no long term contract. Unqualified appointments are graded out and cost nothing.",
+      "You fund your ad spend at cost with no markup, then pay $125 to $175 per booked appointment, set per client. No setup fee and no long term contract. Grade an appointment a C after the estimate and you don't pay for it.",
   },
 ];
 
@@ -105,8 +105,9 @@ export default function AboutPage() {
                 Founded by brothers Patrick and Jacob Mietka in Chicago, IL, Appointly
                 Solutions was built out of frustration with agencies that charge big
                 monthly fees without delivering results. We created the Appointly Model so
-                contractors get accountability: a flat fee per booked estimate we
-                actually put on your calendar, not a retainer for activity.
+                contractors get accountability: you fund your own ads at cost and
+                pay a fee for each estimate we actually put on your calendar, not a
+                retainer for activity.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
@@ -161,10 +162,10 @@ export default function AboutPage() {
                 Booked appointments, tied to results.
               </h2>
               <p className="mt-5 text-sm leading-7 text-muted-foreground md:text-base">
-                Appointly Solutions runs your Meta ads, contacts every homeowner the
-                second they raise their hand, and books the estimate straight onto your
-                calendar. You pay a flat fee for each booked estimate, not for hours,
-                reports, or guesswork.
+                Appointly Solutions runs your Meta ads, texts and calls every homeowner
+                within one minute, and books the estimate straight onto your calendar.
+                You fund your ad spend at cost and pay a fee for each booked estimate,
+                not for hours, reports, or guesswork.
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
                 Our{" "}
@@ -235,9 +236,10 @@ export default function AboutPage() {
                 Two brothers from Chicago who run the whole system themselves.
               </h2>
               <p className="mt-4 leading-relaxed text-muted-foreground">
-                There is no account manager between you and the people running your
-                campaigns. Patrick runs the ads and the numbers. Jacob runs speed to
-                lead and booking. Both of them write the guides on this site.
+                There is no account manager and no call center between you and the
+                people running your campaigns. Patrick runs the ads and the numbers.
+                Jacob makes every call to your leads himself, and every call is
+                recorded and reviewed. Both of them write the guides on this site.
               </p>
             </div>
 

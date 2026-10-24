@@ -2,7 +2,7 @@
 seo_title: "Get Floor Coating Jobs Without Word of Mouth"
 meta_description: "Word of mouth hits a ceiling for floor coating contractors. How to build a predictable pipeline of booked estimates with Meta ads and one-minute follow-up."
 date: 2026-01-13
-updated: 2026-10-13
+updated: 2026-10-24
 author: jacob
 cluster: marketing-channels
 ---
@@ -55,7 +55,7 @@ Your [Google Business Profile](/blog/google-reviews-floor-coating-contractors) i
 
 [Meta ads](/blog/meta-ads-for-floor-coating-contractors) are where the volume comes from. You are not waiting for someone to need a floor and remember your name. You put a freshly flaked garage in front of homeowners who scroll past it and think "mine looks nothing like that." On Meta the creative is the targeting: with the right photo, 100% of your leads can be homeowners. Send the click to a landing page with a short form rather than the native lead form, because the landing page wins on lead quality.
 
-A booked-appointment service is the channel most contractors should lean on if they don't want to learn the platform or sit by the phone. You pay one flat [per-appointment fee](/pricing) for each estimate that lands on your calendar, with no setup fee or retainer. We run the Meta ads, call the homeowner within about a minute ([speed to lead](/blog/speed-to-lead-wins-floor-coating-jobs)) before they shop three other crews, and book them into a time that works for you. Setup is one short call to set your service area, pricing, and the kind of work you want.
+A booked-appointment service is the channel most contractors should lean on if they don't want to learn the platform or sit by the phone. You fund your ad spend at cost and pay a [per-appointment fee](/pricing) of $125 to $175 for each estimate that lands on your calendar, with no setup fee or retainer. We run the Meta ads, text and call the homeowner within one minute ([speed to lead](/blog/speed-to-lead-wins-floor-coating-jobs)) before they shop three other crews, and book them into a time that works for you. Setup is one short call to set your service area, pricing, and the kind of work you want.
 
 ## How do you build a pipeline that doesn't depend on referrals?
 
@@ -78,7 +78,7 @@ A second engine roughly doubles the calendar without touching referral volume. C
 | Timing | Whenever someone remembers you | You set the volume month by month |
 | Exposure | One or two referral sources drying up hurts | Two engines, so one can dip without stopping the crew |
 
-Say an average epoxy garage floor is $4,000. That is $240,000 from referrals and another $240,000 from booked estimates, nearly half a million from a calendar you actually control. When you pay one flat fee per booked estimate and close a healthy share of the estimates you sit, the appointment fees are a small slice of the revenue they produce.
+Say an average epoxy garage floor is $4,000. That is $240,000 from referrals and another $240,000 from booked estimates, nearly half a million from a calendar you actually control. When you pay $125 to $175 per booked estimate, plus ad spend you fund at cost, and close a healthy share of the estimates you sit, the appointment fees are a small slice of the revenue they produce.
 
 ## How do you make the transition without losing referral work?
 
@@ -128,6 +128,6 @@ A Google Business Profile alone rarely fills a floor coating calendar, but it cl
 
 ## Build a pipeline that doesn't evaporate
 
-Word of mouth got you this far. The contractors who grow past it aren't waiting by the phone. They have a calendar of booked estimates they can plan a crew around, with referrals on top. Start with the Google profile, get your floors in front of homeowners who don't know you, and call every lead within a minute. If you'd rather not run any of it, we run the Meta ads, hit speed to lead, and book the estimate onto your calendar. You pay one flat fee per [booked floor coating estimate](/floor-coating-leads), with no setup fee or retainer.
+Word of mouth got you this far. The contractors who grow past it aren't waiting by the phone. They have a calendar of booked estimates they can plan a crew around, with referrals on top. Start with the Google profile, get your floors in front of homeowners who don't know you, and call every lead within a minute. If you'd rather not run any of it, we run the Meta ads, hit speed to lead, and book the estimate onto your calendar. You pay $125 to $175 per [booked floor coating estimate](/floor-coating-leads), plus ad spend you fund at cost, with no setup fee or retainer.
 
 One contractor per market, so the estimates we book in your area are yours. [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we'll look at what your market can produce.

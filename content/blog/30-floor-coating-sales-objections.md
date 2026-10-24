@@ -2,7 +2,7 @@
 seo_title: "Floor Coating Sales Objections: The Three That Repeat"
 meta_description: "The three objections every floor coating estimator hears, cheaper one-day guys, talk to my spouse, just getting quotes, and answers that hold up in a garage."
 date: 2026-09-11
-updated: 2026-09-11
+updated: 2026-10-24
 author: jacob
 cluster: sales
 ---
@@ -115,4 +115,4 @@ A discount should be the last tool, not the first. Most estimators drop price at
 
 Write your version of the three answers this week, in your own words, and run them with whoever else sells for you. Then fix the booking question so both decision makers are there, add a good, better, best sheet, and stop emailing quotes.
 
-The other half of closing more jobs is having enough estimates on the calendar to practice on. That is what we do for [floor coating contractors](/floor-coating-leads): Meta ads, a calling team that reaches every lead within about a minute, and booked estimates on your calendar with both decision makers asked for at booking. [Book a strategy call](https://client.getappointly.co/strategy-calendar) if you want to see how it would work in your market.
+The other half of closing more jobs is having enough estimates on the calendar to practice on. That is what we do for [floor coating contractors](/floor-coating-leads): Meta ads, a text and a call from me to every lead within one minute, and booked estimates on your calendar with both decision makers asked for at booking. [Book a strategy call](https://client.getappointly.co/strategy-calendar) if you want to see how it would work in your market.

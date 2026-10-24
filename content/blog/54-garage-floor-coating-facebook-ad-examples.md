@@ -2,7 +2,7 @@
 seo_title: "Garage Floor Coating Facebook Ad Examples That Book"
 meta_description: "Six garage floor coating Facebook ad examples with primary text, headline, and creative, plus why each works, Meta policy pitfalls, and what to ask on the form."
 date: 2026-10-21
-updated: 2026-10-21
+updated: 2026-10-24
 author: patrick
 cluster: marketing-channels
 ---
@@ -205,6 +205,6 @@ Three to five live creatives is a good working number. That gives Meta enough op
 
 ## Want the ads, the calls, and the calendar handled for you?
 
-Writing good ads is learnable. Calling every lead within minutes while you are on a grinder is the part that breaks. Appointly Solutions runs the Meta ads from our own ad account, calls every homeowner within minutes, and books qualified estimates on your calendar for one flat fee per booked estimate, with no setup fee, no retainer, and one coating contractor per market. If you would rather run your own ads, the examples above are yours to use.
+Writing good ads is learnable. Calling every lead within a minute while you are on a grinder is the part that breaks. Appointly Solutions runs the Meta ads for you (and you own everything we build), texts and calls every homeowner within one minute, and books qualified estimates on your calendar for $125 to $175 per booked estimate, plus ad spend you fund at cost, with no setup fee, no retainer, and one coating contractor per market. If you would rather run your own ads, the examples above are yours to use.
 
 If you want to see how it works in your market, look at our [case studies](/case-studies) or [book a strategy call](https://client.getappointly.co/strategy-calendar).

@@ -24,7 +24,7 @@ export function StrategyCallCta({
               {heading}
             </h2>
             <p className="mt-5 text-base leading-relaxed text-white/75 md:text-lg">
-              We run the Meta ads, call every homeowner within minutes, qualify them, and book
+              We run the Meta ads, text and call every homeowner within one minute, qualify them, and book
               the estimate on your calendar. You show up and run it. We work with one floor
               coating contractor per market.
             </p>

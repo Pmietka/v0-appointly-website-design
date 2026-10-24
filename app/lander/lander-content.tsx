@@ -51,7 +51,7 @@ const BRING = [
    ─────────────────────────────────────────────────────────────────────────── */
 const FLOW = [
   { n: 1, Icon: Megaphone, label: "We run the ads", sub: "Built for your market" },
-  { n: 2, Icon: PhoneCall, label: "We call in 60 seconds", sub: "Before they cool off" },
+  { n: 2, Icon: PhoneCall, label: "Text and call in 1 minute", sub: "Before they cool off" },
   { n: 3, Icon: Filter, label: "We screen out the junk", sub: "Only book what you would book" },
   { n: 4, Icon: CalendarCheck, label: "We book your calendar", sub: "Confirmed times only" },
   { n: 5, Icon: Handshake, label: "You show up and close", sub: "We've done the rest" },
@@ -93,19 +93,19 @@ const WEEK = [
 const FAQ = [
   {
     q: "How does the pricing work?",
-    a: "One flat fee for each booked estimate that lands on your calendar. Nothing for leads that never book, and no monthly management fee. The exact per-appointment price depends on your market and job size, and we'll give it to you on the call.",
+    a: "Two costs. You fund your ad spend upfront at cost, with no markup and a spend report every week. Then you pay $125 to $175 for each booked estimate that lands on your calendar, set per client and invoiced separately. Nothing for leads that never book, no setup fee, and no monthly management fee.",
   },
   {
     q: "What counts as a booked appointment?",
-    a: "A verified homeowner in your service area who wants floor coating work and has agreed to an estimate time that fits your calendar. Not a raw lead or a form fill. An actual booked estimate.",
+    a: "A homeowner in your service area, qualified on intent (their project goal, the look and material they want, and a real timeline), who has agreed to an estimate time that fits your calendar. Not a raw lead or a form fill. An actual booked estimate.",
   },
   {
-    q: "What happens if a homeowner no-shows?",
-    a: "You get credited. If a confirmed homeowner doesn't show up, or the appointment turns out not to meet the qualification bar we agreed on, it doesn't count against you. If the job turns out too small to be worth your time, that one is on us too.",
+    q: "What happens if a homeowner no-shows or the appointment is bad?",
+    a: "You get credited automatically. A no-show is credited to your next appointment. After every estimate you grade the appointment in the Appointly app, and if you grade it a C and tell us what was wrong, like an unqualified homeowner or a service you don't offer, you don't pay for it. That's our appointment quality guarantee.",
   },
   {
     q: "What if an appointment doesn't close?",
-    a: "Not every estimate closes, and that's normal. Across our case studies, contractors close roughly 50 to 70% of what we book. We feed your close and no-show data back into targeting so the homeowners we book keep getting more qualified over time.",
+    a: "Not every estimate closes, and that's normal. Across all our clients, 97% of booked appointments show and contractors close 60% of them on average. We feed your close and no-show data back into targeting so the homeowners we book keep getting more qualified over time.",
   },
   {
     q: "How many appointments will I get?",
@@ -117,7 +117,7 @@ const FAQ = [
   },
   {
     q: "Who owns the ad account?",
-    a: "We do. We run the campaigns from our own Meta ad account and Business Manager, so you never create an account, hand over logins, or manage a campaign. Your brand, your calendar and your customers stay yours.",
+    a: "We run the campaigns in our Meta ad account and Business Manager, so you never create an account, hand over logins, or manage a campaign. You own everything we build for you: the campaigns, creative, audiences and every homeowner record. If you leave, it's still yours.",
   },
   {
     q: "What do I need to do?",
@@ -125,7 +125,7 @@ const FAQ = [
   },
   {
     q: "Are my appointments exclusive?",
-    a: "Yes. We only work with one contractor per market. The estimates we book are never shared with a local competitor.",
+    a: "Yes. We only work with one contractor per market, and it's written into your agreement. The estimates we book are never shared with a local competitor.",
   },
   {
     q: "Is there a long-term contract?",
@@ -275,9 +275,9 @@ function CallTranscript() {
         </div>
       </div>
       <figcaption>
-        This is every appointment, before it ever reaches your calendar. We call
-        in under a minute, qualify on the spot, and only book homeowners ready
-        for a real estimate.
+        This is every appointment, before it ever reaches your calendar. Jacob
+        texts and calls within one minute, qualifies on the spot, and only books
+        homeowners ready for a real estimate.
       </figcaption>
     </figure>
   );
@@ -492,8 +492,8 @@ export function LanderContent({ pixel }: { pixel?: React.ReactNode }) {
             The model, <span className="hl">in plain English.</span>
           </h2>
           <p className="sub">
-            One flat fee per booked estimate. Here&apos;s everything that comes
-            with it, so nothing on the call is a surprise.
+            Your ad spend at cost, plus a fee per booked estimate. Here&apos;s
+            everything that comes with it, so nothing on the call is a surprise.
           </p>
           <ModelCards />
 

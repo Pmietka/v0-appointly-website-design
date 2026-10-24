@@ -2,7 +2,7 @@
 seo_title: "Tax Refund Season Marketing for Floor Coating Companies"
 meta_description: "Yes, market garage floor coating in tax refund season. Filing opens in late January and most e-filed refunds arrive within 21 days, right as spring planning starts."
 date: 2026-10-07
-updated: 2026-10-07
+updated: 2026-10-24
 author: patrick
 cluster: marketing-channels
 situation: tax-refund
@@ -120,6 +120,6 @@ Less than cold markets do. Florida, the Gulf Coast, and the Carolinas book floor
 
 Refund season rewards the floor coating company with ads, a landing page, and a fast phone in place by early February. If you already have someone calling every lead inside a minute, a booked appointment service may not add much.
 
-If you would rather not run the phone in February, Appointly runs the Meta ads, calls every homeowner within minutes, educates and qualifies them, and books confirmed estimates on your calendar, with one contractor per market.
+If you would rather not run the phone in February, Appointly runs the Meta ads, texts and calls every homeowner within one minute, educates and qualifies them, and books confirmed estimates on your calendar, with one contractor per market.
 
 [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, when your spring install window starts, and how many estimates a week your crew can take from February through April.

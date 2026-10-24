@@ -2,7 +2,7 @@
 seo_title: "Floor Coating Ads Getting Clicks but No Leads? Fix This"
 meta_description: "Clicks but no leads means the break is after the click: a slow page, a page that doesn't match the ad, a broken form, or broken tracking. Test on your phone first."
 date: 2026-10-08
-updated: 2026-10-08
+updated: 2026-10-24
 author: jacob
 cluster: marketing-channels
 situation: ads-not-working
@@ -111,7 +111,7 @@ It will usually raise the lead count, but the leads will be weaker, since the fo
 
 ## Want the page, the form, and the calls handled for you?
 
-Appointly books estimates for floor coating contractors only. We run the Meta ads from our own ad account, send homeowners to a landing page built for floor coating, call every lead within minutes, educate and qualify them, and book a confirmed estimate on your calendar. You never set up an ad account or touch a form integration, and we work with one floor coating contractor per market.
+Appointly books estimates for floor coating contractors only. We run the Meta ads for you (and you own everything we build), send homeowners to a landing page built for floor coating, text and call every lead within one minute, educate and qualify them, and book a confirmed estimate on your calendar. You never set up an ad account or touch a form integration, and we work with one floor coating contractor per market.
 
 If your problem is one broken form field and you like running your own ads, fix it with the checklist above. You may not need us.
 

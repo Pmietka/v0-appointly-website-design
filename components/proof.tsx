@@ -213,7 +213,7 @@ export function TrustRow() {
       <div className="ttext">
         <Stars />
         <span className="tline">
-          50 to 70% close rates on booked appointments. <Link href="/case-studies">See the case studies</Link>
+          97% show rate and a 60% average close rate across all our clients. <Link href="/case-studies">See the case studies</Link>
         </span>
       </div>
     </div>

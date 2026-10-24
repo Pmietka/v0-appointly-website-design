@@ -2,7 +2,7 @@
 seo_title: "How Many Floor Coating Jobs Can One Crew Do a Month?"
 meta_description: "Capacity math for floor coating contractors: how many garage floors one crew installs a month, how many estimates that takes, and how to size marketing to it."
 date: 2026-09-02
-updated: 2026-09-11
+updated: 2026-10-24
 author: jacob
 cluster: operations
 ---
@@ -112,6 +112,6 @@ A floor coating contractor should add a second crew when the first crew has inst
 
 ## Size the pipeline to the crew
 
-One trained coating crew can install 12 to 16 garage floors a month and produce $42,000 to $56,000 in revenue. Getting there takes roughly 21 to 42 booked estimates a month on a schedule the crew can actually run. If you want them on your calendar without touching the ad account or the phone, see how Appointly books [floor coating estimates](/floor-coating-leads) for one flat fee per appointment.
+One trained coating crew can install 12 to 16 garage floors a month and produce $42,000 to $56,000 in revenue. Getting there takes roughly 21 to 42 booked estimates a month on a schedule the crew can actually run. If you want them on your calendar without touching the ad account or the phone, see how Appointly books [floor coating estimates](/floor-coating-leads) for $125 to $175 per appointment, plus ad spend you fund at cost.
 
 To run the worksheet together, [book a strategy call](https://client.getappointly.co/strategy-calendar) and we will size a campaign to your crew.

@@ -2,7 +2,7 @@
 seo_title: "Why Floor Coating Leads Don't Answer the Phone"
 meta_description: "Most floor coating leads go silent because the first call came too late. About 90% answer within a minute. Then check the lead form, the ad, and your caller ID."
 date: 2026-10-08
-updated: 2026-10-08
+updated: 2026-10-24
 author: jacob
 cluster: sales
 situation: hates-chasing
@@ -115,4 +115,4 @@ Yes. If your number is unknown, from a different area code, or flagged as possib
 
 Most silent leads are not bad leads. They are leads that waited too long. If you are on a floor all day, you cannot call in a minute, and that gap is where the jobs go.
 
-Appointly runs the Meta ads to a landing page, calls every homeowner within minutes, educates and qualifies them, and books a confirmed estimate on your calendar. We work with one floor coating contractor per market. If you already have someone calling your leads within a minute and booking them, you probably do not need us. If not, [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, your service area, how fast your leads are getting called today, and how many estimates a week your crew can run.
+Appointly runs the Meta ads to a landing page, texts and calls every homeowner within one minute, educates and qualifies them, and books a confirmed estimate on your calendar. We work with one floor coating contractor per market. If you already have someone calling your leads within a minute and booking them, you probably do not need us. If not, [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, your service area, how fast your leads are getting called today, and how many estimates a week your crew can run.

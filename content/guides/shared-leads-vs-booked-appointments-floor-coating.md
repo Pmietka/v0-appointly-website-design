@@ -2,7 +2,7 @@
 seo_title: "Shared Leads vs Booked Appointments for Floor Coating"
 meta_description: "Shared leads close at 5 to 12%, so one floor takes 8 to 20 leads. Booked estimates closing at 40 to 50% take 2 to 2.5. Example math on units and owner hours."
 date: 2026-10-07
-updated: 2026-10-07
+updated: 2026-10-24
 author: patrick
 cluster: economics
 situation: shared-leads
@@ -132,6 +132,6 @@ Yes. Many owners use booked appointments as the main source and keep a small sha
 
 The fair comparison is cost per installed floor plus your hours. Run your own invoices through the formula and tables above before you decide.
 
-Appointly runs Meta ads from its own ad account, calls every homeowner within minutes, educates and qualifies them, and books confirmed floor coating estimates on your calendar. One contractor per market, and appointments are never shared or resold.
+Appointly runs Meta ads for you (and you own everything it builds), texts and calls every homeowner within one minute, educates and qualifies them, and books confirmed floor coating estimates on your calendar. One contractor per market, and appointments are never shared or resold.
 
 [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, how many estimates a week your crew can run, and how many shared leads you are buying today for each floor you install.

@@ -2,7 +2,7 @@
 seo_title: "When Can You Quit Your Job to Do Floor Coating Full Time?"
 meta_description: "Quit when you book estimates every week from a channel you control, your install is repeatable, and savings cover a slow stretch. Not when friends stop calling."
 date: 2026-10-08
-updated: 2026-10-08
+updated: 2026-10-24
 author: patrick
 cluster: operations
 situation: just-launched
@@ -127,6 +127,6 @@ Quitting after a strong month of referrals. Referrals are real, but you cannot t
 
 ## Ready to prove the lead flow before you quit?
 
-The hardest part of going full time is having estimates on the calendar every week without being on the phone during your day job. Appointly runs the Meta ads from its own ad account, calls every homeowner within minutes, educates and qualifies them, and books the estimate on your calendar at a time that fits your route. We work with one floor coating contractor per market.
+The hardest part of going full time is having estimates on the calendar every week without being on the phone during your day job. Appointly runs the Meta ads for you (and you own everything it builds), texts and calls every homeowner within one minute, educates and qualifies them, and books the estimate on your calendar at a time that fits your route. We work with one floor coating contractor per market.
 
 We are not the right fit if you can only run estimates on weekends, or if your install is not repeatable yet. Fix those first. If you can run weekday estimates and want to see whether steady flow is there before you give notice, [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, your service area, and how many estimates a week you can realistically run around your current schedule.

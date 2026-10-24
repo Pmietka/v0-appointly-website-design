@@ -2,7 +2,7 @@
 seo_title: "Spring Marketing Plan for Floor Coating Contractors"
 meta_description: "Spring is peak season for floor coating contractors. A month-by-month plan to fill your calendar with booked estimates before the competition gets there."
 date: 2026-02-24
-updated: 2026-10-13
+updated: 2026-10-24
 author: patrick
 cluster: marketing-channels
 ---
@@ -81,7 +81,7 @@ Here's the part that makes or breaks spring: an ad that generates a lead is wort
 
 Get your booking engine ready before peak, not during it. The goal is appointments landing on your calendar by late February or early March, right as demand starts climbing.
 
-This is where we fit for many contractors. Rather than buying raw leads and chasing them yourself in the busiest weeks of the year, you have a system that runs the Meta ads, calls the homeowner within about a minute, and books the estimate into a time that works for your crew. You pay one flat fee per booked appointment, with no setup fee or retainer, and we work with one contractor per market.
+This is where we fit for many contractors. Rather than buying raw leads and chasing them yourself in the busiest weeks of the year, you have a system that runs the Meta ads, calls the homeowner within about a minute, and books the estimate into a time that works for your crew. You pay $125 to $175 per booked appointment, plus ad spend you fund at cost, with no setup fee or retainer, and we work with one contractor per market.
 
 Set your peak-season targets now. March and April are your big months. Decide how many booked estimates per week your crew can handle and set the volume to match.
 

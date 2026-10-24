@@ -2,7 +2,7 @@
 seo_title: "How to Expand a Floor Coating Business Into a New Town"
 meta_description: "Pick a town inside a drive you can repeat, install a few floors there first, run separate ads with local photos, and group installs by area before you go wider."
 date: 2026-10-08
-updated: 2026-10-08
+updated: 2026-10-24
 author: patrick
 cluster: marketing-channels
 situation: growing
@@ -117,4 +117,4 @@ Not always. Garage floor coating generally sells for $5 to $8 per square foot, w
 
 Expanding works best when the estimates in the new town are booked on the days you are already there. That takes ads built for the area, a fast first call, and a calendar that groups homeowners by location.
 
-Appointly runs the Meta ads from its own ad account, calls every homeowner within minutes, educates and qualifies them, and books confirmed estimates on your calendar at times that fit your route. We work with one floor coating contractor per market, so if another contractor already works with us in the town you want, we will tell you that up front. If your home market is not full yet, start there. [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your home market and the new town are open, how far your crew can realistically drive, and how many estimates a week each area can feed.
+Appointly runs the Meta ads for you (and you own everything it builds), texts and calls every homeowner within one minute, educates and qualifies them, and books confirmed estimates on your calendar at times that fit your route. We work with one floor coating contractor per market, so if another contractor already works with us in the town you want, we will tell you that up front. If your home market is not full yet, start there. [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your home market and the new town are open, how far your crew can realistically drive, and how many estimates a week each area can feed.

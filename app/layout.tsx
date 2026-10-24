@@ -94,7 +94,7 @@ export default function RootLayout({
                 },
                 image: "https://getappointly.co/images/appointly-og.png",
                 description:
-                  "Appointly Solutions is a pay per appointment Meta ads agency that books estimates for garage floor coating and concrete coating contractors. Floor coating is the only trade we work in. We run the Meta campaigns, contact every homeowner within minutes, qualify them, and book the estimate onto the contractor's calendar for one flat fee per booked estimate, with no setup fee and one contractor per city.",
+                  "Appointly Solutions is a pay per appointment Meta ads agency that books estimates for garage floor coating and concrete coating contractors. Floor coating is the only trade we work in. We run the Meta campaigns, text and call every homeowner within one minute, qualify them on intent, and book the estimate onto the contractor's calendar. The contractor funds ad spend at cost with no markup and pays $125 to $175 per booked appointment, with no setup fee and one contractor per market. Contractors grade every appointment after the estimate, and an appointment graded C is not paid for.",
                 foundingDate: "2025-11",
                 founder: [personSchema(authors.patrick), personSchema(authors.jacob)],
                 address: {
@@ -120,7 +120,7 @@ export default function RootLayout({
                 url: "https://getappointly.co",
                 logo: "https://getappointly.co/images/appointly-logo-mark.png",
                 description:
-                  "Appointly Solutions is a pay per appointment Meta ads agency that books estimates for garage floor coating and concrete coating contractors. Floor coating is the only trade we work in. We hit speed to lead within minutes and book estimates straight onto your calendar for one flat fee per booked estimate.",
+                  "Appointly Solutions is a pay per appointment Meta ads agency that books estimates for garage floor coating and concrete coating contractors. Floor coating is the only trade we work in. Every lead gets a text and a call within one minute, and estimates are booked straight onto the contractor's calendar. The contractor funds ad spend at cost and pays $125 to $175 per booked appointment.",
                 parentOrganization: { "@id": "https://getappointly.co/#organization" },
                 address: {
                   "@type": "PostalAddress",
@@ -130,7 +130,7 @@ export default function RootLayout({
                 },
                 sameAs: [GOOGLE_BUSINESS_PROFILE],
                 areaServed: ["US", "CA"],
-                priceRange: "$$",
+                priceRange: "$125 to $175 per booked appointment, plus client funded ad spend at cost",
               },
               {
                 "@context": "https://schema.org",

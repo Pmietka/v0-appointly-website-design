@@ -2,7 +2,7 @@
 seo_title: "How to Close More Floor Coating Estimates"
 meta_description: "A simple, repeatable in-garage sales process for floor coating contractors: qualify the slab, present good/better/best, handle objections, and ask for the job."
 date: 2026-03-17
-updated: 2026-09-11
+updated: 2026-10-24
 author: jacob
 cluster: sales
 ---
@@ -129,4 +129,4 @@ Confirm at booking, send a reminder 24 hours out and another 1 hour out, and hav
 
 Who you're standing in front of makes all of this easier. When you're chasing cold leads you dug up yourself, every estimate feels like a fight and you close scared. When the homeowner already raised their hand, got a call within a minute, and booked a time expecting you, closing isn't chasing. It's just running your process.
 
-That's what we do at Appointly: we run the ads, call every lead within about a minute, and book the estimate on your calendar, and you pay one flat fee per booked appointment. See how [appointment setting for contractors](/appointment-setting-for-contractors) works, then [book a strategy call](https://client.getappointly.co/strategy-calendar) and we'll talk through your market.
+That's what we do at Appointly: we run the ads, text and call every lead within one minute, and book the estimate on your calendar, and you pay $125 to $175 per booked appointment, plus ad spend you fund at cost. See how [appointment setting for contractors](/appointment-setting-for-contractors) works, then [book a strategy call](https://client.getappointly.co/strategy-calendar) and we'll talk through your market.

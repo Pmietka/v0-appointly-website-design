@@ -2,7 +2,7 @@
 seo_title: "Garage Coating Franchise Not Getting Enough Leads? Fix This"
 meta_description: "If your garage coating franchise isn't getting enough leads, first check if it is volume, speed, or booking. About 90% of homeowners answer a call within a minute."
 date: 2026-10-07
-updated: 2026-10-07
+updated: 2026-10-24
 author: jacob
 cluster: marketing-channels
 situation: franchise
@@ -116,7 +116,7 @@ Not inherently. A franchise lead and an independent epoxy or concrete coating co
 
 ## Want booked estimates on top of the brand fund?
 
-Appointly books confirmed estimates for floor coating contractors, including franchise owners whose agreements allow outside lead sources. We run Meta ads from our own ad account, call every lead within minutes, educate and qualify the homeowner, and book estimates that fit your route. We work with one floor coating contractor per market, and appointments are never shared or resold.
+Appointly books confirmed estimates for floor coating contractors, including franchise owners whose agreements allow outside lead sources. We run Meta ads for you (and you own everything we build), text and call every lead within one minute, educate and qualify the homeowner, and book estimates that fit your route. We work with one floor coating contractor per market, and appointments are never shared or resold.
 
 We are not the right fit if your agreement does not allow outside vendors or locally branded ads, so check that first.
 

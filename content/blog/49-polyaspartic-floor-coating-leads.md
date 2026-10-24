@@ -2,7 +2,7 @@
 seo_title: "Polyaspartic Floor Coating Leads: Ads, Offers, and Costs"
 meta_description: "How to get polyaspartic floor coating leads by selling the one day install: ad creative, targeting, qualifying premium buyers, pricing vs epoxy, and lead costs."
 date: 2026-10-21
-updated: 2026-10-21
+updated: 2026-10-24
 author: patrick
 cluster: marketing-channels
 ---
@@ -172,4 +172,4 @@ Ask about timeline, sun exposure, how they use the garage, what is on the floor 
 
 ## Want the one day floor sold before you arrive?
 
-Appointly runs Meta ads for floor coating contractors, calls every homeowner within minutes, explains the system and the price range, and books the estimate on your calendar. You pay one flat fee per booked estimate, set per market, with one contractor per area. See how we book [epoxy and polyaspartic estimates](/epoxy-flooring-leads), or [book a strategy call](https://client.getappointly.co/strategy-calendar) and we will look at your market and your crew's capacity for one day installs.
+Appointly runs Meta ads for floor coating contractors, texts and calls every homeowner within one minute, explains the system and the price range, and books the estimate on your calendar. You pay $125 to $175 per booked estimate, set per client, plus ad spend you fund at cost, with one contractor per market. See how we book [epoxy and polyaspartic estimates](/epoxy-flooring-leads), or [book a strategy call](https://client.getappointly.co/strategy-calendar) and we will look at your market and your crew's capacity for one day installs.

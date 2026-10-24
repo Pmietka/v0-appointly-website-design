@@ -2,7 +2,7 @@
 seo_title: "Why Your Garage Floor Coating Estimates Aren't Closing"
 meta_description: "Floor coating estimates fail before you arrive (lead source, no first call, wrong people at the table) or at the table (price first, one option, no ask). Find which."
 date: 2026-10-08
-updated: 2026-10-08
+updated: 2026-10-24
 author: jacob
 cluster: sales
 situation: low-close-rate
@@ -117,7 +117,7 @@ One month, or about 20 estimates if a month gives you fewer. Record lead source,
 
 ## Want estimates that start warm?
 
-If your month of tracking points to the "before" half, that is the part Appointly handles. We run the Meta ads from our own ad account, call every lead within minutes, educate the homeowner on the product on that first call, qualify them, and book a confirmed estimate on your calendar at a time that fits your route. We work with one floor coating contractor per market.
+If your month of tracking points to the "before" half, that is the part Appointly handles. We run the Meta ads for you (and you own everything we build), text and call every lead within one minute, educate the homeowner on the product on that first call, qualify them, and book a confirmed estimate on your calendar at a time that fits your route. We work with one floor coating contractor per market.
 
 If your sheet points to the "at the table" half, more estimates will not fix it. Fix the presentation first, then come talk to us.
 

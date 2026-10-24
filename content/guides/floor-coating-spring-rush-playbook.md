@@ -2,7 +2,7 @@
 seo_title: "Floor Coating Spring Rush Playbook: Keep Every Lead"
 meta_description: "Handle the floor coating spring rush by calling leads inside a minute, capping how far out estimates book, and reminding every one. About 95% show with reminders."
 date: 2026-10-07
-updated: 2026-10-07
+updated: 2026-10-24
 author: jacob
 cluster: operations
 situation: spring-rush
@@ -147,6 +147,6 @@ Book the install with a real date and a deposit, and be honest about the wait. M
 
 The spring rush rewards the floor coating company that answers fast, books close in, reminds every homeowner, and prices install days as limited inventory. You can build all of that yourself. If you already call every lead inside a minute and run a full reminder system, you may not need outside help.
 
-If you would rather spend spring grinding floors, Appointly runs the Meta ads, calls every homeowner within minutes, and educates and qualifies them, and books confirmed estimates at a pace your crew can handle, with every estimate reminded and one contractor per market.
+If you would rather spend spring grinding floors, Appointly runs the Meta ads, texts and calls every homeowner within one minute, and educates and qualifies them, and books confirmed estimates at a pace your crew can handle, with every estimate reminded and one contractor per market.
 
 [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, how many estimates a week fit your crew this spring, and which days to hold for estimates around your installs.

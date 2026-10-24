@@ -2,7 +2,7 @@
 seo_title: "Garage Coating Franchise vs Going Independent"
 meta_description: "Thinking about a garage floor coating franchise? What a franchise actually gives you, what it costs over time, which FDD items to read, and when going independent makes more sense."
 date: 2026-09-30
-updated: 2026-10-13
+updated: 2026-10-24
 author: patrick
 cluster: economics
 ---
@@ -151,6 +151,6 @@ Focus on Items 5 and 6 for fees, Item 7 for the startup investment, Item 11 for 
 
 ## Whatever you choose, fill the calendar first
 
-Appointly Solutions books estimates for floor coating contractors. We run the Meta ads from our own ad account, call every homeowner within minutes, qualify them, and put a confirmed estimate on your calendar. We work with one contractor per market. If you own a franchise location, check that your agreement allows outside local marketing first.
+Appointly Solutions books estimates for floor coating contractors. We run the Meta ads for you (and you own everything we build), text and call every homeowner within one minute, qualify them, and put a confirmed estimate on your calendar. We work with one contractor per market. If you own a franchise location, check that your agreement allows outside local marketing first.
 
 [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open and what a booked estimate costs in your area.

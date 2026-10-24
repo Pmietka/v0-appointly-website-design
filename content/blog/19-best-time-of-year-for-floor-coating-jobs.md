@@ -2,7 +2,7 @@
 seo_title: "Best Time of Year for Floor Coating Jobs"
 meta_description: "Spring through fall is peak season for floor coating jobs. See the seasonal demand curve, why the South books year round, and how to stay booked in winter."
 date: 2026-03-24
-updated: 2026-10-13
+updated: 2026-10-24
 author: patrick
 cluster: operations
 ---
@@ -113,6 +113,6 @@ Hire for the spring rush only if you have winter work lined up to keep the extra
 
 ## Keep your calendar full in every season
 
-Seasonality is real, but a feast-or-famine year is a choice. Generate booked estimates every month, build backlog during the surge, extend your install season with the right chemistry, and chase the commercial and heated-space work that fills the cold months. The hardest part is doing that consistently during peak season, when you are too busy to think about marketing. That is what [booked floor coating estimates](/floor-coating-leads) from Appointly handle: we run the ads, contact every lead within about a minute, and book the estimate on your calendar. You pay one flat fee per booked estimate, with no setup fee or retainer.
+Seasonality is real, but a feast-or-famine year is a choice. Generate booked estimates every month, build backlog during the surge, extend your install season with the right chemistry, and chase the commercial and heated-space work that fills the cold months. The hardest part is doing that consistently during peak season, when you are too busy to think about marketing. That is what [booked floor coating estimates](/floor-coating-leads) from Appointly handle: we run the ads, text and call every lead within one minute, and book the estimate on your calendar. You pay $125 to $175 per booked estimate, plus ad spend you fund at cost, with no setup fee or retainer.
 
 If you want the pipeline full when fall arrives, [book a strategy call](https://client.getappointly.co/strategy-calendar) and we will look at how your market moves through the year.

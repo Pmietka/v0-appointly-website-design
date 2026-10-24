@@ -2,7 +2,7 @@
 seo_title: "Google Local Services Ads for Floor Coating Contractors"
 meta_description: "How Google Local Services Ads work for floor coating and epoxy contractors: pay per lead, the Google Verified badge, screening, credits, costs, and speed."
 date: 2026-10-21
-updated: 2026-10-21
+updated: 2026-10-24
 author: patrick
 cluster: marketing-channels
 ---
@@ -158,4 +158,4 @@ They do different jobs. LSA catches homeowners already searching for a provider,
 
 ## When search demand is not enough
 
-LSA is a good way to catch the homeowners in your area who are already searching. The limit is that there are only so many of them each week, and every one needs a live answer. If you need more estimates than search can supply and nobody on your team can be on the phone all day, that is the gap Appointly Solutions fills. We run the Meta ads, call every lead within minutes, qualify the homeowner, and book the estimate on your calendar, for one flat fee per booked estimate and with one coating contractor per market. See [how it works](/how-it-works), or [book a strategy call](https://client.getappointly.co/strategy-calendar) to check whether your market is open.
+LSA is a good way to catch the homeowners in your area who are already searching. The limit is that there are only so many of them each week, and every one needs a live answer. If you need more estimates than search can supply and nobody on your team can be on the phone all day, that is the gap Appointly Solutions fills. We run the Meta ads, text and call every lead within one minute, qualify the homeowner, and book the estimate on your calendar, for $125 to $175 per booked estimate, plus ad spend you fund at cost, with one coating contractor per market. See [how it works](/how-it-works), or [book a strategy call](https://client.getappointly.co/strategy-calendar) to check whether your market is open.

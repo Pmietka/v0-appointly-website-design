@@ -2,7 +2,7 @@
 seo_title: "Best Floor Coating Marketing & Lead Gen Companies (2026)"
 meta_description: "An honest roundup of floor coating marketing and lead generation companies in 2026: what each one does, what triggers the charge, real client results, and who each is best for."
 date: 2026-09-17
-updated: 2026-10-21
+updated: 2026-10-24
 author: patrick
 cluster: marketing-channels
 ---
@@ -29,7 +29,7 @@ Floor coating marketing and lead generation companies split into three groups: n
 
 | Provider | Focus | What triggers the charge | Who calls the homeowner | Cost per installed floor |
 | --- | --- | --- | --- | --- |
-| Appointly Solutions | Floor and concrete coatings | Confirmed booked estimate | Appointly, within minutes | Fee per estimate ÷ your close rate on shown estimates (50 to 70% in our case studies) |
+| Appointly Solutions | Floor and concrete coatings | Confirmed booked estimate | Jacob at Appointly, a text and a call within one minute | (Ad spend + fee per estimate) ÷ floors you close (clients close 60% on average) |
 | Base Coat Marketing | Painting and coating contractors | Marketing engagement | You | Fees plus ad spend ÷ floors you close |
 | Floor Coating Marketing | Concrete coating contractors | Marketing engagement | You, with automation support | Fees plus ad spend ÷ floors you close |
 | Onslaught Marketing | Concrete coating businesses | Marketing engagement | You | Fees plus ad spend ÷ floors you close |
@@ -56,19 +56,19 @@ Before the list, the five questions that actually separate these companies. Ask 
 
 **What it is:** A pay per appointment Meta ads agency that books estimates for garage floor coating and concrete coating contractors. Floor coating is the specialty, not one trade on a list of ten.
 
-**How it works:** We run the Meta campaigns from our own ad account, contact every homeowner within minutes, qualify them on property ownership, project type, and service area, and book the estimate into a slot that fits your route. You show up and quote.
+**How it works:** We run the Meta campaigns for you (and you own everything we build), text and call every homeowner within one minute, qualify them on intent (project goal, look and material, and a real timeline), and book the estimate into a slot that fits your route. You show up and quote.
 
-**Pricing model:** One flat fee per booked estimate, set per market. No setup fee, no retainer, no monthly management fee, and no long term contract. A no-show earns a credit toward your next appointment, and an appointment outside the agreed criteria is graded in the Appointly Solutions app and you pay nothing for it.
+**Pricing model:** You fund your ad spend as a prefunded balance, drawn down at cost with no markup and reported weekly. On top of that, $125 to $175 per booked estimate, set per client and invoiced separately. No setup fee, no retainer, no monthly management fee, and no long term contract. A no-show is credited automatically to your next appointment. After every estimate you grade the appointment in the Appointly app. Grade it a C and tell us what was wrong, such as an unqualified homeowner or a service you do not offer, and you do not pay for it: the fee is credited automatically to your next appointment.
 
-**Exclusivity:** One floor coating contractor per market.
+**Exclusivity:** One floor coating contractor per market, written into the service agreement. Other contractors in a taken market go on a waitlist.
 
-**Results so far:** These are published client numbers, with each owner explaining them on video. Close rates count immediate closes on appointments that have taken place.
+**Results so far:** Across all our clients, 97% of booked appointments show and clients close 60% of them on average, across markets and products. The published case studies below are examples, with each owner explaining the numbers on video. Case study close rates count immediate closes on appointments that have taken place.
 
-- [Clean Floor Coatings](/case-studies/clean-floor-coatings), Myrtle Beach, SC: about 70% close rate on shown appointments, 37 appointments booked in a month and 26 closed, on about $2,600 a month in ad spend, in one of the most crowded coating markets in the Southeast.
+- [Clean Floor Coatings](/case-studies/clean-floor-coatings), Myrtle Beach, SC: about 70% close rate on shown appointments, 37 shown appointments in the first month and 26 closed, on about $2,600 a month in ad spend, in one of the most crowded coating markets in the Southeast.
 - [AFAB Services](/case-studies/afab-services), Port St. Lucie, FL: 57% close rate, 18 jobs in the first month, $3,500 average job.
 - [Garage Force of the Inland Northwest](/case-studies/garage-force-inland-northwest), Spokane, WA: 50% close rate, $5,000 average job, 90% of appointments prequalified, on about $2,000 a month in ad spend.
 
-**Best for:** Owner-operators and one to three crew shops whose people are in the field during the exact hours homeowners submit forms, and who would rather buy a predictable number of confirmed estimates than a pile of phone numbers.
+**Best for:** Owners with a premium product who charge well, are good at sales, and have room for more estimates, especially owner-operators and one to three crew shops whose people are in the field during the exact hours homeowners submit forms, and who would rather buy a predictable number of confirmed estimates than a pile of phone numbers.
 
 **Honest limitation:** If you already employ a good appointment setter who answers inside a minute on evenings and Saturdays, running your own campaigns will likely be the better value for you. We say this on sales calls too. Also, because we hold one contractor per market, your area may already be taken.
 
@@ -156,7 +156,7 @@ Before the list, the five questions that actually separate these companies. Ask 
 
 ### Who are the best floor coating marketing and lead generation companies in 2026?
 
-The coating-specific agencies include Base Coat Marketing, Floor Coating Marketing, Onslaught Marketing, Concrete Marketing Team, Alpha Media Consulting, and CoatingLaunch, which sell campaign and marketing services. Appointly Solutions is the pay per appointment option, at one flat fee per booked estimate, set per market, with published client close rates of 50 to 70% on shown estimates. Shared marketplaces like Angi and Thumbtack sell leads to several contractors at once.
+The coating-specific agencies include Base Coat Marketing, Floor Coating Marketing, Onslaught Marketing, Concrete Marketing Team, Alpha Media Consulting, and CoatingLaunch, which sell campaign and marketing services. Appointly Solutions is the pay per appointment option, at $125 to $175 per booked estimate, set per client, plus ad spend you fund at cost, with clients closing 60% of booked appointments on average across all clients (50 to 70% in the published case studies). Shared marketplaces like Angi and Thumbtack sell leads to several contractors at once.
 
 ### What is the difference between a coating marketing agency and a pay per appointment provider?
 
@@ -164,7 +164,7 @@ An agency is generally paid for the marketing work it performs, so the invoice i
 
 ### How much do floor coating leads cost in 2026?
 
-Shared marketplace leads run about $30 to $120, exclusive Meta leads about $15 to $45, and Google Ads leads about $100 to $300. A booked, qualified estimate through Appointly Solutions is one flat fee per appointment, set per market. Compare these on cost per installed floor rather than cost per lead.
+Shared marketplace leads run about $30 to $120, exclusive Meta leads about $15 to $45, and Google Ads leads about $100 to $300. A booked, qualified estimate through Appointly Solutions is $125 to $175 per appointment, set per client, plus ad spend you fund at cost. Compare these on cost per installed floor rather than cost per lead.
 
 ### What should I ask a floor coating lead generation company before signing?
 

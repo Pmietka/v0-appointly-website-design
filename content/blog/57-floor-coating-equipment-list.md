@@ -2,7 +2,7 @@
 seo_title: "Floor Coating Equipment List: What to Buy First (2026)"
 meta_description: "A complete floor coating equipment list by category, with typical cost ranges, the best grinder setup for garage floors, OSHA silica rules, and buy vs rent vs used."
 date: 2026-10-21
-updated: 2026-10-21
+updated: 2026-10-24
 author: patrick
 cluster: operations
 ---
@@ -145,4 +145,4 @@ At minimum, a concrete moisture meter used on every slab, with the reading writt
 
 Equipment only pays for itself on a slab. A grinder parked in the trailer on a Tuesday is the most expensive thing you own. If you are still building to two or three floors a week, the [side hustle to full time guide](/guides/side-hustle-to-full-time-floor-coating) shows how to work out how many estimates that takes.
 
-When you are ready for steady estimates, Appointly Solutions runs the Meta ads, calls every homeowner within minutes, qualifies them, and books the estimate on your calendar for one flat fee per booked estimate, with one floor coating contractor per market. See [how it works](/how-it-works), or [book a strategy call](https://client.getappointly.co/strategy-calendar) to check whether your market is open.
+When you are ready for steady estimates, Appointly Solutions runs the Meta ads, texts and calls every homeowner within one minute, qualifies them, and books the estimate on your calendar for $125 to $175 per booked estimate, plus ad spend you fund at cost, with one floor coating contractor per market. See [how it works](/how-it-works), or [book a strategy call](https://client.getappointly.co/strategy-calendar) to check whether your market is open.

@@ -2,7 +2,7 @@
 seo_title: "Get Floor Coating Jobs Without Waiting Months"
 meta_description: "Get more floor coating jobs without waiting months on slow marketing. Compare your Google profile, Meta ads, and a done-for-you booked-estimate system."
 date: 2025-12-09
-updated: 2026-10-13
+updated: 2026-10-24
 author: patrick
 cluster: marketing-channels
 ---
@@ -21,7 +21,7 @@ The fastest way to get floor coating jobs without waiting months is to buy deman
 - Meta ads put your floors in front of homeowners the week they launch, but a lead that sits for an hour is usually gone.
 - Call a lead within one minute and about 90% of homeowners answer, and 60 to 70% of leads should become booked estimates.
 - A website cleanup and a complete Google Business Profile are one-time jobs that make estimates easier to close, not channels that fill the calendar.
-- A booked-appointment model charges one flat fee per estimate that lands on your calendar and no fee for leads that never book.
+- A booked-appointment model charges $125 to $175 per estimate that lands on your calendar, plus ad spend you fund at cost, with no fee for leads that never book.
 
 ## Why does slow marketing take months to pay off?
 
@@ -82,14 +82,14 @@ The booked-appointment model solves the hard half for you: someone else generate
 1. Meta ads put your floors in front of homeowners in your service area.
 2. A calling team contacts every lead immediately, before they shop other coating crews.
 3. The homeowner is qualified on the phone and booked into a slot that fits your route.
-4. You pay one flat fee for each booked estimate that lands on your calendar, with no setup fee or retainer.
+4. You pay $125 to $175 for each booked estimate that lands on your calendar, plus ad spend you fund at cost, with no setup fee or retainer.
 5. One contractor per market, so the demand is yours alone.
 
 You're not buying a list of names. You're buying confirmed estimates. You open your calendar, see the appointments, and go quote floors.
 
 | | Open-ended agency marketing | Run your own Meta ads | Google Business Profile | Booked appointments |
 |---|---|---|---|---|
-| Cost | A monthly bill, indefinitely | Ad spend plus your time | One-time setup, light upkeep | One flat fee per booked estimate |
+| Cost | A monthly bill, indefinitely | Ad spend plus your time | One-time setup, light upkeep | $125 to $175 per booked estimate, plus ad spend you fund at cost |
 | Timeline | 6 to 12 months before anything happens | Leads in days | A trust asset you can build now | Estimates on the calendar fast |
 | Results | Uncertain, depends on competition | Real demand, but you catch and book every lead | Social proof that helps close | Confirmed estimates, exclusive in your market |
 | Your workload | Low control, high cost | A second job | An hour a week | Show up and quote |
@@ -145,6 +145,6 @@ No. With a done-for-you booked-appointment service, the provider generates the l
 
 ## Get estimates on the calendar this month
 
-If you'd rather quote floors than wait a year for an agency to maybe deliver, [booked floor coating estimates](/floor-coating-leads) put you in front of homeowners who expect you, with one flat fee per booked estimate and no setup fee or retainer. Set up your website and Google profile once, and let them close what the calendar brings.
+If you'd rather quote floors than wait a year for an agency to maybe deliver, [booked floor coating estimates](/floor-coating-leads) put you in front of homeowners who expect you, with a fee of $125 to $175 per booked estimate, plus ad spend you fund at cost, with no setup fee or retainer. Set up your website and Google profile once, and let them close what the calendar brings.
 
 [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we'll walk through your market, your calendar, and how many estimates a week make sense. One contractor per market, so the first call also tells you whether your area is still open.

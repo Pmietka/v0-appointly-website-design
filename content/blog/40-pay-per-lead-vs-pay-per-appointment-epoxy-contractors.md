@@ -2,7 +2,7 @@
 seo_title: "Pay Per Lead vs Pay Per Appointment for Epoxy Contractors"
 meta_description: "Pay per lead bills you for phone numbers. Pay per appointment bills you for confirmed estimates. Which pricing model fits an epoxy coating business, and why."
 date: 2026-09-17
-updated: 2026-10-13
+updated: 2026-10-24
 author: patrick
 cluster: economics
 ---
@@ -37,7 +37,7 @@ The model is simple and it is a perfectly good deal under one specific condition
 
 You agree a price per booked estimate. The provider runs the campaigns, calls every lead, qualifies the homeowner, and books a time onto your calendar. You are invoiced the appointment fee when an estimate is booked.
 
-Appointly prices this as one flat fee per booked estimate, set per market. Every appointment is vetted before it reaches you: the homeowner owns the property, wants coating work, sits inside your service area, and has agreed to a time that fits your route. A no-show earns a credit toward your next appointment, and an appointment that misses those criteria is graded in the Appointly Solutions app and you pay nothing for it.
+Appointly prices this as $125 to $175 per booked estimate, set per client, invoiced separately from ad spend, which you fund at cost with no markup. Before booking, every homeowner is qualified on intent: the project goal, the look and material they want, and a real timeline. What decides whether you pay comes after the estimate. After every estimate you grade the appointment in the Appointly app. Grade it a C and tell us what was wrong, such as an unqualified homeowner or a service you do not offer, and you do not pay for it: the fee is credited automatically to your next appointment. A no-show is credited automatically to your next appointment.
 
 **What you own under pay per appointment:** showing up on time and closing the job. That is the whole list.
 
@@ -48,7 +48,7 @@ Appointly prices this as one flat fee per booked estimate, set per market. Every
 | | Pay per lead | Pay per appointment |
 | --- | --- | --- |
 | Billed when | A form is submitted | A qualified estimate is confirmed |
-| Typical price | $15 to $45 exclusive, $30 to $120 shared | One flat fee per booked estimate |
+| Typical price | $15 to $45 exclusive, $30 to $120 shared | $125 to $175 per booked estimate, plus ad spend you fund at cost |
 | Who calls the homeowner | You | The provider |
 | Fee for leads that never book | The full lead price | No appointment fee |
 | Speed to lead depends on | Your availability | The provider's team |
@@ -71,8 +71,8 @@ Three things about coating work change the math compared to a lower-ticket trade
 
 1. **Is this exclusive, and at the lead level or the market level?** A lead sold only to you still leaves you bidding against a competitor the same provider runs campaigns for. Ask how many coating contractors they work with in your market and get the answer in writing. The distinction is unpacked in [exclusive vs shared floor coating leads](/blog/exclusive-vs-shared-floor-coating-leads).
 2. **What exactly qualifies as billable?** Under pay per lead, is a wrong number billable? Under pay per appointment, does an appointment count if the homeowner rents? Write the definition down before money moves.
-3. **What is the credit policy?** No-shows happen in this trade no matter how well a provider confirms. Ask what is credited and under what conditions. At Appointly, a no-show earns a credit toward your next appointment, and an appointment outside the agreed criteria is graded in the Appointly Solutions app and you pay nothing for it, because you should not pay for an estimate you could not run.
-4. **Who owns the Meta ad account?** Providers differ here. Appointly runs campaigns from our own Meta ad account and Business Manager, so you never set one up, hand over logins, or manage a campaign. Other providers build inside your account. Neither is wrong, but you should know which one you are agreeing to, and what happens to the campaigns if you part ways.
+3. **What is the credit policy?** No-shows happen in this trade no matter how well a provider confirms. Ask what is credited and under what conditions. At Appointly, a no-show is credited automatically to your next appointment, and any appointment you grade a C in the Appointly app (with a note on what was wrong) is not paid for, because you should not pay for an estimate you could not run.
+4. **Who owns the Meta ad account?** Providers differ here. Appointly runs campaigns from our own Meta ad account and Business Manager, so you never set one up, hand over logins, or manage a campaign, and you own everything we build for you. Other providers build inside your account. Neither is wrong, but you should know which one you are agreeing to, and what happens to the campaigns if you part ways.
 
 ## So which one should you pick?
 
@@ -98,7 +98,7 @@ Pay per appointment suits most epoxy contractors, because coating crews install 
 
 ### Do I need my own Meta ad account to work with Appointly Solutions?
 
-No. We run the campaigns from our own Meta ad account and Business Manager. You never create an account, share logins, or manage a campaign, and you keep your brand, your calendar, and your customer relationships.
+No. We run the campaigns from our own Meta ad account and Business Manager. You never create an account, share logins, or manage a campaign. You own everything we build for you: the campaigns, the creative, the audiences, and every homeowner record. If you leave, it is still yours.
 
 ## Want to see which model fits your shop?
 

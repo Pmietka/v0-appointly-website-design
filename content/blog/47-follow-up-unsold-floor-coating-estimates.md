@@ -2,7 +2,7 @@
 seo_title: "How to Follow Up on Floor Coating Estimates That Didn't Close"
 meta_description: "A 30 day follow-up plan for floor coating estimates that did not close: what to set up before you leave, what to text and when, and how to keep unsold homeowners for next season."
 date: 2026-10-07
-updated: 2026-10-07
+updated: 2026-10-24
 author: jacob
 cluster: sales
 ---
@@ -148,6 +148,6 @@ Book estimates with homeowners who already understand the product and have both 
 
 ## Spend your time on estimates, not chasing leads
 
-Appointly Solutions books floor coating estimates for contractors. We run the Meta ads, call every lead within minutes, educate and qualify the homeowner, and put a confirmed appointment on your calendar. You show up and run the estimate. We work with one floor coating contractor per market.
+Appointly Solutions books floor coating estimates for contractors. We run the Meta ads, text and call every lead within one minute, educate and qualify the homeowner, and put a confirmed appointment on your calendar. You show up and run the estimate. We work with one floor coating contractor per market.
 
 [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, what a booked estimate costs in your area, and how many estimates a week make sense for your crew. One contractor per market.

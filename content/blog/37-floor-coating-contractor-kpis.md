@@ -2,7 +2,7 @@
 seo_title: "7 Numbers Every Floor Coating Contractor Should Track"
 meta_description: "Seven weekly numbers for floor coating contractors: leads in, speed to lead, answer rate, booking rate, show rate, close rate, and revenue per booked estimate."
 date: 2026-09-11
-updated: 2026-09-11
+updated: 2026-10-24
 author: patrick
 cluster: operations
 ---
@@ -127,6 +127,6 @@ Review the seven core floor coating numbers once a week, on the same day, from t
 
 ## Put the scoreboard on the wall this Monday
 
-Start with the three numbers that need nothing but a call log: leads in, speed to lead, and answer rate. Once the phone is fast, add the rest and watch which one moves. If you would rather have the front half of the scoreboard handled for you, see how [booked floor coating estimates](/floor-coating-leads) work, with our team calling every lead in about a minute.
+Start with the three numbers that need nothing but a call log: leads in, speed to lead, and answer rate. Once the phone is fast, add the rest and watch which one moves. If you would rather have the front half of the scoreboard handled for you, see how [booked floor coating estimates](/floor-coating-leads) work, with every lead texted and called within one minute.
 
 For a second set of eyes on your numbers, [book a strategy call](https://client.getappointly.co/strategy-calendar) and bring last week's scoreboard. We will tell you which number to fix first.

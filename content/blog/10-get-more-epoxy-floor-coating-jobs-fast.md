@@ -2,7 +2,7 @@
 seo_title: "How to Get More Epoxy Floor Coating Jobs Fast"
 meta_description: "Need epoxy floor coating jobs now? How to fill your calendar with booked estimates in days using a Google profile, Meta ads, and one-minute follow-up."
 date: 2026-01-20
-updated: 2026-10-13
+updated: 2026-10-24
 author: patrick
 cluster: marketing-channels
 ---
@@ -58,10 +58,10 @@ Where most contractors lose: the leads come in and sit. The homeowner who fills 
 
 ## Quick win 3: hand the front end to a booked-appointment service
 
-If you need confirmed estimates on the calendar this week, hand the whole front end to a company that does it for you. That is what we do. You pay one flat fee for each booked estimate that lands on your calendar, with no setup fee or retainer. We don't sell a pile of raw leads to chase. We fill the calendar:
+If you need confirmed estimates on the calendar this week, hand the whole front end to a company that does it for you. That is what we do. You pay $125 to $175 for each booked estimate that lands on your calendar, plus ad spend you fund at cost, with no setup fee or retainer. We don't sell a pile of raw leads to chase. We fill the calendar:
 
 1. We generate the lead through Meta ads on Facebook and Instagram.
-2. We call that homeowner within about a minute, before they shop three other coating companies.
+2. We text and call that homeowner within one minute, before they shop three other coating companies.
 3. We book them into a time that works for you and confirm it.
 
 Then you show up, walk the garage or basement, quote the floor, and do the job.
@@ -133,6 +133,6 @@ Scale up your epoxy floor coating marketing when the cost of landing a job is a 
 
 ## Get jobs this month
 
-You don't have to wait six months for marketing to work. Finish the Google profile this week, get your floors in front of local homeowners through Meta ads, and call every lead within a minute. If you need confirmed estimates with zero management on your end, we run the ads, hit speed to lead, and book the estimate onto your calendar. You pay one flat fee per [booked epoxy floor estimate](/epoxy-flooring-leads), with no setup fee or retainer.
+You don't have to wait six months for marketing to work. Finish the Google profile this week, get your floors in front of local homeowners through Meta ads, and call every lead within a minute. If you need confirmed estimates with zero management on your end, we run the ads, hit speed to lead, and book the estimate onto your calendar. You pay $125 to $175 per [booked epoxy floor estimate](/epoxy-flooring-leads), plus ad spend you fund at cost, with no setup fee or retainer.
 
 One week from now you can have appointments landing. [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we'll map out what your market can produce.

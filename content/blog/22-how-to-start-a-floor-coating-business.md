@@ -2,7 +2,7 @@
 seo_title: "How to Start a Floor Coating Business in 2026"
 meta_description: "How to start a floor or concrete coating business: niche, independent vs franchise, startup costs, equipment, pricing, licensing, insurance, and a 90 day plan."
 date: 2026-09-02
-updated: 2026-10-21
+updated: 2026-10-24
 author: patrick
 cluster: operations
 ---
@@ -130,7 +130,7 @@ Start with free channels, then run Meta ads with someone on the phone, or hand t
 
 That creates a real problem for a new owner operator: you cannot answer a lead in a minute while you are running a grinder. So you either hire someone to answer the phone, accept that a share of your leads will go cold, or pay a service that calls and books for you.
 
-**The shortcut: booked estimates.** A booked-appointment service runs the ads, calls every lead within about a minute, and puts confirmed estimates on your calendar. Appointly does this for one floor coating contractor per market for one flat fee per booked estimate. Here is [how it works](/how-it-works).
+**The shortcut: booked estimates.** A booked-appointment service runs the ads, texts and calls every lead within one minute, and puts confirmed estimates on your calendar. Appointly does this for one floor coating contractor per market for $125 to $175 per booked estimate, plus ad spend you fund at cost. Here is [how it works](/how-it-works).
 
 Whatever route you take, run the estimate in person, present good, better, and best, and ask for the job at the kitchen table. Our guide on [closing floor coating estimates](/blog/how-to-close-more-floor-coating-estimates) walks through the script.
 
@@ -178,6 +178,6 @@ New floor coating contractors get their first customers by coating three garages
 
 ## Get the first 20 estimates on the calendar
 
-Starting a floor coating business comes down to one niche, the right grinder, prep learned from an experienced installer, pricing at $5 to $8 per square foot, and proof built early. The calendar decides year one. If you want [booked floor coating estimates](/floor-coating-leads) from launch, Appointly runs the ads, calls every lead within about a minute, and books the estimate on your calendar for one flat fee per appointment.
+Starting a floor coating business comes down to one niche, the right grinder, prep learned from an experienced installer, pricing at $5 to $8 per square foot, and proof built early. The calendar decides year one. If you want [booked floor coating estimates](/floor-coating-leads) from launch, Appointly runs the ads, texts and calls every lead within one minute, and books the estimate on your calendar for $125 to $175 per appointment, plus ad spend you fund at cost.
 
 To find out whether your market is open, [book a strategy call](https://client.getappointly.co/strategy-calendar) and we will look at your market, your capacity, and whether Appointly fits your launch.

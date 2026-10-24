@@ -2,7 +2,7 @@
 seo_title: "Why Your Facebook Leads for Epoxy Flooring Are Bad"
 meta_description: "Bad epoxy flooring leads from Facebook usually trace to the native lead form, stock creative, discount hooks, and a wide service area. Here is the fix for each type."
 date: 2026-10-08
-updated: 2026-10-08
+updated: 2026-10-24
 author: patrick
 cluster: marketing-channels
 situation: ads-not-working
@@ -121,7 +121,7 @@ Stop leading with a discount in the ad, and give a price range on the first call
 
 ## Tired of sorting junk leads before you can quote a floor?
 
-Appointly books estimates for floor coating contractors only. We run the Meta ads from our own ad account with creative built around real coated garages, send homeowners to a landing page, and call every lead within minutes to educate and qualify them. An estimate only lands on your calendar when the homeowner owns the property, wants floor coating work, is inside your service area, and agreed to a time that fits your route. We work with one floor coating contractor per market, and appointments are never shared or resold.
+Appointly books estimates for floor coating contractors only. We run the Meta ads for you (and you own everything we build) with creative built around real coated garages, send homeowners to a landing page, and text and call every lead within one minute to educate and qualify them. An estimate only lands on your calendar when the homeowner owns the property, wants floor coating work, is inside your service area, and agreed to a time that fits your route. We work with one floor coating contractor per market, and appointments are never shared or resold.
 
 It is not the right fit for everyone. If you like running your own ads and the table points to one clear fix, make that fix first. If your crew is booked out, more estimates will not help yet.
 

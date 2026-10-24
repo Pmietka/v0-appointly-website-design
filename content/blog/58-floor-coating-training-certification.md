@@ -2,7 +2,7 @@
 seo_title: "Floor Coating Training and Epoxy Flooring Certification"
 meta_description: "Where to get floor coating training, what an epoxy flooring certification does and does not mean, how licensing differs by state, and what to practice first."
 date: 2026-10-21
-updated: 2026-10-21
+updated: 2026-10-24
 author: jacob
 cluster: operations
 ---
@@ -138,4 +138,4 @@ Grinding and edge work, then crack repair and moisture testing. Prep decides whe
 
 Training gets the floor right. It does not get the homeowner on the calendar. Once you are confident in your install, the next problem is steady estimates, and our guide to [the first 20 estimates for a new epoxy flooring company](/guides/first-20-estimates-new-epoxy-flooring-company) walks through the options.
 
-Appointly Solutions books floor coating estimates for contractors. We run the Meta ads, call every homeowner within minutes, qualify them, and put the appointment on your calendar for one flat fee per booked estimate. If you are still practicing on your own garage, you are not ready for us yet, and that is fine. When you are, [book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open. One floor coating contractor per market.
+Appointly Solutions books floor coating estimates for contractors. We run the Meta ads, text and call every homeowner within one minute, qualify them, and put the appointment on your calendar for $125 to $175 per booked estimate, plus ad spend you fund at cost. If you are still practicing on your own garage, you are not ready for us yet, and that is fine. When you are, [book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open. One floor coating contractor per market.

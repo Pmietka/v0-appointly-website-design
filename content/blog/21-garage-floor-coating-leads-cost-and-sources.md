@@ -2,7 +2,7 @@
 seo_title: "Garage Floor Coating Leads: Cost and Where to Get Them"
 meta_description: "What garage floor coating leads cost from marketplaces, Google, Meta ads, and booked-appointment services, and which source actually turns into installed floors."
 date: 2026-09-02
-updated: 2026-10-13
+updated: 2026-10-24
 author: patrick
 cluster: economics
 ---
@@ -64,13 +64,13 @@ Coating contractors running their own Meta ads with good creative and a short fo
 
 ## What does a booked-appointment service cost?
 
-A booked-appointment service charges per confirmed estimate, not per lead. This is the model Appointly runs. The provider builds and manages the Meta ads, calls every lead within about a minute, qualifies the homeowner, and puts a confirmed estimate on your calendar. You do not receive a lead. You receive an appointment.
+A booked-appointment service charges per confirmed estimate, not per lead. This is the model Appointly runs. The provider builds and manages the Meta ads, texts and calls every lead within one minute, qualifies the homeowner, and puts a confirmed estimate on your calendar. You do not receive a lead. You receive an appointment.
 
-**What it costs:** One flat fee per booked estimate, set per market. No setup fee, no retainer, no monthly fee, no long term contract. We walk through the price for your market on a call.
+**What it costs:** $125 to $175 per booked estimate, set per client, invoiced separately from ad spend. You fund the ad spend yourself as a prefunded balance, drawn down at cost with no markup and reported weekly. No setup fee, no retainer, no monthly management fee, no long term contract.
 
-**What you actually get:** A homeowner who owns the property, wants coating work, lives inside your service area, and picked a time. Exclusive, because we work with [one contractor per market](/exclusive-floor-coating-leads).
+**What you actually get:** A homeowner qualified on intent (project goal, the look and material they want, and a real timeline) who picked a time. Exclusive, because we work with [one contractor per market](/exclusive-floor-coating-leads). After the estimate you grade it in the Appointly app, and a C grade is not paid for.
 
-**Close rate:** 40 to 60 percent for a prepared crew, and the denominator is appointments, not phone numbers. A contractor buying 20 booked estimates a month at a 50 percent close should expect around 10 installed floors. Show rate runs about 80 percent with no reminders and about 95 percent with confirmations and reminders. Our guide to [floor coating estimate no-shows](/blog/floor-coating-estimate-no-shows) covers that system.
+**Close rate:** Across all Appointly clients, 97 percent of booked appointments show and clients close 60 percent of them on average, across markets and products. The denominator is appointments, not phone numbers. A contractor running 20 booked estimates a month at a 60 percent close should expect around 12 installed floors. Our guide to [floor coating estimate no-shows](/blog/floor-coating-estimate-no-shows) covers that system.
 
 **When it works:** When you want to spend your time in garages instead of on the phone, and when your team can show up to the estimates you are given.
 
@@ -116,6 +116,6 @@ Running your own Meta ads is usually cheaper per lead, but only cheaper per inst
 
 ## Stop buying leads and start buying estimates
 
-Garage floor coating leads are easy to buy and hard to turn into floors. The contractors who grow fastest pick one scalable source, Meta ads, and put a system behind the phone so no lead waits more than a minute. If you would rather have that run for you, see how Appointly delivers [booked floor coating estimates](/floor-coating-leads) for one flat fee per appointment.
+Garage floor coating leads are easy to buy and hard to turn into floors. The contractors who grow fastest pick one scalable source, Meta ads, and put a system behind the phone so no lead waits more than a minute. If you would rather have that run for you, see how Appointly delivers [booked floor coating estimates](/floor-coating-leads) for $125 to $175 per appointment, plus ad spend you fund at cost.
 
 To compare the sources for your market, [book a strategy call](https://client.getappointly.co/strategy-calendar) and we will look at your service area, crew capacity, and what a realistic month of booked estimates looks like.

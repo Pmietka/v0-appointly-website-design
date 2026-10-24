@@ -2,7 +2,7 @@
 seo_title: "How Many Estimates a Week Does One Coating Crew Need?"
 meta_description: "Floors a week divided by close rate, then show rate. Example: 3 floors at a 45% close needs 7 estimates run, about 8 booked, from 12 to 14 leads a week."
 date: 2026-10-07
-updated: 2026-10-07
+updated: 2026-10-24
 author: jacob
 cluster: operations
 situation: one-crew
@@ -119,6 +119,6 @@ Yes. Without reminders, about 80% of booked estimates show. With a confirmation 
 
 Once you know your weekly number, the job is filling the blocks with homeowners who show up ready to buy: fast calls, reminders, and honest qualification.
 
-Appointly runs the Meta ads, calls every lead within minutes, and educates and qualifies the homeowner, and books confirmed floor coating estimates into the blocks you set. If your close rate is low or your crew is already full, fix that first, because more estimates will not help.
+Appointly runs the Meta ads, texts and calls every lead within one minute, and educates and qualifies the homeowner, and books confirmed floor coating estimates into the blocks you set. If your close rate is low or your crew is already full, fix that first, because more estimates will not help.
 
 [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, your weekly estimate number, and which estimate blocks fit your install schedule.

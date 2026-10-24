@@ -2,7 +2,7 @@
 seo_title: "In-House Appointment Setter vs Outsourced for Contractors"
 meta_description: "Owner calling, in-house setter, or outsourced booking team? An honest cost and coverage comparison for floor coating contractors, with a decision table."
 date: 2026-09-11
-updated: 2026-10-13
+updated: 2026-10-24
 author: jacob
 cluster: operations
 ---
@@ -115,4 +115,4 @@ The owner should call leads directly only when the business is very small and th
 
 If you are under roughly 150 leads a month, or your volume swings with the seasons, an outsourced team that calls within a minute and charges per booked appointment is usually the cheaper and faster option. If you are well above that with steady volume, run the illustrative math above with your own wage and lead numbers, and be honest about the evening and weekend gap.
 
-Appointly is the outsourced option for floor coating contractors: our calling team contacts every lead within about a minute, books the estimate on your calendar, confirms and reminds, and you pay one flat fee per booked appointment, with no setup fee or retainer. Read how [appointment setting for contractors](/appointment-setting-for-contractors) works, or [book a strategy call](https://client.getappointly.co/strategy-calendar) to compare it against a hire for your volume.
+Appointly is the outsourced option for floor coating contractors: I text and call every lead within one minute myself, book the estimate on your calendar, confirm and remind, and you pay $125 to $175 per booked appointment, plus ad spend you fund at cost, with no setup fee or retainer. Read how [appointment setting for contractors](/appointment-setting-for-contractors) works, or [book a strategy call](https://client.getappointly.co/strategy-calendar) to compare it against a hire for your volume.

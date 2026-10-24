@@ -2,7 +2,7 @@
 seo_title: "Best CRM for Floor Coating Contractors (2026 Guide)"
 meta_description: "How to pick the best CRM for a floor coating or epoxy flooring business: the seven features that matter and how GoHighLevel, Jobber, and others compare."
 date: 2026-10-21
-updated: 2026-10-21
+updated: 2026-10-24
 author: patrick
 cluster: operations
 ---
@@ -170,6 +170,6 @@ An instant automated text when a form is submitted, an alert to whoever is on ca
 
 ## Fill the calendar the CRM is waiting on
 
-A CRM keeps track of estimates. It cannot create them or call the homeowner within a minute while you are on a job. Appointly Solutions runs the Meta ads from our own ad account, calls every homeowner within minutes, qualifies them, and books the estimate on your calendar for one flat fee per booked estimate. No setup fee, no retainer, no long-term contract, and one floor coating contractor per market. If you already have a setter and a working follow-up system, you may not need us.
+A CRM keeps track of estimates. It cannot create them or call the homeowner within a minute while you are on a job. Appointly Solutions runs the Meta ads for you (and you own everything we build), texts and calls every homeowner within one minute, qualifies them, and books the estimate on your calendar for $125 to $175 per booked estimate, plus ad spend you fund at cost. No setup fee, no retainer, no long-term contract, and one floor coating contractor per market. If you already have a setter and a working follow-up system, you may not need us.
 
 If you want booked estimates landing in whatever system you choose, [book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open.

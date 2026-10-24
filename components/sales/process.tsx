@@ -9,8 +9,9 @@ import { CASE_STUDIES } from "@/lib/case-studies";
 /* ============================================================================
    How the whole thing works, written so nobody walks into the call with a
    wrong idea about the model. Shared by /connect (cold traffic) and /lander
-   (already booked). Every pricing line matches /pricing and lib/faq.ts: one
-   flat fee per booked estimate, no monthly fee, credits for no-shows.
+   (already booked). Every pricing line matches lib/offer.ts: ad spend at
+   cost plus $125 to $175 per booked appointment, no monthly management fee,
+   the appointment quality guarantee, and automatic credits for no-shows.
    Styles in app/sales.css, except the comparison table (app/lander/lander.css).
    ============================================================================ */
 
@@ -44,7 +45,7 @@ const TIMELINE = [
     when: "Launch",
     t: "Ads go live",
     pts: [
-      "Run from our own Meta ad account",
+      "Run in our Meta ad account, built for you and owned by you",
       "No logins or ad manager for you",
       "Phil's first appointments landed week one",
     ],
@@ -55,7 +56,7 @@ const TIMELINE = [
     when: "Every lead",
     t: "We call, qualify and book",
     pts: [
-      "Every lead called within about 60 seconds",
+      "Every lead texted and called within one minute",
       "Qualified on area, project and budget",
       "Reminders, confirmations and reschedules handled",
     ],
@@ -115,17 +116,17 @@ const MODEL = [
   {
     Icon: CircleDollarSign,
     t: "How you pay",
-    d: "One flat fee per booked estimate, set per market, billed when the estimate is booked on your calendar. No setup fee, no retainer, and no monthly management fee. We confirm the price for your market on the strategy call.",
+    d: "You fund your ad spend upfront at cost, with no markup and a spend report every week. On top of that you pay $125 to $175 per booked appointment, set per client, invoiced separately and billed when the estimate is booked. No setup fee, no retainer, and no monthly management fee.",
   },
   {
     Icon: BadgeCheck,
     t: "What counts as an appointment",
-    d: "A homeowner in your service area, with a real floor coating project that fits your scope, who agreed to a specific estimate time on your calendar. Not a form fill. Not a phone number.",
+    d: "A homeowner in your service area, qualified on intent (their project goal, the look and material they want, and a real timeline), who agreed to a specific estimate time on your calendar. Not a form fill. Not a phone number.",
   },
   {
     Icon: ShieldCheck,
-    t: "No-shows and bad fits",
-    d: "If a confirmed homeowner doesn't show, it earns a credit toward your next appointment. If an appointment turns out unqualified or unbiddable, like a service you don't offer, you grade it in the Appointly Solutions app with notes and pay nothing for it.",
+    t: "Appointment quality guarantee",
+    d: "After every estimate you grade the appointment in the Appointly app. Grade it a C and tell us what was wrong, like an unqualified homeowner or a service you don't offer, and you don't pay for it. No-shows and C grades are credited automatically to your next appointment.",
   },
   {
     Icon: CalendarCheck,
@@ -135,12 +136,12 @@ const MODEL = [
   {
     Icon: Megaphone,
     t: "Who runs the ads",
-    d: "We do, from our own Meta ad account and Business Manager. You never create an account, hand over logins, or touch a campaign. Your brand, calendar and customers stay yours.",
+    d: "We do, in our Meta ad account and Business Manager, so you never create an account, hand over logins, or touch a campaign. You own everything we build for you: the campaigns, creative, audiences and every homeowner record. If you leave, it's still yours.",
   },
   {
     Icon: Lock,
     t: "Exclusivity and commitment",
-    d: "One floor coating contractor per market, so we never book the same homeowner for the company down the road. No long term contract.",
+    d: "One floor coating contractor per market, written into your service agreement, so we never book the same homeowner for the company down the road. No long term contract.",
   },
 ];
 
@@ -201,9 +202,9 @@ export function ResultsToExpect() {
         <div className="exnote">
           <p className="ext">The honest version</p>
           <p>
-            Across our case studies, contractors close roughly <strong>50 to 70%</strong> of
-            the estimates we book. Your number depends on your market, your price
-            and your sales process. We put prequalified buyers in front of you.
+            Across all our clients, 97% of booked appointments show and contractors
+            close <strong>60%</strong> of them on average. Your number depends on your
+            market, your price and your sales process. We put prequalified buyers in front of you.
             Closing is still your job.
           </p>
           <p>
@@ -232,11 +233,11 @@ export function ResultsToExpect() {
 /* ── Misconceptions (used on /lander, before the call) ─────────────────────── */
 const MYTHS = [
   { m: "“So you sell leads.”", f: "We don't sell leads. Our fee is for a booked estimate with a qualified homeowner, not a name and a phone number." },
-  { m: "“I'll pay every month whether it works or not.”", f: "There's no setup fee, no retainer, and no monthly management fee. You pay per booked estimate, and a no-show earns a credit toward your next appointment." },
-  { m: "“My homeowners get shared with the guy down the road.”", f: "One floor coating contractor per market. Every estimate we book is yours alone." },
+  { m: "“I'll pay every month whether it works or not.”", f: "There's no setup fee, no retainer, and no monthly management fee. You fund your ads at cost and pay per booked estimate, and no-shows and C grades are credited automatically to your next appointment." },
+  { m: "“My homeowners get shared with the guy down the road.”", f: "One floor coating contractor per market, in writing. Every estimate we book is yours alone." },
   { m: "“I'll get locked into a long contract.”", f: "No long term contract." },
-  { m: "“I'll have to manage ads and chase people.”", f: "We run the ads from our own account and call every lead. You show up and run the estimate." },
-  { m: "“Every appointment is a guaranteed sale.”", f: "Nobody can honestly promise that. An appointment that misses the bar we agree on is graded in the app, and you pay nothing for it. Closing is your part, and our clients close roughly 50 to 70%." },
+  { m: "“I'll have to manage ads and chase people.”", f: "We run the ads and Jacob calls every lead within one minute. You own everything we build, and you show up and run the estimate." },
+  { m: "“Every appointment is a guaranteed sale.”", f: "Nobody can honestly promise that. Grade an appointment a C after the estimate and you don't pay for it. Closing is your part, and our clients close 60% on average." },
 ];
 
 export function Misconceptions() {
@@ -257,10 +258,10 @@ const COMPARE_COLS = ["DIY", "Marketing Agency", "Shared Leads", "Appointly"];
 const COMPARE_ROWS = [
   { label: "Outcome", Icon: Target, kind: "text", out: true, vals: ["All on you. Hard to keep up while you work.", "Promises and meetings. Slow to show results.", "Cold leads sold to many. You do the chasing.", "Qualified appointments booked on your calendar."] },
   { label: "Who runs it", Icon: User, kind: "text", out: false, vals: ["You", "You manage them", "You chase leads", "We run everything"] },
-  { label: "Risk on bad appointments", Icon: Shield, kind: "text", out: false, vals: ["On you", "On you", "On you", "None. Bad fits are not billed"] },
-  { label: "What you pay for", Icon: CreditCard, kind: "text", out: false, vals: ["Your time", "Monthly fees", "Leads that flake", "Booked appointments"] },
+  { label: "Risk on bad appointments", Icon: Shield, kind: "text", out: false, vals: ["On you", "On you", "On you", "Grade it a C and you don't pay"] },
+  { label: "What you pay for", Icon: CreditCard, kind: "text", out: false, vals: ["Ad spend and your time", "Monthly fees plus ad spend", "Leads that flake", "Ad spend at cost plus a fee per booked appointment"] },
   { label: "Works while you're on the job", Icon: Clock, kind: "bin", out: false, vals: [false, false, false, true] },
-  { label: "Exclusive to you", Icon: Lock, kind: "bin", out: false, vals: [false, false, false, true] },
+  { label: "Exclusive to you", Icon: Lock, kind: "bin", out: false, vals: [true, true, false, true] },
   { label: "Bad appointments not billed", Icon: LineChart, kind: "bin", out: false, vals: [false, false, false, true] },
 ] as const;
 
@@ -327,9 +328,9 @@ export function CompareTable() {
 
 /* Real numbers for the dark proof bar under each hero. */
 export const PROOF_STATS = [
-  { v: "50 to 70%", l: "Close rates on the estimates we book, across our case studies." },
-  { v: "$0", l: "Setup fee. You pay per booked estimate." },
-  { v: "1", l: "Floor coating contractor per market. Exclusive." },
+  { v: "97%", l: "Show rate on booked appointments, across all our clients." },
+  { v: "60%", l: "Average client close rate on the estimates we book." },
+  { v: "1", l: "Floor coating contractor per market, in writing." },
 ];
 
 export const PROOF_FACES = [

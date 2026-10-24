@@ -2,7 +2,7 @@
 seo_title: "Questions Before Hiring a Floor Coating Marketing Agency"
 meta_description: "Burned by an agency before? Ask these 15 questions before you hire another floor coating marketing agency, from who calls your leads to who owns the ad account."
 date: 2026-10-07
-updated: 2026-10-13
+updated: 2026-10-24
 author: patrick
 cluster: marketing-channels
 situation: burned-by-agency
@@ -45,7 +45,7 @@ The broader story is in [why floor coating contractors leave marketing agencies]
 - A red flag sounds like: A long term with an early termination fee and no performance clause.
 
 **3. Is ad spend separate from your fee, and can I see exactly where it went?**
-- A good answer sounds like: "Ad spend is separate and passed through at cost, and you can see the account," or "We cover the ad spend ourselves."
+- A good answer sounds like: "Ad spend is separate, passed through at cost with no markup, and reported to you every week."
 - A red flag sounds like: One blended monthly number with no breakdown.
 
 [Leads vs appointments as a pricing model](/blog/pay-per-lead-vs-pay-per-appointment-epoxy-contractors) explains how different fee structures move risk between you and the agency.
@@ -161,7 +161,7 @@ Our benchmarks put it at 60 to 70% when ads are high intent, sent to a landing p
 
 ## Want to see how we answer these 15 questions?
 
-Appointly runs Meta ads from its own ad account, calls every lead within minutes, educates and qualifies the homeowner, and books confirmed estimates on your calendar. Every estimate is confirmed and reminded, and we work with one floor coating contractor per market. Read how it compares on the [agency alternative page](/floor-coating-marketing-agency-alternative), or see the [case studies](/case-studies).
+Appointly runs Meta ads for you (and you own everything it builds), texts and calls every lead within one minute, educates and qualifies the homeowner, and books confirmed estimates on your calendar. Every estimate is confirmed and reminded, and we work with one floor coating contractor per market. Read how it compares on the [agency alternative page](/floor-coating-marketing-agency-alternative), or see the [case studies](/case-studies).
 
 Bring this scorecard to the call.
 

@@ -2,7 +2,7 @@
 seo_title: "Google Ads vs Meta Ads for Floor Coating Contractors"
 meta_description: "Google Search captures homeowners already looking for a coating. Meta creates demand with before-and-afters. How each fills a floor coating calendar."
 date: 2026-09-11
-updated: 2026-09-11
+updated: 2026-10-24
 author: patrick
 cluster: marketing-channels
 ---
@@ -127,4 +127,4 @@ A floor coating contractor should send Meta traffic to a landing page rather tha
 
 If you only run one platform, run the one that matches your problem. Empty calendar: Meta. Losing searchers to competitors: Google. If you can afford both, run both, send them to one landing page, and judge them by booked estimates rather than lead count.
 
-Whichever you pick, the calendar fills or stays empty in the first minute after the form. We run the Meta side end to end, call every lead within about a minute, and book the estimate on your calendar, and you pay per [booked floor coating estimate](/floor-coating-leads) rather than per lead. [Book a strategy call](https://client.getappointly.co/strategy-calendar) if you want to see how that fits alongside the Google campaign you already run.
+Whichever you pick, the calendar fills or stays empty in the first minute after the form. We run the Meta side end to end, text and call every lead within one minute, and book the estimate on your calendar, and you fund your ad spend at cost and pay per [booked floor coating estimate](/floor-coating-leads) rather than per lead. [Book a strategy call](https://client.getappointly.co/strategy-calendar) if you want to see how that fits alongside the Google campaign you already run.

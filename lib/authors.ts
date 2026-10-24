@@ -36,7 +36,7 @@ export const authors: Record<string, Author> = {
     linkedin: "https://www.linkedin.com/in/jacob-mietka/",
     role: "Co-founder, Appointly Solutions",
     bio:
-      "Jacob leads speed to lead and appointment booking at Appointly. He has helped scale more than 20 home service businesses and talks to contractors every day about their markets, crews, and calendars.",
+      "Jacob makes every call to every Appointly lead himself, texting and calling each homeowner within one minute, qualifying them on intent, and booking the estimate. He has helped scale more than 20 home service businesses and talks to contractors every day about their markets, crews, and calendars.",
     image: `${siteUrl}/images/team/jacob.jpg`,
     url: `${siteUrl}/about#jacob-mietka`,
     sameAs: ["https://www.linkedin.com/in/jacob-mietka/"],

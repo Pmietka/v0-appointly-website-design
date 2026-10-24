@@ -39,7 +39,7 @@ export const FEATURED_TESTIMONIALS: Testimonial[] = [
     name: "Carlos V.",
     who: "Diamond Group",
     where: "Portland, OR",
-    stat: "1st appointment covered full onboarding cost",
+    stat: "1st appointment covered the full cost",
     quote: "One job paid for everything. From there it just kept coming.",
     photo: "/images/proof/carlos-team.webp",
   },

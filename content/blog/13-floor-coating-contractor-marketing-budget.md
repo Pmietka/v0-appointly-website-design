@@ -2,7 +2,7 @@
 seo_title: "Floor Coating Contractor Marketing Budget Guide"
 meta_description: "A marketing budget guide for floor coating contractors: where to spend first, what to skip, and how speed to lead turns a small budget into booked estimates."
 date: 2026-02-10
-updated: 2026-10-13
+updated: 2026-10-24
 author: patrick
 cluster: marketing-channels
 ---
@@ -67,7 +67,7 @@ The catch with running it yourself is follow-up. A lead that clicks an ad is wor
 
 ### 3. A pay-per-appointment booking system
 
-Don't pay a generalist agency for activity you can't measure. Pay for the outcome instead: an estimate booked on your calendar. That's how we work at Appointly. We run the Meta ads, our team calls every lead within about a minute because [speed to lead](/blog/speed-to-lead-wins-floor-coating-jobs) is the biggest lever in this business, and we book the estimate directly on your calendar. You pay one flat fee per booked appointment, with no setup fee or retainer.
+Don't pay a generalist agency for activity you can't measure. Pay for the outcome instead: an estimate booked on your calendar. That's how we work at Appointly. We run the Meta ads, Jacob texts and calls every lead within one minute because [speed to lead](/blog/speed-to-lead-wins-floor-coating-jobs) is the biggest lever in this business, and we book the estimate directly on your calendar. You pay $125 to $175 per booked appointment, plus ad spend you fund at cost, with no setup fee or retainer.
 
 That structure matters because the bottleneck for most contractors isn't clicks. It's the gap between a homeowner raising their hand and someone getting them on the calendar. A lead that sits for two hours is usually gone. A lead that gets a call in two minutes is yours.
 
@@ -87,7 +87,7 @@ Concentrate the budget on what books estimates and keep the rest small. Say you'
 |---|---|
 | Google Business Profile build-out and upkeep | $500 one time, then your own time |
 | Meta ads you run yourself for awareness and reviews | $500 to $1,000 |
-| Pay-per-appointment booking system | One flat fee per booked estimate |
+| Pay-per-appointment booking system | $125 to $175 per booked estimate, plus ad spend you fund at cost |
 | Buffer for testing new creative and offers | $300 to $500 |
 
 The exact numbers flex with how many jobs you can handle. If you can install five garage floors a week, you want the calendar packed and you scale appointment volume up. If you're a one-crew shop, you keep the flow steady so you're not buried.

@@ -2,7 +2,7 @@
 seo_title: "NFC Review Cards for Floor Coating Contractors"
 meta_description: "NFC review cards help floor coating contractors stack Google reviews fast and build the trust that closes estimates. How they work and how to use them."
 date: 2026-02-03
-updated: 2026-10-13
+updated: 2026-10-24
 author: jacob
 cluster: sales
 ---
@@ -114,6 +114,6 @@ There's no magic number, but the gap between you and the next crew is what the h
 
 ## Pair a review system with a full calendar
 
-NFC review cards are one of the simplest, highest-return moves in a floor coating business. Reviews build trust over months, though. If you also need [booked estimates](/floor-coating-leads) on the calendar now, that's what we do: Meta ads to local homeowners, a call within about a minute, and a confirmed estimate at a time that works for you. One flat fee per booked estimate, with no setup fee or retainer.
+NFC review cards are one of the simplest, highest-return moves in a floor coating business. Reviews build trust over months, though. If you also need [booked estimates](/floor-coating-leads) on the calendar now, that's what we do: Meta ads to local homeowners, a text and call within one minute, and a confirmed estimate at a time that works for you. $125 to $175 per booked estimate, plus ad spend you fund at cost, with no setup fee or retainer.
 
 [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we'll show you what your market can produce. Pair a steady review system with a full calendar of estimates and you don't just compete in your market, you own it.

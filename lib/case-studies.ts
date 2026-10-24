@@ -145,7 +145,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       closeRate: "~70%",
       lead: { value: "~70%", label: "closing rate" },
       cardStats: [
-        { value: "37", label: "Appointments booked monthly" },
+        { value: "37", label: "Shown appointments in month one" },
         { value: "26", label: "Appointments closed" },
       ],
     },
@@ -283,6 +283,9 @@ export const CASE_STUDIES: CaseStudy[] = [
 export const CASE_STUDY_TOTALS = {
   markets: 3,
   closeRateRange: "50 to 70%",
+  /** Across all clients, not just the case studies. */
+  allClientShowRate: "97%",
+  allClientCloseRate: "60%",
   qualified: "100%",
   perMarket: 1,
 } as const;

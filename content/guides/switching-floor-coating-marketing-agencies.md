@@ -2,7 +2,7 @@
 seo_title: "Switching Floor Coating Marketing Agencies: A Checklist"
 meta_description: "Firing your floor coating agency? Get access to your ad account, pixel, pages, CRM, and phone numbers first, and keep leads running until the new source books."
 date: 2026-10-07
-updated: 2026-10-07
+updated: 2026-10-24
 author: patrick
 cluster: operations
 situation: burned-by-agency
@@ -114,12 +114,12 @@ Your reviews live on your Google Business Profile, not with the agency. The risk
 
 ### What if my next lead source runs from its own ad account?
 
-Then there is no ad account to hand over. Some booked appointment services for floor coating contractors work this way, Appointly included: the contractor never creates an account, shares logins, or manages a campaign. In that setup the assets you need to own are your Google Business Profile, reviews, phone number, and lead history.
+Then there is no ad account to hand over. Some booked appointment services for floor coating contractors work this way, Appointly included: the contractor never creates an account, shares logins, or manages a campaign. At Appointly, the contractor still owns everything built for them: the campaigns, the creative, the audiences, and every homeowner record. In that setup the assets you need to own are your Google Business Profile, reviews, phone number, and lead history.
 
 ## Ready for the next source to book estimates?
 
 Switching agencies is mostly paperwork and timing. Get your assets, read your contract, overlap the sources, and work your old leads.
 
-If you want booked estimates on your calendar instead of another agency report, Appointly runs the Meta ads from its own ad account, calls every lead within minutes, educates and qualifies the homeowner, and books confirmed floor coating estimates. It is not the right fit if you want to own and manage your own ad account. See the [agency alternative](/floor-coating-marketing-agency-alternative) for how it differs.
+If you want booked estimates on your calendar instead of another agency report, Appointly runs the Meta ads for you (and you own everything it builds), texts and calls every lead within one minute, educates and qualifies the homeowner, and books confirmed floor coating estimates. It is not the right fit if you want the campaigns run inside your own ad account; Appointly runs them in its account, and you own everything it builds for you. See the [agency alternative](/floor-coating-marketing-agency-alternative) for how it differs.
 
 [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, how many estimates a week your crew can run, and how to time the switch so your calendar does not go empty.

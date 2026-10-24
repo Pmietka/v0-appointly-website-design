@@ -18,7 +18,7 @@ const agencyProblems = [
     icon: BadgeAlert,
     title: "Monthly fees, with no appointments promised",
     description:
-      "Traditional agencies charge a monthly fee and stop there. You carry the full spend with no booked estimates guaranteed in return.",
+      "Traditional agencies charge a monthly fee on top of your ad spend and stop there. You pay the fee whether or not a single estimate gets booked.",
   },
   {
     icon: RefreshCw,
@@ -36,7 +36,7 @@ const agencyProblems = [
     icon: ShieldCheck,
     title: "A more accountable alternative",
     description:
-      "Appointly Solutions charges one flat fee per booked appointment with no setup fee and no retainer, so the fee is tied to an estimate on your calendar, backed by instant speed to lead and Meta ad delivery.",
+      "With Appointly Solutions you fund your ad spend at cost with no markup, then pay $125 to $175 per booked appointment. No setup fee and no retainer, so the only fee is tied to an estimate on your calendar, and an appointment you grade a C is not paid for.",
   },
 ];
 
@@ -44,7 +44,7 @@ const faqItems = [
   {
     question: "How is Appointly different from a floor coating marketing agency?",
     answer:
-      "An agency sells activity: ads, posts, reports, and meetings, billed monthly regardless of results. Appointly sells booked estimates. We run the ads, call the leads, and book the appointment, and a per-appointment fee ties most of your spend to results.",
+      "An agency sells activity: ads, posts, reports, and meetings, billed monthly regardless of results. Appointly sells booked estimates. We run the ads, text and call every lead within one minute, and book the appointment. You fund the ad spend at cost, and our only fee is per booked appointment, so our fee is tied to results.",
   },
   {
     question: "Do I still need a marketing agency if I use Appointly?",
@@ -66,7 +66,7 @@ const faqItems = [
 export const metadata: Metadata = pageMetadata({
   title: "Floor Coating Marketing Agency Alternative | Appointly Solutions",
   description:
-    "Compare monthly fee marketing agencies with Appointly Solutions, which charges one flat fee per booked floor coating estimate with no setup fee and no retainer.",
+    "Compare monthly fee marketing agencies with Appointly Solutions: you fund ad spend at cost, then pay $125 to $175 per booked floor coating appointment. No setup fee and no retainer.",
   path: "/floor-coating-marketing-agency-alternative",
   ogDescription:
     "See why coating contractors prefer paying per booked appointment over a monthly-fee marketing agency.",
@@ -102,9 +102,10 @@ export default function InsulationMarketingAgencyPage() {
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
                 If you are searching for a floor coating marketing agency, you may really
-                be searching for a better business model. The Appointly Model charges
-                one flat fee per booked appointment, so the focus stays on booked
-                estimates landing on your calendar.
+                be searching for a better business model. With the Appointly Model you
+                fund your ad spend at cost and pay a fee per booked appointment instead
+                of a monthly retainer, so the focus stays on booked estimates landing on
+                your calendar.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a

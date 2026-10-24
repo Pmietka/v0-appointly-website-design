@@ -36,7 +36,7 @@ const sprayFoamPoints = [
     icon: TimerReset,
     title: "Faster response window",
     description:
-      "Homeowners pricing an epoxy garage floor or concrete coating move quickly, so we contact them instantly, before they call another crew. That is speed to lead.",
+      "Homeowners pricing an epoxy garage floor or concrete coating move quickly, so every lead gets a text and a call within one minute, before they call another crew. That is speed to lead.",
   },
 ];
 
@@ -44,7 +44,7 @@ const faqItems = [
   {
     question: "Where do your epoxy flooring leads come from?",
     answer:
-      "From Meta ads we run in your service area. Homeowners respond to before-and-after garage floor creative, submit a short form, and our team calls them within minutes to qualify and book the estimate.",
+      "From Meta ads we run in your service area. Homeowners respond to before-and-after garage floor creative, submit a short form, and Jacob texts and calls them within one minute to qualify and book the estimate.",
   },
   {
     question: "Do you book estimates for polyaspartic and polyurea systems, not just epoxy?",
@@ -167,8 +167,9 @@ export default function SprayFoamContractorLeadsPage() {
               <p className="mt-5 text-sm leading-7 text-muted-foreground md:text-base">
                 Appointly Solutions supports epoxy and concrete coating specialists with
                 Meta ads, instant speed to lead, and exclusivity that protects a narrower
-                local market. You compare what you pay per booked estimate against the
-                value of a real coating job, not against vague traffic metrics.
+                local market. You compare what you pay (ad spend at cost plus the fee per
+                booked estimate) against the value of a real coating job, not against
+                vague traffic metrics.
               </p>
               <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
                 For the broader service page, return to{" "}
@@ -193,8 +194,8 @@ export default function SprayFoamContractorLeadsPage() {
               <p className="mt-4 text-sm leading-7 text-slate-700 md:text-base">
                 A strategy call with Appointly Solutions can help you compare your
                 average coating job value, service area, and demand timing against the
-                Appointly Model: one flat fee for each booked estimate we put on your
-                calendar.
+                Appointly Model: your ad spend at cost, plus $125 to $175 for each
+                booked estimate we put on your calendar.
               </p>
               <a
                 href={bookingUrl}

@@ -2,7 +2,7 @@
 seo_title: "Best Garage Floor Coating Franchises: 2026 Costs Compared"
 meta_description: "Garage floor coating franchises compared on what each brand publishes: investment, franchise fee, royalty, territory, and training, plus how to read the FDD."
 date: 2026-10-21
-updated: 2026-10-21
+updated: 2026-10-24
 author: patrick
 cluster: economics
 ---
@@ -137,6 +137,6 @@ According to Penntek's own dealer page, no. Penntek dealers operate independentl
 
 ## Whichever brand you pick, the calendar decides the year
 
-A franchise gives you a system and a name, but the location still lives or dies on how many qualified homeowners sit at the kitchen table each week. Appointly runs Meta ads from its own ad account, calls every homeowner within minutes, qualifies them, and books the estimate on your calendar, for one flat fee per booked estimate and one coating contractor per market. If you own a franchise location, check that your agreement allows outside local marketing first.
+A franchise gives you a system and a name, but the location still lives or dies on how many qualified homeowners sit at the kitchen table each week. Appointly runs Meta ads for you (and you own everything it builds), texts and calls every homeowner within one minute, qualifies them, and books the estimate on your calendar, for $125 to $175 per booked estimate, plus ad spend you fund at cost, with one coating contractor per market. If you own a franchise location, check that your agreement allows outside local marketing first.
 
 [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open and how many estimates a week fit your crew.

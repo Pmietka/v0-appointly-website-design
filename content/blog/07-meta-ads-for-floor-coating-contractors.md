@@ -2,7 +2,7 @@
 seo_title: "Meta Ads for Floor Coating Contractors That Book Jobs"
 meta_description: "How floor coating contractors run Meta ads that book estimates: campaign structure, landing page vs lead form, budget, speed to lead, and the benchmarks to hit."
 date: 2025-12-30
-updated: 2026-10-13
+updated: 2026-10-24
 author: patrick
 cluster: marketing-channels
 ---
@@ -160,6 +160,6 @@ Start a floor coating Meta campaign at $15 to $30 per day and run it for 2 to 4 
 
 ## Get booked estimates without running the ads yourself
 
-Meta ads work for floor coating when the setup is right and the lead gets called within a minute. That second part is the hard part, and it is why most contractors eventually hand off the front end. We run the ads, call every lead inside a minute, and book the estimate straight onto your calendar. You pay one flat fee per [booked floor coating estimate](/floor-coating-leads), with no setup fee or retainer.
+Meta ads work for floor coating when the setup is right and the lead gets called within a minute. That second part is the hard part, and it is why most contractors eventually hand off the front end. We run the ads, text and call every lead within one minute, and book the estimate straight onto your calendar. You pay $125 to $175 per [booked floor coating estimate](/floor-coating-leads), plus ad spend you fund at cost, with no setup fee or retainer.
 
 Run your own ads if you want to learn the game. When you would rather just show up and quote floors, [book a strategy call](https://client.getappointly.co/strategy-calendar) and we will look at your market together.

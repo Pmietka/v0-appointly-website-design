@@ -2,7 +2,7 @@
 seo_title: "How Long to Give a Floor Coating Marketing Agency"
 meta_description: "Give a floor coating agency 60 to 90 days in season, but judge it every 2 weeks. By day 30 you should see leads called in minutes and estimates on the calendar."
 date: 2026-10-08
-updated: 2026-10-08
+updated: 2026-10-24
 author: patrick
 cluster: marketing-channels
 situation: burned-by-agency
@@ -121,6 +121,6 @@ Yes. Strong ads still produce leads that go cold when nobody calls them in time.
 
 ## Done giving agencies the benefit of the doubt?
 
-If you are tired of judging reports instead of estimates, Appointly works differently. We run the Meta ads from our own ad account, call every homeowner within minutes, educate and qualify them, and book a confirmed estimate on your calendar. You measure us on the same five numbers in this guide. We work with one floor coating contractor per market.
+If you are tired of judging reports instead of estimates, Appointly works differently. We run the Meta ads for you (and you own everything we build), text and call every homeowner within one minute, educate and qualify them, and book a confirmed estimate on your calendar. You measure us on the same five numbers in this guide. We work with one floor coating contractor per market.
 
 We are not the right fit if you want to own and manage the ad account yourself, or if your current agency is booking well and the real gap is how estimates get run. Fix that first. Otherwise, [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, your service area, how many estimates a week your crew can run, and where your current setup is losing leads.

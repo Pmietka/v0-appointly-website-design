@@ -317,7 +317,7 @@ function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () =
 }
 
 // Trust badges under the hero CTA (mirrors the reference funnel's badge row).
-const TRUST_BADGES = ["No contracts", "Pay per show", "Exclusive leads"];
+const TRUST_BADGES = ["No contracts", "Bad appointments credited", "Exclusive leads"];
 
 /* ============================================================================
    Page

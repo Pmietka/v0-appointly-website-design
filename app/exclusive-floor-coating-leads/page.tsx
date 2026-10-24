@@ -29,7 +29,7 @@ const comparisons = [
     icon: ShieldCheck,
     title: "Booked, not just handed off",
     description:
-      "Exclusive only matters when the appointment is real. We generate the lead, hit it instantly, and lock in a confirmed time on your calendar.",
+      "Exclusive only matters when the appointment is real. We generate the lead, text and call it within one minute, and lock in a confirmed time on your calendar.",
   },
   {
     icon: Users,
@@ -48,12 +48,17 @@ const faqItems = [
   {
     question: "Why do shared floor coating leads close so poorly?",
     answer:
-      "A shared lead is sent to three to five contractors at the same time, so the homeowner is fielding calls and collecting quotes. Close rates on shared leads are often under 10 percent. An exclusive, booked estimate usually closes at 40 to 60 percent for a prepared crew.",
+      "A shared lead is sent to three to five contractors at the same time, so the homeowner is fielding calls and collecting quotes. Close rates on shared leads are often under 10 percent. Across all Appointly clients, 97% of booked appointments show and clients close 60% of them on average, because every homeowner is qualified on intent and the appointment is theirs alone.",
   },
   {
     question: "How do you decide the boundaries of my market?",
     answer:
-      "We map your service area with you before launch, usually by county or drive-time radius, and the ads only run inside that boundary. No other Appointly client runs in the same territory.",
+      "We map your service area with you before launch, usually by county or drive-time radius, and the ads only run inside that boundary. Your territory is written into your service agreement, and no other Appointly client runs in the same territory.",
+  },
+  {
+    question: "Is my exclusivity guaranteed in writing?",
+    answer:
+      "Yes. Your territory exclusivity is written into your service agreement, so it is not just a promise on a sales call.",
   },
   {
     question: "What happens if another coating contractor in my area wants to sign up?",
@@ -63,9 +68,9 @@ const faqItems = [
 ];
 
 export const metadata: Metadata = pageMetadata({
-  title: "Exclusive Floor Coating Leads, One Contractor per City | Appointly Solutions",
+  title: "Exclusive Floor Coating Leads, One Contractor per Market | Appointly Solutions",
   description:
-    "Appointly Solutions books exclusive floor coating estimates onto your calendar. One contractor per city, no shared leads, and every appointment booked for you.",
+    "Appointly Solutions books exclusive floor coating estimates onto your calendar. One contractor per market, written into your agreement, no shared leads, and every appointment booked for you.",
   path: "/exclusive-floor-coating-leads",
   ogDescription:
     "See why exclusive booked floor coating appointments beat shared lead systems for coating contractors.",

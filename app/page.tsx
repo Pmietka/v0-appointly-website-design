@@ -15,6 +15,7 @@ import {
 } from "@/components/proof";
 import { LogoMarquee } from "@/components/sales/logo-marquee";
 import { coreFaqItems } from "@/lib/faq";
+import { FEE_RANGE, OFFER, PRICE_SCHEMA, RESULTS } from "@/lib/offer";
 import { FEATURED_TESTIMONIALS, QUOTE_TESTIMONIALS } from "@/lib/testimonials";
 import "./home.css";
 
@@ -27,10 +28,10 @@ const COMPARE_COLS = ["DIY", "Marketing Agency", "Shared Leads", "Appointly"];
 const COMPARE_ROWS = [
   { label: "Outcome", Icon: Target, kind: "text", out: true, vals: ["All on you. Hard to keep up while you work.", "Promises and meetings. Slow to show results.", "Cold leads sold to many. You do the chasing.", "Qualified appointments booked on your calendar."] },
   { label: "Who runs it", Icon: User, kind: "text", out: false, vals: ["You", "You manage them", "You chase leads", "We run everything"] },
-  { label: "Risk on bad appointments", Icon: Shield, kind: "text", out: false, vals: ["On you", "On you", "On you", "None. Bad fits are not billed"] },
-  { label: "What you pay for", Icon: CreditCard, kind: "text", out: false, vals: ["Your time", "Monthly fees", "Leads that flake", "Booked appointments"] },
+  { label: "Risk on bad appointments", Icon: Shield, kind: "text", out: false, vals: ["On you", "On you", "On you", "Grade it a C and you don't pay"] },
+  { label: "What you pay for", Icon: CreditCard, kind: "text", out: false, vals: ["Ad spend and your time", "Monthly fees plus ad spend", "Leads that flake", "Ad spend at cost plus $125 to $175 per booked appointment"] },
   { label: "Works while you're on the job", Icon: Clock, kind: "bin", out: false, vals: [false, false, false, true] },
-  { label: "Exclusive to you", Icon: Lock, kind: "bin", out: false, vals: [false, false, false, true] },
+  { label: "Exclusive to you", Icon: Lock, kind: "bin", out: false, vals: [true, true, false, true] },
   { label: "Bad appointments not billed", Icon: LineChart, kind: "bin", out: false, vals: [false, false, false, true] },
 ] as const;
 
@@ -93,12 +94,9 @@ export default function HomePage() {
         audienceType:
           "Garage floor coating, epoxy, polyaspartic, and concrete coating contractors",
       },
-      offers: {
-        "@type": "Offer",
-        availability: "https://schema.org/InStock",
-        url: BOOKING_URL,
-      },
+      offers: { "@id": PRICE_SCHEMA["@id"] },
     },
+    PRICE_SCHEMA,
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -128,8 +126,8 @@ export default function HomePage() {
             <span className="hl">You just show up.</span>
           </h1>
           <p className="lead">
-            Pay per booked appointment. No setup fee, no retainer, no long term
-            contract.
+            You fund your ads at cost, then pay per booked appointment. No setup
+            fee, no retainer, no long term contract.
           </p>
           <p className="sub">
             Appointly Solutions is a pay per appointment Meta ads agency that
@@ -155,12 +153,12 @@ export default function HomePage() {
         <div className="wrap">
           <p className="eyebrow">Client results</p>
           <h2>
-            Real numbers from <span className="hl">three markets.</span>
+            {RESULTS.showRate} show rate. <span className="hl">{RESULTS.closeRate} close rate.</span>
           </h2>
           <p className="sub">
-            A competitive market, a fast growing market, and a premium product.
-            Every appointment was qualified over the phone first. Close rates
-            are immediate closes only.
+            {OFFER.results} Below are three of those clients: a competitive
+            market, a fast growing market, and a premium product. Close rates on
+            the cards are immediate closes only.
           </p>
           <CaseStudyCards />
           <div className="csmore">
@@ -211,12 +209,16 @@ export default function HomePage() {
         <div className="wrap">
           <h2>We know how to get Floor Coating Jobs. <span className="hl">Is this for you?</span></h2>
           <div className="grid g3">
-            <div className="qual"><span className="qc" /><span className="qt">Access to a market of wealthy homeowners.</span></div>
-            <div className="qual"><span className="qc" /><span className="qt">Your team can run and close in home estimates.</span></div>
+            <div className="qual"><span className="qc" /><span className="qt">You sell a premium product and charge well for it.</span></div>
+            <div className="qual"><span className="qc" /><span className="qt">You are good at sales and close in home estimates.</span></div>
             <div className="qual"><span className="qc" /><span className="qt">You have room for more appointments.</span></div>
           </div>
           <p className="answer">
             Then yes. You&apos;re leaving <span className="hl">jobs on the table.</span>
+          </p>
+          <p className="sub">
+            Not a fit if you want the cheapest jobs in volume, compete mainly on
+            price, or cannot run more estimates right now.
           </p>
         </div>
       </section>
@@ -232,9 +234,9 @@ export default function HomePage() {
           </p>
           <div className="grid g4">
             <div className="step"><div className="sn">1</div><div className="st">We launch proven ads</div><div className="sd">Creatives already proven to convert, customized with your local footage and market. Underperformers get cut and replaced every 2 to 3 days.</div></div>
-            <div className="step"><div className="sn">2</div><div className="st">We call within 60 seconds</div><div className="sd">Every lead gets a real phone call before they forget they clicked the ad. Not a text, not a form follow up.</div></div>
-            <div className="step"><div className="sn">3</div><div className="st">We qualify and warm them up</div><div className="sd">Service area, project scope, budget, and timeline. We only book people you&apos;d book yourself, and they arrive already sold on the product.</div></div>
-            <div className="step"><div className="sn">4</div><div className="st">We book your calendar</div><div className="sd">Booked at your preferred times, reschedules handled, confirmed day of. You show up and close. Closed jobs and wasted trips get fed back into targeting.</div></div>
+            <div className="step"><div className="sn">2</div><div className="st">We text and call within one minute</div><div className="sd">Every lead gets a text and a real phone call from Jacob, our co-founder, within one minute, before they forget they clicked the ad.</div></div>
+            <div className="step"><div className="sn">3</div><div className="st">We qualify on intent</div><div className="sd">Their project goal, the look and material they want, and a real timeline. No real timeline, no booking. They arrive already sold on the product.</div></div>
+            <div className="step"><div className="sn">4</div><div className="st">We book your calendar</div><div className="sd">Booked at your preferred times, reschedules handled, confirmed day of. You show up, close, and grade the appointment in our app. A C grade is not paid for.</div></div>
           </div>
         </div>
       </section>
@@ -305,7 +307,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          <p className="payoff">You&apos;re not paying a retainer for effort or promises. <strong>You&apos;re paying per booked appointment.</strong></p>
+          <p className="payoff">You&apos;re not paying a retainer for effort or promises. <strong>You fund your ads at cost and pay per booked appointment.</strong></p>
           <p className="cmpcaption">Comparison based on contractor conversations and campaign results. Outcomes depend on market, pricing, and close rate.</p>
         </div>
       </section>
@@ -315,17 +317,19 @@ export default function HomePage() {
         <div className="wrap">
           <h2>Simple <span className="hl">pricing.</span></h2>
           <p className="sub">
-            You pay one flat fee for every qualified appointment we book onto your
-            calendar, set per market. No setup fee and no retainer.
+            Two costs: your ad spend at cost, and {FEE_RANGE} per booked
+            appointment. No setup fee, no retainer, no monthly management fee.
           </p>
           <div className="priceblock">
             <div className="ptag">How pricing works</div>
-            <div className="pclaim">One flat fee per booked appointment.</div>
+            <div className="pclaim">Ad spend at cost, plus {FEE_RANGE} per booked appointment.</div>
             <ul>
-              <li>Billed when a qualified estimate is booked</li>
-              <li>Unqualified appointments are graded out and cost nothing</li>
-              <li>No shows earn a credit toward your next appointment. No long term contract.</li>
+              <li>You prefund your ad spend. We draw it down at cost with no markup, report it weekly, and return any unused balance within 10 business days of termination.</li>
+              <li>The appointment fee is set per client, invoiced separately, and billed when the appointment is booked.</li>
+              <li>Appointment quality guarantee: grade an appointment a C after the estimate and tell us what was wrong, and you don&apos;t pay for it.</li>
+              <li>No shows and C grades are credited automatically to your next appointment. No long term contract.</li>
             </ul>
+            <p><Link href="/pricing#roi-calculator">Run your numbers in the ROI calculator</Link></p>
           </div>
         </div>
       </section>
@@ -335,7 +339,7 @@ export default function HomePage() {
         <div className="wrap">
           <h2>Straight <span className="hl">answers.</span></h2>
           <p className="sub">
-            The four questions every floor coating contractor asks us before
+            The questions every floor coating contractor asks us before
             anything else.
           </p>
           <dl className="faqs">
@@ -368,9 +372,10 @@ export default function HomePage() {
                 <div className="fname">Jacob Mietka</div>
                 <div className="frole">Co-founder</div>
                 <p className="fbio">
-                  Leads the speed to lead and booking side. Sales manager.
-                  He&apos;ll talk to you about your business and market.
-                  Responsible for scaling 20+ home service businesses.
+                  Makes every call to your leads himself, by text and call
+                  within one minute, and books the appointments. He&apos;ll talk
+                  to you about your business and market. Has helped scale more
+                  than 20 home service businesses.
                 </p>
               </div>
             </article>

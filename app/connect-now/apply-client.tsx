@@ -312,7 +312,7 @@ function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () =
    ============================================================================ */
 
 // Trust badges under the hero CTA (mirrors the reference funnel's badge row).
-const TRUST_BADGES = ["No contracts", "You fund the ads, zero markup", "Pay per show"];
+const TRUST_BADGES = ["No contracts", "You fund the ads, zero markup", "Bad appointments credited"];
 
 // Proof bar stats.
 // PLACEHOLDER NUMBERS: confirm these are real and defensible before sending.
@@ -355,11 +355,11 @@ const COMPARE_COLS = ["DIY", "Marketing Agency", "Shared Leads", "Appointly"];
 const COMPARE_ROWS = [
   { label: "Outcome", Icon: Target, kind: "text", out: true, vals: ["All on you. Hard to keep up while you work.", "Promises and meetings. Slow to show results.", "Cold leads sold to many. You do the chasing.", "Qualified appointments booked on your calendar."] },
   { label: "Who runs it", Icon: User, kind: "text", out: false, vals: ["You", "You manage them", "You chase leads", "We run everything"] },
-  { label: "Upfront risk", Icon: Shield, kind: "text", out: false, vals: ["On you", "On you", "On you", "None. Pay per appointment"] },
-  { label: "What you pay for", Icon: CreditCard, kind: "text", out: false, vals: ["Your time", "Monthly fees", "Leads that flake", "Booked appointments"] },
+  { label: "Upfront risk", Icon: Shield, kind: "text", out: false, vals: ["On you", "On you", "On you", "Grade it a C and you don't pay"] },
+  { label: "What you pay for", Icon: CreditCard, kind: "text", out: false, vals: ["Ad spend and your time", "Monthly fees plus ad spend", "Leads that flake", "Ad spend at cost plus a fee per booked appointment"] },
   { label: "Works while you're on the job", Icon: Clock, kind: "bin", out: false, vals: [false, false, false, true] },
-  { label: "Exclusive to you", Icon: Lock, kind: "bin", out: false, vals: [false, false, false, true] },
-  { label: "You only pay for results", Icon: LineChart, kind: "bin", out: false, vals: [false, false, false, true] },
+  { label: "Exclusive to you", Icon: Lock, kind: "bin", out: false, vals: [true, true, false, true] },
+  { label: "Bad appointments not billed", Icon: LineChart, kind: "bin", out: false, vals: [false, false, false, true] },
 ] as const;
 
 /* ============================================================================

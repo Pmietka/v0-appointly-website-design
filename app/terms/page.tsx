@@ -5,12 +5,12 @@ import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { pageMetadata } from "@/lib/seo";
 
-const lastUpdated = "March 27, 2026";
+const lastUpdated = "October 24, 2026";
 
 export const metadata: Metadata = pageMetadata({
   title: "Terms of Service | Appointly Solutions",
   description:
-    "Read the Appointly Solutions Terms of Service covering service scope, eligibility, appointment delivery, payment, liability, termination, and governing law.",
+    "Appointly Solutions Terms of Service: client funded ad spend at cost, $125 to $175 per booked appointment, the appointment quality guarantee, no show credits, territory exclusivity, data ownership, and termination.",
   path: "/terms",
   ogDescription:
     "Review the terms that govern Appointly Solutions appointment generation services.",
@@ -20,27 +20,52 @@ const sections = [
   {
     title: "Service Description",
     body:
-      "Appointly Solutions provides appointment generation services for home service contractors using a pay-per-appointment model. Services may include Meta ad campaign management, lead intake, speed-to-lead outreach, appointment booking, scheduling support, and related reporting.",
+      "Appointly Solutions provides appointment generation services for floor coating contractors. Services include Meta ad campaign management, lead intake, a text and call to every lead within one minute, qualification of the homeowner, appointment booking, reminders, and weekly reporting.",
   },
   {
     title: "Eligibility",
     body:
-      "Services are intended for United States based home service contractors that are legally able to enter into binding agreements and operate in their service areas.",
+      "Services are intended for United States and Canada based floor coating contractors that are legally able to enter into binding agreements and operate in their service areas.",
+  },
+  {
+    title: "Ad Spend",
+    body:
+      "The client funds ad spend upfront as a prefunded balance. Appointly Solutions holds the balance and uses it only for the client's campaigns, at a daily ad budget set with the client based on the results the client needs. Ad spend is drawn down at cost with no markup and reported to the client weekly. Any unused balance is returned to the client within 10 business days of termination.",
+  },
+  {
+    title: "Appointment Fees",
+    body:
+      "In addition to ad spend, the client pays a fee per booked appointment, set per client between $125 and $175 and stated in the client's service agreement. The appointment fee is invoiced separately from ad spend and is billed when the appointment is booked. There is no setup fee, no retainer, and no monthly management fee.",
+  },
+  {
+    title: "Appointment Quality Guarantee and Credits",
+    body:
+      "After each estimate, the client grades the appointment in the Appointly Solutions app. If the client grades an appointment a C and states what was wrong, such as an unqualified homeowner or a service the client does not offer, the client does not pay for that appointment, and the fee is credited automatically to the client's next appointment. If a homeowner does not show up for a booked estimate, the fee is likewise credited automatically to the client's next appointment.",
+  },
+  {
+    title: "Territory Exclusivity",
+    body:
+      "Appointly Solutions works with one floor coating contractor per market. The client's territory is defined in the client's service agreement, and while the agreement is in effect Appointly Solutions will not book floor coating appointments for another contractor in that territory. Other contractors in the territory who apply are placed on a waitlist.",
   },
   {
     title: "Appointment Delivery Terms",
     body:
-      "Appointment standards, target areas, and delivery expectations are defined during onboarding and may vary by market. Appointly Solutions will use commercially reasonable efforts to book estimates that meet agreed criteria, but close rates and job revenue remain dependent on the contractor’s own sales process and operations.",
+      "Appointment standards, target areas, and delivery expectations are defined during onboarding and may vary by market. Appointly Solutions will use commercially reasonable efforts to book estimates that meet agreed criteria, but close rates and job revenue remain dependent on the contractor's own sales process and operations.",
   },
   {
     title: "Payment Terms",
     body:
-      "Clients agree to pay the per-appointment fees according to the pricing and billing terms established in their service agreement. Late payments, disputes, and credits are handled according to the same agreement and any related written policies.",
+      "Clients agree to pay ad spend and appointment fees according to these terms and the pricing established in their service agreement. Late payments and disputes are handled according to the same agreement and any related written policies.",
+  },
+  {
+    title: "Ownership of Campaigns and Data",
+    body:
+      "The client owns the campaigns, creative, audiences, and homeowner records Appointly Solutions creates for the client. They run in the Appointly Solutions ad account and Business Manager, and they remain the client's if the relationship ends.",
   },
   {
     title: "Intellectual Property",
     body:
-      "All branding, website content, campaign materials, systems, processes, and related intellectual property created or used by Appointly Solutions remain the property of Appointly Solutions unless a written agreement states otherwise.",
+      "Apart from the client owned campaigns and data described above, Appointly Solutions branding, website content, systems, processes, and related intellectual property remain the property of Appointly Solutions unless a written agreement states otherwise.",
   },
   {
     title: "Limitation Of Liability",
@@ -50,7 +75,7 @@ const sections = [
   {
     title: "Termination",
     body:
-      "Either party may terminate the service relationship according to the applicable agreement. Upon termination, outstanding payment obligations survive, and both parties remain responsible for obligations that by nature continue after the relationship ends.",
+      "There is no long term contract. Either party may terminate the service relationship according to the applicable agreement. Upon termination, any unused ad balance is returned within 10 business days, outstanding payment obligations survive, and both parties remain responsible for obligations that by nature continue after the relationship ends.",
   },
   {
     title: "Governing Law",

@@ -36,7 +36,7 @@ const steps = [
     icon: CreditCard,
     title: "Simple, results-based pricing",
     description:
-      "You pay one flat fee for each booked estimate that lands on your calendar. No setup fee, no retainer, and no long term contract.",
+      "You fund your ad spend at cost, then pay $125 to $175 for each booked estimate that lands on your calendar. No setup fee, no retainer, and no long term contract.",
   },
 ];
 

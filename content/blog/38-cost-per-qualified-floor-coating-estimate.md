@@ -2,7 +2,7 @@
 seo_title: "Cost Per Qualified Floor Coating Estimate in 2026"
 meta_description: "What a qualified floor coating estimate costs when you call Meta leads yourself, what a booked appointment fee buys, and how to judge the number."
 date: 2026-09-17
-updated: 2026-10-13
+updated: 2026-10-24
 author: patrick
 cluster: economics
 ---
@@ -13,12 +13,12 @@ cluster: economics
 
 ---
 
-When you buy a qualified floor coating estimate as a booked appointment from a pay per appointment provider, you pay one flat fee per booked estimate, set per market. If you generate the lead yourself and do all the calling, qualifying, and scheduling in house, media alone works out to roughly $25 to $75 per booked estimate, before you pay anyone to make the calls, manage the campaigns, or chase the leads that never book. The two numbers measure different things, so judge each one against your job value and close rate.
+When you buy a qualified floor coating estimate as a booked appointment from a pay per appointment provider, you pay $125 to $175 per booked estimate, set per client, plus ad spend you fund at cost. If you generate the lead yourself and do all the calling, qualifying, and scheduling in house, media alone works out to roughly $25 to $75 per booked estimate, before you pay anyone to make the calls, manage the campaigns, or chase the leads that never book. The two numbers measure different things, so judge each one against your job value and close rate.
 
 ## Key takeaways
 
 - A qualified estimate is a confirmed time with a verified homeowner, not a form fill and not a phone number.
-- Appointly charges one flat fee per booked estimate, set per market, with no setup fee, no retainer, and no long term contract.
+- Appointly charges $125 to $175 per booked estimate, set per client, plus ad spend you fund at cost, with no setup fee, no retainer, and no long term contract.
 - Producing an estimate in house runs about $25 to $75 in media per booked estimate, plus the wage of whoever calls every lead inside a minute, including evenings and Saturdays.
 - Judge the number against your average job and close rate, not against cost per lead. At a $4,000 job and a 35% close rate, one booked estimate carries roughly $1,400 in expected revenue.
 - The in-house number is only the cheaper number if somebody is genuinely calling inside a minute. If nobody is, booking rates fall by half and the true cost per estimate doubles.
@@ -32,7 +32,7 @@ Most disagreements about cost come from people pricing four different things as 
 | Shared marketplace lead | A phone number sold to three to five contractors | $30 to $120 |
 | Exclusive form fill | A phone number only you have, not yet contacted | $15 to $45 |
 | Contacted lead | Someone answered and expressed interest | Lead cost plus calling labor |
-| Qualified booked estimate | Confirmed time, verified homeowner, in your area, expecting you | One flat fee per booked estimate |
+| Qualified booked estimate | Confirmed time, verified homeowner, in your area, expecting you | $125 to $175 per booked estimate, plus ad spend you fund at cost |
 
 A qualified estimate clears four bars at once: the person owns the property, wants floor coating work, sits inside your service area, and has agreed to a specific time that fits your route. Miss any one of those and you are driving to a conversation that was never going to become a job.
 
@@ -53,15 +53,15 @@ That last line is the one contractors leave out of the spreadsheet, and it is th
 
 ## What does Appointly Solutions charge per qualified estimate?
 
-One flat fee per booked estimate, set per market and quoted on a strategy call. The fee is billed when a qualified homeowner is booked on your calendar. No setup fee, no retainer, no monthly management fee, and no long term contract.
+$125 to $175 per booked estimate, set per client. The fee is billed when a qualified homeowner is booked on your calendar and invoiced separately from ad spend. You fund the ad spend yourself as a prefunded balance, drawn down at cost with no markup, reported weekly, with any unused balance returned within 10 business days of termination. No setup fee, no retainer, no monthly management fee, and no long term contract.
 
 Three things are worth being specific about, because they are what the number buys:
 
-**Every appointment is vetted before it reaches you.** Our team confirms property ownership, real interest in coating work, service area fit, and a time that works with your route. We specialize in floor coating, so the qualifying questions are built for garage floors, epoxy, polyaspartic, and concrete coatings rather than adapted from a generic home services script.
+**Every appointment is qualified on intent before it reaches you.** Jacob, our co-founder, makes every call himself and confirms the project goal, the look and material the homeowner wants, and a real timeline. No real timeline means it is not booked. We specialize in floor coating, so the qualifying questions are built for garage floors, epoxy, polyaspartic, and concrete coatings rather than adapted from a generic home services script.
 
 **Appointments are exclusive.** One coating contractor per market. The estimate is yours and is never sold, resold, or split with the company down the road. That is the difference explained in full in [exclusive vs shared floor coating leads](/blog/exclusive-vs-shared-floor-coating-leads).
 
-**The credit policy is generous on purpose.** If a confirmed homeowner no-shows, that appointment earns a credit toward your next appointment. If an appointment turns out unqualified or unbiddable, such as a service you do not offer, you grade it in the Appointly Solutions app with notes and pay nothing for it. You should not be paying for an estimate you could not run. The model only works when the incentive on our side is to book estimates that actually happen.
+**The appointment quality guarantee is generous on purpose.** After every estimate you grade the appointment in the Appointly app. Grade it a C and tell us what was wrong, such as an unqualified homeowner or a service you do not offer, and you do not pay for it: the fee is credited automatically to your next appointment. A no-show is credited automatically to your next appointment. You should not be paying for an estimate you could not run. The model only works when the incentive on our side is to book estimates that actually happen.
 
 ## Is paying per booked estimate a good deal?
 
@@ -85,7 +85,7 @@ There is no clever answer. There is just whether the calls get made inside a min
 
 ### How much does a qualified floor coating estimate cost?
 
-Through a pay per appointment provider like Appointly Solutions, a booked, qualified floor coating estimate costs one flat fee per estimate, set per market. If you produce estimates yourself, media alone runs about $25 to $75 per booked estimate, before the wages of whoever calls and books every lead.
+Through a pay per appointment provider like Appointly Solutions, a booked, qualified floor coating estimate costs $125 to $175 per estimate, set per client, plus ad spend you fund at cost. If you produce estimates yourself, media alone runs about $25 to $75 per booked estimate, before the wages of whoever calls and books every lead.
 
 ### What is the difference between cost per lead and cost per qualified estimate?
 
@@ -97,7 +97,7 @@ Multiply your average job value by your close rate to get expected revenue per e
 
 ### Do you pay for appointments that no-show?
 
-With Appointly, a confirmed homeowner who does not show up earns you a credit toward your next appointment. An appointment that is unqualified or unbiddable is graded in the Appointly Solutions app with notes, and you pay nothing for it. Ask any provider for their credit policy in writing before you sign anything.
+No. With Appointly, a no-show is credited automatically to your next appointment. After every estimate you grade the appointment in the Appointly app. Grade it a C and tell us what was wrong, such as an unqualified homeowner or a service you do not offer, and you do not pay for it: the fee is credited automatically to your next appointment. Ask any provider for their credit policy in writing before you sign anything.
 
 ## Ready to see the number for your market?
 

@@ -2,7 +2,7 @@
 seo_title: "Floor Coating Marketing Agency Reviews: How to Vet Them"
 meta_description: "How to read floor coating marketing agency reviews, check BBB and references, spot red flags, and compare alternatives: agencies, marketplaces, appointments."
 date: 2026-10-21
-updated: 2026-10-21
+updated: 2026-10-24
 author: patrick
 cluster: marketing-channels
 ---
@@ -120,7 +120,7 @@ Angi, HomeAdvisor, Thumbtack, and similar platforms sell homeowner requests to c
 
 ### Pay per appointment
 
-**Appointly Solutions.** That is us. We run Meta ads from our own ad account for floor and concrete coating contractors, call every homeowner within minutes, qualify them, and book the estimate on your calendar. One flat fee per booked estimate, set per market. No setup fee, no retainer, and no long-term contract. No-shows earn a credit, and appointments outside the agreed criteria are not charged. One coating contractor per market. The full comparison with the agency model is on our [marketing agency alternative](/floor-coating-marketing-agency-alternative) page.
+**Appointly Solutions.** That is us. We run Meta ads for you (and you own everything we build) for floor and concrete coating contractors, text and call every homeowner within one minute, qualify them, and book the estimate on your calendar. $125 to $175 per booked estimate, set per client, plus ad spend you fund at cost. No setup fee, no retainer, and no long-term contract. No-shows are credited automatically to your next appointment, and any appointment you grade a C in the Appointly app (with a note on what was wrong) is not paid for. One coating contractor per market. The full comparison with the agency model is on our [marketing agency alternative](/floor-coating-marketing-agency-alternative) page.
 
 **When we are not the right fit:** if you already have a setter who answers within a minute on evenings and Saturdays, a good agency or your own campaigns will likely be cheaper per floor. If you want to own the campaigns and the ad account, an agency working in your account fits that better. And if your market is already taken, we cannot take you on.
 
@@ -158,4 +158,4 @@ There are three main models: retainer and service-fee agencies that bill for mar
 
 ## Compare on what lands on your calendar
 
-Whichever company you choose, judge it by booked estimates and installed floors, not by reviews alone. If you would rather pay only when an estimate is booked, Appointly books qualified floor coating estimates for one flat fee per appointment, set per market, with one contractor per area. [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will tell you whether your market is open, and honestly whether another option on this page fits you better.
+Whichever company you choose, judge it by booked estimates and installed floors, not by reviews alone. If you would rather pay only when an estimate is booked, Appointly books qualified floor coating estimates for $125 to $175 per appointment, set per client, plus ad spend you fund at cost, with one contractor per market. [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will tell you whether your market is open, and honestly whether another option on this page fits you better.

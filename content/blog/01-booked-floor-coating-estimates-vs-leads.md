@@ -2,7 +2,7 @@
 seo_title: "Booked Floor Coating Estimates vs Leads | Appointly Solutions"
 meta_description: "Booked epoxy and floor coating estimates dropped straight on your calendar. How the pay-per-appointment model works and why contractors switch from raw leads."
 date: 2025-11-18
-updated: 2026-10-13
+updated: 2026-10-24
 author: patrick
 cluster: economics
 ---
@@ -13,13 +13,13 @@ cluster: economics
 
 ---
 
-A booked estimate is a confirmed appointment on your calendar with a homeowner who expects you to show up and quote their floor. A lead is a name and a phone number. For floor coating contractors, booked appointments beat raw leads because someone else does the calling, qualifying, and scheduling, and you pay one flat fee only when an estimate lands on your calendar.
+A booked estimate is a confirmed appointment on your calendar with a homeowner who expects you to show up and quote their floor. A lead is a name and a phone number. For floor coating contractors, booked appointments beat raw leads because someone else does the calling, qualifying, and scheduling, and you pay a fee only when an estimate lands on your calendar, on top of the ad spend you fund at cost.
 
 ## Key takeaways
 
 - A lead is a name and a number; a booked estimate is a confirmed time slot with a homeowner expecting you.
 - Calling a lead within one minute of the form submission gets about a 90% answer rate, and 60 to 70% of leads should become booked estimates.
-- With a pay-per-appointment model you pay one flat fee per booked estimate and no fee for leads that never book.
+- With a pay-per-appointment model you pay $125 to $175 per booked estimate, plus ad spend you fund at cost, with no fee for leads that never book.
 - If your average garage floor is $4,000 and you close one in three estimates, every booked appointment is worth running.
 - Judge any provider on who makes the call, how fast, and whether the demand in your market is exclusive.
 
@@ -39,10 +39,10 @@ Most traditional [marketing agencies](/floor-coating-marketing-agency-alternativ
 
 | | Monthly-fee agency | Pay per appointment |
 |---|---|---|
-| What you pay for | A flat monthly fee, calendar full or empty | One flat fee per booked estimate |
+| What you pay for | A flat monthly fee, calendar full or empty | $125 to $175 per booked estimate, plus ad spend you fund at cost |
 | What you receive | Leads handed off after the form fill | Confirmed estimates on your calendar |
 | Who calls the lead | You | The provider's calling team |
-| Contract | Usually a long lock-in | No retainer, no monthly fee, no long term contract |
+| Contract | Usually a long lock-in | No retainer, no monthly management fee, no long term contract |
 | Exclusivity | Often shared demand | One contractor per market |
 | Slow months | Still cost full price | Fewer booked estimates, fewer fees |
 
@@ -50,7 +50,7 @@ Say your average epoxy garage floor runs $4,000 and you close roughly one in thr
 
 ## What does the per-appointment fee cover?
 
-The [per-appointment fee](/pricing) is one flat fee per booked estimate, set per market. It pays for the work of putting one confirmed estimate on your calendar: the calling team, the qualifying, and the back-and-forth to lock in a time that fits your route. You pay it once per booked estimate. There is no setup fee, no retainer, and no monthly fee.
+The [per-appointment fee](/pricing) is $125 to $175 per booked estimate, set per client. You fund your ad spend separately as a prefunded balance, drawn down at cost with no markup and reported weekly, and the appointment fee is invoiced separately. The fee pays for the work of putting one confirmed estimate on your calendar: the calls (our co-founder Jacob makes every one himself), the qualifying, and the back-and-forth to lock in a time that fits your route. You pay it once per booked estimate. There is no setup fee, no retainer, and no monthly management fee.
 
 What you're buying is not a list of names or a "qualified contact." It's a scheduled estimate with a homeowner who expects you to show up and quote their floor. A contractor doing $2,500 basement floors will weigh the fee differently than one doing $9,000 showroom installs, but the structure is the same.
 
@@ -83,7 +83,7 @@ Judge a provider on who makes the call, how fast, whether the demand is exclusiv
 
 - They run the full job: generate the lead, contact it within a minute, and book the estimate
 - Clear lead source (Meta ads, meaning Facebook and Instagram, to homeowners in your area)
-- One flat fee per booked estimate, with no setup fee or retainer
+- $125 to $175 per booked estimate, plus ad spend you fund at cost, with no setup fee or retainer
 - One floor coating contractor per market
 - References from contractors doing your kind of work
 - Confirmed estimates on your calendar, not raw inquiries on a list
@@ -107,7 +107,7 @@ A lead is a name and a phone number from someone who clicked an ad or filled out
 
 ### How does pay-per-appointment pricing work for floor coating contractors?
 
-Pay-per-appointment pricing means you pay one flat fee for each booked estimate that lands on your calendar, with no fee for leads that never book. There is no retainer, no monthly fee, and no long term contract. The fee covers the calling team that reaches every lead within a minute, the qualifying, and the scheduling. You are buying scheduled estimates, not a list of names.
+Pay-per-appointment pricing means you pay $125 to $175 for each booked estimate that lands on your calendar, plus ad spend you fund at cost, with no fee for leads that never book. There is no retainer, no monthly management fee, and no long term contract. The fee covers the text and call every lead gets within one minute, the qualifying, and the scheduling. You are buying scheduled estimates, not a list of names.
 
 ### What happens if a booked floor coating estimate doesn't close?
 
@@ -123,6 +123,6 @@ Within one minute of the form submission. At that speed the phone answer rate ru
 
 ## Ready to fill your calendar with booked estimates?
 
-Stop chasing leads and start running estimates. If your average job is worth real money and you can show up and quote, [booked floor coating estimates](/floor-coating-leads) put you in front of homeowners who are expecting you, with one flat fee per appointment and no setup fee or retainer.
+Stop chasing leads and start running estimates. If your average job is worth real money and you can show up and quote, [booked floor coating estimates](/floor-coating-leads) put you in front of homeowners who are expecting you, with a fee of $125 to $175 per appointment, plus ad spend you fund at cost, with no setup fee or retainer.
 
 [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we'll walk through your market, your calendar, and how many estimates a week make sense. One contractor per market, so if your area is open, it's yours.

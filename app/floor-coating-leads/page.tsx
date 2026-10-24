@@ -29,7 +29,7 @@ const highlights = [
   },
   {
     icon: PhoneCall,
-    title: "We hit every lead instantly",
+    title: "We text and call every lead within one minute",
     description:
       "Our Meta ads generate the lead, then we contact that homeowner immediately with true speed to lead, before they ever start shopping other coating contractors.",
   },
@@ -56,7 +56,7 @@ const faqItems = [
   {
     question: "How fast do the first floor coating estimates come in?",
     answer:
-      "Most contractors see their first booked estimates within 24 to 48 hours of the campaign going live, because we contact every lead within minutes of the form submission.",
+      "Most contractors see their first booked estimates within 24 to 48 hours of the campaign going live, because every lead gets a text and a call within one minute of the form submission.",
   },
   {
     question: "Are the floor coating leads exclusive?",
@@ -73,7 +73,7 @@ const faqItems = [
 export const metadata: Metadata = pageMetadata({
   title: "Floor Coating Leads Booked as Estimates | Appointly Solutions",
   description:
-    "We book floor coating estimates onto your calendar with Meta ads and a call to every lead within minutes. Exclusive to one contractor per city.",
+    "We book floor coating estimates onto your calendar with Meta ads and a text and call to every lead within one minute. Exclusive to one contractor per market.",
   path: "/floor-coating-leads",
   ogDescription:
     "See how Appointly Solutions fills floor coating contractors' calendars with booked estimates using Meta ads and instant speed to lead.",
@@ -110,7 +110,7 @@ export default function InsulationContractorLeadsPage() {
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
                 If you want more garage floor coating, epoxy, and concrete coating jobs,
                 you need booked estimates in your service area, not raw leads to chase.
-                We run the Meta ads, hit every lead instantly, and book the appointment
+                We run the Meta ads, text and call every lead within one minute, and book the appointment
                 for you. You just show up and quote.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">

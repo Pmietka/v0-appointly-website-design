@@ -2,7 +2,7 @@
 seo_title: "Floor Coating Pricing and Margins: What Crews Make"
 meta_description: "A straight-talk breakdown of floor coating pricing, material versus labor cost, day-rate math, and the gross margins a two-person crew can actually hit."
 date: 2026-03-03
-updated: 2026-09-11
+updated: 2026-10-24
 author: patrick
 cluster: economics
 ---
@@ -102,7 +102,7 @@ When you sell those outcomes, $3,500 is a bargain. When you sell "I'll coat your
 
 A full calendar lets you quote your real number. When you're scrambling for work, you discount. A homeowner says "the one-day guys are cheaper" and you fold because you need the job to make payroll. Empty calendars create desperate pricing. That's how good contractors end up running 35 percent margins on work that should clear 55.
 
-When the calendar is already full of estimates, the math flips. You present the premium system first, hold your number, and walk away from the homeowner who only wants the cheapest bid. That's why we book estimates rather than sell leads, at one flat fee per booked appointment: you show up to a homeowner who's expecting you and [close on value](/blog/how-to-close-more-floor-coating-estimates) instead of fear. A full calendar isn't just more revenue. It's what lets you keep the margin you built the business to earn.
+When the calendar is already full of estimates, the math flips. You present the premium system first, hold your number, and walk away from the homeowner who only wants the cheapest bid. That's why we book estimates rather than sell leads, at $125 to $175 per booked appointment, plus ad spend you fund at cost: you show up to a homeowner who's expecting you and [close on value](/blog/how-to-close-more-floor-coating-estimates) instead of fear. A full calendar isn't just more revenue. It's what lets you keep the margin you built the business to earn.
 
 ## Frequently asked questions
 

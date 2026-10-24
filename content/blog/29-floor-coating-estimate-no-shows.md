@@ -2,7 +2,7 @@
 seo_title: "Cut Floor Coating Estimate No Shows From 20% to 5%"
 meta_description: "Floor coating estimates no-show at 20% with no reminders and 5% with a system. The four-part confirmation process, message wording, and what a no show costs."
 date: 2026-09-11
-updated: 2026-09-11
+updated: 2026-10-24
 author: jacob
 cluster: sales
 ---
@@ -129,4 +129,4 @@ Charging for an estimate reduces no shows but also reduces bookings, and in a ma
 
 If you book your own estimates, set up the four-part system this week: write the three texts, put the 24-hour and 1-hour sends on a schedule, and block 20 minutes each afternoon to call anyone who went quiet. Track show rate for a month and compare it to the 80% and 95% benchmarks.
 
-If you would rather not run the phones at all, our team calls every lead within about a minute, books the estimate on your calendar, and runs the confirmation and triage so the homeowner is in the garage when you arrive. See how [appointment setting for contractors](/appointment-setting-for-contractors) works, or [book a strategy call](https://client.getappointly.co/strategy-calendar) to talk through your market.
+If you would rather not run the phones at all, I text and call every lead within one minute, book the estimate on your calendar, and run the confirmation and triage so the homeowner is in the garage when you arrive. See how [appointment setting for contractors](/appointment-setting-for-contractors) works, or [book a strategy call](https://client.getappointly.co/strategy-calendar) to talk through your market.

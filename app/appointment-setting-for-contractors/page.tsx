@@ -18,7 +18,7 @@ const pillars = [
     icon: PhoneCall,
     title: "Speed to lead",
     description:
-      "We contact every floor coating lead the moment it comes in, before the homeowner can call three other contractors and start shopping around.",
+      "Every floor coating lead gets a text and a call within one minute, before the homeowner can call three other contractors and start shopping around.",
   },
   {
     icon: MessageSquareReply,
@@ -42,9 +42,14 @@ const pillars = [
 
 const faqItems = [
   {
+    question: "Who makes the calls?",
+    answer:
+      "Jacob Mietka, our co-founder, makes every call himself. He knows floor coating systems, prep, and pricing, qualifies each homeowner on intent (their project goal, the look and material they want, and a real timeline), and every call is recorded and reviewed. Your leads never go to a call center.",
+  },
+  {
     question: "How fast do you contact a new floor coating lead?",
     answer:
-      "A branded text goes out the moment the form is submitted, and a call follows within minutes. Contractors who call back within five minutes are far more likely to reach the homeowner than those who wait an hour.",
+      "Every lead gets a text and a call within one minute of submitting the form. Contractors who call back within five minutes are far more likely to reach the homeowner than those who wait an hour.",
   },
   {
     question: "What if the homeowner does not answer the first call?",
@@ -66,10 +71,10 @@ const faqItems = [
 export const metadata: Metadata = pageMetadata({
   title: "Appointment Setting for Floor Coating Contractors | Appointly Solutions",
   description:
-    "Appointly Solutions contacts every floor coating lead within minutes, follows up until they answer, and books the estimate onto your calendar. You just show up and quote.",
+    "Jacob texts and calls every floor coating lead within one minute, qualifies them on intent, and books the estimate onto your calendar. You just show up and quote.",
   path: "/appointment-setting-for-contractors",
   ogDescription:
-    "Learn how Appointly Solutions contacts every floor coating lead instantly and books the estimate onto your calendar so you just show up and quote.",
+    "Learn how Appointly Solutions texts and calls every floor coating lead within one minute and books the estimate onto your calendar so you just show up and quote.",
   keywords: [
     "appointment setting for contractors",
     "floor coating appointment setting",
@@ -102,7 +107,7 @@ export default function AppointmentSettingForContractorsPage() {
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
                 We do the complete job of filling your calendar. We run the Meta ads,
-                contact every floor coating lead the moment it lands, and book the
+                text and call every floor coating lead within one minute, and book the
                 homeowner into a time that works for you, so you walk into real
                 estimates, not cold inquiries you have to chase.
               </p>

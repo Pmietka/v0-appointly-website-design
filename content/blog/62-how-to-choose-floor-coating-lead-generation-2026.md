@@ -2,7 +2,7 @@
 seo_title: "Floor Coating Lead Generation: How to Choose in 2026"
 meta_description: "Pay per lead, pay per appointment, Angi, Google LSA or a retainer? The 4 questions every floor coating contractor should ask before hiring a lead provider."
 date: 2026-10-23
-updated: 2026-10-23
+updated: 2026-10-24
 author: patrick
 cluster: marketing-channels
 related: new-build-garage-floor-coating-customers-2026
@@ -51,7 +51,7 @@ What good looks like:
 3. Follow up on a set cadence for at least a week.
 4. A confirmation the day before and the hour before every appointment.
 
-At Appointly, we call every homeowner the moment they come in, before they can reach other companies. We qualify them, book the estimate onto your calendar and confirm it, so you only show up, bid and close.
+At Appointly, every homeowner gets a text and a call within one minute, before they can reach other companies. Jacob, our co-founder, makes every call himself. We qualify them, book the estimate onto your calendar and confirm it, so you only show up, bid and close.
 
 ### 4. What happens when an appointment is bad?
 
@@ -66,10 +66,10 @@ A fair policy means you never pay for an appointment you could not bid. This is 
 
 **How Appointly handles it:**
 
-- **We qualify on intent first.** Before an estimate hits your calendar, we confirm the project goal, the look the homeowner wants and the material. No real timeline means we cancel it before you ever see it.
+- **We qualify on intent first.** Before an estimate hits your calendar, we confirm the project goal, the look and material the homeowner wants, and a real timeline. No real timeline means we cancel it before you ever see it.
 - **You grade every appointment.** After the estimate, you or your team grade it in the Appointly app with notes.
-- **Grade it a C and you don't pay.** Unqualified homeowners, or a service you don't offer, are not billed.
-- **No shows earn a credit.** Billing happens on booking, and a no show credits you toward your next appointment.
+- **Grade it a C and you don't pay.** Grade it a C and tell us what was wrong, such as an unqualified homeowner or a service you don't offer, and the fee is credited automatically to your next appointment. That is our appointment quality guarantee.
+- **No shows are credited.** Billing happens on booking, and a no show is credited automatically to your next appointment.
 
 This guarantee came from running the business, not from a trend. You were at the estimate, so you know better than anyone whether it was real.
 
@@ -81,7 +81,7 @@ This guarantee came from running the business, not from a trend. You were at the
 | Google Local Services Ads | Google LSA | Each lead | You | Yes |
 | Retainer marketing agency | Local SEO and ads agencies | A monthly fee | You | Yes |
 | Pay per lead Meta agency | Facebook and Instagram lead agencies | Each lead | You | Yes |
-| Appointment booking agency | Appointly | Each booked estimate | The agency | Yes |
+| Appointment booking agency | Appointly | Ad spend at cost, plus each booked estimate | The agency | Yes |
 
 - **Lead marketplaces** send shared leads, so you race other crews before you even quote.
 - **Google Local Services Ads** send exclusive calls from people already searching, but volume is capped by search demand in your area.
@@ -97,11 +97,13 @@ This guarantee came from running the business, not from a trend. You were at the
 
 ## Where Appointly fits
 
-Appointly is an appointment booking agency built for floor coating contractors. We run Meta ads on Facebook and Instagram, call every homeowner fast, and book the estimate onto your calendar.
+Appointly is an appointment booking agency built for floor coating contractors. We run Meta ads on Facebook and Instagram, text and call every homeowner within one minute, and book the estimate onto your calendar.
 
-- Pricing runs $125 to $199 per booked estimate, set per company
-- You grade every appointment, and you do not pay for ones that were not a fit
-- Ad spend is prefunded by you, drawn at cost with no markup, and reported weekly
+- Ad spend is prefunded by you, drawn at cost with no markup, and reported weekly, with any unused balance returned within 10 business days of termination
+- On top of ad spend, $125 to $175 per booked appointment, set per client and invoiced separately
+- No setup fee and no retainer
+- You grade every appointment, and any appointment you grade a C is credited automatically to your next one
+- Across all our clients, 97% of booked appointments show and clients close 60% of them on average
 - No long term contract
 
 So far we have helped our clients close over 100 jobs at an average ticket of about $3,500, which adds up to over $350,000 in client revenue.
@@ -118,4 +120,4 @@ They can fill gaps, but shared leads mean you compete on speed and price from th
 
 ### What happens if a booked appointment is not qualified?
 
-With Appointly, you grade every appointment in our app. Anything unqualified or for a service you don't offer gets graded a C and is not billed.
+With Appointly, you grade every appointment in our app. Grade it a C and tell us what was wrong, such as an unqualified homeowner or a service you don't offer, and you don't pay for it: the fee is credited automatically to your next appointment.

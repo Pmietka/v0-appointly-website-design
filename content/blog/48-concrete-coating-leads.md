@@ -2,7 +2,7 @@
 seo_title: "Concrete Coating Leads: Sources, Costs, and What Qualifies"
 meta_description: "Where concrete coating contractors get leads, what each source costs, exclusive vs shared, what a qualified lead is, and how to compare on cost per floor."
 date: 2026-10-21
-updated: 2026-10-21
+updated: 2026-10-24
 author: patrick
 cluster: marketing-channels
 ---
@@ -149,4 +149,4 @@ Inside one minute if you can. At that speed about 90% of homeowners answer, and 
 
 ## If you would rather skip the leads and get the estimates
 
-Appointly runs the Meta ads for concrete and garage floor coating contractors, calls every homeowner within minutes, qualifies them on the surface and job you want, and books the estimate on your calendar. You pay one flat fee per booked estimate, set per market, with one coating contractor per area. If you have a fast in-house setter, your own ads may be the better deal, and we will tell you that. If not, see how [booked floor coating estimates](/floor-coating-leads) work, or [book a strategy call](https://client.getappointly.co/strategy-calendar) to check whether your market is open.
+Appointly runs the Meta ads for concrete and garage floor coating contractors, texts and calls every homeowner within one minute, qualifies them on the surface and job you want, and books the estimate on your calendar. You pay $125 to $175 per booked estimate, set per client, plus ad spend you fund at cost, with one coating contractor per market. If you have a fast in-house setter, your own ads may be the better deal, and we will tell you that. If not, see how [booked floor coating estimates](/floor-coating-leads) work, or [book a strategy call](https://client.getappointly.co/strategy-calendar) to check whether your market is open.

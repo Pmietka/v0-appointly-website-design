@@ -2,7 +2,7 @@
 seo_title: "Floor Coating Marketing That Books Estimates"
 meta_description: "Most floor coating marketing sells activity. You need booked estimates. The metrics that matter, what appointment-focused marketing is, and how to switch."
 date: 2026-01-06
-updated: 2026-10-13
+updated: 2026-10-24
 author: patrick
 cluster: marketing-channels
 ---
@@ -138,6 +138,6 @@ Speed to lead moves every other number because a floor coating lead is worth the
 
 ## Get booked estimates instead of reports
 
-Dashboards are a vanity metric. Booked estimates are revenue. Stop measuring marketing by what an agency wants to report and start measuring it by homeowners on your calendar, ready to talk about their floor. If you'd rather not run the ads or chase the leads, we run the Meta ads, call every lead within a minute, and book the estimate straight onto your calendar. You pay one flat fee per [booked floor coating estimate](/floor-coating-leads), with no setup fee or retainer.
+Dashboards are a vanity metric. Booked estimates are revenue. Stop measuring marketing by what an agency wants to report and start measuring it by homeowners on your calendar, ready to talk about their floor. If you'd rather not run the ads or chase the leads, we run the Meta ads, text and call every lead within one minute, and book the estimate straight onto your calendar. You pay $125 to $175 per [booked floor coating estimate](/floor-coating-leads), plus ad spend you fund at cost, with no setup fee or retainer.
 
 One contractor per market. When you want to see what that looks like in your area, [book a strategy call](https://client.getappointly.co/strategy-calendar) and we'll walk through the numbers together.

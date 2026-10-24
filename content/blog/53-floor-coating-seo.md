@@ -2,7 +2,7 @@
 seo_title: "Floor Coating SEO: A Guide for Epoxy Flooring Companies"
 meta_description: "Floor coating SEO for epoxy flooring companies: Google Business Profile, reviews, city pages, project photos, citations, timelines, and what a retainer covers."
 date: 2026-10-21
-updated: 2026-10-21
+updated: 2026-10-24
 author: jacob
 cluster: marketing-channels
 ---
@@ -199,4 +199,4 @@ It can be, if the scope is written down, reporting covers calls and form fills r
 
 ## Fill this month's calendar while SEO builds
 
-SEO is worth doing, and the coating companies that commit to it for years tend to be glad they did. It just does not book next week's estimates. Appointly Solutions does that part: we run Meta ads in your service area, call every homeowner within minutes, qualify them, and book the estimate on your calendar for one flat fee per booked estimate. We work with one floor coating contractor per market. [Book a strategy call](https://client.getappointly.co/strategy-calendar) to see whether yours is open.
+SEO is worth doing, and the coating companies that commit to it for years tend to be glad they did. It just does not book next week's estimates. Appointly Solutions does that part: we run Meta ads in your service area, text and call every homeowner within one minute, qualify them, and book the estimate on your calendar for $125 to $175 per booked estimate, plus ad spend you fund at cost. We work with one floor coating contractor per market. [Book a strategy call](https://client.getappointly.co/strategy-calendar) to see whether yours is open.

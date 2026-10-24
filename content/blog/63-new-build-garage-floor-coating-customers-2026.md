@@ -2,7 +2,7 @@
 seo_title: "New Build Homeowners: Best Floor Coating Customers in 2026"
 meta_description: "Why new construction homeowners book garage floor coatings faster, the concrete cure catch that burns contractors, and how to find new build neighborhoods in your market."
 date: 2026-10-23
-updated: 2026-10-23
+updated: 2026-10-24
 author: patrick
 cluster: marketing-channels
 related: how-to-choose-floor-coating-lead-generation-2026
@@ -80,7 +80,7 @@ The good news is that the cure window does not stop you from booking the job. Bo
 
 ## Where Appointly fits
 
-Appointly is an appointment booking agency built for floor coating contractors. We run Meta ads on Facebook and Instagram, call every homeowner within minutes, and book the estimate onto your calendar. That speed matters most with new build homeowners, because they are on a deadline and book whoever calls back first. We work with one floor coating contractor per market, you only pay for booked estimates, and you grade every appointment, so anything that was not a fit is not billed.
+Appointly is an appointment booking agency built for floor coating contractors. We run Meta ads on Facebook and Instagram, text and call every homeowner within one minute, and book the estimate onto your calendar. That speed matters most with new build homeowners, because they are on a deadline and book whoever calls back first. We work with one floor coating contractor per market. You fund your ad spend at cost and pay $125 to $175 per booked estimate, and you grade every appointment: grade one a C and tell us what was wrong, and the fee is credited automatically to your next appointment.
 
 So far we have helped our clients close over 100 jobs at an average ticket of about $3,500, which adds up to over $350,000 in client revenue.
 

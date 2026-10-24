@@ -2,7 +2,7 @@
 seo_title: "Exclusive vs Shared Floor Coating Leads in 2026"
 meta_description: "Exclusive floor coating leads go to one contractor, shared leads go to three to five. What each costs, how they close, and which one wins per installed floor."
 date: 2026-09-17
-updated: 2026-10-13
+updated: 2026-10-24
 author: patrick
 cluster: economics
 ---
@@ -60,9 +60,9 @@ Lead exclusivity without market exclusivity still leaves you competing with a co
 | | Shared leads | Exclusive leads | Exclusive booked estimates |
 | --- | --- | --- | --- |
 | Who else gets it | 3 to 5 contractors | Only you | Only you |
-| Typical unit cost | $30 to $120 per lead | $15 to $45 per Meta lead | One flat fee per booked appointment |
+| Typical unit cost | $30 to $120 per lead | $15 to $45 per Meta lead | $125 to $175 per booked appointment, plus ad spend you fund at cost |
 | Who calls and books | You, fast, or you lose | You | The provider |
-| What you pay for bad fits | Full price | Full price | No fee once graded in the app |
+| What you pay for bad fits | Full price | Full price | Grade it a C in the app and it is credited automatically |
 | Pricing pressure | Bidding war | You set the frame | You set the frame |
 | Typical close rate | 5 to 12% | 20 to 35% | 30 to 40% |
 
@@ -72,7 +72,7 @@ Cost per lead is the wrong column to read. Read the last row against the second 
 
 An exclusive booked estimate is the same exclusivity argument taken one step further. Instead of buying a name nobody else has, you buy a confirmed time with a verified homeowner who is expecting you.
 
-Appointly works this way, and we work with one floor coating contractor per market. We run the Meta campaigns from our own ad account, contact every homeowner within minutes, qualify them on ownership, project, and service area, and book the estimate into a slot that fits your route. You are billed one flat fee per booked estimate, set per market, when the estimate is booked. A no-show earns a credit toward your next appointment, and an unqualified appointment is graded in the Appointly Solutions app and you pay nothing for it.
+Appointly works this way, and we work with one floor coating contractor per market. We run the Meta campaigns for you (and you own everything we build), text and call every homeowner within one minute, qualify them on intent (project goal, look and material, and a real timeline), and book the estimate into a slot that fits your route. You fund your ad spend at cost, and you are billed $125 to $175 per booked estimate, set per client, when the estimate is booked. A no-show is credited automatically to your next appointment. After every estimate you grade the appointment in the Appointly app. Grade it a C and tell us what was wrong, such as an unqualified homeowner or a service you do not offer, and you do not pay for it: the fee is credited automatically to your next appointment.
 
 That last point is where exclusivity stops being a marketing word and turns into a number on your invoice: you pay the appointment fee only when a qualified homeowner is booked.
 
@@ -100,7 +100,7 @@ An exclusive lead is a form fill sold only to you. An exclusive market means the
 
 ### Does Appointly Solutions sell shared leads?
 
-No. Every booked estimate is exclusive to one contractor and is never resold or split. We work with one floor coating contractor per market, so the appointments generated in your service area go to you alone.
+No. Every booked estimate is exclusive to one contractor and is never resold or split. We work with one floor coating contractor per market, written into your service agreement, so the appointments generated in your service area go to you alone. If another contractor in your market applies, they go on a waitlist.
 
 ## Want your market held for one contractor?
 

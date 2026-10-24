@@ -2,7 +2,7 @@
 seo_title: "Winter Marketing Plan for Floor Coating Contractors"
 meta_description: "A month-by-month winter marketing plan for floor coating contractors in cold markets: what to run, what to pause, and when to restart ads before spring."
 date: 2026-09-11
-updated: 2026-09-11
+updated: 2026-10-24
 author: patrick
 cluster: marketing-channels
 ---
@@ -124,4 +124,4 @@ The best winter offer for a floor coating contractor is a locked spring install 
 
 The contractors with a full April kept a small campaign running in January, sold spring dates and interior floors, and turned the budget back up in February. The ones who paused in December and restarted on the first warm day are still waiting for the phone in May.
 
-If you would rather not manage the winter taper and the February restart yourself, we run the ads and book the estimates on your calendar year round, and you pay per [booked floor coating estimate](/floor-coating-leads) rather than per lead. [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will look at your market's install window together.
+If you would rather not manage the winter taper and the February restart yourself, we run the ads and book the estimates on your calendar year round, and you fund your ad spend at cost and pay per [booked floor coating estimate](/floor-coating-leads) rather than per lead. [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will look at your market's install window together.

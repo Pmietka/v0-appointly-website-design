@@ -313,7 +313,7 @@ export default async function GuidePage({
                   Show up and run the estimate. We handle the rest.
                 </h2>
                 <p className="mt-4 text-sm leading-7 text-slate-700">
-                  We run the Meta ads, call every homeowner within minutes, and book the
+                  We run the Meta ads, text and call every homeowner within one minute, and book the
                   estimate on your calendar. One floor coating contractor per market.
                 </p>
                 <a

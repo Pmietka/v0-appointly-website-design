@@ -2,7 +2,7 @@
 seo_title: "How Much Does a Floor Coating Business Make? The Real Math"
 meta_description: "How much a floor coating business makes, from jobs per week, average ticket, seasonality, margin, and overhead, for part time, one crew, and two crew shops."
 date: 2026-10-21
-updated: 2026-10-21
+updated: 2026-10-24
 author: jacob
 cluster: economics
 ---
@@ -174,6 +174,6 @@ No. BLS publishes wages for employees in related trades, such as a $49,400 media
 
 ## Keep the first input full
 
-Every row in these tables starts with floors per week, and floors per week starts with booked estimates. Appointly runs the Meta ads from its own ad account, calls every homeowner within minutes, qualifies them, and books the estimate on your calendar, for one flat fee per booked estimate and with one floor coating contractor per market. We are not the right fit if you can only run estimates on weekends, or if your install is not repeatable yet.
+Every row in these tables starts with floors per week, and floors per week starts with booked estimates. Appointly runs the Meta ads for you (and you own everything it builds), texts and calls every homeowner within one minute, qualifies them, and books the estimate on your calendar, for $125 to $175 per booked estimate, plus ad spend you fund at cost, with one floor coating contractor per market. We are not the right fit if you can only run estimates on weekends, or if your install is not repeatable yet.
 
 If you want to run this model against your own crew, [book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open and how many estimates a week your calendar can take.

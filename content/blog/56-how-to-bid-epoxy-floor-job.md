@@ -2,7 +2,7 @@
 seo_title: "How to Bid an Epoxy Floor Job (Free Estimate Template)"
 meta_description: "How to bid an epoxy floor job step by step: measuring, concrete checks, prep, materials, labor, overhead, and margin, plus a two car garage estimate template."
 date: 2026-10-21
-updated: 2026-10-21
+updated: 2026-10-24
 author: patrick
 cluster: sales
 ---
@@ -202,6 +202,6 @@ For most residential garages, diamond grinding is the practical choice. It works
 
 ## Bid with confidence when the calendar is full
 
-The best bid in the world does not help if you are not standing in enough garages to give it. Appointly Solutions books qualified floor coating estimates for contractors: we run the Meta ads, call every homeowner within minutes, qualify them, and put the estimate on your calendar for one flat fee per booked estimate. No setup fee, no retainer, one floor coating contractor per market.
+The best bid in the world does not help if you are not standing in enough garages to give it. Appointly Solutions books qualified floor coating estimates for contractors: we run the Meta ads, text and call every homeowner within one minute, qualify them, and put the estimate on your calendar for $125 to $175 per booked estimate, plus ad spend you fund at cost. No setup fee, no retainer, one floor coating contractor per market.
 
 If you want more garages to bid on, [book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open.

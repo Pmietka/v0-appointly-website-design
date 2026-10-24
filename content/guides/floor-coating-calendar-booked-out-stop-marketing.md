@@ -2,7 +2,7 @@
 seo_title: "Floor Coating Calendar Booked Out? Don't Stop Marketing"
 meta_description: "Usually not. When your floor coating calendar is booked out, turn ads down instead of off, tighten your area, sell install dates with a deposit, and keep reminders on."
 date: 2026-10-08
-updated: 2026-10-08
+updated: 2026-10-24
 author: jacob
 cluster: marketing-channels
 situation: growing
@@ -118,4 +118,4 @@ Sell the install date with a deposit and run a full reminder sequence. Confirm a
 
 Being booked out is a good problem until the backlog runs dry. The goal is a steady flow of estimates your crew can actually handle, not a feast followed by a famine.
 
-Appointly runs the Meta ads, calls every homeowner within minutes, educates and qualifies them, and books confirmed estimates on your calendar with reminders built in. We work with one floor coating contractor per market. If you are booked out for the foreseeable future and do not plan to add capacity, we are probably not what you need right now, and that is fine. [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, how many estimates a week your crew can really run, and how far out your calendar can book without estimates slipping.
+Appointly runs the Meta ads, texts and calls every homeowner within one minute, educates and qualifies them, and books confirmed estimates on your calendar with reminders built in. We work with one floor coating contractor per market. If you are booked out for the foreseeable future and do not plan to add capacity, we are probably not what you need right now, and that is fine. [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, how many estimates a week your crew can really run, and how far out your calendar can book without estimates slipping.

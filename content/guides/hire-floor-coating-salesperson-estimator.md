@@ -2,7 +2,7 @@
 seo_title: "Should I Hire a Floor Coating Salesperson or Estimator?"
 meta_description: "Hire an estimator when you are the bottleneck, have enough estimates to keep someone busy, and a written process exists. Then track close rate by estimator."
 date: 2026-10-08
-updated: 2026-10-08
+updated: 2026-10-24
 author: patrick
 cluster: sales
 situation: growing
@@ -122,6 +122,6 @@ Long enough to judge them on a fair number of estimates from the same lead sourc
 
 An estimator only pays off when their calendar is full of homeowners who show up, own the home, and already understand the product.
 
-Appointly runs the Meta ads, calls every floor coating lead within minutes, educates and qualifies the homeowner, and books confirmed estimates on your calendar, so you or your estimator only show up and sell. We work with one floor coating contractor per market. If your close rate is the real problem, or you do not have the crew to install more floors, more estimates will not help, and we will tell you that.
+Appointly runs the Meta ads, texts and calls every floor coating lead within one minute, educates and qualifies the homeowner, and books confirmed estimates on your calendar, so you or your estimator only show up and sell. We work with one floor coating contractor per market. If your close rate is the real problem, or you do not have the crew to install more floors, more estimates will not help, and we will tell you that.
 
 [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, your service area, how many estimates a week your estimators and crew can handle, and how your close rate compares across the people running estimates.

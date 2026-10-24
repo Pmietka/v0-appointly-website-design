@@ -2,7 +2,7 @@
 seo_title: "Floor Coating Lead to Appointment Rate: What Is Good"
 meta_description: "Lead to appointment rate for floor coating contractors should be 60 to 70%. How to calculate it, why a low rate is a speed or creative problem, and the fixes."
 date: 2026-09-11
-updated: 2026-09-11
+updated: 2026-10-24
 author: patrick
 cluster: economics
 ---
@@ -116,4 +116,4 @@ Yes, on lead quality. The native lead form pre-fills the homeowner's details and
 
 Pull last month's leads and last month's booked estimates, do the division, and compare it to 60 to 70%. If you are under, check answer rate first. If most of your calls go to voicemail, the problem is speed, and the fix is a person on the phones within a minute of every form, seven days a week.
 
-If you would rather have that person be our team, we run the ads, call every lead within about a minute, and book the estimate on your calendar for one flat fee per booked appointment. See how it works for [floor coating contractors](/floor-coating-leads), or [book a strategy call](https://client.getappointly.co/strategy-calendar) and we will walk through the numbers for your market.
+If you would rather have that person be our team, we run the ads, text and call every lead within one minute, and book the estimate on your calendar for $125 to $175 per booked appointment, plus ad spend you fund at cost. See how it works for [floor coating contractors](/floor-coating-leads), or [book a strategy call](https://client.getappointly.co/strategy-calendar) and we will walk through the numbers for your market.

@@ -2,7 +2,7 @@
 seo_title: "How Coating Companies Keep Crews Busy in Winter"
 meta_description: "Cold market coating crews stay busy in winter with indoor floors, cold rated systems used within spec, spring jobs pre-sold with deposits, and a cash plan for crew."
 date: 2026-10-07
-updated: 2026-10-07
+updated: 2026-10-24
 author: patrick
 cluster: operations
 situation: slow-season
@@ -124,6 +124,6 @@ Florida, the Gulf Coast, and the Carolinas book year round, so the cold market w
 
 A busy winter comes from indoor floors, honest use of cold rated systems, spring deposits, and cash set aside in season. None of that requires an agency.
 
-When you want the spring calendar filled with qualified homeowners, Appointly runs the Meta ads, calls every lead within minutes, and educates and qualifies them, and books confirmed estimates for one floor coating contractor per market.
+When you want the spring calendar filled with qualified homeowners, Appointly runs the Meta ads, texts and calls every lead within one minute, and educates and qualifies them, and books confirmed estimates for one floor coating contractor per market.
 
 [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, how many spring estimates your crew can take, and when to start booking them.

@@ -2,7 +2,7 @@
 seo_title: "How to Replace Angi and HomeAdvisor Leads for Epoxy"
 meta_description: "To replace Angi and HomeAdvisor leads, track cost per installed floor for 30 days, build a second channel that books estimates, then taper over 60 to 90 days."
 date: 2026-10-07
-updated: 2026-10-07
+updated: 2026-10-24
 author: jacob
 cluster: marketing-channels
 situation: shared-leads
@@ -130,6 +130,6 @@ Yes. A booked appointment service runs the ads and the calls and puts confirmed 
 
 Getting off Angi and HomeAdvisor is a 60 to 90 day project: track, build, taper. The hardest part is building the new channel while you are still on the trucks.
 
-Appointly runs Meta ads from its own ad account, calls every homeowner within minutes, educates and qualifies them, and books confirmed floor coating estimates on your calendar. Appointments are [exclusive to one contractor per market](/exclusive-floor-coating-leads) and are never shared or resold. If your market is already taken, or you want to run your own ads, we will say so.
+Appointly runs Meta ads for you (and you own everything it builds), texts and calls every homeowner within one minute, educates and qualifies them, and books confirmed floor coating estimates on your calendar. Appointments are [exclusive to one contractor per market](/exclusive-floor-coating-leads) and are never shared or resold. If your market is already taken, or you want to run your own ads, we will say so.
 
 [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, how many estimates a week your crew can run, and how to time your marketplace taper so the calendar stays full.

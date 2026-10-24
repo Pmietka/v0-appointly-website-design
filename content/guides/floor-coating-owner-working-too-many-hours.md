@@ -2,7 +2,7 @@
 seo_title: "Floor Coating Owner Working 70 Hours? Hand This Off First"
 meta_description: "Hand off calling and booking new leads first. About 90% of homeowners answer a call within one minute, and you can't make it from a grinder. Estimates go last."
 date: 2026-10-08
-updated: 2026-10-08
+updated: 2026-10-24
 author: patrick
 cluster: operations
 situation: hates-chasing
@@ -117,6 +117,6 @@ Yes, but last. Hand off estimates only when you have a written process, you know
 
 If you are working 70 hours a week, the fastest hours to get back are the ones you spend calling, chasing, and booking. That job has to happen in minutes, and it is the one you are worst placed to do from a job site.
 
-Appointly runs the Meta ads, calls every floor coating lead within minutes, educates and qualifies the homeowner, and books a confirmed estimate on your calendar, with one floor coating contractor per market. You show up and run the estimate. If your crew is already full, or your close rate needs work first, we will tell you, because more estimates will not fix either one.
+Appointly runs the Meta ads, texts and calls every floor coating lead within one minute, educates and qualifies the homeowner, and books a confirmed estimate on your calendar, with one floor coating contractor per market. You show up and run the estimate. If your crew is already full, or your close rate needs work first, we will tell you, because more estimates will not fix either one.
 
 [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, your service area, how many estimates a week your crew can run, and which estimate times fit your install schedule.

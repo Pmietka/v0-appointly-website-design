@@ -2,7 +2,7 @@
 seo_title: "Floor Coating Referrals Dried Up? A 30 Day Plan"
 meta_description: "When floor coating referrals dry up, work past customers in week 1, reviews and Google in week 2, then Meta ads with a landing page and calls within a minute."
 date: 2026-10-08
-updated: 2026-10-08
+updated: 2026-10-24
 author: jacob
 cluster: marketing-channels
 situation: referrals-dried-up
@@ -120,6 +120,6 @@ No. Ads reach homeowners outside your referral circle, and every polyaspartic or
 
 ## Referrals slowed down and the calendar has gaps?
 
-If you have done the past customer calls and the reviews and you need new homeowners on the calendar, the part that decides the result is the first call. Appointly runs the Meta ads from its own ad account, calls every homeowner lead within minutes, educates and qualifies them, and books confirmed estimates on your calendar. We work with one floor coating contractor per market.
+If you have done the past customer calls and the reviews and you need new homeowners on the calendar, the part that decides the result is the first call. Appointly runs the Meta ads for you (and you own everything it builds), texts and calls every homeowner lead within one minute, educates and qualifies them, and books confirmed estimates on your calendar. We work with one floor coating contractor per market.
 
 If your referrals are still strong and you only need a few more jobs, the 30 day plan above may be all you need, and you should start there. [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, how wide your service area should be, and how many estimates a week your crew can run on top of the referral work you still get.

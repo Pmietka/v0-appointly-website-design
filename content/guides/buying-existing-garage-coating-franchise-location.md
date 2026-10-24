@@ -2,7 +2,7 @@
 seo_title: "Buy an Existing Garage Coating Franchise or Start New?"
 meta_description: "Buy an existing coating franchise only if its territory, reviews, and crew transfer. Read FDD Item 17 with an attorney and check 90 days of leads before you offer."
 date: 2026-10-08
-updated: 2026-10-08
+updated: 2026-10-24
 author: jacob
 cluster: economics
 situation: franchise
@@ -118,6 +118,6 @@ Sometimes. Reviews on the location's own profile usually stay, but check who con
 
 ## Buying a location that needs more booked estimates?
 
-If the lead log shows real demand and a follow up process that let it down, the fix starts with the first call. Appointly runs Meta ads from its own ad account, calls every homeowner lead within minutes, educates and qualifies them, and books confirmed estimates on your calendar. We work with one floor coating contractor per market.
+If the lead log shows real demand and a follow up process that let it down, the fix starts with the first call. Appointly runs Meta ads for you (and you own everything it builds), texts and calls every homeowner lead within one minute, educates and qualifies them, and books confirmed estimates on your calendar. We work with one floor coating contractor per market.
 
 We are not the right fit for every franchisee. Some agreements restrict outside marketing or require approved vendors, and if the real problem is reputation or a crew that left, more estimates will not fix it. [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, what your franchise agreement allows for local marketing, and how many estimates a week the crew you are inheriting can run.

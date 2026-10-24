@@ -2,7 +2,7 @@
 seo_title: "When to Add a Second Floor Coating Crew"
 meta_description: "Add a second crew when the install backlog holds month after month and your leads can already feed two crews. Fix show rate first: 80% with no reminders, 95% with."
 date: 2026-10-08
-updated: 2026-10-08
+updated: 2026-10-24
 author: jacob
 cluster: operations
 situation: growing
@@ -120,6 +120,6 @@ Hiring before demand is steady. A second polyaspartic crew splitting one crew's 
 
 The hard part of a second crew is not hiring. It is keeping two crews full every week, which means roughly double the booked estimates, showing up at a high rate, from homeowners who already understand the product.
 
-Appointly runs the Meta ads, calls every floor coating lead within minutes, educates and qualifies the homeowner, and books confirmed estimates on your calendar with reminders, with one floor coating contractor per market. If your bottleneck is estimate time or close rate rather than lead flow, more estimates will not help, and we will say so.
+Appointly runs the Meta ads, texts and calls every floor coating lead within one minute, educates and qualifies the homeowner, and books confirmed estimates on your calendar with reminders, with one floor coating contractor per market. If your bottleneck is estimate time or close rate rather than lead flow, more estimates will not help, and we will say so.
 
 [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, your service area, how many estimates a week one crew and two crews would need, and whether your current show rate is hiding capacity.

@@ -2,7 +2,7 @@
 seo_title: "Floor Coating Jobs Without Chasing Leads All Day"
 meta_description: "Chasing comes from slow calls, low intent sources, and native lead forms. Fix the source, hire a setter, or buy booked estimates. Someone still calls in 1 minute."
 date: 2026-10-07
-updated: 2026-10-07
+updated: 2026-10-24
 author: jacob
 cluster: sales
 situation: hates-chasing
@@ -122,6 +122,6 @@ That depends on your crew's capacity and close rate, not on how many leads you c
 
 If you want to keep running your own ads, fix the source and the speed first. That alone ends most chasing. If you are past that and still dialing from the slab, move the first call to someone else.
 
-Appointly runs the Meta ads from its own account, calls every homeowner within minutes, educates and qualifies them, and books confirmed estimates on your calendar. It is not the right fit if you would rather own every call, or if your close rate is too low to turn booked estimates into installed floors.
+Appointly runs the Meta ads for you (and you own everything it builds), texts and calls every homeowner within one minute, educates and qualifies them, and books confirmed estimates on your calendar. It is not the right fit if you would rather own every call, or if your close rate is too low to turn booked estimates into installed floors.
 
 [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, where your leads are going cold today, and how many estimates a week your crew can run.

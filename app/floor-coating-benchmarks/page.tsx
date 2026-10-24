@@ -25,13 +25,13 @@ const bookingUrl = "https://client.getappointly.co/strategy-calendar";
 
 // Refresh these two lines every quarter when the numbers are re-pulled.
 const publishedAt = new Date("2026-09-11T12:00:00Z");
-const updatedAt = new Date("2026-09-11T12:00:00Z");
-const updatedLabel = "September 2026";
+const updatedAt = new Date("2026-10-24T12:00:00Z");
+const updatedLabel = "October 2026";
 
 const pageTitle = "Floor Coating Lead and Sales Benchmarks";
 const seoTitle = "Floor Coating Lead and Sales Benchmarks (2026) | Appointly Solutions";
 const description =
-  "Lead to appointment rate, phone answer rate, show rate, price per square foot, and seasonality benchmarks for garage floor coating contractors, from live Appointly accounts. Updated September 2026.";
+  "Lead to appointment rate, phone answer rate, show rate, price per square foot, and seasonality benchmarks for garage floor coating contractors, from live Appointly accounts. Updated October 2026.";
 
 export const metadata: Metadata = {
   title: seoTitle,
@@ -118,6 +118,7 @@ const benchmarks: Benchmark[] = [
     body: [
       "With no reminders and no triage, roughly four out of five booked estimates show. That sounds acceptable until you count the fifth one: an afternoon blocked off, a drive across town, and no quote at the end of it.",
       "With a confirmation at booking, a reminder 24 hours out, a reminder one hour out, and a person following up on the ones that stop responding, show rate should sit around 95%. Put another way, the no show rate is 20% without a system and 5% with one. The reminders are cheap. The empty driveway is not.",
+      "Across all Appointly clients, 97% of booked appointments show. Every homeowner is qualified on intent before booking (project goal, the look and material they want, and a real timeline), then confirmed and reminded, and any no show is credited automatically to the client's next appointment.",
     ],
     driver: "Confirmation, reminders, and triage",
   },
@@ -125,11 +126,11 @@ const benchmarks: Benchmark[] = [
     id: "close-rate",
     index: "04",
     label: "Close rate",
-    stat: "Varies",
-    statNote: "Set by product and sales skill",
-    heading: "Close rate: depends on the product and the estimator",
+    stat: "60%",
+    statNote: "Average across Appointly clients; varies by product and seller",
+    heading: "Close rate: 60% across Appointly clients, set by the product and the estimator",
     answer:
-      "There is no single close rate benchmark for floor coating estimates, because close rate moves with the product being sold and how well the estimator sells it.",
+      "Appointly clients close 60% of the appointments we book on average, across markets and products. There is still no single close rate benchmark for floor coating estimates, because close rate moves with the product being sold and how well the estimator sells it.",
     body: [
       "Two contractors can run the same ads, book the same number of estimates, and close very different shares of them. One is selling a two day epoxy system in a price sensitive market. The other is selling full polyaspartic in a wealthy metro. One has a process for the estimate. The other is winging it.",
       "The pattern we see is consistent: owners who get coached on what works in a floor coating estimate close meaningfully better than owners running on instinct. The objections repeat. The one day guys are cheaper. I need to talk to my spouse. I am just getting quotes. Each one has a known answer, and estimators who have that answer ready close more floors.",
@@ -227,9 +228,9 @@ const headlineStats = [
   },
   {
     href: "#show-rate",
-    stat: "95%",
-    label: "Show rate with reminders",
-    note: "Versus 80% with no reminder system",
+    stat: "97%",
+    label: "Show rate, Appointly clients",
+    note: "Versus about 80% with no reminder system",
   },
   {
     href: "#price-per-square-foot",
@@ -244,8 +245,9 @@ const quickReference = [
   { metric: "Phone answer rate", target: "90%", driver: "Speed to lead" },
   { metric: "Show rate, no reminders", target: "80%", driver: "None. This is the baseline" },
   { metric: "Show rate, with reminders", target: "95%", driver: "Confirmation, 24 hour and 1 hour reminders, triage" },
+  { metric: "Show rate, Appointly clients", target: "97%", driver: "Qualifying on intent, confirmation, reminders" },
   { metric: "No show rate", target: "20% without a system, 5% with", driver: "Reminder system" },
-  { metric: "Close rate", target: "Varies", driver: "Product and sales coaching" },
+  { metric: "Close rate", target: "60% across Appointly clients; varies by product", driver: "Product and sales coaching" },
   { metric: "Price per square foot", target: "$5 to $8", driver: "Market saturation and coating system" },
   { metric: "Homeowner share of leads", target: "100%", driver: "Ad creative" },
   { metric: "Booking season", target: "Year round in the South", driver: "Climate and cold weather capability" },
@@ -265,12 +267,12 @@ const faqItems: FaqItem[] = [
   {
     question: "What show rate should a floor coating contractor expect on booked estimates?",
     answer:
-      "Expect about 80% of booked floor coating estimates to show with no reminders, and about 95% with a confirmation at booking, a reminder 24 hours out, a reminder 1 hour out, and someone following up on homeowners who go quiet. That is a 20% no show rate without a system and 5% with one.",
+      "Expect about 80% of booked floor coating estimates to show with no reminders, and about 95% with a confirmation at booking, a reminder 24 hours out, a reminder 1 hour out, and someone following up on homeowners who go quiet. That is a 20% no show rate without a system and 5% with one. Across all Appointly clients, 97% of booked appointments show.",
   },
   {
     question: "What is the average close rate on floor coating estimates?",
     answer:
-      "There is no single close rate benchmark for floor coating estimates. Close rate depends on the product being sold and how well the estimator sells it. Contractors who are coached on handling the common objections close meaningfully better than contractors running on instinct.",
+      "Appointly clients close 60% of the appointments we book on average, across markets and products. Beyond that there is no single close rate benchmark for floor coating estimates: close rate depends on the product being sold and how well the estimator sells it. Contractors who are coached on handling the common objections close meaningfully better than contractors running on instinct.",
   },
   {
     question: "How much does garage floor coating cost per square foot in 2026?",

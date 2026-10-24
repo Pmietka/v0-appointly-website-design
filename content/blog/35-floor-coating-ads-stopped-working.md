@@ -2,7 +2,7 @@
 seo_title: "Why Your Floor Coating Ads Stopped Working"
 meta_description: "Floor coating ads stopped working? The usual cause is creative fatigue or slow follow-up, not the platform. A step-by-step diagnosis and how to refresh creative."
 date: 2026-09-11
-updated: 2026-09-11
+updated: 2026-10-24
 author: patrick
 cluster: marketing-channels
 ---
@@ -103,6 +103,6 @@ Raising the budget on a fatigued floor coating ad makes the problem worse. More 
 
 ## Fix the phone first, then the creative
 
-Work the list in order: speed to lead, lead quality, frequency and creative age, landing page, season. Most of the time the answer is in the first three. If you would rather not run the ads or the phone at all, [see how we book floor coating estimates](/floor-coating-leads) with our own creative, our own landing page, and a calling team that reaches every lead in about a minute.
+Work the list in order: speed to lead, lead quality, frequency and creative age, landing page, season. Most of the time the answer is in the first three. If you would rather not run the ads or the phone at all, [see how we book floor coating estimates](/floor-coating-leads) with our own creative, our own landing page, and a text and a call to every lead within one minute.
 
 For a second set of eyes on your account before you change anything, [book a strategy call](https://client.getappointly.co/strategy-calendar). We will walk through the same five checks with your numbers and tell you honestly whether the ads are the problem.

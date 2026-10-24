@@ -2,7 +2,7 @@
 seo_title: "Exclusive Floor Coating Estimates: What to Look For"
 meta_description: "Exclusive, booked floor coating estimates with one contractor per market. Why exclusivity wins, how speed to lead works, and red flags in lead gen contracts."
 date: 2025-11-25
-updated: 2026-10-13
+updated: 2026-10-24
 author: patrick
 cluster: economics
 ---
@@ -13,7 +13,7 @@ cluster: economics
 
 ---
 
-Exclusive floor coating estimates are booked appointments where the demand in your market goes to one contractor only. When a homeowner's information is sold to three coating companies, you're quoting against everyone before you open your truck and price becomes the only thing that matters. Look for a provider that names one contractor per market, calls every lead within a minute, and charges one flat fee per booked estimate.
+Exclusive floor coating estimates are booked appointments where the demand in your market goes to one contractor only. When a homeowner's information is sold to three coating companies, you're quoting against everyone before you open your truck and price becomes the only thing that matters. Look for a provider that names one contractor per market, calls every lead within a minute, and charges $125 to $175 per booked estimate, plus ad spend you fund at cost.
 
 ## Key takeaways
 
@@ -65,9 +65,9 @@ The biggest red flag is a provider that sells "leads" and calls them appointment
 
 ## How does pricing for exclusive booked estimates work?
 
-You pay one flat fee per booked estimate, set per market, billed when the estimate lands on your calendar. No setup fee, no retainer, no monthly fee, no long term contract.
+You pay $125 to $175 per booked estimate, set per client, plus ad spend you fund at cost, billed when the estimate lands on your calendar. No setup fee, no retainer, no monthly management fee, no long term contract.
 
-That fee covers the booking work: the calling team that reaches every lead within a minute, qualifying the homeowner on service area and project scope, and the back-and-forth to book each estimate into a slot that fits your route. You are paying for a confirmed time with a homeowner who expects you to walk their garage or basement, not for a name on a list.
+That fee covers the booking work: a text and a call to every lead within one minute, qualifying the homeowner on intent (project goal, look and material, and a real timeline), and the back-and-forth to book each estimate into a slot that fits your route. You are paying for a confirmed time with a homeowner who expects you to walk their garage or basement, not for a name on a list.
 
 Any provider you talk to should be able to explain their structure that cleanly in ten minutes. If they can't, that's your answer.
 
@@ -80,7 +80,7 @@ A real provider can name its lead source, contacts leads in minutes, books the e
 3. **They book the estimate for you.** You shouldn't be dialing anybody. You open your calendar and the estimate is already there.
 4. **They guarantee exclusivity.** One floor coating contractor per market. Make them say it plainly and put it in writing.
 5. **They have contractor references.** Call them. Ask how many estimates actually show up and whether they'd do it again.
-6. **The agreement is simple.** One flat fee per booked estimate, exclusivity in your market, no long term contract.
+6. **The agreement is simple.** $125 to $175 per booked estimate, plus ad spend you fund at cost, exclusivity in your market, no long term contract.
 
 ## What calculation actually matters?
 
@@ -106,7 +106,7 @@ No. With a booked-appointment model, the provider generates the lead through Met
 
 ### How are exclusive booked floor coating estimates priced?
 
-You pay one flat fee per booked estimate, set per market, billed when the estimate lands on your calendar. There is no setup fee, no retainer, no monthly fee, and no long term contract. That fee covers the calling team, the qualifying, and the scheduling. You are paying for confirmed estimates with homeowners who expect you, not for a list of names.
+You pay $125 to $175 per booked estimate, set per client, plus ad spend you fund at cost, billed when the estimate lands on your calendar. There is no setup fee, no retainer, no monthly management fee, and no long term contract. You fund your ad spend separately as a prefunded balance, drawn down at cost with no markup and reported weekly, and the appointment fee is invoiced separately. The fee covers the calls, the qualifying, and the scheduling. You are paying for confirmed estimates with homeowners who expect you, not for a list of names.
 
 ### What should I ask a floor coating lead provider before signing?
 
@@ -114,6 +114,6 @@ Ask four things: where the leads come from, how fast a new lead is contacted, wh
 
 ## Get exclusive, booked floor coating estimates
 
-Stop splitting demand with the crew across town. [Exclusive floor coating estimates](/exclusive-floor-coating-leads) put you in front of homeowners who chose you, with one contractor per market and one flat fee per booked estimate.
+Stop splitting demand with the crew across town. [Exclusive floor coating estimates](/exclusive-floor-coating-leads) put you in front of homeowners who chose you, with one contractor per market and $125 to $175 per booked estimate, plus ad spend you fund at cost.
 
 [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we'll check whether your market is open and what a realistic week of estimates looks like for your crew.

@@ -2,7 +2,7 @@
 seo_title: "Fall Marketing Plan for Floor Coating Contractors"
 meta_description: "A fall marketing plan for floor coating contractors: how to fill September through November before cold weather closes the install window, and what to run each month."
 date: 2026-09-30
-updated: 2026-09-30
+updated: 2026-10-24
 author: patrick
 cluster: marketing-channels
 ---
@@ -134,6 +134,6 @@ Avoid percentage discounts. They train homeowners to wait and cut into the margi
 
 ## Fill the fall calendar without chasing leads
 
-Appointly Solutions runs the Meta ads, calls every homeowner within minutes, and books confirmed floor coating estimates onto your calendar. We work with one contractor per market.
+Appointly Solutions runs the Meta ads, texts and calls every homeowner within one minute, and books confirmed floor coating estimates onto your calendar. We work with one contractor per market.
 
 [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, what a booked estimate costs in your area, and how many fall install days you have left to fill.

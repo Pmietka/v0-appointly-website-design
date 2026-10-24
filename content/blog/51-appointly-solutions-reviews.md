@@ -2,7 +2,7 @@
 seo_title: "Appointly Solutions Reviews: What Clients Report"
 meta_description: "Appointly Solutions reviews from published client case studies: how the model works, what floor coating owners report, the honest limits, and how to verify it."
 date: 2026-10-21
-updated: 2026-10-21
+updated: 2026-10-24
 author: patrick
 cluster: marketing-channels
 ---
@@ -13,13 +13,13 @@ cluster: marketing-channels
 
 ---
 
-If you are searching for Appointly Solutions reviews, the most useful thing we can give you is what our floor coating clients have said on the record, with their names, their markets, and their calendars attached. Three published case studies report close rates of 50 to 70% on the estimates we booked, and the owners explain those numbers in their own words on video. This page pulls that together, along with the limits of the model and how to check every claim yourself before you sign anything.
+If you are searching for Appointly Solutions reviews, the most useful thing we can give you is what our floor coating clients have said on the record, with their names, their markets, and their calendars attached. Across all our clients, 97% of booked appointments show up and our clients close 60% of them on average, across markets and products. Three published case studies, at close rates of 50 to 70%, show what that looks like, and the owners explain their numbers in their own words on video. This page pulls that together, along with the limits of the model and how to check every claim yourself before you sign anything.
 
 **Disclosure:** Appointly Solutions publishes this page, so read it as our account of what clients have told us, not as an independent review. We have not added star ratings or review counts, and every quote below is copied word for word from an interview or an approved client testimonial.
 
 ## Key takeaways
 
-- Our three published case studies report close rates of about 70%, 57%, and 50% on booked estimates, at average jobs of $3,500 to $5,000 where the client shared it.
+- Across all our clients, 97% of booked appointments show and clients close 60% on average. Our three published case studies report close rates of about 70%, 57%, and 50% on booked estimates, at average jobs of $3,500 to $5,000 where the client shared it.
 - The thing owners mention most is not volume. It is that homeowners show up to the estimate already educated and qualified.
 - Owners are also candid that the first few weeks can be slow while the campaign and the qualifying criteria get dialed in.
 - We work with one coating contractor per market, so your area may already be taken.
@@ -30,13 +30,13 @@ If you are searching for Appointly Solutions reviews, the most useful thing we c
 
 Before the reviews make sense, you need to know what clients are reviewing. Appointly Solutions is a pay per appointment Meta ads agency for garage floor coating, concrete coating, and epoxy contractors. The full process is on [how it works](/how-it-works), but the short version is this:
 
-1. **We run the ads.** Facebook and Instagram campaigns in your service area, run from our own ad account. You never touch Ads Manager.
-2. **We call every lead within minutes.** The homeowner gets a branded text and a phone call from our team while they still have the phone in their hand.
-3. **We qualify and educate.** We confirm they own the property, want floor coating, live in your area, and have a realistic timeline and budget. We also talk through the product so they understand what they are buying.
+1. **We run the ads.** Facebook and Instagram campaigns in your service area, run from our own ad account. You never touch Ads Manager, and you own everything we build for you: the campaigns, the creative, the audiences, and every homeowner record.
+2. **We text and call every lead within one minute.** The homeowner gets a branded text and a phone call from Jacob, our co-founder, who makes every call himself, while they still have the phone in their hand. Every call is recorded and reviewed.
+3. **We qualify on intent and educate.** We confirm the project goal, the look and material they want, and a real timeline. No real timeline means no booking. We also talk through the product so they understand what they are buying.
 4. **We book the estimate.** The appointment lands on your calendar with notes from the call.
 5. **You run the estimate and do the work.**
 
-On [pricing](/pricing): one flat fee per booked estimate, set per market and quoted on a strategy call. There is no setup fee, no retainer, and no long term contract. A no-show earns a credit toward your next appointment, and an appointment that falls outside the agreed criteria is graded in the Appointly Solutions app and you pay nothing for it.
+On [pricing](/pricing): you fund your ad spend as a prefunded balance, drawn down at cost with no markup, reported weekly, with any unused balance returned within 10 business days of termination. On top of that you pay $125 to $175 per booked estimate, set per client and invoiced separately. There is no setup fee, no retainer, and no long term contract. A no-show is credited automatically to your next appointment. After every estimate you grade the appointment in the Appointly app. Grade it a C and tell us what was wrong, such as an unqualified homeowner or a service you do not offer, and you do not pay for it: the fee is credited automatically to your next appointment.
 
 We wrote a whole post on why we do the calling ourselves instead of handing you a phone number: [why we call every floor coating lead ourselves](/blog/why-we-call-every-floor-coating-lead-ourselves). Almost every client comment below traces back to that first phone call.
 
@@ -53,11 +53,11 @@ These are the only client results we publish, and each one is on its own page wi
 A few notes on how to read that table, because the details matter:
 
 - **Close rates count immediate closes** on appointments that have already taken place. Appointments still on the calendar, and quotes still in follow-up, are not counted as wins or losses.
-- **Clean Floor Coatings** booked 37 appointments in a month and closed 26, and first appointments landed the week the ads went live, in a market crowded with local operators and national franchises.
+- **Clean Floor Coatings** ran 37 shown appointments in its first month and closed 26, and first appointments landed the week the ads went live, in a market crowded with local operators and national franchises.
 - **AFAB Services** closed 18 jobs in the first month, and Mark's best month so far was $35k or more in closed revenue (closed jobs multiplied by his $3,500 average). He has been with us the longest of the three.
 - **Garage Force** sells a premium product at a premium price, so we send fewer, higher quality appointments. 90% of their appointments were prequalified.
 
-The numbers are not identical, and they should not be. Close rate depends on the product, the market, and the person running the estimate. Our own [benchmarks page](/floor-coating-benchmarks) says the same thing: there is no single close rate benchmark for floor coating, because it moves with the product and the estimator.
+The numbers are not identical, and they should not be. Across all our clients the average is 60%, but close rate depends on the product, the market, and the person running the estimate. Our own [benchmarks page](/floor-coating-benchmarks) says the same thing: there is no single close rate benchmark for floor coating, because it moves with the product and the estimator.
 
 ## What do clients say about the appointments?
 
@@ -115,7 +115,7 @@ And Mark, at the start of his interview:
 
 > "You're willing to credit stuff back that just turned out to not be a fit."
 
-That is what the grading in the app is for. Qualification on a phone call is good, not perfect, and the credit policy exists because some appointments will miss.
+That is what the appointment quality guarantee is for. Qualification on a phone call is good, not perfect, so any appointment you grade a C in the app, with a note on what was wrong, is credited automatically to your next appointment.
 
 **It is not built for cheap volume.** Eric said this directly when asked what he would tell a skeptical owner:
 
@@ -123,11 +123,11 @@ That is what the grading in the app is for. Qualification on a phone call is goo
 
 ## When is Appointly Solutions not the right fit?
 
-We say these on sales calls too.
+We are a fit for owners with a premium product who charge well, are good at sales, and have room on the calendar for more estimates. We say these on sales calls too.
 
 | Situation | Our honest take |
 | --- | --- |
-| Another coating contractor in your market already works with us | We hold one contractor per market, so we cannot take you on there. Ask about nearby areas. |
+| Another coating contractor in your market already works with us | We hold one contractor per market, written into their service agreement, so we cannot take you on there. You can join the waitlist or ask about nearby areas. |
 | You employ a great setter who answers every lead inside a minute, evenings and Saturdays | Running your own ads is likely the better value. You already have the part that turns leads into estimates. See [in-house appointment setter vs outsourced](/blog/in-house-appointment-setter-vs-outsourced). |
 | Your estimate process is weak or inconsistent | We can put qualified homeowners in front of you, but results depend on your sales process. Phil's close rate is a combination of our qualifying and his strong estimate. |
 | You want the cheapest possible jobs in volume | Our qualifying is built to filter out low budget tire kickers, which means fewer appointments than a raw lead list. |
@@ -159,15 +159,15 @@ You can check that yourself rather than taking our word. Our case studies name t
 
 ### What results do Appointly Solutions clients get?
 
-Our three published case studies report close rates of about 70%, 57%, and 50% on booked estimates, with average jobs of $3,500 and $5,000 where the owner shared the figure. Results vary with your product, your market, and how well you run the estimate, so treat those as examples rather than a promise.
+Across all our clients, 97% of booked appointments show up and our clients close 60% of them on average, across markets and products. Our three published case studies report close rates of about 70%, 57%, and 50%, with average jobs of $3,500 and $5,000 where the owner shared the figure. Results vary with your product, your market, and how well you run the estimate, so treat those as examples rather than a promise.
 
 ### What are the common complaints about Appointly Solutions?
 
-The honest ones from our own clients are that the first few weeks can be slow while the campaign and qualifying criteria get dialed in, and that some booked appointments turn out not to be a fit. Appointments outside the agreed criteria are graded in the app and not charged, and no-shows earn a credit. Our one contractor per market rule also means some owners cannot join because their area is taken.
+The honest ones from our own clients are that the first few weeks can be slow while the campaign and qualifying criteria get dialed in, and that some booked appointments turn out not to be a fit. Appointments you grade a C in the app are not paid for, and no-shows are credited automatically to your next appointment. Our one contractor per market rule also means some owners cannot join because their area is taken.
 
 ### Does Appointly Solutions require a contract?
 
-No. There is no long term contract, no setup fee, and no retainer. You pay one flat fee per booked estimate, set per market and quoted on a strategy call. Details are on our [pricing page](/pricing).
+No. There is no long term contract, no setup fee, and no retainer. You fund your ad spend at cost and pay $125 to $175 per booked estimate, set per client. Details are on our [pricing page](/pricing).
 
 ### Why are there no star ratings on this page?
 
@@ -175,6 +175,6 @@ Because a rating we publish about ourselves is not an independent review. We wou
 
 ## Check your market
 
-If what you have read here sounds like your business, the next step is simple: find out whether your market is open, what a booked estimate costs in your area, and how many estimates a week fit your crew. We work with one floor coating contractor per market.
+If what you have read here sounds like your business, the next step is simple: find out whether your market is open, what a booked estimate costs in your area, and how many estimates a week fit your crew. We work with one floor coating contractor per market, written into the service agreement.
 
 [Book a strategy call](https://client.getappointly.co/strategy-calendar), ask us the hard questions, and ask for a reference while you are at it.

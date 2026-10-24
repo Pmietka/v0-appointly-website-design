@@ -2,12 +2,12 @@ import Image from "next/image";
 
 const quickStats = [
   {
-    stat: "6 new clients",
-    label: "6 new residential clients added in month two.",
+    stat: "97% show rate",
+    label: "Of booked appointments across all our clients. No shows are credited automatically.",
   },
   {
-    stat: "6 closed jobs / month",
-    label: "Closed jobs per month, held for three straight months.",
+    stat: "60% close rate",
+    label: "Our clients' average close rate on the appointments we book, across markets and products.",
   },
   {
     stat: "24-48 hours",
@@ -53,18 +53,18 @@ export function ProofSection() {
             <article className="overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-md">
               <div className="px-8 py-6">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500">
-                  Andre
+                  Mark T., AFAB Services, Port St. Lucie, FL
                 </p>
                 <h3 className="mt-3 font-display text-2xl font-bold text-slate-950">
-                  In his second month, Andre brought in 6 new residential clients.
+                  $35k closed in one month, at a 57% close rate.
                 </h3>
-              </div>
-              <div className="border-t border-slate-100 bg-slate-50 p-4 md:p-6">
-                <img
-                  src="/images/case-studies/andre-text.svg"
-                  alt="Andre testimonial graphic"
-                  className="h-auto w-full rounded-2xl border border-slate-200 bg-white"
-                />
+                <blockquote className="mt-4 text-base leading-7 text-slate-600">
+                  &ldquo;You&apos;ve already paved the ground. I just go in and sweep it up.
+                  You guys are doing a great job.&rdquo;
+                </blockquote>
+                <a href="/case-studies/afab-services" className="mt-4 inline-block text-sm font-semibold text-primary hover:opacity-80">
+                  Read the AFAB Services case study
+                </a>
               </div>
             </article>
 

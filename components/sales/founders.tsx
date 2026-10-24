@@ -16,7 +16,7 @@ const PHONE_LOSE = [
   "Your customer's first impression of you, wasted",
 ];
 const PHONE_WIN = [
-  "A trained closer who sounds like your company",
+  "Jacob, our co-founder, on every call",
   "Native English speakers, no friction",
   "Presells your service so they arrive half sold",
   "Only books the homeowners actually ready to buy",
@@ -24,7 +24,7 @@ const PHONE_WIN = [
 
 // Each credential reframed with a close-rate payoff line.
 const PHONE_CREDS = [
-  { Icon: Award, label: "Trained sales professionals", payoff: "Not a call center, your brand sounds the part" },
+  { Icon: Award, label: "A co-founder on every call", payoff: "Jacob makes every call himself, recorded and reviewed" },
   { Icon: Phone, label: "1,000s of calls taken", payoff: "They know how to handle a hesitant homeowner" },
   { Icon: Megaphone, label: "We presell your services", payoff: "Prospects arrive half sold, you close easier" },
   { Icon: MessageCircle, label: "Native English speakers", payoff: "No friction, no “let me transfer you”" },
@@ -71,8 +71,8 @@ export function PhoneTeam() {
         </h3>
         <p className="ptsub">
           Most agencies hand your customers to a cheap call center and
-          quietly cost you deals. We put trained closers on every call, so
-          homeowners show up warmer and you close more of them.
+          quietly cost you deals. Jacob, our co-founder, makes every call
+          himself, so homeowners show up warmer and you close more of them.
         </p>
       </div>
 
@@ -124,7 +124,7 @@ const IS_NOT = [
   },
   {
     t: "Not a monthly fee agency.",
-    d: "No setup fee, no retainer, and no monthly management fee. One flat fee for each estimate we book onto your calendar.",
+    d: "No setup fee, no retainer, and no monthly management fee. You fund your ads at cost, then pay $125 to $175 for each estimate we book onto your calendar.",
   },
   {
     t: "A booking partner.",
@@ -152,7 +152,7 @@ export function WhatWeAre() {
 const EXPERT_AT = [
   "Built for floor coating and epoxy contractors, nothing else",
   "Meta ads that bring in homeowners ready to buy",
-  "Every lead called within 60 seconds, before they cool off",
+  "Every lead texted and called within one minute, before they cool off",
   "Qualified on area, project and budget, so you only meet buyers",
   "Estimates booked straight onto your calendar",
   "Your close data fed back in, so every month gets sharper",

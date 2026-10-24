@@ -2,7 +2,7 @@
 seo_title: "How Independents Compete With Garage Coating Franchises"
 meta_description: "Win where a franchise is slowest: call first, put the owner on the estimate, show local floors and reviews, and give a warranty with a real local name behind it."
 date: 2026-10-08
-updated: 2026-10-08
+updated: 2026-10-24
 author: patrick
 cluster: sales
 situation: crowded-market
@@ -118,4 +118,4 @@ Put it in writing in plain words, show how long you have been in business, hand 
 
 You do not need a franchise budget to win in a franchise market. You need to be first on the phone, sharp in the garage, and exclusive in your area so you are not one of four bids on every job.
 
-Appointly runs the Meta ads, calls every homeowner within minutes, educates and qualifies them on floor coating, and books confirmed estimates on your calendar. We work with one floor coating contractor per market, so the estimates we book are never shared or resold. If your estimates are not closing yet, fix that first, because more estimates will not help. [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, how crowded it is, and how many estimates a week your crew can run.
+Appointly runs the Meta ads, texts and calls every homeowner within one minute, educates and qualifies them on floor coating, and books confirmed estimates on your calendar. We work with one floor coating contractor per market, so the estimates we book are never shared or resold. If your estimates are not closing yet, fix that first, because more estimates will not help. [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, how crowded it is, and how many estimates a week your crew can run.

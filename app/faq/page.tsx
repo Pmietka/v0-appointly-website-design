@@ -7,6 +7,7 @@ import type { FaqItem } from "@/components/faq-block";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { coreFaqItems } from "@/lib/faq";
+import { BILLING_ANSWER, OFFER, RESULTS } from "@/lib/offer";
 import { pageMetadata } from "@/lib/seo";
 
 const bookingUrl = "https://client.getappointly.co/strategy-calendar";
@@ -17,30 +18,41 @@ const core = (question: string) => coreFaqItems.find((item) => item.question ===
 // tools and Google can read every answer, and the FAQPage JSON-LD below matches
 // the visible copy word for word.
 const faqItems: FaqItem[] = [
+  core("How much does Appointly Solutions cost?"),
   {
-    question: "What counts as a payable appointment?",
-    answer:
-      "A homeowner in your service area who wants floor coating work and has confirmed an estimate time on your calendar. Billing happens when the appointment is booked. If an appointment turns out to be unqualified or a job you cannot bid, such as a service you do not offer, you grade it in the Appointly Solutions app with notes and pay nothing for it. If a homeowner does not show up, you earn a credit toward your next appointment.",
+    question: "Is the appointment fee the only thing I pay?",
+    answer: `No. ${OFFER.total} Ad spend goes to Meta at cost, and the appointment fee is invoiced separately, so you always see both numbers.`,
+  },
+  core("What happens if an appointment is bad or the homeowner does not show up?"),
+  {
+    question: "What counts as a billable appointment?",
+    answer: `A homeowner in your service area, qualified on intent, who has confirmed an estimate time on your calendar. ${OFFER.qualification} ${BILLING_ANSWER}`,
   },
   {
-    question: "How much does Appointly Solutions cost?",
+    question: "Are no show credits automatic?",
     answer:
-      "Appointly Solutions charges one flat fee per booked estimate. The price is set per market, based on your city and the work you install, and we quote it on the strategy call. There is no setup fee and no retainer.",
+      "Yes. A no show, and any appointment you grade a C, is credited automatically to your next appointment. You do not have to ask for it.",
   },
+  core("What show and close rates do Appointly clients get?"),
   {
-    question: "Who runs the ad account, and who owns the leads and data?",
-    answer:
-      "Appointly Solutions runs the Meta campaigns from our own ad account and Business Manager, so you never create an account, hand over logins, or manage a campaign. The appointments we book are yours alone, and if you ever leave, you keep everything.",
+    question: "How many appointments will I get?",
+    answer: `Our clients typically get ${RESULTS.monthlyAppointments} appointments a month. Your volume depends on your market, your ticket, and the daily ad budget we set with you based on the results you need. Most contractors see their first booked estimates within 24 to 48 hours of campaign launch.`,
   },
+  core("Are the appointments exclusive or shared?"),
   {
-    question: "Is there a long term contract?",
+    question: "Is territory exclusivity in writing?",
     answer:
-      "No. Appointly Solutions does not lock you into a long term contract. Contractors stay because the booked estimates keep turning into jobs, not because a contract says they have to.",
+      "Yes. Your territory exclusivity is written into your service agreement. If another floor coating contractor in your market applies, they go on a waitlist. We check whether your market is open on the strategy call.",
   },
+  core("Who runs the Meta ad account, and who owns the data?"),
   {
-    question: "Is my territory exclusive?",
-    answer:
-      "Yes. Appointly Solutions works with one floor coating contractor per city, so we never book estimates for a competitor in your territory. Availability depends on whether your city is already taken, which we check on the strategy call.",
+    question: "Who makes the calls to my leads?",
+    answer: `${OFFER.caller} ${OFFER.speed} The homeowner hears about your company and your product from someone who knows floor coating, not a call center.`,
+  },
+  core("How do the appointments reach my calendar?"),
+  {
+    question: "Who is Appointly Solutions a fit for, and who is it not for?",
+    answer: `${OFFER.fit} ${OFFER.notFit}`,
   },
   {
     question: "Can I talk to current clients?",
@@ -48,12 +60,10 @@ const faqItems: FaqItem[] = [
       "Yes. References are available on request before you sign, so you can ask a current Appointly Solutions client about appointment quality and how the process works. You can also hear three clients describe their results in their own words on our case studies page.",
   },
   {
-    question: "Who is Appointly Solutions not a fit for?",
+    question: "Is there a long term contract?",
     answer:
-      "Contractors who are not willing to invest in growing their business, or who do not want a steady, sustainable flow of appointments. The model works for owners who want a predictable calendar and will show up, run the estimate, and close the work.",
+      "No. Appointly Solutions does not lock you into a long term contract. If you stop, any unused ad balance is returned within 10 business days of termination.",
   },
-  core("How do the appointments reach my calendar?"),
-  core("Are the appointments exclusive or shared?"),
   {
     question: "Do you only work with floor coating contractors?",
     answer:
@@ -62,29 +72,24 @@ const faqItems: FaqItem[] = [
   {
     question: "What markets do you work in?",
     answer:
-      "We focus on small to mid sized markets in the US and Canada where floor coating contractors have room to grow. We work with one coating contractor per city, so availability depends on whether your city is already taken.",
-  },
-  {
-    question: "How fast do appointments come in?",
-    answer:
-      "Most contractors see their first booked estimates within 24 to 48 hours of campaign launch.",
+      "We focus on small to mid sized markets in the US and Canada where floor coating contractors have room to grow. We work with one coating contractor per market, so availability depends on whether your market is already taken.",
   },
   {
     question: "Do I need to run my own ads or chase leads?",
     answer:
-      "No. We run the Meta ads, handle the speed to lead outreach, and book the appointments. Your team just shows up, runs the estimate, and closes the work.",
+      "No. We run the Meta ads, text and call every lead within one minute, and book the appointments. Your team shows up, runs the estimate, and closes the work.",
   },
   {
     question: "How do I get started?",
     answer:
-      "Book a strategy call. We review your market, service area, and goals, then tell you whether Appointly Solutions is a fit for your business.",
+      "Book a strategy call. We review your market, service area, ticket, and goals, then tell you whether Appointly Solutions is a fit for your business.",
   },
 ];
 
 export const metadata: Metadata = pageMetadata({
   title: "FAQ | Appointly Solutions",
   description:
-    "Appointly Solutions charges one flat fee per booked floor coating estimate, with no setup fee and no long term contract. Answers on billing, no shows, territory and fit.",
+    "You fund your own ad spend at cost, then pay $125 to $175 per booked appointment. Answers on billing, the appointment quality guarantee, show and close rates, territory, and fit.",
   path: "/faq",
   ogTitle: "Appointly Solutions FAQ: Pricing, Billing, Territory and Fit",
   keywords: [
@@ -134,7 +139,8 @@ export default function FaqPage() {
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
                 Straight answers to the questions contractors ask before they work
-                with us: what a booked estimate costs, what you pay for, how
+                with us: what you pay in ad spend and appointment fees, how the
+                appointment quality guarantee works, our show and close rates, how
                 territory works, and who we are not a fit for.
               </p>
             </div>

@@ -2,7 +2,7 @@
 seo_title: "Why Floor Coating Contractors Leave Marketing Agencies"
 meta_description: "Marketing agencies bill epoxy contractors for months with little to show. Why coating pros are switching to booked estimates from Meta ads instead of reports."
 date: 2026-01-27
-updated: 2026-10-13
+updated: 2026-10-24
 author: patrick
 cluster: marketing-channels
 ---
@@ -72,10 +72,10 @@ You don't need another agency billing you to write articles. You need booked est
 
 That's how we work at Appointly, and it's why coating contractors switch:
 
-- You pay one flat fee per booked estimate, with no setup fee or retainer. We run the whole system for you.
-- No monthly fee and no long term contract. One coating contractor per market, so the estimates are yours alone.
+- You pay $125 to $175 per booked estimate, plus ad spend you fund at cost, with no setup fee or retainer. We run the whole system for you.
+- No monthly management fee and no long term contract. One coating contractor per market, so the estimates are yours alone.
 - We generate the lead with [Meta ads](/blog/meta-ads-for-floor-coating-contractors) on Facebook and Instagram, aimed at homeowners in your service area with the kind of before-and-after garage floor that stops the scroll.
-- We call the lead within about a minute. Our [benchmarks](/floor-coating-benchmarks) show about 90% of homeowners answer at that speed, and 60 to 70% of leads should become a booked estimate. That's why [speed to lead](/blog/speed-to-lead-wins-floor-coating-jobs) matters more than any report.
+- We text and call the lead within one minute. Our [benchmarks](/floor-coating-benchmarks) show about 90% of homeowners answer at that speed, and 60 to 70% of leads should become a booked estimate. That's why [speed to lead](/blog/speed-to-lead-wins-floor-coating-jobs) matters more than any report.
 - We book the estimate at a time that works for you, on the spot or as soon as we reach the homeowner.
 - You show up, walk the garage, quote the floor, do the work, and collect.
 
@@ -101,6 +101,6 @@ With Meta ads and a calling team in place, the first booked estimates land withi
 
 ## Stop paying for reports and start paying for estimates
 
-If you're done paying for activity, the alternative is simple: one flat fee for each booked estimate that lands on your calendar, no setup fee, and no long term contract. Read how the model works on our [marketing agency alternative](/floor-coating-marketing-agency-alternative) page.
+If you're done paying for activity, the alternative is simple: $125 to $175 for each booked estimate that lands on your calendar, plus ad spend you fund at cost, no setup fee, and no long term contract. Read how the model works on our [marketing agency alternative](/floor-coating-marketing-agency-alternative) page.
 
 Then [book a strategy call](https://client.getappointly.co/strategy-calendar). We'll look at your market, tell you whether it's open, and show you the numbers a coating contractor there should expect.

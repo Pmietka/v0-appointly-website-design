@@ -2,7 +2,7 @@
 seo_title: "What Is a Booked Floor Coating Estimate Worth?"
 meta_description: "What a booked floor coating estimate is worth, how to calculate it from job size and close rate, and how to budget for appointment generation around your crew."
 date: 2026-02-17
-updated: 2026-10-13
+updated: 2026-10-24
 author: patrick
 cluster: economics
 ---
@@ -107,7 +107,7 @@ Expect booked, exclusive estimates in your zip codes, not a list of names. Speci
 - Exclusivity: one contractor per market, so you're not racing four other shops for the same garage.
 - Incentives that match yours: the partner gets paid when an estimate lands on your calendar, not when a report gets emailed.
 
-That's how we structure it at Appointly. You pay one flat fee per booked appointment, with no setup fee or retainer. You're not buying raw leads. You're buying floors on the calendar.
+That's how we structure it at Appointly. You pay $125 to $175 per booked appointment, plus ad spend you fund at cost, with no setup fee or retainer. You're not buying raw leads. You're buying floors on the calendar.
 
 ## What are the hidden costs of chasing raw leads?
 

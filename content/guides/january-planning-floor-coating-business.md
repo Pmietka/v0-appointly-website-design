@@ -2,7 +2,7 @@
 seo_title: "January Planning for a Floor Coating Business"
 meta_description: "In January, pull last year's leads, booked estimates, show rate, close rate, and average ticket, then set install days and a spring marketing start for your climate."
 date: 2026-10-08
-updated: 2026-10-08
+updated: 2026-10-24
 author: patrick
 cluster: operations
 situation: slow-season
@@ -116,6 +116,6 @@ In most of the country, yes, because the rest of the country is strong spring th
 
 ## Planning a year with more estimates on the calendar?
 
-If your January numbers show the crew could install more floors than the calendar held, Appointly can help fill that gap. Appointly runs Meta ads from its own ad account, calls every homeowner lead within minutes, educates and qualifies them, and books confirmed estimates on your calendar. We work with one floor coating contractor per market.
+If your January numbers show the crew could install more floors than the calendar held, Appointly can help fill that gap. Appointly runs Meta ads for you (and you own everything it builds), texts and calls every homeowner lead within one minute, educates and qualifies them, and books confirmed estimates on your calendar. We work with one floor coating contractor per market.
 
 If your crew is already booked out or you have not pulled last year's numbers yet, start there first, because more estimates will not fix a capacity or tracking problem. [Book a strategy call](https://client.getappointly.co/strategy-calendar) and we will check whether your market is open, when your spring demand starts, and how many estimates a week your crews can run this year.

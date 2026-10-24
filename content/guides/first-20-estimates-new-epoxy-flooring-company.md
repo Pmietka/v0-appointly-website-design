@@ -2,7 +2,7 @@
 seo_title: "How New Epoxy Flooring Companies Get the First 20 Estimates"
 meta_description: "New epoxy flooring companies get their first 20 estimates by building local proof, then running Meta ads at $50 to $100 a day with every lead called in a minute."
 date: 2026-10-07
-updated: 2026-10-07
+updated: 2026-10-24
 author: patrick
 cluster: marketing-channels
 situation: just-launched
@@ -118,7 +118,7 @@ Yes, as long as you can install and run an estimate well. A booked appointment s
 
 ## Want your first 20 estimates booked for you?
 
-If you like running your own ads and phones, the plan above works. If you would rather be grinding than dialing, Appointly runs the Meta ads from its own ad account, calls every lead within minutes, educates and qualifies the homeowner, and books confirmed estimates on your calendar. See [how it works](/how-it-works).
+If you like running your own ads and phones, the plan above works. If you would rather be grinding than dialing, Appointly runs the Meta ads for you (and you own everything it builds), texts and calls every lead within one minute, educates and qualifies the homeowner, and books confirmed estimates on your calendar. See [how it works](/how-it-works).
 
 We work with one floor coating contractor per market, so the first question is whether yours is open.
 

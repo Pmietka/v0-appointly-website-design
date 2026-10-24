@@ -2,7 +2,7 @@
 seo_title: "Floor Coating Business Insurance: What You Need in 2026"
 meta_description: "Floor coating business insurance explained: general liability, completed operations, auto, tools, workers comp, pollution, umbrella, and what goes on a COI."
 date: 2026-10-21
-updated: 2026-10-21
+updated: 2026-10-24
 author: patrick
 cluster: operations
 ---
@@ -148,4 +148,4 @@ A certificate of insurance is a summary of your policies, limits, and dates, iss
 
 Insurance is part of turning coating into a real business, and it is one of the boxes our [side hustle to full time guide](/guides/side-hustle-to-full-time-floor-coating) says to check before you give notice. The full startup sequence, including LLC, licensing, and contracts, is in [how to start a floor coating business](/blog/how-to-start-a-floor-coating-business).
 
-Once the paperwork is in place, the calendar decides the year. Appointly Solutions runs the Meta ads, calls every homeowner within minutes, qualifies them, and books estimates on your calendar for one flat fee per booked estimate, with no setup fee and no long-term contract. We work with one floor coating contractor per market. [Book a strategy call](https://client.getappointly.co/strategy-calendar) to see whether yours is open.
+Once the paperwork is in place, the calendar decides the year. Appointly Solutions runs the Meta ads, texts and calls every homeowner within one minute, qualifies them, and books estimates on your calendar for $125 to $175 per booked estimate, plus ad spend you fund at cost, with no setup fee and no long-term contract. We work with one floor coating contractor per market. [Book a strategy call](https://client.getappointly.co/strategy-calendar) to see whether yours is open.

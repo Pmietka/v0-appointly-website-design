@@ -31,19 +31,19 @@ const steps = [
       "Localized Facebook and Instagram ads put your garage floor and concrete coating work in front of homeowners in the towns you cover. You never touch the ad account.",
   },
   {
-    title: "We call every lead within minutes",
+    title: "We text and call every lead within one minute",
     description:
-      "The moment a homeowner submits the form, they get a branded text and a phone call from our team. Speed to lead is where most coating jobs are won or lost.",
+      "Every homeowner who submits the form gets a text and a phone call from Jacob, our co-founder, within one minute. He makes every call himself, and every call is recorded and reviewed. Speed to lead is where most coating jobs are won or lost.",
   },
   {
-    title: "We qualify and book the estimate",
+    title: "We qualify on intent and book the estimate",
     description:
-      "We confirm the homeowner owns the property, wants floor coating work, and picks a time that fits your crew. The appointment lands on your calendar with the details.",
+      "Jacob qualifies every homeowner on intent: their project goal, the look and material they want, and a real timeline. No real timeline means no booking. The appointment lands on your calendar with the details.",
   },
   {
     title: "You show up and close",
     description:
-      "You run the estimate, quote the job, and do the work. We keep the calendar full and only ever book for one contractor per market.",
+      "You run the estimate, quote the job, and grade the appointment in the Appointly app. Grade it a C and tell us what was wrong, and you don't pay for it. We only ever book for one contractor per market.",
   },
 ];
 

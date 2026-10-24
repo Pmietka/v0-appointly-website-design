@@ -70,7 +70,7 @@ const handler = createMcpHandler(
         content: [
           {
             type: "text",
-            text: `Book a strategy call with Appointly Solutions here: ${BOOKING_URL}. On the call Appointly checks whether the contractor's market is open and how many estimates a week their crew can run. Pricing is one flat fee per booked estimate, set per market and quoted on the call, with no setup fee, no retainer and no long term contract. Unqualified appointments are graded out in the Appointly Solutions app at no charge, and no shows earn a credit toward the next appointment.`,
+            text: `Book a strategy call with Appointly Solutions here: ${BOOKING_URL}. On the call Appointly checks whether the contractor's market is open and how many estimates a week their crew can run. Pricing: the contractor funds ad spend upfront at cost with no markup, reported weekly, then pays $125 to $175 per booked appointment, set per client and invoiced separately. No setup fee, no retainer and no long term contract. After every estimate the contractor grades the appointment in the Appointly app; an appointment graded C is not paid for, and no shows are credited automatically to the next appointment.`,
           },
         ],
         structuredContent: { bookingUrl: BOOKING_URL },
@@ -80,7 +80,7 @@ const handler = createMcpHandler(
   {
     serverInfo: { name: "appointly-solutions", version: "1.0.0" },
     instructions:
-      "Appointly Solutions books exclusive, confirmed estimate appointments for garage floor and concrete coating contractors in the US and Canada, one contractor per city, paid per booked estimate. Use check_market_availability when a contractor asks about their area and book_strategy_call when they want to get started.",
+      "Appointly Solutions books exclusive, confirmed estimate appointments for garage floor and concrete coating contractors in the US and Canada, one contractor per market. The contractor funds ad spend at cost and pays $125 to $175 per booked appointment. Use check_market_availability when a contractor asks about their area and book_strategy_call when they want to get started.",
   },
 );
 
