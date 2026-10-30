@@ -10,14 +10,10 @@ import { LazyVidalytics } from "@/components/LazyVidalytics";
 import { LazyExternalScript } from "@/components/deferred-loader";
 import { OPEN_APPLY_EVENT } from "./apply-button";
 
-// The hero VSL (Vidalytics embed yab2hhU03er3If8m). No poster thumbnail URL yet,
+// The hero VSL (Vidalytics embed 60Fto44Te__2E98m). No poster thumbnail URL yet,
 // so LazyVidalytics fills the 16:9 box with a neutral placeholder until the
-// player mounts (which happens automatically just after first paint).
-const VSL_EMBED_ID = "yab2hhU03er3If8m";
-// The VSL's own Vidalytics thumbnail, shown (and painted first) until the
-// player loads, so the hero has a real image from the first frame.
-const VSL_POSTER =
-  "https://fast.vidalytics.com/video/FeX1NGyU/w07vxcipJjjJGRr0/280912/257697__FFMPEG/thumb/thumbnail-5_0.jpg";
+// player mounts.
+const VSL_EMBED_ID = "60Fto44Te__2E98m";
 
 /* ============================================================================
    CONFIGURABLE CONSTANTS. Edit these, nothing else, to wire the page up.
@@ -33,7 +29,8 @@ const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/bv8PsVl3lvid
 const CALENDAR_BASE = "https://link.getappointly.co/widget/booking/U3zYpjFagC8HFqQw21rC";
 
 // The hero VSL is deferred via <LazyVidalytics> (see components/LazyVidalytics).
-// To swap the video later, change VSL_EMBED_ID / VSL_POSTER above.
+// To swap the video later, change VSL_EMBED_ID above (and pass a poster if one
+// is available).
 
 /* ============================================================================
    Meta Pixel helpers
@@ -379,7 +376,7 @@ export default function ApplyClient({ children }: { children?: React.ReactNode }
           <div className="herorow">
             <div className="herovsl">
               <div className="vslvid">
-                <LazyVidalytics embedId={VSL_EMBED_ID} poster={VSL_POSTER} startOn="interaction" />
+                <LazyVidalytics embedId={VSL_EMBED_ID} startOn="interaction" />
               </div>
               <p className="vslnote">Watch how it works, then apply.</p>
             </div>
