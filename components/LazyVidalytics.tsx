@@ -186,20 +186,9 @@ export function LazyVidalytics({
       aria-hidden="true"
     >
       {poster ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={poster}
-          alt=""
-          fetchPriority="high"
-          decoding="async"
-          style={{
-            position: "absolute",
-            inset: 0,
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-          }}
-        />
+        // Resized and served through next/image from our own origin and
+        // preloaded, so on phones the hero image is small and paints first.
+        <Image src={poster} alt="" fill priority sizes="(min-width: 960px) 880px, 100vw" style={{ objectFit: "cover" }} />
       ) : null}
     </div>
   );

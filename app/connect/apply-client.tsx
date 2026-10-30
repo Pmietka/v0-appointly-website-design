@@ -363,7 +363,7 @@ export default function ApplyClient({ children }: { children?: React.ReactNode }
       </nav>
 
       {/* Hero. Pay-per-show hook, VSL, and the booking CTA side by side. */}
-      <section className="sec applyhero" id="top">
+      <section className="sec applyhero herowide" id="top">
         <div className="orb a" />
         <div className="wrap">
           <p className="eyebrow">For floor coating contractors</p>

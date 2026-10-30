@@ -67,6 +67,22 @@
   .dscroll .heroform .trustbadges{margin-top:16px;flex-wrap:nowrap;gap:16px}
   .dscroll .heroform .trustbadge{font-size:13px;white-space:nowrap}
 }
+/* /connect only (.herowide): on wide desktops the hero row breaks out of the
+   1080px column so the VSL and the "40 to 60" card both render larger, and the
+   card's type and button scale up to match. */
+@media(min-width:1180px){
+  .dscroll .applyhero.herowide .wrap{max-width:1360px}
+  .dscroll .herowide .herorow{gap:44px}
+  .dscroll .herowide .heroform{padding:44px 40px 36px;border-radius:28px}
+  .dscroll .herowide .heroform .formkicker{margin-bottom:26px}
+  .dscroll .herowide .heroform .formkicker strong{font-size:clamp(28px,2.3vw,34px)}
+  .dscroll .herowide .heroform .fksub{margin-top:12px;font-size:18px}
+  .dscroll .herowide .heroform .ctabtn{padding:22px 24px;border-radius:18px}
+  .dscroll .herowide .heroform .ctabtn-main{font-size:clamp(20px,1.7vw,24px)}
+  .dscroll .herowide .heroform .trustbadges{margin-top:20px;gap:20px}
+  .dscroll .herowide .heroform .trustbadge{font-size:14.5px}
+  .dscroll .herowide .herovsl .vslnote{font-size:17px}
+}
 .dscroll .formhint{margin-top:14px;font-size:14px;color:var(--ink-3);text-align:center}
 .dscroll .formhint a{color:var(--ink);font-weight:700;text-decoration:underline;text-underline-offset:3px}
 .dscroll .formhint a:hover{color:var(--ink-2)}
