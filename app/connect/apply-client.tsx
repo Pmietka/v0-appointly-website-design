@@ -391,7 +391,7 @@ export default function ApplyClient({ children }: { children?: React.ReactNode }
           <div className="herorow">
             <div className="herovsl">
               <div className="vslvid">
-                <LazyVidalytics embedId={VSL_EMBED_ID} poster={VSL_POSTER} />
+                <LazyVidalytics embedId={VSL_EMBED_ID} poster={VSL_POSTER} startOn="click" />
               </div>
               <p className="vslnote">Watch how it works, then apply.</p>
             </div>

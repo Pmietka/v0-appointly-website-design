@@ -37,8 +37,11 @@ type LazyVidalyticsProps = {
    *  - "load" (default): right after first paint, so muted autoplay starts on its own.
    *  - "interaction": on the visitor's first tap, scroll or key press (or a tap on
    *    the poster). Keeps the player's ~3s of main-thread work out of page load,
-   *    which matters most on mobile ad traffic. */
-  startOn?: "load" | "interaction";
+   *    which matters most on mobile ad traffic.
+   *  - "click": only when the visitor taps the poster's play button. Nothing from
+   *    Vidalytics loads until then, so the page stays light and other taps (like
+   *    the CTA) never compete with the player starting up. */
+  startOn?: "load" | "interaction" | "click";
 };
 
 // Self-contained 16:9 box, identical for the placeholder and the mounted player
@@ -73,6 +76,9 @@ export function LazyVidalytics({
         setActivated(true);
       }
     };
+
+    // Click mode: only the poster's own play button starts the player.
+    if (startOn === "click") return;
 
     // Interaction mode: wait for the first sign of a real visitor.
     if (startOn === "interaction") {
@@ -149,7 +155,7 @@ export function LazyVidalytics({
   // Poster placeholder (no play button): looks like the muted video's first frame
   // so the swap to the autoplaying player is seamless and shift-free. When no
   // poster URL is provided, fall back to a neutral dark box of the same size.
-  if (startOn === "interaction") {
+  if (startOn === "interaction" || startOn === "click") {
     // A real button over the poster, so a tap visibly starts the video.
     return (
       <button
