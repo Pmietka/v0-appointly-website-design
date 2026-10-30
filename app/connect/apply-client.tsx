@@ -389,8 +389,7 @@ export default function ApplyClient({ children }: { children?: React.ReactNode }
                 <span className="fksub">Unqualified estimate, you don&apos;t pay. No contracts. No BS.</span>
               </p>
               <button type="button" className="ctabtn" onClick={() => setOpen(true)}>
-                <span className="ctabtn-top">Check Availability</span>
-                <span className="ctabtn-main">Yes! I&apos;d Like a Pipeline Full of Estimates</span>
+                <span className="ctabtn-main">Book a Call</span>
               </button>
               <div className="trustbadges">
                 {TRUST_BADGES.map((b) => (
@@ -414,8 +413,7 @@ export default function ApplyClient({ children }: { children?: React.ReactNode }
           </p>
           <div className="closingcta">
             <button type="button" className="ctabtn ctabtn-inline" onClick={() => setOpen(true)}>
-              <span className="ctabtn-top">Check Availability</span>
-              <span className="ctabtn-main">Yes! I&apos;d Like a Pipeline Full of Estimates</span>
+              <span className="ctabtn-main">Book a Call</span>
             </button>
           </div>
         </div>
