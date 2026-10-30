@@ -24,8 +24,10 @@ const VSL_POSTER =
 // Meta Pixel / dataset id. Fires PageView on load and Lead on survey submit.
 const META_PIXEL_ID = "985991997226201";
 
-// The GoHighLevel inbound webhook the survey POSTs to.
-const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/bv8PsVl3lvidD0j8bBqP/webhook-trigger/37e334fa-fbb1-438a-9898-b20b6cbd4031";
+// The GoHighLevel inbound webhook the survey POSTs to. This is the trigger on
+// the "b2b - 00b - Intake Landing Page" workflow in the Appointly sub account,
+// which runs the whole b2b flow (intake, speed to lead, follow up, booked).
+const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/bv8PsVl3lvidD0j8bBqP/webhook-trigger/69c59715-edb9-4231-bf64-1d2b255fa681";
 
 // GHL booking widget embedded in the modal after the survey is submitted.
 const CALENDAR_BASE = "https://link.getappointly.co/widget/booking/U3zYpjFagC8HFqQw21rC";
@@ -79,12 +81,14 @@ type Tracking = {
   fbclid: string; fbc: string; fbp: string;
   utm_source: string; utm_medium: string; utm_campaign: string;
   utm_term: string; utm_content: string; page_url: string;
+  campaign_id: string; adset_id: string; ad_id: string; placement: string;
 };
 
 const EMPTY_TRACKING: Tracking = {
   fbclid: "", fbc: "", fbp: "",
   utm_source: "", utm_medium: "", utm_campaign: "", utm_term: "", utm_content: "",
   page_url: "",
+  campaign_id: "", adset_id: "", ad_id: "", placement: "",
 };
 
 // GHL's calendar phone field is an international input: it silently ignores a
@@ -125,6 +129,11 @@ function readTracking(): Tracking {
     utm_term: get("utm_term"),
     utm_content: get("utm_content"),
     page_url: window.location.href,
+    // Meta ad ids from the ad's URL parameters ({{campaign.id}} etc).
+    campaign_id: get("campaign_id"),
+    adset_id: get("adset_id"),
+    ad_id: get("ad_id"),
+    placement: get("placement"),
   };
 }
 
@@ -195,6 +204,8 @@ function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () =
       utm_source: tracking.utm_source, utm_medium: tracking.utm_medium,
       utm_campaign: tracking.utm_campaign, utm_term: tracking.utm_term,
       utm_content: tracking.utm_content,
+      campaign_id: tracking.campaign_id, adset_id: tracking.adset_id,
+      ad_id: tracking.ad_id, placement: tracking.placement,
       source: "apply-page",
       page_url: tracking.page_url,
     };
@@ -300,8 +311,11 @@ function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () =
                 value={email} onChange={(e) => setEmail(e.target.value)} required />
               <button type="submit" className="qsubmit">Submit</button>
               <p className="qconsent">
-                By submitting you agree to receive calls and texts from Appointly
-                about your inquiry.
+                By submitting, you agree to receive calls and texts from Appointly
+                Solutions about your inquiry, including automated messages. Message
+                frequency varies. Message and data rates may apply. Reply STOP to
+                opt out. See our <a href="/privacy">Privacy Policy</a> and{" "}
+                <a href="/terms">Terms</a>.
               </p>
               <button type="button" className="qback" onClick={() => setStep(3)}>
                 <ArrowLeft aria-hidden /> Go Back
