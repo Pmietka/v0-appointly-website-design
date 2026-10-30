@@ -10,10 +10,12 @@ import { LazyVidalytics } from "@/components/LazyVidalytics";
 import { LazyExternalScript } from "@/components/deferred-loader";
 import { OPEN_APPLY_EVENT } from "./apply-button";
 
-// The hero VSL (Vidalytics embed 60Fto44Te__2E98m). No poster thumbnail URL yet,
-// so LazyVidalytics fills the 16:9 box with a neutral placeholder until the
-// player mounts.
+// The hero VSL (Vidalytics embed 60Fto44Te__2E98m).
 const VSL_EMBED_ID = "60Fto44Te__2E98m";
+// The VSL's own Vidalytics thumbnail, shown (and painted first) until the
+// player loads, so the hero has a real image from the first frame.
+const VSL_POSTER =
+  "https://fast.vidalytics.com/video/FeX1NGyU/MjOZPRvNd3i3uuPf/315316/287016__FFMPEG/thumb/thumbnail-5_0.jpg";
 
 /* ============================================================================
    CONFIGURABLE CONSTANTS. Edit these, nothing else, to wire the page up.
@@ -29,8 +31,7 @@ const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/bv8PsVl3lvid
 const CALENDAR_BASE = "https://link.getappointly.co/widget/booking/U3zYpjFagC8HFqQw21rC";
 
 // The hero VSL is deferred via <LazyVidalytics> (see components/LazyVidalytics).
-// To swap the video later, change VSL_EMBED_ID above (and pass a poster if one
-// is available).
+// To swap the video later, change VSL_EMBED_ID / VSL_POSTER above.
 
 /* ============================================================================
    Meta Pixel helpers
@@ -376,7 +377,7 @@ export default function ApplyClient({ children }: { children?: React.ReactNode }
           <div className="herorow">
             <div className="herovsl">
               <div className="vslvid">
-                <LazyVidalytics embedId={VSL_EMBED_ID} startOn="interaction" />
+                <LazyVidalytics embedId={VSL_EMBED_ID} poster={VSL_POSTER} />
               </div>
               <p className="vslnote">Watch how it works, then apply.</p>
             </div>
