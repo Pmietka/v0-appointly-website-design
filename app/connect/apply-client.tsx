@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Script from "next/script";
 import { Phone, Check, X, ArrowLeft } from "lucide-react";
@@ -137,11 +137,73 @@ function readTracking(): Tracking {
   };
 }
 
+/* ----------------------------------------------------------------------------
+   Duplicate guard. One person should send one lead to GHL and one Meta Lead
+   event, even if they close the modal, refresh, or come back and fill the
+   survey in again. Each submit is remembered in localStorage (as a hash of
+   email + phone, never the raw details) for SENT_TTL_MS; a repeat with the
+   same details inside that window skips the webhook and the pixel and goes
+   straight to the calendar. Different details (a typo fixed, someone else on
+   the same device) still go through. If storage is blocked we simply can't
+   remember, and the submit goes through as before.
+   ---------------------------------------------------------------------------- */
+const SENT_KEY = "appointly:connect:sent";
+const SENT_TTL_MS = 30 * 24 * 60 * 60 * 1000;
+
+// Small non-crypto string hash (FNV-1a), just so raw contact details are never stored.
+function hashKey(s: string): string {
+  let h = 0x811c9dc5;
+  for (let i = 0; i < s.length; i++) {
+    h ^= s.charCodeAt(i);
+    h = Math.imul(h, 0x01000193);
+  }
+  return (h >>> 0).toString(36);
+}
+
+function leadKey(email: string, phone: string): string {
+  return hashKey(email.trim().toLowerCase() + "|" + normalizePhone(phone));
+}
+
+function readSent(): Record<string, number> {
+  try {
+    const raw = window.localStorage.getItem(SENT_KEY);
+    const parsed = raw ? JSON.parse(raw) : {};
+    return parsed && typeof parsed === "object" ? parsed : {};
+  } catch {
+    return {};
+  }
+}
+
+function wasSent(key: string): boolean {
+  const t = readSent()[key];
+  return typeof t === "number" && Date.now() - t < SENT_TTL_MS;
+}
+
+// Remember (sent = true) or forget (sent = false) a lead, pruning expired ones.
+function setSent(key: string, sent: boolean) {
+  try {
+    const now = Date.now();
+    const next: Record<string, number> = {};
+    for (const [k, t] of Object.entries(readSent())) {
+      if (typeof t === "number" && now - t < SENT_TTL_MS) next[k] = t;
+    }
+    if (sent) next[key] = now;
+    else delete next[key];
+    window.localStorage.setItem(SENT_KEY, JSON.stringify(next));
+  } catch {
+    // Storage blocked (private mode etc). Nothing to remember with.
+  }
+}
+
 const ROLE_OPTIONS = ["Owner / CEO", "Marketing or Sales Leader", "Salesperson", "Other"];
 const REVENUE_OPTIONS = ["$0 - $500K Per Year", "$500K - $1M Per Year", "$1M - $5M Per Year", "$5M+ Per Year"];
 const REPS_OPTIONS = ["I run all the leads myself", "1-3 reps", "4-10 reps", "10+ reps"];
 
-function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () => void }) {
+/* The modal stays mounted after it is first opened and is only hidden when
+   closed, so closing it never throws away a submitted survey: reopening shows
+   the same calendar instead of starting the survey over (which used to send
+   the lead a second time). It also keeps the calendar iframe and its size. */
+function QualifyModal({ open, tracking, onClose }: { open: boolean; tracking: Tracking; onClose: () => void }) {
   const [step, setStep] = useState(1);
   const [role, setRole] = useState("");
   const [revenue, setRevenue] = useState("");
@@ -151,9 +213,13 @@ function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () =
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [calSrc, setCalSrc] = useState("");
+  // Set synchronously on the first submit so a fast double click or double
+  // Enter can't get a second one in before React re-renders.
+  const sentRef = useRef(false);
 
   // Lock body scroll while open and close on Escape.
   useEffect(() => {
+    if (!open) return;
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     function onKey(e: KeyboardEvent) {
@@ -164,7 +230,7 @@ function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () =
       document.body.style.overflow = prev;
       window.removeEventListener("keydown", onKey);
     };
-  }, [onClose]);
+  }, [open, onClose]);
 
   // Load GHL's form_embed.js once the calendar is shown. It auto-sizes the
   // iframe, so we never set a fixed height.
@@ -185,10 +251,22 @@ function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () =
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!fullName.trim() || !phone.trim() || !email.trim()) return;
+    if (sentRef.current) return;
+    sentRef.current = true;
+
+    // Same person, same details, already sent from this browser: skip the
+    // pixel and the webhook and just show the calendar again.
+    const key = leadKey(email, phone);
+    const duplicate = wasSent(key);
+
+    // One id for this lead, sent with the pixel event and in the webhook
+    // payload, so a server side (Conversions API) Lead from GHL can pass the
+    // same id and Meta counts the two as one event instead of two.
+    const eventId = `lead_${Date.now().toString(36)}${Math.random().toString(36).slice(2, 10)}`;
 
     // 1. Fire the Meta Pixel Lead event.
-    if (pixelReady && typeof (window as any).fbq === "function") {
-      (window as any).fbq("track", "Lead");
+    if (!duplicate && pixelReady && typeof (window as any).fbq === "function") {
+      (window as any).fbq("track", "Lead", {}, { eventID: eventId });
     }
 
     // 2. Split the full name: first word is the first name, the rest is last.
@@ -208,16 +286,30 @@ function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () =
       ad_id: tracking.ad_id, placement: tracking.placement,
       source: "apply-page",
       page_url: tracking.page_url,
+      event_id: eventId,
     };
-    try {
-      fetch(GHL_WEBHOOK_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-        keepalive: true,
-      }).catch((err) => console.error("Apply webhook failed:", err));
-    } catch (err) {
-      console.error("Apply webhook failed:", err);
+    // Remember the lead before sending, and forget it again if the send fails,
+    // so a lead that never reached GHL can still be submitted again.
+    if (!duplicate) {
+      setSent(key, true);
+      const failed = (err: unknown) => {
+        console.error("Apply webhook failed:", err);
+        setSent(key, false);
+      };
+      try {
+        fetch(GHL_WEBHOOK_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+          keepalive: true,
+        })
+          .then((res) => {
+            if (!res.ok) failed(`HTTP ${res.status}`);
+          })
+          .catch(failed);
+      } catch (err) {
+        failed(err);
+      }
     }
 
     // 4. Swap the survey for the booking calendar, prefilled. GHL reads these
@@ -240,7 +332,18 @@ function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () =
   }
 
   return (
-    <div className="qmodal" role="dialog" aria-modal="true" aria-label="Apply for your market" onClick={onClose}>
+    <div
+      className="qmodal"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Apply for your market"
+      aria-hidden={!open}
+      // display:none, not visibility:hidden: GHL's form_embed.js sets an
+      // inline visibility:visible on the booking iframe, which would show
+      // through a visibility-hidden parent.
+      style={open ? undefined : { display: "none" }}
+      onClick={onClose}
+    >
       <div className="qmodal-box" onClick={(e) => e.stopPropagation()}>
         <div className="qprogress"><span className="qprogress-bar" style={{ width: `${pct}%` }} /></div>
         <button type="button" className="qclose" aria-label="Close" onClick={onClose}>
@@ -341,22 +444,29 @@ const TRUST_BADGES = ["No contracts", "Bad appointments credited", "Exclusive le
    children; its buttons open the modal through OPEN_APPLY_EVENT. */
 export default function ApplyClient({ children }: { children?: React.ReactNode }) {
   const [open, setOpen] = useState(false);
+  // Once opened, the modal stays mounted (hidden when closed). See QualifyModal.
+  const [modalMounted, setModalMounted] = useState(false);
   const [tracking, setTracking] = useState<Tracking>(EMPTY_TRACKING);
+
+  const openModal = useCallback(() => {
+    setModalMounted(true);
+    setOpen(true);
+  }, []);
+  const closeModal = useCallback(() => setOpen(false), []);
 
   // Capture Meta + UTM attribution on page load (URL params and cookies).
   useEffect(() => setTracking(readTracking()), []);
 
   // Any ApplyButton on the page opens the survey.
   useEffect(() => {
-    const onOpen = () => setOpen(true);
-    window.addEventListener(OPEN_APPLY_EVENT, onOpen);
-    return () => window.removeEventListener(OPEN_APPLY_EVENT, onOpen);
-  }, []);
+    window.addEventListener(OPEN_APPLY_EVENT, openModal);
+    return () => window.removeEventListener(OPEN_APPLY_EVENT, openModal);
+  }, [openModal]);
 
   return (
     <div className="dscroll cnx">
       <MetaPixel />
-      {open && <QualifyModal tracking={tracking} onClose={() => setOpen(false)} />}
+      {modalMounted && <QualifyModal open={open} tracking={tracking} onClose={closeModal} />}
 
       {/* Header. Logo left; phone + apply CTA right. */}
       <nav className="snav applyhead" aria-label="Primary">
@@ -369,7 +479,7 @@ export default function ApplyClient({ children }: { children?: React.ReactNode }
               <Phone className="h-4 w-4" aria-hidden />
               {PHONE_DISPLAY}
             </a>
-            <button type="button" className="navcta" onClick={() => setOpen(true)}>
+            <button type="button" className="navcta" onClick={openModal}>
               Check Availability
             </button>
           </div>
@@ -400,7 +510,7 @@ export default function ApplyClient({ children }: { children?: React.ReactNode }
                 <strong>Our clients get <span className="fknum">40 to 60</span> appointments a month.</strong>{" "}
                 <span className="fksub">Unqualified estimate, you don&apos;t pay. No contracts. No BS.</span>
               </p>
-              <button type="button" className="ctabtn" onClick={() => setOpen(true)}>
+              <button type="button" className="ctabtn" onClick={openModal}>
                 <span className="ctabtn-main">Book a Call</span>
               </button>
               <div className="trustbadges">
@@ -424,7 +534,7 @@ export default function ApplyClient({ children }: { children?: React.ReactNode }
             &middot; By application only.
           </p>
           <div className="closingcta">
-            <button type="button" className="ctabtn ctabtn-inline" onClick={() => setOpen(true)}>
+            <button type="button" className="ctabtn ctabtn-inline" onClick={openModal}>
               <span className="ctabtn-main">Book a Call</span>
             </button>
           </div>
@@ -434,7 +544,7 @@ export default function ApplyClient({ children }: { children?: React.ReactNode }
       {/* Sticky apply CTA on mobile only. Keeps the primary action a thumb-tap
           away while the video plays, no matter how far the page is scrolled. */}
       <div className="mcta">
-        <button type="button" className="mcta-btn" onClick={() => setOpen(true)}>
+        <button type="button" className="mcta-btn" onClick={openModal}>
           Check Availability: Apply Now
         </button>
       </div>
