@@ -4,6 +4,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
 
 import { LazyExternalScript } from "@/components/deferred-loader";
+import { TrackingCapture } from "@/components/tracking-capture";
 import { authors, personSchema } from "@/lib/authors";
 import { GOOGLE_BUSINESS_PROFILE, ORGANIZATION_SAME_AS } from "@/lib/seo";
 import "./globals.css";
@@ -165,6 +166,7 @@ export default function RootLayout({
       <body
         className={`${jakarta.variable} font-sans antialiased`}
       >
+        <TrackingCapture />
         {children}
       </body>
     </html>

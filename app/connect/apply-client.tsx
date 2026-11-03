@@ -2,12 +2,18 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import Script from "next/script";
 import { Phone, Check, X, ArrowLeft } from "lucide-react";
 
 import { PHONE_DISPLAY, PHONE_HREF } from "@/components/site-nav";
 import { LazyVidalytics } from "@/components/LazyVidalytics";
-import { LazyExternalScript } from "@/components/deferred-loader";
+import { MetaPixel, pixelReady } from "@/components/meta-pixel";
+import { deliverLead } from "@/lib/deliver-lead";
+import {
+  buildLeadPayload,
+  fireGtagEvent,
+  firePixelEvent,
+  getCalendarTrackingParams,
+} from "@/lib/tracking";
 import { OPEN_APPLY_EVENT } from "./apply-button";
 
 // The hero VSL (Vidalytics embed 60Fto44Te__2E98m).
@@ -21,13 +27,8 @@ const VSL_POSTER =
    CONFIGURABLE CONSTANTS. Edit these, nothing else, to wire the page up.
    ============================================================================ */
 
-// Meta Pixel / dataset id. Fires PageView on load and Lead on survey submit.
-const META_PIXEL_ID = "985991997226201";
-
-// The GoHighLevel inbound webhook the survey POSTs to. This is the trigger on
-// the "b2b - 00b - Intake Landing Page" workflow in the Appointly sub account,
-// which runs the whole b2b flow (intake, speed to lead, follow up, booked).
-const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/bv8PsVl3lvidD0j8bBqP/webhook-trigger/69c59715-edb9-4231-bf64-1d2b255fa681";
+// Meta Pixel id, GHL webhook and all tracking live in lib/tracking-config.ts
+// and lib/tracking.ts (same universal tracking as the client landing pages).
 
 // GHL booking widget embedded in the modal after the survey is submitted.
 const CALENDAR_BASE = "https://link.getappointly.co/widget/booking/U3zYpjFagC8HFqQw21rC";
@@ -36,60 +37,9 @@ const CALENDAR_BASE = "https://link.getappointly.co/widget/booking/U3zYpjFagC8HF
 // To swap the video later, change VSL_EMBED_ID / VSL_POSTER above.
 
 /* ============================================================================
-   Meta Pixel helpers
-   ============================================================================ */
-
-// A real pixel id is all digits. Anything else (the placeholder) keeps it off.
-const pixelReady = /^\d+$/.test(META_PIXEL_ID);
-
-function MetaPixel() {
-  if (!pixelReady) return null;
-  // Standard Meta Pixel base code, loaded via next/script with afterInteractive so
-  // it stays off the critical path but is ready before the survey submit fires Lead.
-  // Defines fbq, inits with our id, and fires PageView.
-  return (
-    <>
-      <Script id="meta-pixel" strategy="afterInteractive">
-        {`!function(f,b,e,n){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[]}(window,document,'script');
-fbq('init', '${META_PIXEL_ID}');
-fbq('track', 'PageView');`}
-      </Script>
-      {/* fbevents.js is deferred to first interaction / short timeout to keep it
-          off the initial load (TBT) window. The fbq() calls above and the survey
-          Lead event queue and are sent once the library loads. */}
-      <LazyExternalScript id="meta-pixel-lib" src="https://connect.facebook.net/en_US/fbevents.js" />
-      <noscript>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        height="1"
-        width="1"
-        style={{ display: "none" }}
-        alt=""
-        src={`https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1`}
-      />
-      </noscript>
-    </>
-  );
-}
-
-/* ============================================================================
    Qualification survey modal. Opens from any CTA. Four steps, then on submit it
    POSTs the lead to GHL and swaps in the booking calendar (prefilled).
    ============================================================================ */
-
-type Tracking = {
-  fbclid: string; fbc: string; fbp: string;
-  utm_source: string; utm_medium: string; utm_campaign: string;
-  utm_term: string; utm_content: string; page_url: string;
-  campaign_id: string; adset_id: string; ad_id: string; placement: string;
-};
-
-const EMPTY_TRACKING: Tracking = {
-  fbclid: "", fbc: "", fbp: "",
-  utm_source: "", utm_medium: "", utm_campaign: "", utm_term: "", utm_content: "",
-  page_url: "",
-  campaign_id: "", adset_id: "", ad_id: "", placement: "",
-};
 
 // GHL's calendar phone field is an international input: it silently ignores a
 // prefill value it can't parse. A number typed as "(555) 123-4567" often fails,
@@ -105,36 +55,6 @@ function normalizePhone(raw: string): string {
   if (digits.length === 10) return "+1" + digits;
   if (digits.length === 11 && digits.startsWith("1")) return "+" + digits;
   return "+" + digits;
-}
-
-function readCookie(name: string): string {
-  if (typeof document === "undefined") return "";
-  const escaped = name.replace(/([.$?*|{}()[\]\\/+^])/g, "\\$1");
-  const m = document.cookie.match(new RegExp("(?:^|; )" + escaped + "=([^;]*)"));
-  return m ? decodeURIComponent(m[1]) : "";
-}
-
-// Read the Meta click id + cookies and the UTM params. Called once on page load.
-function readTracking(): Tracking {
-  if (typeof window === "undefined") return EMPTY_TRACKING;
-  const p = new URLSearchParams(window.location.search);
-  const get = (k: string) => p.get(k) || "";
-  return {
-    fbclid: get("fbclid"),
-    fbc: readCookie("_fbc"),
-    fbp: readCookie("_fbp"),
-    utm_source: get("utm_source"),
-    utm_medium: get("utm_medium"),
-    utm_campaign: get("utm_campaign"),
-    utm_term: get("utm_term"),
-    utm_content: get("utm_content"),
-    page_url: window.location.href,
-    // Meta ad ids from the ad's URL parameters ({{campaign.id}} etc).
-    campaign_id: get("campaign_id"),
-    adset_id: get("adset_id"),
-    ad_id: get("ad_id"),
-    placement: get("placement"),
-  };
 }
 
 /* ----------------------------------------------------------------------------
@@ -203,7 +123,7 @@ const REPS_OPTIONS = ["I run all the leads myself", "1-3 reps", "4-10 reps", "10
    closed, so closing it never throws away a submitted survey: reopening shows
    the same calendar instead of starting the survey over (which used to send
    the lead a second time). It also keeps the calendar iframe and its size. */
-function QualifyModal({ open, tracking, onClose }: { open: boolean; tracking: Tracking; onClose: () => void }) {
+function QualifyModal({ open, onClose }: { open: boolean; onClose: () => void }) {
   const [step, setStep] = useState(1);
   const [role, setRole] = useState("");
   const [revenue, setRevenue] = useState("");
@@ -248,68 +168,49 @@ function QualifyModal({ open, tracking, onClose }: { open: boolean; tracking: Tr
   // Progress fills as they advance; full once the calendar shows.
   const pct = submitted ? 100 : step * 25;
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!fullName.trim() || !phone.trim() || !email.trim()) return;
     if (sentRef.current) return;
     sentRef.current = true;
 
     // Same person, same details, already sent from this browser: skip the
-    // pixel and the webhook and just show the calendar again.
+    // pixel and the webhook and just show the calendar again. Building the
+    // payload is skipped too, so the stored lead id (which /booked-call uses
+    // to fire Schedule once per lead) is not replaced by a new one.
     const key = leadKey(email, phone);
     const duplicate = wasSent(key);
 
-    // One id for this lead, sent with the pixel event and in the webhook
-    // payload, so a server side (Conversions API) Lead from GHL can pass the
-    // same id and Meta counts the two as one event instead of two.
-    const eventId = `lead_${Date.now().toString(36)}${Math.random().toString(36).slice(2, 10)}`;
-
-    // 1. Fire the Meta Pixel Lead event.
-    if (!duplicate && pixelReady && typeof (window as any).fbq === "function") {
-      (window as any).fbq("track", "Lead", {}, { eventID: eventId });
-    }
-
-    // 2. Split the full name: first word is the first name, the rest is last.
     const parts = fullName.trim().split(/\s+/);
-    const first_name = parts.shift() || "";
-    const last_name = parts.join(" ");
+    let first_name = parts.shift() || "";
+    let last_name = parts.join(" ");
 
-    // 3. POST to GHL, fire and forget. Never block the UI on the network.
-    const payload = {
-      first_name, last_name, phone, email,
-      role, revenue, reps,
-      fbclid: tracking.fbclid, fbc: tracking.fbc, fbp: tracking.fbp,
-      utm_source: tracking.utm_source, utm_medium: tracking.utm_medium,
-      utm_campaign: tracking.utm_campaign, utm_term: tracking.utm_term,
-      utm_content: tracking.utm_content,
-      campaign_id: tracking.campaign_id, adset_id: tracking.adset_id,
-      ad_id: tracking.ad_id, placement: tracking.placement,
-      source: "apply-page",
-      page_url: tracking.page_url,
-      event_id: eventId,
-    };
-    // Remember the lead before sending, and forget it again if the send fails,
-    // so a lead that never reached GHL can still be submitted again.
     if (!duplicate) {
+      // 1. Build the universal tracking payload (same shape as the client
+      // landing pages): last touch + first touch attribution, click ids,
+      // fbc/fbp, IP, hashed user data for CAPI, and a shared event id
+      // (capi_event_id) for dedupe.
+      const { payload, eventId, offer } = await buildLeadPayload({
+        full_name: fullName,
+        phone,
+        email,
+        answers: { role, revenue, reps, source: "apply-page" },
+      });
+      first_name = payload.first_name;
+      last_name = payload.last_name;
+
+      // 2. Pixel Lead with the same event id CAPI will send, so Meta dedupes them.
+      if (pixelReady) firePixelEvent("Lead", eventId, { content_name: "b2b_apply", offer });
+      fireGtagEvent("generate_lead", { event_id: eventId, lead_source: payload.lead_source, offer });
+
+      // 3. Deliver to GHL: server route first (adds real IP), browser
+      // fallback. Never block the UI on the network. Remember the lead before
+      // sending, and forget it again if delivery fails, so a lead that never
+      // reached GHL can still be submitted again.
       setSent(key, true);
-      const failed = (err: unknown) => {
-        console.error("Apply webhook failed:", err);
-        setSent(key, false);
-      };
-      try {
-        fetch(GHL_WEBHOOK_URL, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
-          keepalive: true,
-        })
-          .then((res) => {
-            if (!res.ok) failed(`HTTP ${res.status}`);
-          })
-          .catch(failed);
-      } catch (err) {
-        failed(err);
-      }
+      void deliverLead(payload).then((result) => {
+        if (result === "failed") setSent(key, false);
+      });
     }
 
     // 4. Swap the survey for the booking calendar, prefilled. GHL reads these
@@ -317,14 +218,14 @@ function QualifyModal({ open, tracking, onClose }: { open: boolean; tracking: Tr
     // combined "Full Name" field, prefilled with `full_name` (the split
     // first_name/last_name keys don't map to it); email/phone fill from `email`
     // and `phone`. The phone must be E.164 or the field ignores it, so normalize.
-    // first_name/last_name are kept as a harmless fallback if the form is ever
-    // switched to split name fields.
+    // UTMs and click ids ride along so GHL's own calendar attribution matches.
     const params = new URLSearchParams({
       full_name: fullName.trim(),
       first_name,
       last_name,
       email,
       phone: normalizePhone(phone),
+      ...getCalendarTrackingParams(),
     });
     const cal = `${CALENDAR_BASE}?${params.toString()}`;
     setCalSrc(cal);
@@ -446,16 +347,12 @@ export default function ApplyClient({ children }: { children?: React.ReactNode }
   const [open, setOpen] = useState(false);
   // Once opened, the modal stays mounted (hidden when closed). See QualifyModal.
   const [modalMounted, setModalMounted] = useState(false);
-  const [tracking, setTracking] = useState<Tracking>(EMPTY_TRACKING);
 
   const openModal = useCallback(() => {
     setModalMounted(true);
     setOpen(true);
   }, []);
   const closeModal = useCallback(() => setOpen(false), []);
-
-  // Capture Meta + UTM attribution on page load (URL params and cookies).
-  useEffect(() => setTracking(readTracking()), []);
 
   // Any ApplyButton on the page opens the survey.
   useEffect(() => {
@@ -466,7 +363,7 @@ export default function ApplyClient({ children }: { children?: React.ReactNode }
   return (
     <div className="dscroll cnx">
       <MetaPixel />
-      {modalMounted && <QualifyModal open={open} tracking={tracking} onClose={closeModal} />}
+      {modalMounted && <QualifyModal open={open} onClose={closeModal} />}
 
       {/* Header. Logo left; phone + apply CTA right. */}
       <nav className="snav applyhead" aria-label="Primary">

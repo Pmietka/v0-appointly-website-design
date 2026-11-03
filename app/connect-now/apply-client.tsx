@@ -2,7 +2,6 @@
 
 import { Fragment, useEffect, useState } from "react";
 import Image from "next/image";
-import Script from "next/script";
 import {
   Phone, CalendarCheck, Check, X, ArrowLeft,
   Target, User, Shield, CreditCard, Clock, Lock, LineChart,
@@ -10,7 +9,15 @@ import {
 
 import { PHONE_DISPLAY, PHONE_HREF } from "@/components/site-nav";
 import { LazyVidalytics } from "@/components/LazyVidalytics";
-import { LazyExternalScript } from "@/components/deferred-loader";
+import { MetaPixel, pixelReady } from "@/components/meta-pixel";
+import { deliverLead } from "@/lib/deliver-lead";
+import {
+  buildLeadPayload,
+  fireCustomPixelEvent,
+  fireGtagEvent,
+  firePixelEvent,
+  getCalendarTrackingParams,
+} from "@/lib/tracking";
 
 // The hero VSL (Vidalytics embed yab2hhU03er3If8m). No poster thumbnail URL yet,
 // so LazyVidalytics fills the 16:9 box with a neutral placeholder until the
@@ -21,13 +28,8 @@ const VSL_EMBED_ID = "yab2hhU03er3If8m";
    CONFIGURABLE CONSTANTS. Edit these, nothing else, to wire the page up.
    ============================================================================ */
 
-// Meta Pixel / dataset id. Fires PageView on load and Lead on survey submit.
-const META_PIXEL_ID = "985991997226201";
-
-// The GoHighLevel inbound webhook the survey POSTs to. This is /connect-now's
-// own trigger, separate from the one /connect fires, so the two pages can be
-// routed and reported on independently. The payload shape is identical.
-const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/bv8PsVl3lvidD0j8bBqP/webhook-trigger/69c59715-edb9-4231-bf64-1d2b255fa681";
+// Meta Pixel id, GHL webhook and all tracking live in lib/tracking-config.ts
+// and lib/tracking.ts (same universal tracking as the client landing pages).
 
 // GHL booking widget embedded in the modal after the survey is submitted.
 const CALENDAR_BASE = "https://link.getappointly.co/widget/booking/U3zYpjFagC8HFqQw21rC";
@@ -36,58 +38,9 @@ const CALENDAR_BASE = "https://link.getappointly.co/widget/booking/U3zYpjFagC8HF
 // To swap the video later, change VSL_EMBED_ID / VSL_POSTER above.
 
 /* ============================================================================
-   Meta Pixel helpers
-   ============================================================================ */
-
-// A real pixel id is all digits. Anything else (the placeholder) keeps it off.
-const pixelReady = /^\d+$/.test(META_PIXEL_ID);
-
-function MetaPixel() {
-  if (!pixelReady) return null;
-  // Standard Meta Pixel base code, loaded via next/script with afterInteractive so
-  // it stays off the critical path but is ready before the survey submit fires Lead.
-  // Defines fbq, inits with our id, and fires PageView.
-  return (
-    <>
-      <Script id="meta-pixel" strategy="afterInteractive">
-        {`!function(f,b,e,n){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[]}(window,document,'script');
-fbq('init', '${META_PIXEL_ID}');
-fbq('track', 'PageView');`}
-      </Script>
-      {/* fbevents.js is deferred to first interaction / short timeout to keep it
-          off the initial load (TBT) window. The fbq() calls above and the survey
-          Lead event queue and are sent once the library loads. */}
-      <LazyExternalScript id="meta-pixel-lib" src="https://connect.facebook.net/en_US/fbevents.js" />
-      <noscript>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        height="1"
-        width="1"
-        style={{ display: "none" }}
-        alt=""
-        src={`https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1`}
-      />
-      </noscript>
-    </>
-  );
-}
-
-/* ============================================================================
    Qualification survey modal. Opens from any CTA. Four steps, then on submit it
    POSTs the lead to GHL and swaps in the booking calendar (prefilled).
    ============================================================================ */
-
-type Tracking = {
-  fbclid: string; fbc: string; fbp: string;
-  utm_source: string; utm_medium: string; utm_campaign: string;
-  utm_term: string; utm_content: string; page_url: string;
-};
-
-const EMPTY_TRACKING: Tracking = {
-  fbclid: "", fbc: "", fbp: "",
-  utm_source: "", utm_medium: "", utm_campaign: "", utm_term: "", utm_content: "",
-  page_url: "",
-};
 
 // GHL's calendar phone field is an international input: it silently ignores a
 // prefill value it can't parse. A number typed as "(555) 123-4567" often fails,
@@ -105,35 +58,10 @@ function normalizePhone(raw: string): string {
   return "+" + digits;
 }
 
-function readCookie(name: string): string {
-  if (typeof document === "undefined") return "";
-  const escaped = name.replace(/([.$?*|{}()[\]\\/+^])/g, "\\$1");
-  const m = document.cookie.match(new RegExp("(?:^|; )" + escaped + "=([^;]*)"));
-  return m ? decodeURIComponent(m[1]) : "";
-}
-
-// Read the Meta click id + cookies and the UTM params. Called once on page load.
-function readTracking(): Tracking {
-  if (typeof window === "undefined") return EMPTY_TRACKING;
-  const p = new URLSearchParams(window.location.search);
-  const get = (k: string) => p.get(k) || "";
-  return {
-    fbclid: get("fbclid"),
-    fbc: readCookie("_fbc"),
-    fbp: readCookie("_fbp"),
-    utm_source: get("utm_source"),
-    utm_medium: get("utm_medium"),
-    utm_campaign: get("utm_campaign"),
-    utm_term: get("utm_term"),
-    utm_content: get("utm_content"),
-    page_url: window.location.href,
-  };
-}
-
 const REVENUE_OPTIONS = ["Under $50K, or just getting started", "$50K to $250K", "$250K to $500K", "$500K to $1M", "$1M+"];
 const CAPACITY_OPTIONS = ["Under 5", "5 to 10", "10 to 20", "20+"];
 
-function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () => void }) {
+function QualifyModal({ onClose }: { onClose: () => void }) {
   const [step, setStep] = useState(1);
   const [revenue, setRevenue] = useState("");
   const [capacity, setCapacity] = useState("");
@@ -173,60 +101,43 @@ function QualifyModal({ tracking, onClose }: { tracking: Tracking; onClose: () =
   // Progress fills as they advance; full once the calendar shows.
   const pct = submitted ? 100 : step * (100 / 3);
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!fullName.trim() || !phone.trim() || !email.trim()) return;
 
-    // 1. Fire the Meta Pixel Lead event, but only for qualified applicants.
-    if (pixelReady && typeof (window as any).fbq === "function") {
-      const qualified = revenue !== "Under $50K, or just getting started";
-      if (qualified) {
-        (window as any).fbq("track", "Lead");
-      } else {
-        (window as any).fbq("trackCustom", "UnqualifiedApplication");
-      }
-    }
+    // 1. Build the universal tracking payload (same shape as the client landing
+    // pages): last touch + first touch attribution, click ids, fbc/fbp, IP,
+    // hashed user data for CAPI, and a shared event id for dedupe.
+    const qualified = revenue !== "Under $50K, or just getting started";
+    const { payload, eventId, offer } = await buildLeadPayload({
+      full_name: fullName,
+      phone,
+      email,
+      answers: { revenue, capacity, source: "connect-now-page", qualified: qualified ? "yes" : "no" },
+    });
 
-    // 2. Split the full name: first word is the first name, the rest is last.
-    const parts = fullName.trim().split(/\s+/);
-    const first_name = parts.shift() || "";
-    const last_name = parts.join(" ");
-
-    // 3. POST to GHL, fire and forget. Never block the UI on the network.
-    const payload = {
-      first_name, last_name, phone, email,
-      revenue, capacity,
-      fbclid: tracking.fbclid, fbc: tracking.fbc, fbp: tracking.fbp,
-      utm_source: tracking.utm_source, utm_medium: tracking.utm_medium,
-      utm_campaign: tracking.utm_campaign, utm_term: tracking.utm_term,
-      utm_content: tracking.utm_content,
-      source: "connect-now-page",
-      page_url: tracking.page_url,
-    };
-    try {
-      fetch(GHL_WEBHOOK_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-        keepalive: true,
-      }).catch((err) => console.error("connect-now webhook failed:", err));
-    } catch (err) {
-      console.error("connect-now webhook failed:", err);
+    // 2. Pixel Lead (qualified only) with the same event id CAPI will send.
+    if (pixelReady) {
+      if (qualified) firePixelEvent("Lead", eventId, { content_name: "b2b_connect_now", offer });
+      else fireCustomPixelEvent("UnqualifiedApplication", eventId, { offer });
     }
+    if (qualified) fireGtagEvent("generate_lead", { event_id: eventId, lead_source: payload.lead_source, offer });
+
+    // 3. Deliver to GHL: server route first (adds real IP), browser fallback.
+    void deliverLead(payload);
 
     // 4. Swap the survey for the booking calendar, prefilled. GHL reads these
     // query params on the iframe src. This calendar's default form has a single
-    // combined "Full Name" field, prefilled with `full_name` (the split
-    // first_name/last_name keys don't map to it); email/phone fill from `email`
-    // and `phone`. The phone must be E.164 or the field ignores it, so normalize.
-    // first_name/last_name are kept as a harmless fallback if the form is ever
-    // switched to split name fields.
+    // combined "Full Name" field, prefilled with `full_name`; email/phone fill
+    // from `email` and `phone`. The phone must be E.164 or the field ignores it.
+    // UTMs and click ids ride along so GHL's own calendar attribution matches.
     const params = new URLSearchParams({
       full_name: fullName.trim(),
-      first_name,
-      last_name,
+      first_name: payload.first_name,
+      last_name: payload.last_name,
       email,
       phone: normalizePhone(phone),
+      ...getCalendarTrackingParams(),
     });
     const cal = `${CALENDAR_BASE}?${params.toString()}`;
     setCalSrc(cal);
@@ -368,15 +279,10 @@ const COMPARE_ROWS = [
 
 export default function ApplyClient() {
   const [open, setOpen] = useState(false);
-  const [tracking, setTracking] = useState<Tracking>(EMPTY_TRACKING);
-
-  // Capture Meta + UTM attribution on page load (URL params and cookies).
-  useEffect(() => setTracking(readTracking()), []);
-
   return (
     <div className="dscroll">
       <MetaPixel />
-      {open && <QualifyModal tracking={tracking} onClose={() => setOpen(false)} />}
+      {open && <QualifyModal onClose={() => setOpen(false)} />}
 
       {/* Header. Logo left; phone + apply CTA right. */}
       <nav className="snav applyhead" aria-label="Primary">
