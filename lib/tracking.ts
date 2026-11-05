@@ -511,6 +511,13 @@ export function getCalendarTrackingParams(): Record<string, string> {
   return out;
 }
 
+/* B2B lead gate: the browser pixel never fires the standard Lead or Schedule
+   events. Lead is only sent server side (CAPI, n8n "B2B Lead Gate: Slack Grades")
+   after the call is graded in #b2b-lead-flow. These custom events are for
+   funnel reporting only. */
+export const B2B_FORM_SUBMIT_EVENT = "B2BFormSubmit";
+export const B2B_CALL_BOOKED_EVENT = "B2BCallBooked";
+
 export function firePixelEvent(eventName: string, eventId: string, params: Record<string, unknown> = {}): void {
   try {
     (window as any).fbq?.("track", eventName, params, { eventID: eventId });
@@ -530,13 +537,13 @@ export function fireGtagEvent(eventName: string, params: Record<string, unknown>
   } catch {}
 }
 
-/** Booked call page: Schedule with eventID = <lead event id>_schedule so it dedupes with CAPI. Fires once per lead. */
+/** Booked call page: fires the custom B2BCallBooked event (never the standard Schedule event) with eventID = <lead event id>_schedule. Fires once per lead. */
 export function fireScheduleOnce(params: Record<string, unknown> = {}): void {
   if (!isBrowser()) return;
   const leadId = safeGet(localStorage, K.lastLeadEventId) || "";
   if (leadId && safeGet(localStorage, K.scheduleFired) === leadId) return;
   const eventId = leadId ? `${leadId}_schedule` : uuid();
-  firePixelEvent("Schedule", eventId, params);
+  fireCustomPixelEvent(B2B_CALL_BOOKED_EVENT, eventId, params);
   fireGtagEvent("schedule_call", { event_id: eventId });
   if (leadId) safeSet(localStorage, K.scheduleFired, leadId);
 }

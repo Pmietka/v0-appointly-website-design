@@ -9,9 +9,10 @@ import { LazyVidalytics } from "@/components/LazyVidalytics";
 import { MetaPixel, pixelReady } from "@/components/meta-pixel";
 import { deliverLead } from "@/lib/deliver-lead";
 import {
+  B2B_FORM_SUBMIT_EVENT,
   buildLeadPayload,
+  fireCustomPixelEvent,
   fireGtagEvent,
-  firePixelEvent,
   getCalendarTrackingParams,
 } from "@/lib/tracking";
 import { OPEN_APPLY_EVENT } from "./apply-button";
@@ -199,8 +200,10 @@ function QualifyModal({ open, onClose }: { open: boolean; onClose: () => void })
       first_name = payload.first_name;
       last_name = payload.last_name;
 
-      // 2. Pixel Lead with the same event id CAPI will send, so Meta dedupes them.
-      if (pixelReady) firePixelEvent("Lead", eventId, { content_name: "b2b_apply", offer });
+      // 2. Custom B2BFormSubmit pixel event, for funnel reporting only. The
+      //    browser never fires the standard Lead event: Lead is sent server side
+      //    (CAPI) only after the call is graded in Slack.
+      if (pixelReady) fireCustomPixelEvent(B2B_FORM_SUBMIT_EVENT, eventId, { content_name: "b2b_apply", offer });
       fireGtagEvent("generate_lead", { event_id: eventId, lead_source: payload.lead_source, offer });
 
       // 3. Deliver to GHL: server route first (adds real IP), browser

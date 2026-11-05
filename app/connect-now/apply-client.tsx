@@ -12,10 +12,10 @@ import { LazyVidalytics } from "@/components/LazyVidalytics";
 import { MetaPixel, pixelReady } from "@/components/meta-pixel";
 import { deliverLead } from "@/lib/deliver-lead";
 import {
+  B2B_FORM_SUBMIT_EVENT,
   buildLeadPayload,
   fireCustomPixelEvent,
   fireGtagEvent,
-  firePixelEvent,
   getCalendarTrackingParams,
 } from "@/lib/tracking";
 
@@ -116,9 +116,11 @@ function QualifyModal({ onClose }: { onClose: () => void }) {
       answers: { revenue, capacity, source: "connect-now-page", qualified: qualified ? "yes" : "no" },
     });
 
-    // 2. Pixel Lead (qualified only) with the same event id CAPI will send.
+    // 2. Custom pixel events, for funnel reporting only. The browser never fires
+    //    the standard Lead event: Lead is sent server side (CAPI) only after the
+    //    call is graded in Slack.
     if (pixelReady) {
-      if (qualified) firePixelEvent("Lead", eventId, { content_name: "b2b_connect_now", offer });
+      if (qualified) fireCustomPixelEvent(B2B_FORM_SUBMIT_EVENT, eventId, { content_name: "b2b_connect_now", offer });
       else fireCustomPixelEvent("UnqualifiedApplication", eventId, { offer });
     }
     if (qualified) fireGtagEvent("generate_lead", { event_id: eventId, lead_source: payload.lead_source, offer });

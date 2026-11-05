@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 };
 
 /* Same content as /lander (app/lander/lander-content.tsx), plus the pixel:
-   it fires Meta PageView + the "Schedule" conversion event on load, since a
+   it fires Meta PageView + the custom "B2BCallBooked" event on load, since a
    lead reaches this page only after booking a call. */
 export default function BookedCallPage() {
   return <LanderContent pixel={<BookedCallPixel />} />;
