@@ -40,15 +40,12 @@ export function BookedCallContent({ pixel }: { pixel?: React.ReactNode }) {
 
       {/* 1 + 2 · Top and video */}
       <section className="bkc-top" id="top">
-        <div className="orb a" />
         <div className="wrap">
           <p className="eyebrow">Your call is booked</p>
-          <h1>
-            Here&apos;s how <span className="hl">the call works.</span>
-          </h1>
-          <p className="lead">
-            Watch this first. It covers what we do and how you pay, so we can
-            spend the call on your business.
+          <h1 className="bkc-h1">Here&apos;s how the call works.</h1>
+          <p className="bkc-sub">
+            Watch this 2 minute video so that you know what this is all about and
+            we can spend the call talking about your business.
           </p>
           <div className="vslvid">
             <LazyVidalytics embedId={VSL_EMBED_ID} poster={VSL_POSTER} />

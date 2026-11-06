@@ -9,8 +9,9 @@
 
 /* Top: label, headline, subhead, then the video full width */
 .dscroll .bkc-top{position:relative;padding:clamp(28px,6vw,64px) 0 clamp(28px,4vw,44px);text-align:center}
-.dscroll .bkc-top h1{max-width:16ch;margin:0 auto}
-.dscroll .bkc-top .lead{margin:18px auto 0;max-width:560px;text-wrap:balance}
+/* Plain headline and subhead: no highlight, no glow, just black text */
+.dscroll .bkc-top .bkc-h1{font-size:clamp(26px,6vw,36px);font-weight:700;line-height:1.25;color:var(--ink);margin:0 auto}
+.dscroll .bkc-top .bkc-sub{font-size:clamp(16px,2vw,18px);line-height:1.5;color:var(--ink);margin:12px auto 0;max-width:560px}
 .dscroll .bkc-top .vslvid{max-width:none;width:100%;margin:clamp(24px,4vw,36px) 0 0}
 
 /* Sections: tight, consistent spacing */
