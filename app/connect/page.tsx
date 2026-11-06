@@ -97,7 +97,7 @@ export default function ConnectPage() {
       <section className="sec pwsec" id="proof">
         <div className="wrap pwwide">
           <ProofHeader
-            title={<>Don&apos;t take our word for it. <span className="hl">Take theirs.</span></>}
+            title={<>Don&apos;t take our word for it. <span className="hl">Hear it from our clients.</span></>}
             sub="Our clients on camera, in their own messages, and on their own calendars. Brand new clients and some of our very first. Click anything."
           />
 
