@@ -83,11 +83,6 @@ export default function ConnectPage() {
               </li>
             ))}
           </ol>
-          <p className="wwdnote">
-            On the call we decide together if this works in your market: is there
-            enough demand, do the numbers work at your job size and close rate, and
-            what you need in place. You leave with a yes or no.
-          </p>
         </div>
       </section>
 

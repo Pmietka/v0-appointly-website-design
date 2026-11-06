@@ -14,7 +14,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Appointly Solutions | Watch this before our call",
   description:
-    "Your call is booked. Watch the short video, see what we decide on the call and how you pay, and hear from the contractors we book for.",
+    "Your call is booked. Watch the short video, see what we decide on the call, and hear from the contractors we book for.",
   robots: { index: false, follow: true },
   alternates: {
     canonical: "https://getappointly.co/booked-call",

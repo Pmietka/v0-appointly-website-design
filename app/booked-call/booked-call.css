@@ -36,9 +36,6 @@
 .dscroll .bkc-list li{display:flex;gap:12px;align-items:flex-start;font-size:clamp(15px,2vw,17px);font-weight:600;line-height:1.45;color:var(--ink)}
 .dscroll .bkc-close{margin-top:18px;font-size:clamp(15px,2vw,17px);line-height:1.55;color:var(--ink-3)}
 
-/* How you pay */
-.dscroll .bkc-p{margin-top:clamp(14px,2.4vw,18px);font-size:clamp(15px,2vw,17px);line-height:1.6;color:var(--ink-3)}
-
 /* Proof: the case study cards, stacked in the single column */
 .dscroll .bkc-proof .pwfeats{grid-template-columns:1fr;margin-top:clamp(18px,3vw,24px)}
 .dscroll .bkc-more{display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-size:15px;font-weight:700;color:var(--ink);

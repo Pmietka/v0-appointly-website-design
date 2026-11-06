@@ -8,7 +8,7 @@ import { FeaturedStories } from "@/components/sales/proof-section";
 /* ============================================================================
    /booked-call: the short page a lead sees right after booking a call.
    One column, mobile first: the video, three rules for the call, what we
-   decide on it, how they pay, the three video case studies, and a sign off.
+   decide on it, the three video case studies, and a sign off.
    (/lander keeps the long version in app/lander/lander-content.tsx.)
    Styles: home.css, lander.css and sales.css, plus booked-call.css.
    ============================================================================ */
@@ -102,19 +102,6 @@ export function BookedCallContent({ pixel }: { pixel?: React.ReactNode }) {
           <p className="bkc-close">
             By the end you&apos;ll have a yes or no. If it&apos;s a yes, we start
             setup right there.
-          </p>
-        </div>
-      </section>
-
-      {/* 5 · How you pay */}
-      <section className="bkc-sec" id="pay">
-        <div className="wrap">
-          <h2>How you pay</h2>
-          <p className="bkc-p">
-            You fund your ad spend upfront at cost, with a spend report every
-            week. Then you pay $125 to $175 per booked estimate, set per client.
-            No setup fee, no retainer, no long contract. No shows and appointments
-            you grade a C are credited to your next one.
           </p>
         </div>
       </section>
