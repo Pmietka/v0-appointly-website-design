@@ -1,0 +1,51 @@
+/* ============================================================================
+   /booked-call. A short, single column page built on the shared .dscroll
+   system (home.css), the VSL box from lander.css and the case study cards
+   from sales.css. Everything here is scoped under .bkc.
+   ============================================================================ */
+
+/* One narrow column for the whole page */
+.dscroll.bkc .wrap{max-width:720px}
+
+/* Top: label, headline, subhead, then the video full width */
+.dscroll .bkc-top{position:relative;padding:clamp(28px,6vw,64px) 0 clamp(28px,4vw,44px);text-align:center}
+.dscroll .bkc-top h1{max-width:16ch;margin:0 auto}
+.dscroll .bkc-top .lead{margin:18px auto 0;max-width:560px;text-wrap:balance}
+.dscroll .bkc-top .vslvid{max-width:none;width:100%;margin:clamp(24px,4vw,36px) 0 0}
+
+/* Sections: tight, consistent spacing */
+.dscroll .bkc-sec{padding:clamp(36px,7vw,60px) 0 0}
+.dscroll .bkc-top + .bkc-sec{padding-top:clamp(12px,3vw,24px)}
+.dscroll .bkc-sec h2{font-size:clamp(26px,4.6vw,38px)}
+
+/* Shared white card */
+.dscroll .bkc-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(18px,3.4vw,26px)}
+
+/* Three rules, numbered, in one card */
+.dscroll .bkc-rules{list-style:none;margin-top:clamp(18px,3vw,24px);display:flex;flex-direction:column;gap:0}
+.dscroll .bkc-rules li{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-top:1px solid var(--line)}
+.dscroll .bkc-rules li:first-child{padding-top:0;border-top:0}
+.dscroll .bkc-rules li:last-child{padding-bottom:0}
+.dscroll .bkc-n{flex:none;width:32px;height:32px;border-radius:10px;display:grid;place-items:center;background:var(--ink);color:#fff;font-weight:800;font-size:14px}
+.dscroll .bkc-rules p{font-size:clamp(15px,2vw,17px);line-height:1.55;color:var(--ink-3);padding-top:4px}
+.dscroll .bkc-rules strong{color:var(--ink);font-weight:700}
+.dscroll .bkc-rules a,.dscroll .bkc-bye a{color:var(--ink);font-weight:700;text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
+
+/* What we decide together */
+.dscroll .bkc-list{list-style:none;margin-top:clamp(18px,3vw,24px);display:flex;flex-direction:column;gap:12px}
+.dscroll .bkc-list li{display:flex;gap:12px;align-items:flex-start;font-size:clamp(15px,2vw,17px);font-weight:600;line-height:1.45;color:var(--ink)}
+.dscroll .bkc-close{margin-top:18px;font-size:clamp(15px,2vw,17px);line-height:1.55;color:var(--ink-3)}
+
+/* How you pay */
+.dscroll .bkc-p{margin-top:clamp(14px,2.4vw,18px);font-size:clamp(15px,2vw,17px);line-height:1.6;color:var(--ink-3)}
+
+/* Proof: the case study cards, stacked in the single column */
+.dscroll .bkc-proof .pwfeats{grid-template-columns:1fr;margin-top:clamp(18px,3vw,24px)}
+.dscroll .bkc-more{display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-size:15px;font-weight:700;color:var(--ink);
+  text-decoration:underline;text-underline-offset:3px}
+.dscroll .bkc-more svg{width:16px;height:16px}
+
+/* Sign off, then the small footer */
+.dscroll .bkc-end{padding-bottom:clamp(40px,8vw,72px)}
+.dscroll .bkc-bye{font-size:clamp(17px,2.4vw,20px);font-weight:600;line-height:1.5;color:var(--ink);text-align:center;text-wrap:balance}
+.dscroll.bkc footer .flinks{margin-top:16px}

@@ -41,10 +41,56 @@ export const metadata: Metadata = {
      3. The model as click-to-open questions
      4. Who are these guys
    The hero, survey modal and closing CTA live in ApplyClient. */
+// "What we actually do", directly under the hero.
+const WHAT_WE_DO = [
+  {
+    t: "We run the ads",
+    d: "Facebook and Instagram ads in your market, run from our ad account. You fund the spend at cost.",
+  },
+  {
+    t: "We call and book",
+    d: "Every lead is texted and called within a minute, qualified, and booked onto your calendar.",
+  },
+  {
+    t: "You run the estimate",
+    d: "Show up and close. Grade a bad appointment a C and you don't pay for it.",
+  },
+];
+
+// Step 1 (Strategy call) bullets on this page only.
+const STRATEGY_CALL_PTS = [
+  "Check that your market has the demand and is still open",
+  "Run the numbers at your job size and close rate",
+  "Decide yes or no on the call",
+];
+
 export default function ConnectPage() {
   const cfc = getCaseStudy(CFC_STORY.slug)!;
   return (
     <ApplyClient>
+      {/* What we actually do, right under the hero */}
+      <section className="wwdsec" id="what-we-do">
+        <div className="wrap">
+          <h2 className="wwdtitle">What we <span className="hl">actually do</span></h2>
+          <ol className="wwdlist">
+            {WHAT_WE_DO.map((r, i) => (
+              <li className="wwdrow" key={r.t}>
+                <span className="wwdn" aria-hidden>{i + 1}</span>
+                <span className="wwdtext">
+                  <span className="wwdt">{r.t}</span>
+                  <span className="wwdd">{r.d}</span>
+                </span>
+              </li>
+            ))}
+          </ol>
+          <p className="wwdnote">
+            On the call we decide together if this works in your market: is there
+            enough demand, do the numbers work at your job size and close rate, and
+            what you need in place. You leave with a yes or no.
+          </p>
+        </div>
+      </section>
+
       {/* Client logos, right under the hero */}
       <section className="lmqband" id="clients" aria-label="Clients">
         <div className="wrap">
@@ -111,7 +157,7 @@ export default function ConnectPage() {
             No surprises on the call. Here&apos;s the whole thing: what we do,
             what you do, and what happens at every step.
           </p>
-          <ProcessTimeline />
+          <ProcessTimeline firstStepPts={STRATEGY_CALL_PTS} />
         </div>
       </section>
 

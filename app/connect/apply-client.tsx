@@ -395,7 +395,8 @@ export default function ApplyClient({ children }: { children?: React.ReactNode }
             Keep Every Crew <span className="hl">Booked Weeks In Advance.</span>
           </h1>
           <p className="lead heropromise">
-            <span className="hpmark">Only Pay</span> When You&apos;re Face to Face With a Qualified Homeowner.
+            We run Facebook and Instagram ads in your area, call every homeowner
+            within a minute, and book qualified estimates straight onto your calendar.
           </p>
 
           <div className="herorow">

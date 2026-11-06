@@ -208,3 +208,17 @@
     border:none;border-radius:13px;padding:16px 18px;box-shadow:0 16px 34px -16px rgba(15,23,42,.65)}
   .dscroll .mcta-btn:active{transform:translateY(1px)}
 }
+
+/* ── "What we actually do", directly under the hero ──────────────────────────
+   Three numbered rows in the same white card style as the rest of the page,
+   one column (mobile first), plus a small note under them. */
+.dscroll .wwdsec{padding:0 0 clamp(40px,7vw,72px)}
+.dscroll .wwdtitle{text-align:center;font-size:clamp(27px,4.6vw,42px)}
+.dscroll .wwdlist{list-style:none;max-width:760px;margin:clamp(22px,4vw,32px) auto 0;display:flex;flex-direction:column;gap:clamp(10px,2vw,14px)}
+.dscroll .wwdrow{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:16px;
+  padding:clamp(16px,3vw,22px) clamp(16px,3vw,24px)}
+.dscroll .wwdn{flex:none;width:32px;height:32px;border-radius:10px;display:grid;place-items:center;background:var(--ink);color:#fff;font-weight:800;font-size:14px}
+.dscroll .wwdtext{display:flex;flex-direction:column;gap:4px;min-width:0}
+.dscroll .wwdt{font-size:clamp(17px,2.2vw,20px);font-weight:700;letter-spacing:-.015em;color:var(--ink);line-height:1.3}
+.dscroll .wwdd{font-size:clamp(15px,1.9vw,16.5px);line-height:1.5;color:var(--ink-3)}
+.dscroll .wwdnote{max-width:680px;margin:clamp(18px,3vw,24px) auto 0;text-align:center;font-size:14px;line-height:1.55;color:var(--ink-4);text-wrap:balance}

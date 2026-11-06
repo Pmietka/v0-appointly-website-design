@@ -13,8 +13,8 @@ import {
 } from "@/components/sales/process";
 
 /* ============================================================================
-   The page a lead lands on after booking a call. Shared by /lander and
-   /booked-call (which adds the Meta Schedule pixel), so the two never drift.
+   The long page a lead lands on after booking a call, used by /lander.
+   (/booked-call has its own short page in app/booked-call.)
 
    Its job is everything to know before the call: what to do beforehand, what
    we'll cover, how the model works and what it costs, what we are not, who
