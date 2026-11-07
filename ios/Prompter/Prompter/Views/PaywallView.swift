@@ -37,7 +37,6 @@ struct PaywallView: View {
             .accessibilityIdentifier("closePaywall")
             .padding(16)
         }
-        .accessibilityIdentifier("paywall")
         .task {
             if store.products.isEmpty { await store.loadProducts() }
             await loadEligibility()

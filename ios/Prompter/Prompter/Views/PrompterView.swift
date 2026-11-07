@@ -54,6 +54,16 @@ struct PrompterView: View {
                 .frame(width: geo.size.width, height: geo.size.height)
                 .onAppear { lensColumn = Self.currentLensColumn() }
                 .onChange(of: geo.size) { _, _ in lensColumn = Self.currentLensColumn() }
+                // Turning straight from one sideways position to the other keeps the
+                // same size, so watch the rotation itself too. The new orientation
+                // settles a moment after the notification.
+                .onReceive(NotificationCenter.default.publisher(for: UIDevice.orientationDidChangeNotification)) { _ in
+                    for delay in [0.1, 0.4, 0.9] {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+                            lensColumn = Self.currentLensColumn()
+                        }
+                    }
+                }
             }
             if let countdown {
                 Text("\(countdown)")
@@ -186,13 +196,13 @@ struct PrompterView: View {
                         .allowsHitTesting(false)
                 }
             }
-            .accessibilityIdentifier("prompterBand")
     }
 
     private var hint: String? {
         if isBusy { return nil }
         if engine.reachedEnd { return "End of script. Tap to start over" }
-        if engine.isRunning { return "Tap to pause" }
+        // Nothing over the words while they're moving.
+        if engine.isRunning { return nil }
         return "Tap to scroll · drag to move"
     }
 
@@ -323,6 +333,7 @@ struct PrompterView: View {
     // MARK: Behavior
 
     private func start() {
+        UIDevice.current.beginGeneratingDeviceOrientationNotifications()
         engine.speed = speed
         UIApplication.shared.isIdleTimerDisabled = true
         let side = position ?? (defaultCamera == "back" ? .back : .front)
@@ -341,6 +352,7 @@ struct PrompterView: View {
         camera.stop()
         OrientationLock.unlock()
         UIApplication.shared.isIdleTimerDisabled = false
+        UIDevice.current.endGeneratingDeviceOrientationNotifications()
     }
 
     private func recordTapped() {

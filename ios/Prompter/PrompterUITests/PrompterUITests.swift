@@ -82,7 +82,12 @@ final class PrompterUITests: XCTestCase {
         XCTAssertTrue(shutter.waitForExistence(timeout: 10))
         shutter.tap()
 
-        XCTAssertTrue(app.buttons["closePaywall"].waitForExistence(timeout: 10), "Paywall should open")
+        let close = app.buttons["closePaywall"]
+        if !close.waitForExistence(timeout: 10) {
+            snap("07-paywall-missing")
+            print("UI HIERARCHY:\n\(app.debugDescription)")
+        }
+        XCTAssertTrue(close.exists, "Paywall should open")
         sleep(2)
         snap("07-paywall")
 
