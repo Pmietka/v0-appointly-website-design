@@ -1,0 +1,113 @@
+name: iOS app
+
+# Builds the Prompter iOS app on a Mac, runs the unit tests (including a
+# simulated App Store purchase) and the screenshot tests, then publishes the
+# screenshots so every change can be checked by eye.
+on:
+  push:
+    paths:
+      - "ios/**"
+      - ".github/workflows/ios.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ios-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-test:
+    runs-on: macos-15
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use the newest Xcode on the runner
+        run: |
+          latest=$(ls -d /Applications/Xcode_*.app 2>/dev/null | grep -v -i beta | sort -V | tail -1)
+          if [ -n "$latest" ]; then sudo xcode-select -s "$latest/Contents/Developer"; fi
+          xcodebuild -version
+
+      - name: Pick an iPhone simulator
+        id: sim
+        run: |
+          udid=$(xcrun simctl list devices available -j | python3 -c '
+          import json, re, sys
+          devices = json.load(sys.stdin)["devices"]
+          best = None
+          for runtime, items in devices.items():
+              m = re.search(r"iOS-(\d+)-(\d+)", runtime)
+              if not m:
+                  continue
+              version = (int(m.group(1)), int(m.group(2)))
+              for d in items:
+                  name = d["name"]
+                  if name.startswith("iPhone") and "Pro" in name and "Max" not in name:
+                      key = (version, name)
+                      if best is None or key > best[0]:
+                          best = (key, d["udid"])
+          print(best[1] if best else "")
+          ')
+          echo "Using simulator $udid"
+          xcrun simctl list devices | grep "$udid" || true
+          echo "udid=$udid" >> "$GITHUB_OUTPUT"
+
+      - name: Build and test
+        working-directory: ios/Prompter
+        env:
+          TEST_RUNNER_SCREENSHOT_DIR: ${{ github.workspace }}/out/screenshots
+        run: |
+          mkdir -p "$TEST_RUNNER_SCREENSHOT_DIR"
+          set +e
+          xcodebuild test \
+            -project Prompter.xcodeproj \
+            -scheme Prompter \
+            -destination "id=${{ steps.sim.outputs.udid }}" \
+            -resultBundlePath "${{ github.workspace }}/out/Results.xcresult" \
+            > "${{ github.workspace }}/out/xcodebuild.log" 2>&1
+          status=$?
+          grep -E "error:|warning:|Test Case .*(passed|failed)|Executed|\*\* (BUILD|TEST)" "${{ github.workspace }}/out/xcodebuild.log"
+          exit $status
+
+      - name: Release build for a real iPhone (no signing)
+        working-directory: ios/Prompter
+        run: |
+          set +e
+          xcodebuild build \
+            -project Prompter.xcodeproj \
+            -scheme Prompter \
+            -configuration Release \
+            -destination "generic/platform=iOS" \
+            CODE_SIGNING_ALLOWED=NO \
+            > "${{ github.workspace }}/out/release-build.log" 2>&1
+          status=$?
+          grep -E "error:|warning:|\*\* BUILD" "${{ github.workspace }}/out/release-build.log"
+          exit $status
+
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-results
+          path: |
+            out/screenshots
+            out/xcodebuild.log
+            out/release-build.log
+          if-no-files-found: ignore
+
+      - name: Publish screenshots to refs/ci/ios-screenshots
+        if: always()
+        run: |
+          mkdir -p /tmp/pub
+          cp -R out/screenshots/. /tmp/pub/ 2>/dev/null || true
+          for f in xcodebuild.log release-build.log; do
+            [ -f "out/$f" ] && tail -c 400000 "out/$f" > "/tmp/pub/$f"
+          done
+          cd /tmp/pub
+          echo "${GITHUB_SHA}" > COMMIT
+          git init -q
+          git add -A
+          git -c user.name="ci" -c user.email="ci@users.noreply.github.com" commit -qm "iOS screenshots for ${GITHUB_SHA}"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" HEAD:refs/ci/ios-screenshots || echo "Could not publish the screenshot ref"

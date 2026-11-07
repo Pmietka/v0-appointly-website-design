@@ -1,0 +1,412 @@
+import AVFoundation
+import SwiftUI
+import UIKit
+
+struct Take: Identifiable {
+    let url: URL
+    let duration: TimeInterval
+    var id: URL { url }
+}
+
+/// The camera, the scrolling script and the shutter. Upright, the script sits
+/// in a band under the top of the screen. Sideways, it hugs the side the
+/// camera is on and the shutter moves to the far side, like the Camera app.
+struct PrompterView: View {
+    let script: String
+
+    @Environment(\.dismiss) private var dismiss
+    @Environment(SubscriptionStore.self) private var subscriptions
+
+    @AppStorage(Pref.fontSize) private var fontSize: Double = 40
+    @AppStorage(Pref.speed) private var speed: Double = 4
+    @AppStorage(Pref.countdown) private var countdownSetting: Int = 3
+    @AppStorage(Pref.mirror) private var mirror = false
+    @AppStorage(Pref.camera) private var defaultCamera = "front"
+    @AppStorage(Pref.quality) private var qualityRaw = VideoQuality.hd.rawValue
+
+    @StateObject private var camera = CameraController()
+    @StateObject private var engine = PrompterEngine()
+
+    @State private var position: AVCaptureDevice.Position?
+    @State private var countdown: Int?
+    @State private var countdownTask: Task<Void, Never>?
+    @State private var recordingStart: Date?
+    @State private var take: Take?
+    @State private var showPaywall = false
+    @State private var lensColumn: PrompterColumn = .center
+    @State private var alertMessage: String?
+
+    private var isRecording: Bool { recordingStart != nil }
+    private var isBusy: Bool { isRecording || countdown != nil }
+    private var quality: VideoQuality { VideoQuality(rawValue: qualityRaw) ?? .hd }
+
+    var body: some View {
+        ZStack {
+            cameraLayer
+            GeometryReader { geo in
+                Group {
+                    if geo.size.width > geo.size.height {
+                        landscapeLayout(geo.size)
+                    } else {
+                        portraitLayout(geo.size)
+                    }
+                }
+                .frame(width: geo.size.width, height: geo.size.height)
+                .onAppear { lensColumn = Self.currentLensColumn() }
+                .onChange(of: geo.size) { _, _ in lensColumn = Self.currentLensColumn() }
+            }
+            if let countdown {
+                Text("\(countdown)")
+                    .font(.system(size: 150, weight: .heavy, design: .rounded))
+                    .foregroundStyle(.white)
+                    .shadow(color: .black.opacity(0.5), radius: 24)
+                    .id(countdown)
+                    .transition(.scale(scale: 1.4).combined(with: .opacity))
+                    .allowsHitTesting(false)
+            }
+            statusOverlay
+        }
+        .environment(\.layoutDirection, .leftToRight)
+        .background(Color.black)
+        .statusBarHidden()
+        .persistentSystemOverlays(.hidden)
+        .sensoryFeedback(.impact(weight: .light), trigger: countdown)
+        .animation(.easeOut(duration: 0.25), value: countdown)
+        .onAppear(perform: start)
+        .onDisappear(perform: teardown)
+        .onChange(of: speed) { _, newValue in engine.speed = newValue }
+        .sheet(isPresented: $showPaywall) {
+            PaywallView().environment(subscriptions)
+        }
+        .fullScreenCover(item: $take) { take in
+            ReviewView(take: take) {
+                self.take = nil
+                engine.restart()
+            }
+        }
+        .alert("Recording stopped", isPresented: Binding(get: { alertMessage != nil }, set: { if !$0 { alertMessage = nil } })) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text(alertMessage ?? "")
+        }
+    }
+
+    // MARK: Layouts
+
+    private func portraitLayout(_ size: CGSize) -> some View {
+        VStack(spacing: 0) {
+            HStack {
+                backButton(compact: false)
+                Spacer()
+                flipButton
+            }
+            .overlay { timerPill }
+            .padding(.horizontal, 12)
+            .frame(height: 52)
+
+            band(column: .center)
+                .frame(height: size.height * 0.40)
+
+            Spacer(minLength: 0)
+
+            VStack(spacing: 16) {
+                steppers(compact: false)
+                HStack(spacing: 40) {
+                    restartButton
+                    shutter(size: 76)
+                    playButton
+                }
+            }
+            .padding(.bottom, 12)
+        }
+    }
+
+    private func landscapeLayout(_ size: CGSize) -> some View {
+        let lensOnLeft = lensColumn != .trailing
+        let sideWidth: CGFloat = 96
+        return HStack(spacing: 0) {
+            if !lensOnLeft { sideColumn.frame(width: sideWidth) }
+            VStack(spacing: 0) {
+                band(column: lensOnLeft ? .leading : .trailing)
+                    .frame(height: size.height * 0.64)
+                Spacer(minLength: 0)
+                HStack(spacing: 10) {
+                    backButton(compact: true)
+                    flipButton
+                    timerPill
+                    Spacer(minLength: 6)
+                    steppers(compact: size.width - sideWidth < 600)
+                }
+                .padding(.horizontal, 12)
+                .padding(.bottom, 8)
+            }
+            if lensOnLeft { sideColumn.frame(width: sideWidth) }
+        }
+    }
+
+    private var sideColumn: some View {
+        VStack(spacing: 22) {
+            restartButton
+            shutter(size: 70)
+            playButton
+        }
+        .frame(maxHeight: .infinity)
+        .frame(maxWidth: .infinity)
+        .background { Color.black.opacity(0.35).ignoresSafeArea() }
+    }
+
+    // MARK: Pieces
+
+    @ViewBuilder
+    private var cameraLayer: some View {
+        if AppConfig.isUITest {
+            // The simulator has no camera. A neutral stand in keeps screenshots readable.
+            LinearGradient(colors: [Color(white: 0.32), Color(white: 0.1)], startPoint: .top, endPoint: .bottom)
+                .ignoresSafeArea()
+        } else {
+            CameraPreview(camera: camera).ignoresSafeArea()
+        }
+    }
+
+    private func band(column: PrompterColumn) -> some View {
+        PrompterTextView(text: script, fontSize: CGFloat(fontSize), mirrored: mirror, column: column, engine: engine)
+            .background { Color.black.opacity(0.55).ignoresSafeArea(edges: [.top, .horizontal]) }
+            .overlay(alignment: .bottom) {
+                if let hint {
+                    Text(hint)
+                        .font(.footnote.weight(.semibold))
+                        .padding(.horizontal, 12)
+                        .padding(.vertical, 6)
+                        .background(.white.opacity(0.16), in: Capsule())
+                        .padding(.bottom, 10)
+                        .allowsHitTesting(false)
+                }
+            }
+            .accessibilityIdentifier("prompterBand")
+    }
+
+    private var hint: String? {
+        if isBusy { return nil }
+        if engine.reachedEnd { return "End of script. Tap to start over" }
+        if engine.isRunning { return "Tap to pause" }
+        return "Tap to scroll · drag to move"
+    }
+
+    private func backButton(compact: Bool) -> some View {
+        Button {
+            dismiss()
+        } label: {
+            HStack(spacing: 4) {
+                Image(systemName: "chevron.left").font(.system(size: 17, weight: .semibold))
+                if !compact { Text("Script").font(.subheadline.weight(.semibold)) }
+            }
+            .padding(.horizontal, compact ? 0 : 12)
+            .frame(minWidth: 44, minHeight: 40)
+            .background(.black.opacity(0.5), in: Capsule())
+        }
+        .foregroundStyle(.white)
+        .disabled(isBusy)
+        .opacity(isBusy ? 0.4 : 1)
+        .accessibilityLabel("Back to script")
+    }
+
+    private var flipButton: some View {
+        RoundIconButton(systemName: "arrow.triangle.2.circlepath.camera", label: "Flip camera", size: 42) {
+            let next: AVCaptureDevice.Position = (position ?? .front) == .front ? .back : .front
+            position = next
+            if !AppConfig.isUITest { camera.start(position: next, quality: quality) }
+        }
+        .disabled(isBusy)
+        .opacity(isBusy ? 0.4 : 1)
+    }
+
+    private var timerPill: some View {
+        TimelineView(.periodic(from: .now, by: 0.25)) { context in
+            let seconds = recordingStart.map { max(0, context.date.timeIntervalSince($0)) } ?? 0
+            HStack(spacing: 6) {
+                if isRecording {
+                    Circle().fill(.white).frame(width: 8, height: 8)
+                }
+                Text(String(format: "%d:%02d", Int(seconds) / 60, Int(seconds) % 60))
+                    .monospacedDigit()
+            }
+            .font(.subheadline.weight(.bold))
+            .foregroundStyle(.white)
+            .padding(.horizontal, 12)
+            .padding(.vertical, 7)
+            .background(isRecording ? Color.red : Color.black.opacity(0.5), in: Capsule())
+        }
+        .accessibilityIdentifier("timer")
+    }
+
+    private func steppers(compact: Bool) -> some View {
+        HStack(spacing: 10) {
+            PillStepper(label: "Speed", value: "\(Int(speed))", compact: compact,
+                        onMinus: { speed = max(Pref.speedRange.lowerBound, speed - 1) },
+                        onPlus: { speed = min(Pref.speedRange.upperBound, speed + 1) })
+            PillStepper(label: "Size", value: "\(Int(fontSize))", compact: compact,
+                        onMinus: { fontSize = max(Pref.fontRange.lowerBound, fontSize - 4) },
+                        onPlus: { fontSize = min(Pref.fontRange.upperBound, fontSize + 4) })
+        }
+    }
+
+    private var restartButton: some View {
+        RoundIconButton(systemName: "arrow.up.to.line", label: "Back to the top", size: 48) {
+            engine.restart()
+        }
+    }
+
+    private var playButton: some View {
+        RoundIconButton(systemName: engine.isRunning ? "pause.fill" : "play.fill",
+                        label: engine.isRunning ? "Pause scrolling" : "Start scrolling",
+                        size: 48) {
+            engine.toggle()
+        }
+        .accessibilityIdentifier("playButton")
+    }
+
+    private func shutter(size: CGFloat) -> some View {
+        RecordButton(isRecording: isRecording, size: size, action: recordTapped)
+            // Free users can still tap it: it opens the trial offer.
+            .disabled(subscriptions.isPro && camera.status != .running && !isRecording)
+    }
+
+    @ViewBuilder
+    private var statusOverlay: some View {
+        if !AppConfig.isUITest {
+            switch camera.status {
+            case .denied:
+                messageCard("Prompter needs the camera and microphone to record. Turn them on in Settings.", button: "Open Settings") {
+                    if let url = URL(string: UIApplication.openSettingsURLString) { UIApplication.shared.open(url) }
+                }
+            case .unavailable(let message):
+                messageCard(message, button: "Try again") {
+                    camera.start(position: position ?? .front, quality: quality)
+                }
+            case .starting, .running:
+                if camera.micDenied {
+                    VStack {
+                        Spacer()
+                        Text("Microphone is off, so takes will be silent. Turn it on in Settings.")
+                            .font(.footnote.weight(.semibold))
+                            .multilineTextAlignment(.center)
+                            .padding(10)
+                            .background(.black.opacity(0.7), in: RoundedRectangle(cornerRadius: 12))
+                            .padding(.horizontal, 24)
+                            .padding(.bottom, 150)
+                    }
+                    .allowsHitTesting(false)
+                }
+            }
+        }
+    }
+
+    private func messageCard(_ text: String, button: String, action: @escaping () -> Void) -> some View {
+        VStack(spacing: 14) {
+            Text(text)
+                .multilineTextAlignment(.center)
+            Button(button, action: action)
+                .buttonStyle(.borderedProminent)
+                .tint(.white)
+                .foregroundStyle(.black)
+        }
+        .padding(20)
+        .frame(maxWidth: 360)
+        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 18))
+        .padding(24)
+    }
+
+    // MARK: Behavior
+
+    private func start() {
+        engine.speed = speed
+        UIApplication.shared.isIdleTimerDisabled = true
+        let side = position ?? (defaultCamera == "back" ? .back : .front)
+        position = side
+        if !AppConfig.isUITest {
+            camera.start(position: side, quality: quality)
+        }
+    }
+
+    private func teardown() {
+        // A review sheet on top doesn't count as leaving.
+        guard take == nil else { return }
+        cancelCountdown()
+        if isRecording { camera.stopRecording() }
+        engine.isRunning = false
+        camera.stop()
+        OrientationLock.unlock()
+        UIApplication.shared.isIdleTimerDisabled = false
+    }
+
+    private func recordTapped() {
+        if isRecording {
+            stopRecording()
+            return
+        }
+        if countdown != nil {
+            cancelCountdown()
+            return
+        }
+        guard subscriptions.isPro else {
+            showPaywall = true
+            return
+        }
+        guard camera.status == .running else { return }
+        guard countdownSetting > 0 else {
+            beginRecording()
+            return
+        }
+        let from = countdownSetting
+        countdownTask = Task { @MainActor in
+            for value in stride(from: from, through: 1, by: -1) {
+                countdown = value
+                try? await Task.sleep(for: .seconds(1))
+                if Task.isCancelled { return }
+            }
+            countdown = nil
+            countdownTask = nil
+            beginRecording()
+        }
+    }
+
+    private func cancelCountdown() {
+        countdownTask?.cancel()
+        countdownTask = nil
+        countdown = nil
+    }
+
+    private func beginRecording() {
+        OrientationLock.lockCurrent()
+        let startedAt = Date()
+        recordingStart = startedAt
+        engine.reachedEnd = false
+        engine.isRunning = true
+        camera.startRecording { result in
+            OrientationLock.unlock()
+            recordingStart = nil
+            engine.isRunning = false
+            switch result {
+            case .success(let url):
+                take = Take(url: url, duration: Date().timeIntervalSince(startedAt))
+            case .failure(let error):
+                alertMessage = error.localizedDescription
+            }
+        }
+    }
+
+    private func stopRecording() {
+        engine.isRunning = false
+        camera.stopRecording()
+    }
+
+    /// Which side the camera is on when the phone is sideways.
+    static func currentLensColumn() -> PrompterColumn {
+        switch OrientationLock.interfaceOrientation {
+        // Home side on the right, so the top of the phone (and its camera) is on the left.
+        case .landscapeRight: return .leading
+        case .landscapeLeft: return .trailing
+        default: return .center
+        }
+    }
+}
