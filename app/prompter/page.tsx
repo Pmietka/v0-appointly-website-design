@@ -22,7 +22,11 @@ export const metadata: Metadata = {
   title: "Prompter",
   description: "Paste your script, hit record, read it off the screen.",
   robots: { index: false, follow: false },
+  // Added to the home screen it opens full screen, with no Safari bars eating
+  // into the short side of a sideways phone.
+  manifest: "/prompter.webmanifest",
   appleWebApp: { capable: true, title: "Prompter", statusBarStyle: "black-translucent" },
+  other: { "apple-mobile-web-app-capable": "yes" },
 };
 
 export default function PrompterPage() {

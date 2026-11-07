@@ -11,6 +11,8 @@
   --tp-accent: #ffffff;
   --safe-top: env(safe-area-inset-top, 0px);
   --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
   position: fixed;
   inset: 0;
   z-index: 50;
@@ -18,6 +20,9 @@
   color: var(--tp-ink);
   font-family: var(--font-jakarta), system-ui, -apple-system, sans-serif;
   -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  touch-action: manipulation; /* no double tap zoom when tapping + quickly */
   overflow: hidden;
 }
 .tp-root button { font: inherit; color: inherit; cursor: pointer; }
@@ -143,10 +148,14 @@
   color: #0b0b0c !important;
   display: flex; align-items: center; justify-content: center; gap: 10px;
 }
+.tp-tip { color: #7a7a82; font-size: 13px; line-height: 1.45; padding: 0 4px; }
 .tp-start-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--tp-red); }
 
 /* ---------- camera ---------- */
-.tp-cam { position: absolute; inset: 0; background: #000; touch-action: none; user-select: none; -webkit-user-select: none; }
+.tp-cam {
+  position: absolute; inset: 0; background: #000;
+  touch-action: none; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none;
+}
 .tp-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .tp-video.mirror { transform: scaleX(-1); }
 
@@ -209,7 +218,8 @@
   /* Extra room at the end so the last line can scroll up to the top. */
   padding-bottom: 32vh;
   padding-bottom: 32dvh;
-  max-width: 1100px;
+  /* Short lines keep the eyes from sweeping side to side on camera. */
+  max-width: 18em;
   margin: 0 auto;
 }
 .tp-hint {
@@ -296,9 +306,94 @@
 .tp-review-actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
 .tp-review-actions .tp-chip { padding: 12px 18px; }
 
-/* Landscape phones: keep the prompter shorter so the face stays visible. */
-@media (orientation: landscape) and (max-height: 500px) {
-  .tp-box { height: 46%; }
-  .tp-adjust { display: none; }
-  .tp-controls { gap: 24px; }
+/* ---------- phone on its side ----------
+   Script band across the top, hugging the lens side so the eyes stay close to
+   the camera. Shutter column on the far side, small control row underneath. */
+.tp-cam.land { --side-w: 100px; }
+.land .tp-box {
+  top: 0;
+  height: 64%;
+  left: 0;
+  right: calc(var(--side-w) + var(--safe-right));
+  padding-left: var(--safe-left);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 12px, #000 calc(100% - 34px), transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0, #000 12px, #000 calc(100% - 34px), transparent 100%);
+}
+.land .tp-text { max-width: 15em; margin: 0 auto 0 0; padding: 8px 20px 0 16px; }
+.land.lens-right .tp-box {
+  left: calc(var(--side-w) + var(--safe-left));
+  right: 0;
+  padding-left: 0;
+  padding-right: var(--safe-right);
+}
+.land.lens-right .tp-text { margin: 0 0 0 auto; padding: 8px 16px 0 20px; }
+
+.tp-side {
+  position: absolute; top: 0; bottom: 0; right: 0;
+  width: calc(var(--side-w) + var(--safe-right));
+  padding: 8px var(--safe-right) var(--safe-bottom) 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px;
+  background: rgba(0,0,0,.38);
+  z-index: 3;
+}
+.land.lens-right .tp-side { right: auto; left: 0; width: calc(var(--side-w) + var(--safe-left)); padding: 8px 0 var(--safe-bottom) var(--safe-left); }
+.land .tp-rec { width: 70px; height: 70px; }
+.land .tp-rec span { width: 54px; height: 54px; }
+.land .tp-rec.on span { width: 26px; height: 26px; }
+.land .tp-round { width: 46px; height: 46px; }
+
+.tp-lowbar {
+  position: absolute; bottom: 0;
+  left: var(--safe-left);
+  right: calc(var(--side-w) + var(--safe-right));
+  padding: 8px 12px calc(var(--safe-bottom) + 8px);
+  display: flex; align-items: center; gap: 10px;
+  z-index: 3;
+  background: linear-gradient(to top, rgba(0,0,0,.5), transparent);
+}
+.land.lens-right .tp-lowbar { left: calc(var(--side-w) + var(--safe-left)); right: var(--safe-right); }
+.tp-lowbar .tp-adjust { margin-left: auto; flex-wrap: nowrap; }
+.tp-lowbar .tp-icon-btn span { display: none; }
+.tp-lowbar .tp-stepper span { min-width: 62px; font-size: 13px; }
+.tp-lowbar .tp-stepper button { width: 36px; }
+.land .tp-hint { bottom: 40px; }
+.land .tp-count { font-size: 120px; }
+.land .tp-error { top: 24%; left: calc(var(--safe-left) + 16px); right: calc(var(--side-w) + var(--safe-right) + 16px); }
+
+/* Very narrow sideways phones (SE, mini): drop the stepper labels. */
+@media (max-width: 700px) {
+  .tp-lowbar .tp-stepper span { min-width: 44px; font-size: 0; }
+  .tp-lowbar .tp-stepper b { font-size: 13px; }
+}
+
+@media (orientation: landscape) and (max-height: 600px) {
+  /* Editor: script on the left, settings on the right. */
+  .tp-edit {
+    max-width: none;
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    align-content: start;
+    grid-auto-rows: max-content; /* cards keep their full height and the page scrolls */
+    gap: 12px 14px;
+    padding: 14px calc(var(--safe-right) + 16px) calc(var(--safe-bottom) + 96px) calc(var(--safe-left) + 16px);
+  }
+  .tp-edit-head { grid-column: 1 / -1; display: flex; align-items: baseline; gap: 12px; }
+  .tp-edit-head h1 { font-size: 22px; }
+  .tp-edit-head p { margin-top: 0; }
+  .tp-edit > .tp-card:first-of-type { grid-row: span 2; display: flex; flex-direction: column; }
+  .tp-edit > .tp-card:first-of-type .tp-script { flex: 1; resize: none; }
+  .tp-script { min-height: calc(100dvh - 210px); }
+  .tp-tip { grid-column: 2; }
+  .tp-start-wrap { padding-left: calc(var(--safe-left) + 16px); padding-right: calc(var(--safe-right) + 16px); }
+
+  /* Review: video fills the screen, buttons in a column on the right. */
+  .tp-review { flex-direction: row; }
+  .tp-review-video { padding: 0 0 0 var(--safe-left); }
+  .tp-review-bar {
+    width: calc(190px + var(--safe-right));
+    padding: 16px calc(var(--safe-right) + 16px) calc(var(--safe-bottom) + 16px) 16px;
+    justify-content: center;
+  }
+  .tp-review-actions { flex-direction: column-reverse; width: 100%; }
+  .tp-review-actions .tp-chip { width: 100%; }
 }

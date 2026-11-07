@@ -82,6 +82,27 @@ function pickMime(): string {
   return "";
 }
 
+type Layout = { land: boolean; lensLeft: boolean };
+type Shape = "tall" | "wide";
+
+// A phone on its side gets the landscape layout. Desktops and tablets keep the
+// band across the top, which already sits right under their webcam.
+function readLayout(): Layout {
+  const w = window.innerWidth;
+  const h = window.innerHeight;
+  const land = w > h && h <= 600;
+  let angle = 0;
+  const legacy = (window as Window & { orientation?: number }).orientation;
+  if (typeof legacy === "number") angle = legacy;
+  else if (screen.orientation) angle = screen.orientation.angle;
+  // 90 means the phone was turned counterclockwise, so its top edge (where the
+  // camera is) ends up on the left. -90 / 270 puts the camera on the right.
+  const lensLeft = !(angle === -90 || angle === 270);
+  return { land, lensLeft };
+}
+
+const readShape = (): Shape => (window.innerHeight > window.innerWidth ? "tall" : "wide");
+
 /* ----------------------------------------------------------------------------
    App shell
 ---------------------------------------------------------------------------- */
@@ -271,6 +292,10 @@ function Editor({
         <Toggle label="Mirror text" on={settings.mirror} onChange={(v) => set("mirror", v)} />
       </section>
 
+      <p className="tp-tip">
+        Filming sideways? Turn off Portrait Orientation Lock in Control Center so the screen can rotate.
+      </p>
+
       <div className="tp-start-wrap">
         <button type="button" className="tp-start" disabled={!script.trim()} onClick={onStart}>
           <span className="tp-start-dot" /> Open camera
@@ -331,8 +356,38 @@ function CameraView({
   const [retry, setRetry] = useState(0);
   const [atEnd, setAtEnd] = useState(false);
 
+  const [layout, setLayout] = useState<Layout>(readLayout);
+  // The camera is opened for the shape the phone was in at the time. When the
+  // phone turns (and we're not mid take) it is reopened so the frame matches.
+  const [shape, setShape] = useState<Shape>(readShape);
+  const busyRef = useRef(false);
+
   speedRef.current = settings.speed;
   fontRef.current = settings.fontSize;
+  busyRef.current = recording || count !== null;
+
+  useEffect(() => {
+    let t: ReturnType<typeof setTimeout> | null = null;
+    const update = () => {
+      setLayout(readLayout());
+      if (!busyRef.current) setShape(readShape());
+    };
+    // iOS reports the new size a beat after the rotation event, so check twice.
+    const onChange = () => {
+      update();
+      if (t) clearTimeout(t);
+      t = setTimeout(update, 400);
+    };
+    window.addEventListener("resize", onChange);
+    window.addEventListener("orientationchange", onChange);
+    screen.orientation?.addEventListener?.("change", onChange);
+    return () => {
+      if (t) clearTimeout(t);
+      window.removeEventListener("resize", onChange);
+      window.removeEventListener("orientationchange", onChange);
+      screen.orientation?.removeEventListener?.("change", onChange);
+    };
+  }, []);
 
   const setRun = useCallback((v: boolean) => {
     runningRef.current = v;
@@ -350,8 +405,8 @@ function CameraView({
         setCamError("This browser can't open the camera. Open the link in Safari or Chrome.");
         return;
       }
-      // Ask for a tall frame when the phone is held upright so takes come out 9:16.
-      const portrait = window.innerHeight > window.innerWidth;
+      // Tall frame when the phone is upright (9:16), wide frame on its side (16:9).
+      const portrait = shape === "tall";
       const video: MediaTrackConstraints = {
         facingMode: settings.facing,
         width: { ideal: portrait ? 1080 : 1920 },
@@ -397,7 +452,7 @@ function CameraView({
       streamRef.current?.getTracks().forEach((t) => t.stop());
       streamRef.current = null;
     };
-  }, [settings.facing, retry]);
+  }, [settings.facing, retry, shape]);
 
   /* ---- keep the screen awake ---- */
   useEffect(() => {
@@ -576,9 +631,84 @@ function CameraView({
   const flip = () => setSettings({ ...settings, facing: settings.facing === "user" ? "environment" : "user" });
 
   const busy = recording || count !== null;
+  const { land, lensLeft } = layout;
+
+  const backBtn = (
+    <button type="button" className="tp-icon-btn" onClick={onBack} disabled={busy} aria-label="Back to script">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden>
+        <path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+      <span>Script</span>
+    </button>
+  );
+
+  const timer = (
+    <div className={`tp-timer ${recording ? "rec" : ""}`}>
+      {recording && <span className="tp-rec-dot" />}
+      {fmtTime(elapsed)}
+    </div>
+  );
+
+  const flipBtn = (
+    <button type="button" className="tp-icon-btn" onClick={flip} disabled={busy} aria-label="Flip camera">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden>
+        <path
+          d="M4 8h3l2-3h6l2 3h3v11H4z M9 13.5a3 3 0 0 0 5.6 1.5 M15 12.5a3 3 0 0 0-5.6-1.5 M14.6 15v-2h-2 M9.4 11v2h2"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </button>
+  );
+
+  const steppers = (
+    <div className="tp-adjust">
+      <Stepper label="Speed" value={settings.speed} onMinus={() => bump("speed", -1)} onPlus={() => bump("speed", 1)} />
+      <Stepper label="Size" value={settings.fontSize} onMinus={() => bump("fontSize", -4)} onPlus={() => bump("fontSize", 4)} />
+    </div>
+  );
+
+  const restartBtn = (
+    <button type="button" className="tp-round" onClick={restart} aria-label="Back to the top of the script">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden>
+        <path d="M6 15l6-6 6 6" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M6 6h12" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
+      </svg>
+    </button>
+  );
+
+  const recBtn = (
+    <button
+      type="button"
+      className={`tp-rec ${recording ? "on" : ""}`}
+      onClick={onRecordButton}
+      disabled={!ready}
+      aria-label={recording ? "Stop recording" : "Start recording"}
+    >
+      <span />
+    </button>
+  );
+
+  const playBtn = (
+    <button type="button" className="tp-round" onClick={togglePlay} aria-label={running ? "Pause scrolling" : "Start scrolling"}>
+      {running ? (
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden>
+          <rect x="6" y="5" width="4" height="14" rx="1" fill="currentColor" />
+          <rect x="14" y="5" width="4" height="14" rx="1" fill="currentColor" />
+        </svg>
+      ) : (
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden>
+          <path d="M8 5l11 7-11 7z" fill="currentColor" />
+        </svg>
+      )}
+    </button>
+  );
 
   return (
-    <div className="tp-cam">
+    <div className={`tp-cam ${land ? `land ${lensLeft ? "lens-left" : "lens-right"}` : ""}`}>
       <video
         ref={videoRef}
         className={`tp-video ${settings.facing === "user" ? "mirror" : ""}`}
@@ -587,30 +717,13 @@ function CameraView({
         autoPlay
       />
 
-      <div className="tp-topbar">
-        <button type="button" className="tp-icon-btn" onClick={onBack} disabled={busy} aria-label="Back to script">
-          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden>
-            <path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-          <span>Script</span>
-        </button>
-        <div className={`tp-timer ${recording ? "rec" : ""}`}>
-          {recording && <span className="tp-rec-dot" />}
-          {fmtTime(elapsed)}
+      {!land && (
+        <div className="tp-topbar">
+          {backBtn}
+          {timer}
+          {flipBtn}
         </div>
-        <button type="button" className="tp-icon-btn" onClick={flip} disabled={busy} aria-label="Flip camera">
-          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden>
-            <path
-              d="M4 8h3l2-3h6l2 3h3v11H4z M9 13.5a3 3 0 0 0 5.6 1.5 M15 12.5a3 3 0 0 0-5.6-1.5 M14.6 15v-2h-2 M9.4 11v2h2"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
-      </div>
+      )}
 
       <div
         ref={boxRef}
@@ -648,41 +761,31 @@ function CameraView({
         </div>
       )}
 
-      <div className="tp-bottom">
-        <div className="tp-adjust">
-          <Stepper label="Speed" value={settings.speed} onMinus={() => bump("speed", -1)} onPlus={() => bump("speed", 1)} />
-          <Stepper label="Size" value={settings.fontSize} onMinus={() => bump("fontSize", -4)} onPlus={() => bump("fontSize", 4)} />
+      {land ? (
+        <>
+          {/* Shutter column on the far side from the lens, like the Camera app. */}
+          <div className="tp-side">
+            {restartBtn}
+            {recBtn}
+            {playBtn}
+          </div>
+          <div className="tp-lowbar">
+            {backBtn}
+            {flipBtn}
+            {timer}
+            {steppers}
+          </div>
+        </>
+      ) : (
+        <div className="tp-bottom">
+          {steppers}
+          <div className="tp-controls">
+            {restartBtn}
+            {recBtn}
+            {playBtn}
+          </div>
         </div>
-        <div className="tp-controls">
-          <button type="button" className="tp-round" onClick={restart} aria-label="Back to the top of the script">
-            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden>
-              <path d="M6 15l6-6 6 6" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M6 6h12" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
-            </svg>
-          </button>
-          <button
-            type="button"
-            className={`tp-rec ${recording ? "on" : ""}`}
-            onClick={onRecordButton}
-            disabled={!ready}
-            aria-label={recording ? "Stop recording" : "Start recording"}
-          >
-            <span />
-          </button>
-          <button type="button" className="tp-round" onClick={togglePlay} aria-label={running ? "Pause scrolling" : "Start scrolling"}>
-            {running ? (
-              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden>
-                <rect x="6" y="5" width="4" height="14" rx="1" fill="currentColor" />
-                <rect x="14" y="5" width="4" height="14" rx="1" fill="currentColor" />
-              </svg>
-            ) : (
-              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden>
-                <path d="M8 5l11 7-11 7z" fill="currentColor" />
-              </svg>
-            )}
-          </button>
-        </div>
-      </div>
+      )}
     </div>
   );
 }
