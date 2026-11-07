@@ -19,7 +19,7 @@ final class SubscriptionStore {
     private(set) var isPurchasing = false
     var errorMessage: String?
 
-    @ObservationIgnored private let forcePro: Bool
+    private let forcePro: Bool
     @ObservationIgnored private var updatesTask: Task<Void, Never>?
 
     init(forcePro: Bool = false) {

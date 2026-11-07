@@ -6,7 +6,7 @@ import Observation
 @Observable
 final class ScriptStore {
     private(set) var scripts: [Script] = []
-    @ObservationIgnored private let fileURL: URL
+    private let fileURL: URL
 
     var sortedScripts: [Script] {
         scripts.sorted { $0.updatedAt > $1.updatedAt }

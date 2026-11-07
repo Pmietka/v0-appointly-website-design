@@ -170,7 +170,8 @@ final class SubscriptionTests: XCTestCase {
         defer { session.clearTransactions() }
 
         let store = SubscriptionStore()
-        let product = try XCTUnwrap(try await Product.products(for: [SubscriptionStore.monthlyID]).first)
+        let products = try await Product.products(for: [SubscriptionStore.monthlyID])
+        let product = try XCTUnwrap(products.first)
         let isEligible = await store.isEligibleForTrial(product)
         XCTAssertTrue(isEligible, "A new customer should get the free trial")
 

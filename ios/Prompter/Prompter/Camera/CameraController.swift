@@ -11,8 +11,9 @@ enum VideoQuality: String, CaseIterable, Identifiable {
 }
 
 /// Owns the capture session. All session work happens on one serial queue,
-/// published state is only ever changed on the main thread.
-final class CameraController: NSObject, ObservableObject {
+/// published state is only ever changed on the main thread. That discipline is
+/// what makes the unchecked Sendable below safe.
+final class CameraController: NSObject, ObservableObject, @unchecked Sendable {
     enum Status: Equatable {
         case starting
         case running
