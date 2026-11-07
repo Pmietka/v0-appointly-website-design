@@ -43,6 +43,9 @@ final class CameraController: NSObject, ObservableObject, @unchecked Sendable {
 
     override init() {
         super.init()
+        // Configured by hand below so playback of a take uses the loudspeaker,
+        // not the earpiece, while the microphone is open.
+        session.automaticallyConfiguresApplicationAudioSession = false
         let center = NotificationCenter.default
         observers.append(center.addObserver(forName: AVCaptureSession.runtimeErrorNotification, object: session, queue: nil) { [weak self] _ in
             // Media services can reset (for example after a call). Start again.
@@ -97,6 +100,7 @@ final class CameraController: NSObject, ObservableObject, @unchecked Sendable {
             }
             guard videoAllowed else { return }
             self.queue.async {
+                if audioAllowed { Self.configureAudioSession() }
                 let error = self.configure(position: position, quality: quality, withAudio: audioAllowed)
                 if error == nil, !self.session.isRunning {
                     self.session.startRunning()
@@ -218,6 +222,17 @@ final class CameraController: NSObject, ObservableObject, @unchecked Sendable {
         let done = completion
         completion = nil
         done?(result)
+    }
+
+    /// Record from the built in mic or a plugged in one, play back on the loudspeaker.
+    static func configureAudioSession() {
+        let audio = AVAudioSession.sharedInstance()
+        do {
+            try audio.setCategory(.playAndRecord, mode: .videoRecording, options: [.defaultToSpeaker, .allowBluetoothA2DP])
+            try audio.setActive(true)
+        } catch {
+            print("Prompter: audio session setup failed: \(error)")
+        }
     }
 
     static func requestAccess(for type: AVMediaType) async -> Bool {

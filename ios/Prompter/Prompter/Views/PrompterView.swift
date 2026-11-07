@@ -75,6 +75,10 @@ struct PrompterView: View {
         .onAppear(perform: start)
         .onDisappear(perform: teardown)
         .onChange(of: speed) { _, newValue in engine.speed = newValue }
+        .onChange(of: take == nil) { _, reviewClosed in
+            // The camera rests while a take is being reviewed, and comes back after.
+            if reviewClosed { start() } else if !AppConfig.isUITest { camera.stop() }
+        }
         .sheet(isPresented: $showPaywall) {
             PaywallView().environment(subscriptions)
         }
