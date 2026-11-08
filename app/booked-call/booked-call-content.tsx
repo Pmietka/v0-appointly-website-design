@@ -13,10 +13,10 @@ import { FeaturedStories } from "@/components/sales/proof-section";
    Styles: home.css, lander.css and sales.css, plus booked-call.css.
    ============================================================================ */
 
-// The /booked-call Vidalytics embed (settings snippet) and its poster thumbnail.
-const VSL_EMBED_ID = "FptA4x17lTuJOIvA";
+// The /booked-call Vidalytics embed and its poster thumbnail.
+const VSL_EMBED_ID = "tSOSC4FRKt4esy45";
 const VSL_POSTER =
-  "https://fast.vidalytics.com/video/FeX1NGyU/EAV_9Qo8TjNyLBFW/317839/289274__FFMPEG/thumb/thumbnail-5_0.jpg";
+  "https://fast.vidalytics.com/video/FeX1NGyU/WH6st_FroRU3ea8P/317853/289288__FFMPEG/thumb/thumbnail-5_0.jpg";
 
 const DECIDE = [
   "Is there enough demand in your market, and is it still open",
@@ -48,7 +48,7 @@ export function BookedCallContent({ pixel }: { pixel?: React.ReactNode }) {
             we can spend the call talking about your business.
           </p>
           <div className="vslvid">
-            <LazyVidalytics embedId={VSL_EMBED_ID} poster={VSL_POSTER} snippet="settings" />
+            <LazyVidalytics embedId={VSL_EMBED_ID} poster={VSL_POSTER} />
           </div>
         </div>
       </section>
