@@ -42,6 +42,12 @@ type LazyVidalyticsProps = {
    *    Vidalytics loads until then, so the page stays light and other taps (like
    *    the CTA) never compete with the player starting up. */
   startOn?: "load" | "interaction" | "click";
+  /** Which dashboard snippet to inject:
+   *  - "loader" (default): the classic loader snippet; the player box id is
+   *    "vidalytics_embed_<embedId>".
+   *  - "settings": the newer snippet that fetches player.settings.json and runs
+   *    the shared player; the player box id is the bare embed id. */
+  snippet?: "loader" | "settings";
 };
 
 // Self-contained 16:9 box, identical for the placeholder and the mounted player
@@ -52,16 +58,23 @@ const BOX_STYLE = {
   paddingTop: "56.25%",
 };
 
+// The shared Vidalytics loader and player the "settings" snippet runs on.
+const LOADER_SRC = "https://fast.vidalytics.com/player/loader.min.js";
+const LOADER_SCRIPT_ID = "vidalytics-shared-loader";
+const PLAYER_SRC = "https://fast.vidalytics.com/player/player.min.js";
+const PLAYER_SCRIPT_ID = "vidalytics-player";
+
 export function LazyVidalytics({
   embedId,
   poster,
   accountId = "FeX1NGyU",
   startOn = "load",
+  snippet = "loader",
 }: LazyVidalyticsProps) {
   const [activated, setActivated] = useState(false);
   const wrapRef = useRef<HTMLDivElement>(null);
 
-  const containerId = `vidalytics_embed_${embedId}`;
+  const containerId = snippet === "settings" ? embedId : `vidalytics_embed_${embedId}`;
   const scriptId = `vidalytics-loader-${embedId}`;
   const loaderBase = `https://fast.vidalytics.com/embeds/${accountId}/${embedId}/`;
 
@@ -129,6 +142,43 @@ export function LazyVidalytics({
     if (!activated) return;
     if (document.getElementById(scriptId)) return;
 
+    if (snippet === "settings") {
+      // The settings snippet waits for window.Vidalytics.Embed, and Embed.run
+      // needs window.VidalyticsL.Loader, so load the shared loader, then the
+      // shared player (once per page, in that order), then run the snippet.
+      const loadOnce = (id: string, src: string, cb: () => void) => {
+        const existing = document.getElementById(id) as HTMLScriptElement | null;
+        if (existing) {
+          if (existing.dataset.loaded) cb();
+          else existing.addEventListener("load", cb, { once: true });
+          return;
+        }
+        const el = document.createElement("script");
+        el.id = id;
+        el.type = "text/javascript";
+        el.async = true;
+        el.src = src;
+        el.addEventListener("load", () => {
+          el.dataset.loaded = "1";
+          cb();
+        }, { once: true });
+        document.head.appendChild(el);
+      };
+      const settingsScript = `(function (v, i, d, a, l, y, t, c, s) {
+        y='_'+d.toLowerCase();if(!v[y]){v[y]={}}if(!v[y].embeds){v[y].embeds={}}
+        t=function(){if(v[d]&&v[d].Embed){var ve=v[d].Embed;c=new ve();c.run(a);c.loadCss();}else{setTimeout(t,1000)}};s=new XMLHttpRequest();s.open("GET",l+'?ac='+(new Date()).getTime(),true);
+        s.onreadystatechange=function(){if(s.readyState==4){if((s.status==200||s.status==304)){var sd=JSON.parse(s.responseText);v[y].embeds[a]={type:"video",options: sd};t();}}};s.send();
+    })(window, document, 'Vidalytics', '${embedId}', '${loaderBase}player.settings.json');`;
+      const s = document.createElement("script");
+      s.id = scriptId;
+      s.type = "text/javascript";
+      s.text = settingsScript;
+      loadOnce(LOADER_SCRIPT_ID, LOADER_SRC, () =>
+        loadOnce(PLAYER_SCRIPT_ID, PLAYER_SRC, () => document.body.appendChild(s)),
+      );
+      return;
+    }
+
     const embedScript = `(function (v, i, d, a, l, y, t, c, s) {
     y='_'+d.toLowerCase();c=d+'L';if(!v[d]){v[d]={};}if(!v[c]){v[c]={};}if(!v[y]){v[y]={};}var vl='Loader',vli=v[y][vl],vsl=v[c][vl + 'Script'],vlf=v[c][vl + 'Loaded'],ve='Embed';
     if (!vsl){vsl=function(u,cb){
@@ -144,7 +194,7 @@ export function LazyVidalytics({
     s.type = "text/javascript";
     s.text = embedScript;
     document.body.appendChild(s);
-  }, [activated, scriptId, containerId, loaderBase]);
+  }, [activated, scriptId, containerId, loaderBase, snippet, embedId]);
 
   if (activated) {
     // Same box the dashboard snippet produces; the player builds itself inside
