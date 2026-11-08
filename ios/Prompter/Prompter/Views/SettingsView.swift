@@ -78,6 +78,7 @@ struct SettingsView: View {
                 }
 
                 Section("About") {
+                    Link("Help", destination: AppConfig.helpURL)
                     Link("Privacy policy", destination: AppConfig.privacyURL)
                     Link("Terms of use", destination: AppConfig.termsURL)
                     Link("Contact support", destination: AppConfig.supportURL)

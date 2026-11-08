@@ -6,6 +6,7 @@ enum AppConfig {
     /// Apple's standard license agreement, which App Review accepts as the terms of use.
     static let termsURL = URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/")!
     static let supportURL = URL(string: "mailto:patrick@getappointly.co?subject=Prompter%20support")!
+    static let helpURL = URL(string: "https://getappointly.co/prompter/support")!
 
     /// Links from the Claude connector open the app as prompterapp://open?id=...
     /// Must match CFBundleURLSchemes in Config/Info.plist and APP_SCHEME on the website.
