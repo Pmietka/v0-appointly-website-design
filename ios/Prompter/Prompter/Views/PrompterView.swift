@@ -220,7 +220,8 @@ struct PrompterView: View {
                         .padding(.horizontal, 12)
                         .padding(.vertical, 6)
                         .background(.black.opacity(0.5), in: Capsule())
-                        .alignmentGuide(.bottom) { $0[.top] - 10 }
+                        // Pushed fully below the band: about one pill height plus a gap.
+                        .offset(y: 42)
                         .allowsHitTesting(false)
                 }
             }
