@@ -5,6 +5,7 @@ struct PrompterApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
     @State private var scripts: ScriptStore
     @State private var subscriptions: SubscriptionStore
+    @State private var importer: ShareImporter
 
     init() {
         if AppConfig.isUITest {
@@ -14,8 +15,10 @@ struct PrompterApp: App {
             }
             UserDefaults.standard.set(true, forKey: Pref.didOnboard)
         }
-        _scripts = State(initialValue: ScriptStore.makeDefault())
+        let store = ScriptStore.makeDefault()
+        _scripts = State(initialValue: store)
         _subscriptions = State(initialValue: SubscriptionStore(forcePro: AppConfig.forcePro))
+        _importer = State(initialValue: ShareImporter(store: store))
     }
 
     var body: some Scene {
@@ -23,6 +26,7 @@ struct PrompterApp: App {
             RootView()
                 .environment(scripts)
                 .environment(subscriptions)
+                .environment(importer)
                 .preferredColorScheme(.dark)
         }
     }

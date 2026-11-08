@@ -13,6 +13,7 @@ struct SettingsView: View {
 
     @State private var showPaywall = false
     @State private var showManage = false
+    @State private var showConnect = false
 
     var body: some View {
         NavigationStack {
@@ -25,6 +26,18 @@ struct SettingsView: View {
                         Button("Start free trial") { showPaywall = true }
                     }
                     Button("Restore purchases") { Task { await subscriptions.restore() } }
+                }
+
+                Section {
+                    Button {
+                        showConnect = true
+                    } label: {
+                        Label("Connect Claude", systemImage: "sparkles")
+                    }
+                } header: {
+                    Text("AI")
+                } footer: {
+                    Text("Claude writes your script, sets up the prompter and sends you a link that opens Prompter ready to record.")
                 }
 
                 Section {
@@ -80,6 +93,7 @@ struct SettingsView: View {
             }
         }
         .manageSubscriptionsSheet(isPresented: $showManage)
+        .sheet(isPresented: $showConnect) { ConnectAIView() }
         .sheet(isPresented: $showPaywall) {
             PaywallView().environment(subscriptions)
         }

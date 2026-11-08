@@ -7,6 +7,15 @@ enum AppConfig {
     static let termsURL = URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/")!
     static let supportURL = URL(string: "mailto:patrick@getappointly.co?subject=Prompter%20support")!
 
+    /// Links from the Claude connector open the app as prompterapp://open?id=...
+    /// Must match CFBundleURLSchemes in Config/Info.plist and APP_SCHEME on the website.
+    static let urlScheme = "prompterapp"
+    /// The MCP connector people add to Claude.
+    static let connectorURL = "https://getappointly.co/prompter/mcp"
+    static let claudeConnectorsURL = URL(string: "https://claude.ai/settings/connectors")!
+    /// Where the app reads (then deletes) a script an assistant set up.
+    static let shareAPI = URL(string: "https://getappointly.co/api/prompter/s/")!
+
     private static let arguments = ProcessInfo.processInfo.arguments
     /// Set by the UI tests: no camera, fresh storage, no first launch paywall.
     static let isUITest = arguments.contains("-UITest")

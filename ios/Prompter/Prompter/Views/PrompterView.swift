@@ -16,6 +16,7 @@ struct PrompterView: View {
 
     @Environment(\.dismiss) private var dismiss
     @Environment(SubscriptionStore.self) private var subscriptions
+    @Environment(ShareImporter.self) private var importer
 
     @AppStorage(Pref.fontSize) private var fontSize: Double = 40
     @AppStorage(Pref.speed) private var speed: Double = 4
@@ -85,6 +86,10 @@ struct PrompterView: View {
         .onAppear(perform: start)
         .onDisappear(perform: teardown)
         .onChange(of: speed) { _, newValue in engine.speed = newValue }
+        .onChange(of: importer.openRequest) { _, _ in
+            // A new script arrived from Claude: step out so it can open, unless mid take.
+            if !isBusy && take == nil { dismiss() }
+        }
         .onChange(of: take == nil) { _, reviewClosed in
             // The camera rests while a take is being reviewed, and comes back after.
             if reviewClosed { start() } else if !AppConfig.isUITest { camera.stop() }

@@ -180,3 +180,127 @@ final class SubscriptionTests: XCTestCase {
         XCTAssertTrue(store.isPro)
     }
 }
+
+// MARK: Scripts from Claude
+
+final class StubURLProtocol: URLProtocol {
+    static var handler: ((URLRequest) -> (Int, Data))?
+    static var requests: [URLRequest] = []
+
+    override class func canInit(with request: URLRequest) -> Bool { true }
+    override class func canonicalRequest(for request: URLRequest) -> URLRequest { request }
+
+    override func startLoading() {
+        Self.requests.append(request)
+        let (status, data) = Self.handler?(request) ?? (500, Data())
+        let response = HTTPURLResponse(url: request.url!, statusCode: status, httpVersion: nil,
+                                       headerFields: ["content-type": "application/json"])!
+        client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .notAllowed)
+        client?.urlProtocol(self, didLoad: data)
+        client?.urlProtocolDidFinishLoading(self)
+    }
+
+    override func stopLoading() {}
+}
+
+final class ShareImporterTests: XCTestCase {
+    private let id = "MpzvlhcXqx5ta-1q-aziYw"
+    /// Exactly what the website's /api/prompter/s/{id} returned in a local run.
+    private let serverJSON = #"{"v":1,"title":"Listing: 1420 Maple Ave","script":"Welcome to 1420 Maple Avenue. Four bedrooms, three baths.\n\nThe kitchen was redone last year.\n\nBook a showing with the link below.","settings":{"speed":5,"fontSize":48,"countdown":5,"camera":"back","mirror":true},"createdAt":"2026-11-08T03:08:04.026Z"}"#
+
+    private var storeURL: URL!
+    private var defaults: UserDefaults!
+    private var suiteName: String!
+
+    override func setUp() {
+        storeURL = FileManager.default.temporaryDirectory.appendingPathComponent("scripts-\(UUID().uuidString).json")
+        suiteName = "prompter-tests-\(UUID().uuidString)"
+        defaults = UserDefaults(suiteName: suiteName)
+        StubURLProtocol.requests = []
+        StubURLProtocol.handler = nil
+    }
+
+    override func tearDown() {
+        try? FileManager.default.removeItem(at: storeURL)
+        defaults.removePersistentDomain(forName: suiteName)
+    }
+
+    private func stubbedSession() -> URLSession {
+        let config = URLSessionConfiguration.ephemeral
+        config.protocolClasses = [StubURLProtocol.self]
+        return URLSession(configuration: config)
+    }
+
+    func testReadsTheIDFromBothLinkStyles() {
+        XCTAssertEqual(ShareImporter.shareID(from: URL(string: "prompterapp://open?id=\(id)")!), id)
+        XCTAssertEqual(ShareImporter.shareID(from: URL(string: "https://getappointly.co/prompter/s/\(id)")!), id)
+        XCTAssertNil(ShareImporter.shareID(from: URL(string: "prompterapp://open?id=../../etc")!))
+        XCTAssertNil(ShareImporter.shareID(from: URL(string: "prompterapp://open")!))
+        XCTAssertNil(ShareImporter.shareID(from: URL(string: "https://example.com/prompter/s/\(id)")!))
+    }
+
+    func testDecodesTheServerFormat() throws {
+        let recording = try JSONDecoder().decode(SharedRecording.self, from: Data(serverJSON.utf8))
+        XCTAssertEqual(recording.title, "Listing: 1420 Maple Ave")
+        XCTAssertEqual(recording.settings, .init(speed: 5, fontSize: 48, countdown: 5, camera: "back", mirror: true))
+    }
+
+    @MainActor
+    func testLinkAddsTheScriptAppliesSettingsAndCleansUpTheServer() async throws {
+        let base = URL(string: "https://getappointly.co/api/prompter/s/")!
+        StubURLProtocol.handler = { request in
+            request.httpMethod == "DELETE" ? (204, Data()) : (200, Data(self.serverJSON.utf8))
+        }
+        let store = ScriptStore(fileURL: storeURL, seedIfEmpty: false)
+        let importer = ShareImporter(store: store, session: stubbedSession(), defaults: defaults, apiBase: base)
+
+        await importer.handle(URL(string: "prompterapp://open?id=\(id)")!)
+
+        XCTAssertEqual(importer.phase, .idle)
+        let script = try XCTUnwrap(store.scripts.first)
+        XCTAssertEqual(script.title, "Listing: 1420 Maple Ave")
+        XCTAssertTrue(script.body.hasPrefix("Welcome to 1420 Maple Avenue."))
+        XCTAssertEqual(importer.openRequest?.scriptID, script.id)
+        XCTAssertTrue(importer.consumeAutoRecord(for: script.id), "Should open straight to recording")
+        XCTAssertFalse(importer.consumeAutoRecord(for: script.id), "Only once")
+
+        XCTAssertEqual(defaults.double(forKey: Pref.speed), 5)
+        XCTAssertEqual(defaults.double(forKey: Pref.fontSize), 48)
+        XCTAssertEqual(defaults.integer(forKey: Pref.countdown), 5)
+        XCTAssertEqual(defaults.string(forKey: Pref.camera), "back")
+        XCTAssertTrue(defaults.bool(forKey: Pref.mirror))
+
+        // The copy on the server is deleted once the script is on the phone.
+        for _ in 0..<50 where !StubURLProtocol.requests.contains(where: { $0.httpMethod == "DELETE" }) {
+            try await Task.sleep(for: .milliseconds(20))
+        }
+        let delete = try XCTUnwrap(StubURLProtocol.requests.first { $0.httpMethod == "DELETE" })
+        XCTAssertEqual(delete.url?.absoluteString, "https://getappointly.co/api/prompter/s/\(id)")
+    }
+
+    @MainActor
+    func testExpiredLinkShowsAClearMessageAndAddsNothing() async {
+        StubURLProtocol.handler = { _ in (404, Data(#"{"error":"not_found"}"#.utf8)) }
+        let store = ScriptStore(fileURL: storeURL, seedIfEmpty: false)
+        let importer = ShareImporter(store: store, session: stubbedSession(), defaults: defaults,
+                                     apiBase: URL(string: "https://getappointly.co/api/prompter/s/")!)
+
+        await importer.handle(URL(string: "prompterapp://open?id=\(id)")!)
+
+        XCTAssertEqual(importer.phase, .failed(ShareImporter.ImportError.expired.message))
+        XCTAssertTrue(store.scripts.isEmpty)
+        XCTAssertNil(importer.openRequest)
+    }
+
+    @MainActor
+    func testOutOfRangeSettingsAreClamped() {
+        let store = ScriptStore(fileURL: storeURL, seedIfEmpty: false)
+        let importer = ShareImporter(store: store, defaults: defaults)
+        importer.apply(SharedRecording(title: "", script: "Hi", settings: .init(speed: 40, fontSize: 4, countdown: 7, camera: "side", mirror: nil)))
+        XCTAssertEqual(defaults.double(forKey: Pref.speed), 12)
+        XCTAssertEqual(defaults.double(forKey: Pref.fontSize), 24)
+        XCTAssertNil(defaults.object(forKey: Pref.countdown), "Invalid countdown is ignored")
+        XCTAssertNil(defaults.string(forKey: Pref.camera), "Invalid camera is ignored")
+        XCTAssertEqual(store.scripts.first?.title, "Hi", "No title falls back to the first line")
+    }
+}

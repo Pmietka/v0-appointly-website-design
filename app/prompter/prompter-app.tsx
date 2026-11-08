@@ -120,7 +120,34 @@ export default function PrompterApp() {
       setScript(s.script);
       setSettings(s.settings);
     }
-    setLoaded(true);
+    // A link from an assistant (/prompter?s=ID): load that script with its
+    // settings and go straight to the camera.
+    const shareID = new URLSearchParams(window.location.search).get("s");
+    if (!shareID) {
+      setLoaded(true);
+      return;
+    }
+    fetch(`/api/prompter/s/${encodeURIComponent(shareID)}`)
+      .then((res) => (res.ok ? res.json() : null))
+      .then((share) => {
+        if (!share || typeof share.script !== "string") return;
+        const incoming = share.settings || {};
+        setScript(share.script);
+        setSettings((current) => ({
+          ...current,
+          ...(typeof incoming.speed === "number" ? { speed: clamp(incoming.speed, SPEED_MIN, SPEED_MAX) } : {}),
+          ...(typeof incoming.fontSize === "number" ? { fontSize: clamp(incoming.fontSize, FONT_MIN, FONT_MAX) } : {}),
+          ...(typeof incoming.countdown === "number" ? { countdown: incoming.countdown > 0 } : {}),
+          ...(typeof incoming.mirror === "boolean" ? { mirror: incoming.mirror } : {}),
+          ...(incoming.camera === "back" ? { facing: "environment" as Facing } : incoming.camera === "front" ? { facing: "user" as Facing } : {}),
+        }));
+        setPhase("camera");
+      })
+      .catch(() => {})
+      .finally(() => {
+        window.history.replaceState(null, "", window.location.pathname);
+        setLoaded(true);
+      });
   }, []);
 
   useEffect(() => {

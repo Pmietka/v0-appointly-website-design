@@ -41,8 +41,8 @@ final class ScriptStore {
     }
 
     @discardableResult
-    func create(body: String = "") -> Script {
-        let script = Script(body: body)
+    func create(body: String = "", title: String? = nil) -> Script {
+        let script = Script(body: body, customTitle: title)
         scripts.append(script)
         save()
         return script

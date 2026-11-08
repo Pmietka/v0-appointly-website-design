@@ -19,8 +19,13 @@ What's in it, and nothing else:
 - **Review:** watch the take, save it to Photos, share it, or go again.
 - **Subscription:** monthly and yearly plans with a free trial (StoreKit 2,
   no third party SDK). Restore and manage subscription in Settings.
-- **Privacy:** no account, no analytics, no tracking, no watermark. Nothing
-  leaves the phone.
+- **Claude connection:** people add Prompter to Claude as a connector, ask for
+  a script, and Claude writes it, picks the settings and replies with a link.
+  Tapping the link opens the app on the record screen with everything loaded.
+  The "Connect Claude" screen in the app walks them through it.
+- **Privacy:** no account, no analytics, no tracking, no watermark. The only
+  thing that ever touches a server is a script an assistant sends, and it's
+  deleted as soon as the app opens it (or after 7 days).
 
 ## Run it on your iPhone
 
@@ -56,7 +61,8 @@ Edit Scheme > Run > Options > StoreKit Configuration** and pick
 
    The product IDs must match exactly. Prices and trial length can be anything:
    the app reads them from the App Store.
-5. **App Privacy:** choose "Data Not Collected".
+5. **App Privacy:** choose "Data Not Collected". (The app only downloads a
+   script by its link and deletes it; it doesn't send anything about the person.)
    **Privacy Policy URL:** `https://getappointly.co/prompter/privacy`
    (this page is in the website repo and must be live).
 6. **Screenshots:** the CI run saves screenshots on every build (see below).
@@ -68,6 +74,38 @@ Edit Scheme > Run > Options > StoreKit Configuration** and pick
 
 App Review usually takes one to three days. Reviewers test the purchase with a
 sandbox account, so make sure step 2 is done first.
+
+## The Claude connector (website side)
+
+The connector and the links live in the website repo (this same repo):
+
+| Path | What it does |
+| --- | --- |
+| `app/prompter/mcp/route.ts` | The MCP server people add to Claude: `https://getappointly.co/prompter/mcp`. One tool, `set_up_recording`, which takes the script and settings and returns a link. |
+| `app/prompter/s/[id]/page.tsx` | The page the link opens: "Open in Prompter and record", or record in the browser. |
+| `app/api/prompter/s/[id]/route.ts` | The app reads the script here, then deletes it. |
+| `app/api/prompter/cleanup/route.ts` + `vercel.json` | Daily job that deletes links nobody opened after 7 days. |
+| `lib/prompter/shares.ts` | Storage (a private Vercel Blob store). |
+
+Before it works in production, in the Vercel project:
+
+1. **Storage:** Storage > Create > Blob, pick **private** access, and connect
+   it to this project. That adds `BLOB_READ_WRITE_TOKEN` automatically.
+2. **Cleanup secret:** add an environment variable `CRON_SECRET` with any long
+   random value. Vercel sends it to the cleanup job.
+3. Redeploy.
+
+No AI API keys are needed: the person's own Claude does the writing.
+
+Connecting, for people using the app (also shown in the app):
+Claude > Settings > Connectors > Add custom connector, name `Prompter`, URL
+`https://getappointly.co/prompter/mcp`. Then: "Write a 45 second script about
+... and set it up in Prompter."
+
+The app opens links with the `prompterapp://` scheme. Universal links
+(`https://getappointly.co/prompter/s/...` opening the app directly, with no
+page in between) need your Apple Team ID in an `apple-app-site-association`
+file plus the Associated Domains capability; worth adding once the team is set.
 
 ## Things to change before launch
 

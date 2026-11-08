@@ -4,8 +4,13 @@ struct Script: Identifiable, Codable, Equatable, Hashable {
     var id = UUID()
     var body: String
     var updatedAt = Date()
+    /// Set when an assistant named the script. Otherwise the first line is the title.
+    var customTitle: String?
 
-    var title: String { Script.title(for: body) }
+    var title: String {
+        if let customTitle, !customTitle.trimmingCharacters(in: .whitespaces).isEmpty { return customTitle }
+        return Script.title(for: body)
+    }
 
     /// The first line with words in it, kept short enough for a list row.
     static func title(for body: String) -> String {

@@ -95,6 +95,27 @@ final class PrompterUITests: XCTestCase {
         XCTAssertTrue(shutter.waitForExistence(timeout: 10))
     }
 
+    func testClaudeLinkOpensStraightToTheRecordScreen() throws {
+        let app = launch(["-UITestPro"])
+        XCTAssertTrue(element(app, labelContaining: "Have Claude write").waitForExistence(timeout: 20))
+        snap("10-scripts-with-claude-row")
+
+        app.buttons["connectClaude"].tap()
+        XCTAssertTrue(app.navigationBars["Connect Claude"].waitForExistence(timeout: 10))
+        snap("11-connect-claude")
+        app.buttons["Done"].tap()
+
+        // The same link Claude's connector hands out (served by a stand in during UI tests).
+        app.open(URL(string: "prompterapp://open?id=uitestshare00000000001")!)
+        XCTAssertTrue(app.buttons["recordButton"].waitForExistence(timeout: 15), "Link should land on the record screen")
+        sleep(1)
+        snap("12-opened-from-claude")
+
+        app.buttons["Back to script"].tap()
+        XCTAssertTrue(app.navigationBars["From Claude: spring tune-up"].waitForExistence(timeout: 10),
+                      "Script is saved in the library under Claude's title")
+    }
+
     func testSettingsAndSidewaysEditor() throws {
         let app = launch(["-UITestPro"])
         let settings = app.buttons["settingsButton"]

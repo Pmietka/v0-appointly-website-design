@@ -4,6 +4,7 @@ struct ScriptEditorView: View {
     let scriptID: UUID
     @Environment(ScriptStore.self) private var store
     @Environment(SubscriptionStore.self) private var subscriptions
+    @Environment(ShareImporter.self) private var importer
     @State private var text = ""
     @State private var loaded = false
     @State private var showPrompter = false
@@ -29,7 +30,7 @@ struct ScriptEditorView: View {
             }
         }
         .background(Color.black)
-        .navigationTitle(text.isBlank ? "New script" : Script.title(for: text))
+        .navigationTitle(navigationTitle)
         .navigationBarTitleDisplayMode(.inline)
         .safeAreaInset(edge: .bottom) { bottomBar }
         .toolbar {
@@ -42,7 +43,13 @@ struct ScriptEditorView: View {
             guard !loaded else { return }
             loaded = true
             text = store.script(scriptID)?.body ?? ""
-            if text.isEmpty { editing = true }
+            if importer.consumeAutoRecord(for: scriptID) {
+                // Opened from a Claude link: straight to the record screen,
+                // once any sheet that was up has finished closing.
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) { showPrompter = true }
+            } else if text.isEmpty {
+                editing = true
+            }
         }
         .onChange(of: text) { _, newValue in
             store.update(scriptID, body: newValue)
@@ -55,7 +62,14 @@ struct ScriptEditorView: View {
         .fullScreenCover(isPresented: $showPrompter) {
             PrompterView(script: text)
                 .environment(subscriptions)
+                .environment(importer)
         }
+    }
+
+    private var navigationTitle: String {
+        if text.isBlank { return "New script" }
+        if let custom = store.script(scriptID)?.customTitle, !custom.isBlank { return custom }
+        return Script.title(for: text)
     }
 
     private var bottomBar: some View {
