@@ -213,13 +213,14 @@ struct PrompterView: View {
         PrompterTextView(text: script, fontSize: CGFloat(fontSize), mirrored: mirror, column: column, engine: engine)
             .background { Color.black.opacity(0.55).ignoresSafeArea(edges: [.top, .horizontal]) }
             .overlay(alignment: .bottom) {
+                // Just under the band, so it never sits on top of the words.
                 if let hint {
                     Text(hint)
                         .font(.footnote.weight(.semibold))
                         .padding(.horizontal, 12)
                         .padding(.vertical, 6)
-                        .background(.white.opacity(0.16), in: Capsule())
-                        .padding(.bottom, 10)
+                        .background(.black.opacity(0.5), in: Capsule())
+                        .alignmentGuide(.bottom) { $0[.top] - 10 }
                         .allowsHitTesting(false)
                 }
             }

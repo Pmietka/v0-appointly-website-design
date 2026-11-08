@@ -10,6 +10,8 @@ struct ReviewView: View {
     @State private var player: AVPlayer
     @State private var saveState: SaveState = .idle
     @State private var confirmDiscard = false
+    /// The length of the actual file, once it's been read.
+    @State private var fileDuration: Double?
 
     enum SaveState: Equatable {
         case idle, saving, saved
@@ -36,6 +38,11 @@ struct ReviewView: View {
         }
         .background(Color.black.ignoresSafeArea())
         .onAppear { player.play() }
+        .task {
+            if let duration = try? await AVURLAsset(url: take.url).load(.duration), duration.seconds.isFinite {
+                fileDuration = duration.seconds
+            }
+        }
         .onDisappear { player.pause() }
         .confirmationDialog("Throw away this take?", isPresented: $confirmDiscard, titleVisibility: .visible) {
             Button("Discard take", role: .destructive) { close() }
@@ -47,7 +54,7 @@ struct ReviewView: View {
 
     private var actions: some View {
         VStack(spacing: 10) {
-            Text("\(ScriptStats.formatDuration(take.duration)) take")
+            Text("\(ScriptStats.formatDuration(fileDuration ?? take.duration)) take")
                 .font(.footnote)
                 .foregroundStyle(.secondary)
                 .monospacedDigit()

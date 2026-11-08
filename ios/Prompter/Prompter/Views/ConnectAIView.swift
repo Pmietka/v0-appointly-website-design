@@ -22,7 +22,7 @@ struct ConnectAIView: View {
                             .font(.system(size: 34, weight: .semibold))
                             .foregroundStyle(Color.accentColor)
                         Text("Claude writes it.\nYou just record.")
-                            .font(.system(size: 30, weight: .bold))
+                            .font(.largeTitle.weight(.bold))
                         Text("Connect Prompter to Claude once. Then ask Claude for a video script: it writes it, sets up the prompter and gives you a link. Tap the link and you're on the record screen.")
                             .foregroundStyle(.secondary)
                     }

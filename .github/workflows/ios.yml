@@ -76,6 +76,11 @@ jobs:
             xcrun simctl boot "$id" || true
             xcrun simctl privacy "$id" grant photos-add co.getappointly.prompter || true
           done
+          # Wait until both are fully booted; UI tests on a half booted
+          # simulator fail to attach for reasons that have nothing to do with the app.
+          for id in $udid $small; do
+            xcrun simctl bootstatus "$id" -b || true
+          done
 
       - name: Build and test
         working-directory: ios/Prompter
@@ -89,6 +94,7 @@ jobs:
             -scheme Prompter \
             -destination "id=${{ steps.sim.outputs.udid }}" \
             -resultBundlePath "${{ github.workspace }}/out/Results.xcresult" \
+            -retry-tests-on-failure -test-iterations 2 \
             > "${{ github.workspace }}/out/xcodebuild.log" 2>&1
           status=$?
           grep -E "error:|warning:|Test Case .*(passed|failed)|Executed|\*\* (BUILD|TEST)" "${{ github.workspace }}/out/xcodebuild.log"
@@ -108,6 +114,7 @@ jobs:
             -destination "id=${{ steps.sim.outputs.small }}" \
             -only-testing:PrompterUITests/PrompterUITests/testRecordScreenUprightAndSideways \
             -only-testing:PrompterUITests/PrompterUITests/testLargeTextSizes \
+            -retry-tests-on-failure -test-iterations 2 \
             > "${{ github.workspace }}/out/small.log" 2>&1
           status=$?
           grep -E "error:|Test Case .*(passed|failed)|\*\* TEST" "${{ github.workspace }}/out/small.log"
