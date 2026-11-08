@@ -53,6 +53,29 @@ jobs:
           echo "Using simulator $udid"
           xcrun simctl list devices | grep "$udid" || true
           echo "udid=$udid" >> "$GITHUB_OUTPUT"
+          small=$(xcrun simctl list devices available -j | python3 -c '
+          import json, re, sys
+          devices = json.load(sys.stdin)["devices"]
+          best = None
+          for runtime, items in devices.items():
+              m = re.search(r"iOS-(\d+)-(\d+)", runtime)
+              if not m:
+                  continue
+              version = (int(m.group(1)), int(m.group(2)))
+              for d in items:
+                  name = d["name"]
+                  rank = 2 if "SE" in name else 1 if re.match(r"iPhone \d+e$", name) else 0
+                  if rank and (best is None or (rank, version) > best[0]):
+                      best = ((rank, version), d["udid"])
+          print(best[1] if best else "")
+          ')
+          echo "Small simulator: $small"
+          echo "small=$small" >> "$GITHUB_OUTPUT"
+          # The take review test saves to Photos; grant that up front.
+          for id in $udid $small; do
+            xcrun simctl boot "$id" || true
+            xcrun simctl privacy "$id" grant photos-add co.getappointly.prompter || true
+          done
 
       - name: Build and test
         working-directory: ios/Prompter
@@ -69,6 +92,25 @@ jobs:
             > "${{ github.workspace }}/out/xcodebuild.log" 2>&1
           status=$?
           grep -E "error:|warning:|Test Case .*(passed|failed)|Executed|\*\* (BUILD|TEST)" "${{ github.workspace }}/out/xcodebuild.log"
+          exit $status
+
+      - name: Layout check on a small iPhone
+        if: always() && steps.sim.outputs.small != ''
+        working-directory: ios/Prompter
+        env:
+          TEST_RUNNER_SCREENSHOT_DIR: ${{ github.workspace }}/out/screenshots
+          TEST_RUNNER_SCREENSHOT_PREFIX: small-
+        run: |
+          set +e
+          xcodebuild test \
+            -project Prompter.xcodeproj \
+            -scheme Prompter \
+            -destination "id=${{ steps.sim.outputs.small }}" \
+            -only-testing:PrompterUITests/PrompterUITests/testRecordScreenUprightAndSideways \
+            -only-testing:PrompterUITests/PrompterUITests/testLargeTextSizes \
+            > "${{ github.workspace }}/out/small.log" 2>&1
+          status=$?
+          grep -E "error:|Test Case .*(passed|failed)|\*\* TEST" "${{ github.workspace }}/out/small.log"
           exit $status
 
       - name: Release build for a real iPhone (no signing)
@@ -96,6 +138,7 @@ jobs:
             out/screenshots
             out/xcodebuild.log
             out/release-build.log
+            out/small.log
           if-no-files-found: ignore
 
       - name: Publish screenshots to refs/ci/ios-screenshots
@@ -103,7 +146,7 @@ jobs:
         run: |
           mkdir -p /tmp/pub
           cp -R out/screenshots/. /tmp/pub/ 2>/dev/null || true
-          for f in xcodebuild.log release-build.log; do
+          for f in xcodebuild.log release-build.log small.log; do
             [ -f "out/$f" ] && tail -c 400000 "out/$f" > "/tmp/pub/$f"
           done
           cd /tmp/pub

@@ -343,7 +343,9 @@ struct PrompterView: View {
         UIApplication.shared.isIdleTimerDisabled = true
         let side = position ?? (defaultCamera == "back" ? .back : .front)
         position = side
-        if !AppConfig.isUITest {
+        if AppConfig.isUITest {
+            camera.startSimulated()
+        } else {
             camera.start(position: side, quality: quality)
         }
     }

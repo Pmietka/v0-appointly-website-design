@@ -187,6 +187,12 @@ final class CameraController: NSObject, ObservableObject, @unchecked Sendable {
     // MARK: Recording
 
     func startRecording(completion: @escaping (Result<URL, Error>) -> Void) {
+        if isSimulated {
+            self.completion = completion
+            simulatedStart = Date()
+            isRecording = true
+            return
+        }
         // Upright in the file however the phone is held when recording starts.
         let angle = rotationCoordinator?.videoRotationAngleForHorizonLevelCapture
         self.completion = completion
@@ -212,6 +218,15 @@ final class CameraController: NSObject, ObservableObject, @unchecked Sendable {
     }
 
     func stopRecording() {
+        if isSimulated {
+            guard isRecording else { return }
+            let seconds = min(5, max(1, Date().timeIntervalSince(simulatedStart ?? Date())))
+            DispatchQueue.global(qos: .userInitiated).async {
+                let result = Result { try Self.makeTestClip(seconds: seconds) }
+                DispatchQueue.main.async { self.finish(result) }
+            }
+            return
+        }
         queue.async {
             if self.movieOutput.isRecording { self.movieOutput.stopRecording() }
         }
@@ -233,6 +248,63 @@ final class CameraController: NSObject, ObservableObject, @unchecked Sendable {
         } catch {
             print("Prompter: audio session setup failed: \(error)")
         }
+    }
+
+    // MARK: Simulator stand in
+
+    /// The simulator has no camera. UI tests use this instead: the camera
+    /// reports as running and "recording" produces a short generated clip, so
+    /// the review, save and retake screens can be tested on every build.
+    private(set) var isSimulated = false
+    private var simulatedStart: Date?
+
+    func startSimulated() {
+        isSimulated = true
+        status = .running
+    }
+
+    static func makeTestClip(seconds: Double) throws -> URL {
+        let url = FileManager.default.temporaryDirectory
+            .appendingPathComponent("take-\(UUID().uuidString)")
+            .appendingPathExtension("mov")
+        let width = 360, height = 640, fps: Int32 = 15
+        let writer = try AVAssetWriter(outputURL: url, fileType: .mov)
+        let input = AVAssetWriterInput(mediaType: .video, outputSettings: [
+            AVVideoCodecKey: AVVideoCodecType.h264,
+            AVVideoWidthKey: width,
+            AVVideoHeightKey: height,
+        ])
+        input.expectsMediaDataInRealTime = false
+        let adaptor = AVAssetWriterInputPixelBufferAdaptor(assetWriterInput: input, sourcePixelBufferAttributes: [
+            kCVPixelBufferPixelFormatTypeKey as String: kCVPixelFormatType_32BGRA,
+            kCVPixelBufferWidthKey as String: width,
+            kCVPixelBufferHeightKey as String: height,
+        ])
+        guard writer.canAdd(input) else { throw CameraError.notReady }
+        writer.add(input)
+        guard writer.startWriting() else { throw writer.error ?? CameraError.notReady }
+        writer.startSession(atSourceTime: .zero)
+
+        for frame in 0..<Int(seconds * Double(fps)) {
+            while !input.isReadyForMoreMediaData { Thread.sleep(forTimeInterval: 0.005) }
+            var buffer: CVPixelBuffer?
+            guard let pool = adaptor.pixelBufferPool,
+                  CVPixelBufferPoolCreatePixelBuffer(nil, pool, &buffer) == kCVReturnSuccess,
+                  let buffer else { throw CameraError.notReady }
+            CVPixelBufferLockBaseAddress(buffer, [])
+            if let base = CVPixelBufferGetBaseAddress(buffer) {
+                // A slowly brightening gray, so playback visibly moves.
+                memset(base, Int32(50 + (frame * 4) % 150), CVPixelBufferGetBytesPerRow(buffer) * height)
+            }
+            CVPixelBufferUnlockBaseAddress(buffer, [])
+            adaptor.append(buffer, withPresentationTime: CMTime(value: CMTimeValue(frame), timescale: fps))
+        }
+        input.markAsFinished()
+        let done = DispatchSemaphore(value: 0)
+        writer.finishWriting { done.signal() }
+        done.wait()
+        guard writer.status == .completed else { throw writer.error ?? CameraError.notReady }
+        return url
     }
 
     static func requestAccess(for type: AVMediaType) async -> Bool {
