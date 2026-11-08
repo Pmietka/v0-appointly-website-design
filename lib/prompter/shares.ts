@@ -47,9 +47,10 @@ export const shareLink = (id: string) => `${SITE}/prompter/s/${id}`;
 const memoryHost = globalThis as typeof globalThis & { __prompterShares?: Map<string, string> };
 const memory = (memoryHost.__prompterShares ??= new Map<string, string>());
 function useMemory(): boolean {
-  if (process.env.BLOB_READ_WRITE_TOKEN) return false;
+  // Either a read-write token or Vercel's OIDC store binding (BLOB_STORE_ID).
+  if (process.env.BLOB_READ_WRITE_TOKEN || process.env.BLOB_STORE_ID) return false;
   if (process.env.NODE_ENV === "production" && !process.env.PROMPTER_SHARES_IN_MEMORY) {
-    throw new Error("BLOB_READ_WRITE_TOKEN is not set. Connect a Vercel Blob store to the project.");
+    throw new Error("No Blob store is connected (BLOB_READ_WRITE_TOKEN or BLOB_STORE_ID). Connect a private Vercel Blob store to the project.");
   }
   return true;
 }
@@ -113,9 +114,10 @@ export async function deleteExpiredShares(): Promise<number> {
   do {
     const page = await list({ prefix: PREFIX, cursor, limit: 1000 });
     const stale = page.blobs.filter((blob) => blob.uploadedAt.getTime() < cutoff).map((blob) => blob.url);
-    if (stale.length) {
-      await del(stale);
-      removed += stale.length;
+    for (let i = 0; i < stale.length; i += 100) {
+      const chunk = stale.slice(i, i + 100);
+      await del(chunk);
+      removed += chunk.length;
     }
     cursor = page.hasMore ? page.cursor : undefined;
   } while (cursor);
@@ -124,7 +126,9 @@ export async function deleteExpiredShares(): Promise<number> {
 
 /** Strips what assistants sometimes add anyway: markdown, labels, stage directions. */
 export function cleanScript(raw: string): string {
-  let text = raw.replace(/\r\n/g, "\n").trim();
+  // Control characters (other than newlines and tabs) have no place in a script.
+  // eslint-disable-next-line no-control-regex
+  let text = raw.replace(/\r\n?/g, "\n").replace(/[\u0000-\u0008\u000B-\u001F\u007F]/g, "").trim();
   text = text.replace(/^```[a-z]*\n?/i, "").replace(/\n?```$/, "");
   text = text
     .split("\n")

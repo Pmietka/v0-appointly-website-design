@@ -132,6 +132,7 @@ export default function PrompterApp() {
       .then((share) => {
         if (!share || typeof share.script !== "string") return;
         const incoming = share.settings || {};
+        keptDraft.current = s?.script ?? "";
         setScript(share.script);
         setSettings((current) => ({
           ...current,
@@ -150,9 +151,16 @@ export default function PrompterApp() {
       });
   }, []);
 
+  // A script opened from a link is used for this visit only: the visitor's own
+  // saved draft stays as it was until they edit the script themselves.
+  const keptDraft = useRef<string | null>(null);
   useEffect(() => {
-    if (loaded) saveStore(script, settings);
+    if (loaded) saveStore(keptDraft.current ?? script, settings);
   }, [script, settings, loaded]);
+  const editScript = useCallback((value: string) => {
+    keptDraft.current = null;
+    setScript(value);
+  }, []);
 
   // Free the previous recording when it is replaced or the app closes.
   useEffect(() => {
@@ -171,7 +179,7 @@ export default function PrompterApp() {
       {phase === "edit" && (
         <Editor
           script={script}
-          setScript={setScript}
+          setScript={editScript}
           settings={settings}
           setSettings={setSettings}
           onStart={() => setPhase("camera")}

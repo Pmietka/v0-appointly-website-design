@@ -152,7 +152,9 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-MM0NQN3HP0');
+            // Prompter pages (the teleprompter and its script links) are not
+            // site traffic, and script links carry private ids.
+            if (!location.pathname.startsWith('/prompter')) gtag('config', 'G-MM0NQN3HP0');
           `}
         </Script>
         {/* Heavy gtag.js library is deferred to first interaction / short timeout

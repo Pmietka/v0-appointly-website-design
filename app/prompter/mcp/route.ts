@@ -114,4 +114,20 @@ Tapping it on their iPhone opens Prompter on the record screen with "${name}" lo
   },
 );
 
-export { handler as GET, handler as POST, handler as DELETE };
+// The endpoint is public and every tool call writes to paid storage, so keep
+// each request small and single: one script is far below 48 KB, and JSON-RPC
+// batches (up to 100 calls in one request) are refused.
+const MAX_BODY_BYTES = 48 * 1024;
+
+async function guarded(req: Request): Promise<Response> {
+  if (req.method === "POST") {
+    const declared = Number(req.headers.get("content-length") || 0);
+    if (declared > MAX_BODY_BYTES) return new Response("Request too large", { status: 413 });
+    const raw = await req.clone().text();
+    if (new TextEncoder().encode(raw).length > MAX_BODY_BYTES) return new Response("Request too large", { status: 413 });
+    if (raw.trimStart().startsWith("[")) return new Response("Batch requests are not supported", { status: 400 });
+  }
+  return handler(req);
+}
+
+export { guarded as GET, guarded as POST, guarded as DELETE };

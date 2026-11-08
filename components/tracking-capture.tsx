@@ -10,6 +10,8 @@ import { captureTracking } from "@/lib/tracking";
 // later still carries the original ad click.
 export function TrackingCapture() {
   useEffect(() => {
+    // Prompter script links carry private ids; keep them out of attribution.
+    if (window.location.pathname.startsWith("/prompter")) return;
     captureTracking();
   }, []);
   return null;

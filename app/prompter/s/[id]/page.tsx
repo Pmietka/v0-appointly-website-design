@@ -73,7 +73,9 @@ export default async function SharePage({ params }: Props) {
   return (
     <main style={page}>
       <div style={card}>
-        <p style={{ color: "#a1a1aa", fontSize: 14, fontWeight: 600 }}>Your script is ready</p>
+        <p style={{ color: "#a1a1aa", fontSize: 14, fontWeight: 600 }}>
+          Your script is ready · written by an AI assistant with Prompter
+        </p>
         <h1 style={{ fontSize: 28, fontWeight: 800, letterSpacing: "-0.02em", lineHeight: 1.2 }}>{share.title}</h1>
         <p style={{ color: "#a1a1aa", fontSize: 14 }}>
           {words} words · about {Math.floor(seconds / 60)}:{String(seconds % 60).padStart(2, "0")}
