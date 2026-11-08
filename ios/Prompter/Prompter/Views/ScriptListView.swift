@@ -7,6 +7,7 @@ struct ScriptListView: View {
     @State private var path: [UUID] = []
     @State private var showSettings = false
     @State private var showConnect = false
+    @State private var handledRequest: ShareImporter.OpenRequest?
 
     var body: some View {
         NavigationStack(path: $path) {
@@ -48,13 +49,18 @@ struct ScriptListView: View {
         .sheet(isPresented: $showConnect) {
             ConnectAIView()
         }
-        .onChange(of: importer.openRequest) { _, request in
-            // A script from Claude: close whatever is open and go to it.
-            guard let request else { return }
-            showSettings = false
-            showConnect = false
-            path = [request.scriptID]
-        }
+        .onChange(of: importer.openRequest) { _, _ in openLinkedScript() }
+        .onChange(of: importer.prompterActive) { _, _ in openLinkedScript() }
+    }
+
+    /// A script from Claude: close whatever is open and go to it, once the
+    /// record screen (if it's up) has been closed.
+    private func openLinkedScript() {
+        guard let request = importer.openRequest, request != handledRequest, !importer.prompterActive else { return }
+        handledRequest = request
+        showSettings = false
+        showConnect = false
+        path = [request.scriptID]
     }
 
     private var connectRow: some View {

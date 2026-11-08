@@ -37,6 +37,9 @@ final class ShareImporter {
 
     private(set) var phase: Phase = .idle
     private(set) var openRequest: OpenRequest?
+    /// True while the record screen is up. Navigation to a new script waits
+    /// for it to close, so a link can't pull the screen away mid take.
+    var prompterActive = false
     @ObservationIgnored private var autoRecordScriptID: UUID?
     @ObservationIgnored private var lastURL: URL?
 

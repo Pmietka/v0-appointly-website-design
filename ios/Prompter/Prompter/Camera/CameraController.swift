@@ -17,6 +17,8 @@ final class CameraController: NSObject, ObservableObject, @unchecked Sendable {
     enum Status: Equatable {
         case starting
         case running
+        /// Another app (a call, FaceTime) has the camera for now.
+        case paused
         case denied
         case unavailable(String)
     }
@@ -32,6 +34,10 @@ final class CameraController: NSObject, ObservableObject, @unchecked Sendable {
     // Session queue only.
     private var videoInput: AVCaptureDeviceInput?
     private var audioInput: AVCaptureDeviceInput?
+    /// True between start() and stop(): the camera should be running.
+    private var wantsRunning = false
+    /// Stop was tapped before the file output had actually started.
+    private var stopRequested = false
 
     // Main thread only.
     private weak var previewLayer: AVCaptureVideoPreviewLayer?
@@ -48,10 +54,23 @@ final class CameraController: NSObject, ObservableObject, @unchecked Sendable {
         session.automaticallyConfiguresApplicationAudioSession = false
         let center = NotificationCenter.default
         observers.append(center.addObserver(forName: AVCaptureSession.runtimeErrorNotification, object: session, queue: nil) { [weak self] _ in
-            // Media services can reset (for example after a call). Start again.
+            // Media services can reset (for example after a call). Start again,
+            // unless the camera was stopped on purpose (say, while reviewing a take).
             self?.queue.async {
-                guard let self, !self.session.isRunning else { return }
+                guard let self, self.wantsRunning, !self.session.isRunning else { return }
                 self.session.startRunning()
+            }
+        })
+        observers.append(center.addObserver(forName: AVCaptureSession.wasInterruptedNotification, object: session, queue: .main) { [weak self] _ in
+            guard let self, self.status == .running else { return }
+            self.status = .paused
+        })
+        observers.append(center.addObserver(forName: AVCaptureSession.interruptionEndedNotification, object: session, queue: .main) { [weak self] _ in
+            guard let self else { return }
+            if self.status == .paused { self.status = .running }
+            // A call takes the audio session; set it up again for the next take.
+            self.queue.async {
+                if self.audioInput != nil { Self.configureAudioSession() }
             }
         })
     }
@@ -100,6 +119,7 @@ final class CameraController: NSObject, ObservableObject, @unchecked Sendable {
             }
             guard videoAllowed else { return }
             self.queue.async {
+                self.wantsRunning = true
                 if audioAllowed { Self.configureAudioSession() }
                 let error = self.configure(position: position, quality: quality, withAudio: audioAllowed)
                 if error == nil, !self.session.isRunning {
@@ -124,8 +144,21 @@ final class CameraController: NSObject, ObservableObject, @unchecked Sendable {
     }
 
     func stop() {
+        if isSimulated { return }
         queue.async {
+            self.wantsRunning = false
             if self.session.isRunning { self.session.stopRunning() }
+        }
+    }
+
+    /// Leaving the record screen: stop the camera and hand audio back to other
+    /// apps (music that was playing before can resume).
+    func shutDown() {
+        if isSimulated { return }
+        queue.async {
+            self.wantsRunning = false
+            if self.session.isRunning { self.session.stopRunning() }
+            try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
         }
     }
 
@@ -213,6 +246,7 @@ final class CameraController: NSObject, ObservableObject, @unchecked Sendable {
             let url = FileManager.default.temporaryDirectory
                 .appendingPathComponent("take-\(UUID().uuidString)")
                 .appendingPathExtension("mov")
+            self.stopRequested = false
             self.movieOutput.startRecording(to: url, recordingDelegate: self)
         }
     }
@@ -228,7 +262,25 @@ final class CameraController: NSObject, ObservableObject, @unchecked Sendable {
             return
         }
         queue.async {
-            if self.movieOutput.isRecording { self.movieOutput.stopRecording() }
+            // The output only reports recording a moment after it starts; a
+            // quick stop before then is remembered and applied when it does.
+            if self.movieOutput.isRecording {
+                self.movieOutput.stopRecording()
+            } else {
+                self.stopRequested = true
+            }
+        }
+    }
+
+    /// Deletes takes left behind if the app was closed while reviewing one.
+    static func purgeOldTakes(olderThan age: TimeInterval = 24 * 60 * 60) {
+        let fm = FileManager.default
+        let dir = fm.temporaryDirectory
+        guard let files = try? fm.contentsOfDirectory(at: dir, includingPropertiesForKeys: [.contentModificationDateKey]) else { return }
+        let cutoff = Date().addingTimeInterval(-age)
+        for file in files where file.lastPathComponent.hasPrefix("take-") && file.pathExtension == "mov" {
+            let modified = (try? file.resourceValues(forKeys: [.contentModificationDateKey]))?.contentModificationDate ?? .distantPast
+            if modified < cutoff { try? fm.removeItem(at: file) }
         }
     }
 
@@ -322,6 +374,15 @@ enum CameraError: LocalizedError {
 }
 
 extension CameraController: AVCaptureFileOutputRecordingDelegate {
+    func fileOutput(_ output: AVCaptureFileOutput, didStartRecordingTo fileURL: URL, from connections: [AVCaptureConnection]) {
+        queue.async {
+            if self.stopRequested {
+                self.stopRequested = false
+                self.movieOutput.stopRecording()
+            }
+        }
+    }
+
     func fileOutput(_ output: AVCaptureFileOutput, didFinishRecordingTo outputFileURL: URL, from connections: [AVCaptureConnection], error: Error?) {
         // A take cut short by a phone call or full storage is still a usable file.
         var usable = true

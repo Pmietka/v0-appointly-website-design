@@ -42,6 +42,11 @@ struct PaywallView: View {
             await loadEligibility()
         }
         .onChange(of: store.products.count) { _, _ in
+            // If the default plan didn't load (for example while it's in review),
+            // select one that did, so the button always buys what's highlighted.
+            if !store.products.contains(where: { $0.id == selectedID }), let first = store.products.first {
+                selectedID = first.id
+            }
             Task { await loadEligibility() }
         }
         .onChange(of: store.isPro) { _, isPro in
@@ -61,7 +66,7 @@ struct PaywallView: View {
                 .foregroundStyle(.white)
                 .padding(.bottom, 4)
             Text("Read your script.\nLook at the lens.")
-                .font(.system(size: 30, weight: .bold))
+                .font(.largeTitle.weight(.bold))
                 .multilineTextAlignment(.center)
             Text("Record as many takes as you want.")
                 .font(.body)
@@ -74,7 +79,7 @@ struct PaywallView: View {
             benefit("text.line.first.and.arrowtriangle.forward", "Your script scrolls right under the camera")
             benefit("rectangle.landscape.rotate", "Upright or sideways, in up to 4K")
             benefit("hand.tap", "Tap to pause, drag to jump, change speed on the fly")
-            benefit("lock", "No account, no watermark. Everything stays on your phone")
+            benefit("lock", "No account, no watermark, no tracking")
         }
         .frame(maxWidth: .infinity, alignment: .leading)
     }
@@ -153,6 +158,7 @@ struct PaywallView: View {
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
+        .accessibilityAddTraits(selected ? .isSelected : [])
     }
 
     private var selectedProduct: Product? {

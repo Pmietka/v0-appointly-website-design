@@ -6,6 +6,10 @@ import Observation
 @Observable
 final class ScriptStore {
     private(set) var scripts: [Script] = []
+    /// False while an existing scripts file couldn't be read (for example the
+    /// phone hasn't been unlocked since it restarted). Nothing is written until
+    /// it loads, so a temporary read failure can never wipe the library.
+    private(set) var isLoaded = true
     private let fileURL: URL
 
     var sortedScripts: [Script] {
@@ -60,19 +64,49 @@ final class ScriptStore {
         save()
     }
 
+    /// Call when the app comes to the foreground.
+    func reloadIfNeeded() {
+        if !isLoaded { load() }
+    }
+
     private func load() {
-        guard let data = try? Data(contentsOf: fileURL),
-              let decoded = try? JSONDecoder().decode([Script].self, from: data) else {
-            scripts = []
+        guard FileManager.default.fileExists(atPath: fileURL.path) else {
+            isLoaded = true
             return
         }
-        scripts = decoded
+        let data: Data
+        do {
+            data = try Data(contentsOf: fileURL)
+        } catch {
+            // Usually file protection before the first unlock. Try again later.
+            isLoaded = false
+            return
+        }
+        let decoded: [Script]
+        do {
+            decoded = try JSONDecoder().decode([Script].self, from: data)
+        } catch {
+            // The contents can't be read as scripts. Keep a copy rather than
+            // lose it, and carry on with an empty library.
+            let backup = fileURL.deletingLastPathComponent()
+                .appendingPathComponent("scripts-unreadable-\(Int(Date().timeIntervalSince1970)).json")
+            try? FileManager.default.copyItem(at: fileURL, to: backup)
+            decoded = []
+        }
+        // Anything created while the file was unavailable is kept too.
+        let pending = scripts.filter { script in !decoded.contains { $0.id == script.id } }
+        scripts = decoded + pending
+        isLoaded = true
+        if !pending.isEmpty { save() }
     }
 
     private func save() {
+        guard isLoaded else { return }
         do {
             let data = try JSONEncoder().encode(scripts)
-            try data.write(to: fileURL, options: [.atomic, .completeFileProtection])
+            // Readable after the first unlock since restart, so launching in the
+            // background (iOS prewarming) can still load the library.
+            try data.write(to: fileURL, options: [.atomic, .completeFileProtectionUntilFirstUserAuthentication])
         } catch {
             print("Prompter: couldn't save scripts: \(error)")
         }

@@ -36,6 +36,8 @@ struct PrompterView: View {
     @State private var showPaywall = false
     @State private var lensColumn: PrompterColumn = .center
     @State private var alertMessage: String?
+    @State private var newScriptWaiting = false
+    @State private var isActive = false
 
     private var isRecording: Bool { recordingStart != nil }
     private var isBusy: Bool { isRecording || countdown != nil }
@@ -78,21 +80,41 @@ struct PrompterView: View {
             statusOverlay
         }
         .environment(\.layoutDirection, .leftToRight)
+        // The controls float over the camera; the script has its own size control.
+        .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
         .background(Color.black)
         .statusBarHidden()
         .persistentSystemOverlays(.hidden)
         .sensoryFeedback(.impact(weight: .light), trigger: countdown)
         .animation(.easeOut(duration: 0.25), value: countdown)
-        .onAppear(perform: start)
+        .onAppear(perform: activate)
         .onDisappear(perform: teardown)
         .onChange(of: speed) { _, newValue in engine.speed = newValue }
         .onChange(of: importer.openRequest) { _, _ in
-            // A new script arrived from Claude: step out so it can open, unless mid take.
-            if !isBusy && take == nil { dismiss() }
+            // A new script arrived from Claude. Step out so it can open, but
+            // never in the middle of a take or while one is being reviewed.
+            if !isBusy && take == nil { dismiss() } else { newScriptWaiting = true }
         }
         .onChange(of: take == nil) { _, reviewClosed in
             // The camera rests while a take is being reviewed, and comes back after.
-            if reviewClosed { start() } else if !AppConfig.isUITest { camera.stop() }
+            if reviewClosed {
+                if newScriptWaiting { dismiss() } else { startCamera() }
+            } else {
+                camera.stop()
+            }
+        }
+        .overlay(alignment: .top) {
+            if newScriptWaiting {
+                Text("Claude sent a new script. It opens when you finish this take.")
+                    .font(.footnote.weight(.semibold))
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 14)
+                    .padding(.vertical, 8)
+                    .background(.ultraThinMaterial, in: Capsule())
+                    .padding(.top, 60)
+                    .padding(.horizontal, 24)
+                    .allowsHitTesting(false)
+            }
         }
         .sheet(isPresented: $showPaywall) {
             PaywallView().environment(subscriptions)
@@ -302,6 +324,14 @@ struct PrompterView: View {
                 messageCard(message, button: "Try again") {
                     camera.start(position: position ?? .front, quality: quality)
                 }
+            case .paused:
+                Text("Camera paused while another app is using it.")
+                    .font(.callout.weight(.semibold))
+                    .multilineTextAlignment(.center)
+                    .padding(16)
+                    .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 16))
+                    .padding(24)
+                    .allowsHitTesting(false)
             case .starting, .running:
                 if camera.micDenied {
                     VStack {
@@ -337,10 +367,18 @@ struct PrompterView: View {
 
     // MARK: Behavior
 
-    private func start() {
+    /// Entering the record screen. Safe to call again: it only sets up once.
+    private func activate() {
+        guard !isActive else { return }
+        isActive = true
+        importer.prompterActive = true
         UIDevice.current.beginGeneratingDeviceOrientationNotifications()
         engine.speed = speed
         UIApplication.shared.isIdleTimerDisabled = true
+        startCamera()
+    }
+
+    private func startCamera() {
         let side = position ?? (defaultCamera == "back" ? .back : .front)
         position = side
         if AppConfig.isUITest {
@@ -352,14 +390,22 @@ struct PrompterView: View {
 
     private func teardown() {
         // A review sheet on top doesn't count as leaving.
-        guard take == nil else { return }
+        guard take == nil, isActive else { return }
+        isActive = false
         cancelCountdown()
         if isRecording { camera.stopRecording() }
         engine.isRunning = false
-        camera.stop()
+        camera.shutDown()
+        UIDevice.current.endGeneratingDeviceOrientationNotifications()
+        Self.releaseScreen()
+        importer.prompterActive = false
+    }
+
+    /// Undo everything the record screen changes about the app. Also run when
+    /// the screen is dismissed by any route, so nothing can be left stuck.
+    static func releaseScreen() {
         OrientationLock.unlock()
         UIApplication.shared.isIdleTimerDisabled = false
-        UIDevice.current.endGeneratingDeviceOrientationNotifications()
     }
 
     private func recordTapped() {

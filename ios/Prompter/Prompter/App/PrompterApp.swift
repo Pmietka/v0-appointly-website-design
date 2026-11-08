@@ -15,6 +15,7 @@ struct PrompterApp: App {
             }
             UserDefaults.standard.set(true, forKey: Pref.didOnboard)
         }
+        DispatchQueue.global(qos: .utility).async { CameraController.purgeOldTakes() }
         let store = ScriptStore.makeDefault()
         _scripts = State(initialValue: store)
         _subscriptions = State(initialValue: SubscriptionStore(forcePro: AppConfig.forcePro))

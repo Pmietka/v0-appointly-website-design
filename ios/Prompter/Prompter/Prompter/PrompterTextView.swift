@@ -57,9 +57,12 @@ struct PrompterTextView: UIViewRepresentable {
     }
 }
 
-final class PrompterScrollHost: UIView, UIScrollViewDelegate {
-    private let scrollView = UIScrollView()
-    private let label = UILabel()
+/// The scroller is a read only UITextView. With TextKit 2 it only lays out and
+/// draws the lines near the screen, so a 2,000 word script at size 80 costs
+/// about as much memory as a short one (a single label would be one giant
+/// bitmap, past the GPU's texture limit).
+final class PrompterScrollHost: UIView, UITextViewDelegate {
+    private let textView = UITextView(usingTextLayoutManager: true)
     private let fade = CAGradientLayer()
     private let engine: PrompterEngine
     private var displayLink: CADisplayLink?
@@ -68,11 +71,21 @@ final class PrompterScrollHost: UIView, UIScrollViewDelegate {
     private var text = ""
     private var fontSize: CGFloat = 40
     private var column: PrompterColumn = .center
+    private var laidOutSize: CGSize = .zero
     /// The scroll position, kept as a float so slow speeds stay smooth.
     private var position: CGFloat = 0
 
     /// About 15 to 18 characters wide per em: short lines keep the eyes still on camera.
     private var maxColumnEms: CGFloat { column == .center ? 18 : 15 }
+    static let sidePadding: CGFloat = 20
+    static let topPadding: CGFloat = 14
+
+    /// The text column inside the band (for tests and layout checks).
+    var columnFrame: CGRect {
+        let inset = textView.textContainerInset
+        return CGRect(x: inset.left, y: inset.top, width: bounds.width - inset.left - inset.right, height: 0)
+    }
+    var scrollableHeight: CGFloat { textView.contentSize.height }
 
     init(engine: PrompterEngine) {
         self.engine = engine
@@ -80,20 +93,20 @@ final class PrompterScrollHost: UIView, UIScrollViewDelegate {
         backgroundColor = .clear
         clipsToBounds = true
 
-        scrollView.backgroundColor = .clear
-        scrollView.showsVerticalScrollIndicator = false
-        scrollView.showsHorizontalScrollIndicator = false
-        scrollView.alwaysBounceVertical = true
-        scrollView.contentInsetAdjustmentBehavior = .never
-        scrollView.delegate = self
-        addSubview(scrollView)
-
-        label.numberOfLines = 0
-        label.isAccessibilityElement = true
-        scrollView.addSubview(label)
+        textView.isEditable = false
+        textView.isSelectable = false
+        textView.backgroundColor = .clear
+        textView.showsVerticalScrollIndicator = false
+        textView.showsHorizontalScrollIndicator = false
+        textView.alwaysBounceVertical = true
+        textView.contentInsetAdjustmentBehavior = .never
+        textView.textContainer.lineFragmentPadding = 0
+        textView.dataDetectorTypes = []
+        textView.delegate = self
+        addSubview(textView)
 
         let tap = UITapGestureRecognizer(target: self, action: #selector(tapped))
-        scrollView.addGestureRecognizer(tap)
+        textView.addGestureRecognizer(tap)
 
         fade.colors = [UIColor.clear.cgColor, UIColor.black.cgColor, UIColor.black.cgColor, UIColor.clear.cgColor]
         layer.mask = fade
@@ -103,14 +116,21 @@ final class PrompterScrollHost: UIView, UIScrollViewDelegate {
     required init?(coder: NSCoder) { fatalError("init(coder:) is not used") }
 
     func configure(text: String, fontSize: CGFloat, mirrored: Bool, column: PrompterColumn) {
-        let changed = text != self.text || fontSize != self.fontSize || column != self.column || label.attributedText == nil
+        let changed = text != self.text || fontSize != self.fontSize || column != self.column || textView.attributedText.length == 0
         self.text = text
         self.fontSize = fontSize
         self.column = column
-        scrollView.transform = mirrored ? CGAffineTransform(scaleX: -1, y: 1) : .identity
+        textView.transform = mirrored ? CGAffineTransform(scaleX: -1, y: 1) : .identity
         if changed {
-            label.attributedText = Self.attributed(text, fontSize: fontSize)
+            let keep = progress
+            textView.attributedText = Self.attributed(text, fontSize: fontSize)
+            laidOutSize = .zero
             setNeedsLayout()
+            layoutIfNeeded()
+            if keep > 0 {
+                position = min(maxOffset, keep * maxOffset)
+                applyPosition()
+            }
         }
     }
 
@@ -132,36 +152,44 @@ final class PrompterScrollHost: UIView, UIScrollViewDelegate {
     }
 
     private var maxOffset: CGFloat {
-        max(0, scrollView.contentSize.height - scrollView.bounds.height)
+        max(0, textView.contentSize.height - textView.bounds.height)
+    }
+
+    private var progress: CGFloat {
+        let limit = maxOffset
+        return limit > 0 ? position / limit : 0
     }
 
     override func layoutSubviews() {
         super.layoutSubviews()
         guard bounds.width > 0, bounds.height > 0 else { return }
-        let oldMax = maxOffset
-        let progress = oldMax > 0 ? position / oldMax : 0
+        let keep = progress
 
-        // bounds + center rather than frame, because the scroll view may be mirrored.
-        scrollView.bounds = CGRect(origin: scrollView.bounds.origin, size: bounds.size)
-        scrollView.center = CGPoint(x: bounds.midX, y: bounds.midY)
+        // bounds + center rather than frame, because the text view may be mirrored.
+        textView.bounds = CGRect(origin: textView.bounds.origin, size: bounds.size)
+        textView.center = CGPoint(x: bounds.midX, y: bounds.midY)
 
-        let sidePadding: CGFloat = 20
-        let width = max(120, min(bounds.width - sidePadding * 2, fontSize * maxColumnEms))
-        let fitted = label.sizeThatFits(CGSize(width: width, height: .greatestFiniteMagnitude))
-        let x: CGFloat
-        switch column {
-        case .center: x = (bounds.width - width) / 2
-        case .leading: x = sidePadding
-        case .trailing: x = bounds.width - sidePadding - width
-        }
-        let top: CGFloat = 14
-        label.frame = CGRect(x: x, y: top, width: width, height: ceil(fitted.height))
-        // Room after the last line so it can scroll up near the top of the band.
-        scrollView.contentSize = CGSize(width: bounds.width, height: top + ceil(fitted.height) + bounds.height * 0.6)
-
-        // Keep the reader's place when the text size or the phone's orientation changes.
-        if oldMax > 0, abs(maxOffset - oldMax) > 0.5 {
-            position = min(maxOffset, progress * maxOffset)
+        if laidOutSize != bounds.size {
+            laidOutSize = bounds.size
+            let side = Self.sidePadding
+            let width = max(120, min(bounds.width - side * 2, fontSize * maxColumnEms))
+            let left: CGFloat
+            switch column {
+            case .center: left = (bounds.width - width) / 2
+            case .leading: left = side
+            case .trailing: left = bounds.width - side - width
+            }
+            // Room after the last line so it can scroll up near the top of the band.
+            textView.textContainerInset = UIEdgeInsets(top: Self.topPadding, left: left,
+                                                       bottom: bounds.height * 0.6, right: bounds.width - left - width)
+            // Lay out the whole script once so the scroll length is exact. This is
+            // layout only; drawing still happens just for the visible lines.
+            if let manager = textView.textLayoutManager {
+                manager.ensureLayout(for: manager.documentRange)
+            }
+            textView.layoutIfNeeded()
+            // Keep the reader's place when the text size or the phone's orientation changes.
+            position = min(maxOffset, keep * maxOffset)
             applyPosition()
         }
 
@@ -197,7 +225,7 @@ final class PrompterScrollHost: UIView, UIScrollViewDelegate {
             position = 0
             applyPosition()
         }
-        guard engine.isRunning, !scrollView.isTracking, !scrollView.isDecelerating else { return }
+        guard engine.isRunning, !textView.isTracking, !textView.isDecelerating else { return }
 
         let limit = maxOffset
         position = min(limit, position + PrompterEngine.pointsPerSecond(speed: engine.speed, fontSize: fontSize) * CGFloat(dt))
@@ -209,7 +237,7 @@ final class PrompterScrollHost: UIView, UIScrollViewDelegate {
     }
 
     private func applyPosition() {
-        scrollView.contentOffset = CGPoint(x: 0, y: position)
+        textView.contentOffset = CGPoint(x: 0, y: position)
     }
 
     @objc private func tapped() {

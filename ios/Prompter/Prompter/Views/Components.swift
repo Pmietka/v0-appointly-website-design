@@ -99,6 +99,17 @@ struct PillStepper: View {
         }
         .foregroundStyle(.white)
         .background(.black.opacity(0.5), in: Capsule())
+        // One control for VoiceOver: "Speed, 4, adjustable", swipe up or down to change.
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(label)
+        .accessibilityValue(value)
+        .accessibilityAdjustableAction { direction in
+            switch direction {
+            case .increment: onPlus()
+            case .decrement: onMinus()
+            @unknown default: break
+            }
+        }
     }
 }
 

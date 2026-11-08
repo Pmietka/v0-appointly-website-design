@@ -3,6 +3,8 @@ import SwiftUI
 struct RootView: View {
     @Environment(SubscriptionStore.self) private var subscriptions
     @Environment(ShareImporter.self) private var importer
+    @Environment(ScriptStore.self) private var store
+    @Environment(\.scenePhase) private var scenePhase
     @AppStorage(Pref.didOnboard) private var didOnboard = false
     @State private var showPaywall = false
 
@@ -17,6 +19,13 @@ struct RootView: View {
             }
             .sheet(isPresented: $showPaywall) {
                 PaywallView().environment(subscriptions)
+            }
+            .onChange(of: scenePhase) { _, phase in
+                guard phase == .active else { return }
+                // Trials and subscriptions can end while the app sits in the
+                // background; expirations don't arrive as transaction updates.
+                Task { await subscriptions.refreshEntitlements() }
+                store.reloadIfNeeded()
             }
             // Links from Claude (prompterapp://open?id=...) land here.
             .onOpenURL { url in

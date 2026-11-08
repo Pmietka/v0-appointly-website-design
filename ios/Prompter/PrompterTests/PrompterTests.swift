@@ -59,16 +59,25 @@ final class PrompterEngineTests: XCTestCase {
     }
 
     @MainActor
-    func testScrollerKeepsShortLinesSideways() throws {
+    func testScrollerKeepsShortLinesSideways() {
         let host = PrompterScrollHost(engine: PrompterEngine())
         host.frame = CGRect(x: 0, y: 0, width: 800, height: 250)
         host.configure(text: SampleScripts.welcome, fontSize: 40, mirrored: false, column: .leading)
         host.layoutIfNeeded()
-        let scroll = try XCTUnwrap(host.subviews.first as? UIScrollView)
-        let label = try XCTUnwrap(scroll.subviews.first { $0 is UILabel })
-        XCTAssertEqual(label.frame.minX, 20, accuracy: 0.5, "Sideways text hugs the camera side")
-        XCTAssertLessThanOrEqual(label.frame.width, 40 * 15 + 0.5, "About 15 ems wide at most")
-        XCTAssertGreaterThan(scroll.contentSize.height, scroll.bounds.height, "Long script should be scrollable")
+        XCTAssertEqual(host.columnFrame.minX, PrompterScrollHost.sidePadding, accuracy: 0.5, "Sideways text hugs the camera side")
+        XCTAssertLessThanOrEqual(host.columnFrame.width, 40 * 15 + 0.5, "About 15 ems wide at most")
+        XCTAssertGreaterThan(host.scrollableHeight, 250, "Long script should be scrollable")
+    }
+
+    @MainActor
+    func testVeryLongScriptAtTheBiggestSizeLaysOut() {
+        // 3,000 words at size 80 would be a ~200,000 px tall bitmap as a label.
+        let long = Array(repeating: SampleScripts.welcome, count: 30).joined(separator: "\n\n")
+        let host = PrompterScrollHost(engine: PrompterEngine())
+        host.frame = CGRect(x: 0, y: 0, width: 390, height: 340)
+        host.configure(text: long, fontSize: 80, mirrored: false, column: .center)
+        host.layoutIfNeeded()
+        XCTAssertGreaterThan(host.scrollableHeight, 50_000, "Whole script should be scrollable")
     }
 }
 
@@ -103,6 +112,23 @@ final class ScriptStoreTests: XCTestCase {
         first.delete(first.scripts[0].id)
 
         XCTAssertTrue(ScriptStore(fileURL: url, seedIfEmpty: true).scripts.isEmpty, "Deleting the welcome script should stick")
+    }
+
+    func testUnreadableFileIsBackedUpNotOverwrittenSilently() throws {
+        let dir = FileManager.default.temporaryDirectory.appendingPathComponent("store-\(UUID().uuidString)")
+        try FileManager.default.createDirectory(at: dir, withIntermediateDirectories: true)
+        defer { try? FileManager.default.removeItem(at: dir) }
+        let url = dir.appendingPathComponent("scripts.json")
+        try Data("not json at all".utf8).write(to: url)
+
+        let store = ScriptStore(fileURL: url, seedIfEmpty: true)
+        XCTAssertTrue(store.isLoaded)
+        XCTAssertTrue(store.scripts.isEmpty, "No welcome script over an existing library")
+        let backups = try FileManager.default.contentsOfDirectory(atPath: dir.path).filter { $0.hasPrefix("scripts-unreadable-") }
+        XCTAssertEqual(backups.count, 1, "The unreadable file is kept as a backup")
+
+        store.create(body: "New one")
+        XCTAssertEqual(ScriptStore(fileURL: url, seedIfEmpty: false).scripts.map(\.body), ["New one"])
     }
 
     func testNewestScriptListsFirst() {

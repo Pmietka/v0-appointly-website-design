@@ -14,7 +14,7 @@ struct ScriptEditorView: View {
         ZStack(alignment: .topLeading) {
             TextEditor(text: $text)
                 .focused($editing)
-                .font(.system(size: 18))
+                .font(.body)
                 .lineSpacing(4)
                 .scrollContentBackground(.hidden)
                 .scrollDismissesKeyboard(.interactively)
@@ -22,7 +22,7 @@ struct ScriptEditorView: View {
                 .accessibilityIdentifier("scriptEditor")
             if text.isEmpty {
                 Text("Paste or type your script")
-                    .font(.system(size: 18))
+                    .font(.body)
                     .foregroundStyle(.tertiary)
                     .padding(.horizontal, 17)
                     .padding(.top, 8)
@@ -59,7 +59,11 @@ struct ScriptEditorView: View {
             // opened for an empty script, so this only runs on the way back.
             if text.isBlank && !showPrompter { store.delete(scriptID) }
         }
-        .fullScreenCover(isPresented: $showPrompter) {
+        .fullScreenCover(isPresented: $showPrompter, onDismiss: {
+            // Belt and braces: however the record screen went away, release it.
+            PrompterView.releaseScreen()
+            importer.prompterActive = false
+        }) {
             PrompterView(script: text)
                 .environment(subscriptions)
                 .environment(importer)

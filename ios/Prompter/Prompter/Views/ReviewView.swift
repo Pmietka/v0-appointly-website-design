@@ -41,7 +41,7 @@ struct ReviewView: View {
             Button("Discard take", role: .destructive) { close() }
             Button("Keep it", role: .cancel) {}
         } message: {
-            Text("It hasn't been saved to Photos or shared.")
+            Text("It hasn't been saved to Photos.")
         }
     }
 
