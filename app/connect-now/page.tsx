@@ -6,6 +6,7 @@ import "../lander/lander.css";
 // Same stylesheet as /connect. Imported from there rather than copied so the
 // two pages can never drift apart visually.
 import "../connect/apply.css";
+import "@/components/qualify-modal.css";
 
 export const viewport: Viewport = {
   themeColor: "#fafafa",

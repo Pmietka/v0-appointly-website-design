@@ -27,6 +27,7 @@ export default function BookedEstimatesPage() {
   return (
     <HomeLanding
       hero={HERO}
+      survey
       closingSub="Tell us how many jobs you want on your calendar each month. We handle the rest, from the ads to the booked appointment."
     />
   );

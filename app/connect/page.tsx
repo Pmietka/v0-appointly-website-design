@@ -15,6 +15,7 @@ import "../home.css";
 import "../lander/lander.css";
 import "../case-studies/case-studies.css";
 import "./apply.css";
+import "@/components/qualify-modal.css";
 import "../sales.css";
 
 export const viewport: Viewport = {

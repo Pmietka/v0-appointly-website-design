@@ -22,5 +22,5 @@ const HERO: HeroCopy = {
 };
 
 export default function FbAdsBreakdownPage() {
-  return <HomeLanding hero={HERO} />;
+  return <HomeLanding hero={HERO} survey />;
 }
