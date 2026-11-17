@@ -1,4 +1,5 @@
-import { BOOKING_URL, PHONE_DISPLAY, PHONE_HREF } from "@/components/site-nav";
+import { BookingLink } from "@/components/booking-link";
+import { PHONE_DISPLAY, PHONE_HREF } from "@/components/site-nav";
 
 /**
  * Footer for pages built on the .dscroll design system (homepage, case
@@ -16,7 +17,7 @@ export function DscrollFooter() {
           <a href={PHONE_HREF}>{PHONE_DISPLAY}</a>
         </p>
         <div className="flinks">
-          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">Book a Call</a>
+          <BookingLink>Book a Call</BookingLink>
           <a href={PHONE_HREF}>Call {PHONE_DISPLAY}</a>
           <a href="/case-studies">Case Studies</a>
           <a href="/how-it-works">How It Works</a>

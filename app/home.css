@@ -66,6 +66,7 @@ html { scroll-behavior: smooth; }
 .dscroll .btn .arr{transition:transform .15s}
 .dscroll .btn:hover .arr{transform:translateX(4px)}
 .dscroll .hero .btn{margin-top:30px}
+.dscroll .hero .heronote{margin-top:14px;font-size:clamp(14px,2vw,16px);color:var(--ink-3);font-weight:500}
 
 /* generic card grids */
 .dscroll .grid{display:grid;gap:clamp(14px,2.5vw,18px);margin-top:clamp(28px,5vw,44px)}

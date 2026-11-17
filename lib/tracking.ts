@@ -511,6 +511,58 @@ export function getCalendarTrackingParams(): Record<string, string> {
   return out;
 }
 
+/** Query params forwarded from the landing page to the booking calendar. */
+export const BOOKING_PASSTHROUGH_KEYS = [
+  "utm_source",
+  "utm_medium",
+  "utm_campaign",
+  "utm_term",
+  "utm_content",
+  "campaign_id",
+  "adset_id",
+  "ad_id",
+  "placement",
+  "fbclid",
+  "gclid",
+] as const;
+
+function pathOf(url: string): string {
+  try {
+    return new URL(url).pathname;
+  } catch {
+    return "";
+  }
+}
+
+/** Params for the booking link (client.getappointly.co/strategy-calendar).
+ *  If the current URL carries any ad params, those are forwarded exactly as
+ *  they arrived. Otherwise the stored last touch fills in, so a visitor who
+ *  lands from an ad and books from another page still carries the click.
+ *  landing_page is the path the visitor landed on (for example
+ *  /fb-ads-breakdown), so GHL can record which page the lead came from. */
+export function getBookingParams(): Record<string, string> {
+  if (!isBrowser()) return {};
+  const url = new URLSearchParams(window.location.search);
+  const out: Record<string, string> = {};
+  for (const k of BOOKING_PASSTHROUGH_KEYS) {
+    const v = clean(url.get(k));
+    if (v) out[k] = v;
+  }
+  const fromUrl = Object.keys(out).length > 0;
+  let landing = window.location.pathname;
+  const lt = fromUrl ? null : readJSON<Touch>(localStorage, K.lastTouch);
+  if (lt) {
+    for (const k of BOOKING_PASSTHROUGH_KEYS) {
+      const v = lt[k];
+      if (typeof v === "string" && v) out[k] = v;
+    }
+    // Only credit the stored landing page when it was an ad click.
+    if (Object.keys(out).length > 0) landing = pathOf(lt.landing_url) || landing;
+  }
+  out.landing_page = landing;
+  return out;
+}
+
 /* B2B lead gate: the browser pixel never fires the standard Lead or Schedule
    events. Lead is only sent server side (CAPI, n8n "B2B Lead Gate: Slack Grades")
    after the call is graded in #b2b-lead-flow. These custom events are for

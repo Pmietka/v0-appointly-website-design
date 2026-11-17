@@ -4,9 +4,11 @@ import { useState } from "react";
 import Image from "next/image";
 import { Menu, X, Phone } from "lucide-react";
 
-// Single source of truth for the booking calendar. Do not introduce a second
-// booking system; every CTA on the homepage points here.
-export const BOOKING_URL = "https://client.getappointly.co/strategy-calendar";
+import { BookingLink, BOOKING_URL } from "@/components/booking-link";
+
+// BOOKING_URL lives in components/booking-link.tsx; re-exported here so
+// existing imports keep working.
+export { BOOKING_URL };
 
 // Single source of truth for the company phone number, surfaced site-wide.
 export const PHONE_DISPLAY = "651-299-3265";
@@ -42,9 +44,7 @@ export function SiteNav() {
             <Phone className="h-4 w-4" aria-hidden />
             {PHONE_DISPLAY}
           </a>
-          <a className="btn" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-            Book a Call
-          </a>
+          <BookingLink className="btn">Book a Call</BookingLink>
           <button
             type="button"
             className="snav-burger"
