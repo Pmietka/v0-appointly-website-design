@@ -338,8 +338,12 @@
 .dscroll.csp .statbar:has(> .cstat:nth-child(3):last-child) .cstat{border-bottom:0;border-right:1px solid var(--line)}
 .dscroll.csp .statbar:has(> .cstat:nth-child(3):last-child) .cstat:last-child{border-right:0}
 @media(max-width:819px){
-  .dscroll.csp .statbar:has(> .cstat:nth-child(3):last-child) .cstat{padding:18px 12px}
+  /* minmax(0,1fr) so a long label word ("APPOINTMENTS") can't widen its
+     column past a third of the screen and push the last stat off the edge. */
+  .dscroll.csp .statbar:has(> .cstat:nth-child(3):last-child){grid-template-columns:repeat(3,minmax(0,1fr))}
+  .dscroll.csp .statbar:has(> .cstat:nth-child(3):last-child) .cstat{padding:18px 10px}
   .dscroll.csp .statbar:has(> .cstat:nth-child(3):last-child) .csv{font-size:clamp(22px,6.4vw,30px);white-space:nowrap}
+  .dscroll.csp .statbar:has(> .cstat:nth-child(3):last-child) .csl{letter-spacing:.05em;-webkit-hyphens:auto;hyphens:auto;overflow-wrap:break-word}
 }
 
 /* Compact chapters (embedded story): clip and words side by side, nothing else */

@@ -22,8 +22,11 @@ const HERO: ConnectHero = {
       <span className="hl">You just show up.</span>
     </>
   ),
+  // One paragraph on desktop; on phones the detail moves under the button.
   subheadline:
-    "Facebook ads are how the biggest floor coating companies scale, but they're hard to do right. On a quick call we'll break down exactly how we'd run yours. When you work with us, you fund ads at cost and pay per booked appointment. No setup fee, no retainer, no long term contract.",
+    "Facebook ads are how the biggest floor coating companies scale, but they're hard to do right. On a quick call we'll break down exactly how we'd run yours.",
+  detail:
+    "When you work with us, you fund ads at cost and pay per booked appointment. No setup fee, no retainer, no long term contract.",
   ctaText: "Get My Facebook Ads Breakdown",
 };
 

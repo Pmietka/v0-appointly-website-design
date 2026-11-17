@@ -109,7 +109,19 @@
 }
 
 /* optional short line under the hero CTA (ad landing pages only) */
-.dscroll .heroform .heronote{margin-top:12px;font-size:clamp(14px,1.6vw,16px);line-height:1.45;color:var(--ink-3);font-weight:500;text-align:center}
+.dscroll .heroform .heronote{margin-top:12px;font-size:clamp(14px,1.6vw,16px);line-height:1.45;color:var(--ink-3);font-weight:500;text-align:center;text-wrap:balance}
+
+/* Ad landing pages (/fb-ads-breakdown, /booked-estimates) only. Their hero
+   copy runs longer than /connect's, so on phones the second half of the
+   subheadline (.herodetail) moves under the hero button and the eyebrow wraps
+   evenly, which keeps the video on the first screen. Desktop is unchanged. */
+.dscroll .adhero .herodetail{display:none}
+.dscroll .adhero .eyebrow{text-wrap:balance}
+@media(max-width:760px){
+  .dscroll .adhero .herodetail-inline{display:none}
+  .dscroll .adhero .herodetail{display:block;order:3;margin-top:16px;font-size:15px;line-height:1.5;color:var(--ink-2);text-align:center;text-wrap:pretty}
+  .dscroll .adhero .heroform .formkicker{order:4}
+}
 
 /* trust badges under the CTA */
 .dscroll .trustbadges{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 20px;margin-top:16px}

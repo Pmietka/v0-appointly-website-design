@@ -23,8 +23,11 @@ const HERO: ConnectHero = {
       <span className="hl">You just show up.</span>
     </>
   ),
+  // One paragraph on desktop; on phones the detail moves under the button.
   subheadline:
-    "We find the jobs you actually want, call every homeowner within minutes, and book only serious buyers onto your calendar. You pay per qualified estimate appointment, never per lead, and if one isn't a real fit you don't pay for it. No retainer.",
+    "We find the jobs you actually want, call every homeowner within minutes, and book only serious buyers onto your calendar.",
+  detail:
+    "You pay per qualified estimate appointment, never per lead, and if one isn't a real fit you don't pay for it. No retainer.",
   ctaText: "Book My Call",
   note: "Already paying an agency? We'll show you what they're missing.",
 };

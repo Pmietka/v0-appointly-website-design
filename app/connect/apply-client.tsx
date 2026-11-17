@@ -48,6 +48,10 @@ export type ConnectHero = {
   eyebrow?: string;
   headline?: React.ReactNode;
   subheadline?: React.ReactNode;
+  /** Second half of the subheadline. On desktop it follows the subheadline
+      in the same paragraph; on phones it moves under the hero button so the
+      video sits higher on the first screen. */
+  detail?: React.ReactNode;
   ctaText?: string;
   /** Optional short line under the hero button. */
   note?: string;
@@ -71,6 +75,8 @@ const DEFAULT_HERO = {
 
 export default function ApplyClient({ children, hero = {} }: { children?: React.ReactNode; hero?: ConnectHero }) {
   const h = { ...DEFAULT_HERO, ...hero };
+  // The ad landing pages pass their own hero; .adhero carries their phone tweaks.
+  const isAdHero = Object.keys(hero).length > 0;
   const [open, setOpen] = useState(false);
   // Once opened, the modal stays mounted (hidden when closed). See QualifyModal.
   const [modalMounted, setModalMounted] = useState(false);
@@ -111,12 +117,15 @@ export default function ApplyClient({ children, hero = {} }: { children?: React.
       </nav>
 
       {/* Hero. Pay-per-show hook, VSL, and the booking CTA side by side. */}
-      <section className="sec applyhero herowide" id="top">
+      <section className={`sec applyhero herowide${isAdHero ? " adhero" : ""}`} id="top">
         <div className="orb a" />
         <div className="wrap">
           <p className="eyebrow">{h.eyebrow}</p>
           <h1>{h.headline}</h1>
-          <p className="lead heropromise">{h.subheadline}</p>
+          <p className="lead heropromise">
+            {h.subheadline}
+            {h.detail && <span className="herodetail-inline"> {h.detail}</span>}
+          </p>
 
           <div className="herorow">
             <div className="herovsl">
@@ -139,6 +148,7 @@ export default function ApplyClient({ children, hero = {} }: { children?: React.
                   <span className="trustbadge" key={b}><Check aria-hidden /> {b}</span>
                 ))}
               </div>
+              {h.detail && <p className="herodetail">{h.detail}</p>}
             </div>
           </div>
         </div>
