@@ -87,11 +87,15 @@ const TIMELINE = [
 
 /* firstStepPts swaps the Strategy call bullets for one page (e.g. /connect)
    without changing the other pages that share this timeline. */
-export function ProcessTimeline({ firstStepPts }: { firstStepPts?: string[] } = {}) {
+export function ProcessTimeline({
+  firstStepPts,
+  firstStepWho,
+}: { firstStepPts?: string[]; firstStepWho?: string } = {}) {
   return (
     <ol className="tl">
       {TIMELINE.map((step, i) => {
-        const s = i === 0 && firstStepPts ? { ...step, pts: firstStepPts } : step;
+        let s = i === 0 && firstStepPts ? { ...step, pts: firstStepPts } : step;
+        if (i === 0 && firstStepWho) s = { ...s, who: firstStepWho };
         const Icon = s.Icon;
         return (
           <li className={`tlstep${s.who === "You" ? " you" : ""}`} key={s.t}>

@@ -14,8 +14,8 @@ import {
 } from "@/lib/tracking";
 import "./qualify-modal.css";
 
-/* Shared by /connect and the homepage ad variants (/fb-ads-breakdown,
-   /booked-estimates). Must render inside a .dscroll element (fonts, tokens and
+/* Shared by /connect and the Meta ad landing pages (/fb-ads-breakdown,
+   /booked-estimates), which render the /connect page. Must render inside a .dscroll element (fonts, tokens and
    the modal styles are scoped to it). */
 
 // GHL booking widget embedded in the modal after the survey is submitted.
@@ -108,16 +108,7 @@ const REPS_OPTIONS = ["I run all the leads myself", "1-3 reps", "4-10 reps", "10
    closed, so closing it never throws away a submitted survey: reopening shows
    the same calendar instead of starting the survey over (which used to send
    the lead a second time). It also keeps the calendar iframe and its size. */
-export function QualifyModal({
-  open,
-  onClose,
-  extraAnswers,
-}: {
-  open: boolean;
-  onClose: () => void;
-  /** Extra fields sent with the lead, for example the landing page path. */
-  extraAnswers?: Record<string, string>;
-}) {
+export function QualifyModal({ open, onClose }: { open: boolean; onClose: () => void }) {
   const [step, setStep] = useState(1);
   const [role, setRole] = useState("");
   const [revenue, setRevenue] = useState("");
@@ -188,7 +179,9 @@ export function QualifyModal({
         full_name: fullName,
         phone,
         email,
-        answers: { role, revenue, reps, source: "apply-page", ...extraAnswers },
+        // landing_page: the path the visitor landed on (for example
+        // /fb-ads-breakdown), so GHL can tell which page the lead came from.
+        answers: { role, revenue, reps, source: "apply-page", landing_page: getBookingParams().landing_page },
       });
       first_name = payload.first_name;
       last_name = payload.last_name;

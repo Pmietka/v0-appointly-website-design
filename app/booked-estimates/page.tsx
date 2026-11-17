@@ -1,15 +1,21 @@
-import { HomeLanding } from "@/components/home/home-landing";
-import type { HeroCopy } from "@/components/home/home-hero";
-import { HOME_VIEWPORT, VARIANT_METADATA } from "@/components/home/home-metadata";
+import type { Metadata } from "next";
+
+import { CONNECT_METADATA, CONNECT_VIEWPORT, ConnectLanding } from "@/app/connect/connect-landing";
+import type { ConnectHero } from "@/app/connect/apply-client";
 
 /* Meta ad landing page for the "stop paying for cheap leads" ad (booked in
-   person estimates, pay per qualified appointment). The homepage with an ad
-   matched hero. noindex, canonical to /, not in the sitemap or nav. */
-export const viewport = HOME_VIEWPORT;
-export const metadata = VARIANT_METADATA;
+   person estimates, pay per qualified appointment). The /connect page (survey
+   funnel, tracking, every section) with an ad matched hero. noindex, follow;
+   canonical to the homepage; not in the sitemap or nav. */
+export const viewport = CONNECT_VIEWPORT;
+export const metadata: Metadata = {
+  ...CONNECT_METADATA,
+  robots: { index: false, follow: true },
+  alternates: { canonical: "https://getappointly.co/" },
+};
 
 // The strategy calendar books 30 minute slots, so the CTA names no length.
-const HERO: HeroCopy = {
+const HERO: ConnectHero = {
   eyebrow: "For floor coating owners tired of cheap leads",
   headline: (
     <>
@@ -24,11 +30,7 @@ const HERO: HeroCopy = {
 };
 
 export default function BookedEstimatesPage() {
-  return (
-    <HomeLanding
-      hero={HERO}
-      survey
-      closingSub="Tell us how many jobs you want on your calendar each month. We handle the rest, from the ads to the booked appointment."
-    />
-  );
+  // The ad promises the call is with Patrick, so step 1 of "How it works"
+  // does not name Jacob here.
+  return <ConnectLanding hero={HERO} firstStepWho="You + us" />;
 }

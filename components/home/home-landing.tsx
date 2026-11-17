@@ -6,7 +6,6 @@ import Link from "next/link";
 
 import { BookingLink } from "@/components/booking-link";
 import { HomeHero, type HeroCopy } from "@/components/home/home-hero";
-import { SurveyFunnel } from "@/components/home/survey-funnel";
 import { MetaPixel } from "@/components/meta-pixel";
 import { SiteNav, PHONE_DISPLAY, PHONE_HREF } from "@/components/site-nav";
 import { DscrollFooter } from "@/components/dscroll-footer";
@@ -37,34 +36,15 @@ const COMPARE_ROWS = [
   { label: "Bad appointments not billed", Icon: LineChart, kind: "bin", out: false, vals: [false, false, false, true] },
 ] as const;
 
-const DEFAULT_CLOSING_SUB = (
-  <>
-    Tell Jacob how many jobs you want on your calendar each month. We
-    handle the rest, from the ads to the booked appointment.
-  </>
-);
-
-/* The homepage body, shared by / and its ad landing variants
-   (/fb-ads-breakdown, /booked-estimates). Only the hero copy, the closing CTA
-   button text (always the hero CTA) and, optionally, the closing line differ.
-   Every other section is identical on all three pages.
-
-   survey: the ad variants run the same funnel as /connect. Every booking CTA
-   opens the qualification survey, which sends the lead to GHL with full
-   attribution and CAPI data, fires B2BFormSubmit and GA4 generate_lead, then
-   shows the prefilled calendar (which redirects to /booked-call). */
+/* The homepage body. The hero copy comes in as props (app/page.tsx), so it
+   can be swapped for wording tests without touching the rest of the page. */
 export function HomeLanding({
   hero,
-  closingSub = DEFAULT_CLOSING_SUB,
   schema,
-  survey = false,
 }: {
   hero: HeroCopy;
-  closingSub?: ReactNode;
-  /** JSON-LD script, homepage only (the variants are noindex). */
+  /** JSON-LD script for the page. */
   schema?: ReactNode;
-  /** Booking CTAs open the /connect qualification survey instead of linking out. */
-  survey?: boolean;
 }) {
   const content = (
     <>
@@ -330,7 +310,10 @@ export function HomeLanding({
       <section className="sec tint ctaband">
         <div className="wrap">
           <h2>Ready to fill your calendar?</h2>
-          <p className="sub">{closingSub}</p>
+          <p className="sub">
+            Tell Jacob how many jobs you want on your calendar each month. We
+            handle the rest, from the ads to the booked appointment.
+          </p>
           <BookingLink className="btn">
             {hero.ctaText} <span className="arr">&rarr;</span>
           </BookingLink>
@@ -348,7 +331,7 @@ export function HomeLanding({
     <>
       <div className="dscroll">
         {schema}
-        {survey ? <SurveyFunnel>{content}</SurveyFunnel> : content}
+        {content}
       </div>
       {/* Meta pixel PageView. Same id ("meta-pixel") as /connect and the other
           pixel pages, so next/script runs it once per session and it cannot

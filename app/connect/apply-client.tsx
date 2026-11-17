@@ -41,7 +41,36 @@ const TRUST_BADGES = ["No contracts", "Bad appointments credited", "Exclusive le
    Everything between the hero and the closing CTA (who we are, the wall of
    proof, the process) is server rendered in page.tsx and passed in as
    children; its buttons open the modal through OPEN_APPLY_EVENT. */
-export default function ApplyClient({ children }: { children?: React.ReactNode }) {
+/* Hero copy. /connect uses the defaults; the Meta ad landing pages
+   (/fb-ads-breakdown, /booked-estimates) pass their own so the hero matches
+   the ad. ctaText is used by the hero button and the closing CTA. */
+export type ConnectHero = {
+  eyebrow?: string;
+  headline?: React.ReactNode;
+  subheadline?: React.ReactNode;
+  ctaText?: string;
+  /** Optional short line under the hero button. */
+  note?: string;
+};
+
+const DEFAULT_HERO = {
+  eyebrow: "For floor coating contractors",
+  headline: (
+    <>
+      Keep Every Crew <span className="hl">Booked Weeks In Advance.</span>
+    </>
+  ),
+  subheadline: (
+    <>
+      We run Facebook and Instagram ads in your area, call every homeowner
+      within a minute, and book qualified estimates straight onto your calendar.
+    </>
+  ),
+  ctaText: "Book a Call",
+};
+
+export default function ApplyClient({ children, hero = {} }: { children?: React.ReactNode; hero?: ConnectHero }) {
+  const h = { ...DEFAULT_HERO, ...hero };
   const [open, setOpen] = useState(false);
   // Once opened, the modal stays mounted (hidden when closed). See QualifyModal.
   const [modalMounted, setModalMounted] = useState(false);
@@ -85,14 +114,9 @@ export default function ApplyClient({ children }: { children?: React.ReactNode }
       <section className="sec applyhero herowide" id="top">
         <div className="orb a" />
         <div className="wrap">
-          <p className="eyebrow">For floor coating contractors</p>
-          <h1>
-            Keep Every Crew <span className="hl">Booked Weeks In Advance.</span>
-          </h1>
-          <p className="lead heropromise">
-            We run Facebook and Instagram ads in your area, call every homeowner
-            within a minute, and book qualified estimates straight onto your calendar.
-          </p>
+          <p className="eyebrow">{h.eyebrow}</p>
+          <h1>{h.headline}</h1>
+          <p className="lead heropromise">{h.subheadline}</p>
 
           <div className="herorow">
             <div className="herovsl">
@@ -107,8 +131,9 @@ export default function ApplyClient({ children }: { children?: React.ReactNode }
                 <span className="fksub">Unqualified estimate, you don&apos;t pay. No contracts. No BS.</span>
               </p>
               <button type="button" className="ctabtn" onClick={openModal}>
-                <span className="ctabtn-main">Book a Call</span>
+                <span className="ctabtn-main">{h.ctaText}</span>
               </button>
+              {h.note && <p className="heronote">{h.note}</p>}
               <div className="trustbadges">
                 {TRUST_BADGES.map((b) => (
                   <span className="trustbadge" key={b}><Check aria-hidden /> {b}</span>
@@ -131,7 +156,7 @@ export default function ApplyClient({ children }: { children?: React.ReactNode }
           </p>
           <div className="closingcta">
             <button type="button" className="ctabtn ctabtn-inline" onClick={openModal}>
-              <span className="ctabtn-main">Book a Call</span>
+              <span className="ctabtn-main">{h.ctaText}</span>
             </button>
           </div>
         </div>

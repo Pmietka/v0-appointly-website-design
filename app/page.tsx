@@ -14,8 +14,7 @@ export const metadata = HOME_METADATA;
    the business does not serve. */
 const LEAD_TRADE = "Floor Coating Jobs";
 
-// Homepage hero copy. The ad variants (/fb-ads-breakdown, /booked-estimates)
-// render the same page with their own HeroCopy.
+// Homepage hero copy.
 const HERO: HeroCopy = {
   headline: (
     <>

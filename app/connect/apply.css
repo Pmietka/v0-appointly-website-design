@@ -103,9 +103,13 @@
   .dscroll .herovsl .vslnote{margin-top:10px;font-size:14px}
   .dscroll .heroform{display:flex;flex-direction:column}
   .dscroll .heroform .ctabtn{order:1}
+  .dscroll .heroform .heronote{order:1}
   .dscroll .heroform .trustbadges{order:2}
   .dscroll .heroform .formkicker{order:3;margin:16px 0 0;font-size:14.5px;text-align:center}
 }
+
+/* optional short line under the hero CTA (ad landing pages only) */
+.dscroll .heroform .heronote{margin-top:12px;font-size:clamp(14px,1.6vw,16px);line-height:1.45;color:var(--ink-3);font-weight:500;text-align:center}
 
 /* trust badges under the CTA */
 .dscroll .trustbadges{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 20px;margin-top:16px}

@@ -36,11 +36,3 @@ export const HOME_METADATA: Metadata = {
     images: ["https://getappointly.co/images/og-home.png"],
   },
 };
-
-/* Ad landing variants of the homepage. Same page, ad matched hero, kept out of
-   the index (noindex, follow) with the canonical pointing at the homepage.
-   They are also left out of app/sitemap.ts and the nav on purpose. */
-export const VARIANT_METADATA: Metadata = {
-  ...HOME_METADATA,
-  robots: { index: false, follow: true },
-};

@@ -3,9 +3,8 @@ import type { ReactNode } from "react";
 import { BookingLink } from "@/components/booking-link";
 import { TrustRow } from "@/components/proof";
 
-/* Hero copy for the homepage and its ad landing variants (/fb-ads-breakdown,
-   /booked-estimates). Layout, type and spacing are shared; only the words
-   change, so each ad lands on a hero that matches it. */
+/* Homepage hero. Layout, type and spacing are fixed; the words come in as
+   props so they can be changed without touching the markup. */
 export type HeroCopy = {
   /** Optional small kicker above the headline (styled like .eyebrow). */
   eyebrow?: string;
@@ -17,11 +16,9 @@ export type HeroCopy = {
   intro?: ReactNode;
   /** Button text for the hero CTA and the closing CTA. */
   ctaText: string;
-  /** Optional short line under the hero button. */
-  note?: string;
 };
 
-export function HomeHero({ eyebrow, headline, subheadline, intro, ctaText, note }: HeroCopy) {
+export function HomeHero({ eyebrow, headline, subheadline, intro, ctaText }: HeroCopy) {
   return (
     <section className="sec hero" id="top">
       <div className="orb a" />
@@ -33,7 +30,6 @@ export function HomeHero({ eyebrow, headline, subheadline, intro, ctaText, note 
         <BookingLink className="btn">
           {ctaText} <span className="arr">&rarr;</span>
         </BookingLink>
-        {note && <p className="heronote">{note}</p>}
         <TrustRow />
       </div>
     </section>
